@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://data.gov.sk/def/funding-source-type/"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/taxonomy/funding-source-type/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Typy zdrojov financovania</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Typy zdrojov financovania</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Štátny rozpočet</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/c_2ae428ad">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Fondy Európskej Únie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/3">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Európske štrukturálne a investičné fondy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/c_2ae428ad"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Zahraničné fondy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/6">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Nórsky finančný mechanizmus</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/3">
+	<skos:altLabel xml:lang="sk">EŠIF</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/8">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Finančný mechanizmus EHP</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/funding-source-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Typy financovaných platieb</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-playment-type/1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">IACS - priame platby a neprojektové podpory  PRV SR 2014-2020</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-source-type/2">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Schémy oddelených priamych platieb</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-playment-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-playment-type/3">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Prechodný zjednodušený režim základnej platby (jednotná platba na plochu, tzv, SAPS)</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-playment-type/4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Platba na poľnohospodárske postupy prospešné pre klímu a životné prostredie (Greening)</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Platba pre mladých poľnohospodárov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-playment-type/6">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Úhrada finančnej disciplíny</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-playment-type/7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Redistributívna platba</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-source-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/8">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">ORGANIZÁCIA TRHU a ŠTÁTNA POMOC</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/9">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">PROJEKTOVÉ PODPORY PRV SR 2014-2020</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/10">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">OPERAČNÝ PROGRAM RYBNÉ HOSPODÁRSTVO 2014-2020</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/11">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Schémy viazaných priamych platieb</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-playment-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/12">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Platba na chov bahníc, jariek a kôz</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/13">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Platba na kravy chované v systéme s trhovou produkciou mlieka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/14">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Platba na pestovanie chmeľu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/11"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/15">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Podpory v súvislosti s opatreniami programu rozvoja vidieka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-playment-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/16">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Forma prechodnej vnútroštátnej platby</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-playment-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/17">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Štátna pomoc</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/8"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/18">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Organizácia trhu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/8"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/19">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Mimoriadne opatrenie v sektore mlieka a mäsa a fúz - PTMO</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/funding-payment-type/20">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Ovocie a zelenina do škôl</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/funding-payment-type/"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/funding-payment-type/18"/>
+</rdf:Description>
+
+</rdf:RDF>

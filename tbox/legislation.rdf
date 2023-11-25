@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:leg="https://data.gov.sk/def/ontology/legislation/">
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Law">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Letter">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Paragraph">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Section">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/law">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/foundingLaw">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/letter">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/pararaph">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Law">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Letter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Paragraph">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Section">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401">
+	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Law"/>
+	<skos:prefLabel xml:lang="sk">Zákon č. 152/1995 Z. z. o potravinách</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1">
+	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Paragraph"/>
+	<skos:prefLabel xml:lang="sk">Účel a rozsah zákona</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-section-1">
+	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Section"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-letter-a">
+	<skos:prefLabel xml:lang="sk">povinnosti prevádzkovateľa potravinárskeho podniku (ďalej len „prevádzkovateľ“) v záujme podpory a ochrany zdravia ľudí a ochrany spotrebiteľa na trhu potravín,</skos:prefLabel>
+	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Letter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/section">
+	<rdfs:label xml:lang="sk">odsek</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-letter-a">
+	<skos:notation xml:lang="sk">a</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1">
+	<skos:notation xml:lang="sk">1</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-section-1">
+	<skos:notation xml:lang="sk">1</skos:notation>
+	<skos:narrower rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-letter-a"/>
+	<skos:prefLabel xml:lang="sk">Tento zákon ustanovuje</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1">
+	<skos:narrower rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-section-1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/law">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/foundingLaw">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/legislation/law"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/pararaph">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/section">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/letter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/Letter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/section">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/Section"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/pararaph">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/Paragraph"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/law">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/Law"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Law">
+	<rdfs:label xml:lang="sk">Zákon</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Letter">
+	<rdfs:label xml:lang="sk">Písmeno</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Paragraph">
+	<rdfs:label xml:lang="sk">Paragraf</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Section">
+	<rdfs:label xml:lang="sk">Odsek</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/foundingLaw">
+	<rdfs:label xml:lang="sk">zakladajúci zákon</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/law">
+	<rdfs:label xml:lang="sk">zákon</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/letter">
+	<rdfs:label xml:lang="sk">písmeno</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/pararaph">
+	<rdfs:label xml:lang="sk">paragraf</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401">
+	<skos:narrower rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Decree">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label xml:lang="sk">Vyhláška</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501">
+	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Decree"/>
+	<skos:prefLabel xml:lang="sk">Vyhláška o o štandardoch pre informačné technológie verejnej správy</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/TermsOfUse">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/termsOfUse">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/authorsWorkType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/originalDatabaseType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/databaseProtectedBySpecialRightsType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/personalDataContainmentType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/PersonalDataContainmentType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/DatabaseProtectedBySpecialRightsType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/OriginalDatabaseType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/AuthorsWorkType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/OriginalDatabaseType">
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/termsOfUse">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/TermsOfUse"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/personalDataContainmentType">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/PersonalDataContainmentType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/originalDatabaseType">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/OriginalDatabaseType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/databaseProtectedBySpecialRightsType">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/DatabaseProtectedBySpecialRightsType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/authorsWorkType">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/AuthorsWorkType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/TermsOfUse">
+	<rdfs:label xml:lang="sk">Podmienky použitia</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://data.gov.sk/def/benefit-type/"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/scheme">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Finančné dávky</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">finančná dávka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/17">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">sociálna dávka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/12">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nemocenská dávka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dôchodková dávka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/10">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">starobný dôchodok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/8">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">invalidný dôchodok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/24">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príspevok pri narodení dieťaťa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/23">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príspevok na viac  súčasne narodených detí</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/22">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príspevok na pohreb</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/25">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">rodičovský príspevok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/20">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">prídavok na dieťa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/21">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príplatok k prídavku na dieťa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/18">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">jednorazový príspevok dieťaťu pri  jeho zverení do náhradnej starostlivosti</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/19">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">jednorazový príspevok dieťaťu pri zániku náhradnej starostlivosti</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/11">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">vdovecký dôchodok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/9">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">sirotský dôchodok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/14">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nemocenské</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/15">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">ošetrovné</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/13">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">materské</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/16">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">vyrovnávacia dávka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/2">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dávka v hmotnej núdzi</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">ochranný príspevok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/3">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">aktivačný príspevok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/6">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príspevok na nezaopatrené dieťa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/benefit-type/5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príspevok na bývanie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/def/benefit-type/scheme"/>
+	<skos:broader rdf:resource="https://data.gov.sk/def/benefit-type/2"/>
+</rdf:Description>
+
+</rdf:RDF>

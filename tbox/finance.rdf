@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://data.gov.sk/def/ontology/finance/"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:fin="https://data.gov.sk/def/ontology/finance/"
+	xmlns:schema="http://schema.org/"
+	xmlns:cv="http://data.europa.eu/m8g/"
+	xmlns:adms="http://www.w3.org/ns/adms#"
+	xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#">
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Invoice">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Order">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Price">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/accounted">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/currency">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/delivered">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/invoice">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/isAdvanceInvoice">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/isCanceled">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/order">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/orderer">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/payed">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/price">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/recordCreated">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/supplier">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/valueWithVAT">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Order">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">Objednávka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Invoice">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">Faktúra</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Price">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">Cena</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/orderer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">objednávateľ</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/supplier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">dodávateľ</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/price">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">cena</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/Price"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/valueWithVAT">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">cena s dph</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Price"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/currency">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">mena</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Price"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/recordCreated">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">dátum vytvorenia dokladu</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/isCanceled">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">zrušené</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/order">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">objednávka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/payed">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Price"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+	<rdfs:label xml:lang="sk">dátum úhrady</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/delivered">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/accounted">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/isAdvanceInvoice">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/accounted">
+	<rdfs:label xml:lang="sk">dátum zaúčtovania</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Price"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/delivered">
+	<rdfs:label xml:lang="sk">dátum doručenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/isAdvanceInvoice">
+	<rdfs:label xml:lang="sk">zálohová faktúra</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Invoice"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/isCanceled">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/order">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/Order"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/invoice">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/Invoice"/>
+	<rdfs:label xml:lang="sk">objednávka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/FundingScheme">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">Schéma financovania</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/CallForFunding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundingScheme">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/CallForFunding"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/FundingScheme"/>
+	<rdfs:label xml:lang="sk">schéma financovania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/allocation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">alokovaná suma</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/maximalFunding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/CallForFunding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+	<rdfs:label xml:lang="sk">maximálna výška dotácie</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/minimalFunding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">minimálna výška dotácie</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/CallForFunding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundingSourceType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/FundingSourceType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">Typ zdroja financovania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundingSourceType">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">typ zdrojového financovania</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingScheme"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/FundingSourceType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/legalFormRestriction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">kód vyžadovanej právnej formy žiadateľa</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundingRequestor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">žiadateľ dotácií</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/FundingRequest">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">Žiadosť o financovanie</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/FundingRequestor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">Žiadateľ o financovanie</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/approvedFundingAmount">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">výška schválenej sumy</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingRequest"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/co-financingAmount">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">výška spolufinancovania</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingRequest"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundingProjectStartDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">dátum začiatku realizácie projektu</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingRequest"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/projectCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">kód projektu schválenej žiadosti</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingRequest"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundingApprovalDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">dátum schvaľovania žiadosti</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingRequest"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/wasApproved">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">stav vyhodnotenia žiadosti</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/FundingRequest"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/FundedProject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">financovaný projekt</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/fundedProject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/"/>
+	<rdfs:label xml:lang="sk">financovaný projekt</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/FundedProject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/2021-MM-DD.owl">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dct:title>Ontológia finančných entít</dct:title>
+	<dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
+	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
+	<owl:versionInfo>2021-MM-DD</owl:versionInfo>
+	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/accountHolder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">account holder</rdfs:label>
+	<rdfs:label xml:lang="sk">vlastník bankového účtu</rdfs:label>
+	<rdfs:label xml:lang="de">Kontoinhaber</rdfs:label>
+	<rdfs:description xml:lang="sk">Relácia bankového účtu na jeho vlastníka.</rdfs:description>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/BankConnection"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/AccountHolder"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/330"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/330">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/330"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<skos:notation>D.1.1.11.1</skos:notation>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:altSymbol>AccountHolder</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankConnection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">bank connection</rdfs:label>
+	<rdfs:label xml:lang="sk">bankové spojenie</rdfs:label>
+	<owl:inverseOf rdf:resource="https://data.gov.sk/def/ontology/finance/accountHolder"/>
+	<rdfs:description xml:lang="sk">Relácia vlastníka bankového účtu na jeho účeť.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/332"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/332">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/332"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11</skos:notation>
+	<skos:altSymbol>BankConnection</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/iban">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">international bank account connection</rdfs:label>
+	<rdfs:label xml:lang="sk">medzinárodné bankové spojenie</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/finance/bankConnection"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/InternationalBankConnection"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/AccountHolder"/>
+	<rdfs:description xml:lang="sk">Relácia majiteľa účtu na jeho medzinárodné bankové spojenie.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/325"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/325">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/327"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.4</skos:notation>
+	<skos:altSymbol>InternationalBankConnection</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/dban">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">domestic bank connection</rdfs:label>
+	<rdfs:label xml:lang="sk">tuzemské bankové spojenie</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/finance/bankConnection"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankConnection"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/AccountHolder"/>
+	<rdfs:description xml:lang="sk">Relácia majiteľa účtu na jeho tuzemské bankové spojenie.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.3</skos:notation>
+	<skos:altSymbol>DomesticBankConnection</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">Bank Identifier Code</rdfs:label>
+	<rdfs:label xml:lang="sk">Medzinárodný kód banky</rdfs:label>
+	<skos:altLabel xml:lang="sk">SWIFT</skos:altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/InternationalBankConnection"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/BIC"/>
+	<rdfs:description xml:lang="sk">Relácia medzinárodného bankového spojenia na medzinárodný kód banky.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.4.2</skos:notation>
+	<skos:altSymbol>BIC</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/domesticBankCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">Domestic Bank Code</rdfs:label>
+	<rdfs:label xml:lang="sk">Tuzemský kód banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankConnection"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankCode"/>
+	<rdfs:description xml:lang="sk">Relácia tuzemského bankového spojenia na tuzemský kód banky.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bank">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">bank</rdfs:label>
+	<rdfs:label xml:lang="sk">banka</rdfs:label>
+	<rdfs:label xml:lang="de">Bank</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/Bank"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/currency">
+	<rdfs:label xml:lang="en">currency</rdfs:label>
+	<rdfs:label xml:lang="de">Währung</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/Currency"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/504"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.1"/>
+	<rdfs:description xml:lang="sk">Relácia na použitú menu definovanú hodnotami číselníka CL010138 Jednotka meny.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/504">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/504"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.2.9.1</skos:notation>
+	<skos:altSymbol>Currency</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">bank code</rdfs:label>
+	<rdfs:label xml:lang="sk">kód banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/BIC"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Relácia medzinárodného identifikátora banky na jej kód.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/321"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/321">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/321"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankBranchCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">bank branch code</rdfs:label>
+	<rdfs:label xml:lang="sk">kód pobočky banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/BIC"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Relácia medzinárodného identifikátora banky na kód jej pobočky.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankCountryCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">bank country code</rdfs:label>
+	<rdfs:label xml:lang="sk">kód krajiny banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/BIC"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Relácia medzinárodného identifikátora banky na kód jej krajiny.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankHeadquartersCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">bank headquarters code</rdfs:label>
+	<rdfs:label xml:lang="sk">kód sídla banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/BIC"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Relácia medzinárodného identifikátora banky na kód jej sídla.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/ibanCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">IBAN code</rdfs:label>
+	<rdfs:label xml:lang="sk">kód IBAN</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/InternationalBankConnection"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Medzinárodné číslo účtu.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.4.1</skos:notation>
+	<skos:altSymbol>IBAN</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/dbanCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">domestic bank account number</rdfs:label>
+	<rdfs:label xml:lang="sk">tuzemské číslo účtu</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankConnection"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.3"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.3">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.3.3</skos:notation>
+	<skos:altSymbol>AccountNumber</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/dbanPrefix">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">domestic bank account number prefix</rdfs:label>
+	<rdfs:label xml:lang="sk">predčíslie tuzemského účtu</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankConnection"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Uvádza sa číslo pred samotným číslom účtu.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.3.2</skos:notation>
+	<skos:altSymbol>AccountNumberPrefix</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/formattedDBAN">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">formatted domestic bank account number</rdfs:label>
+	<rdfs:label xml:lang="sk">formátované číslo účtu tuzemského bankového spojenia</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankConnection"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Spojené celé tuzemské číslo účtu (vrátane predčíslia) a kód banky.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.11.3.1</skos:notation>
+	<skos:altSymbol>FormattedDomesticBankConnection</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankNumericCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">domestic numeric bank code</rdfs:label>
+	<rdfs:label xml:lang="sk">tuzemský číselný kód banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankCode"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/bankStringCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">domestic string bank code</rdfs:label>
+	<rdfs:label xml:lang="sk">tuzemský textový kód banky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/DomesticBankCode"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Bank">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Bank</rdfs:label>
+	<rdfs:label xml:lang="sk">Banka</rdfs:label>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/BusinessSubject"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/BankConnection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Bank Connection</rdfs:label>
+	<rdfs:label xml:lang="sk">Bankové spojenie</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/333"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/333">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/333"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/DomesticBankCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<rdfs:label xml:lang="en">Domestic Bank Code</rdfs:label>
+	<rdfs:label xml:lang="sk">Tuzemský kód banky</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/BIC">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<rdfs:label xml:lang="en">Bank Identifier Code</rdfs:label>
+	<rdfs:label xml:lang="sk">Medzinárodný kód banky</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/DomesticBankConnection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Domestic Bank Connection</rdfs:label>
+	<rdfs:label xml:lang="sk">Tuzemské bankové spojenie</rdfs:label>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/finance/BankConnection"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/324"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/324">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/324"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/InternationalBankConnection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">International Bank Connection</rdfs:label>
+	<rdfs:label xml:lang="sk">Medzinárodné bankové spojenie</rdfs:label>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/finance/BankConnection"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/328"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/328">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/328"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/AccountHolder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Account Holder</rdfs:label>
+	<rdfs:label xml:lang="sk">Vlastník účtu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/331"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/331">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/331"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Currency">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Currency</rdfs:label>
+	<rdfs:label xml:lang="sk">Mena</rdfs:label>
+	<rdfs:label xml:lang="de">Währung</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/359"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/359">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/359"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/benefitReceivingPeriod">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">obdobie poberania finančnej dávky</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Benefit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">finančná dávka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/BenefitType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">typ finančnej dávky</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/receivedPayment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">prijatá finančná dávka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/value">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">finančná hodnota</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/overpayment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">hodnota preplatku</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/hasArrears">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">má nedoplatky</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/arrearsType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">typ nedoplatku</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/ArrearsType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">typ nedoplatku</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Insurance">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">poistenie</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insured">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">predmet poistenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/Insured">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">predmet poistenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/InsurancePolicyHolder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">uzatvárateľ poistenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/InsuranceCompany">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">poisťovňa</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/InsuranceType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">typ poistenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insuranceStartDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Insurance"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insuranceEndDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">dátum ukončenia poistenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insuranceStartDate">
+	<rdfs:label xml:lang="sk">dátum začiatku poistenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insuranceEndDate">
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Insurance"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/InsuranceCosts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/proportionOfFlatRateCosts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/InsuranceCosts"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/InsurancePolicyHolderType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">typ platiteľa poistného</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insurancePolicyHolderType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">typ platiteľa poistného</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/finance/Insurance"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/finance/InsurancePolicyHolderType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insurancePaymentObligationStartDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+	<rdfs:label xml:lang="sk">Dátum začiatku povinnosti platiť poistné</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/finance/insurancePaymentObligationEndDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+	<rdfs:label xml:lang="sk">Dátum konca povinnosti platiť poistné</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>

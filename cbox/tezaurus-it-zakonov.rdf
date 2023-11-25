@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://data.gov.sk/id/eli/sk/"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts">
+	<skos:prefLabel xml:lang="sk">Slovník vyhlášky č. 78/2020 o štandardoch pre informačné technológie verejnej správy</skos:prefLabel>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">aktívum</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aplikačné_rozhranie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">aplikačné rozhranie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/Centrálny_model_údajov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Centrálny model údajov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/číselník">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">číselník</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dataset">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dataset</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dátový_zdroj">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátový zdroj</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dátový_prvok">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátový prvok</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dereferenciácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dereferenciácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/gestor_dátového_prvku">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">gestor dátového prvku</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/gestor_služby">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">gestor služby</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/identifikačná_registrácia_osoby">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">identifikačná registrácia osoby</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/metaúdaj">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">metaúdaje</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/ontológia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">ontológia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/používateľ_služby">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">používateľ služby</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/prepojené_údaje">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">prepojené údaje</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/referencovateľný_identifikátor">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">referencovateľný identifikátor</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/registračná_autorita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">registračná autorita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/správca_obsahu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">správca obsahu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/súbor">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">súbor</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/technický_komponent_informačného_systému">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk"> technické komponenty informačného systému</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/technický_prevádzkovateľ">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">technický prevádzkovateľ</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/zariadenie_informačného_systému_verejnej_správy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">zariadenia informačného systému verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/programové_vybavenie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">programové vybavenie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/technické_zariadenie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">technické zariadenie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/poskytovaná_služba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">poskytovaná služba</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/kvalifikovaná_osoba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">kvalifikovaná osoba</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dobré_meno_orgánu_riadenia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dobré meno orgánu riadenia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/informácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">informácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dokumentácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dokumentácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/zmluva">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">zmluva</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/citlivá_skutočnost">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">citlivá skutočnost</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/programovacie_rozhranie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">programovacie_rozhranie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aplikačné_rozhranie">
+	<skos:broader rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/programovacie_rozhranie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aktívum">
+	<skos:definition xml:lang="sk">programové vybavenie, technické zariadenia, poskytované služby, kvalifikované osoby, dobré meno orgánu riadenia a informácie, dokumentácia, zmluvy a iné skutočnosti, ktoré považuje orgán riadenia za citlivé</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/Centrálny_model_údajov">
+	<skos:definition xml:lang="sk">množina ontológií zverejnená v centrálnom metainformačnom systéme, ktorá sa používa pri opise dátových prvkov verejnej správy a ktorá je vyjadrením sémantických vzťahov medzi dátovými prvkami, vyjadrenými prostredníctvom jednotných referencovateľných identifikátorov</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/číselník">
+	<skos:definition xml:lang="sk">množina údajov vo forme jednotlivých položiek číselníka, ktoré sú opísané najmenej dvojicou dátových prvkov „kód položky“ a „názov položky“; „kódom položky“ je textový reťazec, ktorý je v číselníku jedinečný</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dataset">
+	<skos:definition xml:lang="sk">ucelená a samostatne použiteľná skupina súvisiacich údajov vytvorených a udržiavaných na určitý účel, uložených spoločne podľa rovnakej schémy a poskytovaných prostredníctvom súboru alebo aplikačného rozhrania</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dátový_prvok">
+	<skos:definition xml:lang="sk">jednotka údajov, ktorá je jednoznačne a nedeliteľne špecifikovaná prostredníctvom súboru atribútov</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dátový_zdroj">
+	<skos:definition xml:lang="sk">pôvodné miesto evidencie datasetu</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/dereferenciácia">
+	<skos:definition xml:lang="sk">poskytovanie referencovateľného identifikátora ako funkčného priameho odkazu vo forme Uniform Resource Locator (URL) pre informácie o údaji reprezentovanom referencovateľným identifikátorom a o jeho účele</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/gestor_dátového_prvku">
+	<skos:definition xml:lang="sk">orgán riadenia, ktorý je zodpovedný za správnosť a aktuálnosť atribútov dátového prvku, ako aj za jeho obsah; gestor dátového prvku nezodpovedá za obsah prenášaný v dátovom prvku inými osobami</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/gestor_služby">
+	<skos:definition xml:lang="sk">orgán riadenia, ktorý je poverený vykonávať riadenie a koordinovanie určitého úseku verejnej správy</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/identifikačná_registrácia_osoby">
+	<skos:definition xml:lang="sk">proces, počas ktorého je osoba identifikovaná na základe registračných údajov, z ktorých určené registračné údaje môžu byť potvrdzované, pričom výsledkom registrácie je priradenie identity tejto osobe v kontexte, v ktorom sa registrácia vykonáva</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/metaúdaj">
+	<skos:definition xml:lang="sk">štruktúrované údaje obsahujúce informácie o primárnych údajoch, určené najmä na vyhľadávanie, katalogizáciu a využívanie primárnych údajov, pričom primárne údaje spravidla reprezentujú určitý hmotný objekt alebo nehmotný objekt</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/ontológia">
+	<skos:definition xml:lang="sk">množina prvkov opisujúca určitú oblasť prostredníctvom troch prvkov, ktorými sú subjekt, predikát a objekt</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/používateľ_služby">
+	<skos:definition xml:lang="sk">osoba alebo informačný systém, ktorí používajú alebo požadujú poskytovanie služby verejnej správy</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/prepojené_údaje">
+	<skos:definition xml:lang="sk">údaje vyjadrené referencovateľnými identifikátormi, na ktorých opis sa použijú dátové prvky z Centrálneho modelu údajov a ktoré sú automatizovane spracovateľné tak, že technické zariadenie, ktoré ich spracúva, porozumie ich významu</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/aplikačné_rozhranie">
+	<skos:definition xml:lang="sk">programovacie rozhranie informačného systému, ktorým je umožnené pre autorizovaného používateľa používať elektronickú službu</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/referencovateľný_identifikátor">
+	<skos:definition xml:lang="sk">identifikátor, ktorý
+1. má formát Uniform Resource Identifier (URI),
+2. je jednoznačný a unikátny,
+3. je dlhodobo stabilný,
+4. je formátovo a štrukturálne konzistentný,
+5. je manažovateľný tak, že umožňuje logicky rozširovať stanovenú štruktúru,
+6. je jasný, stručný a krátky,
+7. je pre fyzickú osobu jednoducho čitateľný, pričom časť referencie môže byť reprezentovaná kódovanou informáciou,
+8. neobsahuje programátorské kľúčové slová,
+9. neobsahuje interpunkciu a iné znaky okrem znakov lomka, pomlčka, bodka, podčiarkovník, zavináč a mriežka, diakritiku a biele znaky ako sú napríklad medzera, tabulátor, nový riadok,</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/registračná_autorita">
+	<skos:definition xml:lang="sk">poskytovateľ identifikačnej registrácie</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/správca_obsahu">
+	<skos:definition xml:lang="sk">orgán riadenia zodpovedný za správu obsahu webového sídla a na ňom zverejnené informácie; správca obsahu je zároveň správcom daného informačného systému verejnej správy</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/súbor">
+	<skos:definition xml:lang="sk">postupnosť údajov v elektronickej podobe, ktorá je označená názvom, informáciou o kapacite údajov a časovou značkou o jej poslednej zmene</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/technický_komponent_informačného_systému">
+	<skos:definition xml:lang="sk">tie časti informačného systému verejnej správy a informačno-komunikačné technológie, ktoré nie sú určené na uchovávanie údajov, napríklad štruktúrovaná kabeláž, sieťové karty a zdroje</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/technický_prevádzkovateľ">
+	<skos:definition xml:lang="sk">prevádzkovateľ informačného systému verejnej správy, ktorý vykonáva činnosti určené správcom obsahu v súvislosti s technickou prevádzkou webového sídla</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501/zariadenie_informačného_systému_verejnej_správy">
+	<skos:definition xml:lang="sk">tie časti informačného systému verejnej správy, ktoré môžu uchovávať údaje, napríklad pamäťové médiá a počítače vrátane prenosných počítačov.</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník zákona č. 95/2019 o informačných technológiách vo verejnej správe</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2019/95/1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk"> informačná technológia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2019/95/2">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">informačný systém</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/3">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">informačná technológia verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">informačný systém verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">správca informačnej technológie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/6">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">prevádzkovateľ informačnej technológie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">informačná činnosť</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/c_f725b36a">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">metainformačný systém verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/8">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">centrálny metainformačný systém verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/c_f725b36a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/10">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nadrezortný informačný systém verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/11">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">neverejná časť informačného systému verejnej správy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/12">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">infraštruktúra</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/13">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk"> integrovaná infraštruktúra</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/14">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">centrálna informačná infraštruktúra</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2019/95/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník zákona č.125/2015 o registri adries</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">adresa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/identifikátor_adresy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">identifikátor adresy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/geografická_os_ulice">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">geografická os ulice</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/adresný_bod">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/geografická_os_ulice">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/ulica"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_kraja">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov kraja</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/identifikátor_adresy">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_okresu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov okresu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_obce">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/obec"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov obce</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_časti_vojenského_obvodu">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/časť_vojenského_obvodu"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_vojenského_obvodu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov vojenského obvodu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_mestkej_časti">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/mestská_časť"/>
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov mestskej časti</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/adresný_bod">
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_časti_obce">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov časti obce</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_okresu">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/okres"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_časti_vojenského_obvodu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov časti vojenského obvodu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_časti_obce">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/časť_obce"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/orientačné_číslo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">orientačné číslo</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_vojenského_obvodu">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/vojenský_obvod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/adresný_bod">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">adresný bod</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/orientačné_číslo">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/budova">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">budova</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/kód_druhu_stavby">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">kód druhu stavby</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/typ_budovy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">typ budovy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/bytová_budova">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">bytová budova</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/typ_budovy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/nebytová_budova">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nebytová budova</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/typ_budovy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/budova_v_meste">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">budova v meste</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/budova_s_bytmi">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">budova s bytmi</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/budova_vo_vojenskom_obvode">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">budova vo vojenskom obvode</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/budova_samostatne_číslová_súpisným_číslom_a_orientačným_číslom">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">budova samostatne číslová súpisným číslom a orientačným číslom</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_budovy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov budovy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/poštové_smerovacie_číslo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">poštové smerovacie číslo</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/obec">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">obec</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/okres">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">okres</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/vojenský_obvod">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">vojenský obvod</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/kraj">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">kraj</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/časť_obce">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">časť obce</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/obec"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/časť_vojenského_obvodu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">časť vojenského obvodu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/vojenský_obvod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/ulica">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">ulica</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_ulice">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov ulice</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/ulica"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/názov_kraja">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/kraj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/mestská_časť">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">mestská časť</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/adresa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/číselný_kód_kraja">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">číselný kód kraja</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/kraj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/číselný_kód_obce">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">číselný kód obce</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/obec"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/číselný_kód_okresu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">číselný kód okresu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/okres"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/číselný_kód_vojenského_obvodu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">číselný kód vojenského obvodu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2015/125/vojenský_obvod"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2015/125/adresný_bod">
+	<skos:altLabel xml:lang="sk">poloha adresného bodu</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník smernice č. 14973/22 o Interoperabilnej Európe</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/cezhraničná_interoperabilita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">cezhraničná interoperabilita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/špecializované_rámce_interoperability"/>
+	<skos:definition xml:lang="sk">schopnosť sietí a informačných systémov byť využívané subjektmi verejného sektora v rôznych členských štátoch a inštitúciami, orgánmi a agentúrami Únie s cieľom vzájomne interagovať na základe zdieľania údajov prostredníctvom elektronickej komunikácie</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/sieť_a_informačný_systém">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">sieť a informačný systém</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:topConceptOf rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/riešenie_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">riešenie interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/interoperabilita"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/GovTech">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">GovTech</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:topConceptOf rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/manažment_najvyššej_úrovne">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">manažment najvyššej úrovne</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:topConceptOf rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/interoperabilita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">interoperabilita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:topConceptOf rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/sémantická_interoperabilita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">sémantická interoperabilita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/typ_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/právna_interoperabilita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">právna interoperabilita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/typ_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/technická_interoperabilita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">technická interoperabilita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/typ_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/organizačná_interoperabilita">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">organizačná interoperabilita</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/typ_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/typ_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">typ interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/interoperabilita"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/Portál_interoperabilnej_Európy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Portál interoperabilnej Európy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/Európsky_rámec_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/Európsky_rámec_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">Európsky rámec interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/cezhraničná_interoperabilita"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/špecializované_rámce_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">špecializované rámce interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/riešenie_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/posúdenie_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">posúdenie interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/interoperabilita"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/https://eur-lex.europa.eu/id/directive/2022-0379/príslušný_orgán">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">príslušný vnútroštátny orgán</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:topConceptOf rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/koordinátor_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">koordinátor interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/https://eur-lex.europa.eu/id/directive/2022-0379/príslušný_orgán"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/experimentálne_regulačné_prostredie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">experimentálne regulačné prostredie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:topConceptOf rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/vytvorenie_experimentálneho_regulačného_prostredia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">vytvorenie experimentálneho regulačného prostredia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/experimentálne_regulačné_prostredie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/účasť_v_experimentálnom_regulačnom_prostredí">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">účasť v experimentálnom regulačnom prostredí</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/experimentálne_regulačné_prostredie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/zdieľanie_a_opakované_používanie_riešení_interoperability">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">zdieľanie a opakované používanie riešení interoperability</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/interoperabilita"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/opis_zamýšľanej_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">opis zamýšľanej operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/posúdenie_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/opis_úrovne_súladu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">opis úrovne súladu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/posúdenie_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://eur-lex.europa.eu/id/directive/2022-0379/opis_aplikačných_programovacích_rozhraní">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">opis aplikačných programovacích rozhraní</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379"/>
+	<skos:broader rdf:resource="https://eur-lex.europa.eu/id/directive/2022-0379/posúdenie_interoperability"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník zákona č. 305/2013 o elektronickej podobe výkonu pôsobnosti orgánov verejnej moci</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/výkon_verejnej_moci">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">výkon verejnej moci</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/výkonom_verejnej_moci_elektronicky">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">výkonom verejnej moci elektronicky</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/výkon_verejnej_moci"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_komunikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronická komunikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_úradná_komunikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronická úradná komunikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_komunikácia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_správa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronická správa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_úradná_správa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronická úradná správa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_správa"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronický_dokument">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronický dokument</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/formát_elektronického_dokumentu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">formát elektronického dokumentu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronický_dokument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronický_formulár">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronický formulár</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronický_dokument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronické_podanie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronické podanie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronický_úradný_dokument">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronický úradný dokument</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronický_dokument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronické_úložisko">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronické úložisko</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronická_schránka">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronická schránka</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/elektronické_úložisko"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/identifikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">identifikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/identifikátor">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">identifikátor</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/identifikátor_osoby">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">identifikátor osoby</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305/identifikátor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/autorizácia_úkonu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">autorizácia úkonu</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2013/305/autentifikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">autentifikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/2013/305"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník zákona č. 121/2022 o o príspevkoch z fondov Európskej únie a o zmene a doplnení niektorých zákonov</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">výzva</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/názov_poskytovateľa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">názov poskytovateľa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/dátum_vyhlásenia_výzvy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátum vyhlásenia výzvy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník nariadenia Eúropskeho parlamentu a rady EÚ č. 2021/1060</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/harmonogram_plánovaných_výziev">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">harmonogram plánovaných výziev</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/geografická_oblasť">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">geografická oblasť</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/harmonogram_plánovaných_výziev"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/špecifický_cieľ">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">špecifický cieľ</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/harmonogram_plánovaných_výziev"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/typ_oprávnených_žiadateľov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">typ oprávnených žiadateľov</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/harmonogram_plánovaných_výziev"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/celková_výška_podpory">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">celková výška podpory</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/harmonogram_plánovaných_výziev"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/dátum_začiatku_výzvy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátum začiatku výzvy</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/harmonogram_plánovaných_výziev"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">zoznam operácií vybraných na podporu z fondov</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/názov_prijímateľa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov prijímateľa</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/právny_subjekt">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/názov_dodávateľa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov dodávateľa</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/právny_subjekt">
+	<skos:prefLabel xml:lang="sk">právny subjekt</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/prijímateľ">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">prijímateľ</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/fyzická_osoba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">fyzická osoba</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/prijímateľ"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/meno">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">meno</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/fyzická_osoba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/priezvisko">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">priezvisko</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/fyzická_osoba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/právny_subjekt">
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/prijímateľ"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/názov_dodávateľa">
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/právny_subjekt"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/názov_prijímateľa">
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/právny_subjekt"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/názov_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">názov operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/účel_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">účel operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/výsledky">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">výsledky</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/očakávané_výsleky">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">očakávané výsledky</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/výsledky"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/dosiahnuté_výsledky">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dosiahnuté výsledky</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/výsledky"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/dátum_začatia_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátum začatia operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/dátum_ukončenia_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátum ukončenia operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/očakávaný_dátum_ukončenia_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">očakávaný dátum ukončenia operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/dátum_ukončenia_operácie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/skutočný_dátum_ukončenia_operácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">skutočný dátum ukončenia operácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/dátum_ukončenia_operácie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/celkové_náklady_na_operáciu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">celkové náklady na operáciu</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/fond">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">fond</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/špecifický_cieľ">
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/miera_spolufinancovania_Úniou">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">miera spolufinancovania Úniou</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/ukazovateľ_lokality">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">lokalita</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/typ_intervencie_pre_operáciu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">typ intervencie pre operáciu</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/concept-scheme"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2021/1060/corrigendum/2021-12-16/oj/zoznam_operácií_vybraných_na_podporu_z_fondov"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/dátum_uzavretia_výzvy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dátum uzavretia výzvy</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/kontaktné_údaje_poskytovateľa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">kontaktné údaje poskytovateľa</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/spôsob_komunikácie_s_poskytovateľom">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">spôsob komunikácie s poskytovateľom</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/lehota_na_vydanie_rozhodnutia_v_konaní_o_žiadosti">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">lehota na vydanie rozhodnutia v konaní o žiadosti</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výška_finančných_prostriedkov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">výška finančných prostriedkov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/miesto_podania_žiadosti">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">miesto podania žiadosti</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/121/2022/14/spôsob_podania_žiadosti">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">spôsob podania žiadosti</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/121/2022/14/výzva"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník zákona č. 50/1976 o územnom plánovaní a stavebnom poriadku</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/stavba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">stavba</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:topConceptOf rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/pozemná_stavba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">pozemná stavba</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/inžinierska_stavba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">inžinierska stavba</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">bytová budova</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/pozemná_stavba">
+	<skos:altLabel xml:lang="sk">budova</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/nebytová_budova">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nebytová budova</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/pozemná_stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytový_dom">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">bytový dom</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/rodinný_dom">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">rodinný dom</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/detský_domov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">detský domov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/domov_dôchodcov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">domov dôchodcov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/študenský_domov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">študenský domov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/útulok_pre_bezdomovcov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">útulok pre bezdomovcov</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/bytový_dom">
+	<skos:definition xml:lang="sk">budova určená na bývanie pozostávajúca zo štyroch a z viacerých bytov so spoločným hlavným vstupom z verejnej komunikácie</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/rodinný_dom">
+	<skos:definition xml:lang="sk">budova určená predovšetkým na rodinné bývanie so samostatným vstupom z verejnej komunikácie, ktorá má najviac tri byty, dve nadzemné podlažia a podkrovie</skos:definition>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/nebytová_budova">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/pozemná_stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/hotel">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">hotel</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/nebytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/motel">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">motel</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/nebytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/penzión">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">penzión</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/nebytová_budova"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dialnica">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dialnica</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/cesta">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">cesta</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia">
+	<skos:prefLabel xml:lang="sk">komunikácia</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/miestna_komunikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">miestna komunikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia">
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/účelová_komunikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">účelová komunikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/inžinierska_stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/nábrežie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nábrežie</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/inžinierska_stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/chodník">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">chodník</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/nekryté_parkovisko">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">nekryté parkovisko</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/inžinierska_stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/účelová_komunikácia">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/miestna_komunikácia">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/cesta">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dialnica">
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/komunikácia"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dráha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">dráha</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43c/inžinierska_stavba"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/železničná_dráha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">železničná dráha</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dráha"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/lanová_dráha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">lanová dráha</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dráha"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/vzletová_dráha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">vzletová dráha</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dráha"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/pristávacia_dráha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">pristávacia dráha</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/concepts"/>
+	<skos:broader rdf:resource="https://data.gov.sk/id/eli/sk/zz/1976/50/43a/dráha"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="sk">Slovník  nariadenia Eúropskeho parlamentu a rady EÚ č. 910/2014</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/elektronická_identifikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronická identifikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/prostriedok_elektronickej_identifikácie">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">prostriedok elektronickej identifikácie</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/osobné_identifikačné_údaje">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">osobné identifikačné údaje</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/schéma_elektronickej_identifikáci">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">schéma elektronickej identifikáci</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/autentifikácia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">autentifikácia</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/spoliehajúca_sa_strana">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">spoliehajúca sa strana</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/subjekt_verejného_sektora">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">subjekt verejného sektora</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/verejnoprávny_subjek">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">verejnoprávny subjek</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/podpisovateľ">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">podpisovateľ</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/elektronický_podpis">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">elektronický podpis</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:topConceptOf rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/zdokonalený_elektronický_podpis">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">zdokonalený elektronický podpis</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj/elektronický_podpis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/eli/reg/2014/910/oj/kvalifikovaný_elektronický_podpis">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="sk">kvalifikovaný elektronický podpis</skos:prefLabel>
+	<skos:inScheme rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj"/>
+	<skos:broader rdf:resource="http://data.europa.eu/eli/reg/2014/910/oj/zdokonalený_elektronický_podpis"/>
+</rdf:Description>
+
+</rdf:RDF>

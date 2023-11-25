@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://data.gov.sk/def/ontology/legal-subject/2023b#"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/">
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/2023b">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<title xmlns="http://purl.org/dc/terms/">Ontológia právneho subjektu</title>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
+	<contributor xmlns="http://purl.org/dc/terms/" rdf:resource="http://www.linkedin.com/in/mareksurek"/>
+	<owl:versionInfo>2023b</owl:versionInfo>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalSubject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">právny subjekt</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">právny subjekt v RPO</altLabel>
+	<rdfs:label xml:lang="en">legal subject</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtsanwalt</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/630"/>
+	<rdfs:description xml:lang="sk">Relácia na právny subjekt v RPO.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/630">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/630"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">CorporateBody</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/economicActivity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="de">Wirtschaftstätigkeit</rdfs:label>
+	<rdfs:label xml:lang="en">economic activity</rdfs:label>
+	<rdfs:label xml:lang="sk">ekonomická činnosť</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">predmet činnosti</altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/EconomicActivity"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na ekonomickú činnosť.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/587"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.7"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/587">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/587"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.7">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.7</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Activities</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/primaryEconomicActivity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">primary economic activity</rdfs:label>
+	<rdfs:label xml:lang="sk">hlavná ekonomická činnosť</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/economicActivityType"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/589"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/589">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/589"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/economicActivityType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">economic activity classification</rdfs:label>
+	<rdfs:label xml:lang="sk">klasifikácia ekonomickej činnosti</rdfs:label>
+	<rdfs:label xml:lang="de">Klassifikation der Wirtschaftszweige</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/EconomicActivity"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/EconomicActivityType"/>
+	<rdfs:description xml:lang="sk">Relácia ekonomickej činnosti na jej typ definovaný hodnotami číselníka CL005205 Ekonomická činnosť.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/585"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/585">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/585"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.7.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">EconomicActivityClassification</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/primaryEconomicActivityType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">primary economic activity type</rdfs:label>
+	<rdfs:label xml:lang="sk">typ hlavnej ekonomickej činnosti</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/economicActivityType"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/EconomicActivityType"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL005205"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/activitySubjective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">activity subjective</rdfs:label>
+	<rdfs:label xml:lang="sk">predmet činnosti (voľný popis)</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ActivitySubjective"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/647"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/647">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/647"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/headquarters">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/physicalAddress"/>
+	<rdfs:label xml:lang="en">headquarters</rdfs:label>
+	<rdfs:label xml:lang="sk">adresa sídla</rdfs:label>
+	<rdfs:label xml:lang="de">Hauptsitz</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jej sídlo v Registry adries.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/644"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/644">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/644"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/businessAddress">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/physicalAddress"/>
+	<rdfs:label xml:lang="en">business address</rdfs:label>
+	<rdfs:label xml:lang="sk">adresa miesta podnikania</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">adresa výkonu činnosti</altLabel>
+	<rdfs:label xml:lang="de">Geschäftsadresse</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jej adresu miesta podnikania v Registry adries.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/645"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/645">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/645"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/establismentAddress">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/physicalAddress"/>
+	<rdfs:label xml:lang="en">establishment address</rdfs:label>
+	<rdfs:label xml:lang="sk">adresa prevádzky</rdfs:label>
+	<rdfs:label xml:lang="de">Niederlassungsadresse</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jej adresu prevádzky v Registry adries.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/646"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/646">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/646"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/sizeByEmployees">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">veľkosť organizácie</rdfs:label>
+	<rdfs:label xml:lang="en">organization size by number of employees</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/SizeByEmployees"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/typeByEmployees">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">kategória organizácie podľa počtu zamestnancov</rdfs:label>
+	<rdfs:label xml:lang="en">organization type by number of employees</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/TypeByEmployees"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/648"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/648">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/648"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalForm">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">legal form</rdfs:label>
+	<rdfs:label xml:lang="sk">právna forma</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtsform</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalForm"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jeho právnu formu definovanú hodnotami číselníka CL000056 Právna forma organizácie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/575"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/575">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/575"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalFormType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">legal form type</rdfs:label>
+	<rdfs:label xml:lang="sk">typ právnej formy</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalFormType"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jeho právnu formu definovanú hodnotami číselníka CL000056 Právna forma organizácie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/575"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.3"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.3">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.3</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">LegalForm</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalStatus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">legal status</rdfs:label>
+	<rdfs:label xml:lang="sk">právny stav</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtsstellung</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalStatus"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jeho právny stav definovaný hodnotami číselníka CL010108 Právny stav organizácie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/621"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/621">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/621"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalStatusType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">legal status type</rdfs:label>
+	<rdfs:label xml:lang="sk">typ právneho stavu</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtsstellung</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalStatusType"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jeho právny stav definovaný hodnotami číselníka CL010108 Právny stav organizácie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/621"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.13"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.13">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.13</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">PrefferedGivenName</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/unit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">organization unit</rdfs:label>
+	<rdfs:label xml:lang="sk">organizačná jednotka</rdfs:label>
+	<rdfs:label xml:lang="de">Organisationseinheit</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Unit"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jej organizačnú jednotku.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/580"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.4"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/580">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/580"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.4">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.4</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">OrganizationUnitType</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/unitType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type"/>
+	<rdfs:label xml:lang="en">organization unit type</rdfs:label>
+	<rdfs:label xml:lang="sk">typ organizačnej jednotky</rdfs:label>
+	<rdfs:label xml:lang="de">Organisationseinheitstyp</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Unit"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/UnitType"/>
+	<rdfs:description xml:lang="sk">Relácia organizačnej jednotky na jej typ definovaný hodnotami číselníka CL010110 Typ organizačnej jednotky.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/578"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/578">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/578"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.4.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">OrganizationUnitType</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalFact">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">legal fact</rdfs:label>
+	<rdfs:label xml:lang="sk">právna skutočnosť</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtliche Tatsache</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">iná právna skutočnosť</altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalFact"/>
+	<rdfs:description xml:lang="sk">Uvádza sa doplňujúca informácia v súvislosti s právnymi činnosťami týkajúcimi sa danej právnickej osoby.Napr: Obsahuje informáciu v rozsahu právneho titulu zápisu, zmeny a výmazu zapísaných údajov a údajov o právnom nástupcovi právnickej osoby. Informácie týkajúce sa konkurzu, vyrovnania, likvidácie a nútenej správy sa tu nepoužívajú.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/590"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.8"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/590">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/590"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.8">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.8</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">OtherLegalFacts</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ownership">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">vlastníctvo</rdfs:label>
+	<rdfs:label xml:lang="en">ownership</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Ownership"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ownershipType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">typ vlastníctva</rdfs:label>
+	<rdfs:label xml:lang="en">ownership type</rdfs:label>
+	<rdfs:label xml:lang="de">Eigentumstyp</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/OwnershipType"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/649"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/649">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/649"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/stakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">zainteresovaná osoba</rdfs:label>
+	<rdfs:label xml:lang="en">stakeholder</rdfs:label>
+	<rdfs:label xml:lang="de">Interessengruppen</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Stakeholder"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na zainteresovanú osobu vo vzťahu k právnickej osobe.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/599"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.10"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/599">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/599"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.10">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.10</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Stakeholder</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/stakeholderType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">typ zainteresovanej osoby</rdfs:label>
+	<rdfs:label xml:lang="en">stakeholder type</rdfs:label>
+	<rdfs:label xml:lang="de">art von stakeholder</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Stakeholder"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/StakeholderType"/>
+	<rdfs:description xml:lang="sk">Relácia zainteresovanej osoby na jej typ definovaný hodnotami číselníka CL010109 Typ zainteresovanej osoby.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/597"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.10.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/597">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/597"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.10.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.10.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">StakeholderType</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/statutoryBody">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">štatutárny orgán</rdfs:label>
+	<rdfs:label xml:lang="en">statutory body</rdfs:label>
+	<rdfs:label xml:lang="de">statutarorgan</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/StatutoryBody"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jej štatutárny orgán.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/626"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.15"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/626">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/626"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.15">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.15</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">StatutoryBody</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/statutoryBodyType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">typ štatutárneho orgánu</rdfs:label>
+	<rdfs:label xml:lang="en">statutory body type</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/StatutoryBody"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/StatutoryBodyType"/>
+	<rdfs:description xml:lang="sk">Relácia štatutárneho orgánu na jeho typ definovaný hodnotami číselníka CL010113 Typ štatutárneho orgánu.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/623"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.15.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/623">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/623"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.15.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.15.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">StatutoryBodyType</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/legalID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:label xml:lang="sk">identifikačné číslo právneho subjektu</rdfs:label>
+	<rdfs:label xml:lang="en">legal number identifier</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtliche Kennung</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">IČO</altLabel>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">identifikačné číslo organizácie</altLabel>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">IPO</altLabel>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">obchodné identifikačné číslo právnickej osoby</altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalID"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/651"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/651">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/651"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/taxID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:label xml:lang="sk">daňové identifikačné číslo</rdfs:label>
+	<rdfs:label xml:lang="en">tax identifier</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">DIČ</altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/TaxID"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/652"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/652">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/652"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/vatID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:label xml:lang="sk">identifikačné číslo pre daň z pridanej hodnoty</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">IČ DPH</altLabel>
+	<rdfs:label xml:lang="en">value added tax identification number</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/VatID"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/653"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/653">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/653"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/equity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">equity</rdfs:label>
+	<rdfs:label xml:lang="sk">základné imanie</rdfs:label>
+	<rdfs:label xml:lang="de">kapital</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Equity"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jeho základné imanie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/595"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/595">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/595"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.9</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Equity</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/deposit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">deposit</rdfs:label>
+	<rdfs:label xml:lang="sk">vklad</rdfs:label>
+	<rdfs:label xml:lang="de">anzahlung</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Deposit"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jeho vklad.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/618"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/618">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/618"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.12</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Deposits</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/depositType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">deposit type</rdfs:label>
+	<rdfs:label xml:lang="sk">typ vkladu</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Deposit"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/DepositType"/>
+	<rdfs:description xml:lang="sk">Relácia vkladu na jej typ.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/616"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/616">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/616"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.12.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">DepositType</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/shareType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">share type</rdfs:label>
+	<rdfs:label xml:lang="sk">typ akcie</rdfs:label>
+	<rdfs:label xml:lang="de">aktien Typ</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ShareType"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier"/>
+	<rdfs:description xml:lang="sk">Relácia akcie na jej typ definovaný hodnotami číselníka CL010111 Druh akcie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/610"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/610">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/610"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">ShareType</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/shareState">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">share state</rdfs:label>
+	<rdfs:label xml:lang="sk">stav akcie</rdfs:label>
+	<rdfs:label xml:lang="de">aktie zustand</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ShareState"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<rdfs:description xml:lang="sk">Relácia akcie na jej stav.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/608"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/608">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/608"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">ShareState</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/shareForm">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">share form</rdfs:label>
+	<rdfs:label xml:lang="sk">forma akcie</rdfs:label>
+	<rdfs:label xml:lang="de">aktienform</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ShareForm"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<rdfs:description xml:lang="sk">Relácia akcie na jej formu.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/606"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.3"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/606">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/606"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.3">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11.3</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">ShareForm</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/shares">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">shares</rdfs:label>
+	<rdfs:label xml:lang="sk">akcie</rdfs:label>
+	<rdfs:label xml:lang="de">aktien</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/612"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11"/>
+	<rdfs:description xml:lang="sk">Relácia právneho subjektu na jej akcie.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/612">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/612"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Shares</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/institutionalSubsector">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">institutional subsector type</rdfs:label>
+	<rdfs:label xml:lang="sk">inštitucionálny subsektor</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/InstitutionalSubsector"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/institutionalSubsectorType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">institutional subsector type</rdfs:label>
+	<rdfs:label xml:lang="sk">štatistický kód inštitucionálneho subsektora</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalStatus"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legal-subject/InstitutionalSubsectorType"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/654"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/654">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/654"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/authorizationToExecuteNote">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">authorization to execute</rdfs:label>
+	<rdfs:label xml:lang="sk">oprávnenie konať</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Uvádza sa kto je oprávnený konať v mene právnickej osoby a akým spôsobom.Príklad: Písomnosti zakladajúce práva a povinnosti spoločnosti podpisuje konateľ samostatne a to tak, že k písanému alebo vytlačenému obchodnému menu spoločnosti pripojí svoj vlastnoručný podpis.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/620"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.14"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/620">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/620"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.14">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.14</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">AuthorizationToExecute</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/alternativeName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">legal subject alternative name</rdfs:label>
+	<rdfs:label xml:lang="sk">alternatívne meno právneho subjektu</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Môže obsahovať alternatívy k plným názvom, akými sú napríklad zaužívané synonymá, skratky a podobne.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/574"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/574">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/574"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">PrefferedGivenName</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">legal subject full name</rdfs:label>
+	<rdfs:label xml:lang="sk">názov právneho subjektu</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">plné meno právnickej osoby</altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Uvádza sa plný názov právnickej osoby. Obsahuje celý názov v jednom reťazci, so všetkými časťami v správnom poradí, čo znamená na správnom mieste. Oddelenie častí sa uvádza pomocou prázdneho znaku. Uvádza sa vrátane typových označení organizácie ako a.s. a podobne.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/573"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/573">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/573"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">LegalSubjectFullName</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/unitName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">organization unit name</rdfs:label>
+	<rdfs:label xml:lang="sk">názov organizačnej jednotky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/OrganizationUnit"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Označenie pre nižší útvar danej organizácie v prípade jej členenia, ktorý nie je samostatnou právnickou osobou. </rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/577"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/577">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/577"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.4.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">OrganizationUnitName</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/established">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://schema.org/startDate"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/582"/>
+	<rdfs:label xml:lang="en">established</rdfs:label>
+	<rdfs:label xml:lang="sk">vznik</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.5"/>
+	<rdfs:description xml:lang="sk">Uvádza sa dátum zriadenia právnickej osoby.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/582">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/582"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.5">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.5</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Establishment</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/terminated">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://schema.org/endDate"/>
+	<rdfs:label xml:lang="en">terminated</rdfs:label>
+	<rdfs:label xml:lang="sk">zánik</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/583"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.6"/>
+	<rdfs:description xml:lang="sk">Uvádza sa dátum zániku alebo ukončenia činnosti právnickej osoby.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/583">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/583"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.6">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.6</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Termination</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/economicActivityDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">economic activity description</rdfs:label>
+	<rdfs:label xml:lang="sk">popis ekonomickej činnosti</rdfs:label>
+	<rdfs:label xml:lang="de">Beschreibung der wirtschaftlichen Tätigkeit</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/EconomicActivity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Obsahuje vecný popis predmetu činnosti právnickej osoby.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/584"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/584">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/584"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.7.1</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">EconomicActivityDescription</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/equityValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">equity value</rdfs:label>
+	<rdfs:label xml:lang="sk">výška základného imania</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Equity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+	<rdfs:description xml:lang="sk">Obsahuje výšku základného imania právnickej osoby.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/594"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/594">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/594"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.9.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">EquityValue</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/equityValuePaid">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">equity value paid</rdfs:label>
+	<rdfs:label xml:lang="sk">výška splateného základného imania</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Equity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+	<rdfs:description xml:lang="sk">Obsahuje výšku splateného základného imania právnickej osoby.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/593"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.3"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/593">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/593"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.3">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.9.3</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">EquityValuePaid</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/equityValueApproved">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">equity value approved</rdfs:label>
+	<rdfs:label xml:lang="sk">schválená výška základného imania</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Equity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+	<rdfs:description xml:lang="sk">Obsahuje výšku schváleného základného imania právnickej osoby.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/592"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.4"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/592">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/592"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.4">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.9.4</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">EquityValueApproved</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/depositValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">deposit value</rdfs:label>
+	<rdfs:label xml:lang="sk">výška vkladu</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Deposit"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+	<rdfs:description xml:lang="sk">Obsahuje údaje o výške vkladu.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/615"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/615">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/615"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.2">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.12.2</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">DepositValue</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/depositDueDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">deposit due date</rdfs:label>
+	<rdfs:label xml:lang="sk">dátum splatnosti vkladu</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Deposit"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeTime"/>
+	<rdfs:description xml:lang="sk">Uvádza sa dátum splatnosti vkladu.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/614"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.3"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/614">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/614"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.3">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.12.3</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">DepositDueDate</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/shareNominalValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">share nominal value</rdfs:label>
+	<rdfs:label xml:lang="sk">menovitá hodnota akcie</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+	<rdfs:description xml:lang="sk">Uvádza sa menovitá hodnota akcie.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/603"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.4"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/603">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/603"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.4">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11.4</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">ShareNominalValue</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/sharesAmount">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">shares amount</rdfs:label>
+	<rdfs:label xml:lang="sk">množstvo akcií</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+	<rdfs:description xml:lang="sk">Uvádza sa množstvo akcií.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/605"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.5"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/605">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/605"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.5">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11.5</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">SharesAmount</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/sharesTransferabilityNote">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">shares transferability</rdfs:label>
+	<rdfs:label xml:lang="sk">prevoditeľnosť akcií</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legal-subject/Shares"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Uvádza sa popis obmedzenia prevoditeľnosti akcií.</rdfs:description>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/604"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.6"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/604">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/604"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.6">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<status xmlns="http://www.w3.org/ns/adms#" rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.2.11.6</notation>
+	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">SharesTransferability</altSymbol>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/EconomicActivity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Economic activity</rdfs:label>
+	<rdfs:label xml:lang="sk">Ekonomická činnosť</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Predmet činnosti</altLabel>
+	<rdfs:label xml:lang="de">Wirtschaftstätigkeit</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/588"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/588">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/588"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/EconomicActivityType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Klasifikácia ekonomickej činnosti</rdfs:label>
+	<rdfs:label xml:lang="en">Economic activity classification</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/586"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL005205"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/586">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/586"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalSubject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Právny subjekt</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Právnicka osoba</altLabel>
+	<rdfs:label xml:lang="en">Legal Subject</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtsanwalt</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/631"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.2"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/631">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/631"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/BusinessPerson">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
+	<rdfs:label xml:lang="sk">Podnikateľ</rdfs:label>
+	<rdfs:label xml:lang="en">Business Person</rdfs:label>
+	<rdfs:label xml:lang="de">Geschäftsperson</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/632"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/632">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/632"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/CorporateBody">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/BusinessPerson"/>
+	<rdfs:label xml:lang="sk">Korporácia</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Organizácia</altLabel>
+	<rdfs:label xml:lang="en">Corporate Body</rdfs:label>
+	<rdfs:label xml:lang="de">Korporation</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/633"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/633">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/633"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/DomesticCorporateBody">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/CorporateBody"/>
+	<rdfs:label xml:lang="sk">Tuzemská korporácia</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Tuzemská organizácia</altLabel>
+	<rdfs:label xml:lang="en">Domestic Corporate Body</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/634"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/634">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/634"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ForeignCorporateBody">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/CorporateBody"/>
+	<rdfs:label xml:lang="sk">Zahraničná korporácia</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Zahraničná organizácia</altLabel>
+	<rdfs:label xml:lang="en">Foreign Corporate Body</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Podnik zahraničnej osoby</altLabel>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Organizačná zložka podniku zahraničnej osoby</altLabel>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/635"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/635">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/635"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/SelfEmployedPerson">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/BusinessPerson"/>
+	<rdfs:label xml:lang="sk">Fyzická osoba - podnikateľ</rdfs:label>
+	<rdfs:label xml:lang="en">Self Employed Person</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Živnostník</altLabel>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/636"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/636">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/636"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Identifikátor právneho subjektu</rdfs:label>
+	<rdfs:label xml:lang="en">Legal Subject Identifier</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/637"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/637">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/637"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ID"/>
+	<rdfs:label xml:lang="sk">Identifikačné číslo právneho subjektu</rdfs:label>
+	<rdfs:label xml:lang="en">Legal Number Identifier</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">IČO</altLabel>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">IPO</altLabel>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/638"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/638">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/638"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/TaxID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ID"/>
+	<rdfs:label xml:lang="en">Daňové identifikačné číslo</rdfs:label>
+	<rdfs:label xml:lang="sk">Tax Identifier</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">DIČ</altLabel>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/639"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/639">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/639"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/VatID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/ID"/>
+	<rdfs:label xml:lang="en">Identifikačné číslo pre daň z pridanej hodnoty</rdfs:label>
+	<rdfs:label xml:lang="sk">Value Added Tax Identification Number</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">IČ DPH</altLabel>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">VAT ID</altLabel>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/640"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/640">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/640"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ActivitySubjective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Predmet činnosti (voľný popis)</rdfs:label>
+	<rdfs:label xml:lang="en">Activity Subjective</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/641"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/641">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/641"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/SizeByEmployees">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Veľkosť právneho subjektu podľa počtu zamestancov</rdfs:label>
+	<rdfs:label xml:lang="en">Legal Subject Size By Number of Employees</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/TypeByEmployees">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Veľkosť právneho subjektu podľa počtu zamestnancov</rdfs:label>
+	<rdfs:label xml:lang="en">Legal subject size by number of employees</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/642"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/642">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/642"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/Unit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Organization unit</rdfs:label>
+	<rdfs:label xml:lang="sk">Organizačná jednotka</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/581"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/581">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/581"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/UnitType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Organization Unit Type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ organizačnej jednotky</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/579"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010110"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/579">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/579"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalForm">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Legal Form</rdfs:label>
+	<rdfs:label xml:lang="sk">Právna forma</rdfs:label>
+	<rdfs:label xml:lang="de">Rechtsstatus</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/576"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/576">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/576"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalFormType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Legal Form Type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ právnej formy</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL000056"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalStatus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Legal Status</rdfs:label>
+	<rdfs:label xml:lang="sk">Právny stav</rdfs:label>
+	<rdfs:label xml:lang="de">Den rechtlichen Status</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/622"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/622">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/622"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalStatusType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Legal Status Type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ právneho stavu</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010108"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/LegalFact">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Legal fact</rdfs:label>
+	<rdfs:label xml:lang="sk">Právna skutočnosť</rdfs:label>
+	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Iná právna skutočnosť</altLabel>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/591"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/591">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/591"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/Ownership">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Vlastníctvo</rdfs:label>
+	<rdfs:label xml:lang="en">Ownership</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/OwnershipType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Typ vlastníctva</rdfs:label>
+	<rdfs:label xml:lang="en">Ownership Type</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/643"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/643">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/643"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/Stakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Zainteresovaná osoba</rdfs:label>
+	<rdfs:label xml:lang="sk">Stakeholder</rdfs:label>
+	<rdfs:label xml:lang="de">Interessengruppen</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/600"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/600">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/600"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/StakeholderType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Typ zainteresovanej osoby</rdfs:label>
+	<rdfs:label xml:lang="sk">Stakeholder type</rdfs:label>
+	<rdfs:label xml:lang="de">Art von Stakeholder</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/598"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010109"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/598">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/598"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/StatutoryBody">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="sk">Štatutárny orgán</rdfs:label>
+	<rdfs:label xml:lang="en">Statutory body</rdfs:label>
+	<rdfs:label xml:lang="de">Statutarorgan</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/627"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/627">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/627"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/StatutoryBodyType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Typ štatutárneho orgánu</rdfs:label>
+	<rdfs:label xml:lang="en">Statutory Body Type</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/624"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010113"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/624">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/624"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/Equity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Equity</rdfs:label>
+	<rdfs:label xml:lang="sk">Základné imanie</rdfs:label>
+	<rdfs:label xml:lang="de">Kapital</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/596"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/596">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/596"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/Deposit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Deposit</rdfs:label>
+	<rdfs:label xml:lang="sk">Vklad</rdfs:label>
+	<rdfs:label xml:lang="de">Anzahlung</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/619"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/619">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/619"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/DepositType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Deposit type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ vkladu</rdfs:label>
+	<rdfs:label xml:lang="de">Art Kaution</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/617"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/617">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/617"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/Shares">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Shares</rdfs:label>
+	<rdfs:label xml:lang="sk">Akcie</rdfs:label>
+	<rdfs:label xml:lang="de">Aktien</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/613"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/613">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/613"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ShareType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Share Type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ akcie</rdfs:label>
+	<rdfs:label xml:lang="de">Aktien Typ</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/611"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010111"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/611">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/611"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ShareState">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Share state</rdfs:label>
+	<rdfs:label xml:lang="sk">Stav akcie</rdfs:label>
+	<rdfs:label xml:lang="de">Aktie Zustand</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/609"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/609">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/609"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/ShareForm">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Share form</rdfs:label>
+	<rdfs:label xml:lang="sk">Forma akcie</rdfs:label>
+	<rdfs:label xml:lang="de">Aktienform</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/607"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/607">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/607"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/InstitutionalSubsector">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:label xml:lang="en">Institutional Subsector</rdfs:label>
+	<rdfs:label xml:lang="sk">Inštitucionálny subsektor</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/InstitutionalSubsectorType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Institutional Subsector Type</rdfs:label>
+	<rdfs:label xml:lang="sk">Štatistický kód inštitucionálneho subsektora</rdfs:label>
+	<identifier xmlns="http://www.w3.org/ns/adms#" rdf:resource="https://data.gov.sk/id/identifier/metais-standard/655"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/655">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/655"/>
+	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+</rdf:Description>
+
+</rdf:RDF>

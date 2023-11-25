@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://data.gov.sk/def/ontology/egov/"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:schema="http://schema.org/"
+	xmlns:loca="https://data.gov.sk/def/ontology/location/"
+	xmlns:cv="http://data.europa.eu/m8g/"
+	xmlns:adms="http://www.w3.org/ns/adms#"
+	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+	xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+	xmlns:fin="https://data.gov.sk/def/ontology/finance/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/2021-MM-DD.owl">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
+	<dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
+	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+	<dct:title xml:lang="sk">Ontológia egovernment entít</dct:title>
+	<rdfs:description xml:lang="sk">Ontológia egovernment entít definuje základné entity eGovernmentu ako Informačný systém verejne správy, 
+        
+        
+        
+        
+        , KRIS, Štúdia uskutočnisteľnosti a ostatné. Primárne slúži na popis entít v Centrálnom Metainformačnom systéme. Výnimkou sú entity spojené s elekronickými službami, ktoré sú definované prostredníctvom národného aplikačného profilu CPSV-AP-SK.</rdfs:description>
+	<owl:versionInfo>2021-MM-DD</owl:versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://schema.org/email">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/adms#identifier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/source">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/org#isUnitOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/agregatesAgenda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/PublicAdministrationSection"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Agenda"/>
+	<rdfs:description xml:lang="sk">Relácia úseku verejnej správy na agendu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">agreguje agendu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/690"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/determinesObjective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/KRIS"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Objective"/>
+	<rdfs:description xml:lang="sk">Relácia KRIS na cieľ.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">stanovuje cieľ</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/developsISVS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
+	<rdfs:description xml:lang="sk">Relácia Egov projektu na ISVS.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">rozvíja ISVS</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/689"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/developsProject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/KRIS"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:description xml:lang="sk">Relácia KRIS na projekt.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">rozvíja projekt</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/funds">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<owl:inverseOf rdf:resource="https://data.gov.sk/def/ontology/egov/isFundedBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/handlesAgenda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Agenda"/>
+	<rdfs:description xml:lang="sk">Relácia na agendu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">obsluhuje agendu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/687"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/handlesProject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na projek.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">obsluhuje projekt</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/695"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/handlesPublicService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/EForm"/>
+	<rdfs:range rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+	<rdfs:description xml:lang="sk">Relácia EFormulára na koncovú službu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">obsluhuje koncovú službu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/688"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/isFundedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/OperationProgram"/>
+	<rdfs:description xml:lang="sk">Relácia EGOV projektu na operačný program.</rdfs:description>
+	<rdfs:description xml:lang="sk">Relácia operačného programu na EGOV projekt.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">financuje</rdfs:label>
+	<rdfs:label xml:lang="sk">je financované prostredníctvom</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/makesApplicationServiceAvaliable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/EndPoint"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
+	<rdfs:description xml:lang="sk">Relácia na aplikačnú službu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">sprístupňuje aplikačnú službu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/managesApplicationService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
+	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na aplikačnú službu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">spravuje aplikačnú službu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/managesISVS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
+	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na ISVS.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">spravuje ISVS</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/692"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/operatesApplicationService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ObligatedPerson"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
+	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na aplikačnú službu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">prevádzkuje aplikačnú službu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/operatesISVS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ObligatedPerson"/>
+	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na ISVS.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">prevádzkuje ISVS</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/performsAgenda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Agenda"/>
+	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na agendu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">vykonáva agendu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/694"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/projectPhase">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ProjectPhase"/>
+	<rdfs:description xml:lang="sk">Relácia projektu na jeho fázu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">fáza projektu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/projectPhaseType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ProjectPhaseType"/>
+	<rdfs:description xml:lang="sk">Relácia projektu na jeho fázu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">fáza projektu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/providesApplicationServiceOperation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/EndPoint"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationServiceOperation"/>
+	<rdfs:description xml:lang="sk"></rdfs:description>
+	<rdfs:description xml:lang="sk">Relácia koncového bodu na operáciu aplikačnej služby.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">poskytuje operáciu aplikačnej služby</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/realizesApplicationService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
+	<rdfs:description xml:lang="sk">Relácia ISVS na aplikačnú službu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">realizuje aplikačnú službu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/realizesPublicService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
+	<rdfs:range rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+	<rdfs:description xml:lang="sk">Relácia aplikačnej služby na koncovú službu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">realizuje koncovú službu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/686"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/receiver">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/id/legal-subject/ElectronicLegalDocument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/referenceRegister">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ReferenceData"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ReferenceRegister"/>
+	<rdfs:description xml:lang="sk">Relácia na referenčný register.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="de">Referenzregister</rdfs:label>
+	<rdfs:label xml:lang="en">reference register</rdfs:label>
+	<rdfs:label xml:lang="sk">referenčný register</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/478"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/refersToKRIS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/KRISProtocol"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/KRIS"/>
+	<rdfs:description xml:lang="sk">Relácia KRIS protokolu na jeho KRIS.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">referuje KRIS</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/sender">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/id/legal-subject/ElectronicLegalDocument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/steamsFromFS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/FeasibilityStudy"/>
+	<rdfs:description xml:lang="sk">Relácia projektu na jeho štúdiu uskutočniteľnosti.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">vznikol zo štúdie uskutočniteľnosti</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/takesOverPrinciple">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/FeasibilityStudy"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Principle"/>
+	<rdfs:description xml:lang="sk">Relácia štúdie uskutočniteľnosti na princíp.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">preberá princíp</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/m8g/Event">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/m8g/Evidence">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/m8g/PublicAuthority">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/m8g/PublicOrganization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.europa.eu/m8g/ServicePhaseType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/vocab/cpsv#PublicService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://schema.org/ContactPoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/adms#Asset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/adms#Identifier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Agenda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="de">Agenda</rdfs:label>
+	<rdfs:label xml:lang="en">Agenda</rdfs:label>
+	<rdfs:label xml:lang="sk">Agenda</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/agenda_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/180"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ApplicationService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="de">Anwendungsservice</rdfs:label>
+	<rdfs:label xml:lang="sk">Aplikačná služba</rdfs:label>
+	<rdfs:label xml:lang="en">Application service</rdfs:label>
+	<skos:altLabel xml:lang="en">is service</skos:altLabel>
+	<skos:altLabel xml:lang="sk">is služba</skos:altLabel>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/sluzba_is_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/184"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ApplicationServiceOperation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="de">Anwendung Service Betrieb</rdfs:label>
+	<rdfs:label xml:lang="en">Application service operation</rdfs:label>
+	<rdfs:label xml:lang="sk">Operácia aplikacnej služby</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/egov/operacia_as_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/223"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/EAdjugement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/id/legal-subject/ElectronicLegalDocument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/EForm">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Evidence"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/id/legal-subject/ElectronicLegalDocument"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Electronic form</rdfs:label>
+	<rdfs:label xml:lang="sk">Elektronický formulár</rdfs:label>
+	<rdfs:label xml:lang="de">Elektronische Form</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/eform_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/31"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/EndPoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">End point</rdfs:label>
+	<rdfs:label xml:lang="de">Endpunkt</rdfs:label>
+	<rdfs:label xml:lang="sk">Koncový bod</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/endpoint_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/200"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/FeasibilityStudy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Feasibility study</rdfs:label>
+	<rdfs:label xml:lang="de">Machbarkeitsstudie</rdfs:label>
+	<rdfs:label xml:lang="sk">Štúdia uskutočniteľnosti</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/su_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/227"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ISVS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+	<owl:allValuesFrom rdf:resource="https://data.gov.sk/def/ontology/egov/Module"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ISVS">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="de">Informationssystem der öffentlichen Verwaltung</rdfs:label>
+	<rdfs:label xml:lang="sk">Informačný systém verejnej správy</rdfs:label>
+	<rdfs:label xml:lang="en">Public administration information system</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/isvs_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/83"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/KRIS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Koncepcia rozvoja informačného systému</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/kris_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/211"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/KRISProtocol">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Protokol koncepcie rozvoja informačného systému</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/kris_p_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/212"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Module">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Modul</rdfs:label>
+	<rdfs:label xml:lang="en">Module</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/478"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Objective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Cieľ prioritnej osy</rdfs:label>
+	<rdfs:label xml:lang="en">Objective</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ObligatedPerson">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/BusinessPerson"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Obligated Person</rdfs:label>
+	<rdfs:label xml:lang="sk">Povinná osoba</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/OperationProgram">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Operation program</rdfs:label>
+	<rdfs:label xml:lang="sk">Operačný program</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/prg_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/225"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/PO7Objective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/Objective"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Cieľ prioritnej osy 7</rdfs:label>
+	<rdfs:label xml:lang="en">PO7 Objective</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/p07objective_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Principle">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Principle</rdfs:label>
+	<rdfs:label xml:lang="sk">Princíp</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/princip_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/224"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Process">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Proces</rdfs:label>
+	<rdfs:label xml:lang="en">Process</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/proces_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/140"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Project">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Project</rdfs:label>
+	<rdfs:label xml:lang="sk">Projekt</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/projekt_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/226"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ProjectPhase">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/type"/>
+	<owl:allValuesFrom rdf:resource="https://data.gov.sk/def/ontology/egov/ProjectPhaseType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ProjectPhase">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Fáza projektu</rdfs:label>
+	<rdfs:label xml:lang="en">Project phase</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/fp_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/201"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ProjectPhaseType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Project phase type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ fázy projektu</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/fp_"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/201"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/PublicAdministrationSection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x3"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/org#isUnitOf"/>
+	<owl:allValuesFrom rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/PublicAdministrationSection">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Public administration section</rdfs:label>
+	<rdfs:label xml:lang="sk">Úsek verejnej správy</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/egov/U"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/160"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ReferenceData">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x4"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/source"/>
+	<owl:allValuesFrom rdf:resource="https://data.gov.sk/def/ontology/egov/SourceRegister"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ReferenceData">
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x5"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="https://data.gov.sk/def/ontology/egov/referenceRegister"/>
+	<owl:allValuesFrom rdf:resource="https://data.gov.sk/def/ontology/egov/ReferenceRegister"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ReferenceData">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Reference Data</rdfs:label>
+	<rdfs:label xml:lang="sk">Referenčné údaje</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ReferenceRegister">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Reference Register</rdfs:label>
+	<rdfs:label xml:lang="sk">Referenčný register</rdfs:label>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/478"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/RequiredAuthentificationLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Požadovaná úroveň autentifikácie</rdfs:label>
+	<rdfs:label xml:lang="en">Required Authentification Level</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ServicePhase">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x6"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/type"/>
+	<owl:allValuesFrom rdf:resource="http://data.europa.eu/m8g/ServicePhaseType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ServicePhase">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="sk">Fáza služby</rdfs:label>
+	<rdfs:label xml:lang="en">Service Phase</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ServicePhaseType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Service Phase Type</rdfs:label>
+	<rdfs:label xml:lang="sk">Typ fázy služby</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Situation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="node1gfg70e87x7"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1gfg70e87x7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/type"/>
+	<owl:allValuesFrom rdf:resource="http://data.europa.eu/m8g/Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Situation">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:label xml:lang="en">Situation</rdfs:label>
+	<rdfs:label xml:lang="sk">Situácia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/SourceRegister">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legal-subject/BusinessPerson">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/legal-subject/ElectronicLegalDocument">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment xml:lang="sk">Elektronický úradný dokument</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/U">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>U</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/agenda_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>agenda_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/eform_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>eform_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/endpoint_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>endpoint_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/fp_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>fp_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/isvs_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>isvs_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/kris_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>kris_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/kris_p_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>kris_p_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/p07objective_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>p07objective_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/prg_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>prg_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/princip_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>princip_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/proces_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>proces_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/projekt_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>projekt_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/sluzba_is_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>sluzba_is_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/su_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>su_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-id/egov/operacia_as_">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-code"/>
+	<skos:notation>operacia_as_</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/140">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/140"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/160">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/160"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/180">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/180"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/184">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/184"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/200">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/200"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/201">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/201"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/211">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/211"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/212">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/212"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/223">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/223"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/224">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/224"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/225">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/225"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/226">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/226"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/227">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/227"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/31">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/31"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/478">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/478"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/52">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/52"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/686">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/686"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/687">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/687"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/688">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/688"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/689">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/689"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/690">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/690"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/692">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/692"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/694">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/694"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/695">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/695"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/83">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/83"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/issuerCountry">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">krajina vydavateľa</rdfs:label>
+	<rdfs:label xml:lang="en">issuer contrry</rdfs:label>
+	<rdfs:label xml:lang="de">Land des Herausgebers</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>
