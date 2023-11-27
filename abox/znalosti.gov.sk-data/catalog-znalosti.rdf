@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:adms="http://www.w3.org/ns/adms#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:prov="http://www.w3.org/ns/prov#"
+   xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:schema="http://schema.org/"
+   xmlns:res="https://data.gov.sk/def/ontology/resource/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:dcat="http://www.w3.org/ns/dcat#">
+    
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Public Knowledge Graph SK 2023
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->     
+    
+  <dcat:Catalog rdf:about="https://data.gov.sk/set/catalog/knowledgegraph">
+    <dct:title xml:lang="sk">Znalostný graf SK</dct:title>
+    <dct:title xml:lang="en">Knowledge Graph SK</dct:title>
+    <dcat:version rdf:datatype="&xsd;string">2023-DD-MM</dcat:version>
+    <dct:issued rdf:datatype="&xsd;dateTime">2023-DD-MMT00:00:00Z</dct:issued>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/> 
+
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/physical-person/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/location/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/education/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
+    
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/international-organizations/2021-MM-DD"/>
+    
+    <dcat:dataset rdf:resource="http://www.w3.org/ns/dcat/3"/>
+    <dcat:dataset rdf:resource="https://www.w3.org/ns/shacl/2017-07-20"/>
+
+
+    <dcat:dataset rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <dcat:dataset rdf:resource="http://purl.org/linked-data/cube"/>
+
+
+    <dcat:dataset rdf:resource="http://www.w3.org/ns/adms"/>
+    <dcat:dataset rdf:resource="http://www.w3.org/ns/prov%23"/>
+
+    <dcat:dataset rdf:resource="http://www.w3.org/2002/07/owl%23"/>
+    <dcat:dataset rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns%23"/>
+    <dcat:dataset rdf:resource="http://www.w3.org/2000/01/rdf-schema%23"/>
+
+    <dcat:dataset rdf:resource="http://purl.org/dc/terms%2F"/>
+    <dcat:dataset rdf:resource="http://data.europa.eu/m8g"/>
+
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/codelist/CL000056/2008-10-01"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/codelist/CL003003/2008-10-01"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/codelist/CL010139/2015-10-15"/>
+    
+    <dcat:dataset rdf:resource="http://publications.europa.eu/resource/authority/data-theme"/>
+    <dcat:dataset rdf:resource="http://publications.europa.eu/resource/authority/file-type"/>
+    <dcat:dataset rdf:resource="http://publications.europa.eu/resource/authority/dataset-type"/>
+    <dcat:dataset rdf:resource="http://publications.europa.eu/resource/authority/continent"/>
+    <dcat:dataset rdf:resource="http://publications.europa.eu/resource/authority/country"/>
+    <dcat:dataset rdf:resource="http://publications.europa.eu/resource/authority/frequency"/>
+    
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/agenda/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/public-service/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/isvs/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/rpo-reference-data/2021-MM-DD"/>    
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/taxonomy/nuts-sk/2004"/>
+    
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/codelist/0069/2020-07-01"/>
+ 
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/usorg/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/usorg-headquarters/2021-MM-DD"/>
+    
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/nuts-images/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/data/usorg-images/2021-MM-DD"/>
+
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/rfo/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/rpo/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/ra/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/dcat-ap-sk2/2023b"/>
+
+  </dcat:Catalog>
+    
+   
+  <!-- Ontológia fyzickej osoby -->
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia fyzickej osoby</dct:title>
+    <dct:title xml:lang="en">Physical Person Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/physical-person/2023b"/> 
+  </dcat:Dataset>
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person/2023b">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/physical-person/2023b.owl"/>
+  </dcat:Dataset>
+        
+        
+        
+   <!-- Ontológia právneho subjektu -->
+  
+   <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/legal-subject">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia právneho subjektu</dct:title>
+    <dct:title xml:lang="en">Legal Subject Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/> 
+  </dcat:Dataset>    
+   
+   
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/legal-subject/2023b">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b.owl"/>
+  </dcat:Dataset>    
+     
+  <!-- Ontológia lokácie -->
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/location">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia lokácie</dct:title>
+    <dct:title xml:lang="en">Location Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/location/2023b"/> 
+  </dcat:Dataset>
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/location/2023b">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/location/2023b.owl"/>
+  </dcat:Dataset>
+
+  <!-- Ontológia vzdelávania -->
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/education">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia vzdelávania</dct:title>
+    <dct:title xml:lang="en">Education Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/education/2023b"/>
+  </dcat:Dataset>
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/education/2023b">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/location/2023b.owl"/>
+  </dcat:Dataset>
+
+  <!-- Ontológia zdravotnej starostlivosti -->
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/healthcare">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia zdravotnej starostlivosti</dct:title>
+    <dct:title xml:lang="en">Healthcare Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+  </dcat:Dataset>
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/healthcare/2023b">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/location/2023b.owl"/>
+  </dcat:Dataset>
+     
+  <!-- Ontológia finančných entít -->
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/finance">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia finančných entít</dct:title>
+    <dct:title xml:lang="en">Finance Elements Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/> 
+  </dcat:Dataset>
+
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/finance/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD.owl"/> 
+  </dcat:Dataset>
+
+    
+  <!-- Ontológia egov entít -->
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/egov">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia egov entít</dct:title>
+    <dct:title xml:lang="en">EGOV Elements Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/> 
+  </dcat:Dataset>
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/egov/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD.owl"/>   
+  </dcat:Dataset>
+    
+
+   <!-- DCAT -->
+  
+  <dcat:Dataset rdf:about="http://www.w3.org/ns/dcat">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia dátového katalógu (DCAT)</dct:title>
+    <dct:title xml:lang="en">Data Catalog Vocabulary</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/dcat/3"/> 
+  </dcat:Dataset>
+  
+  <dcat:Dataset rdf:about="http://www.w3.org/ns/dcat/3">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">3</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://www.w3.org/ns/dcat.ttl"/>
+  </dcat:Dataset>
+  
+
+
+  <!-- SHACL -->
+
+  <dcat:Dataset rdf:about="https://www.w3.org/ns/shacl">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia povinných vlastností údajov (SHACL)</dct:title>
+    <dct:title xml:lang="en">Shapes Constraint Language Vocabulary</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://www.w3.org/ns/shacl/2017-07-20"/>
+  </dcat:Dataset>
+
+  <dcat:Dataset rdf:about="https://www.w3.org/ns/shacl/2017-07-20">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2017-07-20</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://www.w3.org/ns/shacl.ttl"/>
+  </dcat:Dataset>
+
+
+
+
+   <!-- ADMS -->
+
+  <dcat:Dataset rdf:about="http://www.w3.org/ns/adms">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia metadátových aktív (ADMS)</dct:title>
+    <dct:title xml:lang="en">Asset Description Metadata Schema</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2013-08-01</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://uri.semic.eu/w3c/ns/adms.ttl"/>
+  </dcat:Dataset>
+
+
+
+
+   <!-- PROV -->
+
+  <dcat:Dataset rdf:about="http://www.w3.org/ns/prov-o%23">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia pôvodu zdrojov (PROV)</dct:title>
+    <dct:title xml:lang="en">PROV Ontology</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2013-05-19</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://www.w3.org/ns/prov-o.ttl"/>
+  </dcat:Dataset>
+
+
+    <!-- SKOS -->
+
+  <dcat:Dataset rdf:about="http://www.w3.org/2004/02/skos/core">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia jednoduchej organizácie znalostí (SKOS)</dct:title>
+    <dct:title xml:lang="en">Simple Knowlede Organization Vocabulary</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2009-08</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://www.w3.org/2009/08/skos-reference/skos.rdf"/>
+  </dcat:Dataset>
+
+  
+    <!-- OWL -->
+
+  <dcat:Dataset rdf:about="http://www.w3.org/2002/07/owl%23">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Jazyk pre webové ontológie (OWL)</dct:title>
+    <dct:title xml:lang="en">Web Ontology Langugage</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2002-07</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://www.w3.org/2002/07/owl.ttl"/>
+  </dcat:Dataset>
+
+
+    <!-- RDF -->
+
+  <dcat:Dataset rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns%23">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia RDF</dct:title>
+    <dct:title xml:lang="en">RDF Concepts Vocabulary (RDF)</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">1999-02-22</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns.ttl"/>
+  </dcat:Dataset>
+
+    <!-- RDFS -->
+
+  <dcat:Dataset rdf:about="http://www.w3.org/2000/01/rdf-schema%23">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia RDFS</dct:title>
+    <dct:title xml:lang="en">RDF Schema vocabulary (RDFS)</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2000-01</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="http://www.w3.org/2000/01/rdf-schema.ttl"/>
+  </dcat:Dataset>
+
+   <!-- DCT -->
+
+  <dcat:Dataset rdf:about="http://purl.org/dc/terms%2F">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">DCMI Metadáta (DublinCore)</dct:title>
+    <dct:title xml:lang="en">DCMI Metadata Terms (DublinCore</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2020-01-20</dcat:version>
+    <dct:publisher rdf:resource="https://www.dublincore.org"/>
+    <dcat:distribution rdf:resource="http://purl.org/dc/terms.ttl"/>
+  </dcat:Dataset>
+
+ <!-- CCCEV -->
+
+
+  <dcat:Dataset rdf:about="http://data.europa.eu/m8g">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Slovník EÚ pre kritéria a potvrdenia (CCCEV)</dct:title>
+    <dct:title xml:lang="en">Core Criterion and Core Evidence Vocabulary</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2017-07-20</dcat:version>
+    <dct:publisher rdf:resource="https://joinup.ec.europa.eu/interoperable-europe"/>
+    <dcat:distribution rdf:resource="https://semiceu.github.io/CCCEV/releases/2.00/voc/cccev.ttl"/>
+  </dcat:Dataset>
+
+
+
+   <!-- DataCube -->
+
+  <dcat:Dataset rdf:about="http://purl.org/linked-data/cube">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:title xml:lang="sk">Ontológia dátových kociek (DQ)</dct:title>
+    <dct:title xml:lang="en">The RDF Data Cube Vocabulary</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">0.2</dcat:version>
+    <dct:publisher rdf:resource="https://www.w3.org"/>
+    <dcat:distribution rdf:resource="https://raw.githubusercontent.com/UKGovLD/publishing-statistical-data/master/specs/src/main/vocab/cube.ttl"/>
+  </dcat:Dataset>
+
+
+ <!-- Typ právnej formy --> 
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/CL000056">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/codelist/CL000056/2008-10-01"/> 
+</dcat:Dataset>
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/CL000056/2008-10-01">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:version rdf:datatype="&xsd;string">2008-10-01</dcat:version>    
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/codelist/CL000056/2008-10-01.ttl"/> 
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+</dcat:Dataset>
+
+
+  <!-- Pohlavie --> 
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/CL003003">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/codelist/CL003003/2008-10-01"/> 
+ </dcat:Dataset>
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/CL003003/2008-10-01">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:version rdf:datatype="&xsd;string">2008-10-01</dcat:version>    
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/codelist/CL003003/2008-10-01.ttl"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset> 
+ 
+ <!-- Druh adresy --> 
+ 
+   <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/CL010139">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/codelist/CL010139/2015-10-15"/> 
+ </dcat:Dataset> 
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/CL010139/2015-10-15">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:version rdf:datatype="&xsd;string">2015-10-15</dcat:version>    
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/codelist/CL010139/2015-10-15.ttl"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+ 
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // EÚ Slovníky
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     --> 
+
+    
+  <!-- Kontinenty -->
+  
+  <dcat:Dataset rdf:about="http://publications.europa.eu/resource/authority/continent">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dct:title xml:lang="sk">Kontinenty</dct:title>
+    <dct:title xml:lang="en">Continents</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-03-17</dcat:version>
+    <dct:publisher rdf:resource="https://op.europa.eu"/>
+    <dcat:distribution rdf:resource="https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2F97871786-8684-11eb-ac4c-01aa75ed71a1.0001.02%2FDOC_1&amp;fileName=continents-skos.rdf"/>
+  </dcat:Dataset>
+
+  
+  <!-- Krajiny -->
+  
+  <dcat:Dataset rdf:about="http://publications.europa.eu/resource/authority/country">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dct:title xml:lang="sk">Krajiny</dct:title>
+    <dct:title xml:lang="en">Countries</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/> 
+    <dcat:version rdf:datatype="&xsd;string">2022-10-19</dcat:version>    
+    <dct:publisher rdf:resource="https://op.europa.eu"/>
+    <dcat:distribution rdf:resource="https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2Feae692cc-103e-11ee-b12e-01aa75ed71a1.0001.05%2FDOC_1&amp;fileName=countries-skos.rdf"/>
+  </dcat:Dataset>
+   
+    
+  
+  <!-- Téma datasetu -->
+  
+  <dcat:Dataset rdf:about="http://publications.europa.eu/resource/authority/data-theme">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dct:title xml:lang="sk">Téma datasetu</dct:title>
+    <dct:title xml:lang="en">Dataset Theme</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dcat:version rdf:datatype="&xsd;string">2022-07-15</dcat:version>    
+    <dct:publisher rdf:resource="https://op.europa.eu"/>
+    <dcat:distribution rdf:resource="https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2F34802596-0286-11ed-acce-01aa75ed71a1.0001.02%2FDOC_1&amp;fileName=data-theme-skos.rdf"/>
+  </dcat:Dataset>
+
+  
+  
+  <!-- Typ datasetu -->
+  
+  <dcat:Dataset rdf:about="http://publications.europa.eu/resource/authority/dataset-type">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dct:title xml:lang="sk">Typ datasetu</dct:title>
+    <dct:title xml:lang="en">Dataset Type</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:version rdf:datatype="&xsd;string">2023-03-15</dcat:version>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dct:publisher rdf:resource="https://op.europa.eu"/>
+    <dcat:distribution rdf:resource="https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2F7a843e93-c33a-11ed-a05c-01aa75ed71a1.0001.03%2FDOC_1&amp;fileName=dataset-types-skos.rdf"/>
+  </dcat:Dataset>
+  
+  
+  <!-- Typ súboru -->
+  
+  <dcat:Dataset rdf:about="http://publications.europa.eu/resource/authority/file-type">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dct:title xml:lang="sk">Typ súboru</dct:title>
+    <dct:title xml:lang="en">File Type</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:version rdf:datatype="&xsd;string">2023-06-14</dcat:version>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dct:publisher rdf:resource="https://op.europa.eu"/>
+    <dcat:distribution rdf:resource="https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2F0e8c3dc2-103f-11ee-b12e-01aa75ed71a1.0001.04%2FDOC_1&amp;fileName=filetypes-skos.rdf"/>
+  </dcat:Dataset>
+ 
+  
+  <!-- Frekvencie -->
+  
+  <dcat:Dataset rdf:about="http://publications.europa.eu/resource/authority/frequency">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST"/>
+    <dct:title xml:lang="sk">Frekvencia</dct:title>
+    <dct:title xml:lang="en">Frequency</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:version rdf:datatype="&xsd;string">2023-06-14</dcat:version>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
+    <dct:publisher rdf:resource="https://op.europa.eu"/>
+    <dcat:distribution rdf:resource="https://op.europa.eu/o/opportal-service/euvoc-download-handler?cellarURI=http%3A%2F%2Fpublications.europa.eu%2Fresource%2Fcellar%2F089fac8e-103f-11ee-b12e-01aa75ed71a1.0001.02%2FDOC_1&amp;fileName=frequencies-skos.rdf"/>
+  </dcat:Dataset>
+    
+  
+  
+  
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Medzinárodné organizácie
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     --> 
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/international-organizations">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Medzinárodné organizácie</dct:title>
+    <dct:title xml:lang="en">International Organizations</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/international-organizations/2021-MM-DD"/> 
+</dcat:Dataset>
+  
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/international-organizations/2021-MM-DD">
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>    
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/international-organizations/2021-MM-DD-example.rdf"/>
+  </dcat:Dataset>
+  
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // MetaIS
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     --> 
+  
+  <!-- Agenda --> 
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/agenda">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Agendy</dct:title>
+    <dct:title xml:lang="en">Agendy</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/agenda/2021-MM-DD"/> 
+ </dcat:Dataset>   
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/agenda/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/agenda/2021-MM-DD-example.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>   
+
+<!-- Vyhlásené referenčné údaje --> 
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/rpo-reference-data">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Vyhlásené referenčné údaje registra RPO</dct:title>
+    <dct:title xml:lang="en">Declared Reference Data of the Legal Subject Register</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/rpo-reference-data/2021-MM-DD"/> 
+ </dcat:Dataset>
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/rpo-reference-data/2021-MM-DD">
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/rpo-reference-data/2021-MM-DD.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+ 
+ 
+ <!-- ISVS --> 
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/isvs">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">ISVS</dct:title>
+    <dct:title xml:lang="en">ISVS</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/isvs/2021-MM-DD"/> 
+ </dcat:Dataset>
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/isvs/2021-MM-DD">
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>    
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/isvs/2021-MM-DD-example.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+
+
+<!-- public-service --> 
+ 
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/data/public-service">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Elektronické služby</dct:title>
+    <dct:title xml:lang="en">Public services</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/public-service/2021-MM-DD"/> 
+ </dcat:Dataset>
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/data/public-service/2021-MM-DD">
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/63"/>    
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>    
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/public-service/2021-MM-DD-example.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+ 
+ 
+ <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Statistcs.sk - Metadata
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     --> 
+ 
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/taxonomy/nuts-sk">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/TAXONOMY"/>
+    <dct:title xml:lang="sk"><![CDATA[NUTS-SK Územná štruktúra]]></dct:title>
+    <dct:title xml:lang="en"><![CDATA[NUTS-SK Administration Units]]></dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/taxonomy/nuts-sk/2004"/> 
+ </dcat:Dataset>
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/taxonomy/nuts-sk/2004">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/411"/>    
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00166197"/>
+    <dcat:version rdf:datatype="&xsd;string">2004</dcat:version>     
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/skos/nuts-sk/2004.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/0069">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk"><![CDATA[Číselník 0069 - Ústredné orgány štátu]]></dct:title>
+    <dct:title xml:lang="en"><![CDATA[Codelist 0069 - Central State Authorities]]></dct:title>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/codelist/0069/2020-07-01"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+ </dcat:Dataset>
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/codelist/0069/2020-07-01">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/411"/>      
+    <dcat:version rdf:datatype="&xsd;string">2020-07-01</dcat:version>     
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00166197"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/skos/nuts/2004.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset> 
+ 
+ 
+ <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Register právnych subjektov - ÚOŠS
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     --> 
+ 
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/usorg">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Ústredné orgány štátnej správy (RPO)</dct:title>
+    <dct:title xml:lang="en">Central Public Authorities (RPO)</dct:title>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/usorg/2021-MM-DD"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+ </dcat:Dataset>
+ 
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/usorg/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/420"/>     
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00166197"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>     
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/usorg/2021-MM-DD-example.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+ 
+
+ <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Dataset adries Ústredných orgánov štátnej správy
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/data/usorg-headquarters">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Dataset adresy ÚOŠS</dct:title>
+    <dct:title xml:lang="en">Central Public Authorities Physical Addresses</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/usorg-headquarters/2021-MM-DD"/>
+ </dcat:Dataset>
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/usorg-headquarters/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/192"/>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00151866"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/usorg-headquarters/2021-MM-DD-uoss"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Heraldický register
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     --> 
+
+ 
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/nuts-images">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Erby NUTS entít</dct:title>
+    <dct:title xml:lang="en">CoatOfArms of NUTS Entities</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/nuts-images/2021-MM-DD"/>
+ </dcat:Dataset>
+ 
+ <dcat:Dataset rdf:about="https://data.gov.sk/set/data/nuts-images/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/221"/>       
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00151866"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>     
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/nuts-images/2021-MM-DD-example.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/data/usorg-images">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY"/>
+    <dct:title xml:lang="sk">Logá ústredných orgánov štátnej správy</dct:title>
+    <dct:title xml:lang="en">Logos of Central Public Authorities</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/set/data/usorg-images/2021-MM-DD"/>
+ </dcat:Dataset>
+ 
+  <dcat:Dataset rdf:about="https://data.gov.sk/set/data/usorg-images/2021-MM-DD">
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/221"/>         
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00151866"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>     
+    <dcat:distribution rdf:resource="https://data.gov.sk/set/data/usorg-images/2021-MM-DD-example.rdf"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+ </dcat:Dataset>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Povinné vlastnosti údajov
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+ <!-- SHAPES-RFO -->
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/rfo/2023b">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DOMAIN_MODEL"/>
+    <dct:title xml:lang="sk">Povinné vlastnosti údajov RFO</dct:title>
+    <dct:title xml:lang="en">Mandatory Data Shapes of RFO</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/191"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/rfo/2023b.ttl"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+  </dcat:Dataset>
+
+   <!-- SHAPES-RPO -->
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/rpo/2023b">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DOMAIN_MODEL"/>
+    <dct:title xml:lang="sk">Povinné vlastnosti údajov RPO</dct:title>
+    <dct:title xml:lang="en">Mandatory Data Shapes of RPO</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/191"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/rpo/2023b.ttl"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+  </dcat:Dataset>
+
+   <!-- SHAPES-RA -->
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/ra/2023b">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DOMAIN_MODEL"/>
+    <dct:title xml:lang="sk">Povinné vlastnosti údajov RA</dct:title>
+    <dct:title xml:lang="en">Mandatory Data Shapes of RA</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/191"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/ra/2023b.ttl"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+  </dcat:Dataset>
+
+  <!-- SHAPES-DCAT-AP-SK2.0 -->
+
+ <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/dcat-ap-sk2/2023b">
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DOMAIN_MODEL"/>
+    <dct:title xml:lang="sk">Povinné vlastnosti metadát otvorených údajov</dct:title>
+    <dct:title xml:lang="en">Mandatory Data Shapes for DCAT-AP-SK2.0</dct:title>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/191"/>
+    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/dcat-ap-sk2/2023b.ttl"/>
+    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+  </dcat:Dataset>
+
+</rdf:RDF>
+
