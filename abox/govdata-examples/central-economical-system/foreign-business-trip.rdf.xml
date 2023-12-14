@@ -1,0 +1,206 @@
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:fin="https://data.gov.sk/def/ontology/finance/"
+    xmlns:postcode="https://data.gov.sk/def/postcode/"
+    xmlns:uncountry="https://data.gov.sk/def/uncountry/"
+    xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
+    xmlns:legal-form-type="https://data.gov.sk/def/legal-form-type/"
+    xmlns:address="https://data.gov.sk/id/physical-address/"
+    xmlns:legal-subject="https://data.gov.sk/id/legal-subject/"
+    xmlns:codelist="https://data.gov.sk/set/codelist/"
+    xmlns:nuts3="https://data.gov.sk/def/nuts3/"
+    xmlns:lau2="https://data.gov.sk/def/lau2/"
+    xmlns:lau1="https://data.gov.sk/def/lau1/"
+    xmlns:person="https://www.w3.org/ns/person#"
+    xmlns:org="http://www.w3.org/ns/org#"    
+    xmlns:time="http://www.w3.org/2006/time#"    
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+      
+    <fin:ForeignBusinessTrip rdf:about="https://data.gov.sk/id/foreign-business-trip/151000002023Z00001">
+         
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-time#TemporalEntity"/>
+          
+        <adms:identifier>
+            <adms:Identifier>
+                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">151000002023Z00001</skos:notation>
+                <dct:type>
+                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/104">
+                        <skos:prefLabel xml:lang="sk">Identifikátor zahraničnej služobnej cesty</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                    </egov:IdentifierType>
+                </dct:type>
+                <egov:issuingCountry>
+                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                    </loca:UNCountry>
+                </egov:issuingCountry>
+            </adms:Identifier>
+        </adms:identifier>
+          
+        <org:unit rdf:resource="https://data.gov.sk/id/organization-unit/00000219"/>
+          
+        <loca:unCountry>
+            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/246">
+                    <skos:prefLabel xml:lang="sk">Fínska republika</skos:prefLabel>
+                    <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                </loca:UNCountry>
+        </loca:unCountry>
+          
+        <loca:unCountry>
+            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/372">
+                    <skos:prefLabel xml:lang="sk">Írsko</skos:prefLabel>
+                    <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                </loca:UNCountry>
+        </loca:unCountry>
+          
+        <time:haseBeginning>
+             <time:Instant>
+                <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T06:30:00</time:inXSDDateTime>
+             </time:Instant>
+        </time:haseBeginning>
+          
+        <time:hasEnd>
+             <time:Instant>
+                <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T20:50:00</time:inXSDDateTime>
+             </time:Instant>
+        </time:hasEnd>
+          
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-02-02</dct:created>
+        <fin:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-13-05</fin:closed>
+          
+        <fin:expenditure>
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/01">
+                    <skos:prefLabel xml:lang="sk">Cestovné</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure>          
+              
+        <fin:expenditure>          
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/02">
+                    <skos:prefLabel xml:lang="sk">Ubytovanie</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure>          
+              
+        <fin:expenditure>            
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.5</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/03">
+                    <skos:prefLabel xml:lang="sk">Stravné</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure>
+          
+        <fin:expenditure>            
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/04">
+                    <skos:prefLabel xml:lang="sk">Vedľajšie náklady</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure>
+          
+        <fin:expenditure>            
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/05">
+                    <skos:prefLabel xml:lang="sk">Vreckové</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure> 
+          
+        <fin:expenditure>            
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/06">
+                    <skos:prefLabel xml:lang="sk">Refundácia</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure>         
+          
+        <fin:expenditure>            
+            <fin:Expenditure>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">142.5</fin:value>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <dct:type>
+                <lsub:ExpenditureType rdf:about="https://data.gov.sk/def/foreign-business-trip-expenditure-type/07">
+                    <skos:prefLabel xml:lang="sk">Celkom EUR</skos:prefLabel>
+                </lsub:ExpenditureType>
+            </dct:type>
+            </fin:Expenditure>
+        </fin:expenditure>         
+          
+        <rdfs:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poznámka</rdfs:description>
+          
+    </fin:ForeignBusinessTrip>
+      
+</rdf:RDF>

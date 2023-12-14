@@ -1,0 +1,258 @@
+{
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "taxonomy": "https://data.gov.sk/def/taxonomy/",
+    "sex": "https://data.gov.sk/def/sex/",
+    "edu": "https://data.gov.sk/def/ontology/education/",
+    "name-prefix": "https://data.gov.sk/def/name-prefix/",
+    "name-suffix": "https://data.gov.sk/def/name-suffix/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "identifiertype": "https://data.gov.sk/def/identifier-type/",
+    "evidence-type": "https://data.gov.sk/def/evidence-type/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "pco-person": "https://data.gov.sk/id/pco-physical-person/"
+   },
+  "@id": "isvs:191",
+  "@graph": [
+    {
+      "@type": "cccev:Evidence",
+      "dct:type": {
+        "@id": "evidence-type:TODO",
+        "@type": "egov:EvidenceType",
+        "skos:prefLabel": [
+          {
+            "@language": "sk",
+            "@value": "Úmrtný list"
+          },
+          {
+            "@language": "en",
+            "@value": "Death certificate"
+          }
+        ],
+        "skos:inScheme": {
+          "@id": "taxonomy:evidence-type"
+        }
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:00681156",
+        "@type": "lsub:LegalSubject",
+        "skos:prefLabel": [
+          {
+            "@value": "Miestny úrad Petržalka",
+            "@language": "sk"
+          },
+          {
+            "@value": "Petržalka local office",
+            "@language": "en"
+          }
+        ]
+      },
+      "dct:subject": {
+        "@id": "pco-person:11118058059658",
+        "@type": "pper:PhysicalPerson",
+        "pper:givenName": {
+          "@value": "Eliška",
+          "@type": "xs:string"
+        },
+        "pper:familyName": {
+          "@value": "Nôžková",
+          "@type": "xs:string"
+        },
+        "pper:givenFamilyName": {
+          "@type": "xs:string",
+          "@value": "Nôžková"
+        },
+        "pper:dateOfBirth": {
+          "@value": "1950-08-05",
+          "@type": "xs:date"
+        },
+        "pper:yearOfBirth": {
+          "@value": "1950",
+          "@type": "xs:gYear"
+        },
+        "pper:birthNumber": {
+          "@type": "pper:BirthNumber",
+          "skos:notation": {
+            "@value": "7307046912",
+            "@type": "xs:string"
+          },
+          "dct:type": {
+            "@id": "identifiertype:9",
+            "@type": "egov:IdentifierType",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "Rodné číslo"
+            },
+            "skos:inScheme": {
+              "@id": "codelist:CL004001"
+            }
+          },
+          "egov:issuingCountry": {
+            "@id": "uncountry:703",
+            "@type": "loca:UNCountry",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000086"
+            }
+          }
+        },
+        "pper:dateOfDeath": {
+          "@value": "2021-11-10",
+          "@type": "xs:date"
+        },
+        "pper:yearOfDeath": {
+          "@value": "2021",
+          "@type": "xs:gYear"
+        },
+        "pper:placeOfBirth": {
+          "@type": "loca:PhysicalAddress",
+          "loca:lau2": {
+            "@id": "lau2:SK0317509868",
+            "@type": "loca:LAU2",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Námestovo"
+              },
+              {
+                "@language": "sk",
+                "@value": "Námestovo"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000025"
+            }
+          },
+          "loca:lau1": {
+            "@id": "lau1:SK0317",
+            "@type": "loca:LAU1",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Námestovo"
+              },
+              {
+                "@language": "sk",
+                "@value": "Okres Námestovo"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000024"
+            }
+          },
+          "loca:unCountry": {
+            "@id": "uncountry:703",
+            "@type": "loca:UNCountry",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000086"
+            }
+          }
+        },
+        "pper:placeOfDeath": {
+          "@type": "loca:PhysicalAddress",
+          "loca:lau2": {
+            "@id": "lau2:SK031B517402",
+            "@type": "loca:LAU2",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Žilina"
+              },
+              {
+                "@language": "sk",
+                "@value": "Žilina"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000025"
+            }
+          },
+          "loca:lau1": {
+            "@id": "lau1:SK031B",
+            "@type": "loca:LAU1",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Žilina"
+              },
+              {
+                "@language": "sk",
+                "@value": "Okres Žilina"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000024"
+            }
+          },
+          "loca:unCountry": {
+            "@id": "uncountry:703",
+            "@type": "loca:UNCountry",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000086"
+            }
+          }
+        },
+        "pper:sex": {
+          "@id": "sex:2",
+          "@type": "pper:Sex",
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "female"
+            },
+            {
+              "@language": "sk",
+              "@value": "žena"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL003003"
+          }
+        }
+      }
+    }
+  ]
+}

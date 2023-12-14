@@ -1,0 +1,106 @@
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:edu="https://data.gov.sk/def/ontology/education/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
+    xmlns:codelist="https://data.gov.sk/set/codelist/"
+    xmlns:m8g="http://data.europa.eu/m8g/"
+    xmlns:person="https://www.w3.org/ns/person#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <m8g:Evidence>
+        <dct:type>
+            <m8g:EvidenceType rdf:about="https://data.gov.sk/def/evidence-type/14">
+                <skos:prefLabel xml:lang="sk">Potvrdenie o návšteve školy</skos:prefLabel>
+                <skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/TX000002"/>
+                <m8g:issuingPlace rdf:resource="http://publications.europa.eu/resource/authority/country/SVK"/>
+            </m8g:EvidenceType>
+        </dct:type>
+        <dct:publisher>
+            <m8g:PublicOrganization rdf:about="https://data.gov.sk/id/legal-subject/00164381">
+                <skos:prefLabel xml:lang="sk">Ministerstvo školstva, vedy, výskumu a športu Slovenskej republiky</skos:prefLabel>
+            </m8g:PublicOrganization>
+        </dct:publisher>
+        <dct:subject>
+            <person:Person>
+                <pper:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antónia</pper:givenName>
+                <pper:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kudlánková</pper:familyName>
+                <pper:givenFamilyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novotná</pper:givenFamilyName>
+                <m8g:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-01-01</m8g:birthDate>
+                <edu:isStudent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</edu:isStudent>
+                <pper:birthNumber>
+                   <adms:Identifier>
+                       <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200001017684</skos:notation>
+                       <dct:type>
+                           <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/1">
+                                 <skos:prefLabel xml:lang="sk">Rodné číslo</skos:prefLabel>
+                                 <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL004001"/>
+                           </egov:IdentifierType>
+                       </dct:type>
+                    </adms:Identifier>
+                </pper:birthNumber>
+            </person:Person>
+         </dct:subject>
+         <edu:enrolment>
+            <edu:Enrolment>
+                <edu:enroled rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-04</edu:enroled>
+                <edu:studyYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</edu:studyYear>
+                <edu:studyGrade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</edu:studyGrade>
+                <edu:studyForm>
+                   <edu:StudyForm rdf:about="https://data.gov.sk/def/study-form/1">
+                       <skos:prefLabel xml:lang="sk">denná forma štúdia</skos:prefLabel>
+                       <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/top-study-form"/>
+                   </edu:StudyForm>
+                </edu:studyForm>
+                <edu:studyType>
+                   <edu:StudyType rdf:about="https://data.gov.sk/def/study-type/1">
+                       <skos:prefLabel xml:lang="sk">riadne štúdium</skos:prefLabel>
+                       <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/study-type"/>
+                   </edu:StudyType>
+                </edu:studyType>
+                <edu:enrolmentProvider>
+                     <edu:EducationInstitution rdf:about="https://minedu.sk/id/education-subject/10000">
+                        <skos:prefLabel xml:lang="sk">Gymnázium POH v Dolnom Kubíne</skos:prefLabel>
+                        <lsub:headquarters>
+                            <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/7978762">
+                                <locn:fullAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hviezdoslavovo námestie 1659, 026 01 Dolný Kubín</locn:fullAddress>
+                            </loca:PhysicalAddress>
+                        </lsub:headquarters>
+                        <adms:identifier>
+                            <adms:Identifier>
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000</skos:notation>
+                                <dct:type>
+                                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/EDUID">
+                                        <skos:prefLabel xml:lang="sk">EDUID - Identifikátor školy v rámci rezortného informačného systému MŠVVaŠ</skos:prefLabel>
+                                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL004001"/>
+                                    </egov:IdentifierType>
+                                </dct:type>
+                            </adms:Identifier>
+                        </adms:identifier>
+                        <adms:identifier>
+                            <adms:Identifier>
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00160571</skos:notation>
+                                <dct:type>
+                                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/7">
+                                        <skos:prefLabel xml:lang="sk"> IČO (Identifikačné číslo organizácie)</skos:prefLabel>
+                                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL004001"/>
+                                    </egov:IdentifierType>
+                                </dct:type>
+                            </adms:Identifier>
+                        </adms:identifier>
+                    </edu:EducationInstitution>
+                </edu:enrolmentProvider>
+            </edu:Enrolment>
+        </edu:enrolment>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-11</dct:created>
+    </m8g:Evidence>
+</rdf:RDF>

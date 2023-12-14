@@ -1,0 +1,133 @@
+{
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "name-prefix": "https://data.gov.sk/def/name-prefix/",
+    "name-suffix": "https://data.gov.sk/def/name-prefix/",
+    "nuts3": "https://data.gov.sk/id/nuts3/",
+    "lau1": "https://data.gov.sk/id/lau1/",
+    "lau2": "https://data.gov.sk/id/lau2/",
+    "street": "https://data.gov.sk/id/street/",
+    "building": "https://data.gov.sk/id/building/",
+    "building-purpose": "https://data.gov.sk/def/building-purpose/",
+    "building-type": "https://data.gov.sk/def/building-type/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "address-type": "https://data.gov.sk/def/address-type/",
+    "address": "https://data.gov.sk/id/physical-address/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "xs": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "isvs:192",
+  "@graph": [
+    {
+      "@id": "building:1366560",
+      "@type": "loca:Building",
+      "adms:identifier": {
+        "@type": "adms:Identifier",
+        "skos:notation": {
+          "@value": "1366560",
+          "@type": "xs:string"
+        },
+        "dct:type": {
+          "@id": "identifiertype:_106",
+          "@type": "egov:IdentifierType",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Identifikátor budovy"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL004001"
+          }
+        },
+        "egov:issuingCountry": {
+          "@id": "uncountry:703",
+          "skos:prefLabel": {
+            "@value": "Slovenská republika",
+            "@language": "sk"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL000086"
+          }
+        }
+      },
+      "skos:prefLabel": {
+        "@value": "Tower 115",
+        "@language": "sk"
+      },
+      "loca:propertyRegistrationNumber:": {
+        "@value": "3013",
+        "@type": "xs:string"
+      },
+      "loca:buildingPurpose": {
+        "@id": "building-purpose:1",
+        "@type": "loca:BuildingPurpose",
+        "skos:prefLabel": {
+          "@value": "Bytová budova",
+          "@language": "sk"
+        },
+        "skos:inScheme": {
+            "@id": "codelist:CL010142"
+          }
+      },
+      "loca:buildingType": {
+        "@id": "bulding-type:10",
+        "@type": "loca:BuildingPurpose",
+        "skos:prefLabel": {
+          "@value": "Rodinný dom",
+          "@language": "sk"
+        },
+        "skos:inScheme": {
+            "@id": "codelist:CL010143"
+          }
+      },
+      "loca:street": {
+        "@id": "street:4576744710567",
+        "@type": "loca:Street",
+        "skos:prefLabel": {
+          "@value": "Pribinova",
+          "@language": "sk"
+        }
+      },
+      "geo:hasGeometry": {
+        "@type": "sf:Point",
+        "geo:asWKT:": {
+          "@value": "POINT(17.106678 48.150914)",
+          "@type": "geo:wktLiteral"
+        }
+      },
+      "loca:lau2": {
+        "@id": "lau2:SK0101528595",
+        "@type": "loca:LAU2",
+        "skos:prefLabel": {
+          "@value": "Bratislava mestká časť - Staré mesto",
+          "@language": "sk"
+        },
+        "skos:inScheme": {
+            "@id": "codelist:CL000025"
+          }
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:00151866",
+        "@type": "lsub:LegalSubject",
+        "skos:prefLabel": {
+          "@value": "Ministerstvo vnútra Slovenskej republiky",
+          "@language": "sk"
+        }
+      },
+      "schema:validFrom": {
+        "@value": "2020-11-26"
+      }
+    }
+  ]
+}

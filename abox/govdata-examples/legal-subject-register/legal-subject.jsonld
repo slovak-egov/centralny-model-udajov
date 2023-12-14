@@ -1,0 +1,2026 @@
+{
+  "@context":{
+    "lsub":"https://data.gov.sk/def/ontology/legal-subject/",
+    "loca":"https://data.gov.sk/def/ontology/location/",
+    "egov":"https://data.gov.sk/def/ontology/egovernment/",
+    "pper":"https://data.gov.sk/def/ontology/physical-person/",
+    "person":"http://www.w3.org/ns/person#",
+    "lau2":"https://data.gov.sk/def/lau2/",
+    "lau1":"https://data.gov.sk/def/lau1/",
+    "uncoutry":"https://data.gov.sk/def/uncoutry/",
+    "name-prefix":"https://data.gov.sk/def/name-prefix/",
+    "name-suffix":"https://data.gov.sk/def/name-suffix/",
+    "address-type":"https://data.gov.sk/def/address-type/",
+    "ownership-type": "https://data.gov.sk/def/ownership-type/",
+    "institutional-subsector-type":"https://data.gov.sk/def/institutional-subsector-type/",
+    "address":"https://data.gov.sk/id/physical-address/",
+    "isvs":"https://data.gov.sk/id/egov/isvs/",
+    "pers":"https://data.gov.sk/id/pco-physical-person/",
+    "codelist":"https://data.gov.sk/set/codelist/",
+    "rpo":"https://rpo.gov.sk/def/ontology/rpo/",
+    "rpocodelist":"https://rpo.gov.sk/set/codelist/",
+    "rpoaddress":"https://rpo.gov.sk/id/physical-address/",
+    "schema":"http://schema.org/",
+    "foaf":"http://xmlns.com/foaf/0.1/",
+    "adms":"http://www.w3.org/ns/adms#",
+    "dct":"http://purl.org/dc/terms/",
+    "skos":"http://www.w3.org/2004/02/skos/core#",
+    "rdfs":"http://www.w3.org/2000/01/rdf-schema#",
+    "locn":"http://www.w3.org/ns/locn#",
+    "xs":"http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id":"isvs:420",
+  "@graph":[
+    {
+      "@id":"lsub:35815256",
+      "@type":"lsub:LegalSubject",
+      "adms:identifier":{
+        "@type":"adms:Identifier",
+        "skos:notation":{
+          "@value":"35815256",
+          "@type":"xs:string"
+        },
+        "dct:type":{
+          "@id":"identifiertype:7",
+          "@type":"egov:IdentifierType",
+          "skos:prefLabel":{
+            "@language":"sk",
+            "@value":"IČO (Identifikačné číslo organizácie)"
+          },
+          "skos:inScheme":{
+            "@id":"codelist:CL004001"
+          }
+        },
+        "egov:issuingCountry":{
+          "@id":"uncountry:703",
+          "@type":"loca:UNCountry",
+          "skos:prefLabel":[
+            {
+              "@language":"en",
+              "@value":"Slovak Republic"
+            },
+            {
+              "@language":"sk",
+              "@value":"Slovenská republika"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL000086"
+          }
+        }
+      },
+      "lsub:taxID": {
+        "@type":"lsub:TaxID",
+        "skos:notation": {
+          "@value":"2020259802",
+          "@type": "xs:string"
+        }
+      },
+      "lsub:vatID": {
+        "@type":"lsub:VatID",
+        "skos:notation": {
+          "@value":"SK2020259802",
+          "@type": "xs:string"
+        }
+      },
+      "skos:prefLabel": {
+        "@value":"Slovenský plynárenský priemysel, a.s.",
+        "@type":"xs:string"
+      },
+      "skos:altLabel": {
+        "@value":"SPP, a.s.",
+        "@type":"xs:string"
+      },
+      "lsub:name":{
+        "@type": "lsub:Name",
+        "dct:temporal":{
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value": "2000-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid": {
+          "@value": "true",
+          "@type": "xs:boolean"
+        },
+        "skos:prefLabel": {
+          "@value":"Slovenský plynárenský priemysel, a.s.",
+          "@type":"xs:string"
+        }
+      },
+      "lsub:alternativeName":[{
+        "@type": "lsub:Name",
+        "dct:temporal": {
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate": {
+            "@value": "2020-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid":{
+          "@value": "true",
+          "@type": "xs:boolean"
+        },
+        "skos:prefLabel":{
+          "@value":"SPP, a.s.",
+          "@type":"xs:string"
+        }
+      },{
+        "@type": "lsub:Name",
+        "dct:temporal": {
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate": {
+            "@value": "2020-01-01",
+            "@type": "xs:date"
+          },
+          "schema:endDate":{
+            "@value": "2020-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid":{
+          "@value": "false",
+          "@type": "xs:boolean"
+        },
+        "skos:prefLabel":{
+          "@value":"SPP, a.spol.",
+          "@type":"xs:string"
+        }
+      }],
+      "lsub:legalForm":{
+        "@type":"lsub:LegalForm",
+        "dct:type":{
+          "@id":"legal-form-type:121",
+          "@type":"lsub:LegalFormType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Akciová spoločnosť"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL000056"
+          }
+        },
+        "dct:temporal":{
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value": "2001-10-01",
+            "@type": "xs:date"
+          },
+          "schema:endDate":{
+            "@value": "2011-12-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid":{
+          "@value": "false",
+          "@type": "xs:boolean"
+        }
+      },
+      "lsub:unit":{
+        "@id":"unit:123456789",
+        "@type":"lsub:Unit",
+        "lsub:unitName":{
+          "@type": "lsub:Name",
+          "dct:temporal":{
+            "@type": "dct:PeriodOfTime",
+            "schema:startDate":{
+              "@value":"1999-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "egov:isValid":{
+            "@value": "true",
+            "@type": "xs:boolean"
+          },
+          "skos:prefLabel": {
+            "@value":"Organizačná jednotka určená k likvidácii",
+            "@type":"xs:string"
+          }
+        },
+        "skos:prefLabel": {
+          "@value":"Organizačná jednotka určená k likvidácii",
+          "@type":"xs:string"
+        },
+        "dct:type":{
+          "@id":"organization-unit-type:0",
+          "@type":"lsub:OrganizationUnitType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Neurčené"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL010110"
+          }
+        },
+        "lsub:hasRegisteredSite":{
+          "@type": "lsub:Site",
+          "dct:temporal":{
+            "@type": "dct:PeriodOfTime",
+            "schema:startDate":{
+              "@value": "2000-01-01",
+              "@type": "xs:date"
+            },
+            "schema:endDate":{
+              "@value": "2020-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "egov:isValid":{
+            "@value": "false",
+            "@type": "xs:boolean"
+          },
+          "loca:physicalAddress":{
+            "@type":"loca:PhysicalAddress",
+            "dct:type":{
+              "@id":"address-type:100101",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"Headquartes of legal subject"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Sídlo právnickej osoby"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL010139"
+              }
+            },
+            "loca:street":{
+              "@type":"loca:Street",
+              "skos:prefLabel":[
+                {
+                  "@language":"sk",
+                  "@value":"Štefánikova"
+                }
+              ]
+            },
+            "loca:orientationNumber":{
+              "@value":"16",
+              "@type":"xs:string"
+            },
+            "loca:propertyRegistrationNumber":{
+              "@value":"3202",
+              "@type":"xs:string"
+            },
+            "loca:district":{
+              "@id":"district:401468",
+              "@type":"loca:District",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"Bratislava - Ostredky"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Bratislava - Ostredky"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL010141"
+              }
+            },
+            "loca:lau2":{
+              "@id":"lau2:SK0101528595",
+              "@type":"loca:LAU2",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"Bratislava - The Old Town"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Bratislava - mestská časť Staré Mesto"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000025"
+              }
+            },
+            "loca:lau1":{
+              "@id":"lau1:SK0101",
+              "@type":"loca:LAU1",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"County Bratislava I"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"District Bratislava I"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000024"
+              }
+            },
+            "loca:unCountry":{
+              "@id":"uncountry:703",
+              "@type":"loca:UNCountry",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"Slovak Republic"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Slovenská republika"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000086"
+              }
+            }
+          }
+        },
+        "loca:postAddress": {
+          "loca:postCode":{
+            "@id":"post-code:2020259802",
+            "@type":"loca:PostCode"
+          },
+          "lsub:postOfficeBox":{
+            "@id":"po-box:10",
+            "@type":"loca:PostOfficeBox"
+          },
+          "loca:postRecipient":{
+            "pper:givenName":{
+              "@list":[
+                {
+                  "@type":"xs:string",
+                  "@value":"Jozef"
+                },
+                {
+                  "@type":"xs:string",
+                  "@value":"Maco"
+                }
+              ]
+            },
+            "pper:familyName":{
+              "@value":"Mak",
+              "@type":"xs:string"
+            },
+            "pper:birthName":{
+              "@value":"Mlieč",
+              "@type":"xs:string"
+            },
+            "pper:namePrefix":[
+              {
+                "@id":"name-prefix:01",
+                "@type":"pper:NamePrefix",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"MSc."
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Ing."
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000062"
+                }
+              },
+              {
+                "@id":"name-prefix:02",
+                "@type":"pper:NamePrefix",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"MSc. Architect"
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Ing. arch."
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000062"
+                }
+              }
+            ],
+            "pper:nameSuffix":{
+              "@id":"name-suffix:53",
+              "@type":"pper:NameSufix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"PhD."
+                },
+                {
+                  "@language":"sk",
+                  "@value":"PhD."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000063"
+              }
+            },
+            "skos:note":[{
+              "@value":"Lorem ipsum",
+              "@type":"xs:string"
+            }],
+            "lsub:unitName":{
+              "@value":"Organization Name",
+              "@type":"xs:string"
+            },
+            "lsub:name":{
+              "@value":"Corporate Full Name",
+              "@type":"xs:string"
+            }
+          }
+        },
+        "lsub:established":{
+          "@value":"2000-01-01",
+          "@type":"xs:date"
+        },
+        "lsub:terminated":{
+          "@value":"2000-12-31",
+          "@type":"xs:date"
+        },
+        "lsub:economicActivity":[{
+          "@type": "lsub:EconomicActivity",
+          "dct:temporal":{
+            "@type": "dct:PeriodOfTime",
+            "schema:startDate": {
+              "@value": "2023-01-01",
+              "@type": "xs:date"
+            },
+            "schema:endDate": {
+              "@value": "2023-01-31",
+              "@type": "xs:date"
+            }
+          },
+          "dct:type": {
+            "@id":"economic-activity-type:10410",
+            "@type": "lsub:EconomicActivityType",
+            "skos:prefLabel":[
+              {
+                "@language":"sk",
+                "@value":"Výroba olejov a tukov"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL005205"
+            }
+          },
+          "lsub:suspensionPeriod":{
+            "@type": "dct:PeriodOfTime",
+            "schema:startDate":{
+              "@value":"2000-02-01",
+              "@type":"xs:date"
+            },
+            "schema:endDate":{
+              "@value":"2000-03-01",
+              "@type":"xs:date"
+            }
+          }
+        }],
+        "adms:identifier":{
+          "@type":"adms:Identifier",
+          "skos:notation":{
+            "@value":"1234567890",
+            "@type":"xs:string"
+          },
+          "dct:type":{
+            "@id":"identifiertype:7",
+            "@type":"egov:IdentifierType",
+            "skos:prefLabel":{
+              "@language":"sk",
+              "@value":"IČO (Identifikačné číslo organizácie)"
+            },
+            "skos:inScheme":{
+              "@id":"codelist:CL004001"
+            }
+          }
+        },
+        "lsub:stakeholder":{
+          "@type": "lsub:Stakeholder",
+          "dct:type":{
+            "@id":"stakeholder-type:15",
+            "@type":"lsub:StakeholderType",
+            "skos:prefLabel":[
+              {
+                "@language":"sk",
+                "@value":"Vedúci organizačnej zložky"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010109"
+            }
+          },
+          "pper:physicalPerson":{
+            "@type": "pper:PhysicalPerson",
+            "adms:identifier":{
+              "@type":"adms:Identifier",
+              "skos:notation":{
+                "@value":"2100035451",
+                "@type":"xs:string"
+              },
+              "dct:type":{
+                "@id":"identifiertype:14",
+                "@type":"egov:IdentifierType",
+                "skos:prefLabel":{
+                  "@language":"sk",
+                  "@value":"Identifikátor záznamu o osobe"
+                },
+                "skos:inScheme":{
+                  "@id":"codelist:CL004001"
+                }
+              },
+              "egov:issuingCountry":{
+                "@id":"uncountry:703",
+                "@type":"loca:UNCountry",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"Slovak Republic"
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Slovenská republika"
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000086"
+                }
+              }
+            },
+            "pper:givenName":{
+              "@list":[
+                {
+                  "@type":"xs:string",
+                  "@value":"Jozef"
+                },
+                {
+                  "@type":"xs:string",
+                  "@value":"Maco"
+                }
+              ]
+            },
+            "pper:familyName":{
+              "@value":"Mak",
+              "@type":"xs:string"
+            },
+            "pper:birthName":{
+              "@value":"Mlieč",
+              "@type":"xs:string"
+            },
+            "pper:namePrefix":[
+              {
+                "@id":"name-prefix:01",
+                "@type":"pper:NamePrefix",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"MSc."
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Ing."
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000062"
+                }
+              },
+              {
+                "@id":"name-prefix:02",
+                "@type":"pper:NamePrefix",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"MSc. Architect"
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Ing. arch."
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000062"
+                }
+              }
+            ],
+            "pper:nameSuffix":{
+              "@id":"name-suffix:53",
+              "@type":"pper:NameSufix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"PhD."
+                },
+                {
+                  "@language":"sk",
+                  "@value":"PhD."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000063"
+              }
+            }
+          },
+          "lsub:deposit":{
+            "@type": "lsub:Deposit",
+            "dct:type":{
+              "@id": "deposit-type:1",
+              "@type":"lsub:DepositType",
+              "skos:prefLabel": {
+                "@language": "sk",
+                "@value": "peňažný vklad"
+              }
+            },
+            "lsub:depositValue":{
+              "@value":"10",
+              "@type":"xs:decimal"
+            },
+                  "fin:currency": {
+              "@id": "currency:EUR",
+              "@type": "fin:Currency",
+              "skos:prefLabel": {
+                "@language": "sk",
+                "@value": "EUR"
+              }
+            },
+            "lsub:depositDueDate":{
+              "@value":"2000-01-01",
+              "@type":"xs:date"
+            }
+          },
+          "lsub:shares":{
+            "dct:type":{
+              "@id":"share-type:2",
+              "@type":"lsub:ShareType",
+              "skos:prefLabel":[
+                {
+                  "@language":"sk",
+                  "@value":"Kmeňová akcia"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL010111"
+              }
+            },
+            "lsub:shareState":{
+              "@id": "share-state:1",
+              "@type":"lsub:ShareState",
+              "skos:prefLabel":[
+                {
+                  "@language": "sk",
+                  "@value": "Fyzická"
+                }
+              ]
+            },
+            "lsub:shareForm":{
+              "@id": "share-form:1",
+              "@type":"lsub:ShareForm",
+              "skos:prefLabel":[
+                {
+                  "@language": "sk",
+                  "@value": "Certifikát"
+                }
+              ]
+            },
+                  "fin:currency": {
+              "@id": "currency:EUR",
+              "@type": "fin:Currency",
+              "skos:prefLabel": {
+                "@language": "sk",
+                "@value": "EUR"
+              }
+            },
+            "lsub:shareNominalValue":{
+              "@value":"200",
+              "@type":"xs:string"
+            },
+            "lsub:sharesAmount":{
+              "@value":"100000",
+              "@type":"xs:string"
+            },
+            "lsub:sharesTransferabilityNote":{
+              "@value":"Uvádza sa popis obmedzenia prevoditeľnosti akcií.",
+              "@type":"xs:string"
+            }
+          }
+        }
+      },
+      "lsub:established":{
+        "@value":"1999-01-01",
+        "@type":"xs:date"
+      },
+      "lsub:terminated":{
+        "@value":"1999-01-01",
+        "@type":"xs:date"
+      },
+      "lsub:economicActivity":[{
+        "@type": "lsub:EconomicActivity",
+        "dct:temporal":{
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate": {
+            "@value": "2023-01-01",
+            "@type": "xs:date"
+          },
+          "schema:endDate": {
+            "@value": "2023-01-31",
+            "@type": "xs:date"
+          }
+        },
+        "dct:type": {
+          "@id":"economic-activity-type:10410",
+          "@type": "lsub:EconomicActivityType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Výroba olejov a tukov"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL005205"
+          }
+        },
+        "lsub:suspensionPeriod":{
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value":"2000-02-01",
+            "@type":"xs:date"
+          },
+          "schema:endDate":{
+            "@value":"2000-03-01",
+            "@type":"xs:date"
+          }
+        }
+      }],
+      "fin:bankConnection":[{
+        "@type": "fin:DomesticBankConnection",
+        "fin:bankName":{
+          "@value":"Všeobecná úverová banka, a.s.",
+          "@type":"xs:string"
+        },
+        "fin:accountHolder":{
+          "@type": "fin:AccountHolder",
+          "pper:physicalPerson":{
+            "@type": "pper:PhysicalPerson",
+            "pper:givenName":{
+              "@list":[
+                {
+                  "@type":"xs:string",
+                  "@value":"Jozef"
+                },
+                {
+                  "@type":"xs:string",
+                  "@value":"Maco"
+                }
+              ]
+            },
+            "pper:familyName":{
+              "@value":"Mak",
+              "@type":"xs:string"
+            },
+            "pper:birthName":{
+              "@value":"Mlieč",
+              "@type":"xs:string"
+            },
+            "pper:namePrefix":[
+              {
+                "@id":"name-prefix:01",
+                "@type":"pper:NamePrefix",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"MSc."
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Ing."
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000062"
+                }
+              },
+              {
+                "@id":"name-prefix:02",
+                "@type":"pper:NamePrefix",
+                "skos:prefLabel":[
+                  {
+                    "@language":"en",
+                    "@value":"MSc. Architect"
+                  },
+                  {
+                    "@language":"sk",
+                    "@value":"Ing. arch."
+                  }
+                ],
+                "skos:inScheme":{
+                  "@id":"codelist:CL000062"
+                }
+              }
+            ],
+            "pper:nameSuffix":{
+              "@id":"name-suffix:53",
+              "@type":"pper:NameSufix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"PhD."
+                },
+                {
+                  "@language":"sk",
+                  "@value":"PhD."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000063"
+              }
+            }
+          }
+        },
+        "fin:formattedDomesticBankConnection":{
+          "@value":"1234567890/123456",
+          "@type":"xs:string"
+        },
+        "fin:accountNumberPrefix":{
+          "@value":"123456",
+          "@type":"xs:string"
+        },
+        "fin:accountNumber":{
+          "@value":"1234567890",
+          "@type":"xs:string"
+        },
+        "fin:bankCode":{
+          "@value":"0200",
+          "@type":"xs:string"
+        }
+      }, {
+        "@type": "fin:InternationalBankConnection",
+        "fin:bankName":{
+          "@value":"Všeobecná úverová banka, a.s.",
+          "@type":"xs:string"
+        },
+        "fin:accountHolder":{
+          "@type": "fin:AccountHolder",
+          "lsub:legalSubject": {
+            "@type": "lsub:LegalSubject",
+            "skos:prefLabel": {
+              "@value": "Slovenský plynárenský priemysel, a.s.",
+              "@language": "sk"
+            }
+          }
+        },
+        "fin:iban":{
+          "@value":"SK65 0200 1234 5612 3456 7890",
+          "@type":"xs:string"
+        },
+        "fin:bic":{
+          "@type":"fin:BIC",
+          "skos:notation":{
+            "@value":"SUBASKBX",
+            "@type":"xs:string"
+          }
+        }
+      }],
+      "lsub:ownershipType":{
+        "@id": "ownership-type:2",
+        "@type": "lsub:OwnershipType",
+        "skos:prefLabel": {
+          "@language": "sk",
+          "@value": "Súkromné tuzemské"
+        },
+        "skos:inScheme":{
+          "@id":"rpocodelist:CL0001"
+        }
+      },
+      "lsub:legalFact":[
+        {
+          "@type": "lsub:LegalFact",
+          "dct:temporal":{
+            "@type": "dct:PeriodOfTime",
+            "schema:startDate": {
+              "@value": "2015-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "skos:note":{
+            "@value":"Zápisnica zo zasadnutia mimoriadneho valného zhromaždenia zo dňa 30.12.2014.",
+            "@type":"xs:string"
+          },
+          "egov:isValid":{
+            "@value": "true",
+            "@type": "xs:boolean"
+          }
+        },
+        {
+          "@type": "lsub:LegalFact",
+          "dct:temporal":{
+            "@type": "dct:PeriodOfTime",
+            "schema:startDate": {
+              "@value": "2008-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "skos:note":{
+            "@value":"Spoločnosť bola založená spoločenskou zmluvou dňa 7.8.2008 v zmysle príslušných ustanovení z.č. 513/1991 Zb. Obchodný zákonník.",
+            "@type":"xs:string"
+          },
+          "egov:isValid":{
+            "@value": "true",
+            "@type": "xs:boolean"
+          }
+        }
+      ],
+      "lsub:equity":{
+        "@type": "lsub:Equity",
+            "fin:currency": {
+          "@id": "currency:EUR",
+          "@type": "fin:Currency",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "EUR"
+          }
+        },
+        "lsub:equityValue":{
+          "@value":"10000",
+          "@type":"xs:string"
+        },
+        "lsub:equityValuePaid":{
+          "@value":"10000",
+          "@type":"xs:string"
+        },
+        "lsub:equityValueApproved":{
+          "@value":"10000",
+          "@type":"xs:string"
+        }
+      },
+      "lsub:shares":{
+        "dct:type":{
+          "@id":"share-type:2",
+          "@type":"lsub:ShareType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Kmeňová akcia"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL010111"
+          }
+        },
+        "lsub:shareState":{
+          "@id": "share-state:1",
+          "@type":"lsub:ShareState",
+          "skos:prefLabel":[
+            {
+              "@language": "sk",
+              "@value": "Fyzická"
+            }
+          ]
+        },
+        "lsub:shareForm":{
+          "@id": "share-form:1",
+          "@type":"lsub:ShareForm",
+          "skos:prefLabel":[
+            {
+              "@language": "sk",
+              "@value": "Certifikát"
+            }
+          ]
+        },
+        "fin:currency": {
+          "@id": "currency:EUR",
+          "@type": "fin:Currency",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "EUR"
+          }
+        },
+        "lsub:shareNominalValue":{
+          "@value":"200",
+          "@type":"xs:string"
+        },
+        "lsub:sharesAmount":{
+          "@value":"100000",
+          "@type":"xs:string"
+        },
+        "lsub:sharesTransferabilityNote":{
+          "@value":"Uvádza sa popis obmedzenia prevoditeľnosti akcií.",
+          "@type":"xs:string"
+        }
+      },
+      "lsub:deposit":{
+        "@type": "lsub:Deposit",
+        "dct:type":{
+          "@id": "deposit-type:1",
+          "@type":"lsub:DepositType",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "peňažný vklad"
+          }
+        },
+        "lsub:depositValue":{
+          "@value":"1000",
+          "@type":"xs:decimal"
+        },
+        "fin:currency": {
+          "@id": "currency:EUR",
+          "@type": "fin:Currency",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "EUR"
+          }
+        },
+        "lsub:depositDueDate":{
+          "@value":"2000-01-01",
+          "@type":"xs:date"
+        }
+      },
+      "lsub:legalStatus":{
+        "@id":"legal-status:1",
+        "@type": "lsub:LegalStatus",
+        "dct:temporal":{
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value": "2000-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "skos:prefLabel":[
+          {
+            "@language":"sk",
+            "@value":"Bez záznamu"
+          }
+        ],
+        "skos:inScheme":{
+          "@id":"codelist:CL010108"
+        },
+        "egov:isValid":{
+          "@value": "true",
+          "@type": "xs:boolean"
+        }
+      },
+      "lsub:statutoryBody":{
+        "@type":"lsub:StatutoryBody",
+        "dct:type":{
+          "@id":"statutory-body-type:3",
+          "@type": "lsub:StatutoryBodyType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Konateľ"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL010113"
+          }
+        },
+        "lsub:statutoryBodyMember":{
+          "@id": "statutory-body-member:2",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Konateľ"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL010470"
+          }
+        },
+        "dct:temporal": {
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value": "2000-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid":{
+          "@value": "true",
+          "@type": "xs:boolean"
+        },
+        "pper:physicalPerson": {
+          "@type": "pper:PhysicalPerson",
+          "adms:identifier":{
+            "@type":"adms:Identifier",
+            "skos:notation":{
+              "@value":"2100035451",
+              "@type":"xs:string"
+            },
+            "dct:type":{
+              "@id":"identifiertype:14",
+              "@type":"egov:IdentifierType",
+              "skos:prefLabel":{
+                "@language":"sk",
+                "@value":"Identifikátor záznamu o osobe"
+              },
+              "skos:inScheme":{
+                "@id":"codelist:CL004001"
+              }
+            },
+            "egov:issuingCountry":{
+              "@id":"uncountry:703",
+              "@type":"loca:UNCountry",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"Slovak Republic"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Slovenská republika"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000086"
+              }
+            }
+          },
+          "pper:givenName":{
+            "@list":[
+              {
+                "@type":"xs:string",
+                "@value":"Jozef"
+              },
+              {
+                "@type":"xs:string",
+                "@value":"Maco"
+              }
+            ]
+          },
+          "pper:familyName":{
+            "@value":"Mak",
+            "@type":"xs:string"
+          },
+          "pper:birthName":{
+            "@value":"Mlieč",
+            "@type":"xs:string"
+          },
+          "pper:namePrefix":[
+            {
+              "@id":"name-prefix:01",
+              "@type":"pper:NamePrefix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"MSc."
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Ing."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000062"
+              }
+            },
+            {
+              "@id":"name-prefix:02",
+              "@type":"pper:NamePrefix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"MSc. Architect"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Ing. arch."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000062"
+              }
+            }
+          ],
+          "pper:nameSuffix":{
+            "@id":"name-suffix:53",
+            "@type":"pper:NameSufix",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"PhD."
+              },
+              {
+                "@language":"sk",
+                "@value":"PhD."
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000063"
+            }
+          },
+          "person:citizenship":{
+            "@id":"uncountry:703",
+            "skos:prefLabel":{
+              "@value":"Slovenská republika",
+              "@language":"sk"
+            },
+            "skos:inScheme":{
+              "@id":"codelist:CL000086"
+            }
+          },
+          "pper:sex":{
+            "@id":"sex:1",
+            "@type":"pper:Sex",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"male"
+              },
+              {
+                "@language":"sk",
+                "@value":"muž"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL003003"
+            }
+          },
+          "pper:maritalStatusType":{
+            "@id":"marital-status:02",
+            "@type":"pper:MaritalStatusType",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"single"
+              },
+              {
+                "@language":"sk",
+                "@value":"slobodný, slobodná"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL004002"
+            }
+          },
+          "pper:existentialStatus":{
+            "@id":"existential-status:1",
+            "@type":"pper:ExistentialStatusType",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"alive"
+              },
+              {
+                "@language":"sk",
+                "@value":"živý"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL004003"
+            }
+          }
+        }
+      },
+      "lsub:authorizationToExecute":{
+        "@type": "lsub:AuthorizationToExecute",
+        "dct:temporal":{
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value": "2020-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid":{
+          "@value": "true",
+          "@type": "xs:boolean"
+        },
+        "skos:note":{
+          "@value": "V mene spoločnosti koná konateľ samostatne.",
+          "@type": "xs:string"
+        }
+      },
+      "lsub:stakeholder":{
+        "@type": "lsub:Stakeholder",
+        "dct:type":{
+          "@id":"stakeholder-type:1",
+          "@type":"lsub:StakeholderType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Spoločník"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL010109"
+          }
+        },
+        "pper:physicalPerson":{
+          "@type": "pper:PhysicalPerson",
+          "adms:identifier":{
+            "@type":"adms:Identifier",
+            "skos:notation":{
+              "@value":"2100035451",
+              "@type":"xs:string"
+            },
+            "dct:type":{
+              "@id":"identifiertype:14",
+              "@type":"egov:IdentifierType",
+              "skos:prefLabel":{
+                "@language":"sk",
+                "@value":"Identifikátor záznamu o osobe"
+              },
+              "skos:inScheme":{
+                "@id":"codelist:CL004001"
+              }
+            },
+            "egov:issuingCountry":{
+              "@id":"uncountry:703",
+              "@type":"loca:UNCountry",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"Slovak Republic"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Slovenská republika"
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000086"
+              }
+            }
+          },
+          "pper:givenName":{
+            "@list":[
+              {
+                "@type":"xs:string",
+                "@value":"Jozef"
+              },
+              {
+                "@type":"xs:string",
+                "@value":"Maco"
+              }
+            ]
+          },
+          "pper:familyName":{
+            "@value":"Mak",
+            "@type":"xs:string"
+          },
+          "pper:birthName":{
+            "@value":"Mlieč",
+            "@type":"xs:string"
+          },
+          "pper:namePrefix":[
+            {
+              "@id":"name-prefix:01",
+              "@type":"pper:NamePrefix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"MSc."
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Ing."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000062"
+              }
+            },
+            {
+              "@id":"name-prefix:02",
+              "@type":"pper:NamePrefix",
+              "skos:prefLabel":[
+                {
+                  "@language":"en",
+                  "@value":"MSc. Architect"
+                },
+                {
+                  "@language":"sk",
+                  "@value":"Ing. arch."
+                }
+              ],
+              "skos:inScheme":{
+                "@id":"codelist:CL000062"
+              }
+            }
+          ],
+          "pper:nameSuffix":{
+            "@id":"name-suffix:53",
+            "@type":"pper:NameSufix",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"PhD."
+              },
+              {
+                "@language":"sk",
+                "@value":"PhD."
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000063"
+            }
+          }
+        },
+        "lsub:deposit":{
+          "@type": "lsub:Deposit",
+          "dct:type":{
+            "@id": "deposit-type:1",
+            "@type":"lsub:DepositType",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "peňažný vklad"
+            }
+          },
+          "lsub:depositValue":{
+            "@value":"1000",
+            "@type":"xs:decimal"
+          },
+          "fin:currency": {
+            "@id": "currency:EUR",
+            "@type": "fin:Currency",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "EUR"
+            }
+          },
+          "lsub:depositDueDate":{
+            "@value":"2000-01-01",
+            "@type":"xs:date"
+          }
+        },
+        "lsub:shares":{
+          "dct:type":{
+            "@id":"share-type:2",
+            "@type":"lsub:ShareType",
+            "skos:prefLabel":[
+              {
+                "@language":"sk",
+                "@value":"Kmeňová akcia"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010111"
+            }
+          },
+          "lsub:shareState":{
+            "@id": "share-state:1",
+            "@type":"lsub:ShareState",
+            "skos:prefLabel":[
+              {
+                "@language": "sk",
+                "@value": "Fyzická"
+              }
+            ]
+          },
+          "lsub:shareForm":{
+            "@id": "share-form:1",
+            "@type":"lsub:ShareForm",
+            "skos:prefLabel":[
+              {
+                "@language": "sk",
+                "@value": "Certifikát"
+              }
+            ]
+          },
+          "fin:currency": {
+            "@id": "currency:EUR",
+            "@type": "fin:Currency",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "EUR"
+            }
+          },
+          "lsub:shareNominalValue":{
+            "@value":"200",
+            "@type":"xs:string"
+          },
+          "lsub:sharesAmount":{
+            "@value":"100000",
+            "@type":"xs:string"
+          },
+          "lsub:sharesTransferabilityNote":{
+            "@value":"Uvádza sa popis obmedzenia prevoditeľnosti akcií.",
+            "@type":"xs:string"
+          }
+        }
+      },
+      "lsub:hasRegisteredSite":{
+        "@type": "lsub:Site",
+        "dct:temporal": {
+          "@type": "dct:PeriodOfTime",
+          "schema:startDate":{
+            "@value": "2000-01-01",
+            "@type": "xs:date"
+          }
+        },
+        "egov:isValid":{
+          "@value": "true",
+          "@type": "xs:boolean"
+        },
+        "loca:physicalAddress":{
+          "@type":"loca:PhysicalAddress",
+          "dct:type":{
+            "@id":"address-type:100101",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Headquarters"
+              },
+              {
+                "@language":"sk",
+                "@value":"Sídlo právnickej osoby"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010139"
+            }
+          },
+          "loca:street":{
+            "@type":"loca:Street",
+            "skos:prefLabel":[
+              {
+                "@language":"sk",
+                "@value":"Štefánikova"
+              }
+            ]
+          },
+          "loca:orientationNumber":{
+            "@value":"16",
+            "@type":"xs:string"
+          },
+          "loca:propertyRegistrationNumber":{
+            "@value":"3202",
+            "@type":"xs:string"
+          },
+          "loca:district":{
+            "@id":"district:401468",
+            "@type":"loca:District",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Bratislava - Ostredky"
+              },
+              {
+                "@language":"sk",
+                "@value":"Bratislava - Ostredky"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010141"
+            }
+          },
+          "loca:lau2":{
+            "@id":"lau2:SK0101528595",
+            "@type":"loca:LAU2",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Bratislava - The Old Town"
+              },
+              {
+                "@language":"sk",
+                "@value":"Bratislava - mestská časť Staré Mesto"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000025"
+            }
+          },
+          "loca:lau1":{
+            "@id":"lau1:SK0101",
+            "@type":"loca:LAU1",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"County Bratislava I"
+              },
+              {
+                "@language":"sk",
+                "@value":"District Bratislava I"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000024"
+            }
+          },
+          "loca:unCountry":{
+            "@id":"uncountry:703",
+            "@type":"loca:UNCountry",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Slovak Republic"
+              },
+              {
+                "@language":"sk",
+                "@value":"Slovenská republika"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000086"
+            }
+          }
+        }
+      },
+      "lsub:telephone":{
+        "@type": "lsub:Telephone",
+        "dct:type":{
+          "@id":"telephone-type:1",
+          "@type":"lsub:TelephoneType",
+          "skos:prefLabel":[
+            {
+              "@language":"sk",
+              "@value":"Pevná linka"
+            }
+          ],
+          "skos:inScheme":{
+            "@id":"codelist:CL004005"
+          }
+        },
+        "lsub:formattedTelephoneNumber":{
+          "@value":"+421 2 5869 9090",
+          "@type":"xs:string"
+        },
+        "lsub:internationalCountryCode":{
+          "@value":"+421",
+          "@type":"xs:string"
+        },
+        "lsub:nationalTelephoneNumber":{
+          "@value":"02 5869 9090",
+          "@type":"xs:string"
+        },
+        "lsub:areaCode":{
+          "@value":"02",
+          "@type":"xs:string"
+        },
+        "lsub:subscriberTelephoneNumber":{
+          "@value":"5869 9090",
+          "@type":"xs:string"
+        },
+        "lsub:extensionNumber":{
+          "@value":"909",
+          "@type":"xs:string"
+        }
+      },
+      "lsub:internetAddress":{
+        "@value":"https://www.spp.sk/",
+        "@type":"xs:string"
+      },
+      "dct:source":{
+        "@type": "lsub:Source",
+        "lsub:sourceRegister":{
+          "@id": "source-register:1",
+          "@type": "lsub:SourceRegister",
+          "skos:prefLabel":[
+            {
+              "@language": "sk",
+              "@value": "Zdrojový register"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL010112"
+          }
+        },
+        "lsub:registrationOffice":{
+          "@type": "lsub:RegistrationOffice",
+          "dct:temporal":{
+            "@type": "dct:PeriodOfTime",
+            "schema:validFrom":{
+              "@value": "2000-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "egov:isValid":{
+            "@value": "true",
+            "@type": "xs:boolean"
+          },
+          "skos:notation":{
+            "@value":"Názov registrátora",
+            "@type": "xs:string"
+          }
+        },
+        "lsub:registrationNumber":{
+          "@type": "lsub:RegistrationNumber",
+          "dct:temporal": {
+            "@type": "dct:PeriodOfTime",
+            "schema:validFrom":{
+              "@value":"2000-01-01",
+              "@type":"xs:date"
+            }
+          },
+          "egov:isValid":{
+            "@value": "true",
+            "@type": "xs:boolean"
+          },
+          "skos:notation":{
+            "@value":"1234567890",
+            "@type":"xs:string"
+          }
+        }
+      },
+      "lsub:legalPredecessor":{
+        "@id":"lsub:35815252",
+        "@type":"lsub:LegalSubject",
+        "adms:identifier":{
+          "@type":"adms:Identifier",
+          "skos:notation":{
+            "@value":"35815252",
+            "@type":"xs:string"
+          },
+          "dct:type":{
+            "@id":"identifiertype:7",
+            "@type":"egov:IdentifierType",
+            "skos:prefLabel":{
+              "@language":"sk",
+              "@value":"IČO (Identifikačné číslo organizácie)"
+            },
+            "skos:inScheme":{
+              "@id":"codelist:CL004001"
+            }
+          },
+          "egov:issuingCountry":{
+            "@id":"uncountry:703",
+            "@type":"loca:UNCountry",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Slovak Republic"
+              },
+              {
+                "@language":"sk",
+                "@value":"Slovenská republika"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000086"
+            }
+          }
+        },
+        "lsub:headquarters":{
+          "@type":"loca:PhysicalAddress",
+          "dct:type":{
+            "@id":"address-type:100101",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Headquarters"
+              },
+              {
+                "@language":"sk",
+                "@value":"Sídlo právnickej osoby"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010139"
+            }
+          },
+          "loca:street":{
+            "@type":"loca:Street",
+            "skos:prefLabel":[
+              {
+                "@language":"sk",
+                "@value":"Štefánikova"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:rfo-cl0001"
+            }
+          },
+          "loca:orientationNumber":{
+            "@value":"16",
+            "@type":"xs:string"
+          },
+          "loca:propertyRegistrationNumber":{
+            "@value":"3202",
+            "@type":"xs:string"
+          },
+          "loca:district":{
+            "@id":"district:401468",
+            "@type":"loca:District",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Bratislava - Ostredky"
+              },
+              {
+                "@language":"sk",
+                "@value":"Bratislava - Ostredky"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010141"
+            }
+          },
+          "loca:lau2":{
+            "@id":"lau2:SK0101528595",
+            "@type":"loca:LAU2",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Bratislava - The Old Town"
+              },
+              {
+                "@language":"sk",
+                "@value":"Bratislava - mestská časť Staré Mesto"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000025"
+            }
+          },
+          "loca:lau1":{
+            "@id":"lau1:SK0101",
+            "@type":"loca:LAU1",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"County Bratislava I"
+              },
+              {
+                "@language":"sk",
+                "@value":"District Bratislava I"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000024"
+            }
+          },
+          "loca:unCountry":{
+            "@id":"uncountry:703",
+            "@type":"loca:UNCountry",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Slovak Republic"
+              },
+              {
+                "@language":"sk",
+                "@value":"Slovenská republika"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000086"
+            }
+          }
+        }
+      },
+      "lsub:legalSuccessor":{
+        "@id":"lsub:35555255",
+        "@type":"lsub:LegalSubject",
+        "adms:identifier":{
+          "@type":"adms:Identifier",
+          "skos:notation":{
+            "@value":"35555255",
+            "@type":"xs:string"
+          },
+          "dct:type":{
+            "@id":"identifiertype:7",
+            "@type":"egov:IdentifierType",
+            "skos:prefLabel":{
+              "@language":"sk",
+              "@value":"IČO (Identifikačné číslo organizácie)"
+            },
+            "skos:inScheme":{
+              "@id":"codelist:CL004001"
+            }
+          },
+          "egov:issuingCountry":{
+            "@id":"uncountry:703",
+            "@type":"loca:UNCountry",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Slovak Republic"
+              },
+              {
+                "@language":"sk",
+                "@value":"Slovenská republika"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000086"
+            }
+          }
+        },
+        "lsub:headquarters":{
+          "@type":"loca:PhysicalAddress",
+          "dct:type":{
+            "@id":"address-type:100101",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Headquarters"
+              },
+              {
+                "@language":"sk",
+                "@value":"Sídlo právnickej osoby"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010139"
+            }
+          },
+          "loca:street":{
+            "@type":"loca:Street",
+            "skos:prefLabel":[
+              {
+                "@language":"sk",
+                "@value":"Štefánikova"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:rfo-cl0001"
+            }
+          },
+          "loca:orientationNumber":{
+            "@value":"16",
+            "@type":"xs:string"
+          },
+          "loca:propertyRegistrationNumber":{
+            "@value":"3202",
+            "@type":"xs:string"
+          },
+          "loca:district":{
+            "@id":"district:401468",
+            "@type":"loca:District",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Bratislava - Ostredky"
+              },
+              {
+                "@language":"sk",
+                "@value":"Bratislava - Ostredky"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL010141"
+            }
+          },
+          "loca:lau2":{
+            "@id":"lau2:SK0101528595",
+            "@type":"loca:LAU2",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Bratislava - The Old Town"
+              },
+              {
+                "@language":"sk",
+                "@value":"Bratislava - mestská časť Staré Mesto"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000025"
+            }
+          },
+          "loca:lau1":{
+            "@id":"lau1:SK0101",
+            "@type":"loca:LAU1",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"County Bratislava I"
+              },
+              {
+                "@language":"sk",
+                "@value":"District Bratislava I"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000024"
+            }
+          },
+          "loca:unCountry":{
+            "@id":"uncountry:703",
+            "@type":"loca:UNCountry",
+            "skos:prefLabel":[
+              {
+                "@language":"en",
+                "@value":"Slovak Republic"
+              },
+              {
+                "@language":"sk",
+                "@value":"Slovenská republika"
+              }
+            ],
+            "skos:inScheme":{
+              "@id":"codelist:CL000086"
+            }
+          }
+        }
+      },
+      "lsub:institutionalSubsectorType":{
+        "@id": "institutional-subsector-type:S.11001",
+        "@type": "lsub:InstitutionalSubsectorType",
+        "skos:prefLabel":[
+          {
+            "@language": "en",
+            "@value": "Public non-financial corporations"
+          },
+          {
+            "@language": "sk",
+            "@value": "Verejná nefinančná korporácia"
+          }
+        ]
+      }
+    }
+  ]
+}

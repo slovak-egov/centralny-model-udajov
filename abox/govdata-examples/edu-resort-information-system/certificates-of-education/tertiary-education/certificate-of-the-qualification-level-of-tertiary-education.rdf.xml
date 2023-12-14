@@ -1,0 +1,93 @@
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:edu="https://data.gov.sk/def/ontology/education/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
+    xmlns:codelist="https://data.gov.sk/set/codelist/"
+    xmlns:m8g="http://data.europa.eu/m8g/"
+    xmlns:person="https://www.w3.org/ns/person#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <m8g:Evidence>
+        <dct:type>
+            <m8g:EvidenceType rdf:about="https://data.gov.sk/def/evidence-type/4">
+                <skos:prefLabel xml:lang="sk">Potvrdenie o kvalifikačnom stupni terciárneho vzdelania</skos:prefLabel>
+                <skos:inScheme rdf:resource="https://data.gov.sk/def/taxonomy/TX000002"/>
+                <m8g:issuingPlace rdf:resource="http://publications.europa.eu/resource/authority/country/SVK"/>
+            </m8g:EvidenceType>
+        </dct:type>
+        <dct:publisher>
+            <m8g:PublicOrganization rdf:about="https://data.gov.sk/id/legal-subject/00164381">
+                <skos:prefLabel xml:lang="sk">Ministerstvo školstva, vedy, výskumu a športu Slovenskej republiky</skos:prefLabel>
+            </m8g:PublicOrganization>
+        </dct:publisher>
+        <dct:subject>
+            <person:Person>
+                <foaf:givenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antónia</foaf:givenName>
+                <foaf:familyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kudlánková</foaf:familyName>
+                <pper:namePrefix>
+                     <pper:NamePrefix rdf:about="https://data.gov.sk/def/name-prefix/01">
+                          <skos:prefLabel xml:lang="sk">Ing.</skos:prefLabel>
+                          <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000062"/>
+                     </pper:NamePrefix>
+                </pper:namePrefix>
+                 <pper:nameSuffix>
+                     <pper:NameSuffix rdf:about="https://data.gov.sk/def/name-suffix/53">
+                          <skos:prefLabel xml:lang="sk">PhD.</skos:prefLabel>
+                          <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000063"/>
+                     </pper:NameSuffix>
+                </pper:nameSuffix>
+            </person:Person>
+        </dct:subject>
+        <edu:qualification>
+            <edu:Qualification>
+                <skos:prefLabel xml:lang="sk">Inžinier</skos:prefLabel>
+                <edu:qualificationLevel>
+                    <edu:QualificationLevel rdf:about="https://data.gov.sk/def/qualification-level/864">
+                        <skos:prefLabel xml:lang="sk">vysokoškolské doktorandské vzdelanie dosiahnuté absolvovaním štúdia v doktorandských štúdijných programoch, postgraduálne štúdium a vedecká výchova</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/qualification-level"/>
+                    </edu:QualificationLevel>
+                </edu:qualificationLevel>
+                <edu:studyProgrammeName xml:lang="sk">Znalostné inžinierstvo</edu:studyProgrammeName>
+                <edu:awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-11</edu:awarded>
+                <edu:qualificationProvider>
+                    <edu:EducationInstitution rdf:about="https://minedu.sk/id/education-subject/12345">
+                        <skos:prefLabel xml:lang="sk">Slovenská technická univerzita v Bratislave</skos:prefLabel>
+                        <adms:identifier>
+                            <adms:Identifier>
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12345</skos:notation>
+                                <dct:type>
+                                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/EDUID">
+                                        <skos:prefLabel xml:lang="sk">EDUID - Identifikátor školy v rámci rezortného informačného systému MŠVVaŠ</skos:prefLabel>
+                                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL004001"/>
+                                    </egov:IdentifierType>
+                                </dct:type>
+                            </adms:Identifier>
+                        </adms:identifier>
+                        <adms:identifier>
+                            <adms:Identifier>
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0039768</skos:notation>
+                                <dct:type>
+                                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/7">
+                                        <skos:prefLabel xml:lang="sk"> IČO (Identifikačné číslo organizácie)</skos:prefLabel>
+                                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL004001"/>
+                                    </egov:IdentifierType>
+                                </dct:type>
+                            </adms:Identifier>
+                        </adms:identifier>
+                    </edu:EducationInstitution>
+                </edu:qualificationProvider>
+            </edu:Qualification>
+        </edu:qualification>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-11</dct:created>
+    </m8g:Evidence>
+</rdf:RDF>

@@ -1,0 +1,63 @@
+<rdf:RDF
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:fin="https://data.gov.sk/def/ontology/finance/"
+    xmlns:postcode="https://data.gov.sk/def/postcode/"
+    xmlns:uncountry="https://data.gov.sk/def/uncountry/"
+    xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
+    xmlns:legal-form-type="https://data.gov.sk/def/legal-form-type/"
+    xmlns:address="https://data.gov.sk/id/physical-address/"
+    xmlns:legal-subject="https://data.gov.sk/id/legal-subject/"
+    xmlns:codelist="https://data.gov.sk/set/codelist/"
+    xmlns:nuts3="https://data.gov.sk/def/nuts3/"
+    xmlns:lau2="https://data.gov.sk/def/lau2/"
+    xmlns:lau1="https://data.gov.sk/def/lau1/"
+    xmlns:person="https://www.w3.org/ns/person#"
+    xmlns:org="http://www.w3.org/ns/org#"    
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+      
+    <org:OrganizationUnit rdf:about="https://data.gov.sk/id/organization-unit/00000219">
+        <adms:identifier>
+            <adms:Identifier>
+                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00000219</skos:notation>
+                <dct:type>
+                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/103">
+                        <skos:prefLabel xml:lang="sk">Identifikátor organizačnej jednotky</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                    </egov:IdentifierType>
+                </dct:type>
+                <egov:issuingCountry>
+                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                    </loca:UNCountry>
+                </egov:issuingCountry>
+            </adms:Identifier>
+        </adms:identifier>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1510-1</skos:notation>
+        <skos:prefLabel xml:lang="sk">Minister</skos:prefLabel>
+        <rdfs:description xml:lang="sk">Minister</rdfs:description>
+        <lsub:organizationUnitType>
+           <lsub:OrganizationUnitType rdf:about="https://data.gov.sk/def/organization-unit-type/1">
+             <skos:prefLabel xml:lang="sk">Minister</skos:prefLabel>
+           </lsub:OrganizationUnitType>
+        </lsub:organizationUnitType>
+        <skos:broader rdf:resource="https://data.gov.sk/id/organization-unit/00000000"/>
+        <org:unitOf>
+            <lsub:LegalSubject rdf:about="https://data.gov.sk/id/legal-subject/00151742">
+               <skos:prefLabel xml:lang="sk">Ministerstvo financií Slovenskej republiky</skos:prefLabel>
+            </lsub:LegalSubject>
+        </org:unitOf>
+        <dct:valid rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-02-02</dct:valid>
+    </org:OrganizationUnit>
+      
+</rdf:RDF>

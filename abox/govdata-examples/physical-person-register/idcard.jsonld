@@ -1,0 +1,300 @@
+{
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "name-prefix": "https://data.gov.sk/def/name-prefix/",
+    "name-suffix": "https://data.gov.sk/def/name-suffix/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "address-type": "https://data.gov.sk/def/address-type/",
+    "identifiertype": "https://data.gov.sk/def/identifier-type/",
+    "address": "https://data.gov.sk/id/physical-address/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "id-card": "https://minv.gov.sk/id/id-card/",
+    "id-card-person": "https://minv.gov.sk/id/id-card-person/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "pco-person": "https://data.gov.sk/id/pco-physical-person/"
+  },
+  "@id": "isvs:XYZ",
+  "@graph": [
+    {
+      "@id": "id-card:EA000000",
+      "@type": "cccev:Evidence",
+      "adms:identifier": {
+        "@type": "adms:Identifier",
+        "skos:notation": {
+          "@value": "EA000000",
+          "@type": "xs:string"
+        },
+        "dct:type": {
+          "@id": "identifiertype:1",
+          "@type": "egov:IdentifierType",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Číslo občianskeho preukazu"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL004001"
+          }
+        },
+        "egov:issuingCountry": {
+          "@id": "uncountry:703",
+          "skos:prefLabel": {
+            "@value": "Slovenská republika",
+            "@language": "sk"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL000086"
+          }
+        }
+      },
+      "dct:type": {
+        "@id": "evidence-type:11",
+        "@type": "cccev:EvidenceType",
+        "skos:prefLabel": {
+          "@language": "sk",
+          "@value": "Občiansky preukaz"
+        },
+        "skos:inScheme": {
+          "@id": "taxonomy:evidence-type"
+        }
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:00603317",
+        "@type": "lsub:LegalSubject",
+        "skos:prefLabel": {
+          "@value": "Okresné riaditeľstvo policajného zboru Bratislava III",
+          "@language": "sk"
+        }
+      },
+      "dct:issued": {
+        "@value": "2015-03-01",
+        "@type": "xs:date"
+      },
+      "schema:validUntil": {
+        "@value": "2025-03-01"
+      },
+      "dct:subject": "pco-person:11117307046912",
+      "pper:specialRecords": {
+        "@value": "Ing., PhD.",
+        "@language": "sk"
+      },
+      "lsub:officialRecord": {
+        "skos:note": {
+          "@value": "Doklad bol prevzatý 2014-11-28.",
+          "@language": "sk"
+        },
+        "dct:publisher": {
+          "@id": "legal-subject:00603317",
+          "@type": "lsub:LegalSubject",
+          "skos:prefLabel": {
+            "@value": "Okresné riaditeľstvo policajného zboru Bratislava III",
+            "@language": "sk"
+          }
+        },
+        "dct:created": {
+          "@value": "2014-11-28",
+          "@type": "xs:date"
+        }
+      },
+      "egov:portraitBase64": {
+        "@value": "",
+        "@type": "xs:base64Binary"
+      },
+      "egov:signatureBase64": {
+        "@value": "",
+        "@type": "xs:base64Binary"
+      }
+    },
+    {
+      "@id": "pco-person:11117307046912",
+      "@type": "pper:PhysicalPerson",
+      "pper:givenName": {
+        "@value": "Vzorka",
+        "@type": "xs:string"
+      },
+      "pper:familyName": {
+        "@value": "Specimen",
+        "@type": "xs:string"
+      },
+      "pper:givenFamilyName": {
+        "@value": "Specimen",
+        "@type": "xs:string"
+      },
+      "pper:dateOfBirth": {
+        "@value": "1911-11-11",
+        "@type": "xs:date"
+      },
+      "pper:birthNumberCode": {
+        "@value": "111111/1111",
+        "@type": "xs:string"
+      },
+      "pper:placeOfBirth": {
+        "@type": "loca:Location",
+        "loca:lau2": {
+          "@id": "lau2:SK0101528595",
+          "@type": "loca:LAU2",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Bratislava - mestská časť Staré Mesto"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL000025"
+          }
+        }
+      },
+      "pper:citizenship": {
+        "@id": "uncountry:703",
+        "skos:prefLabel": {
+          "@value": "Slovenská republika",
+          "@language": "sk"
+        },
+        "skos:inScheme": {
+          "@id": "codelist:CL000086"
+        }
+      },
+      "pper:residenceAddress": {
+        "@id": "address:123123",
+        "@type": "loca:PhysicalAddress",
+        "schema:validFrom": {
+          "@value": "2000-01-01",
+          "@type": "xs:date"
+        },
+        "schema:validUntil": {
+          "@value": "2020-01-01",
+          "@type": "xs:date"
+        },
+        "dct:type": {
+          "@id": "address-type:100001",
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "Permanent address"
+            },
+            {
+              "@language": "sk",
+              "@value": "Trvalý pobyt"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL010139"
+          }
+        },
+        "loca:street": {
+          "@id": "rfostreet:111111111",
+          "@type": "loca:Street",
+          "skos:prefLabel": [
+            {
+              "@language": "sk",
+              "@value": "Štefánikova"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:rfo-cl0001"
+          }
+        },
+        "loca:orientationNumber": {
+          "@value": "16",
+          "@type": "xs:string"
+        },
+        "loca:propertyRegistrationNumber": {
+          "@value": "3202",
+          "@type": "xs:string"
+        },
+        "loca:district": {
+          "@id": "district:401468",
+          "@type": "loca:District",
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "Bratislava - Ostredky"
+            },
+            {
+              "@language": "sk",
+              "@value": "Bratislava - Ostredky"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL010141"
+          }
+        },
+        "loca:lau2": {
+          "@id": "lau2:SK0101528595",
+          "@type": "loca:LAU2",
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "Bratislava - The Old Town"
+            },
+            {
+              "@language": "sk",
+              "@value": "Bratislava - mestská časť Staré Mesto"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL000025"
+          }
+        },
+        "loca:lau1": {
+          "@id": "lau1:SK0101",
+          "@type": "loca:LAU1",
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "County Bratislava I"
+            },
+            {
+              "@language": "sk",
+              "@value": "District Bratislava I"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL000024"
+          }
+        },
+        "loca:unCountry": {
+          "@id": "uncountry:703",
+          "@type": "loca:UNCountry",
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "Slovak Republic"
+            },
+            {
+              "@language": "sk",
+              "@value": "Slovenská republika"
+            }
+          ],
+          "skos:inScheme": {
+            "@id": "codelist:CL000086"
+          }
+        }
+      },
+      "pper:sex": {
+        "@id": "sex:2",
+        "@type": "pper:Sex",
+        "skos:prefLabel": [
+          {
+            "@language": "en",
+            "@value": "female"
+          },
+          {
+            "@language": "sk",
+            "@value": "žena"
+          }
+        ],
+        "skos:inScheme": {
+          "@id": "codelist:CL003003"
+        }
+      }
+    }
+  ]
+}

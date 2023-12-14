@@ -1,0 +1,181 @@
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:fin="https://data.gov.sk/def/ontology/finance/"
+    xmlns:invoice="https://data.gov.sk/id/invoice/"
+    xmlns:order="https://data.gov.sk/id/order/"
+    xmlns:contract="https://data.gov.sk/id/contract/"
+    xmlns:currency="http://publications.europa.eu/resource/authority/currency/"
+    xmlns:postcode="https://data.gov.sk/def/postcode/"
+    xmlns:uncountry="https://data.gov.sk/def/uncountry/"
+    xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
+    xmlns:legal-form-type="https://data.gov.sk/def/legal-form-type/"
+    xmlns:address="https://data.gov.sk/id/physical-address/"
+    xmlns:legal-subject="https://data.gov.sk/id/legal-subject/"
+    xmlns:isvs="https://data.gov.sk/id/isvs/"
+    xmlns:codelist="https://data.gov.sk/set/codelist/"
+    xmlns:nuts3="https://data.gov.sk/def/nuts3/"
+    xmlns:lau2="https://data.gov.sk/def/lau2/"
+    xmlns:lau1="https://data.gov.sk/def/lau1/"
+    xmlns:person="https://www.w3.org/ns/person#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <fin:Invoice rdf:about="https://data.gov.sk/id/invoice/2021/0000310002">
+        <adms:identifier>
+            <adms:Identifier>
+                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021/0000310002</skos:notation>
+                <dct:type>
+                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/101">
+                        <skos:prefLabel xml:lang="sk">CES Identifikátor faktúry</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                    </egov:IdentifierType>
+                </dct:type>
+                <egov:issuingCountry>
+                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703703">
+                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                    </loca:UNCountry>
+                </egov:issuingCountry>
+            </adms:Identifier>
+        </adms:identifier>
+        <fin:orderer>
+             <lsub:LegalSubject rdf:about="https://data.gov.sk/id/legal-subject/00151742">
+                <skos:prefLabel xml:lang="sk">Ministerstvo financií Slovenskej republiky</skos:prefLabel>
+                <lsub:headquarters>
+                    <loca:PhysicalAddress>
+                        <loca:street>
+                            <loca:Street>
+                                <skos:prefLabel xml:lang="sk">Štefanovičova</skos:prefLabel>
+                            </loca:Street>
+                        </loca:street>
+                        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</loca:orientationNumber>
+                        <loca:lau2>
+                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0101528595">
+                                <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Staré Mesto</skos:prefLabel>
+                            </loca:LAU2>
+                        </loca:lau2>
+                        <loca:lau1>
+                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0101">
+                                <skos:prefLabel xml:lang="sk">Bratislava I</skos:prefLabel>
+                            </loca:LAU1>
+                        </loca:lau1>
+                        <loca:nuts3>
+                            <loca:NUTS3 rdf:about="https://data.gov.sk/def/nuts3/SK010">
+                                <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
+                            </loca:NUTS3>
+                        </loca:nuts3>
+                        <loca:unCountry>
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                            </loca:UNCountry>
+                        </loca:unCountry>
+                    </loca:PhysicalAddress>
+                </lsub:headquarters>
+            </lsub:LegalSubject>
+        </fin:orderer>
+        <fin:supplier>
+           <fin:Supplier rdf:about="https://data.gov.sk/def/legal-subject/35823542">
+                <skos:prefLabel xml:lang="sk">Bratislavská teplárenská, a.s.</skos:prefLabel>
+                <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#bolean">true</pper:isPhysicalPerson>
+                <lsub:headquarters>
+                    <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/6158845">
+                        <loca:street>
+                            <loca:Street>
+                                <skos:prefLabel xml:lang="sk">Turbínová</skos:prefLabel>
+                            </loca:Street>
+                        </loca:street>
+                        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
+                        <loca:postCode>
+                            <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82905</skos:notation>
+                            </loca:PostCode>
+                        </loca:postCode>
+                        <loca:lau2>
+                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0103529346">
+                                <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Nové Mesto</skos:prefLabel>
+                            </loca:LAU2>
+                        </loca:lau2>
+                        <loca:lau1>
+                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0103">
+                                <skos:prefLabel xml:lang="sk">Bratislava III</skos:prefLabel>
+                            </loca:LAU1>
+                        </loca:lau1>
+                        <loca:nuts3>
+                            <loca:NUTS3 rdf:about="https://data.gov.sk/def/nuts3/SK010">
+                                <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
+                            </loca:NUTS3>
+                        </loca:nuts3>
+                        <egov:unCountry>
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                            </loca:UNCountry>
+                        </egov:unCountry>
+                    </loca:PhysicalAddress>
+                </lsub:headquarters>
+                <lsub:legalFormType>
+                    <lsub:LegalFormType rdf:about="https://data.gov.sk/def/legal-form-type/121">
+                        <skos:prefLabel xml:lang="sk">Akciová spoločnosť</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000056"/>
+                    </lsub:LegalFormType>
+                </lsub:legalFormType>
+                <lsub:branch>
+                    <lsub:Branch>
+                         <skos:prefLabel xml:lang="sk">Bratislavská teplárenská - STARÉ MESTO</skos:prefLabel>
+                         <locn:location>
+                         <loca:PhysicalAddress>
+                    <loca:street>
+                        <loca:Street>
+                            <skos:prefLabel xml:lang="sk">Turbínová</skos:prefLabel>
+                        </loca:Street>
+                    </loca:street>
+                    <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
+                    <loca:postCode>
+                        <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
+                            <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82905</skos:notation>
+                        </loca:PostCode>
+                    </loca:postCode>
+                    <egov:unCountry>
+                        <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                            <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                            <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+                        </loca:UNCountry>
+                    </egov:unCountry>
+                        </loca:PhysicalAddress>
+                         </locn:location>
+                    </lsub:Branch>
+                </lsub:branch>
+            </fin:Supplier>
+        </fin:supplier>
+        <fin:contract rdf:resource="https://data.gov.sk/id/contract/4600000237"/>
+        <fin:order rdf:resource="https://data.gov.sk/id/order/4600000237"/>
+        <fin:price>
+             <fin:Price>
+                <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19870.3</fin:value>
+                <fin:currency>
+                    <fin:Currency rdf:about="currency;EUR">
+                        <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
+                    </fin:Currency>
+                </fin:currency>
+                <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                <fin:valueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19870.34</fin:valueWithVAT>
+            </fin:Price>
+        </fin:price>
+        <rdfs:description xml:lang="sk">Bratisl.tepl.-preddavok</rdfs:description>
+        <fin:payed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-05</fin:payed>
+        <fin:delivered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-05</fin:delivered>
+        <fin:accounted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-05</fin:accounted>
+        <fin:isCanceled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</fin:isCanceled>
+        <fin:isAdvanceInvoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</fin:isAdvanceInvoice>
+    </fin:Invoice>
+</rdf:RDF>

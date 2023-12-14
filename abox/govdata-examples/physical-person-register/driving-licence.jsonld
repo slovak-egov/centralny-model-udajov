@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "name-prefix": "https://data.gov.sk/def/name-prefix/",
+    "name-suffix": "https://data.gov.sk/def/name-suffix/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "address": "https://data.gov.sk/id/physical-address/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "identifiertype": "https://data.gov.sk/def/identifier-type/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "driving-licence": "https://minv.gov.sk/id/driving-licence/",
+    "driving-licence-person": "https://minv.gov.sk/id/driving-licence-person/",
+    "driving-licence-type": "https://data.gov.sk/def/driving-licence-type/",
+    "driving-privilege-category": "https://data.gov.sk/def/driving-privilege-category/",
+    "driving-privilege-restriction": "https://miv.gov.sk/id/driving-privilege-restriction/",
+    "person": "https://www.w3.org/ns/person#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "schema": "http://schema.org/",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "pco-person": "https://data.gov.sk/id/pco-physical-person/"
+  },
+  "@id": "isvs:XYZ",
+  "@graph": [
+    {
+      "@id": "driving-licence:X0000001",
+      "@type": "cccev:Evidence",
+      "adms:identifier": {
+        "@type": "adms:Identifier",
+        "skos:notation": {
+          "@value": "X0000001",
+          "@type": "xs:string"
+        },
+        "dct:type": {
+          "@id": "identifiertype:5",
+          "@type": "egov:IdentifierType",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Číslo vodičského preukazu"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL004001"
+          }
+        },
+        "egov:issuingCountry": {
+          "@id": "uncountry:703",
+          "skos:prefLabel": {
+            "@value": "Slovenská republika",
+            "@language": "sk"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL000086"
+          }
+        }
+      },
+     "dct:type": "https://data.gov.sk/def/taxonomy/evidence-type/passport",
+     "pper:drivingLicenceSerieCode": {
+        "@value": "X",
+        "@type": "xs:string"
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:00603317",
+        "@type": "lsub:LegalSubject",
+        "skos:prefLabel": {
+          "@value": "Okresné riaditeľstvo policajného zboru Bratislava III",
+          "@language": "sk"
+        }
+      },
+      "dct:issued": {
+        "@value": "2014-11-26",
+        "@type": "xs:date"
+      },
+      "schema:validUntil": {
+        "@value": "2024-11-26"
+      },
+      "pper:drivingPrivilege": [
+        {
+          "@type": "pper:DrivingPrivilege",
+          "pper:drivingPrivilegeCategory": {
+            "@id": "driving-privilege-category:A1",
+            "skos:notation": {
+              "@value": "A1",
+              "@type": "xs:string"
+            }
+          },
+          "schema:validFrom": {
+            "@value": "2014-11-26"
+          },
+          "schema:validUntil": {
+            "@value": "2024-11-26"
+          },
+          "pper:drivingPrivilegeRestriction": {
+            "@id": "driving-privilege-restriction:S03",
+            "skos:notation": {
+              "@value": "S03",
+              "@type": "xs:string"
+            }
+          },
+          "pper:drivingPrivilegeSign": {
+            "@value": "<",
+            "@type": "xs:string"
+          },
+          "pper:drivingPrivilegeValue": {
+            "@value": "1000",
+            "@type": "xs:integer"
+          }
+        },
+        {
+          "@type": "pper:DrivingPrivilege",
+          "pper:drivingPrivilegeCategory": {
+            "@id": "driving-privilege-category:C1",
+            "skos:notation": {
+              "@value": "C1",
+              "@type": "xs:string"
+            }
+          },
+          "schema:validFrom": {
+            "@value": "2018-11-06"
+          },
+          "schema:validUntil": {
+            "@value": "2028-11-06"
+          },
+          "pper:drivingPrivilegeRestriction": {
+            "@id": "driving-privilege-restriction:78",
+            "skos:notation": {
+              "@value": "78",
+              "@type": "xs:string"
+            }
+          }
+        }
+      ],
+      "dct:subject": "pco-person:11117307046912",
+      "lsub:officialRecord": {
+        "skos:note": {
+          "@value": "Doklad bol prevzatý 2014-11-28.",
+          "@language": "sk"
+        },
+        "dct:publisher": {
+          "@id": "legal-subject:00603317",
+          "@type": "lsub:LegalSubject",
+          "skos:prefLabel": {
+            "@value": "Okresné riaditeľstvo policajného zboru Bratislava III",
+            "@language": "sk"
+          }
+        },
+        "dct:created": {
+          "@value": "2014-11-28",
+          "@type": "xs:date"
+        }
+      },
+      "egov:portraitBase64": {
+        "@value": "",
+        "@type": "xs:base64Binary"
+      },
+      "egov:signatureBase64": {
+        "@value": "",
+        "@type": "xs:base64Binary"
+      }
+    },
+    {
+      "@id": "pco-person:11117307046912",
+      "@type": "pper:PhysicalPerson",
+      "pper:givenName": {
+        "@value": "Vzorka",
+        "@type": "xs:string"
+      },
+      "pper:familyName": {
+        "@value": "Specimen",
+        "@type": "xs:string"
+      },
+      "pper:dateOfBirth": {
+        "@value": "1911-11-11",
+        "@type": "xs:date"
+      },
+      "pper:placeOfBirth": {
+        "@type": "loca:Location",
+        "loca:lau2": {
+          "@id": "lau2:SK0101528595",
+          "@type": "loca:LAU2",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Bratislava - mestská časť Staré Mesto"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL000025"
+          }
+        }
+      }
+    }
+  ]
+}
