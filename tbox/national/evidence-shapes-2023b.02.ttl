@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix sha-ev: <https://data.gov.sk/def/shapes/evidence/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix m8g: <http://data.europa.eu/m8g/> .
+@prefix sha-ev: <https://data.gov.sk/def/shapes/evidence/> .
+
+sha-ev:Evidence
+    a sh:NodeShape ;
+    egov:xmlElementName "Evidence" ;
+    sh:order 1 ;
+    sh:targetClass m8g:Evidence ;
+    rdfs:isDefinedBy sha-ev:2023b ;
+
+    sh:property sha-ev:Evidence-type ,
+                sha-ev:Evidence-publisher ,
+                sha-ev:Evidence-subject ,
+                sha-ev:Evidence-created .
+
+sha-ev:Evidence-type
+    a sh:PropertyShape ;
+    sh:path dct:type ;
+    sh:class m8g:EvidenceType ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+
+sha-ev:Evidence-publisher
+    a sh:PropertyShape ;
+    sh:path dct:publisher ;
+    sh:class m8g:PublicOrganization ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+
+sha-ev:Evidence-subject
+    a sh:PropertyShape ;
+    sh:path dct:subject ;
+    sh:class pper:PhysicalPerson ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+
+sha-ev:Evidence-created
+    a sh:PropertyShape ;
+    egov:xmlElementName "Created" ;
+    sh:order 12 ;
+    sh:path dct:created ;
+    sh:datatype xsd:date ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
