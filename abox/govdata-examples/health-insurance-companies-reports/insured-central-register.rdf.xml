@@ -1,0 +1,88 @@
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:fin="https://data.gov.sk/def/ontology/finance/"
+    xmlns:m8g="http://data.europa.eu/m8g/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:codelist="https://data.gov.sk/set/codelist/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:schema="http://schema.org/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <fin:Insurance>
+        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</qb:order>
+        <fin:insuranceCompany>
+            <fin:InsuranceCompany rdf:about="https://data.gov.sk/id/legal-subject/35942436">
+                <adms:identifier>
+                    <adms:Identifier>
+                        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</skos:notation>
+                        <dct:type>
+                            <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/13">
+                                <skos:prefLabel xml:lang="sk">Kód zdravotnej poisťovne</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                            </egov:IdentifierType>
+                        </dct:type>
+                    </adms:Identifier>
+                </adms:identifier>
+            </fin:InsuranceCompany>
+        </fin:insuranceCompany>
+        <fin:insured>
+            <pper:PhysicalPerson rdf:about="https://data.gov.sk/id/rc-physical-person/1234567890">
+                <adms:identifier>
+                    <adms:Identifier>
+                        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1234567890</skos:notation>
+                        <dct:type>
+                            <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/ICP">
+                                <skos:prefLabel xml:lang="sk">Identifikačné číslo poistencia pridelené zdravotnou poisťovňou</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                            </egov:IdentifierType>
+                        </dct:type>
+                    </adms:Identifier>
+                </adms:identifier>
+                <adms:identifier>
+                    <adms:Identifier>
+                        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1234567890</skos:notation>
+                        <dct:type>
+                            <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/16">
+                                <skos:prefLabel xml:lang="sk">Identifikačné číslo poistenca v Centrálnom registri poistencov verejného zdravotného poistenia</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                            </egov:IdentifierType>
+                        </dct:type>
+                    </adms:Identifier>
+                </adms:identifier>
+                <pper:birthNumber>
+                    <adms:Identifier>
+                        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2222222222</skos:notation>
+                        <dct:type>
+                            <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/9">
+                                <skos:prefLabel xml:lang="sk">Rodné číslo</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
+                            </egov:IdentifierType>
+                        </dct:type>
+                    </adms:Identifier>
+                </pper:birthNumber>
+                <m8g:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-06</m8g:birthDate>
+                <pper:sex>
+                   <pper:Sex rdf:about="https://data.gov.sk/def/sex/1">
+                       <skos:prefLabel xml:lang="sk">muž</skos:prefLabel>
+                       <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL003003"/>
+                   </pper:Sex>
+                </pper:sex>
+             </pper:PhysicalPerson>
+        </fin:insured>
+        <dct:temporal>
+            <dct:PeriodOfTime>
+                <fin:insuranceStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-06</fin:insuranceStartDate>
+                <fin:insuranceEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-22</fin:insuranceEndDate>
+            </dct:PeriodOfTime>
+        </dct:temporal>
+    </fin:Insurance>
+</rdf:RDF>

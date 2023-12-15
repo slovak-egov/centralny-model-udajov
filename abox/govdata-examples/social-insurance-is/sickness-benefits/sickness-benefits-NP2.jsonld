@@ -1,0 +1,319 @@
+{
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "taxonomy": "https://data.gov.sk/def/taxonomy/",
+    "name-prefix": "https://data.gov.sk/def/name-prefix/",
+    "name-suffix": "https://data.gov.sk/def/name-suffix/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "identifiertype": "https://data.gov.sk/def/identifier-type/",
+    "evidence-type": "https://data.gov.sk/def/evidence-type/",
+    "benefit-type": "https://data.gov.sk/def/benefit-type/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "lau1": "https://data.gov.sk/id/lau1/",
+    "lau2": "https://data.gov.sk/id/lau2/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/"
+  },
+  "@id": "isvs:6092",
+  "@graph": [
+    {
+      "@type": "cccev:Evidence",
+      "dct:type": {
+        "@id": "evidence-type:13451",
+        "@type": "cccev:EvidenceType",
+        "skos:prefLabel": {
+          "@language": "sk",
+          "@value": "Potvrdenie o poberaní ND SP typ NP_2"
+        },
+        "skos:inScheme": {
+          "@id": "taxonomy:evidence-type"
+        }
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:30807484",
+        "@type": "lsub:LegalSubject",
+        "skos:prefLabel": {
+          "@value": "Sociálna poisťovňa",
+          "@language": "sk"
+        }
+      },
+      "dct:subject": {
+        "@type": "pper:PhysicalPerson",
+        "pper:givenName": {
+          "@value": "Magráta",
+          "@type": "xs:string"
+        },
+        "pper:familyName": {
+          "@value": "Cesnaková",
+          "@type": "xs:string"
+        },
+        "pper:dateOfBirth": {
+          "@value": "1989-03-31",
+          "@type": "xs:date"
+        },
+        "adms:identifier": {
+          "@type": "adms:Identifier",
+          "skos:notation": {
+            "@value": "8903317764",
+            "@type": "xs:string"
+          },
+          "dct:type": {
+            "@id": "identifiertype:9",
+            "@type": "egov:IdentifierType",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "Rodné číslo"
+            },
+            "skos:inScheme": {
+              "@id": "codelist:CL004001"
+            }
+          },
+          "egov:issuerCountry": {
+            "@id": "uncountry:703",
+            "@type": "loca:UNCountry",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "codelist:CL000086"
+            }
+          }
+        }
+      },
+      "dct:temporal": {
+        "@type": "dct:PeriodOfTime",
+        "schema:startDate": {
+          "@value": "2023-01-01",
+          "@type": "xs:date"
+        },
+        "schema:endDate": {
+          "@value": "2023-06-30",
+          "@type": "xs:date"
+        }
+      },
+       "fin:totalAmount": {
+         "@type": "fin:Benefit",
+         "fin:value": {
+            "@value": "5023.80",
+            "@type": "xs:decimal"
+        },
+          "fin:currency": {
+            "@id": "currency:EUR",
+            "@type": "fin:Currency",
+            "skos:prefLabel": {
+               "@language": "sk",
+                "@value": "EUR"
+             }
+         }
+      },
+      "fin:benefitReceivingPeriod": [
+        {
+          "@type": "dct:PeriodOfTime",
+          "dct:references": {
+            "@id": "benefit-type:15",
+            "@type": "fin:BenefitType",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "hospital fees"
+              },
+              {
+                "@language": "sk",
+                "@value": "ošetrovné"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "taxonomy:benefit-type"
+            }
+          },
+          "schema:startDate": {
+            "@value": "2023-01-01",
+            "@type": "xs:date"
+          },
+          "schema:endDate": {
+            "@value": "2023-01-31",
+            "@type": "xs:date"
+          }
+        },
+        {
+          "@type": "dct:PeriodOfTime",
+          "dct:references": {
+            "@id": "benefit-type:14",
+            "@type": "fin:BenefitType",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "maternity benefit"
+              },
+              {
+                "@language": "sk",
+                "@value": "materská"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "taxonomy:benefit-type"
+            }
+          },
+          "schema:startDate": {
+            "@value": "2023-05-01",
+            "@type": "xs:date"
+          },
+          "schema:endDate": {
+            "@value": "2023-06-30",
+            "@type": "xs:date"
+          }
+        }
+      ],
+      "fin:receivedBenefit": [
+        {
+          "@type": "fin:Benefit",
+          "dct:type": {
+            "@id": "benefit-type:15",
+            "@type": "fin:BenefitType",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "hospital fees"
+              },
+              {
+                "@language": "sk",
+                "@value": "ošetrovné"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "taxonomy:benefit-type"
+            }
+          },
+          "dct:valid": {
+            "@value": "2023-01",
+            "@type": "xs:date"
+          },
+          "fin:value": {
+            "@value": "500.0",
+            "@type": "xs:decimal"
+          },
+          "fin:payed": {
+            "@value": "2023-01-01",
+            "@type": "xs:date"
+          },
+          "fin:overpayment": {
+            "@value": "25.0",
+            "@type": "xs:decimal"
+          },
+          "fin:currency": {
+            "@id": "currency:EUR",
+            "@type": "fin:Currency",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "EUR"
+            }
+          }
+        },
+        {
+          "@type": "fin:Benefit",
+          "dct:type": {
+            "@id": "benefit-type:14",
+            "@type": "fin:BenefitType",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "maternity benefit"
+              },
+              {
+                "@language": "sk",
+                "@value": "materská"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "taxonomy:benefit-type"
+            }
+          },
+          "dct:valid": {
+            "@value": "2023-05",
+            "@type": "xs:date"
+          },
+          "fin:value": {
+            "@value": "1267.0",
+            "@type": "xs:decimal"
+          },
+          "fin:payed": {
+            "@value": "2023-05-01",
+            "@type": "xs:date"
+          },
+          "fin:overpayment": {
+            "@value": "25.0",
+            "@type": "xs:decimal"
+          },
+          "fin:currency": {
+            "@id": "currency:EUR",
+            "@type": "fin:Currency",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "EUR"
+            }
+          }
+        },
+        {
+          "@type": "fin:Benefit",
+          "dct:type": {
+            "@id": "benefit-type:14",
+            "@type": "fin:BenefitType",
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "maternity benefit"
+              },
+              {
+                "@language": "sk",
+                "@value": "materská"
+              }
+            ],
+            "skos:inScheme": {
+              "@id": "taxonomy:benefit-type"
+            }
+          },
+          "dct:valid": {
+            "@value": "2023-06",
+            "@type": "xs:date"
+          },
+          "fin:value": {
+            "@value": "1267.0",
+            "@type": "xs:decimal"
+          },
+          "fin:payed": {
+            "@value": "2023-06-01",
+            "@type": "xs:date"
+          },
+          "fin:overpayment": {
+            "@value": "25.0",
+            "@type": "xs:decimal"
+          },
+          "fin:currency": {
+            "@id": "currency:EUR",
+            "@type": "fin:Currency",
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "EUR"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

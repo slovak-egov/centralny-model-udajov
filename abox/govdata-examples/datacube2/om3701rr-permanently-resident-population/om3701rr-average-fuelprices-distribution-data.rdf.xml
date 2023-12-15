@@ -1,0 +1,37 @@
+<rdf:RDF
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:stat="https://data.gov.sk/def/ontology/statistics/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <qb:Observation rdf:about="https://datacube.statistics.sk/set/om3701rr/2022/resource/1245221-13434646-987789/observation/1">
+        <qb:dataset rdf:resource="https://datacube.statistics.sk/set/om3701rr/2022"/>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2022</time:year>
+        <dct:spatial>
+            <loca:LAU2 rdf:about="https://data.gov.sk/id/nuts1/SK0">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slovenská republika</skos:prefLabel>
+            </loca:LAU2>
+        </dct:spatial>
+        <stat:indicatorType>
+            <stat:IndicatorType rdf:about="https://data.gov.sk/def/statistical-indicator/0003">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stav trvale bývajúceho obyvateľstva na začiatku obdobia (Osoba)</skos:prefLabel>
+            </stat:IndicatorType>
+        </stat:indicatorType>
+        <stat:sexType>
+            <stat:SexType rdf:about="https://statistics.sk/def/sex-type/M">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Počet mužov</skos:prefLabel>
+            </stat:SexType>
+        </stat:sexType>
+        <stat:ageCategory>
+            <stat:AgeCategory rdf:about="https://statistics.sk/def/age-category/Y_LT4 ">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">menej než 4 roky</skos:prefLabel>
+            </stat:AgeCategory>
+        </stat:ageCategory>
+        <stat:indicatorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2599</stat:indicatorValue>
+    </qb:Observation>
+</rdf:RDF>

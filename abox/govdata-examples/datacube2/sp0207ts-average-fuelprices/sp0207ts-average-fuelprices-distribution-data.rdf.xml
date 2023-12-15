@@ -1,0 +1,41 @@
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:stat="http://data.gov.sk/def/ontology/statistics/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <qb:Observation rdf:about="https://datacube.statistics.sk/set/sp0207ts/2023-04-28/observation/1">
+        <qb:dataset rdf:resource="https://datacube.statistics.sk/set/sp0207ts/2023-04-28"/>
+        <time:week rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</time:week>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2023</time:year>
+        <time:hasTime>
+            <time:Interval>
+                <time:hasBeginning>
+                    <time:Instant>
+                        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-02</time:inXSDDate>
+                    </time:Instant>
+                </time:hasBeginning>
+                <time:hasEnd>
+                    <time:Instant>
+                        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-08</time:inXSDDate>
+                    </time:Instant>
+                </time:hasEnd>
+            </time:Interval>
+        </time:hasTime>
+        <stat:indicatorType>
+            <stat:IndicatorType rdf:about="https://data.gov.sk/def/statistical-indicator-type/0001">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pohonné hmoty</skos:prefLabel>
+            </stat:IndicatorType>
+        </stat:indicatorType>
+        <stat:fuelType>
+            <stat:COICOP rdf:about="https://data.gov.sk/def/coicop/7202102">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benzín Natural 95 oktánový</skos:prefLabel>
+            </stat:COICOP>
+        </stat:fuelType>
+        <stat:indicatorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1.491</stat:indicatorValue>
+    </qb:Observation>
+</rdf:RDF>

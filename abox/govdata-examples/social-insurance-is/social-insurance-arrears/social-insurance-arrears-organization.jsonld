@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "fin": "https://data.gov.sk/def/ontology/finance/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "evidence-type": "https://data.gov.sk/def/evidence-type/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "taxonomy": "https://data.gov.sk/def/taxonomy/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "pers": "https://data.gov.sk/id/pco-physical-person/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "insurance-arrears-type": "https://data.gov.sk/def/insurance-arrears-type/"
+  },
+  "@id": "isvs:6092",
+  "@graph": [
+    {
+      "@type": "cccev:Evidence",
+      "dct:type": {
+        "@id": "evidence-type:13451",
+        "@type": "egov:EvidenceType",
+        "skos:prefLabel": {
+          "@language": "sk",
+          "@value": "Potvrdenie o nedoplatku na poistnom na sociálne poistenie"
+        },
+        "skos:inScheme": {
+          "@id": "taxonomy:evidence-type"
+        }
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:30807484",
+        "@type": "lsub:LegalSubject",
+        "skos:prefLabel": {
+          "@value": "Sociálna poisťovňa",
+          "@language": "sk"
+        }
+      },
+      "dct:subject": "legal-subject:23434565245",
+      "fin:hasArrears": {
+        "@value": "false",
+        "@type": "xs:boolean"
+      },
+      "fin:arrearsType": {
+        "@id": "insurance-arrears-type:2",
+        "@type": "fin:ArrearsType",
+        "skos:prefLabel": {
+          "@language": "sk",
+          "@value": "Má nedoplatok – nesplnenie povinnosti"
+        },
+        "skos:inScheme": {
+          "@id": "codelist:CL00NNNN"
+        }
+      },
+      "skos:note": {
+        "@value": "Sumarizovaný návratový text slúžiaci na lepšiu identifikáciu sporných príkazov",
+        "@type": "xs:string"
+      },
+      "dct:valid": {
+        "@value": "2023-03-09",
+        "@type": "xs:date"
+      }
+    }
+  ]
+}
