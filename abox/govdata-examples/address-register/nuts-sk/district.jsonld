@@ -28,38 +28,38 @@
   "@id": "isvs:192",
   "@graph": [
     {
-      "@id": "lau2:SK0108",
-      "@type": "loca:LAU1",
+      "@id": "district:412703",
+      "@type": "loca:District",
       "skos:prefLabel": {
-        "@value": "Okres Senec",
+        "@value": "Trnávka",
         "@language": "sk"
       },
       "adms:identifier": {
         "@type": "adms:Identifier",
         "skos:notation": {
-          "@value": "SK0108",
+          "@value": "412703",
           "@type": "xs:string"
         },
         "dct:type": {
-          "@id": "identifiertype:lau1",
+          "@id": "identifiertype:district",
           "@type": "egov:IdentifierType",
           "skos:prefLabel": {
             "@language": "sk",
-            "@value": "NUTS identifikátor okresu"
+            "@value": "identifikátor časti obce"
           },
           "skos:inScheme": {
-            "@id": "codelist:CL000024"
+            "@id": "codelist:CL010141"
           }
         },
         "skos:broader": {
-          "@id": "lau1:SK0101",
-          "@type": "loca:NUTS3",
+          "@id": "lau2:SK0229506010",
+          "@type": "loca:LAU2",
           "skos:prefLabel": {
-            "@value": "Bratislavský kraj",
+            "@value": "Horná Súča",
             "@language": "sk"
           },
           "skos:inScheme": {
-            "@id": "codelist:CL000023"
+            "@id": "codelist:CL000025"
           }
         },
         "egov:issuingCountry": {

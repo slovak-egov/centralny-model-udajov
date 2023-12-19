@@ -51,6 +51,17 @@
             "@id": "codelist:CL000025"
           }
         },
+         "skos:broader": {
+          "@id": "lau1:SK0101",
+          "@type": "loca:LAU1",
+          "skos:prefLabel": {
+            "@value": "Okres Bratislava I",
+            "@language": "sk"
+          },
+          "skos:inScheme": {
+            "@id": "codelist:CL000024"
+          }
+        },
         "egov:issuingCountry": {
           "@id": "uncountry:703",
           "skos:prefLabel": {
