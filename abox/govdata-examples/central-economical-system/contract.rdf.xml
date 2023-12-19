@@ -66,7 +66,25 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema#"
     xmlns:schema="https://schema.org/">
     
-    <fin:Contract rdf:about="&contract;2021-205">
+    <fin:Contract rdf:about="&contract;1510000031">
+        <adms:identifier>
+            <adms:Identifier>
+                <skos:notation rdf:datatype="&xs;string">1510000031</skos:notation>
+                <dct:type>
+                    <egov:IdentifierType rdf:about="&identifier-type;CONTRACT-RECORD-ID">
+                        <skos:prefLabel xml:lang="sk">Evidenčné číslo zmluvy</skos:prefLabel>
+                        <skos:inScheme rdf:resource="&codelist;CL004001"/>
+                    </egov:IdentifierType>
+                </dct:type>
+                <egov:issuingCountry>
+                    <loca:UNCountry rdf:about="&uncountry;703">
+                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                        <skos:inScheme rdf:resource="&codelist;CL000086"/>
+                    </loca:UNCountry>
+                </egov:issuingCountry>
+            </adms:Identifier>
+        </adms:identifier>
+    
         <adms:identifier>
             <adms:Identifier>
                 <skos:notation rdf:datatype="&xs;string">2021/205</skos:notation>
@@ -85,23 +103,7 @@
             </adms:Identifier>
          </adms:identifier>
 
-        <adms:identifier>
-            <adms:Identifier>
-                <skos:notation rdf:datatype="&xs;string">1510000031</skos:notation>
-                <dct:type>
-                    <egov:IdentifierType rdf:about="&identifier-type;CONTRACT-RECORD-ID">
-                        <skos:prefLabel xml:lang="sk">Evidenčné číslo zmluvy</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL004001"/>
-                    </egov:IdentifierType>
-                </dct:type>
-                <egov:issuingCountry>
-                    <loca:UNCountry rdf:about="&uncountry;703">
-                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL000086"/>
-                    </loca:UNCountry>
-                </egov:issuingCountry>
-            </adms:Identifier>
-        </adms:identifier>
+       <fin:numberOfContractAddendums rdf:datatype="&xs;date">2021-05-05</fin:numberOfContractAddendums>
 
         <dct:type>
             <egov:IdentifierType rdf:about="&contract-type;1">
@@ -119,7 +121,7 @@
         
         <fin:contractor>
             <lsub:LegalSubject rdf:about="&legal-subject;00151742">
-                <skos:notation xml:lang="sk">Ministerstvo financií Slovenskej republiky</skos:notation>
+                <skos:prefLabel xml:lang="sk">Ministerstvo financií Slovenskej republiky</skos:prefLabel>
                 <lsub:headquarters>
                     <loca:PhysicalAddress>
                         <loca:street>
@@ -169,7 +171,7 @@
 
         <fin:contractor>
             <lsub:LegalSubject rdf:about="&legal-subject;35823542">
-                <skos:notation xml:lang="sk">Bratislavská teplárenská, a.s.</skos:notation>
+                <skos:prefLabel xml:lang="sk">Bratislavská teplárenská, a.s.</skos:prefLabel>
                 <lsub:headquarters>
                     <loca:PhysicalAddress rdf:about="&address;6158845">
                         <loca:street>
@@ -216,6 +218,8 @@
         </fin:contractor>
 
        <dct:title xml:lang="sk">Zmluva o poskytovaní tepla</dct:title>
+       <fin:signatureDate rdf:datatype="&xs;date">2021-05-05</fin:signatureDate>
+
 
        <fin:validityPeriod>
             <dct:PeriodOfTime>
@@ -224,21 +228,19 @@
             </dct:PeriodOfTime>
         </fin:validityPeriod>
 
+        <fin:totalValidityDate rdf:datatype="&xs;date">2021-05-05</fin:totalValidityDate>
+
        <fin:effectivePeriod>
             <dct:PeriodOfTime>
                 <schema:startDate rdf:datatype="&xs;date">2021-05-05</schema:startDate>
             </dct:PeriodOfTime>
         </fin:effectivePeriod>
 
-        <fin:signatureDate rdf:datatype="&xs;date">2021-05-05</fin:signatureDate>
-
-        <fin:totalValidityDate rdf:datatype="&xs;date">2021-05-05</fin:totalValidityDate>
-
         <fin:price>
             <fin:Price>
                 <fin:valueWithVAT rdf:datatype="&xs;decimal">4500</fin:valueWithVAT>
                 <fin:currency>
-                    <fin:Currency rdf:about="¤cy;EUR">
+                    <fin:Currency rdf:about="&currency;EUR">
                         <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
                     </fin:Currency>
                 </fin:currency>
@@ -249,7 +251,7 @@
             <fin:Price>
                 <fin:valueWithVAT rdf:datatype="&xs;decimal">4500</fin:valueWithVAT>
                 <fin:currency>
-                    <fin:Currency rdf:about="¤cy;EUR">
+                    <fin:Currency rdf:about="&currency;EUR">
                         <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
                     </fin:Currency>
                 </fin:currency>

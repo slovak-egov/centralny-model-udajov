@@ -1,0 +1,55 @@
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+
+    <qb:DataStructureDefinition rdf:about="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328">
+        <qb:component>
+            <qb:Component>
+                <qb:dimension>
+                    <qb:DimensionProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+                        <rdfs:label xml:lang="sk">názov organizácie</rdfs:label>
+                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>
+                <qb:dimension>
+                    <qb:DimensionProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+                        <rdfs:label xml:lang="sk">IČO organizácie</rdfs:label>
+                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>
+                <qb:dimension>
+                    <qb:DimensionProperty rdf:about="https://data.gov.sk/def/ontology/statistics/indicatorType">
+                        <rdfs:label xml:lang="sk">právna forma organizácie</rdfs:label>
+                        <rdfs:range rdf:datatype="https://data.gov.sk/def/ontology/statistics/IndicatorType"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>
+                <qb:dimension>
+                    <qb:DimensionProperty rdf:about="https://data.gov.sk/def/ontology/statistics/sexType">
+                        <rdfs:label xml:lang="sk">typ pohlavia</rdfs:label>
+                        <rdfs:range rdf:datatype="https://data.gov.sk/def/ontology/statistics/SexType"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>
+                <qb:dimension>
+                    <qb:DimensionProperty rdf:about="https://data.gov.sk/def/ontology/statistics/ageCategory">
+                        <rdfs:label xml:lang="sk">veková kategória</rdfs:label>
+                        <rdfs:range rdf:datatype="https://data.gov.sk/def/ontology/statistics/AgeCategoryType"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>
+                <qb:measure>
+                    <qb:MeasureProperty rdf:about="https://data.gov.sk/def/ontology/statistics/indicatorValue">
+                        <rdfs:label xml:lang="sk">hodnota indikátora</rdfs:label>
+                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                    </qb:MeasureProperty>
+                </qb:measure>
+            </qb:Component>
+        </qb:component>
+    </qb:DataStructureDefinition>
+
+</rdf:RDF>

@@ -1,0 +1,97 @@
+<rdf:RDF
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:stat="https://data.gov.sk/def/ontology/statistics/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    
+    <qb:Observation rdf:about="https://opendata.mfsr.sk/set/observation/employees-jobs/00151742/2023-10-17">
+
+        <lsub:legalSubject>
+            <lsub:LegalSubject rdf:about="https://data.gov.sk/id/legal-subject/00151742">
+                <skos:prefLabel xml:lang="sk">Ministerstvo financií SR</skos:prefLabel>
+           		 <lsub:legalFormType>
+            	     <lsub:legalFormType rdf:about="https://data.gov.sk/def/legal-form-type/382">
+                 	     <skos:prefLabel xml:lang="sk">Verejnoprávna inštitúcia</skos:prefLabel>
+                     </lsub:legalFormType>
+                 </lsub:legalFormType>
+        
+           		<lsub:headquarters>
+            		<loca:PhysicalAddress>
+   
+				    	<loca:street>
+				            <loca:Street>
+				                <skos:prefLabel xml:lang="sk">Štefanovičova</skos:prefLabel>
+				            </loca:Street>
+				        </loca:street>
+				        
+				        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#">3</loca:orientationNumber>
+				        
+				        <loca:postCode>
+				            <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/81782">
+				                <skos:notation xml:lang="sk">81782</skos:notation>
+				            </loca:PostCode>
+				        </loca:postCode>
+				
+				        <loca:lau2>
+				            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0101528595">
+				                <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Staré Mesto</skos:prefLabel>
+				            </loca:LAU2>
+				        </loca:lau2>
+				          
+				        <loca:lau1>
+				             <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0101">
+				                 <skos:prefLabel xml:lang="sk">Bratislava I</skos:prefLabel>
+				             </loca:LAU1>
+				         </loca:lau1>
+				         
+				         <loca:nuts3>
+				             <loca:NUTS3 rdf:about="https://data.gov.sk/def/nuts3/SK010">
+				                 <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
+				             </loca:NUTS3>
+				         </loca:nuts3>
+				         
+				         <loca:unCountry>
+				             <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+				                 <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+				                 <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
+				             </loca:UNCountry>
+				         </loca:unCountry>
+				            
+            		</loca:PhysicalAddress>
+           		</lsub:headquarters>
+           
+            </lsub:LegalSubject>
+   
+        </lsub:legalSubject>      
+      
+        <stat:numberOfCreatedJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</stat:numberOfCreatedJobsStateService>
+
+        <stat:numberOfCreatedJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</stat:numberOfCreatedJobsCivilService>
+
+        <stat:numberOfOccupiedJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</stat:numberOfOccupiedJobsStateService>
+	    
+        <stat:numberOfOccupiedJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">380</stat:numberOfOccupiedJobsCivilService>
+        
+        <stat:numberOfEmployeesStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">460</stat:numberOfEmployeesStateService>
+        
+        <stat:numberOfEmployeesCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">385</stat:numberOfEmployeesCivilService>
+
+        <stat:numberOfFreeJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</stat:numberOfFreeJobsStateService>
+
+        <stat:numberOfFreeJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</stat:numberOfFreeJobsCivilService>
+
+        <stat:numberOfWorkContractorEmployees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</stat:numberOfWorkContractorEmployees>
+
+        <stat:numberOfWorkContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</stat:numberOfWorkContracts>
+
+        <dct:valid rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-17</dct:valid>
+
+    </qb:Observation>
+</rdf:RDF>
