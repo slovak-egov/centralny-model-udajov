@@ -14,6 +14,9 @@
 <!ENTITY legal-form-type "https://data.gov.sk/def/legal-form-type/" >
 <!ENTITY contract-type "https://data.gov.sk/def/cont-type/" >
 <!ENTITY contract-determination-type "https://data.gov.sk/def/cont-determination-type/" >
+<!ENTITY resort-type "https://data.gov.sk/def/resort-type/" >
+<!ENTITY accounting-range "https://data.gov.sk/def/accounting-range/" >
+<!ENTITY signatory "https://mfsr.sk/id/ces-contract-signatory/" >
 <!ENTITY address "https://data.gov.sk/id/physical-address/" >
 <!ENTITY legal-subject "https://data.gov.sk/def/legal-subject/" >
 <!ENTITY isvs "https://data.gov.sk/id/isvs/" >
@@ -119,11 +122,25 @@
             </fin:ContractDeterminationType>
         </fin:contractDeterminationType>
         
+        <fin:resortType>
+            <fin:ResortType rdf:about="&resort-type;114725">
+                 <skos:prefLabel xml:lang="sk">Názov rezortu 114725</skos:prefLabel>
+                 <skos:inScheme rdf:resource="&codelist;RESORT-TYPE"/>
+            </fin:ResortType>
+        </fin:resortType>        
+        
+        <fin:accountingRange>
+            <fin:AccountingRange rdf:about="&accounting-range;1510">
+                 <skos:prefLabel xml:lang="sk">Názov účtovného okruhu 1510</skos:prefLabel>
+                 <skos:inScheme rdf:resource="&codelist;ACCOUNTING-RANGE"/>
+            </fin:AccountingRange>
+        </fin:accountingRange>        
+        
         <fin:contractor>
-            <lsub:LegalSubject rdf:about="&legal-subject;00151742">
+            <fin:Contractor rdf:about="&legal-subject;00151742">        
                 <skos:prefLabel xml:lang="sk">Ministerstvo financií Slovenskej republiky</skos:prefLabel>
                 <lsub:headquarters>
-                    <loca:PhysicalAddress>
+                    <loca:PhysicalAddress  rdf:about="&address;4328827">
                         <loca:street>
                             <loca:Street>
                                 <skos:prefLabel xml:lang="sk">Štefanovičova</skos:prefLabel>
@@ -159,18 +176,33 @@
                     </loca:PhysicalAddress>
                 </lsub:headquarters>
 
-	            <fin:signatory>
-	                <pper:PhysicalPerson>
-                		<skos:prefLabel rdf:datatype="&xs;string">Miroslav Líška</skos:prefLabel>                		
-                		<rdfs:description xml:lang="sk">Účtovník</rdfs:description>
+                <lsub:guarantee>
+	                <lsub:Department rdf:about="department;176">
+                		<skos:prefLabel rdf:datatype="&xs;string">Odbor hospodárskej správy</skos:prefLabel>                		
+            		</lsub:Department>
+	            </lsub:guarantee>
+	    
+	            <pper:signatoryPerson>
+	                <pper:PhysicalPerson rdf:about="signatory;29">
+                		<skos:prefLabel rdf:datatype="&xs;string">Ján Slovák</skos:prefLabel>                		
+                		<rdfs:description xml:lang="sk">Generálny tajomník služobného úradu</rdfs:description>
             		</pper:PhysicalPerson>
-	            </fin:signatory>               
+	            </pper:signatoryPerson>
+	           
+	            <lsub:legalFormType>
+                    <lsub:LegalFormType rdf:about="&legal-form-type;382">
+                        <skos:prefLabel xml:lang="sk">Verejnoprávna inštitúcia</skos:prefLabel>
+                        <skos:inScheme rdf:resource="&codelist;CL000056"/>
+                    </lsub:LegalFormType>
+                </lsub:legalFormType>
                 
-            </lsub:LegalSubject>
+            </fin:Contractor>
         </fin:contractor>
 
         <fin:contractor>
-            <lsub:LegalSubject rdf:about="&legal-subject;35823542">
+        
+            <fin:Contractor rdf:about="&legal-subject;35823542">
+	            <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#bolean">false</pper:isPhysicalPerson>
                 <skos:prefLabel xml:lang="sk">Bratislavská teplárenská, a.s.</skos:prefLabel>
                 <lsub:headquarters>
                     <loca:PhysicalAddress rdf:about="&address;6158845">
@@ -214,7 +246,7 @@
                         <skos:inScheme rdf:resource="&codelist;CL000056"/>
                     </lsub:LegalFormType>
                 </lsub:legalFormType>
-            </lsub:LegalSubject>
+            </fin:Contractor>
         </fin:contractor>
 
        <dct:title xml:lang="sk">Zmluva o poskytovaní tepla</dct:title>
