@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [  
+<!ENTITY address "https://data.gov.sk/id/physical-address/" >
+]>
+<rdf:RDF
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:stat="https://data.gov.sk/def/ontology/statistics/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:M27_OpD_328="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    
+    <qb:Observation rdf:about="https://opendata.mfsr.sk/set/observation/employees-jobs/00151742/2023-10-17">
+        
+        <qb:dataset rdf:resource="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328"/>
+
+        <M27_OpD_328:OrganizaciaNazov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ministerstvo financií SR</M27_OpD_328:OrganizaciaNazov>
+        <M27_OpD_328:OrganizaciaICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00151742</M27_OpD_328:OrganizaciaICO>
+        <M27_OpD_328:OrganizaciaPravnaFormaKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">382</M27_OpD_328:OrganizaciaPravnaFormaKod>
+        <M27_OpD_328:OrganizaciaPravnaFormaNazov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verejnoprávna inštitúcia</M27_OpD_328:OrganizaciaPravnaFormaNazov>
+        <M27_OpD_328:OrganizaciaUlica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verejnoprávna inštitúcia</M27_OpD_328:OrganizaciaUlica>
+        <M27_OpD_328:OrganizaciaCisloDomu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</M27_OpD_328:OrganizaciaCisloDomu>
+        <M27_OpD_328:OrganizaciaPSC rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81782</M27_OpD_328:OrganizaciaPSC>
+        <M27_OpD_328:OrganizaciaObecKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK0101528595</M27_OpD_328:OrganizaciaObecKod>
+        <M27_OpD_328:OrganizaciaObec rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bratislava - mestská časť Staré mesto</M27_OpD_328:OrganizaciaObec>
+        <M27_OpD_328:OrganizaciaOkresKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK0101</M27_OpD_328:OrganizaciaOkresKod>
+        <M27_OpD_328:OrganizaciaOkres rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bratislava I</M27_OpD_328:OrganizaciaOkres>
+        <M27_OpD_328:OrganizaciaKrajKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK010</M27_OpD_328:OrganizaciaKrajKod>
+        <M27_OpD_328:OrganizaciaKraj rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bratislavský kraj</M27_OpD_328:OrganizaciaKraj>
+        <M27_OpD_328:OrganizaciaStatKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK</M27_OpD_328:OrganizaciaStatKod>
+        <M27_OpD_328:OrganizaciaStat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slovenská republika</M27_OpD_328:OrganizaciaStat>
+        <M27_OpD_328:OrganizaciaIDAdresy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">348265064231035</M27_OpD_328:OrganizaciaIDAdresy>
+        
+        <M27_OpD_328:numberOfCreatedJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</M27_OpD_328:numberOfCreatedJobsStateService>
+        <M27_OpD_328:numberOfCreatedJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</M27_OpD_328:numberOfCreatedJobsCivilService>
+        <M27_OpD_328:numberOfOccupiedJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</M27_OpD_328:numberOfOccupiedJobsStateService>
+        <M27_OpD_328:numberOfOccupiedJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">380</M27_OpD_328:numberOfOccupiedJobsCivilService>
+        <M27_OpD_328:numberOfEmployeesStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">460</M27_OpD_328:numberOfEmployeesStateService>
+        <M27_OpD_328:numberOfEmployeesCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">385</M27_OpD_328:numberOfEmployeesCivilService>
+        <M27_OpD_328:numberOfFreeJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</M27_OpD_328:numberOfFreeJobsStateService>
+        <M27_OpD_328:numberOfFreeJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</M27_OpD_328:numberOfFreeJobsCivilService>
+        <M27_OpD_328:numberOfWorkContractorEmployees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</M27_OpD_328:numberOfWorkContractorEmployees>
+        <M27_OpD_328:numberOfWorkContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</M27_OpD_328:numberOfWorkContracts>
+        
+        <M27_OpD_328:valid rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-17</M27_OpD_328:valid>
+
+    </qb:Observation>
+</rdf:RDF>
