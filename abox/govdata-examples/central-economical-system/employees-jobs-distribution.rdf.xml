@@ -23,10 +23,8 @@
 
         <M27_OpD_328:OrganizaciaNazov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ministerstvo financií SR</M27_OpD_328:OrganizaciaNazov>
         <M27_OpD_328:OrganizaciaICO rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00151742</M27_OpD_328:OrganizaciaICO>
-        <M27_OpD_328:OrganizaciaPravnaFormaKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">382</M27_OpD_328:OrganizaciaPravnaFormaKod>
-        <M27_OpD_328:OrganizaciaPravnaFormaNazov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verejnoprávna inštitúcia</M27_OpD_328:OrganizaciaPravnaFormaNazov>
-        <M27_OpD_328:OrganizaciaUlica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verejnoprávna inštitúcia</M27_OpD_328:OrganizaciaUlica>
-        <M27_OpD_328:OrganizaciaCisloDomu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</M27_OpD_328:OrganizaciaCisloDomu>
+        <M27_OpD_328:OrganizaciaUlica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Štefanovičova</M27_OpD_328:OrganizaciaUlica>
+        <M27_OpD_328:OrganizaciaCisloDomu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</M27_OpD_328:OrganizaciaCisloDomu>
         <M27_OpD_328:OrganizaciaPSC rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81782</M27_OpD_328:OrganizaciaPSC>
         <M27_OpD_328:OrganizaciaObecKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK0101528595</M27_OpD_328:OrganizaciaObecKod>
         <M27_OpD_328:OrganizaciaObec rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bratislava - mestská časť Staré mesto</M27_OpD_328:OrganizaciaObec>
@@ -37,6 +35,8 @@
         <M27_OpD_328:OrganizaciaStatKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK</M27_OpD_328:OrganizaciaStatKod>
         <M27_OpD_328:OrganizaciaStat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slovenská republika</M27_OpD_328:OrganizaciaStat>
         <M27_OpD_328:OrganizaciaIDAdresy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">348265064231035</M27_OpD_328:OrganizaciaIDAdresy>
+        <M27_OpD_328:OrganizaciaPravnaFormaKod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">382</M27_OpD_328:OrganizaciaPravnaFormaKod>
+        <M27_OpD_328:OrganizaciaPravnaFormaNazov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verejnoprávna inštitúcia</M27_OpD_328:OrganizaciaPravnaFormaNazov>
         
         <M27_OpD_328:numberOfCreatedJobsStateService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</M27_OpD_328:numberOfCreatedJobsStateService>
         <M27_OpD_328:numberOfCreatedJobsCivilService rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</M27_OpD_328:numberOfCreatedJobsCivilService>

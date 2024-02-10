@@ -20,8 +20,8 @@
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
                         <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
-                        <rdfs:label xml:lang="sk">NÁZOV ORGANIZÁCIE</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                        <rdfs:label xml:lang="sk">NÁZOV ORGANIZÁCIE</rdfs:label>
                     </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
@@ -159,6 +159,12 @@
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
                     </qb:DimensionProperty>
                 </qb:dimension>               
+                
+                
+                
+                
+                
+                
                 
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfCreatedJobsStateService">
