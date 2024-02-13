@@ -1,3 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [  
+<!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
+]>
 <rdf:RDF
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -12,16 +16,19 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema#">
     <qb:Observation rdf:about="https://datacube.statistics.sk/set/sp0207ts/2023-04-28/observation/1">
         <qb:dataset rdf:resource="https://datacube.statistics.sk/set/sp0207ts/2023-04-28"/>
-        <sp0207ts:week rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</sp0207ts:week>
-        <sp0207ts:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2023</sp0207ts:year>
+        <sp0207ts:week rdf:datatype="&xs;nonNegativeInteger">1</sp0207ts:week>
+        <sp0207ts:year rdf:datatype="&xs;gYear">2023</sp0207ts:year>
+        <sp0207ts:temporalName rdf:datatype="&xs;string">Obdobie od 2023-01-02 po 2023-01-08 </sp0207ts:temporalName>
         <sp0207ts:temporal>
             <dct:PeriodOfTime>
-                <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-02</schema:startDate>
-                <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-08</schema:endDate>
+                <schema:startDate rdf:datatype="&xs;dateTime">2023-01-02</schema:startDate>
+                <schema:endDate rdf:datatype="&xs;dateTime">2023-01-08</schema:endDate>
             </dct:PeriodOfTime>
         </sp0207ts:temporal>
+        <sp0207ts:indicatorName rdf:datatype="&xs;string">Pohonné hmoty</sp0207ts:indicatorName>
         <sp0207ts:indicatorType rdf:resource="https://data.gov.sk/def/statistical-indicator-type/0001" />
+        <sp0207ts:fuelName rdf:datatype="&xs;string">Benzín natural 95 oktánový</sp0207ts:fuelName>
         <sp0207ts:fuelType rdf:resource="https://data.gov.sk/def/coicop/7202102" />
-        <sp0207ts:indicatorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1.491</sp0207ts:indicatorValue>
+        <sp0207ts:indicatorValue rdf:datatype="&xs;integer">1.491</sp0207ts:indicatorValue>
     </qb:Observation>
 </rdf:RDF>
