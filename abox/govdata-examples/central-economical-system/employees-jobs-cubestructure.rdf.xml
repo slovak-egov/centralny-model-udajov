@@ -19,50 +19,39 @@
                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaNazov">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+                        <rdfs:label xml:lang="sk">ORGANIZÁCIA NÁZOV</rdfs:label>
                         <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-                        <rdfs:label xml:lang="sk">NÁZOV ORGANIZÁCIE</rdfs:label>
                     </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
-                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaICO">
+                    <qb:DimensionProperty rdf:about="&M27_OpD_328;Organizacia">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">ORGANIZÁCIA IČO</rdfs:label>
-                        <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalID"/>
-                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/legalSubject"/>
+                        <rdfs:label xml:lang="sk">ORGANIZÁCIA</rdfs:label>
+                        <rdfs:range rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubject"/>
                     </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
-                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaPravnaFormaKod">
+                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaUlicaNazov">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">PRÁVNA FORMA KÓD</rdfs:label>
-                        <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubjectType"/>
-                        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </qb:DimensionProperty>
-                </qb:dimension>
-                <qb:dimension>
-                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaPravnaFormaNazov">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                        <rdfs:label xml:lang="sk">PRÁVNA FORMA NÁZOV</rdfs:label>
-                        <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubjectType"/>
-                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-                    </qb:DimensionProperty>
-                </qb:dimension>
-                <qb:dimension>
-                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaUlica">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                        <rdfs:label xml:lang="sk">ORGANIZÁCIA ULICA</rdfs:label>
+                        <rdfs:label xml:lang="sk">ORGANIZÁCIA ULICA NÁZOV</rdfs:label>
                         <rdfs:domain rdf:datatype="http://data.gov.sk/de/ontology/location/Street"/>
                         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
+                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaUlica">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/street"/>
+                        <rdfs:label xml:lang="sk">ORGANIZÁCIA ULICA</rdfs:label>
+                        <rdfs:range rdf:datatype="http://data.gov.sk/def/ontology/location/Street"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>    
+                <qb:dimension>
                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaCisloDomu">
-                        <qb:order rdf:datatype="http://www.w3.org/2004/02/skos/core#prefLabel">6</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2004/02/skos/core#prefLabel">5</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/orientationNumber"/>
                         <rdfs:label xml:lang="sk">ORGANIZÁCIA ČÍSLO DOMU</rdfs:label>
                         <rdfs:domain rdf:datatype="http://data.gov.sk/de/ontology/location/PhysicalAddress"/>
@@ -71,7 +60,7 @@
                 </qb:dimension>
                 <qb:dimension>
                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaPSC">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
                         <rdfs:label xml:lang="sk">PSČ ORGANIZÁCIE</rdfs:label>
                         <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PostCode"/>
@@ -79,96 +68,103 @@
                     </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaObecKod">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">OBEC ORGANIZÁCIE NUTS Kód</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/LAU2"/>
-                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-                     </qb:DimensionProperty>
-                </qb:dimension>
-                <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaObec">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</qb:order>
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaObecNazov">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                        <rdfs:label xml:lang="sk">OBEC ORGANIZÁCIE</rdfs:label>
+                        <rdfs:label xml:lang="sk">OBEC ORGANIZÁCIE NÁZOV</rdfs:label>
                         <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/LAU2"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
                     </qb:DimensionProperty>
+                </qb:dimension>  
+               <qb:dimension>
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaObec">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/lau2"/>
+                        <rdfs:label xml:lang="sk">OBEC ORGANIZÁCIE</rdfs:label>
+                        <rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/LAU2"/>
+                     </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaOkresKod">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">OKRES ORGANIZÁCIE NUTS Kód</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/LAU1"/>
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaOkresNazov">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+                        <rdfs:label xml:lang="sk">OKRES ORGANIZÁCIE NÁZOV</rdfs:label>
+                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/LAU2"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-                     </qb:DimensionProperty>
+                    </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
                      <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaOkres">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/lau1"/>
+                        <rdfs:label xml:lang="sk">OKRES ORGANIZÁCIE</rdfs:label>
+                        <rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/LAU1"/>
+                     </qb:DimensionProperty>
+                </qb:dimension>
+                <qb:dimension>
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaKrajNazov">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                        <rdfs:label xml:lang="sk">OKRES ORGANIZÁCIE</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/LAU1"/>
-                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-                    </qb:DimensionProperty>
-                </qb:dimension>                              
-                 <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaKrajKod">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">KRAJ ORGANIZÁCIE NUTS Kód</rdfs:label>
+                        <rdfs:label xml:lang="sk">KRAJ ORGANIZÁCIE NÁZOV</rdfs:label>
                         <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/NUTS3"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>                                      
+                 <qb:dimension>
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaKraj">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/nuts3"/>
+                        <rdfs:label xml:lang="sk">KRAJ ORGANIZÁCIE</rdfs:label>
+                        <rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/NUTS3"/>
                      </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaKraj">
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaStatNazov">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                        <rdfs:label xml:lang="sk">KRAJ ORGANIZÁCIE</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/NUTS3"/>
-                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-                    </qb:DimensionProperty>
-                </qb:dimension>               
-                <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaStatKod">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">ŠTÁT ORGANIZÁCIE NUTS Kód</rdfs:label>
+                        <rdfs:label xml:lang="sk">ŠTÁT ORGANIZÁCIE NÁZOV</rdfs:label>
                         <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/UNCountry"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>                
+                <qb:dimension>
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaStat">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/unCountry"/>
+                        <rdfs:label xml:lang="sk">ŠTÁT ORGANIZÁCIE</rdfs:label>
+                        <rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/UNCountry"/>
                      </qb:DimensionProperty>
                 </qb:dimension>
                 <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaStat">
+                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaAdresa">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                        <rdfs:label xml:lang="sk">ŠTÁT ORGANIZÁCIE</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/UNCountry"/>
-                        <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+                        <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/location/physicalAddress"/>
+                        <rdfs:label xml:lang="sk">ADRESA ORGANIZÁCIE</rdfs:label>
+                        <rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
                     </qb:DimensionProperty>
-                </qb:dimension>               
+                </qb:dimension>        
                 <qb:dimension>
-                     <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaIDAdresy">
+                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaPravnaFormaNazov">
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</qb:order>
-                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-                        <rdfs:label xml:lang="sk">IDENTIFIKÁTOR ADRESY ORGANIZÁCIE</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
+                        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+                        <rdfs:label xml:lang="sk">PRÁVNA FORMA NÁZOV</rdfs:label>
+                        <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubjectType"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
                     </qb:DimensionProperty>
-                </qb:dimension>               
-                
-                
-                
-                
-                
-                
-                
+                </qb:dimension>
+                <qb:dimension>
+                    <qb:DimensionProperty rdf:about="&M27_OpD_328;OrganizaciaPravnaForma">
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</qb:order>
+                        <rdfs:subPropertyOf rdf:resource="http://data.gov.sk/def/ontology/legal-subject/legalSubjectType"/>
+                        <rdfs:label xml:lang="sk">PRÁVNA FORMA KÓD</rdfs:label>
+                        <rdfs:domain rdf:datatype="http://data.gov.sk/def/ontology/legal-subject/LegalSubjectType"/>
+                        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </qb:DimensionProperty>
+                </qb:dimension>
+                      
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfCreatedJobsStateService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfCreatedJobsStateService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -176,7 +172,7 @@
                 </qb:measure>
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfCreatedJobsCivilService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfCreatedJobsCivilService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -184,7 +180,7 @@
                 </qb:measure>
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfOccupiedJobsStateService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfOccupiedJobsStateService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -192,7 +188,7 @@
                 </qb:measure>               
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfOccupiedJobsCivilService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfOccupiedJobsCivilService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -200,7 +196,7 @@
                 </qb:measure>               
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfEmployeesStateService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfEmployeesStateService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -208,7 +204,7 @@
                 </qb:measure>              
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfEmployeesCivilService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfEmployeesCivilService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -216,7 +212,7 @@
                 </qb:measure>              
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfFreeJobsStateService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfFreeJobsStateService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -224,7 +220,7 @@
                 </qb:measure>              
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfFreeJobsCivilService">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfFreeJobsCivilService"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -232,7 +228,7 @@
                 </qb:measure>               
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfWorkContractorEmployees">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfWorkContractorEmployees"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -240,7 +236,7 @@
                 </qb:measure>              
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;numberOfWorkContracts">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</qb:order>
                         <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/numberOfWorkContracts"/>
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -248,7 +244,7 @@
                 </qb:measure>             
                 <qb:measure>
                      <qb:MeasureProperty rdf:about="&M27_OpD_328;valid">
-                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</qb:order>
+                        <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/valid"/>                     
                         <rdfs:label xml:lang="sk">PocetVytvorenychMiestStatnaSluzba</rdfs:label>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#date"/>
