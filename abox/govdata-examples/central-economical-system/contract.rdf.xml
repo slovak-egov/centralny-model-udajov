@@ -12,18 +12,18 @@
 <!ENTITY uncountry "https://data.gov.sk/def/uncountry/" >
 <!ENTITY identifier-type "https://data.gov.sk/def/identifier-type/" >
 <!ENTITY legal-form-type "https://data.gov.sk/def/legal-form-type/" >
-<!ENTITY contract-type "https://data.gov.sk/def/cont-type/" >
-<!ENTITY contract-determination-type "https://data.gov.sk/def/cont-determination-type/" >
-<!ENTITY resort-type "https://data.gov.sk/def/resort-type/" >
-<!ENTITY accounting-range "https://data.gov.sk/def/accounting-range/" >
+<!ENTITY contract-type "https://data.gov.sk/def/contract-type/" >
+<!ENTITY contract-determination-type "https://data.gov.sk/def/contract-determination-type/" >
+<!ENTITY fchapter "https://data.gov.sk/def/financial-chapter/" >
+<!ENTITY faccounting-range "https://data.gov.sk/def/financial-accounting-range/" >
 <!ENTITY signatory "https://mfsr.sk/id/ces-contract-signatory/" >
 <!ENTITY address "https://data.gov.sk/id/physical-address/" >
 <!ENTITY legal-subject "https://data.gov.sk/def/legal-subject/" >
 <!ENTITY isvs "https://data.gov.sk/id/isvs/" >
 <!ENTITY codelist "https://data.gov.sk/set/codelist/" >
-<!ENTITY nuts3 "https://data.gov.sk/def/nuts3/" >
-<!ENTITY lau2 "https://data.gov.sk/def/lau2/" >
-<!ENTITY lau1 "https://data.gov.sk/def/lau1/" >
+<!ENTITY nuts3 "https://data.gov.sk/id/nuts3/" >
+<!ENTITY lau2 "https://data.gov.sk/id/lau2/" >
+<!ENTITY lau1 "https://data.gov.sk/id/lau1/" >
 <!ENTITY person "https://www.w3.org/ns/person#" >
 <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
 <!ENTITY adms "http://www.w3.org/ns/adms#" >
@@ -51,13 +51,16 @@
     xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
     xmlns:legal-form-type="https://data.gov.sk/def/legal-form-type/"
     xmlns:contract-type="https://data.gov.sk/def/contract-type/"
+    xmlns:contract-determination-type="https://data.gov.sk/def/contract-determination-type/"
+    xmlns:fchapter="https://data.gov.sk/def/financial-chapter/"
+    xmlns:faccounting-range="https://data.gov.sk/def/financial-accounting-range/"
     xmlns:address="https://data.gov.sk/id/physical-address/"
     xmlns:legal-subject="https://data.gov.sk/id/legal-subject/"
     xmlns:isvs="https://data.gov.sk/id/isvs/"
     xmlns:codelist="https://data.gov.sk/set/codelist/"
-    xmlns:nuts3="https://data.gov.sk/def/nuts3/"
-    xmlns:lau2="https://data.gov.sk/def/lau2/"
-    xmlns:lau1="https://data.gov.sk/def/lau1/"
+    xmlns:nuts3="https://data.gov.sk/id/nuts3/"
+    xmlns:lau2="https://data.gov.sk/id/lau2/"
+    xmlns:lau1="https://data.gov.sk/id/lau1/"
     xmlns:person="https://www.w3.org/ns/person#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:adms="http://www.w3.org/ns/adms#"
@@ -106,33 +109,33 @@
             </adms:Identifier>
          </adms:identifier>
 
-       <fin:numberOfContractAddendums rdf:datatype="&xs;date">2021-05-05</fin:numberOfContractAddendums>
+       <fin:numberOfContractAddendums rdf:datatype="&xs;integer">1</fin:numberOfContractAddendums>
 
         <dct:type>
             <egov:IdentifierType rdf:about="&contract-type;1">
                  <skos:prefLabel xml:lang="sk">Zmluva o dodaní tovarov a služieb</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;CL00NNNN"/>
+                 <skos:inScheme rdf:resource="&codelist;CL005001"/>
             </egov:IdentifierType>
         </dct:type>
 
         <fin:contractDeterminationType>
             <fin:ContractDeterminationType rdf:about="&contract-determination-type;1">
                  <skos:prefLabel xml:lang="sk">Dodávateľská zmluva - organizácia nakupuje tovary / služby / investície</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;CL00NNNM"/>
+                 <skos:inScheme rdf:resource="&codelist;CL005002"/>
             </fin:ContractDeterminationType>
         </fin:contractDeterminationType>
-        
-        <fin:resortType>
-            <fin:ResortType rdf:about="&resort-type;114725">
-                 <skos:prefLabel xml:lang="sk">Názov rezortu 114725</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;RESORT-TYPE"/>
-            </fin:ResortType>
-        </fin:resortType>        
-        
+
+        <fin:chapter>
+            <fin:Chapter rdf:about="&fchapter;1500">
+                 <skos:prefLabel xml:lang="sk">MF SR</skos:prefLabel>
+                 <skos:inScheme rdf:resource="&codelist;CL005004"/>
+            </fin:Chapter>
+        </fin:chapter>
+                
         <fin:accountingRange>
-            <fin:AccountingRange rdf:about="&accounting-range;1510">
-                 <skos:prefLabel xml:lang="sk">Názov účtovného okruhu 1510</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;ACCOUNTING-RANGE"/>
+            <fin:AccountingRange rdf:about="&faccounting-range;1510">
+                 <skos:prefLabel xml:lang="sk">Ministerstvo financií SR</skos:prefLabel>
+                 <skos:inScheme rdf:resource="&codelist;CL005003"/>
             </fin:AccountingRange>
         </fin:accountingRange>        
         
@@ -177,8 +180,8 @@
                 </lsub:headquarters>
 
                 <lsub:guarantee>
-	                <lsub:Department rdf:about="department;176">
-                		<skos:prefLabel rdf:datatype="&xs;string">Odbor hospodárskej správy</skos:prefLabel>                		
+	                <lsub:Department>
+                		<skos:prefLabel xml:lang="sk">Odbor hospodárskej správy</skos:prefLabel>                		
             		</lsub:Department>
 	            </lsub:guarantee>
 	    
