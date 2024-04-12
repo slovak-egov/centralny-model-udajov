@@ -8,7 +8,7 @@ Markup Shorthands: markdown yes
 Level: 1
 Status: LS
 Group: MIRRI
-URL: https://slovak-egov.github.io/centralny-model-udajov/tbox/national/dcat-ap-sk/
+URL: https://htmlpreview.github.io/?https://github.com/slovak-egov/centralny-model-udajov/blob/develop/tbox/national/dcat-ap-sk/index.html
 Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
 Editor: Miroslav Líška, MIRRI https://www.mirri.gov.sk/, miroslav.liska@mirri.gov.sk, https://www.linkedin.com/in/miroslavliska
 Abstract: Cieľom tohto dokumentu je špecifikovať dátový model a rozhranie lokálných katalógov otvorených dát (LKOD) pre ich harvestovanie Národným katalógom otevrených dát (NKOD). Rovnaká špecifikácia platí aj pre dátový model NKOD a dáta poskytované z NKOD v podobe súborov na stiahnutie resp. cez SPARQL endpoint. Najskôr je špecifikovaný dátový model katalogizačného záznamu. Následne sú špecifikované 2 varianty rozhrania pre harvestáciu, ktoré sú založené na [štandarde DCAT-AP 3.0.0](https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300). Jedna používa SPARQL endpoint a druhá špecifikuje variantu uloženia záznamov v súboroch, bez použitia SPARQL endpointu.
