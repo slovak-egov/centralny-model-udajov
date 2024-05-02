@@ -1,0 +1,19 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard2006: <http://www.w3.org/2006/vcard/ns#> .
+
+<https://data.gov.sk/set/lkod/mdsr/katalog> a dcat:Catalog ;
+    dct:title "Katalóg otvorených dát Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en ;
+    dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."@sk;
+    dct:description "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en ;
+    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    foaf:homepage <https://www.mindop.sk> ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail <mailto:info@mindop.sk>
+    ] ;
+    dcat:dataset  <https://data.gov.sk/set/zoznam-zástavok-2022-10> ,
+                  <https://data.gov.sk/set/líniové-vedenia-2022-10> ,
+                  <https://data.gov.sk/set/zoznam-tratí-2022> .

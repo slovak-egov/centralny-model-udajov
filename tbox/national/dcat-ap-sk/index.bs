@@ -18,6 +18,25 @@ Abstract: Cieľom tohto dokumentu je špecifikovať dátový model a rozhranie l
 ============
 Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsobov zaistenia katalogizácie dát v Národnom katalógu otvorených dát (NKOD).
 
+Čo je nové? {#novinky}
+======================
+Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3 a DCAP-AP-HVD. V detaile pribudli:
+
+2.1. Zosúladenie na štandard [DCAT-AP-3.0.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
+- samostatná trieda pre dátovú sériu dcat:DatasetSeries
+- nové metaúdaje: pre triedu Dataset - dátum vytvorenia, dátum modifikácie, webový odkaz  
+- nový EÚ číselník licencie
+- nová trieda Právny predpis
+- pridanie väzby je dcat:inSeries (napr. Dataset je súčasťou Dátovej série)
+- špecifikácia dátovej kocky popisujúcej dataset je realizovaná prostredníctvom existujúcej vlastnosti dct:conformsTo (odkaz na špecifikáciu)
+
+2.2. Zosúladenie na štandardu [DCAT-AP-HVD](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
+- nový EÚ číselník kategória HVD
+- povinne používaný identifikátor pre právny predpis pre HVD - http://data.europa.eu/eli/reg_impl/2023/138/oj
+- povinnosť špecifikovať kontaktný bod a dokumentáciu dátovej služby sprístupňujúce HVDs.
+
+
+
 Položky metadátového záznamu {#položky-metadátového-záznamu}
 ============================================================
 
@@ -25,15 +44,13 @@ V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národno
 Položky sa riadia štandardom [DCAT Application Profile for data portals in Europe Version 3 (DCAT-AP 3.0.0)](https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300).
 
 <figure>
-    <img alt="Konceptuálný model DCAT-AP-SK 3.0.0" src="dcat-ap-sk-2.0.1.svg">
+    <img alt="Konceptuálný model DCAT-AP-SK 3.0.0" src="dcat-ap-sk-3.0.0.svg">
     <figcaption>Diagram dátového modelu DCAT-AP-SK 3.0.0 Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
 </figure>
 
 
-DCAT-AP 3.0.0 rozlišuje päť základných typov entít. Katalóg, jeho datasety a ich možné zoskupenia do dátových sérií, distribúcie datasetov a dátovú službu.
-Metadáta datasetu popisujú otvorené údaje bez ohľadu na konkrétnú reprezentáciu dát.
-Tie sú popsáné ako distribúcie datasetu, ktoré reprezentuje buď súbor na stiahnutie, alebo odkazuje na dátovou službu, prostredníctvom ktorej sú dáta k dispozícii.
-Distribúcií môže mať dataset viacej, líšiť sa ale môžu jedine formátom súboru na stiahnutie (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
+Medzi hlavné triedy štandardu patrí Katalóg, čo je najvyššia entita zoskupujúca množinu Datasetov. Tieto Datasety môžu byť naviac zoskupené do Dátových sérií. Dáta samotného Datasetu na stiahnutie alebo na prístup cez API sa nazývajú Distribúcie, ktoré môžu byť dostupné v rôznom formáte. Distribúcia môže byť prístupná aj cez API, tj. cez Dátovú službu. 
+Distribúcií môže mať Dataset viacej, avšak líšiť sa môžu jedine formátom (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
 Obsahovo musia byť distribúcie totožné.
 
 Použité prefixy {#použité-prefixy}
@@ -339,6 +356,24 @@ dataset: dcat:keyword "kontrola"@sk, "štatistika"@sk, "inspection"@en, "statist
 dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
     ```
 
+### Územný prvok z registra adries ### {#dataset-register-adries}
+
+: Popis
+:: Táto Vlastnosť odkazuje na územný prvok v registry adries.
+    Dataset môže byť popísaný viacerými územnými prvkami v registry adries.
+    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
+: Vlastnosť
+:: `prvok_registra_adries`, `dct:spatial`
+: Typ
+:: IRI položiek pre územné entity v Registry adries vo forme [NUTS-SK](https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl) klasifikácie.
+: Povinnosť
+:: Povinná
+: Príklady
+:: 
+    ```turtle
+dataset: dct:spatial <https://data.gov.sk/id/nuts1/SK0> .
+    ```
+
 ### Súvisiace geografické územie ### {#dataset-geografické-územia}
 
 : Popis
@@ -348,16 +383,11 @@ dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
 : Vlastnosť
 :: `geografické_územie`, `dct:spatial`
 : Typ
-:: IRI položiek pre územné entity Slovenskej Republiky primárne z taxonómie [NUTS-SK](https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl), európských číselníkov [krajín](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country), [kontinentov](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent), [miest](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place) alebo IRI objektu z [Geonames](https://www.geonames.org/).
+:: IRI položiek pre ďaľšie upresnenie územnej lokality datasetu, napr. objekty definované v [Geonames](https://www.geonames.org/).
 : Povinnosť
 :: Nepovinná
 : Príklady
 :: 
-    ```turtle
-dataset: dct:spatial <https://data.gov.sk/id/nuts1/SK0> .
-    ```
-::
-
     ```turtle
 dataset: dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> .
     ```
@@ -424,21 +454,21 @@ kontakt: a vcard:Individual ;
 dataset: dcat:landingPage <https://data.gov.sk/set/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia> .
     ```
 
-### Súvisiaci zdroj ### {#dataset-súvisiaci-zdroj}
+### Odkaz na dokumentáciu ### {#dataset-súvisiaci-zdroj}
 
 : Popis
-:: Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
-    Je definovaná ako [dct:relation](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation).
+:: Táto Vlastnosť odkazuje na dokumentáciu datasetu.
+    Je definovaná ako [foaf:page](http://xmlns.com/foaf/0.1/page).
 : Vlastnosť
-:: `súvisiaci_zdroj_datasetu`, `dct:relation`
+:: `dokumentácia`, `foaf:page`
 : Typ
-:: URL súvisiaceho zdroja datasetu.
+:: URL dokumentácie datasetu.
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
+dataset: foaf:page <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
     ```
 
 ### Odkaz na špecifikáciu ### {#dataset-špecifikácia}
@@ -458,21 +488,21 @@ dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah
 dataset: dct:conformsTo <https://data.gov.sk/def/ontology/finance/> .
     ```
 
-### Odkaz na štruktúru ### {#dataset-štruktúra}
+### Súvisiaci zdroj ### {#dataset-súvisiaci-zdroj}
 
 : Popis
-:: Táto Vlastnosť odkazuje na definíciu štruktúry datasetu, ktorou sa riadi dataset, pričom štruktúra je definovaná prostredníctvom ontológie [RDF Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/).
-    Je definovaná ako [qb:structure](http://purl.org/linked-data/cube#structure).
+:: Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
+    Je definovaná ako [dct:relation](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation).
 : Vlastnosť
-:: `štruktúra`, `qb:structure`
+:: `súvisiaci_zdroj_datasetu`, `dct:relation`
 : Typ
-:: URL štruktúry dátovej kocky.
+:: URL súvisiaceho zdroja datasetu.
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-dataset: qb:structure <https://datacube.statistics.sk/set/cube/sp0207ts/structure> .
+dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
     ```
 
 ### Klasifikácia podľa EuroVoc ### {#dataset-eurovoc}
@@ -529,6 +559,39 @@ dataset: dcat:spatialResolutionInMeters 0.5 .
 dataset: dcat:temporalResolution "P1D"^^xsd:duration .
     ```
 
+### Právny predpis ### {#dataset-právny-predpis}
+
+: Popis
+:: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+    Je definovaný ako [dcat:applicablelegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation).
+: Vlastnosť
+:: `právny_predpis`, `dcat:applicablelegislation`
+: Typ
+:: IRI právneho predpisu.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+    
+### Kategória HVD ### {#dataset-kategória-hvd}
+
+: Popis
+:: Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD).
+: Vlastnosť
+:: `kategoria_hvd`, `dcatap:hvdCategory`
+: Typ
+:: IRI položiek z európskeho [číselníka kategorií HVD](https://op.europa.eu/cs/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category).
+: Povinnosť
+:: Povinná pre datasety typu HVD
+: Príklad
+:: 
+    ```turtle
+dataset: dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> .
+    ```
+    
 ### Väzba: Je súčásťou ### {#dataset-je-súčasťou}
 
 : Popis
@@ -668,6 +731,23 @@ distribúcia: dct:format <http://publications.europa.eu/resource/authority/file-
 distribúcia: dcat:mediaType <http://www.iana.org/assignments/media-types/text/csv> .
     ```
 
+### Právny predpis ### {#dataset-právny-predpis}
+
+: Popis
+:: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+    Je definovaný ako [dcat:applicablelegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation).
+: Vlastnosť
+:: `právny_predpis`, `dcat:applicablelegislation`
+: Typ
+:: IRI právneho predpisu.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+
 ### Odkaz na strojovo-čitateľnú schému súboru na stiahnutie ### {#distribuce-schéma}
 
 : Popis
@@ -796,7 +876,41 @@ služba: dct:title "SPARQL endpoint Slovenskej správy sociálného zabezpečeni
 služba: dcat:endpointURL <https://data.gov.sk/sparql> .
     ```
 
-### Odkaz na špecifikáciu ### {#datová-služba-špecifikácia}
+### Právny predpis ### {#dátová-služba-pravny-predpis}
+
+: Popis
+:: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+    Je definovaný ako [dcat:applicablelegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation).
+: Vlastnosť
+:: `právny_predpis`, `dcat:applicablelegislation`
+: Typ
+:: IRI právneho predpisu.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+služba: dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+
+### Odkaz na dokumentáciu ### {#dátová-služba-dokumentácia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na dokumentáciu dátovej služby.
+    Je definovaná ako [foaf:page](http://xmlns.com/foaf/0.1/page).
+: Vlastnosť
+:: `dokumentácia`, `foaf:page`
+: Typ
+:: URL dokumentácie dátovej služby.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+služba: foaf:page <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
+    ```
+
+### Odkaz na špecifikáciu ### {#dátová-služba-špecifikácia}
 
 : Popis
 :: Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa dátová služba riadi.

@@ -1,0 +1,28 @@
+{
+    "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+    "iri": "https://data.gov.sk/set/lkod/mdsr/katalog",
+    "typ": "Katalóg",
+    "názov": {
+        "sk": "Katalóg otvorených dát Ministerstva dopravy",
+        "en": "Open Data Catalog of the Ministry of Transport"
+    },
+    "popis": {
+        "sk": "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy.",
+        "en": "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."
+    },
+    "kontaktný_bod": {
+        "typ": "Organizácia",
+        "meno": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy",
+          "en": "Ministry of Transport"
+        },
+        "e-mail": "mailto:info@mindop.sk"
+    },
+    "domovská_stránka": "https://www.mindop.sk",
+    "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+    "dataset": [
+         "https://data.gov.sk/set/zoznam-zástavok-2022-10",
+         "https://data.gov.sk/set/líniové-vedenia-2022-10",
+         "https://data.gov.sk/set/zoznam-tratí-2022"
+  ]
+}

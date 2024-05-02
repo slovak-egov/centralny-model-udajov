@@ -1489,7 +1489,7 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version d765c696b, updated Fri Mar 8 15:58:52 2024 -0800" name="generator">
-  <link href="https://slovak-egov.github.io/centralny-model-udajov/tbox/national/dcat-ap-sk/" rel="canonical">
+  <link href="https://htmlpreview.github.io/?https://github.com/slovak-egov/centralny-model-udajov/blob/develop/tbox/national/dcat-ap-sk/index.html" rel="canonical">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2014,11 +2014,11 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Rozhranie katalógu otvorených dát DCAT-AP-SK 3.0.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-04-12">12 April 2024</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-05-01">1 May 2024</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://slovak-egov.github.io/centralny-model-udajov/tbox/national/dcat-ap-sk/">https://slovak-egov.github.io/centralny-model-udajov/tbox/national/dcat-ap-sk/</a>
+     <dd><a class="u-url" href="https://htmlpreview.github.io/?https://github.com/slovak-egov/centralny-model-udajov/blob/develop/tbox/national/dcat-ap-sk/index.html">https://htmlpreview.github.io/?https://github.com/slovak-egov/centralny-model-udajov/blob/develop/tbox/national/dcat-ap-sk/index.html</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/slovak-egov/centralny-model-udajov/issues/">GitHub</a>
      <dt class="editor">Editors:
@@ -2038,97 +2038,104 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
     <li><a href="#úvod"><span class="secno">1</span> <span class="content">Úvod</span></a>
+    <li><a href="#novinky"><span class="secno">2</span> <span class="content">Čo je nové?</span></a>
     <li>
-     <a href="#položky-metadátového-záznamu"><span class="secno">2</span> <span class="content">Položky metadátového záznamu</span></a>
+     <a href="#položky-metadátového-záznamu"><span class="secno">3</span> <span class="content">Položky metadátového záznamu</span></a>
      <ol class="toc">
-      <li><a href="#použité-prefixy"><span class="secno">2.1</span> <span class="content">Použité prefixy</span></a>
+      <li><a href="#použité-prefixy"><span class="secno">3.1</span> <span class="content">Použité prefixy</span></a>
       <li>
-       <a href="#trieda-katalóg"><span class="secno">2.2</span> <span class="content">Trieda: Katalóg</span></a>
+       <a href="#trieda-katalóg"><span class="secno">3.2</span> <span class="content">Trieda: Katalóg</span></a>
        <ol class="toc">
-        <li><a href="#katalóg-názov"><span class="secno">2.2.1</span> <span class="content">Názov</span></a>
-        <li><a href="#katalóg-popis"><span class="secno">2.2.2</span> <span class="content">Popis</span></a>
-        <li><a href="#katalóg-poskytovateľ"><span class="secno">2.2.3</span> <span class="content">Poskytovateľ</span></a>
-        <li><a href="#katalóg-kontaktný-bod"><span class="secno">2.2.4</span> <span class="content">Kontaktný bod - meno a email</span></a>
-        <li><a href="#katalóg-domovská-stránka"><span class="secno">2.2.5</span> <span class="content">Domovská stránka</span></a>
-        <li><a href="#katalóg-dataset"><span class="secno">2.2.6</span> <span class="content">Väzba: dataset</span></a>
+        <li><a href="#katalóg-názov"><span class="secno">3.2.1</span> <span class="content">Názov</span></a>
+        <li><a href="#katalóg-popis"><span class="secno">3.2.2</span> <span class="content">Popis</span></a>
+        <li><a href="#katalóg-poskytovateľ"><span class="secno">3.2.3</span> <span class="content">Poskytovateľ</span></a>
+        <li><a href="#katalóg-kontaktný-bod"><span class="secno">3.2.4</span> <span class="content">Kontaktný bod - meno a email</span></a>
+        <li><a href="#katalóg-domovská-stránka"><span class="secno">3.2.5</span> <span class="content">Domovská stránka</span></a>
+        <li><a href="#katalóg-dataset"><span class="secno">3.2.6</span> <span class="content">Väzba: dataset</span></a>
        </ol>
       <li>
-       <a href="#trieda-dataset"><span class="secno">2.3</span> <span class="content">Trieda: Dataset</span></a>
+       <a href="#trieda-dataset"><span class="secno">3.3</span> <span class="content">Trieda: Dataset</span></a>
        <ol class="toc">
-        <li><a href="#dataset-názov"><span class="secno">2.3.1</span> <span class="content">Názov</span></a>
-        <li><a href="#dataset-popis"><span class="secno">2.3.2</span> <span class="content">Popis</span></a>
-        <li><a href="#dataset-poskytovateľ"><span class="secno">2.3.3</span> <span class="content">Poskytovateľ</span></a>
-        <li><a href="#dataset-dátum-publikácie"><span class="secno">2.3.4</span> <span class="content">Dátum publikácie</span></a>
-        <li><a href="#dataset-dátum-modifikácie"><span class="secno">2.3.5</span> <span class="content">Dátum modifikácie</span></a>
-        <li><a href="#dataset-téma"><span class="secno">2.3.6</span> <span class="content">Téma</span></a>
-        <li><a href="#dataset-periodicita-aktualizácie"><span class="secno">2.3.7</span> <span class="content">Periodicita aktualizácie</span></a>
-        <li><a href="#dataset-kľúčové-slová"><span class="secno">2.3.8</span> <span class="content">Klúčové slová</span></a>
-        <li><a href="#dataset-typ"><span class="secno">2.3.9</span> <span class="content">Typ datasetu</span></a>
-        <li><a href="#dataset-geografické-územia"><span class="secno">2.3.10</span> <span class="content">Súvisiace geografické územie</span></a>
-        <li><a href="#dataset-časové-pokrytie"><span class="secno">2.3.11</span> <span class="content">Časové pokrytie</span></a>
-        <li><a href="#dataset-kontaktní-bod"><span class="secno">2.3.12</span> <span class="content">Kontaktný bod - meno a email</span></a>
-        <li><a href="#dataset-webová-stránka"><span class="secno">2.3.13</span> <span class="content">Webová stránka</span></a>
-        <li><a href="#dataset-súvisiaci-zdroj"><span class="secno">2.3.14</span> <span class="content">Súvisiaci zdroj</span></a>
-        <li><a href="#dataset-špecifikácia"><span class="secno">2.3.15</span> <span class="content">Odkaz na špecifikáciu</span></a>
-        <li><a href="#dataset-štruktúra"><span class="secno">2.3.16</span> <span class="content">Odkaz na štruktúru</span></a>
-        <li><a href="#dataset-eurovoc"><span class="secno">2.3.17</span> <span class="content">Klasifikácia podľa EuroVoc</span></a>
-        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">2.3.18</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
-        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">2.3.19</span> <span class="content">Časové rozlíšenie</span></a>
-        <li><a href="#dataset-je-súčasťou"><span class="secno">2.3.20</span> <span class="content">Väzba: Je súčásťou</span></a>
-        <li><a href="#dataset-distribúcia"><span class="secno">2.3.21</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
+        <li><a href="#dataset-názov"><span class="secno">3.3.1</span> <span class="content">Názov</span></a>
+        <li><a href="#dataset-popis"><span class="secno">3.3.2</span> <span class="content">Popis</span></a>
+        <li><a href="#dataset-poskytovateľ"><span class="secno">3.3.3</span> <span class="content">Poskytovateľ</span></a>
+        <li><a href="#dataset-dátum-publikácie"><span class="secno">3.3.4</span> <span class="content">Dátum publikácie</span></a>
+        <li><a href="#dataset-dátum-modifikácie"><span class="secno">3.3.5</span> <span class="content">Dátum modifikácie</span></a>
+        <li><a href="#dataset-téma"><span class="secno">3.3.6</span> <span class="content">Téma</span></a>
+        <li><a href="#dataset-periodicita-aktualizácie"><span class="secno">3.3.7</span> <span class="content">Periodicita aktualizácie</span></a>
+        <li><a href="#dataset-kľúčové-slová"><span class="secno">3.3.8</span> <span class="content">Klúčové slová</span></a>
+        <li><a href="#dataset-typ"><span class="secno">3.3.9</span> <span class="content">Typ datasetu</span></a>
+        <li><a href="#dataset-register-adries"><span class="secno">3.3.10</span> <span class="content">Územný prvok z registra adries</span></a>
+        <li><a href="#dataset-geografické-územia"><span class="secno">3.3.11</span> <span class="content">Súvisiace geografické územie</span></a>
+        <li><a href="#dataset-časové-pokrytie"><span class="secno">3.3.12</span> <span class="content">Časové pokrytie</span></a>
+        <li><a href="#dataset-kontaktní-bod"><span class="secno">3.3.13</span> <span class="content">Kontaktný bod - meno a email</span></a>
+        <li><a href="#dataset-webová-stránka"><span class="secno">3.3.14</span> <span class="content">Webová stránka</span></a>
+        <li><a href="#dataset-súvisiaci-zdroj"><span class="secno">3.3.15</span> <span class="content">Odkaz na dokumentáciu</span></a>
+        <li><a href="#dataset-špecifikácia"><span class="secno">3.3.16</span> <span class="content">Odkaz na špecifikáciu</span></a>
+        <li><a href="#dataset-súvisiaci-zdroj①"><span class="secno">3.3.17</span> <span class="content">Súvisiaci zdroj</span></a>
+        <li><a href="#dataset-eurovoc"><span class="secno">3.3.18</span> <span class="content">Klasifikácia podľa EuroVoc</span></a>
+        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">3.3.19</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
+        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">3.3.20</span> <span class="content">Časové rozlíšenie</span></a>
+        <li><a href="#dataset-právny-predpis"><span class="secno">3.3.21</span> <span class="content">Právny predpis</span></a>
+        <li><a href="#dataset-kategória-hvd"><span class="secno">3.3.22</span> <span class="content">Kategória HVD</span></a>
+        <li><a href="#dataset-je-súčasťou"><span class="secno">3.3.23</span> <span class="content">Väzba: Je súčásťou</span></a>
+        <li><a href="#dataset-distribúcia"><span class="secno">3.3.24</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
        </ol>
       <li>
-       <a href="#trieda-distribúcia"><span class="secno">2.4</span> <span class="content">Trieda: Distribúcia datasetu</span></a>
+       <a href="#trieda-distribúcia"><span class="secno">3.4</span> <span class="content">Trieda: Distribúcia datasetu</span></a>
        <ol class="toc">
-        <li><a href="#špecifikácia-podmienok-použitia"><span class="secno">2.4.1</span> <span class="content">Špecifikácia podmienok použitia</span></a>
-        <li><a href="#distribúcia-stiahnutie-súboru"><span class="secno">2.4.2</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
-        <li><a href="#distribúcia-prístupové-url"><span class="secno">2.4.3</span> <span class="content">Prístupové URL</span></a>
-        <li><a href="#distribúcia-formát-súboru"><span class="secno">2.4.4</span> <span class="content">Formát súboru na stiahnutie</span></a>
-        <li><a href="#distribúcia-media-type"><span class="secno">2.4.5</span> <span class="content">Typ média súboru na stiahnutie</span></a>
-        <li><a href="#distribuce-schéma"><span class="secno">2.4.6</span> <span class="content">Odkaz na strojovo-čitateľnú schému súboru na stiahnutie</span></a>
-        <li><a href="#distribúcia-media-type-kompresia"><span class="secno">2.4.7</span> <span class="content">Typ média kompresného formátu</span></a>
-        <li><a href="#distribúcia-media-type-balíčka"><span class="secno">2.4.8</span> <span class="content">Typ média balíčkovacieho formátu</span></a>
-        <li><a href="#distribúcia-názov"><span class="secno">2.4.9</span> <span class="content">Názov distribúcie datasetu</span></a>
-        <li><a href="#distribúcia-služba"><span class="secno">2.4.10</span> <span class="content">Väzba: prístupová služba</span></a>
+        <li><a href="#špecifikácia-podmienok-použitia"><span class="secno">3.4.1</span> <span class="content">Špecifikácia podmienok použitia</span></a>
+        <li><a href="#distribúcia-stiahnutie-súboru"><span class="secno">3.4.2</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
+        <li><a href="#distribúcia-prístupové-url"><span class="secno">3.4.3</span> <span class="content">Prístupové URL</span></a>
+        <li><a href="#distribúcia-formát-súboru"><span class="secno">3.4.4</span> <span class="content">Formát súboru na stiahnutie</span></a>
+        <li><a href="#distribúcia-media-type"><span class="secno">3.4.5</span> <span class="content">Typ média súboru na stiahnutie</span></a>
+        <li><a href="#dataset-právny-predpis①"><span class="secno">3.4.6</span> <span class="content">Právny predpis</span></a>
+        <li><a href="#distribuce-schéma"><span class="secno">3.4.7</span> <span class="content">Odkaz na strojovo-čitateľnú schému súboru na stiahnutie</span></a>
+        <li><a href="#distribúcia-media-type-kompresia"><span class="secno">3.4.8</span> <span class="content">Typ média kompresného formátu</span></a>
+        <li><a href="#distribúcia-media-type-balíčka"><span class="secno">3.4.9</span> <span class="content">Typ média balíčkovacieho formátu</span></a>
+        <li><a href="#distribúcia-názov"><span class="secno">3.4.10</span> <span class="content">Názov distribúcie datasetu</span></a>
+        <li><a href="#distribúcia-služba"><span class="secno">3.4.11</span> <span class="content">Väzba: prístupová služba</span></a>
        </ol>
       <li>
-       <a href="#trieda-datová-služba"><span class="secno">2.5</span> <span class="content">Trieda: Dátová služba</span></a>
+       <a href="#trieda-datová-služba"><span class="secno">3.5</span> <span class="content">Trieda: Dátová služba</span></a>
        <ol class="toc">
-        <li><a href="#dátová-služba-názov"><span class="secno">2.5.1</span> <span class="content">Názov</span></a>
-        <li><a href="#dátová-služba-prístupový-bod"><span class="secno">2.5.2</span> <span class="content">Prístupový bod</span></a>
-        <li><a href="#datová-služba-špecifikácia"><span class="secno">2.5.3</span> <span class="content">Odkaz na špecifikáciu</span></a>
-        <li><a href="#dátová-služba-prístupový-bod-popis"><span class="secno">2.5.4</span> <span class="content">Popis prístupového bodu</span></a>
+        <li><a href="#dátová-služba-názov"><span class="secno">3.5.1</span> <span class="content">Názov</span></a>
+        <li><a href="#dátová-služba-prístupový-bod"><span class="secno">3.5.2</span> <span class="content">Prístupový bod</span></a>
+        <li><a href="#dátová-služba-pravny-predpis"><span class="secno">3.5.3</span> <span class="content">Právny predpis</span></a>
+        <li><a href="#dátová-služba-dokumentácia"><span class="secno">3.5.4</span> <span class="content">Odkaz na dokumentáciu</span></a>
+        <li><a href="#dátová-služba-špecifikácia"><span class="secno">3.5.5</span> <span class="content">Odkaz na špecifikáciu</span></a>
+        <li><a href="#dátová-služba-prístupový-bod-popis"><span class="secno">3.5.6</span> <span class="content">Popis prístupového bodu</span></a>
        </ol>
      </ol>
-    <li><a href="#rozhranie-sparql-endpoint"><span class="secno">3</span> <span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span></a>
+    <li><a href="#rozhranie-sparql-endpoint"><span class="secno">4</span> <span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span></a>
     <li>
-     <a href="#rozhranie-dcat-ap-dokumenty"><span class="secno">4</span> <span class="content">Rozhranie DCAT-AP Dokumenty</span></a>
+     <a href="#rozhranie-dcat-ap-dokumenty"><span class="secno">5</span> <span class="content">Rozhranie DCAT-AP Dokumenty</span></a>
      <ol class="toc">
-      <li><a href="#rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">4.1</span> <span class="content">Súbor katalógu</span></a>
-      <li><a href="#rozhranie-dcat-ap-dataset"><span class="secno">4.2</span> <span class="content">Súbor datasetu</span></a>
+      <li><a href="#rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">5.1</span> <span class="content">Súbor katalógu</span></a>
+      <li><a href="#rozhranie-dcat-ap-dataset"><span class="secno">5.2</span> <span class="content">Súbor datasetu</span></a>
      </ol>
     <li>
-     <a href="#rozhranie-ckan-api"><span class="secno">5</span> <span class="content">Rozhranie CKAN API</span></a>
+     <a href="#rozhranie-ckan-api"><span class="secno">6</span> <span class="content">Rozhranie CKAN API</span></a>
      <ol class="toc">
-      <li><a href="#rozhranie-ckan-api-package-list"><span class="secno">5.1</span> <span class="content">Funkcia <code>package_list</code></span></a>
-      <li><a href="#rozhranie-ckan-api-package-show"><span class="secno">5.2</span> <span class="content">Funkcia <code>package_show</code></span></a>
+      <li><a href="#rozhranie-ckan-api-package-list"><span class="secno">6.1</span> <span class="content">Funkcia <code>package_list</code></span></a>
+      <li><a href="#rozhranie-ckan-api-package-show"><span class="secno">6.2</span> <span class="content">Funkcia <code>package_show</code></span></a>
       <li>
-       <a href="#rozhranie-ckan-api-hodnoty"><span class="secno">5.3</span> <span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span></a>
+       <a href="#rozhranie-ckan-api-hodnoty"><span class="secno">6.3</span> <span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span></a>
        <ol class="toc">
-        <li><a href="#ckan-api-názov"><span class="secno">5.3.1</span> <span class="content">Názov datasetu</span></a>
-        <li><a href="#ckan-api-popis"><span class="secno">5.3.2</span> <span class="content">Popis datasetu</span></a>
-        <li><a href="#ckan-api-podmienky-pužitia"><span class="secno">5.3.3</span> <span class="content">Odkaz na podmienky použitia</span></a>
-        <li><a href="#ckan-api-e-mail"><span class="secno">5.3.4</span> <span class="content">Email Kurátora dát</span></a>
-        <li><a href="#ckan-api-kurátor"><span class="secno">5.3.5</span> <span class="content">Meno Kurátora dát</span></a>
-        <li><a href="#ckan-api-kľúčová-slová"><span class="secno">5.3.6</span> <span class="content">Kľúčové slová</span></a>
-        <li><a href="#ckan-api-resources"><span class="secno">5.3.7</span> <span class="content">Distribúcia datasetu</span></a>
+        <li><a href="#ckan-api-názov"><span class="secno">6.3.1</span> <span class="content">Názov datasetu</span></a>
+        <li><a href="#ckan-api-popis"><span class="secno">6.3.2</span> <span class="content">Popis datasetu</span></a>
+        <li><a href="#ckan-api-podmienky-pužitia"><span class="secno">6.3.3</span> <span class="content">Odkaz na podmienky použitia</span></a>
+        <li><a href="#ckan-api-e-mail"><span class="secno">6.3.4</span> <span class="content">Email Kurátora dát</span></a>
+        <li><a href="#ckan-api-kurátor"><span class="secno">6.3.5</span> <span class="content">Meno Kurátora dát</span></a>
+        <li><a href="#ckan-api-kľúčová-slová"><span class="secno">6.3.6</span> <span class="content">Kľúčové slová</span></a>
+        <li><a href="#ckan-api-resources"><span class="secno">6.3.7</span> <span class="content">Distribúcia datasetu</span></a>
        </ol>
       <li>
-       <a href="#ckan-api-distribúcia"><span class="secno">5.4</span> <span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span></a>
+       <a href="#ckan-api-distribúcia"><span class="secno">6.4</span> <span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span></a>
        <ol class="toc">
-        <li><a href="#ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">5.4.1</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
-        <li><a href="#ckan-api-distribúcia-media-type"><span class="secno">5.4.2</span> <span class="content">Media type súboru na stiahnutie</span></a>
-        <li><a href="#ckan-api-distribúcia-názov"><span class="secno">5.4.3</span> <span class="content">Názov distribúcie datasetu</span></a>
+        <li><a href="#ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">6.4.1</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
+        <li><a href="#ckan-api-distribúcia-media-type"><span class="secno">6.4.2</span> <span class="content">Media type súboru na stiahnutie</span></a>
+        <li><a href="#ckan-api-distribúcia-názov"><span class="secno">6.4.3</span> <span class="content">Názov distribúcie datasetu</span></a>
        </ol>
      </ol>
     <li>
@@ -2141,19 +2148,43 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <main>
    <h2 class="heading settled" data-level="1" id="úvod"><span class="secno">1. </span><span class="content">Úvod</span><a class="self-link" href="#úvod"></a></h2>
     Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsobov zaistenia katalogizácie dát v Národnom katalógu otvorených dát (NKOD). 
-   <h2 class="heading settled" data-level="2" id="položky-metadátového-záznamu"><span class="secno">2. </span><span class="content">Položky metadátového záznamu</span><a class="self-link" href="#položky-metadátového-záznamu"></a></h2>
+   <h2 class="heading settled" data-level="2" id="novinky"><span class="secno">2. </span><span class="content">Čo je nové?</span><a class="self-link" href="#novinky"></a></h2>
+    Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3 a DCAP-AP-HVD. V detaile pribudli: 
+   <p>2.1. Zosúladenie na štandard <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP-3.0.0</a></p>
+   <ul>
+    <li data-md>
+     <p>samostatná trieda pre dátovú sériu dcat:DatasetSeries</p>
+    <li data-md>
+     <p>nové metaúdaje: pre triedu Dataset - dátum vytvorenia, dátum modifikácie, webový odkaz</p>
+    <li data-md>
+     <p>nový EÚ číselník licencie</p>
+    <li data-md>
+     <p>nová trieda Právny predpis</p>
+    <li data-md>
+     <p>pridanie väzby je dcat:inSeries (napr. Dataset je súčasťou Dátovej série)</p>
+    <li data-md>
+     <p>špecifikácia dátovej kocky popisujúcej dataset je realizovaná prostredníctvom existujúcej vlastnosti dct:conformsTo (odkaz na špecifikáciu)</p>
+   </ul>
+   <p>2.2. Zosúladenie na štandardu <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP-HVD</a></p>
+   <ul>
+    <li data-md>
+     <p>nový EÚ číselník kategória HVD</p>
+    <li data-md>
+     <p>povinne používaný identifikátor pre právny predpis pre HVD - http://data.europa.eu/eli/reg_impl/2023/138/oj</p>
+    <li data-md>
+     <p>povinnosť špecifikovať kontaktný bod a dokumentáciu dátovej služby sprístupňujúce HVDs.</p>
+   </ul>
+   <h2 class="heading settled" data-level="3" id="položky-metadátového-záznamu"><span class="secno">3. </span><span class="content">Položky metadátového záznamu</span><a class="self-link" href="#položky-metadátového-záznamu"></a></h2>
    <p>V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu.
 Položky sa riadia štandardom <a href="https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300">DCAT Application Profile for data portals in Europe Version 3 (DCAT-AP 3.0.0)</a>.</p>
    <figure>
-     <img alt="Konceptuálný model DCAT-AP-SK 3.0.0" src="dcat-ap-sk-2.0.1.svg"> 
+     <img alt="Konceptuálný model DCAT-AP-SK 3.0.0" src="dcat-ap-sk-3.0.0.svg"> 
     <figcaption>Diagram dátového modelu DCAT-AP-SK 3.0.0 Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
    </figure>
-   <p>DCAT-AP 3.0.0 rozlišuje päť základných typov entít. Katalóg, jeho datasety a ich možné zoskupenia do dátových sérií, distribúcie datasetov a dátovú službu.
-Metadáta datasetu popisujú otvorené údaje bez ohľadu na konkrétnú reprezentáciu dát.
-Tie sú popsáné ako distribúcie datasetu, ktoré reprezentuje buď súbor na stiahnutie, alebo odkazuje na dátovou službu, prostredníctvom ktorej sú dáta k dispozícii.
-Distribúcií môže mať dataset viacej, líšiť sa ale môžu jedine formátom súboru na stiahnutie (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
+   <p>Medzi hlavné triedy štandardu patrí Katalóg, čo je najvyššia entita zoskupujúca množinu Datasetov. Tieto Datasety môžu byť naviac zoskupené do Dátových sérií. Dáta samotného Datasetu na stiahnutie alebo na prístup cez API sa nazývajú Distribúcie, ktoré môžu byť dostupné v rôznom formáte. Distribúcia môže byť prístupná aj cez API, tj. cez Dátovú službu.
+Distribúcií môže mať Dataset viacej, avšak líšiť sa môžu jedine formátom (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
 Obsahovo musia byť distribúcie totožné.</p>
-   <h3 class="heading settled" data-level="2.1" id="použité-prefixy"><span class="secno">2.1. </span><span class="content">Použité prefixy</span><a class="self-link" href="#použité-prefixy"></a></h3>
+   <h3 class="heading settled" data-level="3.1" id="použité-prefixy"><span class="secno">3.1. </span><span class="content">Použité prefixy</span><a class="self-link" href="#použité-prefixy"></a></h3>
    <p>V popisu položiek a rozhraní budú použité následujúce prefixy slovníkov.</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
@@ -2176,7 +2207,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <c- k>@prefix</c-> <c- nn>podmienky:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1/terms-of-use></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>správca:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c->
 </pre>
-   <h3 class="heading settled" data-level="2.2" id="trieda-katalóg"><span class="secno">2.2. </span><span class="content">Trieda: Katalóg</span><a class="self-link" href="#trieda-katalóg"></a></h3>
+   <h3 class="heading settled" data-level="3.2" id="trieda-katalóg"><span class="secno">3.2. </span><span class="content">Trieda: Katalóg</span><a class="self-link" href="#trieda-katalóg"></a></h3>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2186,7 +2217,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.2.1" id="katalóg-názov"><span class="secno">2.2.1. </span><span class="content">Názov</span><a class="self-link" href="#katalóg-názov"></a></h4>
+   <h4 class="heading settled" data-level="3.2.1" id="katalóg-názov"><span class="secno">3.2.1. </span><span class="content">Názov</span><a class="self-link" href="#katalóg-názov"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2205,7 +2236,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Katalóg otvorených dát Ministerstva dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open Data Catalog of the Ministry of Transport"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.2.2" id="katalóg-popis"><span class="secno">2.2.2. </span><span class="content">Popis</span><a class="self-link" href="#katalóg-popis"></a></h4>
+   <h4 class="heading settled" data-level="3.2.2" id="katalóg-popis"><span class="secno">3.2.2. </span><span class="content">Popis</span><a class="self-link" href="#katalóg-popis"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2224,7 +2255,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.2.3" id="katalóg-poskytovateľ"><span class="secno">2.2.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#katalóg-poskytovateľ"></a></h4>
+   <h4 class="heading settled" data-level="3.2.3" id="katalóg-poskytovateľ"><span class="secno">3.2.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#katalóg-poskytovateľ"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2243,7 +2274,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.2.4" id="katalóg-kontaktný-bod"><span class="secno">2.2.4. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#katalóg-kontaktný-bod"></a></h4>
+   <h4 class="heading settled" data-level="3.2.4" id="katalóg-kontaktný-bod"><span class="secno">3.2.4. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#katalóg-kontaktný-bod"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2266,7 +2297,7 @@ Obsahovo musia byť distribúcie totožné.</p>
          <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.2.5" id="katalóg-domovská-stránka"><span class="secno">2.2.5. </span><span class="content">Domovská stránka</span><a class="self-link" href="#katalóg-domovská-stránka"></a></h4>
+   <h4 class="heading settled" data-level="3.2.5" id="katalóg-domovská-stránka"><span class="secno">3.2.5. </span><span class="content">Domovská stránka</span><a class="self-link" href="#katalóg-domovská-stránka"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2285,7 +2316,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://opendata.mindop.sk/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.2.6" id="katalóg-dataset"><span class="secno">2.2.6. </span><span class="content">Väzba: dataset</span><a class="self-link" href="#katalóg-dataset"></a></h4>
+   <h4 class="heading settled" data-level="3.2.6" id="katalóg-dataset"><span class="secno">3.2.6. </span><span class="content">Väzba: dataset</span><a class="self-link" href="#katalóg-dataset"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2304,7 +2335,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c-> <c- nn>dataset</c-><c- p>:</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="2.3" id="trieda-dataset"><span class="secno">2.3. </span><span class="content">Trieda: Dataset</span><a class="self-link" href="#trieda-dataset"></a></h3>
+   <h3 class="heading settled" data-level="3.3" id="trieda-dataset"><span class="secno">3.3. </span><span class="content">Trieda: Dataset</span><a class="self-link" href="#trieda-dataset"></a></h3>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2314,7 +2345,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.1" id="dataset-názov"><span class="secno">2.3.1. </span><span class="content">Názov</span><a class="self-link" href="#dataset-názov"></a></h4>
+   <h4 class="heading settled" data-level="3.3.1" id="dataset-názov"><span class="secno">3.3.1. </span><span class="content">Názov</span><a class="self-link" href="#dataset-názov"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2333,7 +2364,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnenia Povinnosti zamestnávateľov v oblasti sociálneho zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Duty fulfillment inspections in the area of social security"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.2" id="dataset-popis"><span class="secno">2.3.2. </span><span class="content">Popis</span><a class="self-link" href="#dataset-popis"></a></h4>
+   <h4 class="heading settled" data-level="3.3.2" id="dataset-popis"><span class="secno">3.3.2. </span><span class="content">Popis</span><a class="self-link" href="#dataset-popis"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2352,7 +2383,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Štatistika kontrol plnenia Povinností zamestnávateľov v oblasti sociálneho zabezpečenia od roku 2009"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Social security statistics for 2009"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.3" id="dataset-poskytovateľ"><span class="secno">2.3.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#dataset-poskytovateľ"></a></h4>
+   <h4 class="heading settled" data-level="3.3.3" id="dataset-poskytovateľ"><span class="secno">3.3.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#dataset-poskytovateľ"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2371,7 +2402,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.4" id="dataset-dátum-publikácie"><span class="secno">2.3.4. </span><span class="content">Dátum publikácie</span><a class="self-link" href="#dataset-dátum-publikácie"></a></h4>
+   <h4 class="heading settled" data-level="3.3.4" id="dataset-dátum-publikácie"><span class="secno">3.3.4. </span><span class="content">Dátum publikácie</span><a class="self-link" href="#dataset-dátum-publikácie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2390,7 +2421,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>issued</c-> <c- s>"2024-01-21T12:00:00"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.5" id="dataset-dátum-modifikácie"><span class="secno">2.3.5. </span><span class="content">Dátum modifikácie</span><a class="self-link" href="#dataset-dátum-modifikácie"></a></h4>
+   <h4 class="heading settled" data-level="3.3.5" id="dataset-dátum-modifikácie"><span class="secno">3.3.5. </span><span class="content">Dátum modifikácie</span><a class="self-link" href="#dataset-dátum-modifikácie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2409,7 +2440,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>modified</c-> <c- s>"2024-01-22T16:23:00"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.6" id="dataset-téma"><span class="secno">2.3.6. </span><span class="content">Téma</span><a class="self-link" href="#dataset-téma"></a></h4>
+   <h4 class="heading settled" data-level="3.3.6" id="dataset-téma"><span class="secno">3.3.6. </span><span class="content">Téma</span><a class="self-link" href="#dataset-téma"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2431,7 +2462,7 @@ Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z <a href="https://op.europa.
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/data-theme/TRAN></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.7" id="dataset-periodicita-aktualizácie"><span class="secno">2.3.7. </span><span class="content">Periodicita aktualizácie</span><a class="self-link" href="#dataset-periodicita-aktualizácie"></a></h4>
+   <h4 class="heading settled" data-level="3.3.7" id="dataset-periodicita-aktualizácie"><span class="secno">3.3.7. </span><span class="content">Periodicita aktualizácie</span><a class="self-link" href="#dataset-periodicita-aktualizácie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2452,7 +2483,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/MONTHLY></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.8" id="dataset-kľúčové-slová"><span class="secno">2.3.8. </span><span class="content">Klúčové slová</span><a class="self-link" href="#dataset-kľúčové-slová"></a></h4>
+   <h4 class="heading settled" data-level="3.3.8" id="dataset-kľúčové-slová"><span class="secno">3.3.8. </span><span class="content">Klúčové slová</span><a class="self-link" href="#dataset-kľúčové-slová"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2471,7 +2502,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"kontrola"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"štatistika"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"inspection"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"statistics"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.9" id="dataset-typ"><span class="secno">2.3.9. </span><span class="content">Typ datasetu</span><a class="self-link" href="#dataset-typ"></a></h4>
+   <h4 class="heading settled" data-level="3.3.9" id="dataset-typ"><span class="secno">3.3.9. </span><span class="content">Typ datasetu</span><a class="self-link" href="#dataset-typ"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2491,7 +2522,28 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.10" id="dataset-geografické-územia"><span class="secno">2.3.10. </span><span class="content">Súvisiace geografické územie</span><a class="self-link" href="#dataset-geografické-územia"></a></h4>
+   <h4 class="heading settled" data-level="3.3.10" id="dataset-register-adries"><span class="secno">3.3.10. </span><span class="content">Územný prvok z registra adries</span><a class="self-link" href="#dataset-register-adries"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť odkazuje na územný prvok v registry adries.
+Dataset môže byť popísaný viacerými územnými prvkami v registry adries.
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial">dct:spatial</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>prvok_registra_adries</code>, <code>dct:spatial</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>IRI položiek pre územné entity v Registry adries vo forme <a href="https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl">NUTS-SK</a> klasifikácie.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Povinná</p>
+    <dt data-md>Príklady
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://data.gov.sk/id/nuts1/SK0></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.3.11" id="dataset-geografické-územia"><span class="secno">3.3.11. </span><span class="content">Súvisiace geografické územie</span><a class="self-link" href="#dataset-geografické-územia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2503,14 +2555,11 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
      <p><code>geografické_územie</code>, <code>dct:spatial</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položiek pre územné entity Slovenskej Republiky primárne z taxonómie <a href="https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl">NUTS-SK</a>, európských číselníkov <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country">krajín</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent">kontinentov</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place">miest</a> alebo IRI objektu z <a href="https://www.geonames.org/">Geonames</a>.</p>
+     <p>IRI položiek pre ďaľšie upresnenie územnej lokality datasetu, napr. objekty definované v <a href="https://www.geonames.org/">Geonames</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
     <dt data-md>Príklady
-    <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://data.gov.sk/id/nuts1/SK0></c-> <c- p>.</c->
-</pre>
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/EUROPE></c-> <c- p>.</c->
 </pre>
@@ -2518,7 +2567,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://sws.geonames.org/6290257/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.11" id="dataset-časové-pokrytie"><span class="secno">2.3.11. </span><span class="content">Časové pokrytie</span><a class="self-link" href="#dataset-časové-pokrytie"></a></h4>
+   <h4 class="heading settled" data-level="3.3.12" id="dataset-časové-pokrytie"><span class="secno">3.3.12. </span><span class="content">Časové pokrytie</span><a class="self-link" href="#dataset-časové-pokrytie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2541,7 +2590,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
      <c- nn>dcat</c-><c- p>:</c-><c- f>endDate</c-> <c- s>"2017-12-31"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.12" id="dataset-kontaktní-bod"><span class="secno">2.3.12. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#dataset-kontaktní-bod"></a></h4>
+   <h4 class="heading settled" data-level="3.3.13" id="dataset-kontaktní-bod"><span class="secno">3.3.13. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#dataset-kontaktní-bod"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2565,7 +2614,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
          <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.13" id="dataset-webová-stránka"><span class="secno">2.3.13. </span><span class="content">Webová stránka</span><a class="self-link" href="#dataset-webová-stránka"></a></h4>
+   <h4 class="heading settled" data-level="3.3.14" id="dataset-webová-stránka"><span class="secno">3.3.14. </span><span class="content">Webová stránka</span><a class="self-link" href="#dataset-webová-stránka"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2585,27 +2634,27 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>landingPage</c-> <c- g>&lt;https://data.gov.sk/set/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.14" id="dataset-súvisiaci-zdroj"><span class="secno">2.3.14. </span><span class="content">Súvisiaci zdroj</span><a class="self-link" href="#dataset-súvisiaci-zdroj"></a></h4>
+   <h4 class="heading settled" data-level="3.3.15" id="dataset-súvisiaci-zdroj"><span class="secno">3.3.15. </span><span class="content">Odkaz na dokumentáciu</span><a class="self-link" href="#dataset-súvisiaci-zdroj"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation">dct:relation</a>.</p>
+     <p>Táto Vlastnosť odkazuje na dokumentáciu datasetu.
+Je definovaná ako <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>súvisiaci_zdroj_datasetu</code>, <code>dct:relation</code></p>
+     <p><code>dokumentácia</code>, <code>foaf:page</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>URL súvisiaceho zdroja datasetu.</p>
+     <p>URL dokumentácie datasetu.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>relation</c-> <c- g>&lt;https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.15" id="dataset-špecifikácia"><span class="secno">2.3.15. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dataset-špecifikácia"></a></h4>
+   <h4 class="heading settled" data-level="3.3.16" id="dataset-špecifikácia"><span class="secno">3.3.16. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dataset-špecifikácia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2625,27 +2674,27 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/finance/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.16" id="dataset-štruktúra"><span class="secno">2.3.16. </span><span class="content">Odkaz na štruktúru</span><a class="self-link" href="#dataset-štruktúra"></a></h4>
+   <h4 class="heading settled" data-level="3.3.17" id="dataset-súvisiaci-zdroj①"><span class="secno">3.3.17. </span><span class="content">Súvisiaci zdroj</span><a class="self-link" href="#dataset-súvisiaci-zdroj①"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na definíciu štruktúry datasetu, ktorou sa riadi dataset, pričom štruktúra je definovaná prostredníctvom ontológie <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube Vocabulary</a>.
-Je definovaná ako <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>.</p>
+     <p>Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation">dct:relation</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>štruktúra</code>, <code>qb:structure</code></p>
+     <p><code>súvisiaci_zdroj_datasetu</code>, <code>dct:relation</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>URL štruktúry dátovej kocky.</p>
+     <p>URL súvisiaceho zdroja datasetu.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>qb</c-><c- p>:</c-><c- f>structure</c-> <c- g>&lt;https://datacube.statistics.sk/set/cube/sp0207ts/structure></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>relation</c-> <c- g>&lt;https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.17" id="dataset-eurovoc"><span class="secno">2.3.17. </span><span class="content">Klasifikácia podľa EuroVoc</span><a class="self-link" href="#dataset-eurovoc"></a></h4>
+   <h4 class="heading settled" data-level="3.3.18" id="dataset-eurovoc"><span class="secno">3.3.18. </span><span class="content">Klasifikácia podľa EuroVoc</span><a class="self-link" href="#dataset-eurovoc"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2666,7 +2715,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://eurovoc.europa.eu/1001></c-><c- p>,</c-> <c- g>&lt;http://eurovoc.europa.eu/4050></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.18" id="dataset-priestorové-rozlišenie"><span class="secno">2.3.18. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
+   <h4 class="heading settled" data-level="3.3.19" id="dataset-priestorové-rozlišenie"><span class="secno">3.3.19. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2687,7 +2736,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>0.5</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.19" id="dataset-časové-rozlíšenie"><span class="secno">2.3.19. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
+   <h4 class="heading settled" data-level="3.3.20" id="dataset-časové-rozlíšenie"><span class="secno">3.3.20. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2708,7 +2757,46 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.20" id="dataset-je-súčasťou"><span class="secno">2.3.20. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
+   <h4 class="heading settled" data-level="3.3.21" id="dataset-právny-predpis"><span class="secno">3.3.21. </span><span class="content">Právny predpis</span><a class="self-link" href="#dataset-právny-predpis"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">dcat:applicablelegislation</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>právny_predpis</code>, <code>dcat:applicablelegislation</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>IRI právneho predpisu.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná, pre HVD datasety povinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.3.22" id="dataset-kategória-hvd"><span class="secno">3.3.22. </span><span class="content">Kategória HVD</span><a class="self-link" href="#dataset-kategória-hvd"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD).</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>kategoria_hvd</code>, <code>dcatap:hvdCategory</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>IRI položiek z európskeho <a href="https://op.europa.eu/cs/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">číselníka kategorií HVD</a>.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Povinná pre datasety typu HVD</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/bna/c_164e0bf5></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.3.23" id="dataset-je-súčasťou"><span class="secno">3.3.23. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2728,7 +2816,7 @@ Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.21" id="dataset-distribúcia"><span class="secno">2.3.21. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
+   <h4 class="heading settled" data-level="3.3.24" id="dataset-distribúcia"><span class="secno">3.3.24. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2748,7 +2836,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- nn>distribúcia</c-><c- p>:</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="2.4" id="trieda-distribúcia"><span class="secno">2.4. </span><span class="content">Trieda: Distribúcia datasetu</span><a class="self-link" href="#trieda-distribúcia"></a></h3>
+   <h3 class="heading settled" data-level="3.4" id="trieda-distribúcia"><span class="secno">3.4. </span><span class="content">Trieda: Distribúcia datasetu</span><a class="self-link" href="#trieda-distribúcia"></a></h3>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2759,7 +2847,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distributi
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.1" id="špecifikácia-podmienok-použitia"><span class="secno">2.4.1. </span><span class="content">Špecifikácia podmienok použitia</span><a class="self-link" href="#špecifikácia-podmienok-použitia"></a></h4>
+   <h4 class="heading settled" data-level="3.4.1" id="špecifikácia-podmienok-použitia"><span class="secno">3.4.1. </span><span class="content">Špecifikácia podmienok použitia</span><a class="self-link" href="#špecifikácia-podmienok-použitia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2785,7 +2873,7 @@ Voliteľne tiež <code>leg:authorName</code> a <code>leg:originalDatabaseAuthorN
     <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.2" id="distribúcia-stiahnutie-súboru"><span class="secno">2.4.2. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#distribúcia-stiahnutie-súboru"></a></h4>
+   <h4 class="heading settled" data-level="3.4.2" id="distribúcia-stiahnutie-súboru"><span class="secno">3.4.2. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#distribúcia-stiahnutie-súboru"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2805,7 +2893,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://mindop.sk/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.3" id="distribúcia-prístupové-url"><span class="secno">2.4.3. </span><span class="content">Prístupové URL</span><a class="self-link" href="#distribúcia-prístupové-url"></a></h4>
+   <h4 class="heading settled" data-level="3.4.3" id="distribúcia-prístupové-url"><span class="secno">3.4.3. </span><span class="content">Prístupové URL</span><a class="self-link" href="#distribúcia-prístupové-url"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2826,7 +2914,7 @@ Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnak�
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.4" id="distribúcia-formát-súboru"><span class="secno">2.4.4. </span><span class="content">Formát súboru na stiahnutie</span><a class="self-link" href="#distribúcia-formát-súboru"></a></h4>
+   <h4 class="heading settled" data-level="3.4.4" id="distribúcia-formát-súboru"><span class="secno">3.4.4. </span><span class="content">Formát súboru na stiahnutie</span><a class="self-link" href="#distribúcia-formát-súboru"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2847,7 +2935,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/file-type/CSV></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.5" id="distribúcia-media-type"><span class="secno">2.4.5. </span><span class="content">Typ média súboru na stiahnutie</span><a class="self-link" href="#distribúcia-media-type"></a></h4>
+   <h4 class="heading settled" data-level="3.4.5" id="distribúcia-media-type"><span class="secno">3.4.5. </span><span class="content">Typ média súboru na stiahnutie</span><a class="self-link" href="#distribúcia-media-type"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2867,7 +2955,27 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/text/csv></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.6" id="distribuce-schéma"><span class="secno">2.4.6. </span><span class="content">Odkaz na strojovo-čitateľnú schému súboru na stiahnutie</span><a class="self-link" href="#distribuce-schéma"></a></h4>
+   <h4 class="heading settled" data-level="3.4.6" id="dataset-právny-predpis①"><span class="secno">3.4.6. </span><span class="content">Právny predpis</span><a class="self-link" href="#dataset-právny-predpis①"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">dcat:applicablelegislation</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>právny_predpis</code>, <code>dcat:applicablelegislation</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>IRI právneho predpisu.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná, pre HVD datasety povinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.4.7" id="distribuce-schéma"><span class="secno">3.4.7. </span><span class="content">Odkaz na strojovo-čitateľnú schému súboru na stiahnutie</span><a class="self-link" href="#distribuce-schéma"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2887,7 +2995,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.cssz.cz/dump/kontroly-plnenia-Povinnosti-zamestnavateľov-v-oblasti-sociálneho-zabezpečenia-schema.json></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.7" id="distribúcia-media-type-kompresia"><span class="secno">2.4.7. </span><span class="content">Typ média kompresného formátu</span><a class="self-link" href="#distribúcia-media-type-kompresia"></a></h4>
+   <h4 class="heading settled" data-level="3.4.8" id="distribúcia-media-type-kompresia"><span class="secno">3.4.8. </span><span class="content">Typ média kompresného formátu</span><a class="self-link" href="#distribúcia-media-type-kompresia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2908,7 +3016,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>compressFormat</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/zip></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.8" id="distribúcia-media-type-balíčka"><span class="secno">2.4.8. </span><span class="content">Typ média balíčkovacieho formátu</span><a class="self-link" href="#distribúcia-media-type-balíčka"></a></h4>
+   <h4 class="heading settled" data-level="3.4.9" id="distribúcia-media-type-balíčka"><span class="secno">3.4.9. </span><span class="content">Typ média balíčkovacieho formátu</span><a class="self-link" href="#distribúcia-media-type-balíčka"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2929,7 +3037,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>packageFormat</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/zip></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.9" id="distribúcia-názov"><span class="secno">2.4.9. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#distribúcia-názov"></a></h4>
+   <h4 class="heading settled" data-level="3.4.10" id="distribúcia-názov"><span class="secno">3.4.10. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#distribúcia-názov"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2948,7 +3056,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení v CSV."</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"CSV representation of inspections in the area of social security."</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.10" id="distribúcia-služba"><span class="secno">2.4.10. </span><span class="content">Väzba: prístupová služba</span><a class="self-link" href="#distribúcia-služba"></a></h4>
+   <h4 class="heading settled" data-level="3.4.11" id="distribúcia-služba"><span class="secno">3.4.11. </span><span class="content">Väzba: prístupová služba</span><a class="self-link" href="#distribúcia-služba"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2967,7 +3075,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- nn>služba</c-><c- p>:</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="2.5" id="trieda-datová-služba"><span class="secno">2.5. </span><span class="content">Trieda: Dátová služba</span><a class="self-link" href="#trieda-datová-služba"></a></h3>
+   <h3 class="heading settled" data-level="3.5" id="trieda-datová-služba"><span class="secno">3.5. </span><span class="content">Trieda: Dátová služba</span><a class="self-link" href="#trieda-datová-služba"></a></h3>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2977,7 +3085,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.5.1" id="dátová-služba-názov"><span class="secno">2.5.1. </span><span class="content">Názov</span><a class="self-link" href="#dátová-služba-názov"></a></h4>
+   <h4 class="heading settled" data-level="3.5.1" id="dátová-služba-názov"><span class="secno">3.5.1. </span><span class="content">Názov</span><a class="self-link" href="#dátová-služba-názov"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2996,7 +3104,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint Slovenskej správy sociálného zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Czech Social Security Administration SPARQL endpoint"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.5.2" id="dátová-služba-prístupový-bod"><span class="secno">2.5.2. </span><span class="content">Prístupový bod</span><a class="self-link" href="#dátová-služba-prístupový-bod"></a></h4>
+   <h4 class="heading settled" data-level="3.5.2" id="dátová-služba-prístupový-bod"><span class="secno">3.5.2. </span><span class="content">Prístupový bod</span><a class="self-link" href="#dátová-služba-prístupový-bod"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -3015,7 +3123,47 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.5.3" id="datová-služba-špecifikácia"><span class="secno">2.5.3. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#datová-služba-špecifikácia"></a></h4>
+   <h4 class="heading settled" data-level="3.5.3" id="dátová-služba-pravny-predpis"><span class="secno">3.5.3. </span><span class="content">Právny predpis</span><a class="self-link" href="#dátová-služba-pravny-predpis"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">dcat:applicablelegislation</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>právny_predpis</code>, <code>dcat:applicablelegislation</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>IRI právneho predpisu.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná, pre HVD datasety povinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.5.4" id="dátová-služba-dokumentácia"><span class="secno">3.5.4. </span><span class="content">Odkaz na dokumentáciu</span><a class="self-link" href="#dátová-služba-dokumentácia"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť odkazuje na dokumentáciu dátovej služby.
+Je definovaná ako <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>dokumentácia</code>, <code>foaf:page</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>URL dokumentácie dátovej služby.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná, pre HVD datasety povinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.5.5" id="dátová-služba-špecifikácia"><span class="secno">3.5.5. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dátová-služba-špecifikácia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -3037,7 +3185,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.5.4" id="dátová-služba-prístupový-bod-popis"><span class="secno">2.5.4. </span><span class="content">Popis prístupového bodu</span><a class="self-link" href="#dátová-služba-prístupový-bod-popis"></a></h4>
+   <h4 class="heading settled" data-level="3.5.6" id="dátová-služba-prístupový-bod-popis"><span class="secno">3.5.6. </span><span class="content">Popis prístupového bodu</span><a class="self-link" href="#dátová-služba-prístupový-bod-popis"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -3056,18 +3204,18 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h2 class="heading settled" data-level="3" id="rozhranie-sparql-endpoint"><span class="secno">3. </span><span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span><a class="self-link" href="#rozhranie-sparql-endpoint"></a></h2>
+   <h2 class="heading settled" data-level="4" id="rozhranie-sparql-endpoint"><span class="secno">4. </span><span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span><a class="self-link" href="#rozhranie-sparql-endpoint"></a></h2>
     Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu <a data-link-type="biblio" href="#biblio-sparql11-protocol" title="SPARQL 1.1 Protocol">[sparql11-protocol]</a>.
 Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried <code>dcat:Dataset</code>, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 2.1.1</a>.
 Jedná se o nejjednoduchší spôsob registrácie lokálneho katalógu otvorených dát. 
    <p>Datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie sa jednať o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax">[rdf11-concepts]</a>.</p>
-   <h2 class="heading settled" data-level="4" id="rozhranie-dcat-ap-dokumenty"><span class="secno">4. </span><span class="content">Rozhranie DCAT-AP Dokumenty</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty"></a></h2>
+   <h2 class="heading settled" data-level="5" id="rozhranie-dcat-ap-dokumenty"><span class="secno">5. </span><span class="content">Rozhranie DCAT-AP Dokumenty</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty"></a></h2>
     Táto varianta rozhrania je určená pre inštitúcie, ktoré nechcú alebo nemôžu prevádzkovať pre účely harvestácie metadát o datasetoch NKOD SPARQL endpoint.
 Počíta so serializáciou metadát o datasetoch do statických súborov umiestnených na webe.
 Ako indexový súbor následne poslúži súbor obsahujúci inštanciu triedy <code>dcat:Catalog</code>, ktorá pomocou Vlastnosti <code>dcat:dataset</code> ukazuje na URL jednotlivých datasetov.
 Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane kompletný katalogizačný záznam pre dané datasety, vrátane ich distribúcií a dátových služieb. 
    <p>Datasety, distribúcie a dátové služby musia byť identifikované svojími IRI, nesmie sa jednať o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax">[rdf11-concepts]</a>.</p>
-   <h3 class="heading settled" data-level="4.1" id="rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">4.1. </span><span class="content">Súbor katalógu</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty-katalóg"></a></h3>
+   <h3 class="heading settled" data-level="5.1" id="rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">5.1. </span><span class="content">Súbor katalógu</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty-katalóg"></a></h3>
     Súbor katalógu je súbor v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a>, ktorý obsahuje inštanciu triedy <code>dcat:Catalog</code> a odkazy na jednotlivé katalogizované datasety. 
    <div class="example" id="example-c1b17b48">
     <a class="self-link" href="#example-c1b17b48"></a> 
@@ -3124,7 +3272,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="4.2" id="rozhranie-dcat-ap-dataset"><span class="secno">4.2. </span><span class="content">Súbor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
+   <h3 class="heading settled" data-level="5.2" id="rozhranie-dcat-ap-dataset"><span class="secno">5.2. </span><span class="content">Súbor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
     Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
    <div class="example" id="example-5f0f1b89">
     <a class="self-link" href="#example-5f0f1b89"></a> 
@@ -3335,14 +3483,14 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 <c- p>}</c->
 </pre>
    </div>
-   <h2 class="heading settled" data-level="5" id="rozhranie-ckan-api"><span class="secno">5. </span><span class="content">Rozhranie CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
+   <h2 class="heading settled" data-level="6" id="rozhranie-ckan-api"><span class="secno">6. </span><span class="content">Rozhranie CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
     CKAN API je rozhranie pre implementáciu dátového katalógu <a href="https://ckan.org/">CKAN</a>.
 Je založené na formáte JSON <a data-link-type="biblio" href="#biblio-ecma-404" title="The JSON Data Interchange Format, 2nd edition">[ECMA-404]</a>, a obsahuje dve hlavné funkcie, <code>package_list</code> a <code>package_show</code>.
 Toto rozhranie je implemetované samotným katalógom <a href="https://ckan.org/">CKAN</a> a tiež katalógom <a href="https://getdkan.org/">DKAN</a>. 
    <div class="advisement"> Rozhranie CKAN API je podporované iba z dôvodu zpätnej kompatibility.
 Nebude se rozšiřovať o nové položky anie funkcionality a neumožňuje kvalitne katalogizovať datasety podľa štandardu <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.
 Rozhranie CKAN API sa prestane úplne podporovať. Pokiaľ je to možné, použite jedno z rozhraní kompatibilných s DCAT-AP. </div>
-   <h3 class="heading settled" data-level="5.1" id="rozhranie-ckan-api-package-list"><span class="secno">5.1. </span><span class="content">Funkcia <code>package_list</code></span><a class="self-link" href="#rozhranie-ckan-api-package-list"></a></h3>
+   <h3 class="heading settled" data-level="6.1" id="rozhranie-ckan-api-package-list"><span class="secno">6.1. </span><span class="content">Funkcia <code>package_list</code></span><a class="self-link" href="#rozhranie-ckan-api-package-list"></a></h3>
     Táto funkcia vracia zoznam identifikátorov jednotlivých datasetov registrovaných v LKOD.
 Tieto identifikátory sa následne predávajú funkcii <code>package_show</code> v parametri <code>id</code>.
 Identifikátory môžu obsahovať písmena, čísla, pomlčky a podtržítka.
@@ -3359,7 +3507,7 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="5.2" id="rozhranie-ckan-api-package-show"><span class="secno">5.2. </span><span class="content">Funkcia <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="rozhranie-ckan-api-package-show"><span class="secno">6.2. </span><span class="content">Funkcia <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
     Táto funkcia vracia metadátový záznam pre dataset, ktorej identifikátor je predaný v parametri <code>id</code>. 
    <div class="example" id="example-f72f8d0a">
     <a class="self-link" href="#example-f72f8d0a"></a> Pre URL <code>https://organizacia.sk/api/3/action/package_show?id=zeleznice</code> 
@@ -3387,9 +3535,9 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="5.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">5.3. </span><span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
+   <h3 class="heading settled" data-level="6.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">6.3. </span><span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
     V tejto sekci sú popísané položky týkajúce sa datasetu vo funkci <code>package_show</code>. 
-   <h4 class="heading settled" data-level="5.3.1" id="ckan-api-názov"><span class="secno">5.3.1. </span><span class="content">Názov datasetu</span><a class="self-link" href="#ckan-api-názov"></a></h4>
+   <h4 class="heading settled" data-level="6.3.1" id="ckan-api-názov"><span class="secno">6.3.1. </span><span class="content">Názov datasetu</span><a class="self-link" href="#ckan-api-názov"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3410,7 +3558,7 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.2" id="ckan-api-popis"><span class="secno">5.3.2. </span><span class="content">Popis datasetu</span><a class="self-link" href="#ckan-api-popis"></a></h4>
+   <h4 class="heading settled" data-level="6.3.2" id="ckan-api-popis"><span class="secno">6.3.2. </span><span class="content">Popis datasetu</span><a class="self-link" href="#ckan-api-popis"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3431,11 +3579,11 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.3" id="ckan-api-podmienky-pužitia"><span class="secno">5.3.3. </span><span class="content">Odkaz na podmienky použitia</span><a class="self-link" href="#ckan-api-podmienky-pužitia"></a></h4>
+   <h4 class="heading settled" data-level="6.3.3" id="ckan-api-podmienky-pužitia"><span class="secno">6.3.3. </span><span class="content">Odkaz na podmienky použitia</span><a class="self-link" href="#ckan-api-podmienky-pužitia"></a></h4>
    <p>V štandarde DCAT-AP, na ktorom je Národný katalog otvorených dat založený, sú podmienky použitia Vlastnosťou distribúcie datasetu.
 V rozhraní CKAN API je to však Vlastnosťou celého datasetu.
 Podmienky použitia sa teda interpretujú ako identické pre všetky distribúce datasetu.
-Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia v súladu s právnými predpismy, viď <a href="#špecifikácia-podmienok-použitia">§ 2.4.1 Špecifikácia podmienok použitia</a>.</p>
+Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia v súladu s právnými predpismy, viď <a href="#špecifikácia-podmienok-použitia">§ 3.4.1 Špecifikácia podmienok použitia</a>.</p>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3456,7 +3604,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.4" id="ckan-api-e-mail"><span class="secno">5.3.4. </span><span class="content">Email Kurátora dát</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
+   <h4 class="heading settled" data-level="6.3.4" id="ckan-api-e-mail"><span class="secno">6.3.4. </span><span class="content">Email Kurátora dát</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3477,7 +3625,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.5" id="ckan-api-kurátor"><span class="secno">5.3.5. </span><span class="content">Meno Kurátora dát</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
+   <h4 class="heading settled" data-level="6.3.5" id="ckan-api-kurátor"><span class="secno">6.3.5. </span><span class="content">Meno Kurátora dát</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3498,7 +3646,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.6" id="ckan-api-kľúčová-slová"><span class="secno">5.3.6. </span><span class="content">Kľúčové slová</span><a class="self-link" href="#ckan-api-kľúčová-slová"></a></h4>
+   <h4 class="heading settled" data-level="6.3.6" id="ckan-api-kľúčová-slová"><span class="secno">6.3.6. </span><span class="content">Kľúčové slová</span><a class="self-link" href="#ckan-api-kľúčová-slová"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3525,7 +3673,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.7" id="ckan-api-resources"><span class="secno">5.3.7. </span><span class="content">Distribúcia datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
+   <h4 class="heading settled" data-level="6.3.7" id="ckan-api-resources"><span class="secno">6.3.7. </span><span class="content">Distribúcia datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3550,9 +3698,9 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="5.4" id="ckan-api-distribúcia"><span class="secno">5.4. </span><span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span><a class="self-link" href="#ckan-api-distribúcia"></a></h3>
+   <h3 class="heading settled" data-level="6.4" id="ckan-api-distribúcia"><span class="secno">6.4. </span><span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span><a class="self-link" href="#ckan-api-distribúcia"></a></h3>
     V tejto sekcii sú popísáné položky týkajúce sa distribúcie datasetu, tj. pole <code>resources</code> vo funkcii <code>package_show</code>. 
-   <h4 class="heading settled" data-level="5.4.1" id="ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">5.4.1. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#ckan-api-distribúcia-stiahnutia-súboru"></a></h4>
+   <h4 class="heading settled" data-level="6.4.1" id="ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">6.4.1. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#ckan-api-distribúcia-stiahnutia-súboru"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3575,7 +3723,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.4.2" id="ckan-api-distribúcia-media-type"><span class="secno">5.4.2. </span><span class="content">Media type súboru na stiahnutie</span><a class="self-link" href="#ckan-api-distribúcia-media-type"></a></h4>
+   <h4 class="heading settled" data-level="6.4.2" id="ckan-api-distribúcia-media-type"><span class="secno">6.4.2. </span><span class="content">Media type súboru na stiahnutie</span><a class="self-link" href="#ckan-api-distribúcia-media-type"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3598,7 +3746,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.4.3" id="ckan-api-distribúcia-názov"><span class="secno">5.4.3. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#ckan-api-distribúcia-názov"></a></h4>
+   <h4 class="heading settled" data-level="6.4.3" id="ckan-api-distribúcia-názov"><span class="secno">6.4.3. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#ckan-api-distribúcia-názov"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
