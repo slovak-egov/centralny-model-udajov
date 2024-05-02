@@ -2113,6 +2113,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <ol class="toc">
       <li><a href="#rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">5.1</span> <span class="content">Súbor katalógu</span></a>
       <li><a href="#rozhranie-dcat-ap-dataset"><span class="secno">5.2</span> <span class="content">Súbor datasetu</span></a>
+      <li><a href="#rozhranie-dcat-ap-dataset-hvd"><span class="secno">5.3</span> <span class="content">Súbor HVD datasetu</span></a>
      </ol>
     <li>
      <a href="#rozhranie-ckan-api"><span class="secno">6</span> <span class="content">Rozhranie CKAN API</span></a>
@@ -3482,6 +3483,266 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
           <c- u>"https://www.w3.org/TR/sparql11-protocol/"</c->
         <c- p>],</c->
         <c- f>"prístupový_bod"</c-><c- p>:</c-> <c- u>"https://mindop.sk/sparql"</c-><c- p>,</c->
+        <c- f>"popis_prístupového_bodu"</c-><c- p>:</c-> <c- u>"https://mindop.sk/sparql"</c-><c- p>,</c->
+        <c- f>"dokumentácia"</c-><c- p>:</c-> <c- p>[</c->
+          <c- u>"https://www.w3.org/TR/sparql11-protocol/"</c->
+        <c- p>]</c->
+      <c- p>}</c->
+    <c- p>}</c->
+  <c- p>]</c->
+<c- p>}</c->
+</pre>
+   </div>
+   <h3 class="heading settled" data-level="5.3" id="rozhranie-dcat-ap-dataset-hvd"><span class="secno">5.3. </span><span class="content">Súbor HVD datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset-hvd"></a></h3>
+    Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
+   <div class="example" id="example-d3de7e19">
+    <a class="self-link" href="#example-d3de7e19"></a> 
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dcatap:</c-> <c- g>&lt;http://data.europa.eu/r5r/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>vcard2006:</c-> <c- g>&lt;http://www.w3.org/2006/vcard/ns#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>filetype:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/file-type/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>application:</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>freq:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>theme:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/data-theme/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>continent:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>euroVoc:</c-> <c- g>&lt;http://eurovoc.europa.eu/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
+
+<c- g>&lt;https://data.gov.sk/set/vld></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Public transport timetables"</c-><c- o>@</c->en<c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."</c-><c- o>@</c->sk <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>issued</c-> <c- s>"2024-01-01T12:00:34"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>modified</c-> <c- s>"2024-01-01T14:23:16"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>theme</c-><c- p>:</c-><c- f>TRAN</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- nn>freq</c-><c- p>:</c-><c- f>WEEKLY_3</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"autobusy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"verejná linková doprava"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"timetable"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"bus"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"public transport"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://data.gov.sk/id/nuts1/SK0></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://sws.geonames.org/3057568></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>temporal</c-> <c- p>[</c->
+        <c- b>a</c-> <c- nn>dct</c-><c- p>:</c-><c- f>PeriodOfTime</c-> <c- p>;</c->
+        <c- nn>dcat</c-><c- p>:</c-><c- f>startDate</c-> <c- s>"2009-01-01"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c-> <c- p>;</c->
+        <c- nn>dcat</c-><c- p>:</c-><c- f>endDate</c-> <c- s>"2017-12-31"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c->
+    <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>[</c->
+        <c- b>a</c-> <c- nn>vcard2006</c-><c- p>:</c-><c- f>Organization</c-> <c- p>;</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- s>"mailto:info@mindop.sk"</c->
+    <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>landingPage</c-> <c- g>&lt;https://opendata.mindop.sk/show/vld></c-> <c- p>;</c->
+    <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.middop.sk/dokumentacia/></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>relation</c-> <c- g>&lt;https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/transport/></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>euroVoc</c-><c- p>:</c-><c- f>4512</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>12.0</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>;</c->
+    <c- nn>dcatap</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- p>,</c->
+                      <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
+
+<c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseAuthorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- nn>filetype</c-><c- p>:</c-><c- f>ZIP</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://opendata.middop.sk/schemy/json-schema.json></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- nn>application</c-><c- p>:</c-><c- f>json</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>compressFormat</c-> <c- nn>application</c-><c- p>:</c-><c- f>zip</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>packageFormat</c-> <c- nn>application</c-><c- p>:</c-><c- f>zip</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"JSON distribúcia v ZIP súbore"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"JSON distribution in ZIP file"</c-><c- o>@</c->en <c- p>.</c->
+
+<c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- p>.</c->
+
+<c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>[</c->
+        <c- b>a</c-> <c- nn>vcard2006</c-><c- p>:</c-><c- f>Organization</c-> <c- p>;</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- s>"mailto:info@mindop.sk"</c->
+    <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
+    <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.middop.sk/dokumentacia/sparql></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
+</pre>
+   </div>
+   <div class="example" id="example-867cbd72">
+    <a class="self-link" href="#example-867cbd72"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+<pre class="language-json highlight"><c- p>{</c->
+  <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
+  <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
+  <c- f>"typ"</c-><c- p>:</c-> <c- u>"Dataset"</c-><c- p>,</c->
+  <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Cestovné poriadky"</c-><c- p>,</c->
+    <c- f>"en"</c-><c- p>:</c-> <c- u>"Public transport timetables"</c->
+  <c- p>},</c->
+  <c- f>"popis"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."</c-><c- p>,</c->
+    <c- f>"en"</c-><c- p>:</c-> <c- u>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c->
+  <c- p>},</c->
+  <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/legal-subject/30416094"</c-><c- p>,</c->
+  <c- f>"dátum_publikácie"</c-><c- p>:</c-> <c- u>"2024-01-01T12:00:34"</c-><c- p>,</c->
+  <c- f>"dátum_modifikácie"</c-><c- p>:</c-> <c- u>"2024-01-01T14:23:16"</c-><c- p>,</c->
+  <c- f>"typ_datasetu"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/dataset-type/1"</c-><c- p>,</c->
+  <c- f>"téma"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"http://publications.europa.eu/resource/authority/data-theme/TRAN"</c->
+  <c- p>],</c->
+  <c- f>"periodicita_aktualizácie"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/frequency/WEEKLY_3"</c-><c- p>,</c->
+  <c- f>"kľúčové_slovo"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"sk"</c-><c- p>:</c-> <c- p>[</c->
+      <c- u>"cestovné poriadky"</c-><c- p>,</c->
+      <c- u>"verejná linková doprava"</c-><c- p>,</c->
+      <c- u>"autobus"</c->
+    <c- p>],</c->
+    <c- f>"en"</c-><c- p>:</c-> <c- p>[</c->
+      <c- u>"timetable"</c-><c- p>,</c->
+      <c- u>"public transport"</c-><c- p>,</c->
+      <c- u>"bus"</c->
+    <c- p>]</c->
+  <c- p>},</c->
+  <c- f>"prvok_registra_adries"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://data.gov.sk/id/nuts1/SK0"</c->
+  <c- p>],</c->
+  <c- f>"geografické_územie"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://sws.geonames.org/3057568"</c->
+  <c- p>],</c->
+  <c- f>"časové_pokrytie"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"typ"</c-><c- p>:</c-> <c- u>"Časový interval"</c-><c- p>,</c->
+    <c- f>"začiatok"</c-><c- p>:</c-> <c- u>"2009-01-01"</c-><c- p>,</c->
+    <c- f>"koniec"</c-><c- p>:</c-> <c- u>"2017-12-31"</c->
+  <c- p>},</c->
+  <c- f>"kontaktný_bod"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizácia"</c-><c- p>,</c->
+    <c- f>"meno"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- p>,</c->
+      <c- f>"en"</c-><c- p>:</c-> <c- u>"Ministry of Transport"</c->
+    <c- p>},</c->
+    <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:info@mindop.cz"</c->
+  <c- p>},</c->
+  <c- f>"webová_stránka_datasetu"</c-><c- p>:</c-> <c- u>"https://opendata.mindop.sk/show/vld"</c-><c- p>,</c->
+  <c- f>"súvisiaci_zdroj_datasetu"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"</c->
+  <c- p>],</c->
+  <c- f>"dokumentácia"</c-><c- p>:</c-> <c- u>"https://www.middop.sk/dokumentácia/"</c-><c- p>,</c->
+  <c- f>"špecifikácia"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://data.gov.sk/def/ontology/transport/"</c->
+  <c- p>],</c->
+  <c- f>"koncept_euroVoc"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"http://eurovoc.europa.eu/4512"</c->
+  <c- p>],</c->
+  <c- f>"priestorové_rozlíšenie_v_metroch"</c-><c- p>:</c-> <c- u>"12.0"</c-><c- p>,</c->
+  <c- f>"časové_rozlíšenie"</c-><c- p>:</c-> <c- u>"P1D"</c-><c- p>,</c->
+  <c- f>"právny_predpis"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"http://data.europa.eu/eli/reg_impl/2023/138/oj"</c->
+  <c- p>],</c->
+  <c- f>"kategória_hvd"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"http://data.europa.eu/bna/c_b79e35eb"</c->
+  <c- p>],</c->
+  <c- f>"distribúcia"</c-><c- p>:</c-> <c- p>[</c->
+    <c- p>{</c->
+      <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld/resource/csv"</c-><c- p>,</c->
+      <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribúcia"</c-><c- p>,</c->
+      <c- f>"podmienky_použitia"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"typ"</c-><c- p>:</c-> <c- u>"Špecifikácia podmienok použitia"</c-><c- p>,</c->
+        <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+        <c- f>"autor"</c-><c- p>:</c-> <c- p>{</c->
+          <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c->
+        <c- p>},</c->
+        <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+        <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+        <c- f>"autor_databázy"</c-><c- p>:</c-> <c- p>{</c->
+          <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c->
+        <c- p>},</c->
+        <c- f>"osobné_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
+      <c- p>},</c->
+      <c- f>"prístupové_url"</c-><c- p>:</c-> <c- u>"https://mindop.sk/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
+      <c- f>"právny_predpis"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"http://data.europa.eu/eli/reg_impl/2023/138/oj"</c->
+      <c- p>],</c->
+      <c- f>"kategória_hvd"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"http://data.europa.eu/bna/c_b79e35eb"</c->
+      <c- p>],</c->
+      <c- f>"súbor_na_stiahnutie"</c-><c- p>:</c-> <c- u>"https://mindop.sk/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
+      <c- f>"formát"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/file-type/ZIP"</c-><c- p>,</c->
+      <c- f>"typ_média"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/json"</c-><c- p>,</c->
+      <c- f>"schéma"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/schemata/json-schema.json"</c-><c- p>,</c->
+      <c- f>"typ_média_kompresie"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
+      <c- f>"typ_média_balíčka"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
+      <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"en"</c-><c- p>:</c-> <c- u>"JSON distribution in ZIP file"</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"JSON distribúcia v ZIP soubrou"</c->
+      <c- p>}</c->
+    <c- p>},</c->
+    <c- p>{</c->
+      <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld/resource/sparql"</c-><c- p>,</c->
+      <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribúcia"</c-><c- p>,</c->
+      <c- f>"podmienky_použitia"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"typ"</c-><c- p>:</c-> <c- u>"Špecifikácia podmienok použitia"</c-><c- p>,</c->
+        <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+        <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+        <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+        <c- f>"osobné_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
+      <c- p>},</c->
+      <c- f>"prístupové_url"</c-><c- p>:</c-> <c- u>"https://opendata.mindop.sk/sparql"</c-><c- p>,</c->
+      <c- f>"právny_predpis"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"http://data.europa.eu/eli/reg_impl/2023/138/oj"</c->
+      <c- p>],</c->
+      <c- f>"kategória_hvd"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"http://data.europa.eu/bna/c_b79e35eb"</c->
+      <c- p>],</c->
+      <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pre cestovné poriadky"</c->
+      <c- p>},</c->
+      <c- f>"prístupová_služba"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/id/egov/app-service/123"</c-><c- p>,</c->
+        <c- f>"typ"</c-><c- p>:</c-> <c- u>"Dátová služba"</c-><c- p>,</c->
+        <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
+          <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pre cestovné poriadky"</c-><c- p>,</c->
+          <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c->
+        <c- p>},</c->
+        <c- f>"špecifikácia"</c-><c- p>:</c-> <c- p>[</c->
+          <c- u>"https://www.w3.org/TR/sparql11-protocol/"</c->
+        <c- p>],</c->
+        <c- f>"prístupový_bod"</c-><c- p>:</c-> <c- u>"https://mindop.sk/sparql"</c-><c- p>,</c->
+        <c- f>"právny_predpis"</c-><c- p>:</c-> <c- p>[</c->
+          <c- u>"http://data.europa.eu/eli/reg_impl/2023/138/oj"</c->
+        <c- p>],</c->
+        <c- f>"kategória_hvd"</c-><c- p>:</c-> <c- p>[</c->
+          <c- u>"http://data.europa.eu/bna/c_b79e35eb"</c->
+        <c- p>],</c->
+        <c- f>"kontaktný_bod"</c-><c- p>:</c-> <c- p>{</c->
+          <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizácia"</c-><c- p>,</c->
+          <c- f>"meno"</c-><c- p>:</c-> <c- p>{</c->
+            <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- p>,</c->
+            <c- f>"en"</c-><c- p>:</c-> <c- u>"Ministry of Transport"</c->
+          <c- p>},</c->
+          <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:info@mindop.cz"</c->
+        <c- p>},</c->
         <c- f>"popis_prístupového_bodu"</c-><c- p>:</c-> <c- u>"https://mindop.sk/sparql"</c-><c- p>,</c->
         <c- f>"dokumentácia"</c-><c- p>:</c-> <c- p>[</c->
           <c- u>"https://www.w3.org/TR/sparql11-protocol/"</c->

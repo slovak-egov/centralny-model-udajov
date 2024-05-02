@@ -73,8 +73,12 @@
       "@id": "dcterms:spatial",
       "@type": "@id"
     },
-    "priestorové_pokrytie": {
-      "@id": "dcterms:spatial",
+    "právny_predpis": {
+      "@id": "dcatap:applicablelegislation",
+      "@type": "@id"
+    },
+    "kategória_hvd": {
+      "@id": "dcatap:hvdCategory",
       "@type": "@id"
     },
     "časové_pokrytie": {
