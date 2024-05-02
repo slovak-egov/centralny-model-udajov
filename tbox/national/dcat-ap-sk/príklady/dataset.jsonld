@@ -30,8 +30,11 @@
       "bus"
     ]
   },
-  "geografické_územie": [
+  "prvok_registra_adries": [
     "https://data.gov.sk/id/nuts1/SK0"
+  ],
+  "geografické_územie": [
+    "https://sws.geonames.org/3057568"
   ],
   "časové_pokrytie": {
     "typ": "Časový interval",
@@ -50,7 +53,7 @@
   "súvisiaci_zdroj_datasetu": [
     "https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"
   ],
-  "dokumentácia": "https://www.middop.sk/",
+  "dokumentácia": "https://www.middop.sk/dokumentácia/",
   "špecifikácia": [
     "https://data.gov.sk/def/ontology/transport/"
   ],
@@ -59,6 +62,9 @@
   ],
   "priestorové_rozlíšenie_v_metroch": "12.0",
   "časové_rozlíšenie": "P1D",
+  "právny_predpis": [
+    "https://data.gov.sk/id/eli/sk/zz/2000/211/"
+  ],
   "distribúcia": [
     {
       "iri": "https://data.gov.sk/set/vld/resource/csv",
@@ -114,7 +120,10 @@
           "https://www.w3.org/TR/sparql11-protocol/"
         ],
         "prístupový_bod": "https://mindop.sk/sparql",
-        "popis_prístupového_bodu": "https://mindop.sk/sparql"
+        "popis_prístupového_bodu": "https://mindop.sk/sparql",
+        "dokumentácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ]
       }
     }
   ]
