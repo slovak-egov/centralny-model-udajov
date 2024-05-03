@@ -2014,7 +2014,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Rozhranie katalógu otvorených dát DCAT-AP-SK 3.0.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-05-02">2 May 2024</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-05-03">3 May 2024</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2116,27 +2116,33 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <li><a href="#rozhranie-dcat-ap-dataset-hvd"><span class="secno">5.3</span> <span class="content">Súbor HVD datasetu</span></a>
      </ol>
     <li>
-     <a href="#rozhranie-ckan-api"><span class="secno">6</span> <span class="content">Rozhranie CKAN API</span></a>
+     <a href="#dcat-ap-sk-shacl"><span class="secno">6</span> <span class="content">Povinné vlastností údajov</span></a>
      <ol class="toc">
-      <li><a href="#rozhranie-ckan-api-package-list"><span class="secno">6.1</span> <span class="content">Funkcia <code>package_list</code></span></a>
-      <li><a href="#rozhranie-ckan-api-package-show"><span class="secno">6.2</span> <span class="content">Funkcia <code>package_show</code></span></a>
+      <li><a href="#dcat-ap-sk-shacl-non-hvd"><span class="secno">6.1</span> <span class="content">Povinné vlastnosti datasetu, ktorý nie je typu HVD</span></a>
+      <li><a href="#povinn-vlasnosti-datasetu-ktor-je-typu-hvd"><span class="secno">6.2</span> <span class="content">Povinné vlasnosti datasetu, ktorý je typu HVD.</span></a>
+     </ol>
+    <li>
+     <a href="#rozhranie-ckan-api"><span class="secno">7</span> <span class="content">Rozhranie CKAN API</span></a>
+     <ol class="toc">
+      <li><a href="#rozhranie-ckan-api-package-list"><span class="secno">7.1</span> <span class="content">Funkcia <code>package_list</code></span></a>
+      <li><a href="#rozhranie-ckan-api-package-show"><span class="secno">7.2</span> <span class="content">Funkcia <code>package_show</code></span></a>
       <li>
-       <a href="#rozhranie-ckan-api-hodnoty"><span class="secno">6.3</span> <span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span></a>
+       <a href="#rozhranie-ckan-api-hodnoty"><span class="secno">7.3</span> <span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span></a>
        <ol class="toc">
-        <li><a href="#ckan-api-názov"><span class="secno">6.3.1</span> <span class="content">Názov datasetu</span></a>
-        <li><a href="#ckan-api-popis"><span class="secno">6.3.2</span> <span class="content">Popis datasetu</span></a>
-        <li><a href="#ckan-api-podmienky-pužitia"><span class="secno">6.3.3</span> <span class="content">Odkaz na podmienky použitia</span></a>
-        <li><a href="#ckan-api-e-mail"><span class="secno">6.3.4</span> <span class="content">Email Kurátora dát</span></a>
-        <li><a href="#ckan-api-kurátor"><span class="secno">6.3.5</span> <span class="content">Meno Kurátora dát</span></a>
-        <li><a href="#ckan-api-kľúčová-slová"><span class="secno">6.3.6</span> <span class="content">Kľúčové slová</span></a>
-        <li><a href="#ckan-api-resources"><span class="secno">6.3.7</span> <span class="content">Distribúcia datasetu</span></a>
+        <li><a href="#ckan-api-názov"><span class="secno">7.3.1</span> <span class="content">Názov datasetu</span></a>
+        <li><a href="#ckan-api-popis"><span class="secno">7.3.2</span> <span class="content">Popis datasetu</span></a>
+        <li><a href="#ckan-api-podmienky-pužitia"><span class="secno">7.3.3</span> <span class="content">Odkaz na podmienky použitia</span></a>
+        <li><a href="#ckan-api-e-mail"><span class="secno">7.3.4</span> <span class="content">Email Kurátora dát</span></a>
+        <li><a href="#ckan-api-kurátor"><span class="secno">7.3.5</span> <span class="content">Meno Kurátora dát</span></a>
+        <li><a href="#ckan-api-kľúčová-slová"><span class="secno">7.3.6</span> <span class="content">Kľúčové slová</span></a>
+        <li><a href="#ckan-api-resources"><span class="secno">7.3.7</span> <span class="content">Distribúcia datasetu</span></a>
        </ol>
       <li>
-       <a href="#ckan-api-distribúcia"><span class="secno">6.4</span> <span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span></a>
+       <a href="#ckan-api-distribúcia"><span class="secno">7.4</span> <span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span></a>
        <ol class="toc">
-        <li><a href="#ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">6.4.1</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
-        <li><a href="#ckan-api-distribúcia-media-type"><span class="secno">6.4.2</span> <span class="content">Media type súboru na stiahnutie</span></a>
-        <li><a href="#ckan-api-distribúcia-názov"><span class="secno">6.4.3</span> <span class="content">Názov distribúcie datasetu</span></a>
+        <li><a href="#ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">7.4.1</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
+        <li><a href="#ckan-api-distribúcia-media-type"><span class="secno">7.4.2</span> <span class="content">Media type súboru na stiahnutie</span></a>
+        <li><a href="#ckan-api-distribúcia-názov"><span class="secno">7.4.3</span> <span class="content">Názov distribúcie datasetu</span></a>
        </ol>
      </ol>
     <li>
@@ -2760,10 +2766,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
-Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">dcat:applicablelegislation</a>.</p>
+Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation">dcatap:applicableLegislation</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>právny_predpis</code>, <code>dcat:applicablelegislation</code></p>
+     <p><code>právny_predpis</code>, <code>dcatap:applicableLegislation</code></p>
     <dt data-md>Typ
     <dd data-md>
      <p>IRI právneho predpisu.</p>
@@ -2772,10 +2778,10 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
      <p>Nepovinná, pre HVD datasety povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;https://data.gov.sk/id/eli/2023/138/oj></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;https://data.gov.sk/id/eli/2023/138/oj></c-> <c- p>.</c->
 </pre>
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="3.3.22" id="dataset-kategória-hvd"><span class="secno">3.3.22. </span><span class="content">Kategória HVD</span><a class="self-link" href="#dataset-kategória-hvd"></a></h4>
@@ -2961,10 +2967,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
-Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">dcat:applicablelegislation</a>.</p>
+Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation">dcatap:applicableLegislation</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>právny_predpis</code>, <code>dcat:applicablelegislation</code></p>
+     <p><code>právny_predpis</code>, <code>dcatap:applicableLegislation</code></p>
     <dt data-md>Typ
     <dd data-md>
      <p>IRI právneho predpisu.</p>
@@ -2973,7 +2979,7 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
      <p>Nepovinná, pre HVD datasety povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="3.4.7" id="distribuce-schéma"><span class="secno">3.4.7. </span><span class="content">Odkaz na strojovo-čitateľnú schému súboru na stiahnutie</span><a class="self-link" href="#distribuce-schéma"></a></h4>
@@ -3129,10 +3135,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
-Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation">dcat:applicablelegislation</a>.</p>
+Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation">dcatap:applicableLegislation</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>právny_predpis</code>, <code>dcat:applicablelegislation</code></p>
+     <p><code>právny_predpis</code>, <code>dcatap:applicableLegislation</code></p>
     <dt data-md>Typ
     <dd data-md>
      <p>IRI právneho predpisu.</p>
@@ -3141,7 +3147,7 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
      <p>Nepovinná, pre HVD datasety povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="3.5.4" id="dátová-služba-dokumentácia"><span class="secno">3.5.4. </span><span class="content">Odkaz na dokumentáciu</span><a class="self-link" href="#dátová-služba-dokumentácia"></a></h4>
@@ -3218,8 +3224,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
    <p>Datasety, distribúcie a dátové služby musia byť identifikované svojími IRI, nesmie sa jednať o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax">[rdf11-concepts]</a>.</p>
    <h3 class="heading settled" data-level="5.1" id="rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">5.1. </span><span class="content">Súbor katalógu</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty-katalóg"></a></h3>
     Súbor katalógu je súbor v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a>, ktorý obsahuje inštanciu triedy <code>dcat:Catalog</code> a odkazy na jednotlivé katalogizované datasety. 
-   <div class="example" id="example-c1b17b48">
-    <a class="self-link" href="#example-c1b17b48"></a> 
+   <div class="example" id="example-8a169a56">
+    <a class="self-link" href="#example-8a169a56"></a> <a href="príklady/katalóg.ttl">Príklad katalóu v Turtle</a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c->  <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3241,8 +3247,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
                   <c- g>&lt;https://data.gov.sk/set/zoznam-tratí-2022></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-c6b69654">
-    <a class="self-link" href="#example-c6b69654"></a> <a href="príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalóg.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-3b4fa7b8">
+    <a class="self-link" href="#example-3b4fa7b8"></a> <a href="príklady/katalóg.jsonld">Príklad katalógu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
     <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/lkod/mdsr/katalog"</c-><c- p>,</c->
@@ -3275,8 +3281,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
    </div>
    <h3 class="heading settled" data-level="5.2" id="rozhranie-dcat-ap-dataset"><span class="secno">5.2. </span><span class="content">Súbor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
     Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
-   <div class="example" id="example-5295dc5c">
-    <a class="self-link" href="#example-5295dc5c"></a> 
+   <div class="example" id="example-be6cd0a3">
+    <a class="self-link" href="#example-be6cd0a3"></a> <a href="príklady/dataset.ttl">Príklad datasetu v Turtle</a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3320,7 +3326,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>euroVoc</c-><c- p>:</c-><c- f>4512</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>12.0</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;https://data.gov.sk/id/eli/sk/zz/2000/211/></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;https://data.gov.sk/id/eli/sk/zz/2000/211/></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- p>,</c->
                       <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
 
@@ -3359,8 +3365,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-85e77aae">
-    <a class="self-link" href="#example-85e77aae"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-6d4ed894">
+    <a class="self-link" href="#example-6d4ed894"></a> <a href="príklady/dataset.jsonld">Príklad datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
   <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
@@ -3495,8 +3501,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
    </div>
    <h3 class="heading settled" data-level="5.3" id="rozhranie-dcat-ap-dataset-hvd"><span class="secno">5.3. </span><span class="content">Súbor HVD datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset-hvd"></a></h3>
     Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
-   <div class="example" id="example-d3de7e19">
-    <a class="self-link" href="#example-d3de7e19"></a> 
+   <div class="example" id="example-417215bd">
+    <a class="self-link" href="#example-417215bd"></a> <a href="príklady/dataset-hvd.ttl">Príklad HVD datasetu v Turtle</a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dcatap:</c-> <c- g>&lt;http://data.europa.eu/r5r/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
@@ -3518,7 +3524,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>issued</c-> <c- s>"2024-01-01T12:00:34"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>modified</c-> <c- s>"2024-01-01T14:23:16"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/dataset-type/HVD></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>theme</c-><c- p>:</c-><c- f>TRAN</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- nn>freq</c-><c- p>:</c-><c- f>WEEKLY_3</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"autobusy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"verejná linková doprava"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"timetable"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"bus"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"public transport"</c-><c- o>@</c->en <c- p>;</c->
@@ -3541,7 +3547,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>euroVoc</c-><c- p>:</c-><c- f>4512</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>12.0</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>;</c->
-    <c- nn>dcatap</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
     <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- p>,</c->
                       <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
@@ -3555,7 +3561,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
                     <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseAuthorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
                     <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- nn>filetype</c-><c- p>:</c-><c- f>ZIP</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://opendata.middop.sk/schemy/json-schema.json></c-> <c- p>;</c->
@@ -3571,14 +3577,14 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
                     <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
                     <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- p>.</c->
 
 <c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>applicablelegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
     <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>[</c->
         <c- b>a</c-> <c- nn>vcard2006</c-><c- p>:</c-><c- f>Organization</c-> <c- p>;</c->
@@ -3590,8 +3596,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-867cbd72">
-    <a class="self-link" href="#example-867cbd72"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-0be4abcd">
+    <a class="self-link" href="#example-0be4abcd"></a> <a href="príklady/dataset-hvd.jsonld">Príklad HVD datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
   <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
@@ -3607,7 +3613,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
   <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/legal-subject/30416094"</c-><c- p>,</c->
   <c- f>"dátum_publikácie"</c-><c- p>:</c-> <c- u>"2024-01-01T12:00:34"</c-><c- p>,</c->
   <c- f>"dátum_modifikácie"</c-><c- p>:</c-> <c- u>"2024-01-01T14:23:16"</c-><c- p>,</c->
-  <c- f>"typ_datasetu"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/dataset-type/1"</c-><c- p>,</c->
+  <c- f>"typ_datasetu"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/dataset-type/HVD"</c-><c- p>,</c->
   <c- f>"téma"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"http://publications.europa.eu/resource/authority/data-theme/TRAN"</c->
   <c- p>],</c->
@@ -3753,14 +3759,361 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 <c- p>}</c->
 </pre>
    </div>
-   <h2 class="heading settled" data-level="6" id="rozhranie-ckan-api"><span class="secno">6. </span><span class="content">Rozhranie CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
+   <h2 class="heading settled" data-level="6" id="dcat-ap-sk-shacl"><span class="secno">6. </span><span class="content">Povinné vlastností údajov</span><a class="self-link" href="#dcat-ap-sk-shacl"></a></h2>
+    Táto časť štandardu predstavuje povinné vlastností údaj, špecifikované prostredníctvom jazyka <a href="https://www.w3.org/TR/shacl/">SHACL</a>. 
+   <h3 class="heading settled" data-level="6.1" id="dcat-ap-sk-shacl-non-hvd"><span class="secno">6.1. </span><span class="content">Povinné vlastnosti datasetu, ktorý nie je typu HVD</span><a class="self-link" href="#dcat-ap-sk-shacl-non-hvd"></a></h3>
+    Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset, ktorý nie je typu HVD. 
+   <div class="example" id="example-c28a89db">
+    <a class="self-link" href="#example-c28a89db"></a> <a U0002Ettl href="povinné-vlastnosti/dcat-ap-sk-3.0.0-shapes">Stiahnuť</a> 
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>rdf:</c-> <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>rdfs:</c-> <c- g>&lt;http://www.w3.org/2000/01/rdf-schema#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>pper:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/physical-person/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>lsub:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legal-subject/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>loca:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/location/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>sha-dcatapsk:</c-> <c- g>&lt;https://data.gov.sk/def/shapes/dcat-ap-sk/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>skos:</c-> <c- g>&lt;http://www.w3.org/2004/02/skos/core#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>schema:</c-> <c- g>&lt;http://schema.org/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>geo:</c-> <c- g>&lt;http://www.opengis.net/ont/geosparql#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>sh:</c-> <c- g>&lt;http://www.w3.org/ns/shacl#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODCatalogShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>3.0.0</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c-> <c- p>.</c->
+        
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODDatasetShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_publisher</c-> <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_theme</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_frequency</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_keyword</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_spatial</c-> <c- p>.</c->
+        
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODDistributionShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c-> <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c-> <c- p>.</c->
+        
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>class</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_title</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_description</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_publisher</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_theme</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_frequency</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_spatial</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+		
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_keyword</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->  
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->    
+        
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+</pre>
+   </div>
+   <h3 class="heading settled" data-level="6.2" id="povinn-vlasnosti-datasetu-ktor-je-typu-hvd"><span class="secno">6.2. </span><span class="content">Povinné vlasnosti datasetu, ktorý je typu HVD.</span><a class="self-link" href="#povinn-vlasnosti-datasetu-ktor-je-typu-hvd"></a></h3>
+   <div class="example" id="example-52d5c416">
+    <a class="self-link" href="#example-52d5c416"></a> <a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-hvd-shapes.ttl">Stiahnuť</a> 
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>rdf:</c-> <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>rdfs:</c-> <c- g>&lt;http://www.w3.org/2000/01/rdf-schema#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>pper:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/physical-person/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>lsub:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legal-subject/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>loca:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/location/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>sha-dcatapsk:</c-> <c- g>&lt;https://data.gov.sk/def/shapes/dcat-ap-sk/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dcatap:</c-> <c- g>&lt;http://data.europa.eu/r5r/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>skos:</c-> <c- g>&lt;http://www.w3.org/2004/02/skos/core#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>schema:</c-> <c- g>&lt;http://schema.org/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>geo:</c-> <c- g>&lt;http://www.opengis.net/ont/geosparql#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>sh:</c-> <c- g>&lt;http://www.w3.org/ns/shacl#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODCatalogShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>3.0.0</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODHVDDatasetShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_type</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_theme</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_frequency</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_keyword</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_applicable_legislation</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_hvd_category</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_spatial</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODHVDDistributionShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_applicable_legislation</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>class</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_type</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/dataset-type/HVD></c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_title</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_description</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_publisher</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_theme</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_frequency</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_spatial</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_keyword</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_applicable_legislation</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_hvd_category</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_applicable_legislation</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+</pre>
+   </div>
+   <h2 class="heading settled" data-level="7" id="rozhranie-ckan-api"><span class="secno">7. </span><span class="content">Rozhranie CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
     CKAN API je rozhranie pre implementáciu dátového katalógu <a href="https://ckan.org/">CKAN</a>.
 Je založené na formáte JSON <a data-link-type="biblio" href="#biblio-ecma-404" title="The JSON Data Interchange Format, 2nd edition">[ECMA-404]</a>, a obsahuje dve hlavné funkcie, <code>package_list</code> a <code>package_show</code>.
 Toto rozhranie je implemetované samotným katalógom <a href="https://ckan.org/">CKAN</a> a tiež katalógom <a href="https://getdkan.org/">DKAN</a>. 
    <div class="advisement"> Rozhranie CKAN API je podporované iba z dôvodu zpätnej kompatibility.
 Nebude se rozšiřovať o nové položky anie funkcionality a neumožňuje kvalitne katalogizovať datasety podľa štandardu <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.
 Rozhranie CKAN API sa prestane úplne podporovať. Pokiaľ je to možné, použite jedno z rozhraní kompatibilných s DCAT-AP. </div>
-   <h3 class="heading settled" data-level="6.1" id="rozhranie-ckan-api-package-list"><span class="secno">6.1. </span><span class="content">Funkcia <code>package_list</code></span><a class="self-link" href="#rozhranie-ckan-api-package-list"></a></h3>
+   <h3 class="heading settled" data-level="7.1" id="rozhranie-ckan-api-package-list"><span class="secno">7.1. </span><span class="content">Funkcia <code>package_list</code></span><a class="self-link" href="#rozhranie-ckan-api-package-list"></a></h3>
     Táto funkcia vracia zoznam identifikátorov jednotlivých datasetov registrovaných v LKOD.
 Tieto identifikátory sa následne predávajú funkcii <code>package_show</code> v parametri <code>id</code>.
 Identifikátory môžu obsahovať písmena, čísla, pomlčky a podtržítka.
@@ -3777,7 +4130,7 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="6.2" id="rozhranie-ckan-api-package-show"><span class="secno">6.2. </span><span class="content">Funkcia <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
+   <h3 class="heading settled" data-level="7.2" id="rozhranie-ckan-api-package-show"><span class="secno">7.2. </span><span class="content">Funkcia <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
     Táto funkcia vracia metadátový záznam pre dataset, ktorej identifikátor je predaný v parametri <code>id</code>. 
    <div class="example" id="example-f72f8d0a">
     <a class="self-link" href="#example-f72f8d0a"></a> Pre URL <code>https://organizacia.sk/api/3/action/package_show?id=zeleznice</code> 
@@ -3805,9 +4158,9 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="6.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">6.3. </span><span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
+   <h3 class="heading settled" data-level="7.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">7.3. </span><span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
     V tejto sekci sú popísané položky týkajúce sa datasetu vo funkci <code>package_show</code>. 
-   <h4 class="heading settled" data-level="6.3.1" id="ckan-api-názov"><span class="secno">6.3.1. </span><span class="content">Názov datasetu</span><a class="self-link" href="#ckan-api-názov"></a></h4>
+   <h4 class="heading settled" data-level="7.3.1" id="ckan-api-názov"><span class="secno">7.3.1. </span><span class="content">Názov datasetu</span><a class="self-link" href="#ckan-api-názov"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3828,7 +4181,7 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.3.2" id="ckan-api-popis"><span class="secno">6.3.2. </span><span class="content">Popis datasetu</span><a class="self-link" href="#ckan-api-popis"></a></h4>
+   <h4 class="heading settled" data-level="7.3.2" id="ckan-api-popis"><span class="secno">7.3.2. </span><span class="content">Popis datasetu</span><a class="self-link" href="#ckan-api-popis"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3849,7 +4202,7 @@ Nesmú však obsahovať medzeru.
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.3.3" id="ckan-api-podmienky-pužitia"><span class="secno">6.3.3. </span><span class="content">Odkaz na podmienky použitia</span><a class="self-link" href="#ckan-api-podmienky-pužitia"></a></h4>
+   <h4 class="heading settled" data-level="7.3.3" id="ckan-api-podmienky-pužitia"><span class="secno">7.3.3. </span><span class="content">Odkaz na podmienky použitia</span><a class="self-link" href="#ckan-api-podmienky-pužitia"></a></h4>
    <p>V štandarde DCAT-AP, na ktorom je Národný katalog otvorených dat založený, sú podmienky použitia Vlastnosťou distribúcie datasetu.
 V rozhraní CKAN API je to však Vlastnosťou celého datasetu.
 Podmienky použitia sa teda interpretujú ako identické pre všetky distribúce datasetu.
@@ -3874,7 +4227,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.3.4" id="ckan-api-e-mail"><span class="secno">6.3.4. </span><span class="content">Email Kurátora dát</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
+   <h4 class="heading settled" data-level="7.3.4" id="ckan-api-e-mail"><span class="secno">7.3.4. </span><span class="content">Email Kurátora dát</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3895,7 +4248,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.3.5" id="ckan-api-kurátor"><span class="secno">6.3.5. </span><span class="content">Meno Kurátora dát</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
+   <h4 class="heading settled" data-level="7.3.5" id="ckan-api-kurátor"><span class="secno">7.3.5. </span><span class="content">Meno Kurátora dát</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3916,7 +4269,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.3.6" id="ckan-api-kľúčová-slová"><span class="secno">6.3.6. </span><span class="content">Kľúčové slová</span><a class="self-link" href="#ckan-api-kľúčová-slová"></a></h4>
+   <h4 class="heading settled" data-level="7.3.6" id="ckan-api-kľúčová-slová"><span class="secno">7.3.6. </span><span class="content">Kľúčové slová</span><a class="self-link" href="#ckan-api-kľúčová-slová"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3943,7 +4296,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.3.7" id="ckan-api-resources"><span class="secno">6.3.7. </span><span class="content">Distribúcia datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
+   <h4 class="heading settled" data-level="7.3.7" id="ckan-api-resources"><span class="secno">7.3.7. </span><span class="content">Distribúcia datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3968,9 +4321,9 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="6.4" id="ckan-api-distribúcia"><span class="secno">6.4. </span><span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span><a class="self-link" href="#ckan-api-distribúcia"></a></h3>
+   <h3 class="heading settled" data-level="7.4" id="ckan-api-distribúcia"><span class="secno">7.4. </span><span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span><a class="self-link" href="#ckan-api-distribúcia"></a></h3>
     V tejto sekcii sú popísáné položky týkajúce sa distribúcie datasetu, tj. pole <code>resources</code> vo funkcii <code>package_show</code>. 
-   <h4 class="heading settled" data-level="6.4.1" id="ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">6.4.1. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#ckan-api-distribúcia-stiahnutia-súboru"></a></h4>
+   <h4 class="heading settled" data-level="7.4.1" id="ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">7.4.1. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#ckan-api-distribúcia-stiahnutia-súboru"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3993,7 +4346,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.4.2" id="ckan-api-distribúcia-media-type"><span class="secno">6.4.2. </span><span class="content">Media type súboru na stiahnutie</span><a class="self-link" href="#ckan-api-distribúcia-media-type"></a></h4>
+   <h4 class="heading settled" data-level="7.4.2" id="ckan-api-distribúcia-media-type"><span class="secno">7.4.2. </span><span class="content">Media type súboru na stiahnutie</span><a class="self-link" href="#ckan-api-distribúcia-media-type"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -4016,7 +4369,7 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="6.4.3" id="ckan-api-distribúcia-názov"><span class="secno">6.4.3. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#ckan-api-distribúcia-názov"></a></h4>
+   <h4 class="heading settled" data-level="7.4.3" id="ckan-api-distribúcia-názov"><span class="secno">7.4.3. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#ckan-api-distribúcia-názov"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>

@@ -1,0 +1,209 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/schémy/katalóg.json",
+	"type": "object",
+	"title": "Katalóg",
+	"$defs": {
+        "text": {
+            "name": "Text",
+            "type": "object",
+            "description": "Viacjazyčný text",
+            "anyOf": [
+                {
+                    "required": [
+                        "sk"
+                    ],
+                    "properties": {
+                        "sk": {
+                            "type": "string",
+                            "title": "Text slovensky",
+                            "description": "Text slovensky",
+                            "examples": [
+                                "Text slovensky"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "required": [
+                        "en"
+                    ],
+                    "properties": {
+                        "en": {
+                            "type": "string",
+                            "title": "Text anglicky",
+                            "description": "Text anglicky",
+                            "examples": [
+                                "Text in English"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "additionalProperties": {
+                "type": "string"
+            }
+        },
+        "více-textů": {
+            "name": "Více textů",
+            "type": "object",
+            "description": "Více vícejazyčných textů",
+            "anyOf": [
+                {
+                    "required": [
+                        "sk"
+                    ],
+                    "properties": {
+                        "sk": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "title": "Text slovensky",
+                                    "description": "Text slovensky",
+                                    "examples": [
+                                        "Text slovensky"
+                                    ]
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "title": "Text slovensky",
+                                        "description": "Text slovensky",
+                                        "examples": [
+                                            "Text slovensky"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "required": [
+                        "en"
+                    ],
+                    "properties": {
+                        "en": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "title": "Text anglicky",
+                                    "description": "Text anglicky",
+                                    "examples": [
+                                        "Text in English"
+                                    ]
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "title": "Text anglicky",
+                                        "description": "Text anglicky",
+                                        "examples": [
+                                            "Text in English"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+	"required": ["typ", "iri", "názov", "popis", "poskytovateľ", "dataset"],
+	"properties": {
+		"typ": {
+			"oneOf": [{
+				"const": "Katalóg"
+				},{
+				"type": "array",
+				"contains": {
+					"const": "Katalóg"
+				},
+				"items": {
+					"type": "string"
+				}
+			}]
+		},
+		"iri": {
+			"type": "string",
+			"format": "iri",
+			"title": "Identifikátor",
+			"minLength": 8,
+			"pattern": "^https?://",
+			"examples": [
+				"https://www.trebic.cz/zdroj/aktualita/2020/dopadení-lupiče-na-francouzské-ulici"
+			]
+		},
+		"názov": {
+			"$ref": "#/$defs/text"
+		},
+		"popis": {
+			"$ref": "#/$defs/text"
+		},
+		"poskytovateľ": {
+			"type": "string",
+			"format": "iri",
+			"title": "Poskytovatel",
+			"examples": [
+				"https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"
+			]
+		},
+		"kontaktný_bod": {
+			"type": "object",
+			"required": [ "typ" ],
+			"properties": {
+				"typ": {
+					"type": "string",
+					"examples": [ "Organizace" ]
+				},
+				"meno": {
+					"$ref": "#/$defs/text"
+				},
+				"e-mail": {
+					"type": "string",
+					"format": "iri",
+					"pattern": "^mailto\\:",
+					"examples": [
+						"mailto:sekretariat.190@mdcr.cz"
+					]
+				}
+			}
+		},
+		"domovská_stránka": {
+			"type": "string",
+			"format": "iri",
+			"title": "Domovská stránka",
+			"minLength": 8,
+			"pattern": "^https://",
+			"examples": [
+				"https://data.gov.cz/"
+			]
+		},
+		"dataset": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "iri",
+				"minLength": 8,
+				"pattern": "^https://",					
+				"title": "Dataset"
+			}
+		}
+	}
+}

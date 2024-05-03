@@ -559,9 +559,9 @@ dataset: dcat:temporalResolution "P1D"^^xsd:duration .
 
 : Popis
 :: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
-    Je definovaný ako [dcat:applicablelegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation).
+    Je definovaný ako [dcatap:applicableLegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation).
 : Vlastnosť
-:: `právny_predpis`, `dcat:applicablelegislation`
+:: `právny_predpis`, `dcatap:applicableLegislation`
 : Typ
 :: IRI právneho predpisu.
 : Povinnosť
@@ -569,11 +569,11 @@ dataset: dcat:temporalResolution "P1D"^^xsd:duration .
 : Príklad
 :: 
     ```turtle
-dataset: dcat:applicablelegislation <https://data.gov.sk/id/eli/2023/138/oj> .
+dataset: dcatap:applicableLegislation <https://data.gov.sk/id/eli/2023/138/oj> .
     ```
 :: 
     ```turtle
-dataset: dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
     ```
     
 ### Kategória HVD ### {#dataset-kategória-hvd}
@@ -735,9 +735,9 @@ distribúcia: dcat:mediaType <http://www.iana.org/assignments/media-types/text/c
 
 : Popis
 :: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
-    Je definovaný ako [dcat:applicablelegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation).
+    Je definovaný ako [dcatap:applicableLegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation).
 : Vlastnosť
-:: `právny_predpis`, `dcat:applicablelegislation`
+:: `právny_predpis`, `dcatap:applicableLegislation`
 : Typ
 :: IRI právneho predpisu.
 : Povinnosť
@@ -745,7 +745,7 @@ distribúcia: dcat:mediaType <http://www.iana.org/assignments/media-types/text/c
 : Príklad
 :: 
     ```turtle
-distribúcia: dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+distribúcia: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
     ```
 
 ### Odkaz na strojovo-čitateľnú schému súboru na stiahnutie ### {#distribuce-schéma}
@@ -880,9 +880,9 @@ služba: dcat:endpointURL <https://data.gov.sk/sparql> .
 
 : Popis
 :: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
-    Je definovaný ako [dcat:applicablelegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicablelegislation).
+    Je definovaný ako [dcatap:applicableLegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation).
 : Vlastnosť
-:: `právny_predpis`, `dcat:applicablelegislation`
+:: `právny_predpis`, `dcatap:applicableLegislation`
 : Typ
 :: IRI právneho predpisu.
 : Povinnosť
@@ -890,7 +890,7 @@ služba: dcat:endpointURL <https://data.gov.sk/sparql> .
 : Príklad
 :: 
     ```turtle
-služba: dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+služba: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
     ```
 
 ### Odkaz na dokumentáciu ### {#dátová-služba-dokumentácia}
@@ -967,6 +967,7 @@ Súbor katalógu {#rozhranie-dcat-ap-dokumenty-katalóg}
 Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[!json-ld11]], ktorý obsahuje inštanciu triedy `dcat:Catalog` a odkazy na jednotlivé katalogizované datasety.
 
 <div class='example'>
+<a href="príklady/katalóg.ttl">Príklad katalóu v Turtle</a>
 ```turtle
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -991,7 +992,7 @@ Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[
 </div>
 
 <div class='example'>
-<a href="príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalóg.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+<a href="príklady/katalóg.jsonld">Príklad katalógu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
     "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
@@ -1029,6 +1030,7 @@ Súbor datasetu {#rozhranie-dcat-ap-dataset}
 Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle [[!turtle]] či JSON-LD [[!json-ld11]] obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií.
 
 <div class='example'>
+<a href="príklady/dataset.ttl">Príklad datasetu v Turtle</a>
 ```turtle
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -1073,7 +1075,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
-    dcat:applicablelegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
+    dcat:applicableLegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
     dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
                       <https://data.gov.sk/set/vld/resource/sparql> .
 
@@ -1114,7 +1116,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
 </div>
 
 <div class='example'>
-<a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+<a href="príklady/dataset.jsonld">Príklad datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
   "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
@@ -1254,6 +1256,7 @@ Súbor HVD datasetu {#rozhranie-dcat-ap-dataset-hvd}
 Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle [[!turtle]] či JSON-LD [[!json-ld11]] obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií.
 
 <div class='example'>
+<a href="príklady/dataset-hvd.ttl">Príklad HVD datasetu v Turtle</a>
 ```turtle
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcatap: <http://data.europa.eu/r5r/> .
@@ -1276,7 +1279,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
     dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
     dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
     dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
-    dct:type <https://data.gov.sk/def/dataset-type/1> ;
+    dct:type <http://publications.europa.eu/resource/authority/dataset-type/HVD> ;
     dcat:theme theme:TRAN ;
     dct:accrualPeriodicity freq:WEEKLY_3 ;
     dcat:keyword "autobusy"@sk, "cestovné poriadky"@sk, "verejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
@@ -1299,7 +1302,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
-    dcatap:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
     dcatap:hvdCategory <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
     dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
                       <https://data.gov.sk/set/vld/resource/sparql> .
@@ -1313,7 +1316,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
                     leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
-    dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
     dcat:downloadURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
     dct:format filetype:ZIP ;
     dct:conformsTo <https://opendata.middop.sk/schemy/json-schema.json> ;
@@ -1329,14 +1332,14 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
                     leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://opendata.middop.sk/sparql> ;
-    dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
     dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
     dcat:accessService <https://data.gov.sk/id/egov/app-service/123> .
 
 <https://data.gov.sk/id/egov/app-service/123> a dcat:DataService ;
     dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
     dcat:endpointURL <https://opendata.middop.sk/sparql> ;
-    dcat:applicablelegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
     dcatap:hvdCategory <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
     dcat:contactPoint [
         a vcard2006:Organization ;
@@ -1350,7 +1353,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
 </div>
 
 <div class='example'>
-<a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+<a href="príklady/dataset-hvd.jsonld">Príklad HVD datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
   "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
@@ -1367,7 +1370,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
   "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
   "dátum_publikácie": "2024-01-01T12:00:34",
   "dátum_modifikácie": "2024-01-01T14:23:16",
-  "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
+  "typ_datasetu": "http://publications.europa.eu/resource/authority/dataset-type/HVD",
   "téma": [
     "http://publications.europa.eu/resource/authority/data-theme/TRAN"
   ],
@@ -1511,6 +1514,363 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
     }
   ]
 }
+```
+</div>
+
+Povinné vlastností údajov {#dcat-ap-sk-shacl}
+=============================================
+Táto časť štandardu predstavuje povinné vlastností údaj, špecifikované prostredníctvom jazyka [SHACL](https://www.w3.org/TR/shacl/).
+
+Povinné vlastnosti datasetu, ktorý nie je typu HVD {#dcat-ap-sk-shacl-non-hvd}
+---------------
+Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset, ktorý nie je typu HVD. 
+
+<div class='example'>
+<a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-shapes".ttl>Stiahnuť</a>
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+@prefix sha-dcatapsk: <https://data.gov.sk/def/shapes/dcat-ap-sk/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-dcatapsk:NKODCatalogShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Catalog ;
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0
+	sh:property sha-dcatapsk:catalog_title ;
+	sh:property sha-dcatapsk:catalog_description ;
+	sh:property sha-dcatapsk:catalog_publisher ;
+	sh:property sha-dcatapsk:catalog_dataset .
+        
+sha-dcatapsk:NKODDatasetShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Dataset ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:dataset_title ;
+	sh:property sha-dcatapsk:dataset_description ;
+	sh:property sha-dcatapsk:dataset_publisher ;        
+	sh:property sha-dcatapsk:dataset_theme ;
+	sh:property sha-dcatapsk:dataset_frequency ;
+	sh:property sha-dcatapsk:dataset_keyword ;
+	sh:property sha-dcatapsk:dataset_spatial .
+        
+sha-dcatapsk:NKODDistributionShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Distribution ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:distribution_termsOfUse ;
+	sh:property sha-dcatapsk:distribution_downloadURL ;
+	sh:property sha-dcatapsk:distribution_accessURL ;        
+	sh:property sha-dcatapsk:distribution_format ;
+	sh:property sha-dcatapsk:distribution_mediaType .
+        
+sha-dcatapsk:catalog_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:catalog_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:catalog_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+	
+sha-dcatapsk:catalog_dataset
+	a sh:PropertyShape ;
+	sh:path dcat:dataset ;
+	sh:class dcat:Dataset ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:dataset_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:dataset_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+	
+sha-dcatapsk:dataset_theme
+	a sh:PropertyShape ;
+	sh:path dcat:theme ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:dataset_frequency
+	a sh:PropertyShape ;
+	sh:path dct:accrualPeriodicity ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_spatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+		
+sha-dcatapsk:dataset_keyword
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .	
+	
+sha-dcatapsk:distribution_termsOfUse
+	a sh:PropertyShape ;
+	sh:path leg:termsOfUse ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+
+sha-dcatapsk:distribution_downloadURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+	
+sha-dcatapsk:distribution_accessURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+
+sha-dcatapsk:distribution_format
+	a sh:PropertyShape ;
+	sh:path dct:format ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .		
+        
+sha-dcatapsk:distribution_mediaType
+	a sh:PropertyShape ;
+	sh:path dcat:mediaType ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+```
+</div>
+
+Povinné vlasnosti datasetu, ktorý je typu HVD. 
+---------------
+
+<div class='example'>
+<a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-hvd-shapes.ttl">Stiahnuť</a>
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+@prefix sha-dcatapsk: <https://data.gov.sk/def/shapes/dcat-ap-sk/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-dcatapsk:NKODCatalogShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Catalog ;
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0
+	sh:property sha-dcatapsk:catalog_title ;
+	sh:property sha-dcatapsk:catalog_description ;
+	sh:property sha-dcatapsk:catalog_publisher ;
+	sh:property sha-dcatapsk:catalog_dataset .
+
+sha-dcatapsk:NKODHVDDatasetShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Dataset ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:dataset_type ;
+	sh:property sha-dcatapsk:dataset_title ;
+	sh:property sha-dcatapsk:dataset_description ;
+	sh:property sha-dcatapsk:dataset_publisher ;
+	sh:property sha-dcatapsk:dataset_theme ;
+	sh:property sha-dcatapsk:dataset_frequency ;
+	sh:property sha-dcatapsk:dataset_keyword ;
+	sh:property sha-dcatapsk:dataset_applicable_legislation ;
+	sh:property sha-dcatapsk:dataset_hvd_category ;
+	sh:property sha-dcatapsk:dataset_spatial .
+
+sha-dcatapsk:NKODHVDDistributionShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Distribution ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:distribution_termsOfUse ;
+	sh:property sha-dcatapsk:distribution_downloadURL ;
+	sh:property sha-dcatapsk:distribution_accessURL ;
+	sh:property sha-dcatapsk:distribution_applicable_legislation ;
+	sh:property sha-dcatapsk:distribution_format ;
+	sh:property sha-dcatapsk:distribution_mediaType .
+
+sha-dcatapsk:catalog_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:catalog_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:catalog_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:catalog_dataset
+	a sh:PropertyShape ;
+	sh:path dcat:dataset ;
+	sh:class dcat:Dataset ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_type
+	a sh:PropertyShape ;
+	sh:path dct:type ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://publications.europa.eu/resource/authority/dataset-type/HVD> .
+
+sha-dcatapsk:dataset_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_theme
+	a sh:PropertyShape ;
+	sh:path dcat:theme ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_frequency
+	a sh:PropertyShape ;
+	sh:path dct:accrualPeriodicity ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_spatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_keyword
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:dataset_hvd_category
+	a sh:PropertyShape ;
+	sh:path dcatap:hvdCategory ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:distribution_termsOfUse
+	a sh:PropertyShape ;
+	sh:path leg:termsOfUse ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_downloadURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_accessURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:distribution_format
+	a sh:PropertyShape ;
+	sh:path dct:format ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_mediaType
+	a sh:PropertyShape ;
+	sh:path dcat:mediaType ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
 ```
 </div>
 

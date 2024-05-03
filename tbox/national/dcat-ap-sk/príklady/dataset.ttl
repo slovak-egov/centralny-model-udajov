@@ -41,7 +41,7 @@
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
-    dcat:applicablelegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
+    dcat:applicableLegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
     dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
                       <https://data.gov.sk/set/vld/resource/sparql> .
 
