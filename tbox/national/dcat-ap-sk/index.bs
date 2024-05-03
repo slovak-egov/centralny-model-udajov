@@ -7,10 +7,11 @@ Repository: https://github.com/slovak-egov/centralny-model-udajov/
 Markup Shorthands: markdown yes
 Level: 1
 Status: LS
+TR: https://datova-kancelaria.github.io/dcat-ap-sk-2.0/
 Group: MIRRI
 URL: https://htmlpreview.github.io/?https://github.com/slovak-egov/centralny-model-udajov/blob/develop/tbox/national/dcat-ap-sk/index.html
-Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
 Editor: Miroslav Líška, MIRRI https://www.mirri.gov.sk/, miroslav.liska@mirri.gov.sk, https://www.linkedin.com/in/miroslavliska
+Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
 Abstract: Cieľom tohto dokumentu je špecifikovať dátový model a rozhranie lokálných katalógov otvorených dát (LKOD) pre ich harvestovanie Národným katalógom otevrených dát (NKOD). Rovnaká špecifikácia platí aj pre dátový model NKOD a dáta poskytované z NKOD v podobe súborov na stiahnutie resp. cez SPARQL endpoint. Najskôr je špecifikovaný dátový model katalogizačného záznamu. Následne sú špecifikované 2 varianty rozhrania pre harvestáciu, ktoré sú založené na [štandarde DCAT-AP 3.0.0](https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300). Jedna používa SPARQL endpoint a druhá špecifikuje variantu uloženia záznamov v súboroch, bez použitia SPARQL endpointu.
 </pre>
 
@@ -35,7 +36,9 @@ Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard D
 - povinne používaný identifikátor pre právny predpis pre HVD - http://data.europa.eu/eli/reg_impl/2023/138/oj
 - povinnosť špecifikovať kontaktný bod a dokumentáciu dátovej služby sprístupňujúce HVDs.
 
-
+2.3. Pridanie formálnych pravidiel pomocou jazyka [SHACL](https://www.w3.org/TR/shacl/) pre validáciu správnosti metadát pre LKODy (Lokálne katalógy otvorených dát)
+- [Povinné vlastnosti datasetu, ktorý nie je typu HVD](index.html#dcat-ap-sk-shacl-non-hvd)
+- [Povinné vlastnosti HVD datasetu](index.html#povinn-vlasnosti-datasetu-ktor-je-typu-hvd)
 
 Položky metadátového záznamu {#položky-metadátového-záznamu}
 ============================================================
