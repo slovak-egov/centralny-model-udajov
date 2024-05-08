@@ -21,18 +21,18 @@ Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsob
 
 Čo je nové? {#novinky}
 ======================
-Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3 a DCAP-AP-HVD. V detaile pribudli:
+Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3.0.0 a DCAP-AP-HVD-2.2.0. V detaile pribudli:
 
 2.1. Zosúladenie na štandard [DCAT-AP-3.0.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
 - samostatná trieda pre dátovú sériu dcat:DatasetSeries
 - nové metaúdaje: pre triedu Dataset - dátum vytvorenia, dátum modifikácie, webový odkaz  
 - nový EÚ číselník licencie
 - nová trieda Právny predpis
-- pridanie väzby je dcat:inSeries (napr. Dataset je súčasťou Dátovej série)
+- pridanie väzby je súčasťou dcat:inSeries (napr. Dataset je súčasťou Dátovej série)
 - špecifikácia dátovej kocky popisujúcej dataset je realizovaná prostredníctvom existujúcej vlastnosti dct:conformsTo (odkaz na špecifikáciu)
 
-2.2. Zosúladenie na štandardu [DCAT-AP-HVD](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
-- nový EÚ číselník kategória HVD
+2.2. Zosúladenie na štandardu [DCAT-AP-HVD](https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/)
+- nový EÚ číselník kategória HVD pre Dataset a Dátovú službu
 - povinne používaný identifikátor pre právny predpis pre HVD - http://data.europa.eu/eli/reg_impl/2023/138/oj
 - povinnosť špecifikovať kontaktný bod a dokumentáciu dátovej služby sprístupňujúce HVDs.
 
@@ -50,7 +50,6 @@ Položky sa riadia štandardom [DCAT Application Profile for data portals in Eur
     <img alt="Konceptuálný model DCAT-AP-SK 3.0.0" src="dcat-ap-sk-3.0.0.svg">
     <figcaption>Diagram dátového modelu DCAT-AP-SK 3.0.0 Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
 </figure>
-
 
 Medzi hlavné triedy štandardu patrí Katalóg, čo je najvyššia entita zoskupujúca množinu Datasetov. Tieto Datasety môžu byť naviac zoskupené do Dátových sérií. Dáta samotného Datasetu na stiahnutie alebo na prístup cez API sa nazývajú Distribúcie, ktoré môžu byť dostupné v rôznom formáte. Distribúcia môže byť prístupná aj cez API, tj. cez Dátovú službu. 
 Distribúcií môže mať Dataset viacej, avšak líšiť sa môžu jedine formátom (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
@@ -91,7 +90,7 @@ Trieda: Katalóg {#trieda-katalóg}
 --------------
 
 : Popis
-:: Trieda reprezentujúca dátový katalóg. Je definovaná ako [dcat:Catalog](https://www.w3.org/TR/vocab&#45;dcat&#45;2/#Class:Catalog).
+:: Trieda reprezentujúca dátový katalóg. Je definovaná ako [dcat:Catalog](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog).
 : Príklad
 ::  
     ```turtle
@@ -101,7 +100,7 @@ katalog: a dcat:Catalog .
 ### Názov ### {#katalóg-názov}
 
 : Popis
-:: Táto vlastnosť obsahuje názov dátového katalógu. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
+:: Táto vlastnosť obsahuje názov dátového katalógu. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
 : Vlastnosť
 :: `názov`, `dct:title`
 : Typ
@@ -117,7 +116,7 @@ katalog: dct:title "Katalóg otvorených dát Ministerstva dopravy"@sk, "Open Da
 ### Popis ### {#katalóg-popis}
 
 : Popis
-:: Táto Vlastnosť obsahuje volný text s popisom dátového katalógu. Je definovaná ako [dct:description](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description).
+:: Táto Vlastnosť obsahuje volný text s popisom dátového katalógu. Je definovaná ako [dct:description](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description).
 : Vlastnosť
 :: `popis`, `dct:description`
 : Typ
@@ -133,7 +132,7 @@ katalog: dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje dataset
 ### Poskytovateľ ### {#katalóg-poskytovateľ}
 
 : Popis
-:: Poskytovateľ dátového katalógu. Je definovaná ako [dct:publisher](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher).
+:: Poskytovateľ dátového katalógu. Je definovaná ako [dct:publisher](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher).
 : Vlastnosť
 :: `poskytovateľ`, `dct:publisher`
 : Typ
@@ -149,7 +148,7 @@ katalog: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
 ### Kontaktný bod - meno a email ### {#katalóg-kontaktný-bod}
 
 : Popis
-:: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok ku katalógu. Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point).
+:: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok ku katalógu. Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).
 : Vlastnosť
 :: `kontaktný_bod`, `dcat:contactPoint`
 : Typ
@@ -169,7 +168,7 @@ správca: a vcard:Individual ;
 ### Domovská stránka ### {#katalóg-domovská-stránka}
 
 : Popis
-:: Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako [foaf:homepage](https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage).
+:: Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako [foaf:homepage](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage).
 : Vlastnosť
 :: `domovská_stránka`, `foaf:homepage`
 : Typ
@@ -185,7 +184,7 @@ katalog: foaf:homepage <https://opendata.mindop.sk/> .
 ### Väzba: dataset ### {#katalóg-dataset}
 
 : Popis
-:: Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako [dcat:dataset](https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset).
+:: Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako [dcat:dataset](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset).
 : Vlastnosť
 :: `dataset`, `dcat:dataset`
 : Typ
@@ -202,7 +201,7 @@ Trieda: Dataset {#trieda-dataset}
 --------------
 
 : Popis
-:: Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset).
+:: Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset).
 : Príklad
 ::  
     ```turtle
@@ -212,7 +211,7 @@ dataset: a dcat:Dataset .
 ### Názov ### {#dataset-názov}
 
 : Popis
-:: Táto Vlastnosť obsahuje názov datasetu. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
+:: Táto Vlastnosť obsahuje názov datasetu. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
 : Vlastnosť
 :: `názov`, `dct:title`
 : Typ
@@ -228,7 +227,7 @@ dataset: dct:title "Kontroly plnenia Povinnosti zamestnávateľov v oblasti soci
 ### Popis ### {#dataset-popis}
 
 : Popis
-:: Táto Vlastnosť obsahuje volný text s popisom datasetu. Je definovaná ako [dct:description](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description).
+:: Táto Vlastnosť obsahuje volný text s popisom datasetu. Je definovaná ako [dct:description](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description).
 : Vlastnosť
 :: `popis`, `dct:description`
 : Typ
@@ -244,7 +243,7 @@ dataset: dct:description "Štatistika kontrol plnenia Povinností zamestnávate�
 ### Poskytovateľ ### {#dataset-poskytovateľ}
 
 : Popis
-:: Poskytovateľ datasetu. Je definovaná ako [dct:publisher](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher).
+:: Poskytovateľ datasetu. Je definovaná ako [dct:publisher](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher).
 : Vlastnosť
 :: `poskytovateľ`, `dct:publisher`
 : Typ
@@ -260,7 +259,7 @@ dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
 ### Dátum publikácie ### {#dataset-dátum-publikácie}
 
 : Popis
-:: Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako [dct:issued](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date).
+:: Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako [dct:issued](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date).
 : Vlastnosť
 :: `dátum_publikácie`, `dct:issued`
 : Typ
@@ -276,7 +275,7 @@ dataset: dct:issued "2024-01-21T12:00:00"^^xsd:dateTime .
 ### Dátum modifikácie ### {#dataset-dátum-modifikácie}
 
 : Popis
-:: Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako [dct:modified](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date).
+:: Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako [dct:modified](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date).
 : Vlastnosť
 :: `dátum_modifikácie`, `dct:modified`
 : Typ
@@ -294,8 +293,8 @@ dataset: dct:modified "2024-01-22T16:23:00"^^xsd:dateTime .
 : Popis
 :: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
     Dataset môže byť popísaný viacerými témami.
-    Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
-    Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z [európského číselníka dátových tém](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
+    Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme).
+    Podľa DCAT-AP 3.0.0 musí byť aspoň jedna téma z [európského číselníka dátových tém](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
 : Vlastnosť
 :: `téma`, `dcat:theme`
 : Typ
@@ -312,12 +311,12 @@ dataset: dcat:theme <http://publications.europa.eu/resource/authority/data-theme
 
 : Popis
 :: Táto Vlastnosť odkazuje na frekvenciu, s ktorou je dataset aktualizovaný.
-    Je definovaná ako [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency).
-    Podľa DCAT-AP 2.1.1 sú hodnoty z [európského číselníka frekvencií](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+    Je definovaná ako [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency).
+    Podľa DCAT-AP 3.0.0 sú hodnoty z [európského číselníka frekvencií](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
 : Vlastnosť
 :: `periodicita_aktualizace`, `dct:accrualPeriodicity`
 : Typ
-:: IRI položky z [európského číselníka frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency)
+:: IRI položky z [európského číselníka frekvencí](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency)
 : Povinnosť
 :: Povinná
 : Príklad
@@ -329,7 +328,7 @@ dataset: dct:accrualPeriodicity <http://publications.europa.eu/resource/authorit
 ### Klúčové slová ### {#dataset-kľúčové-slová}
 
 : Popis
-:: Táto Vlastnosť obsahuje kľúčové slovo alebo značku popisujúcu dataset. Je definovaná ako [dcat:keyword](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword).
+:: Táto Vlastnosť obsahuje kľúčové slovo alebo značku popisujúcu dataset. Je definovaná ako [dcat:keyword](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword).
 : Vlastnosť
 :: `kľúčové_slovo`, `dcat:keyword`
 : Typ
@@ -346,7 +345,7 @@ dataset: dcat:keyword "kontrola"@sk, "štatistika"@sk, "inspection"@en, "statist
 
 : Popis
 :: Táto Vlastnosť určuje typ datasetu.
-    Je definovaná ako [dct:type](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type).
+    Je definovaná ako [dct:type](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type).
 : Vlastnosť
 :: `typ_datasetu`, `dct:type`
 : Typ
@@ -364,7 +363,7 @@ dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
 : Popis
 :: Táto Vlastnosť odkazuje na územný prvok v registry adries.
     Dataset môže byť popísaný viacerými územnými prvkami v registry adries.
-    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
+    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial).
 : Vlastnosť
 :: `prvok_registra_adries`, `dct:spatial`
 : Typ
@@ -382,7 +381,7 @@ dataset: dct:spatial <https://data.gov.sk/id/nuts1/SK0> .
 : Popis
 :: Táto Vlastnosť odkazuje na geografickú oblasť pokrytú datasetom.
     Dataset môže byť popísaný viacerými geografickými oblasťami.
-    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
+    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial).
 : Vlastnosť
 :: `geografické_územie`, `dct:spatial`
 : Typ
@@ -399,7 +398,7 @@ dataset: dct:spatial <https://sws.geonames.org/11524186/> .
 
 : Popis
 :: Táto Vlastnosť odkazuje na časový úsek pokrytý datasetom.
-    Je definovaná ako [dct:temporal](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal).
+    Je definovaná ako [dct:temporal](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal).
 : Vlastnosť
 :: `časové_pokrytie`, `dct:temporal`
 : Typ
@@ -419,7 +418,7 @@ dataset: dct:temporal čas: .
 
 : Popis
 :: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre zasielanie pripomienok k datasetu.
-    Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point).
+    Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).
 : Vlastnosť
 :: `kontaktný_bod`, `dcat:contactPoint`
 : Typ
@@ -440,7 +439,7 @@ kontakt: a vcard:Individual ;
 
 : Popis
 :: Táto Vlastnosť odkazuje na domovskú WWW stránku datasetu, kde dataset vznikol. Môže to byť stránka na centrálnom portáli otvorených údajov, alebo stránka v lokálnom opendatovom portáli.
-    Je definovaná ako [dcat:landingPage](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
+    Je definovaná ako [dcat:landingPage](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page).
 : Vlastnosť
 :: `webová_stránka_datasetu`, `dcat:landingPage`
 : Typ
@@ -474,7 +473,7 @@ dataset: foaf:page <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-za
 
 : Popis
 :: Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa riadi dataset.
-    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
+    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to).
 : Vlastnosť
 :: `špecifikácia`, `dct:conformsTo`
 : Typ
@@ -491,7 +490,7 @@ dataset: dct:conformsTo <https://data.gov.sk/def/ontology/finance/> .
 
 : Popis
 :: Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
-    Je definovaná ako [dct:relation](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation).
+    Je definovaná ako [dct:relation](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_relation).
 : Vlastnosť
 :: `súvisiaci_zdroj_datasetu`, `dct:relation`
 : Typ
@@ -509,11 +508,11 @@ dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah
 : Popis
 :: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu podľa EuroVoc.
     Dataset môže byť popísaný viacerými témamy.
-    Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
+    Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme).
 : Vlastnosť
 :: `koncept_euroVoc`, `dcat:theme`
 : Typ
-:: IRI konceptov z európskeho tezauru [EuroVoc](https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
+:: IRI konceptov z európskeho tezauru [EuroVoc](https://op.europa.eu/sk/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -527,7 +526,7 @@ dataset: dcat:theme <http://eurovoc.europa.eu/1001>, <http://eurovoc.europa.eu/4
 : Popis
 :: Táto Vlastnosť určuje priestorové rozlišenie dát v datasete v metroch.
     Jedná sa o najmenší priestorový rozdiel v datasete.
-    Je definovaná ako [dcat:spatialResolutionInMeters](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution).
+    Je definovaná ako [dcat:spatialResolutionInMeters](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution).
 : Vlastnosť
 :: `priestorové_rozlišenie_v_metroch`, `dcat:spatialResolutionInMeters`
 : Typ
@@ -545,7 +544,7 @@ dataset: dcat:spatialResolutionInMeters 0.5 .
 : Popis
 :: Táto Vlastnosť určuje časové rozlišenie dát v datasete.
     Jedná sa o najmenší časový rozdiel v datasete.
-    Je definovaná ako [dcat:temporalResolution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution).
+    Je definovaná ako [dcat:temporalResolution](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution).
 : Vlastnosť
 :: `časové_rozlišenie`, `dcat:temporalResolution`
 : Typ
@@ -586,7 +585,7 @@ dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/1
 : Vlastnosť
 :: `kategoria_hvd`, `dcatap:hvdCategory`
 : Typ
-:: IRI položiek z európskeho [číselníka kategorií HVD](https://op.europa.eu/cs/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category).
+:: IRI položiek z európskeho [číselníka kategorií HVD](https://op.europa.eu/sk/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category).
 : Povinnosť
 :: Povinná pre datasety typu HVD
 : Príklad
@@ -595,13 +594,13 @@ dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/1
 dataset: dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> .
     ```
     
-### Väzba: Je súčásťou ### {#dataset-je-súčasťou}
+### Väzba: Je súčasťou ### {#dataset-je-súčasťou}
 
 : Popis
 :: Táto Vlastnosť odkazuje na zastrešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
-    Je definovaná ako [dct:isPartOf](https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf).
+    Je definovaná ako [dcat:inSeries](https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf).
 : Vlastnosť
-:: `je_sučásťou`, `dct:isPartOf`
+:: `je_sučásťou`, `dcat:inSeries`
 : Typ
 :: IRI zastrešujúceho datasetu.
 : Povinnosť
@@ -609,14 +608,14 @@ dataset: dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> .
 : Príklad
 :: 
     ```turtle
-dataset: dct:isPartOf <https://data.gov.sk/set/pohladavky-mindop> .
+dataset: dcat:inSeries <https://data.gov.sk/set/pohladavky-mindop> .
     ```
 
 ### Väzba: Distribúcia datasetu ### {#dataset-distribúcia}
 
 : Popis
 :: Táto Vlastnosť odkazuje z datasetu na jej distribúciu.
-    Je definovaná ako [dcat:distribution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution).
+    Je definovaná ako [dcat:distribution](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution).
 : Vlastnosť
 :: `distribúcia`, `dcat:distribution`
 : Typ
@@ -634,7 +633,7 @@ Trieda: Distribúcia datasetu {#trieda-distribúcia}
 
 : Popis
 :: Fyzická podoba datasetu v konkrétnom formáte alebo ako konkrétná dátová služba, nikdy súčasne.
-    Je definovaná ako [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution).
+    Je definovaná ako [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution).
 : Príklad
 ::  
     ```turtle
@@ -644,7 +643,7 @@ distribúcia: a dcat:Distribution .
 ### Špecifikácia podmienok použitia ### {#špecifikácia-podmienok-použitia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v [európskom číselníku licencií](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/licence). [Viac informácií](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628)
+:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v [európskom číselníku licencií](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/licence). [Viac informácií](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628)
 : Vlastnosť
 :: `podmienky_použitia`, `leg:termsOfUse`
 : Typ
@@ -668,7 +667,7 @@ podmienky: a leg:TermsOfUse ;
 
 : Popis
 :: Táto Vlastnosť obsahuje URL, ktoré je priamym odkazom na stiahnuteľný súbor v danom formáte.
-    Je definovaná ako [dcat:downloadURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url).
+    Je definovaná ako [dcat:downloadURL](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url).
 : Vlastnosť
 :: `súbor_na_stiahnutie`, `dcat:downloadURL`
 : Typ
@@ -685,7 +684,7 @@ distribúcia: dcat:downloadURL <https://mindop.sk/dump/kontroly-plneni-Povinnos�
 
 : Popis
 :: Táto Vlastnosť obsahuje URL, pomocou ktorého sa je možné dostať k distribúcii datasetu.
-    Je definovaná ako [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url).
+    Je definovaná ako [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url).
     Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako [odkaz na stiahnutie súboru](#distribúcia-stiahnutie-súboru) v pripadě distribúcie reprezentujúcej súbor na stiahnutie, alebo rovnaká ako [prístupový bod](#dátová-služba-prístupový-bod) v prípadě distribúcie reprezentujúcej dátovú službu.
 : Vlastnosť
 :: `přístupové_url`, `dcat:accessURL`
@@ -703,12 +702,12 @@ distribúcia: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-Povinnos
 
 : Popis
 :: Táto Vlastnosť odkazuje na typ súboru s distribúciou.
-    Je definovaná ako [dct:format](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format).
-    Podľa DCAT-AP 2.1.1 sú hodnoty z [európského číselníka typov súborov](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
+    Je definovaná ako [dct:format](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format).
+    Podľa DCAT-AP 3.0.0 sú hodnoty z [európského číselníka typov súborov](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
 : Vlastnosť
 :: `formát`, `dct:format`
 : Typ
-:: IRI položky z [európského číselníka typov súborov](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
+:: IRI položky z [európského číselníka typov súborov](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
 : Povinnosť
 :: Povinná pre súbor na stiahnutie
 : Príklad
@@ -721,7 +720,7 @@ distribúcia: dct:format <http://publications.europa.eu/resource/authority/file-
 
 : Popis
 :: Táto Vlastnosť odkazuje na typ média distribúcie podľa oficiálneho registra typov médií spravovaného v IANA [[!IANA-MEDIA-TYPES]].
-    Je definovaná ako [dcat:mediaType](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type).
+    Je definovaná ako [dcat:mediaType](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_media_type).
 : Vlastnosť
 :: `typ_média`, `dcat:mediaType`
 : Typ
@@ -755,7 +754,7 @@ distribúcia: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2
 
 : Popis
 :: Táto Vlastnosť odkazuje na stanovenú schému, ktorou sa riadi popisovaná distribúcia.
-    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to).
+    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_conforms_to).
 : Vlastnosť
 :: `schéma`, `dct:conformsTo`
 : Typ
@@ -773,7 +772,7 @@ distribúcia: dct:conformsTo <https://data.cssz.cz/dump/kontroly-plnenia-Povinno
 : Popis
 :: Táto Vlastnosť odkazuje na typ média kompresného formátu súboru podľa oficiálneho registra typov médií spravovaného v IANA [[!IANA-MEDIA-TYPES]].
     Kompresný formát určuje techniku použitú na zmenšenie veľkosti jedného súboru na stiahnutie.
-    Je definovaná ako [dcat:compressFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format).
+    Je definovaná ako [dcat:compressFormat](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_compression_format).
 : Vlastnosť
 :: `typ_média_kompresie`, `dcat:compressFormat`
 : Typ
@@ -791,7 +790,7 @@ distribúcia: dcat:compressFormat <http://www.iana.org/assignments/media-types/a
 : Popis
 :: Táto Vlastnosť odkazuje na typ média balíčkovacího formátu súboru podľa oficiálneho registra typov médií spravovaném v IANA [[!IANA-MEDIA-TYPES]].
     Balíčkovací formát určuje techniku použitú na zabalenie viacero súborov do jedného.
-    Je definovaná ako [dcat:packageFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format).
+    Je definovaná ako [dcat:packageFormat](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_packaging_format).
 : Vlastnosť
 :: `typ_média_balíčka`, `dcat:packageFormat`
 : Typ
@@ -807,7 +806,7 @@ distribúcia: dcat:packageFormat <http://www.iana.org/assignments/media-types/ap
 ### Názov distribúcie datasetu ### {#distribúcia-názov}
 
 : Popis
-:: Táto Vlastnosť obsahuje názov distribúcie. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
+:: Táto Vlastnosť obsahuje názov distribúcie. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
 : Vlastnosť
 :: `názov`, `dct:title`
 : Typ
@@ -823,7 +822,7 @@ distribúcia: dct:title "Kontroly plnění Povinnosťí zaměstnavatelů v oblas
 ### Väzba: prístupová služba ### {#distribúcia-služba}
 
 : Popis
-:: Dátová služba sprístupňujúca distribúciu datasetu. Je definovaná ako [dcat:accessService](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service).
+:: Dátová služba sprístupňujúca distribúciu datasetu. Je definovaná ako [dcat:accessService](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_service).
 : Vlastnosť
 :: `prístupová_služba`, `dcat:accessService`
 : Typ
@@ -840,7 +839,7 @@ Trieda: Dátová služba {#trieda-datová-služba}
 --------------
 
 : Popis
-:: Trieda reprezentujúca dátovú službu sprístupňujúcu dáta datasetu. Je definovaná ako [dcat:DataService](https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service).
+:: Trieda reprezentujúca dátovú službu sprístupňujúcu dáta datasetu. Je definovaná ako [dcat:DataService](https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service).
 : Príklad
 ::  
     ```turtle
@@ -850,7 +849,7 @@ služba: a dcat:DataService .
 ### Názov ### {#dátová-služba-názov}
 
 : Popis
-:: Táto Vlastnosť obsahuje názov datovej služby. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
+:: Táto Vlastnosť obsahuje názov datovej služby. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
 : Vlastnosť
 :: `názov`, `dct:title`
 : Typ
@@ -866,7 +865,7 @@ služba: dct:title "SPARQL endpoint Slovenskej správy sociálného zabezpečeni
 ### Prístupový bod ### {#dátová-služba-prístupový-bod}
 
 : Popis
-:: Táto Vlastnosť obsahuje URL prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointURL](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url).
+:: Táto Vlastnosť obsahuje URL prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointURL](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_url).
 : Vlastnosť
 :: `prístupový_bod`, `dcat:endpointURL`
 : Typ
@@ -879,6 +878,22 @@ služba: dct:title "SPARQL endpoint Slovenskej správy sociálného zabezpečeni
 služba: dcat:endpointURL <https://data.gov.sk/sparql> .
     ```
 
+### Kategória HVD ### {#dátová-služba-kategória-hvd}
+
+: Popis
+:: Táto vlastnosť sa používa pre klasifikáciu datasetov s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD), ktoré sú sprístupnené cez dátovú službu.
+: Vlastnosť
+:: `kategoria_hvd`, `dcatap:hvdCategory`
+: Typ
+:: IRI položiek z európskeho [číselníka kategorií HVD](https://op.europa.eu/sk/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category).
+: Povinnosť
+:: Povinná pre dátové služby sprístupňujúce datasety typu HVD
+: Príklad
+:: 
+    ```turtle
+služba: dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> .
+    ```
+    
 ### Právny predpis ### {#dátová-služba-pravny-predpis}
 
 : Popis
@@ -894,6 +909,26 @@ služba: dcat:endpointURL <https://data.gov.sk/sparql> .
 :: 
     ```turtle
 služba: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+
+### Kontaktný bod - meno a email ### {#dátová-služba-kontaktný-bod}
+
+: Popis
+:: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok k dátovej službe. Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).
+: Vlastnosť
+:: `kontaktný_bod`, `dcat:contactPoint`
+: Typ
+:: Entita podtypu `vcard:Kind` s Vlastnosťami `vcard:fn` a `vcard:hasEmail`.
+: Povinnosť
+:: Povinná pre dátové služby sprístupňujúce datasety typu HVD
+: Príklad
+:: 
+    ```turtle
+služba: dcat:contactPoint správca: .
+
+správca: a vcard:Individual ;
+         vcard:fn "Jan Novák"@sk ;
+         vcard:hasEmail <mailto:jan.novak@mindop.sk> .
     ```
 
 ### Odkaz na dokumentáciu ### {#dátová-služba-dokumentácia}
@@ -919,7 +954,7 @@ služba: foaf:page <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-za
 :: Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa dátová služba riadi.
     Takou špecifikáciou je napríklad \[SPARQL](https://www.w3.org/TR/sparql11-protocol/).
     Zoznam možných hodnôt je možné nájsť napríklad v [zozname udržiavanom Open Source Geospatial Foundation](https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv).
-    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
+    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to).
 : Vlastnosť
 :: `špecifikácia`, `dct:conformsTo`
 : Typ
@@ -935,7 +970,7 @@ služba: dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
 ### Popis prístupového bodu ### {#dátová-služba-prístupový-bod-popis}
 
 : Popis
-:: Táto Vlastnosť obsahuje URL popisu prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointDescription](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description).
+:: Táto Vlastnosť obsahuje URL popisu prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointDescription](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description).
 : Vlastnosť
 :: `popis_prístupového_bodu`, `dcat:endpointDescription`
 : Typ
@@ -951,7 +986,7 @@ služba: dcat:endpointDescription <https://data.gov.sk/sparql> .
 Rozhranie DCAT-AP SPARQL Endpoint {#rozhranie-sparql-endpoint}
 ================================
 Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu [[!sparql11-protocol]].
-Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried `dcat:Dataset`, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie [DCAT-AP 2.1.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
+Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried `dcat:Dataset`, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie [DCAT-AP 3.0.0](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
 Jedná se o nejjednoduchší spôsob registrácie lokálneho katalógu otvorených dát.
 
 Datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie sa jednať o [RDF prázdne uzly](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
@@ -1449,9 +1484,6 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
       "právny_predpis": [
         "http://data.europa.eu/eli/reg_impl/2023/138/oj"
       ],
-      "kategória_hvd": [
-        "http://data.europa.eu/bna/c_b79e35eb"
-      ],
       "súbor_na_stiahnutie": "https://mindop.sk/pub/draha/mestske/JDF.zip",
       "formát": "http://publications.europa.eu/resource/authority/file-type/ZIP",
       "typ_média": "http://www.iana.org/assignments/media-types/application/json",
@@ -1476,9 +1508,6 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
       "prístupové_url": "https://opendata.mindop.sk/sparql",
       "právny_predpis": [
         "http://data.europa.eu/eli/reg_impl/2023/138/oj"
-      ],
-      "kategória_hvd": [
-        "http://data.europa.eu/bna/c_b79e35eb"
       ],
       "názov": {
         "en": "SPARQL endpoint for timetables",
@@ -1716,6 +1745,7 @@ sha-dcatapsk:NKODCatalogShape
 	sh:property sha-dcatapsk:catalog_title ;
 	sh:property sha-dcatapsk:catalog_description ;
 	sh:property sha-dcatapsk:catalog_publisher ;
+	sh:property sha-dcatapsk:catalog_contact_point ;
 	sh:property sha-dcatapsk:catalog_dataset .
 
 sha-dcatapsk:NKODHVDDatasetShape
@@ -1742,9 +1772,22 @@ sha-dcatapsk:NKODHVDDistributionShape
 	sh:property sha-dcatapsk:distribution_termsOfUse ;
 	sh:property sha-dcatapsk:distribution_downloadURL ;
 	sh:property sha-dcatapsk:distribution_accessURL ;
+	sh:property sha-dcatapsk:distribution_contact_point ;
 	sh:property sha-dcatapsk:distribution_applicable_legislation ;
 	sh:property sha-dcatapsk:distribution_format ;
 	sh:property sha-dcatapsk:distribution_mediaType .
+
+sha-dcatapsk:NKODHVDataServiceShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:DataService ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:service_title ;
+	sh:property sha-dcatapsk:service_endpoint_url ;
+	sh:property sha-dcatapsk:service_hvd_category ;
+ 	sh:property sha-dcatapsk:service_applicable_legislation ;
+	sh:property sha-dcatapsk:service_contact_point ;
+	sh:property sha-dcatapsk:service_documentation .
 
 sha-dcatapsk:catalog_title
 	a sh:PropertyShape ;
@@ -1761,6 +1804,13 @@ sha-dcatapsk:catalog_description
 sha-dcatapsk:catalog_publisher
 	a sh:PropertyShape ;
 	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:catalog_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
 	sh:nodeKind sh:IRI ;
 	sh:minCount 1 ;
 	sh:maxCount 1 .
@@ -1855,6 +1905,13 @@ sha-dcatapsk:distribution_accessURL
 	sh:minCount 1 ;
 	sh:maxCount 1 .
 
+sha-dcatapsk:distribution_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
 sha-dcatapsk:distribution_applicable_legislation
 	a sh:PropertyShape ;
 	sh:path dcatap:applicableLegislation ;
@@ -1871,6 +1928,46 @@ sha-dcatapsk:distribution_format
 sha-dcatapsk:distribution_mediaType
 	a sh:PropertyShape ;
 	sh:path dcat:mediaType ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:endpoint_url
+	a sh:PropertyShape ;
+	sh:path dcat:service_endpointURL ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_hvd_category
+	a sh:PropertyShape ;
+	sh:path dcatap:hvdCategory ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:service_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:service_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_documentation
+	a sh:PropertyShape ;
+	sh:path foaf:page ;
+	sh:nodeKind sh:IRI ;
 	sh:minCount 1 ;
 	sh:maxCount 1 .
 

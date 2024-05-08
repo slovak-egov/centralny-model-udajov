@@ -2014,7 +2014,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Rozhranie katalógu otvorených dát DCAT-AP-SK 3.0.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-05-03">3 May 2024</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-05-08">8 May 2024</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2080,7 +2080,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#dataset-časové-rozlíšenie"><span class="secno">3.3.20</span> <span class="content">Časové rozlíšenie</span></a>
         <li><a href="#dataset-právny-predpis"><span class="secno">3.3.21</span> <span class="content">Právny predpis</span></a>
         <li><a href="#dataset-kategória-hvd"><span class="secno">3.3.22</span> <span class="content">Kategória HVD</span></a>
-        <li><a href="#dataset-je-súčasťou"><span class="secno">3.3.23</span> <span class="content">Väzba: Je súčásťou</span></a>
+        <li><a href="#dataset-je-súčasťou"><span class="secno">3.3.23</span> <span class="content">Väzba: Je súčasťou</span></a>
         <li><a href="#dataset-distribúcia"><span class="secno">3.3.24</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
        </ol>
       <li>
@@ -2103,10 +2103,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        <ol class="toc">
         <li><a href="#dátová-služba-názov"><span class="secno">3.5.1</span> <span class="content">Názov</span></a>
         <li><a href="#dátová-služba-prístupový-bod"><span class="secno">3.5.2</span> <span class="content">Prístupový bod</span></a>
-        <li><a href="#dátová-služba-pravny-predpis"><span class="secno">3.5.3</span> <span class="content">Právny predpis</span></a>
-        <li><a href="#dátová-služba-dokumentácia"><span class="secno">3.5.4</span> <span class="content">Odkaz na dokumentáciu</span></a>
-        <li><a href="#dátová-služba-špecifikácia"><span class="secno">3.5.5</span> <span class="content">Odkaz na špecifikáciu</span></a>
-        <li><a href="#dátová-služba-prístupový-bod-popis"><span class="secno">3.5.6</span> <span class="content">Popis prístupového bodu</span></a>
+        <li><a href="#dátová-služba-kategória-hvd"><span class="secno">3.5.3</span> <span class="content">Kategória HVD</span></a>
+        <li><a href="#dátová-služba-pravny-predpis"><span class="secno">3.5.4</span> <span class="content">Právny predpis</span></a>
+        <li><a href="#dátová-služba-kontaktný-bod"><span class="secno">3.5.5</span> <span class="content">Kontaktný bod - meno a email</span></a>
+        <li><a href="#dátová-služba-dokumentácia"><span class="secno">3.5.6</span> <span class="content">Odkaz na dokumentáciu</span></a>
+        <li><a href="#dátová-služba-špecifikácia"><span class="secno">3.5.7</span> <span class="content">Odkaz na špecifikáciu</span></a>
+        <li><a href="#dátová-služba-prístupový-bod-popis"><span class="secno">3.5.8</span> <span class="content">Popis prístupového bodu</span></a>
        </ol>
      </ol>
     <li><a href="#rozhranie-sparql-endpoint"><span class="secno">4</span> <span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span></a>
@@ -2158,7 +2160,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <h2 class="heading settled" data-level="1" id="úvod"><span class="secno">1. </span><span class="content">Úvod</span><a class="self-link" href="#úvod"></a></h2>
     Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsobov zaistenia katalogizácie dát v Národnom katalógu otvorených dát (NKOD). 
    <h2 class="heading settled" data-level="2" id="novinky"><span class="secno">2. </span><span class="content">Čo je nové?</span><a class="self-link" href="#novinky"></a></h2>
-    Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3 a DCAP-AP-HVD. V detaile pribudli: 
+    Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3.0.0 a DCAP-AP-HVD-2.2.0. V detaile pribudli: 
    <p>2.1. Zosúladenie na štandard <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP-3.0.0</a></p>
    <ul>
     <li data-md>
@@ -2170,14 +2172,14 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>nová trieda Právny predpis</p>
     <li data-md>
-     <p>pridanie väzby je dcat:inSeries (napr. Dataset je súčasťou Dátovej série)</p>
+     <p>pridanie väzby je súčasťou dcat:inSeries (napr. Dataset je súčasťou Dátovej série)</p>
     <li data-md>
      <p>špecifikácia dátovej kocky popisujúcej dataset je realizovaná prostredníctvom existujúcej vlastnosti dct:conformsTo (odkaz na špecifikáciu)</p>
    </ul>
-   <p>2.2. Zosúladenie na štandardu <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP-HVD</a></p>
+   <p>2.2. Zosúladenie na štandardu <a href="https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/">DCAT-AP-HVD</a></p>
    <ul>
     <li data-md>
-     <p>nový EÚ číselník kategória HVD</p>
+     <p>nový EÚ číselník kategória HVD pre Dataset a Dátovú službu</p>
     <li data-md>
      <p>povinne používaný identifikátor pre právny predpis pre HVD - http://data.europa.eu/eli/reg_impl/2023/138/oj</p>
     <li data-md>
@@ -2227,7 +2229,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Trieda reprezentujúca dátový katalóg. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog">dcat:Catalog</a>.</p>
+     <p>Trieda reprezentujúca dátový katalóg. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">dcat:Catalog</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>.</c->
@@ -2237,7 +2239,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto vlastnosť obsahuje názov dátového katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title">dct:title</a>.</p>
+     <p>Táto vlastnosť obsahuje názov dátového katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">dct:title</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>názov</code>, <code>dct:title</code></p>
@@ -2256,7 +2258,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje volný text s popisom dátového katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description">dct:description</a>.</p>
+     <p>Táto Vlastnosť obsahuje volný text s popisom dátového katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">dct:description</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>popis</code>, <code>dct:description</code></p>
@@ -2275,7 +2277,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Poskytovateľ dátového katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher">dct:publisher</a>.</p>
+     <p>Poskytovateľ dátového katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher">dct:publisher</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>poskytovateľ</code>, <code>dct:publisher</code></p>
@@ -2294,7 +2296,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok ku katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point">dcat:contactPoint</a>.</p>
+     <p>Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok ku katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">dcat:contactPoint</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>kontaktný_bod</code>, <code>dcat:contactPoint</code></p>
@@ -2317,7 +2319,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage">foaf:homepage</a>.</p>
+     <p>Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage">foaf:homepage</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>domovská_stránka</code>, <code>foaf:homepage</code></p>
@@ -2336,7 +2338,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset">dcat:dataset</a>.</p>
+     <p>Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset">dcat:dataset</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>dataset</code>, <code>dcat:dataset</code></p>
@@ -2355,7 +2357,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset">dcat:Dataset</a>.</p>
+     <p>Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">dcat:Dataset</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>.</c->
@@ -2365,7 +2367,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje názov datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title">dct:title</a>.</p>
+     <p>Táto Vlastnosť obsahuje názov datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">dct:title</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>názov</code>, <code>dct:title</code></p>
@@ -2384,7 +2386,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje volný text s popisom datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_description">dct:description</a>.</p>
+     <p>Táto Vlastnosť obsahuje volný text s popisom datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description">dct:description</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>popis</code>, <code>dct:description</code></p>
@@ -2403,7 +2405,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Poskytovateľ datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_publisher">dct:publisher</a>.</p>
+     <p>Poskytovateľ datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher">dct:publisher</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>poskytovateľ</code>, <code>dct:publisher</code></p>
@@ -2422,7 +2424,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date">dct:issued</a>.</p>
+     <p>Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date">dct:issued</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>dátum_publikácie</code>, <code>dct:issued</code></p>
@@ -2441,7 +2443,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date">dct:modified</a>.</p>
+     <p>Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date">dct:modified</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>dátum_modifikácie</code>, <code>dct:modified</code></p>
@@ -2462,8 +2464,8 @@ Obsahovo musia byť distribúcie totožné.</p>
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
 Dataset môže byť popísaný viacerými témami.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme">dcat:theme</a>.
-Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme">európského číselníka dátových tém</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme">dcat:theme</a>.
+Podľa DCAT-AP 3.0.0 musí byť aspoň jedna téma z <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme">európského číselníka dátových tém</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>téma</code>, <code>dcat:theme</code></p>
@@ -2483,14 +2485,14 @@ Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z <a href="https://op.europa.
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na frekvenciu, s ktorou je dataset aktualizovaný.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency">dct:accrualPeriodicity</a>.
-Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency">európského číselníka frekvencií</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">dct:accrualPeriodicity</a>.
+Podľa DCAT-AP 3.0.0 sú hodnoty z <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency">európského číselníka frekvencií</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>periodicita_aktualizace</code>, <code>dct:accrualPeriodicity</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položky z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency">európského číselníka frekvencí</a></p>
+     <p>IRI položky z <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency">európského číselníka frekvencí</a></p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná</p>
@@ -2503,7 +2505,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje kľúčové slovo alebo značku popisujúcu dataset. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword">dcat:keyword</a>.</p>
+     <p>Táto Vlastnosť obsahuje kľúčové slovo alebo značku popisujúcu dataset. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword">dcat:keyword</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>kľúčové_slovo</code>, <code>dcat:keyword</code></p>
@@ -2523,7 +2525,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť určuje typ datasetu.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type">dct:type</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type">dct:type</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>typ_datasetu</code>, <code>dct:type</code></p>
@@ -2544,7 +2546,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na územný prvok v registry adries.
 Dataset môže byť popísaný viacerými územnými prvkami v registry adries.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial">dct:spatial</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">dct:spatial</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>prvok_registra_adries</code>, <code>dct:spatial</code></p>
@@ -2565,7 +2567,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na geografickú oblasť pokrytú datasetom.
 Dataset môže byť popísaný viacerými geografickými oblasťami.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial">dct:spatial</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">dct:spatial</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>geografické_územie</code>, <code>dct:spatial</code></p>
@@ -2585,7 +2587,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na časový úsek pokrytý datasetom.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal">dct:temporal</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal">dct:temporal</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>časové_pokrytie</code>, <code>dct:temporal</code></p>
@@ -2608,7 +2610,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre zasielanie pripomienok k datasetu.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point">dcat:contactPoint</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">dcat:contactPoint</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>kontaktný_bod</code>, <code>dcat:contactPoint</code></p>
@@ -2632,7 +2634,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na domovskú WWW stránku datasetu, kde dataset vznikol. Môže to byť stránka na centrálnom portáli otvorených údajov, alebo stránka v lokálnom opendatovom portáli.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page">dcat:landingPage</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">dcat:landingPage</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>webová_stránka_datasetu</code>, <code>dcat:landingPage</code></p>
@@ -2672,7 +2674,7 @@ Je definovaná ako <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a>.</p>
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa riadi dataset.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to">dct:conformsTo</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to">dct:conformsTo</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>špecifikácia</code>, <code>dct:conformsTo</code></p>
@@ -2692,7 +2694,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation">dct:relation</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_relation">dct:relation</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>súvisiaci_zdroj_datasetu</code>, <code>dct:relation</code></p>
@@ -2713,13 +2715,13 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu podľa EuroVoc.
 Dataset môže byť popísaný viacerými témamy.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme">dcat:theme</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme">dcat:theme</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>koncept_euroVoc</code>, <code>dcat:theme</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI konceptov z európskeho tezauru <a href="https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc">EuroVoc</a>.</p>
+     <p>IRI konceptov z európskeho tezauru <a href="https://op.europa.eu/sk/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc">EuroVoc</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
@@ -2734,7 +2736,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dd data-md>
      <p>Táto Vlastnosť určuje priestorové rozlišenie dát v datasete v metroch.
 Jedná sa o najmenší priestorový rozdiel v datasete.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution">dcat:spatialResolutionInMeters</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution">dcat:spatialResolutionInMeters</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>priestorové_rozlišenie_v_metroch</code>, <code>dcat:spatialResolutionInMeters</code></p>
@@ -2755,7 +2757,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
     <dd data-md>
      <p>Táto Vlastnosť určuje časové rozlišenie dát v datasete.
 Jedná sa o najmenší časový rozdiel v datasete.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution">dcat:temporalResolution</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution">dcat:temporalResolution</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>časové_rozlišenie</code>, <code>dcat:temporalResolution</code></p>
@@ -2803,7 +2805,7 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
      <p><code>kategoria_hvd</code>, <code>dcatap:hvdCategory</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položiek z európskeho <a href="https://op.europa.eu/cs/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">číselníka kategorií HVD</a>.</p>
+     <p>IRI položiek z európskeho <a href="https://op.europa.eu/sk/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">číselníka kategorií HVD</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná pre datasety typu HVD</p>
@@ -2812,15 +2814,15 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/bna/c_164e0bf5></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="3.3.23" id="dataset-je-súčasťou"><span class="secno">3.3.23. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
+   <h4 class="heading settled" data-level="3.3.23" id="dataset-je-súčasťou"><span class="secno">3.3.23. </span><span class="content">Väzba: Je súčasťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na zastrešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
-Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf">dct:isPartOf</a>.</p>
+Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf">dcat:inSeries</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>je_sučásťou</code>, <code>dct:isPartOf</code></p>
+     <p><code>je_sučásťou</code>, <code>dcat:inSeries</code></p>
     <dt data-md>Typ
     <dd data-md>
      <p>IRI zastrešujúceho datasetu.</p>
@@ -2829,7 +2831,7 @@ Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>inSeries</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="3.3.24" id="dataset-distribúcia"><span class="secno">3.3.24. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
@@ -2837,7 +2839,7 @@ Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dc
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje z datasetu na jej distribúciu.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution">dcat:distribution</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution">dcat:distribution</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>distribúcia</code>, <code>dcat:distribution</code></p>
@@ -2857,7 +2859,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
     <dt data-md>Popis
     <dd data-md>
      <p>Fyzická podoba datasetu v konkrétnom formáte alebo ako konkrétná dátová služba, nikdy súčasne.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution">dcat:Distribution</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution">dcat:Distribution</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>.</c->
@@ -2867,7 +2869,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distributi
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/licence">európskom číselníku licencií</a>. <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628">Viac informácií</a></p>
+     <p>Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/licence">európskom číselníku licencií</a>. <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628">Viac informácií</a></p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>podmienky_použitia</code>, <code>leg:termsOfUse</code></p>
@@ -2894,7 +2896,7 @@ Voliteľne tiež <code>leg:authorName</code> a <code>leg:originalDatabaseAuthorN
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť obsahuje URL, ktoré je priamym odkazom na stiahnuteľný súbor v danom formáte.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url">dcat:downloadURL</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url">dcat:downloadURL</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>súbor_na_stiahnutie</code>, <code>dcat:downloadURL</code></p>
@@ -2914,7 +2916,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť obsahuje URL, pomocou ktorého sa je možné dostať k distribúcii datasetu.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url">dcat:accessURL</a>.
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url">dcat:accessURL</a>.
 Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako <a href="#distribúcia-stiahnutie-súboru">odkaz na stiahnutie súboru</a> v pripadě distribúcie reprezentujúcej súbor na stiahnutie, alebo rovnaká ako <a href="#dátová-služba-prístupový-bod">prístupový bod</a> v prípadě distribúcie reprezentujúcej dátovú službu.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -2935,14 +2937,14 @@ Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnak�
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na typ súboru s distribúciou.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format">dct:format</a>.
-Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type">európského číselníka typov súborov</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format">dct:format</a>.
+Podľa DCAT-AP 3.0.0 sú hodnoty z <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type">európského číselníka typov súborov</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>formát</code>, <code>dct:format</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položky z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type">európského číselníka typov súborov</a></p>
+     <p>IRI položky z <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type">európského číselníka typov súborov</a></p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná pre súbor na stiahnutie</p>
@@ -2956,7 +2958,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na typ média distribúcie podľa oficiálneho registra typov médií spravovaného v IANA <a data-link-type="biblio" href="#biblio-iana-media-types" title="Media Types">[IANA-MEDIA-TYPES]</a>.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type">dcat:mediaType</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_media_type">dcat:mediaType</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>typ_média</code>, <code>dcat:mediaType</code></p>
@@ -2996,7 +2998,7 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na stanovenú schému, ktorou sa riadi popisovaná distribúcia.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to">dct:conformsTo</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_conforms_to">dct:conformsTo</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>schéma</code>, <code>dct:conformsTo</code></p>
@@ -3017,7 +3019,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na typ média kompresného formátu súboru podľa oficiálneho registra typov médií spravovaného v IANA <a data-link-type="biblio" href="#biblio-iana-media-types" title="Media Types">[IANA-MEDIA-TYPES]</a>.
 Kompresný formát určuje techniku použitú na zmenšenie veľkosti jedného súboru na stiahnutie.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format">dcat:compressFormat</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_compression_format">dcat:compressFormat</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>typ_média_kompresie</code>, <code>dcat:compressFormat</code></p>
@@ -3038,7 +3040,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na typ média balíčkovacího formátu súboru podľa oficiálneho registra typov médií spravovaném v IANA <a data-link-type="biblio" href="#biblio-iana-media-types" title="Media Types">[IANA-MEDIA-TYPES]</a>.
 Balíčkovací formát určuje techniku použitú na zabalenie viacero súborov do jedného.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format">dcat:packageFormat</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_packaging_format">dcat:packageFormat</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>typ_média_balíčka</code>, <code>dcat:packageFormat</code></p>
@@ -3057,7 +3059,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje názov distribúcie. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title">dct:title</a>.</p>
+     <p>Táto Vlastnosť obsahuje názov distribúcie. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">dct:title</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>názov</code>, <code>dct:title</code></p>
@@ -3076,7 +3078,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Dátová služba sprístupňujúca distribúciu datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service">dcat:accessService</a>.</p>
+     <p>Dátová služba sprístupňujúca distribúciu datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_service">dcat:accessService</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>prístupová_služba</code>, <code>dcat:accessService</code></p>
@@ -3095,7 +3097,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Trieda reprezentujúca dátovú službu sprístupňujúcu dáta datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service">dcat:DataService</a>.</p>
+     <p>Trieda reprezentujúca dátovú službu sprístupňujúcu dáta datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">dcat:DataService</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>.</c->
@@ -3105,7 +3107,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje názov datovej služby. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title">dct:title</a>.</p>
+     <p>Táto Vlastnosť obsahuje názov datovej služby. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">dct:title</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>názov</code>, <code>dct:title</code></p>
@@ -3124,7 +3126,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje URL prístupového bodu dátovej služby. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url">dcat:endpointURL</a>.</p>
+     <p>Táto Vlastnosť obsahuje URL prístupového bodu dátovej služby. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_url">dcat:endpointURL</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>prístupový_bod</code>, <code>dcat:endpointURL</code></p>
@@ -3139,7 +3141,26 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="3.5.3" id="dátová-služba-pravny-predpis"><span class="secno">3.5.3. </span><span class="content">Právny predpis</span><a class="self-link" href="#dátová-služba-pravny-predpis"></a></h4>
+   <h4 class="heading settled" data-level="3.5.3" id="dátová-služba-kategória-hvd"><span class="secno">3.5.3. </span><span class="content">Kategória HVD</span><a class="self-link" href="#dátová-služba-kategória-hvd"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto vlastnosť sa používa pre klasifikáciu datasetov s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD), ktoré sú sprístupnené cez dátovú službu.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>kategoria_hvd</code>, <code>dcatap:hvdCategory</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>IRI položiek z európskeho <a href="https://op.europa.eu/sk/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category">číselníka kategorií HVD</a>.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Povinná pre dátové služby sprístupňujúce datasety typu HVD</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- g>&lt;http://data.europa.eu/bna/c_164e0bf5></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.5.4" id="dátová-služba-pravny-predpis"><span class="secno">3.5.4. </span><span class="content">Právny predpis</span><a class="self-link" href="#dátová-služba-pravny-predpis"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -3159,7 +3180,30 @@ Je definovaný ako <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Da
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="3.5.4" id="dátová-služba-dokumentácia"><span class="secno">3.5.4. </span><span class="content">Odkaz na dokumentáciu</span><a class="self-link" href="#dátová-služba-dokumentácia"></a></h4>
+   <h4 class="heading settled" data-level="3.5.5" id="dátová-služba-kontaktný-bod"><span class="secno">3.5.5. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#dátová-služba-kontaktný-bod"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok k dátovej službe. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point">dcat:contactPoint</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>kontaktný_bod</code>, <code>dcat:contactPoint</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>Entita podtypu <code>vcard:Kind</code> s Vlastnosťami <code>vcard:fn</code> a <code>vcard:hasEmail</code>.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Povinná pre dátové služby sprístupňujúce datasety typu HVD</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- nn>správca</c-><c- p>:</c-> <c- p>.</c->
+
+<c- nn>správca</c-><c- p>:</c-> <c- b>a</c-> <c- nn>vcard</c-><c- p>:</c-><c- f>Individual</c-> <c- p>;</c->
+         <c- nn>vcard</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Jan Novák"</c-><c- o>@</c->sk <c- p>;</c->
+         <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="3.5.6" id="dátová-služba-dokumentácia"><span class="secno">3.5.6. </span><span class="content">Odkaz na dokumentáciu</span><a class="self-link" href="#dátová-služba-dokumentácia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -3179,14 +3223,14 @@ Je definovaná ako <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a>.</p>
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="3.5.5" id="dátová-služba-špecifikácia"><span class="secno">3.5.5. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dátová-služba-špecifikácia"></a></h4>
+   <h4 class="heading settled" data-level="3.5.7" id="dátová-služba-špecifikácia"><span class="secno">3.5.7. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dátová-služba-špecifikácia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa dátová služba riadi.
 Takou špecifikáciou je napríklad <a href="https://www.w3.org/TR/sparql11-protocol/">SPARQL</a>.
 Zoznam možných hodnôt je možné nájsť napríklad v <a href="https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv">zozname udržiavanom Open Source Geospatial Foundation</a>.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to">dct:conformsTo</a>.</p>
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to">dct:conformsTo</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>špecifikácia</code>, <code>dct:conformsTo</code></p>
@@ -3201,11 +3245,11 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="3.5.6" id="dátová-služba-prístupový-bod-popis"><span class="secno">3.5.6. </span><span class="content">Popis prístupového bodu</span><a class="self-link" href="#dátová-služba-prístupový-bod-popis"></a></h4>
+   <h4 class="heading settled" data-level="3.5.8" id="dátová-služba-prístupový-bod-popis"><span class="secno">3.5.8. </span><span class="content">Popis prístupového bodu</span><a class="self-link" href="#dátová-služba-prístupový-bod-popis"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť obsahuje URL popisu prístupového bodu dátovej služby. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description">dcat:endpointDescription</a>.</p>
+     <p>Táto Vlastnosť obsahuje URL popisu prístupového bodu dátovej služby. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description">dcat:endpointDescription</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>popis_prístupového_bodu</code>, <code>dcat:endpointDescription</code></p>
@@ -3222,7 +3266,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
    </dl>
    <h2 class="heading settled" data-level="4" id="rozhranie-sparql-endpoint"><span class="secno">4. </span><span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span><a class="self-link" href="#rozhranie-sparql-endpoint"></a></h2>
     Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu <a data-link-type="biblio" href="#biblio-sparql11-protocol" title="SPARQL 1.1 Protocol">[sparql11-protocol]</a>.
-Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried <code>dcat:Dataset</code>, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 2.1.1</a>.
+Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried <code>dcat:Dataset</code>, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 3.0.0</a>.
 Jedná se o nejjednoduchší spôsob registrácie lokálneho katalógu otvorených dát. 
    <p>Datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie sa jednať o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax">[rdf11-concepts]</a>.</p>
    <h2 class="heading settled" data-level="5" id="rozhranie-dcat-ap-dokumenty"><span class="secno">5. </span><span class="content">Rozhranie DCAT-AP Dokumenty</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty"></a></h2>
@@ -3605,8 +3649,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-0be4abcd">
-    <a class="self-link" href="#example-0be4abcd"></a> <a href="príklady/dataset-hvd.jsonld">Príklad HVD datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-499b8151">
+    <a class="self-link" href="#example-499b8151"></a> <a href="príklady/dataset-hvd.jsonld">Príklad HVD datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
   <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
@@ -3698,9 +3742,6 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
       <c- f>"právny_predpis"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://data.europa.eu/eli/reg_impl/2023/138/oj"</c->
       <c- p>],</c->
-      <c- f>"kategória_hvd"</c-><c- p>:</c-> <c- p>[</c->
-        <c- u>"http://data.europa.eu/bna/c_b79e35eb"</c->
-      <c- p>],</c->
       <c- f>"súbor_na_stiahnutie"</c-><c- p>:</c-> <c- u>"https://mindop.sk/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
       <c- f>"formát"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/file-type/ZIP"</c-><c- p>,</c->
       <c- f>"typ_média"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/json"</c-><c- p>,</c->
@@ -3725,9 +3766,6 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
       <c- f>"prístupové_url"</c-><c- p>:</c-> <c- u>"https://opendata.mindop.sk/sparql"</c-><c- p>,</c->
       <c- f>"právny_predpis"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://data.europa.eu/eli/reg_impl/2023/138/oj"</c->
-      <c- p>],</c->
-      <c- f>"kategória_hvd"</c-><c- p>:</c-> <c- p>[</c->
-        <c- u>"http://data.europa.eu/bna/c_b79e35eb"</c->
       <c- p>],</c->
       <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c-><c- p>,</c->
@@ -3928,8 +3966,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 </pre>
    </div>
    <h3 class="heading settled" data-level="6.2" id="povinn-vlasnosti-datasetu-ktor-je-typu-hvd"><span class="secno">6.2. </span><span class="content">Povinné vlasnosti datasetu, ktorý je typu HVD.</span><a class="self-link" href="#povinn-vlasnosti-datasetu-ktor-je-typu-hvd"></a></h3>
-   <div class="example" id="example-52d5c416">
-    <a class="self-link" href="#example-52d5c416"></a> <a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-hvd-shapes.ttl">Stiahnuť</a> 
+   <div class="example" id="example-1ad9482d">
+    <a class="self-link" href="#example-1ad9482d"></a> <a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-hvd-shapes.ttl">Stiahnuť</a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>rdf:</c-> <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>rdfs:</c-> <c- g>&lt;http://www.w3.org/2000/01/rdf-schema#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3955,6 +3993,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_contact_point</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c-> <c- p>.</c->
 
 <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODHVDDatasetShape</c->
@@ -3981,9 +4020,22 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_contact_point</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_applicable_legislation</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODHVDataServiceShape</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>;</c->
+  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_endpoint_url</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_hvd_category</c-> <c- p>;</c->
+   <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_applicable_legislation</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_contact_point</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_documentation</c-> <c- p>.</c->
 
 <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c->
   <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
@@ -4000,6 +4052,13 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c->
   <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_contact_point</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
@@ -4094,6 +4153,13 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
   <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
 
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_contact_point</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
 <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_applicable_legislation</c->
   <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- p>;</c->
@@ -4110,6 +4176,46 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c->
   <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_title</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>endpoint_url</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>service_endpointURL</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_hvd_category</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>hvdCategory</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_applicable_legislation</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcatap</c-><c- p>:</c-><c- f>applicableLegislation</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>hasValue</c-> <c- g>&lt;http://data.europa.eu/eli/reg_impl/2023/138/oj></c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_contact_point</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>service_documentation</c->
+  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
 

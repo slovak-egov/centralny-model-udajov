@@ -89,9 +89,6 @@
       "právny_predpis": [
         "http://data.europa.eu/eli/reg_impl/2023/138/oj"
       ],
-      "kategória_hvd": [
-        "http://data.europa.eu/bna/c_b79e35eb"
-      ],
       "súbor_na_stiahnutie": "https://mindop.sk/pub/draha/mestske/JDF.zip",
       "formát": "http://publications.europa.eu/resource/authority/file-type/ZIP",
       "typ_média": "http://www.iana.org/assignments/media-types/application/json",
@@ -116,9 +113,6 @@
       "prístupové_url": "https://opendata.mindop.sk/sparql",
       "právny_predpis": [
         "http://data.europa.eu/eli/reg_impl/2023/138/oj"
-      ],
-      "kategória_hvd": [
-        "http://data.europa.eu/bna/c_b79e35eb"
       ],
       "názov": {
         "en": "SPARQL endpoint for timetables",

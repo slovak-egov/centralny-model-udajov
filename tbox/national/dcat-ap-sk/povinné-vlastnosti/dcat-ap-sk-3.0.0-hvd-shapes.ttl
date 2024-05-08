@@ -23,6 +23,7 @@ sha-dcatapsk:NKODCatalogShape
 	sh:property sha-dcatapsk:catalog_title ;
 	sh:property sha-dcatapsk:catalog_description ;
 	sh:property sha-dcatapsk:catalog_publisher ;
+        sh:property sha-dcatapsk:catalog_contact_point ;
 	sh:property sha-dcatapsk:catalog_dataset .
 
 sha-dcatapsk:NKODHVDDatasetShape
@@ -49,9 +50,22 @@ sha-dcatapsk:NKODHVDDistributionShape
 	sh:property sha-dcatapsk:distribution_termsOfUse ;
 	sh:property sha-dcatapsk:distribution_downloadURL ;
 	sh:property sha-dcatapsk:distribution_accessURL ;
+        sh:property sha-dcatapsk:distribution_contact_point ;
 	sh:property sha-dcatapsk:distribution_applicable_legislation ;
 	sh:property sha-dcatapsk:distribution_format ;
 	sh:property sha-dcatapsk:distribution_mediaType .
+
+sha-dcatapsk:NKODHVDataServiceShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:DataService ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:service_title ;
+	sh:property sha-dcatapsk:service_endpoint_url ;
+	sh:property sha-dcatapsk:service_hvd_category ;
+        sh:property sha-dcatapsk:service_applicable_legislation ;
+        sh:property sha-dcatapsk:service_contact_point ;
+	sh:property sha-dcatapsk:service_documentation .
 
 sha-dcatapsk:catalog_title
 	a sh:PropertyShape ;
@@ -68,6 +82,13 @@ sha-dcatapsk:catalog_description
 sha-dcatapsk:catalog_publisher
 	a sh:PropertyShape ;
 	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:catalog_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
 	sh:nodeKind sh:IRI ;
 	sh:minCount 1 ;
 	sh:maxCount 1 .
@@ -162,6 +183,13 @@ sha-dcatapsk:distribution_accessURL
 	sh:minCount 1 ;
 	sh:maxCount 1 .
 
+sha-dcatapsk:distribution_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
 sha-dcatapsk:distribution_applicable_legislation
 	a sh:PropertyShape ;
 	sh:path dcatap:applicableLegislation ;
@@ -178,5 +206,45 @@ sha-dcatapsk:distribution_format
 sha-dcatapsk:distribution_mediaType
 	a sh:PropertyShape ;
 	sh:path dcat:mediaType ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:endpoint_url
+	a sh:PropertyShape ;
+	sh:path dcat:service_endpointURL ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_hvd_category
+	a sh:PropertyShape ;
+	sh:path dcatap:hvdCategory ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 .
+
+sha-dcatapsk:service_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:service_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_documentation
+	a sh:PropertyShape ;
+	sh:path foaf:page ;
+	sh:nodeKind sh:IRI ;
 	sh:minCount 1 ;
 	sh:maxCount 1 .
