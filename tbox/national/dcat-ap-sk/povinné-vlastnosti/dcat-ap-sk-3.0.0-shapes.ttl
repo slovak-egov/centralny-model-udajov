@@ -19,7 +19,7 @@ sha-dcatapsk:NKODCatalogShape
 	a sh:NodeShape ;
 	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
 	sh:targetClass dcat:Catalog ;
-	rdfs:isDefinedBy sha-dcatapsk:3.0.0
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0 ;
 	sh:property sha-dcatapsk:catalog_title ;
 	sh:property sha-dcatapsk:catalog_description ;
 	sh:property sha-dcatapsk:catalog_publisher ;
@@ -29,7 +29,7 @@ sha-dcatapsk:NKODDatasetShape
 	a sh:NodeShape ;
 	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
 	sh:targetClass dcat:Dataset ;
-	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0 ;
 	sh:property sha-dcatapsk:dataset_title ;
 	sh:property sha-dcatapsk:dataset_description ;
 	sh:property sha-dcatapsk:dataset_publisher ;
@@ -42,7 +42,7 @@ sha-dcatapsk:NKODDistributionShape
 	a sh:NodeShape ;
 	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
 	sh:targetClass dcat:Distribution ;
-	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0 ;
 	sh:property sha-dcatapsk:distribution_termsOfUse ;
 	sh:property sha-dcatapsk:distribution_downloadURL ;
 	sh:property sha-dcatapsk:distribution_accessURL ;
