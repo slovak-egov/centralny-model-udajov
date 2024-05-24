@@ -14,38 +14,6 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Law">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Letter">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Paragraph">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/Section">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/law">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/foundingLaw">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/letter">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/law/pararaph">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/"/>
-</rdf:Description>
-
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Law">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -66,21 +34,26 @@
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/2000/211">
 	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Law"/>
-	<skos:prefLabel xml:lang="sk">Zákon č. 152/1995 Z. z. o potravinách</skos:prefLabel>
+	<skos:prefLabel xml:lang="sk">Zákon č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií)</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401">
+	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Law"/>
+	<skos:prefLabel xml:lang="sk">Zákon č. 152/1995 Z. z. o potravinách (verzia 20150401)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1">
 	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Paragraph"/>
 	<skos:prefLabel xml:lang="sk">Účel a rozsah zákona</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-section-1">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1-section-1">
 	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Section"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-letter-a">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1-letter-a">
 	<skos:prefLabel xml:lang="sk">povinnosti prevádzkovateľa potravinárskeho podniku (ďalej len „prevádzkovateľ“) v záujme podpory a ochrany zdravia ľudí a ochrany spotrebiteľa na trhu potravín,</skos:prefLabel>
 	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Letter"/>
 </rdf:Description>
@@ -89,22 +62,22 @@
 	<rdfs:label xml:lang="sk">odsek</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-letter-a">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1-letter-a">
 	<skos:notation xml:lang="sk">a</skos:notation>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1">
 	<skos:notation xml:lang="sk">1</skos:notation>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-section-1">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1-section-1">
 	<skos:notation xml:lang="sk">1</skos:notation>
-	<skos:narrower rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-letter-a"/>
+	<skos:narrower rdf:resource="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1-letter-a"/>
 	<skos:prefLabel xml:lang="sk">Tento zákon ustanovuje</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1">
-	<skos:narrower rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1-section-1"/>
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1">
+	<skos:narrower rdf:resource="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1-section-1"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/law">
@@ -173,8 +146,8 @@
 	<rdfs:label xml:lang="sk">paragraf</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401">
-	<skos:narrower rdf:resource="https://data.gov.sk/id/legislation/SK-ZZ-1995-152-20150401-paragraph-1"/>
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401">
+	<skos:narrower rdf:resource="https://data.gov.sk/id/eli/sk/zz/1995/152/20150401-paragraph-1"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Decree">
@@ -183,7 +156,7 @@
 	<rdfs:label xml:lang="sk">Vyhláška</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/legislation/SK-ZZ-2020-78-20200501">
+<rdf:Description rdf:about="https://data.gov.sk/id/eli/zz/2020/78">
 	<rdf:type rdf:resource="https://data.gov.sk/def/ontology/legislation/Decree"/>
 	<skos:prefLabel xml:lang="sk">Vyhláška o o štandardoch pre informačné technológie verejnej správy</skos:prefLabel>
 </rdf:Description>
@@ -260,6 +233,60 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/TermsOfUse">
 	<rdfs:label xml:lang="sk">Podmienky použitia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/Clause">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Doložka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/ClauseOfValidity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Doložka právoplatnosti</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/ClauseOfEnforceability">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Doložka vykonateľnosti</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/clause">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">relácia na doložku</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/EGovDocument"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/legislation/Clause"/>	
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/dateOfEnforceability">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">dátum vykonateľnosti</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legislation/ClauseOfEnforceability"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/2024-05-31"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/dateOfValidity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">dátum právoplatnosti</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legislation/ClauseOfValidity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/2024-05-31"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/clauseValidForWhole">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">platnosť pre celok</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legislation/Clause"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/2024-05-31"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/legislation/clauseAppliedForPartialText">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">časť textu platnosti doložky</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/legislation/Clause"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/legislation/2024-05-31"/>
 </rdf:Description>
 
 </rdf:RDF>
