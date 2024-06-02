@@ -7,9 +7,9 @@
     xmlns:egov="https://data.gov.sk/def/ontology/egov/"
     xmlns:identifier-type="https://data.gov.sk/def/identifier-type/"
     xmlns:codelist="https://data.gov.sk/set/codelist/"
-    xmlns:nuts3="https://data.gov.sk/def/nuts3/"
-    xmlns:lau2="https://data.gov.sk/def/lau2/"
-    xmlns:lau1="https://data.gov.sk/def/lau1/"
+    xmlns:nuts3="https://data.gov.sk/id/nuts3/"
+    xmlns:lau2="https://data.gov.sk/id/lau2/"
+    xmlns:lau1="https://data.gov.sk/id/lau1/"
     xmlns:m8g="http://data.europa.eu/m8g/"
     xmlns:person="https://www.w3.org/ns/person#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -51,7 +51,7 @@
                                 <dct:type>
                                     <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/EDUID">
                                         <skos:prefLabel xml:lang="sk">EDUID - Identifikátor školy v rámci rezortného informačného systému MŠVVaŠ</skos:prefLabel>
-                                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL004001"/>
+                                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
                                     </egov:IdentifierType>
                                 </dct:type>
                             </adms:Identifier>

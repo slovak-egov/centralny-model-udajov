@@ -4,7 +4,7 @@
     "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "fin": "https://data.gov.sk/def/ontology/finance/",
-    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "egov": "https://data.gov.sk/def/ontology/egov/",
     "evidence-type": "https://data.gov.sk/def/evidence-type/",
     "codelist": "https://data.gov.sk/set/codelist/",
     "taxonomy": "https://data.gov.sk/def/taxonomy/",

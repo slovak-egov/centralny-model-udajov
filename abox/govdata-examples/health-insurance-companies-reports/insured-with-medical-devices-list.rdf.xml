@@ -3,7 +3,7 @@
     xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
     xmlns:health="https://data.gov.sk/def/ontology/healthcare/"
     xmlns:fin="https://data.gov.sk/def/ontology/finance/"
-    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
     xmlns:loca="https://data.gov.sk/def/ontology/location/"
     xmlns:codelist="https://data.gov.sk/set/codelist/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
