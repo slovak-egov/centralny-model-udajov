@@ -9,8 +9,7 @@
 
     <dcat:Dataset rdf:about="https://datacube.statistics.sk/set/cube/sp0207ts/2023-04-28">
     
-      <qb:structure rdf:resource="https://datacube.statistics.sk/def/cube/structure/sp0207ts"/>
-      <dct:conformsTo rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+      <dct:conformsTo rdf:resource="https://datacube.statistics.sk/def/cube/structure/sp0207ts"/>
       
       <!-- vlastnosti datasetu definuje štandard DCAT-AP-SK2.0.1 https://datova-kancelaria.github.io/dcat-ap-sk-2.0/  -->
         
