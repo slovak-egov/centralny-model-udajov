@@ -1,0 +1,30 @@
+<!-- Toto je ukážka, ako vyzerá registračný záznam datasetu v NKOD  -->
+
+<rdf:RDF
+    xmlns="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <dcat:Dataset rdf:about="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328">
+    
+      <qb:structure rdf:resource="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328"/>
+      <dct:conformsTo rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+      
+      <!-- vlastnosti datasetu definuje štandard DCAT-AP-SK2.0.1 https://datova-kancelaria.github.io/dcat-ap-sk-2.0/  -->
+        
+      <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00166197"/>
+      <dct:title xml:lang="sk">Počty zamestnancov a vytvorených pracovných miest</dct:title>
+      <dct:description xml:lang="sk">Dataset počtu zamestnancov a vytvorených pracovných miest vo forme dátovej kocky</dct:description>
+    
+     <dcat:distribution>
+         <dcat:Distribution rdf:about="https://opendata.mfsr.sk/set/M27_OpD_328/resource/24354653-64434646-3435353">
+           
+           <!-- vlastnosti distribúcie definuje štandard DCAT-AP-SK2.0.1 https://datova-kancelaria.github.io/dcat-ap-sk-2.0/  -->
+         
+         </dcat:Distribution>
+    </dcat:distribution>
+    
+    </dcat:Dataset>
+</rdf:RDF>

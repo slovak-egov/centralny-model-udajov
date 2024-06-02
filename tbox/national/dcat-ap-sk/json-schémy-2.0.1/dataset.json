@@ -1,0 +1,577 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/schémy/dataset.json",
+    "$defs": {
+        "text": {
+            "name": "Text",
+            "type": "object",
+            "description": "Vícejazyčný text",
+            "anyOf": [
+                {
+                    "required": [
+                        "sk"
+                    ],
+                    "properties": {
+                        "sk": {
+                            "type": "string",
+                            "title": "Text slovensky",
+                            "description": "Text slovensky",
+                            "examples": [
+                                "Text slovensky"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "required": [
+                        "en"
+                    ],
+                    "properties": {
+                        "en": {
+                            "type": "string",
+                            "title": "Text anglicky",
+                            "description": "Text anglicky",
+                            "examples": [
+                                "Text in English"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "additionalProperties": {
+                "type": "string"
+            }
+        },
+        "více-textů": {
+            "name": "Více textů",
+            "type": "object",
+            "description": "Více vícejazyčných textů",
+            "anyOf": [
+                {
+                    "required": [
+                        "sk"
+                    ],
+                    "properties": {
+                        "sk": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "title": "Text slovensky",
+                                    "description": "Text slovensky",
+                                    "examples": [
+                                        "Text slovensky"
+                                    ]
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "title": "Text slovensky",
+                                        "description": "Text slovensky",
+                                        "examples": [
+                                            "Text slovensky"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "required": [
+                        "en"
+                    ],
+                    "properties": {
+                        "en": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "title": "Text anglicky",
+                                    "description": "Text anglicky",
+                                    "examples": [
+                                        "Text in English"
+                                    ]
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "title": "Text anglicky",
+                                        "description": "Text anglicky",
+                                        "examples": [
+                                            "Text in English"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "type": "object",
+    "title": "Dataset",
+    "required": [
+        "typ",
+        "iri",
+        "názov",
+        "popis",
+        "poskytovateľ",
+        "téma",
+        "periodicita_aktualizácie",
+        "kľúčové_slovo"
+    ],
+    "properties": {
+        "typ": {
+            "oneOf": [
+                {
+                    "const": "Dataset"
+                },
+                {
+                    "type": "array",
+                    "contains": {
+                        "const": "Dataset"
+                    },
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            ]
+        },
+        "iri": {
+            "type": "string",
+            "format": "iri",
+            "title": "Identifikátor",
+            "minLength": 8,
+            "pattern": "^https://",
+            "examples": [
+                "https://www.trebic.cz/zdroj/aktualita/2020/dopadení-lupiče-na-francouzské-ulici"
+            ]
+        },
+        "názov": {
+            "$ref": "#/$defs/text"
+        },
+        "popis": {
+            "$ref": "#/$defs/text"
+        },
+        "poskytovateľ": {
+            "type": "string",
+            "format": "iri",
+            "title": "Poskytovatel",
+            "examples": [
+                "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"
+            ]
+        },
+        "typ_datasetu": {
+            "type": "string",
+            "format": "iri",
+            "title": "Typ datasetu",
+            "examples": [
+                "https://data.gov.sk/def/dataset-type/1"
+            ]
+        },
+        "téma": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "iri",
+                "title": "Téma",
+                "examples": [
+                    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+                ]
+            }
+        },
+        "periodicita_aktualizácie": {
+            "type": "string",
+            "format": "iri",
+            "title": "Periodicita aktualizace",
+            "pattern": "^http\\://publications\\.europa\\.eu/resource/authority/frequency/.*$",
+            "examples": [
+                "http://publications.europa.eu/resource/authority/frequency/MONTHLY"
+            ]
+        },
+        "kľúčové_slovo": {
+            "$ref": "#/$defs/více-textů"
+        },
+        "geografické_územie": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "iri",
+                "title": "Související geografické území",
+                "examples": [
+                    "http://publications.europa.eu/resource/authority/continent/EUROPE"
+                ]
+            }
+        },
+        "časové_pokrytie": {
+            "type": "object",
+            "required": [
+                "typ"
+            ],
+            "properties": {
+                "typ": {
+                    "oneOf": [
+                        {
+                            "const": "Časový interval"
+                        },
+                        {
+                            "type": "array",
+                            "contains": {
+                                "const": "Časový interval"
+                            },
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ]
+                },
+                "začátek": {
+                    "type": "string",
+                    "format": "date",
+                    "title": "Datum začátku",
+                    "examples": [
+                        "2019-01-01+01:00"
+                    ]
+                },
+                "koniec": {
+                    "type": "string",
+                    "format": "date",
+                    "title": "Datum konce",
+                    "examples": [
+                        "2019-01-01+01:00"
+                    ]
+                }
+            }
+        },
+        "kontaktný_bod": {
+            "type": "object",
+            "required": [
+                "typ"
+            ],
+            "properties": {
+                "typ": {
+                    "type": "string",
+                    "examples": [
+                        "Organizace"
+                    ]
+                },
+                "jméno": {
+                    "$ref": "#/$defs/text"
+                },
+                "e-mail": {
+                    "type": "string",
+                    "format": "iri",
+                    "pattern": "^mailto\\:",
+                    "examples": [
+                        "mailto:sekretariat.190@mdcr.cz"
+                    ]
+                }
+            }
+        },
+        "dokumentácia": {
+            "type": "string",
+            "format": "iri",
+            "title": "dokumentácia",
+            "examples": [
+                "https://www.mdcr.cz/Dokumenty/Verejna-doprava/Jizdni-rady,-kalendare-pro-jizdni-rady,-metodi-(1)/Jizdni-rady-verejne-dopravy"
+            ]
+        },
+        "specifikace": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "iri",
+                "title": "Specifikace",
+                "examples": [
+                    "https://ofn.gov.cz/turistické-cíle/2020-07-01/"
+                ]
+            }
+        },
+        "koncept_euroVoc": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "iri",
+                "pattern": "^http\\://eurovoc\\.europa\\.eu/.*$",
+                "title": "Klasifikace dle EuroVoc",
+                "examples": [
+                    "http://eurovoc.europa.eu/1001"
+                ]
+            }
+        },
+        "priestorové_rozlíšenie_v_metroch": {
+            "type": "string",
+            "title": "Prostorové rozlišení v metrech",
+            "pattern": "[0-9]+(\\.[0-9]+)?",
+            "description": "Musí být text kvůli kompatibilitě s datovým typem xsd:decimal",
+            "examples": [
+                "0.5"
+            ]
+        },
+        "časové_rozlíšenie": {
+            "type": "string",
+            "title": "Časové rozlišení",
+            "examples": [
+                "P1D"
+            ]
+        },
+        "je_súčásťou": {
+            "type": "string",
+            "format": "iri",
+            "title": "Je súčásťou",
+            "examples": [
+                "https://lkod.mvcr.cz/zdroj/datové-sady/12345"
+            ]
+        },
+        "distribúcia": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "typ",
+                    "iri",
+                    "podmienky_použitia",
+                    "prístupové_url"
+                ],
+                "properties": {
+                    "typ": {
+                        "oneOf": [
+                            {
+                                "const": "Distribúcia"
+                            },
+                            {
+                                "type": "array",
+                                "contains": {
+                                    "const": "Distribúcia"
+                                },
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "iri": {
+                        "type": "string",
+                        "format": "iri",
+                        "title": "Identifikátor",
+                        "minLength": 8,
+                        "pattern": "^https?://",
+                        "examples": [
+                            "https://www.trebic.cz/zdroj/aktualita/2020/dopadení-lupiče-na-francouzské-ulici"
+                        ]
+                    },
+                    "podmienky_použitia": {
+                        "type": "object",
+                        "title": "Špecifikácia podmienok použitia",
+                        "required": [
+                            "typ",
+                            "autorské_dielo",
+                            "databáza_ako_autorské_dielo",
+                            "databáza_chránená_zvláštnými_právami",
+                            "osobné_údaje"
+                        ],
+                        "properties": {
+                            "typ": {
+                                "oneOf": [
+                                    {
+                                        "const": "Špecifikácia podmienok použitia"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "contains": {
+                                            "const": "Špecifikácia podmienok použitia"
+                                        },
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                ]
+                            },
+                            "autorské_dielo": {
+                                "type": "string",
+                                "title": "Autorská práva",
+                                "format": "iri",
+                                "examples": [
+                                    "https://data.gov.cz/podmínky-užití/neobsahuje-autorská-díla/",
+                                    "https://creativecommons.org/licenses/by/4.0/"
+                                ]
+                            },
+                            "autor": {
+                                "$ref": "#/$defs/text"
+                            },
+                            "databáza_ako_autorské_dielo": {
+                                "type": "string",
+                                "title": "Autorskoprávní ochrana databáze jako díla",
+                                "format": "iri",
+                                "examples": [
+                                    "https://data.gov.cz/podmínky-užití/není-autorskoprávně-chráněnou-databází/",
+                                    "https://creativecommons.org/licenses/by/4.0/"
+                                ]
+                            },
+                            "autor_databáze": {
+                                "$ref": "#/$defs/text"
+                            },
+                            "databáza_chránená_zvláštnými_právami": {
+                                "type": "string",
+                                "title": "Zvláštní práva pořizovatele databáze",
+                                "format": "iri",
+                                "examples": [
+                                    "https://data.gov.cz/podmínky-užití/není-chráněna-zvláštním-právem-pořizovatele-databáze/",
+                                    "https://creativecommons.org/publicdomain/zero/1.0/"
+                                ]
+                            },
+                            "osobné_údaje": {
+                                "oneOf": [
+                                    {
+                                        "const": "https://data.gov.sk/def/personal-data-occurence-type/2"
+                                    },
+                                    {
+                                        "const": "https://data.gov.sk/def/personal-data-occurence-type/1"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "prístupové_url": {
+                        "type": "string",
+                        "format": "iri",
+                        "title": "Přístupové URL",
+                        "minLength": 8,
+                        "pattern": "^https://",
+                        "examples": [
+                            "https://portal.cisjr.cz/sparql"
+                        ]
+                    },
+                    "formát": {
+                        "type": "string",
+                        "format": "iri",
+                        "pattern": "^http\\://publications\\.europa\\.eu/resource/authority/file-type/.*$",
+                        "title": "Formát souboru ke stažení",
+                        "examples": [
+                            "http://publications.europa.eu/resource/authority/file-type/CSV"
+                        ]
+                    },
+                    "typ_média": {
+                        "type": "string",
+                        "format": "iri",
+                        "pattern": "^http\\://www\\.iana\\.org/assignments/media-types/.*$",
+                        "title": "Typ média",
+                        "examples": [
+                            "http://www.iana.org/assignments/media-types/image/tiff"
+                        ]
+                    },
+                    "schéma": {
+                        "type": "string",
+                        "format": "iri",
+                        "title": "Strojově čitelné schéma souboru ke stažení",
+                        "examples": [
+                            "https://data.cssz.cz/dump/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni-schema.json"
+                        ]
+                    },
+                    "typ_média_kompresie": {
+                        "type": "string",
+                        "format": "iri",
+                        "pattern": "^http\\://www\\.iana\\.org/assignments/media-types/.*$",
+                        "title": "Typ média komprese",
+                        "examples": [
+                            "http://www.iana.org/assignments/media-types/image/tiff"
+                        ]
+                    },
+                    "typ_média_balíčka": {
+                        "type": "string",
+                        "format": "iri",
+                        "pattern": "^http\\://www\\.iana\\.org/assignments/media-types/.*$",
+                        "title": "Typ média balíčku",
+                        "examples": [
+                            "http://www.iana.org/assignments/media-types/image/tiff"
+                        ]
+                    },
+                    "názov": {
+                        "$ref": "#/$defs/text"
+                    },
+                    "prístupová_služba": {
+                        "type": "object",
+                        "required": [
+                            "typ",
+                            "názov",
+                            "iri"
+                        ],
+                        "properties": {
+                            "typ": {
+                                "oneOf": [
+                                    {
+                                        "const": "Dátová služba"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "contains": {
+                                            "const": "Dátová služba"
+                                        },
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                ]
+                            },
+                            "iri": {
+                                "type": "string",
+                                "format": "iri",
+                                "title": "Identifikátor",
+                                "minLength": 8,
+                                "pattern": "^https?://"
+                            },
+                            "názov": {
+                                "$ref": "#/$defs/text"
+                            },
+                            "prístupový_bod": {
+                                "type": "string",
+                                "format": "iri",
+                                "title": "Přístupový bod",
+                                "minLength": 8,
+                                "pattern": "^https://",
+                                "examples": [
+                                    "http://www.iana.org/assignments/media-types/image/tiff"
+                                ]
+                            },
+                            "špecifikácia": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "iri",
+                                    "title": "Specifikace",
+                                    "minLength": 8,
+                                    "pattern": "^https://",
+                                    "examples": [
+                                        "https://www.w3.org/TR/sparql11-protocol/"
+                                    ]
+                                }
+                            },
+                            "popis_prístupového_bodu": {
+                                "type": "string",
+                                "format": "iri",
+                                "title": "Popis přístupového bodu",
+                                "minLength": 8,
+                                "pattern": "^https://"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

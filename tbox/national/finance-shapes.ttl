@@ -1,0 +1,104 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix fin: <https://data.gov.sk/def/ontology/finance/> .
+@prefix sha-fin: <https://data.gov.sk/def/shapes/finance/> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-fin:InternationalBankConnectionShape
+	a sh:NodeShape ;
+	sh:order 1 ;
+	rdfs:isDefinedBy sha-fin: ;
+	sh:targetClass lsub:LegalSubject ;
+        sh:property sha-fin:InternationalBankConnection-ibanCode ,
+        			sha-fin:InternationalBankConnection-currency ,
+        			sha-fin:InternationalBankConnection-bic .
+
+# ibanCode
+
+sha-fin:InternationalBankConnection-ibanCode
+    a sh:PropertyShape ;
+	sh:path fin:ibanCode ;
+	sh:datatype xsd:string ;
+	sh:order 2 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:minLenght 34 ;
+    sh:maxLenght 34 ;	
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+# currency
+
+sha-fin:InternationalBankConnection-ibanCode
+    a sh:PropertyShape ;
+	sh:order 3 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:currency ;
+    sh:class fin:Currency ;
+    sh:nodeKind sh:IRI .	
+	
+# bic
+
+sha-fin:InternationalBankConnection-bic
+  a sh:PropertyShape ;
+	sh:order 4 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:bic ;
+    sh:class fin:BIC ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .    
+	
+sha-fin:BICShape
+	a sh:NodeShape ;
+	sh:order 5 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:targetClass fin:BIC ;
+    sh:property sha-fin:BIC-bankBranchCode ,
+                sha-fin:BIC-bankCode ,
+                sha-fin:BIC-bankCountryCode ,
+                sha-fin:BIC-bankHeadquartersCode ,
+                sha-fin:BIC-bankIdentifierCode .
+                
+sha-fin:BIC-bankBranchCode
+    a sh:PropertyShape ;
+	sh:order 6 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:bankBranchCode ;
+    sh:datatype xsd:string .
+
+sha-fin:BIC-bankCode
+    a sh:PropertyShape ;
+	sh:order 7 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:bankCode ;
+    sh:datatype xsd:string .
+
+sha-fin:BIC-bankCountryCode
+    a sh:PropertyShape ;
+ 	sh:order 8 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:bankCountryCode ;
+    sh:datatype xsd:string .
+
+sha-fin:BIC-bankHeadquartersCode
+    a sh:PropertyShape ;
+	sh:order 9 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:bankHeadquartersCode ;
+    sh:datatype xsd:string .
+    
+sha-fin:BIC-bankIdentifierCode
+    a sh:PropertyShape ;
+	sh:order 10 ;
+	rdfs:isDefinedBy sha-fin: ;
+    sh:path fin:bankIdentifierCode ;
+    sh:datatype xsd:string .
+    

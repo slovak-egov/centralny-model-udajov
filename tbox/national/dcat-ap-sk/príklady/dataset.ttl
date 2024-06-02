@@ -1,0 +1,80 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard2006: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix filetype: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix application: <http://www.iana.org/assignments/media-types/application/> .
+@prefix freq: <http://publications.europa.eu/resource/authority/frequency/> .
+@prefix theme: <http://publications.europa.eu/resource/authority/data-theme/> .
+@prefix continent: <http://publications.europa.eu/resource/authority/continent/> .
+@prefix euroVoc: <http://eurovoc.europa.eu/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+
+<https://data.gov.sk/set/vld> a dcat:Dataset ;
+    dct:title "Cestovné poriadky"@sk, "Public transport timetables"@en;
+    dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
+    dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
+    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
+    dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
+    dct:type <https://data.gov.sk/def/dataset-type/1> ;
+    dcat:theme theme:TRAN ;
+    dct:accrualPeriodicity freq:WEEKLY_3 ;
+    dcat:keyword "autobusy"@sk, "cestovné poriadky"@sk, "verejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
+    dct:spatial <https://data.gov.sk/id/nuts1/SK0> ;
+    dct:spatial <https://sws.geonames.org/3057568> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;
+        dcat:startDate "2009-01-01"^^xsd:date ;
+        dcat:endDate "2017-12-31"^^xsd:date
+    ] ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail "mailto:info@mindop.sk"
+    ] ;
+    dcat:landingPage <https://opendata.mindop.sk/show/vld> ;
+    foaf:page <https://www.middop.sk/dokumentacia/> ;
+    dct:relation <https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7> ;
+    dct:conformsTo <https://data.gov.sk/def/ontology/transport/> ;
+    dcat:theme euroVoc:4512 ;
+    dcat:spatialResolutionInMeters 12.0 ;
+    dcat:temporalResolution "P1D"^^xsd:duration ;
+    dcat:applicableLegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
+    dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
+                      <https://data.gov.sk/set/vld/resource/sparql> .
+
+<https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
+    leg:termsOfUse [ a leg:TermsOfUse ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:authorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
+                    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
+    dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dcat:downloadURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dct:format filetype:ZIP ;
+    dct:conformsTo <https://opendata.middop.sk/schemy/json-schema.json> ;
+    dcat:mediaType application:json ;
+    dcat:compressFormat application:zip ;
+    dcat:packageFormat application:zip ;
+    dct:title "JSON distribúcia v ZIP súbore"@sk, "JSON distribution in ZIP file"@en .
+
+<https://data.gov.sk/set/vld/resource/sparql> a dcat:Distribution ;
+    leg:termsOfUse [ a leg:TermsOfUse ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
+    dcat:accessURL <https://opendata.middop.sk/sparql> ;
+    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dcat:accessService <https://data.gov.sk/id/egov/app-service/123> .
+
+<https://data.gov.sk/id/egov/app-service/123> a dcat:DataService ;
+    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dcat:endpointURL <https://opendata.middop.sk/sparql> ;
+    dcat:endpointDescription <https://opendata.middop.sk/sparql> ;
+    foaf:page <https://www.middop.sk/dokumentacia/sparql> ;
+    dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .

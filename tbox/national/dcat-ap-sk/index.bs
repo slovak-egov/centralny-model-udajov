@@ -1,0 +1,2259 @@
+<pre class='metadata'>
+Title: Rozhranie katalógu otvorených dát DCAT-AP-SK 3.0.0
+Shortname: dcat-ap-sk-3.0.0
+Boilerplate: conformance no, copyright no
+Logo: 
+Repository: https://github.com/slovak-egov/centralny-model-udajov/
+Markup Shorthands: markdown yes
+Level: 1
+Status: LS
+TR: https://datova-kancelaria.github.io/dcat-ap-sk-2.0/
+Group: MIRRI
+URL: https://htmlpreview.github.io/?https://github.com/slovak-egov/centralny-model-udajov/blob/develop/tbox/national/dcat-ap-sk/index.html
+Editor: Miroslav Líška, MIRRI https://www.mirri.gov.sk/, miroslav.liska@mirri.gov.sk, https://www.linkedin.com/in/miroslavliska
+Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
+Abstract: Cieľom tohto dokumentu je špecifikovať dátový model a rozhranie lokálných katalógov otvorených dát (LKOD) pre ich harvestovanie Národným katalógom otevrených dát (NKOD). Rovnaká špecifikácia platí aj pre dátový model NKOD a dáta poskytované z NKOD v podobe súborov na stiahnutie resp. cez SPARQL endpoint. Najskôr je špecifikovaný dátový model katalogizačného záznamu. Následne sú špecifikované 2 varianty rozhrania pre harvestáciu, ktoré sú založené na [štandarde DCAT-AP 3.0.0](https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300). Jedna používa SPARQL endpoint a druhá špecifikuje variantu uloženia záznamov v súboroch, bez použitia SPARQL endpointu.
+</pre>
+
+Úvod {#úvod}
+============
+Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsobov zaistenia katalogizácie dát v Národnom katalógu otvorených dát (NKOD).
+
+Čo je nové? {#novinky}
+======================
+Nová verzia DCAT-AP-SK-3.0.0 vyplynula z potreby zosúladenia sa na štandard DCAT 3, DCAT-AP-3.0.0 a DCAP-AP-HVD-2.2.0. V detaile pribudli:
+
+2.1. Zosúladenie na štandard [DCAT-AP-3.0.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
+- samostatná trieda pre dátovú sériu dcat:DatasetSeries
+- nové metaúdaje: pre triedu Dataset - dátum vytvorenia, dátum modifikácie, webový odkaz  
+- nový EÚ číselník licencie
+- nová trieda Právny predpis
+- pridanie väzby je súčasťou dcat:inSeries (napr. Dataset je súčasťou Dátovej série)
+- špecifikácia dátovej kocky popisujúcej dataset je realizovaná prostredníctvom existujúcej vlastnosti dct:conformsTo (odkaz na špecifikáciu)
+
+2.2. Zosúladenie na štandardu [DCAT-AP-HVD](https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/)
+- nový EÚ číselník kategória HVD pre Dataset a Dátovú službu
+- povinne používaný identifikátor pre právny predpis pre HVD - http://data.europa.eu/eli/reg_impl/2023/138/oj
+- povinnosť špecifikovať kontaktný bod a dokumentáciu dátovej služby sprístupňujúce HVDs.
+
+2.3. Pridanie formálnych pravidiel pomocou jazyka [SHACL](https://www.w3.org/TR/shacl/) pre validáciu správnosti metadát pre LKODy (Lokálne katalógy otvorených dát)
+- [Povinné vlastnosti datasetu, ktorý nie je typu HVD](index.html#dcat-ap-sk-shacl-non-hvd)
+- [Povinné vlastnosti HVD datasetu](index.html#povinn-vlasnosti-datasetu-ktor-je-typu-hvd)
+
+Položky metadátového záznamu {#položky-metadátového-záznamu}
+============================================================
+
+V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu.
+Položky sa riadia štandardom [DCAT Application Profile for data portals in Europe Version 3 (DCAT-AP 3.0.0)](https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300).
+
+<figure>
+    <img alt="Konceptuálný model DCAT-AP-SK 3.0.0" src="dcat-ap-sk-3.0.0.svg">
+    <figcaption>Diagram dátového modelu DCAT-AP-SK 3.0.0 Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
+</figure>
+
+Medzi hlavné triedy štandardu patrí Katalóg, čo je najvyššia entita zoskupujúca množinu Datasetov. Tieto Datasety môžu byť naviac zoskupené do Dátových sérií. Dáta samotného Datasetu na stiahnutie alebo na prístup cez API sa nazývajú Distribúcie, ktoré môžu byť dostupné v rôznom formáte. Distribúcia môže byť prístupná aj cez API, tj. cez Dátovú službu. 
+Distribúcií môže mať Dataset viacej, avšak líšiť sa môžu jedine formátom (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
+Obsahovo musia byť distribúcie totožné.
+
+Použité prefixy {#použité-prefixy}
+----------------------------------
+
+V popisu položiek a rozhraní budú použité následujúce prefixy slovníkov.
+
+```turtle
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> . 
+```
+
+Pre prehľadnosť zápisu budú použité aj nasledujúce prefixy skracujúce IRI vzorových entít.
+
+```turtle
+@prefix dataset: <https://data.gov.sk/dataset/1> .
+@prefix katalóg: <https://data.gov.sk/set/catalog/lkod/1> .
+@prefix distribúcia: <https://data.gov.sk/set/1/resource/1> .
+@prefix služba: <https://data.gov.sk/id/egov/app-service/1> .
+@prefix čas: <https://data.gov.sk/set/1/temporal> .
+@prefix kontakt: <https://data.gov.sk/set/1/contact-point> .
+@prefix podmienky: <https://data.gov.sk/set/1/resource/1/terms-of-use> .
+@prefix správca: <https://data.gov.sk/catalog/lkod/1/contact-point> .
+```
+
+Trieda: Katalóg {#trieda-katalóg}
+--------------
+
+: Popis
+:: Trieda reprezentujúca dátový katalóg. Je definovaná ako [dcat:Catalog](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog).
+: Príklad
+::  
+    ```turtle
+katalog: a dcat:Catalog .
+    ```
+
+### Názov ### {#katalóg-názov}
+
+: Popis
+:: Táto vlastnosť obsahuje názov dátového katalógu. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
+: Vlastnosť
+:: `názov`, `dct:title`
+: Typ
+:: Text
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+katalog: dct:title "Katalóg otvorených dát Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en .
+    ```
+
+### Popis ### {#katalóg-popis}
+
+: Popis
+:: Táto Vlastnosť obsahuje volný text s popisom dátového katalógu. Je definovaná ako [dct:description](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description).
+: Vlastnosť
+:: `popis`, `dct:description`
+: Typ
+:: Text
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+katalog: dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."@sk, "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en .
+    ```
+
+### Poskytovateľ ### {#katalóg-poskytovateľ}
+
+: Popis
+:: Poskytovateľ dátového katalógu. Je definovaná ako [dct:publisher](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher).
+: Vlastnosť
+:: `poskytovateľ`, `dct:publisher`
+: Typ
+:: IRI
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+katalog: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
+    ```
+
+### Kontaktný bod - meno a email ### {#katalóg-kontaktný-bod}
+
+: Popis
+:: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok ku katalógu. Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).
+: Vlastnosť
+:: `kontaktný_bod`, `dcat:contactPoint`
+: Typ
+:: Entita podtypu `vcard:Kind` s Vlastnosťami `vcard:fn` a `vcard:hasEmail`.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+katalog: dcat:contactPoint správca: .
+
+správca: a vcard:Individual ;
+         vcard:fn "Jan Novák"@sk ;
+         vcard:hasEmail <mailto:jan.novak@mindop.sk> .
+    ```
+
+### Domovská stránka ### {#katalóg-domovská-stránka}
+
+: Popis
+:: Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako [foaf:homepage](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_homepage).
+: Vlastnosť
+:: `domovská_stránka`, `foaf:homepage`
+: Typ
+:: URL webové stránky
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+katalog: foaf:homepage <https://opendata.mindop.sk/> .
+    ```
+
+### Väzba: dataset ### {#katalóg-dataset}
+
+: Popis
+:: Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako [dcat:dataset](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset).
+: Vlastnosť
+:: `dataset`, `dcat:dataset`
+: Typ
+:: Entita typu [dataset](#trieda-dataset)
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+katalog: dcat:dataset dataset: .
+    ```
+
+Trieda: Dataset {#trieda-dataset}
+--------------
+
+: Popis
+:: Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset).
+: Príklad
+::  
+    ```turtle
+dataset: a dcat:Dataset .
+    ```
+
+### Názov ### {#dataset-názov}
+
+: Popis
+:: Táto Vlastnosť obsahuje názov datasetu. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
+: Vlastnosť
+:: `názov`, `dct:title`
+: Typ
+:: Entita typu [dataset](#trieda-dataset)
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:title "Kontroly plnenia Povinnosti zamestnávateľov v oblasti sociálneho zabezpečenia"@sk, "Duty fulfillment inspections in the area of social security"@en .
+    ```
+
+### Popis ### {#dataset-popis}
+
+: Popis
+:: Táto Vlastnosť obsahuje volný text s popisom datasetu. Je definovaná ako [dct:description](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_description).
+: Vlastnosť
+:: `popis`, `dct:description`
+: Typ
+:: Text
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:description "Štatistika kontrol plnenia Povinností zamestnávateľov v oblasti sociálneho zabezpečenia od roku 2009"@sk, "Social security statistics for 2009"@en .
+    ```
+
+### Poskytovateľ ### {#dataset-poskytovateľ}
+
+: Popis
+:: Poskytovateľ datasetu. Je definovaná ako [dct:publisher](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_publisher).
+: Vlastnosť
+:: `poskytovateľ`, `dct:publisher`
+: Typ
+:: IRI
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
+    ```
+
+### Dátum publikácie ### {#dataset-dátum-publikácie}
+
+: Popis
+:: Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako [dct:issued](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_release_date).
+: Vlastnosť
+:: `dátum_publikácie`, `dct:issued`
+: Typ
+:: Dátum a čas
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:issued "2024-01-21T12:00:00"^^xsd:dateTime .
+    ```
+
+### Dátum modifikácie ### {#dataset-dátum-modifikácie}
+
+: Popis
+:: Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako [dct:modified](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_update_date).
+: Vlastnosť
+:: `dátum_modifikácie`, `dct:modified`
+: Typ
+:: Dátum a čas
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:modified "2024-01-22T16:23:00"^^xsd:dateTime .
+    ```
+
+### Téma ### {#dataset-téma}
+
+: Popis
+:: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
+    Dataset môže byť popísaný viacerými témami.
+    Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme).
+    Podľa DCAT-AP 3.0.0 musí byť aspoň jedna téma z [európského číselníka dátových tém](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
+: Vlastnosť
+:: `téma`, `dcat:theme`
+: Typ
+:: Viac IRI
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN> .
+    ```
+
+### Periodicita aktualizácie ### {#dataset-periodicita-aktualizácie}
+
+: Popis
+:: Táto Vlastnosť odkazuje na frekvenciu, s ktorou je dataset aktualizovaný.
+    Je definovaná ako [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency).
+    Podľa DCAT-AP 3.0.0 sú hodnoty z [európského číselníka frekvencií](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+: Vlastnosť
+:: `periodicita_aktualizace`, `dct:accrualPeriodicity`
+: Typ
+:: IRI položky z [európského číselníka frekvencí](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency)
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/MONTHLY> .
+    ```
+
+### Klúčové slová ### {#dataset-kľúčové-slová}
+
+: Popis
+:: Táto Vlastnosť obsahuje kľúčové slovo alebo značku popisujúcu dataset. Je definovaná ako [dcat:keyword](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_keyword).
+: Vlastnosť
+:: `kľúčové_slovo`, `dcat:keyword`
+: Typ
+:: Text, opakovaná Vlastnosť
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:keyword "kontrola"@sk, "štatistika"@sk, "inspection"@en, "statistics"@en .
+    ```
+
+### Typ datasetu ### {#dataset-typ}
+
+: Popis
+:: Táto Vlastnosť určuje typ datasetu.
+    Je definovaná ako [dct:type](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type).
+: Vlastnosť
+:: `typ_datasetu`, `dct:type`
+: Typ
+:: IRI položiek z číselníka [typ datasetu](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101817682).
+: Povinnosť
+:: Nepovinná
+: Príklady
+:: 
+    ```turtle
+dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
+    ```
+
+### Územný prvok z registra adries ### {#dataset-register-adries}
+
+: Popis
+:: Táto Vlastnosť odkazuje na územný prvok v registry adries.
+    Dataset môže byť popísaný viacerými územnými prvkami v registry adries.
+    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial).
+: Vlastnosť
+:: `prvok_registra_adries`, `dct:spatial`
+: Typ
+:: IRI položiek pre územné entity v Registry adries vo forme [NUTS-SK](https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl) klasifikácie.
+: Povinnosť
+:: Povinná
+: Príklady
+:: 
+    ```turtle
+dataset: dct:spatial <https://data.gov.sk/id/nuts1/SK0> .
+    ```
+
+### Súvisiace geografické územie ### {#dataset-geografické-územia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na geografickú oblasť pokrytú datasetom.
+    Dataset môže byť popísaný viacerými geografickými oblasťami.
+    Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial).
+: Vlastnosť
+:: `geografické_územie`, `dct:spatial`
+: Typ
+:: IRI položiek pre ďaľšie upresnenie územnej lokality datasetu, napr. objekty definované v [Geonames](https://www.geonames.org/), ako napr. [Prístav v Bratislave](https://sws.geonames.org/11524186).
+: Povinnosť
+:: Nepovinná
+: Príklady
+::
+    ```turtle
+dataset: dct:spatial <https://sws.geonames.org/11524186/> .
+    ```
+
+### Časové pokrytie ### {#dataset-časové-pokrytie}
+
+: Popis
+:: Táto Vlastnosť odkazuje na časový úsek pokrytý datasetom.
+    Je definovaná ako [dct:temporal](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal).
+: Vlastnosť
+:: `časové_pokrytie`, `dct:temporal`
+: Typ
+:: Entita typu `dct:PeriodOfTime` s Vlastnosťami `dcat:startDate` a `dcat:endDate`, ktoré majú dátový typ `xsd:date`.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:temporal čas: .
+
+čas: dcat:startDate "2009-01-01"^^xsd:date ;
+     dcat:endDate "2017-12-31"^^xsd:date .
+    ```
+
+### Kontaktný bod - meno a email ### {#dataset-kontaktní-bod}
+
+: Popis
+:: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre zasielanie pripomienok k datasetu.
+    Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).
+: Vlastnosť
+:: `kontaktný_bod`, `dcat:contactPoint`
+: Typ
+:: Entita podtypu `vcard:Kind` s Vlastnosťami `vcard:fn` a `vcard:hasEmail`.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:contactPoint kontakt: .
+
+kontakt: a vcard:Individual ;
+         vcard:fn "Jan Novák"@sk ;
+         vcard:hasEmail <mailto:jan.novak@mindop.sk> .
+    ```
+
+### Webová stránka ### {#dataset-webová-stránka}
+
+: Popis
+:: Táto Vlastnosť odkazuje na domovskú WWW stránku datasetu, kde dataset vznikol. Môže to byť stránka na centrálnom portáli otvorených údajov, alebo stránka v lokálnom opendatovom portáli.
+    Je definovaná ako [dcat:landingPage](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page).
+: Vlastnosť
+:: `webová_stránka_datasetu`, `dcat:landingPage`
+: Typ
+:: URL webovej stránky datasetu.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:landingPage <https://data.gov.sk/set/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia> .
+    ```
+
+### Odkaz na dokumentáciu ### {#dataset-súvisiaci-zdroj}
+
+: Popis
+:: Táto Vlastnosť odkazuje na dokumentáciu datasetu.
+    Je definovaná ako [foaf:page](http://xmlns.com/foaf/0.1/page).
+: Vlastnosť
+:: `dokumentácia`, `foaf:page`
+: Typ
+:: URL dokumentácie datasetu.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: foaf:page <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
+    ```
+
+### Odkaz na špecifikáciu ### {#dataset-špecifikácia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa riadi dataset.
+    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to).
+: Vlastnosť
+:: `špecifikácia`, `dct:conformsTo`
+: Typ
+:: URL špecifikácie.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:conformsTo <https://data.gov.sk/def/ontology/finance/> .
+    ```
+
+### Súvisiaci zdroj ### {#dataset-súvisiaci-zdroj}
+
+: Popis
+:: Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
+    Je definovaná ako [dct:relation](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_relation).
+: Vlastnosť
+:: `súvisiaci_zdroj_datasetu`, `dct:relation`
+: Typ
+:: URL súvisiaceho zdroja datasetu.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
+    ```
+
+### Klasifikácia podľa EuroVoc ### {#dataset-eurovoc}
+
+: Popis
+:: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu podľa EuroVoc.
+    Dataset môže byť popísaný viacerými témamy.
+    Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_theme).
+: Vlastnosť
+:: `koncept_euroVoc`, `dcat:theme`
+: Typ
+:: IRI konceptov z európskeho tezauru [EuroVoc](https://op.europa.eu/sk/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:theme <http://eurovoc.europa.eu/1001>, <http://eurovoc.europa.eu/4050> .
+    ```
+
+### Priestorové rozlíšenie v metroch ### {#dataset-priestorové-rozlišenie}
+
+: Popis
+:: Táto Vlastnosť určuje priestorové rozlišenie dát v datasete v metroch.
+    Jedná sa o najmenší priestorový rozdiel v datasete.
+    Je definovaná ako [dcat:spatialResolutionInMeters](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial_resolution).
+: Vlastnosť
+:: `priestorové_rozlišenie_v_metroch`, `dcat:spatialResolutionInMeters`
+: Typ
+:: Desatinné číslo
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:spatialResolutionInMeters 0.5 .
+    ```
+
+### Časové rozlíšenie ### {#dataset-časové-rozlíšenie}
+
+: Popis
+:: Táto Vlastnosť určuje časové rozlišenie dát v datasete.
+    Jedná sa o najmenší časový rozdiel v datasete.
+    Je definovaná ako [dcat:temporalResolution](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_temporal_resolution).
+: Vlastnosť
+:: `časové_rozlišenie`, `dcat:temporalResolution`
+: Typ
+:: `xsd:duration`
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:temporalResolution "P1D"^^xsd:duration .
+    ```
+
+### Právny predpis ### {#dataset-právny-predpis}
+
+: Popis
+:: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+    Je definovaný ako [dcatap:applicableLegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation).
+: Vlastnosť
+:: `právny_predpis`, `dcatap:applicableLegislation`
+: Typ
+:: IRI právneho predpisu.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcatap:applicableLegislation <https://data.gov.sk/id/eli/2023/138/oj> .
+    ```
+:: 
+    ```turtle
+dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+    
+### Kategória HVD ### {#dataset-kategória-hvd}
+
+: Popis
+:: Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD).
+: Vlastnosť
+:: `kategoria_hvd`, `dcatap:hvdCategory`
+: Typ
+:: IRI položiek z európskeho [číselníka kategorií HVD](https://op.europa.eu/sk/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category).
+: Povinnosť
+:: Povinná pre datasety typu HVD
+: Príklad
+:: 
+    ```turtle
+dataset: dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> .
+    ```
+    
+### Väzba: Je súčasťou ### {#dataset-je-súčasťou}
+
+: Popis
+:: Táto Vlastnosť odkazuje na zastrešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
+    Je definovaná ako [dcat:inSeries](https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf).
+: Vlastnosť
+:: `je_sučásťou`, `dcat:inSeries`
+: Typ
+:: IRI zastrešujúceho datasetu.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:inSeries <https://data.gov.sk/set/pohladavky-mindop> .
+    ```
+
+### Väzba: Distribúcia datasetu ### {#dataset-distribúcia}
+
+: Popis
+:: Táto Vlastnosť odkazuje z datasetu na jej distribúciu.
+    Je definovaná ako [dcat:distribution](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution).
+: Vlastnosť
+:: `distribúcia`, `dcat:distribution`
+: Typ
+:: Entita typu [distribúcia datasetu](#trieda-distribúcia).
+: Povinnosť
+:: Povinná, pokiaľ nejde o zastrešujúci dataset dátovej série.
+: Príklad
+:: 
+    ```turtle
+dataset: dcat:distribution distribúcia: .
+    ```
+
+Trieda: Distribúcia datasetu {#trieda-distribúcia}
+--------------
+
+: Popis
+:: Fyzická podoba datasetu v konkrétnom formáte alebo ako konkrétná dátová služba, nikdy súčasne.
+    Je definovaná ako [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution).
+: Príklad
+::  
+    ```turtle
+distribúcia: a dcat:Distribution .
+    ```
+
+### Špecifikácia podmienok použitia ### {#špecifikácia-podmienok-použitia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v [európskom číselníku licencií](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/licence). [Viac informácií](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628)
+: Vlastnosť
+:: `podmienky_použitia`, `leg:termsOfUse`
+: Typ
+:: Entita typu `leg:TermsOfUse` s Vlastnosťami `leg:authorsWorkType`, `leg:originalDatabaseType`, `leg:databaseProtectedBySpecialRightsType` a `leg:personalDataContainmentType`.
+    Voliteľne tiež `leg:authorName` a `leg:originalDatabaseAuthorName`. Viď [Návrh URI pre NKOD](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101811456)
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: leg:termsOfUse podmienky: .
+
+podmienky: a leg:TermsOfUse ;
+    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> .
+    ```
+
+### Odkaz na stiahnutie súboru ### {#distribúcia-stiahnutie-súboru}
+
+: Popis
+:: Táto Vlastnosť obsahuje URL, ktoré je priamym odkazom na stiahnuteľný súbor v danom formáte.
+    Je definovaná ako [dcat:downloadURL](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url).
+: Vlastnosť
+:: `súbor_na_stiahnutie`, `dcat:downloadURL`
+: Typ
+:: URL súbor na stiahnutie.
+: Povinnosť
+:: Povinná pre súbor na stiahnutie
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:downloadURL <https://mindop.sk/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv> .
+    ```
+
+### Prístupové URL ### {#distribúcia-prístupové-url}
+
+: Popis
+:: Táto Vlastnosť obsahuje URL, pomocou ktorého sa je možné dostať k distribúcii datasetu.
+    Je definovaná ako [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url).
+    Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako [odkaz na stiahnutie súboru](#distribúcia-stiahnutie-súboru) v pripadě distribúcie reprezentujúcej súbor na stiahnutie, alebo rovnaká ako [prístupový bod](#dátová-služba-prístupový-bod) v prípadě distribúcie reprezentujúcej dátovú službu.
+: Vlastnosť
+:: `přístupové_url`, `dcat:accessURL`
+: Typ
+:: Prístupové URL distribúcie datasetu.
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv> .
+    ```
+
+### Formát súboru na stiahnutie ### {#distribúcia-formát-súboru}
+
+: Popis
+:: Táto Vlastnosť odkazuje na typ súboru s distribúciou.
+    Je definovaná ako [dct:format](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_format).
+    Podľa DCAT-AP 3.0.0 sú hodnoty z [európského číselníka typov súborov](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
+: Vlastnosť
+:: `formát`, `dct:format`
+: Typ
+:: IRI položky z [európského číselníka typov súborov](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
+: Povinnosť
+:: Povinná pre súbor na stiahnutie
+: Príklad
+:: 
+    ```turtle
+distribúcia: dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> .
+    ```
+
+### Typ média súboru na stiahnutie ### {#distribúcia-media-type}
+
+: Popis
+:: Táto Vlastnosť odkazuje na typ média distribúcie podľa oficiálneho registra typov médií spravovaného v IANA [[!IANA-MEDIA-TYPES]].
+    Je definovaná ako [dcat:mediaType](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_media_type).
+: Vlastnosť
+:: `typ_média`, `dcat:mediaType`
+: Typ
+:: IRI Typ média z [registra IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
+: Povinnosť
+:: Povinná pre súbor na stiahnutie
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:mediaType <http://www.iana.org/assignments/media-types/text/csv> .
+    ```
+
+### Právny predpis ### {#dataset-právny-predpis}
+
+: Popis
+:: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+    Je definovaný ako [dcatap:applicableLegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation).
+: Vlastnosť
+:: `právny_predpis`, `dcatap:applicableLegislation`
+: Typ
+:: IRI právneho predpisu.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+
+### Odkaz na strojovo-čitateľnú schému súboru na stiahnutie ### {#distribuce-schéma}
+
+: Popis
+:: Táto Vlastnosť odkazuje na stanovenú schému, ktorou sa riadi popisovaná distribúcia.
+    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_conforms_to).
+: Vlastnosť
+:: `schéma`, `dct:conformsTo`
+: Typ
+:: URL schémy.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dct:conformsTo <https://data.cssz.cz/dump/kontroly-plnenia-Povinnosti-zamestnavateľov-v-oblasti-sociálneho-zabezpečenia-schema.json> .
+    ```
+
+### Typ média kompresného formátu ### {#distribúcia-media-type-kompresia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na typ média kompresného formátu súboru podľa oficiálneho registra typov médií spravovaného v IANA [[!IANA-MEDIA-TYPES]].
+    Kompresný formát určuje techniku použitú na zmenšenie veľkosti jedného súboru na stiahnutie.
+    Je definovaná ako [dcat:compressFormat](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_compression_format).
+: Vlastnosť
+:: `typ_média_kompresie`, `dcat:compressFormat`
+: Typ
+:: IRI Typ media z [registra IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:compressFormat <http://www.iana.org/assignments/media-types/application/zip> .
+    ```
+
+### Typ média balíčkovacieho formátu ### {#distribúcia-media-type-balíčka}
+
+: Popis
+:: Táto Vlastnosť odkazuje na typ média balíčkovacího formátu súboru podľa oficiálneho registra typov médií spravovaném v IANA [[!IANA-MEDIA-TYPES]].
+    Balíčkovací formát určuje techniku použitú na zabalenie viacero súborov do jedného.
+    Je definovaná ako [dcat:packageFormat](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_packaging_format).
+: Vlastnosť
+:: `typ_média_balíčka`, `dcat:packageFormat`
+: Typ
+:: IRI Typ média z [registra IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:packageFormat <http://www.iana.org/assignments/media-types/application/zip> .
+    ```
+
+### Názov distribúcie datasetu ### {#distribúcia-názov}
+
+: Popis
+:: Táto Vlastnosť obsahuje názov distribúcie. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
+: Vlastnosť
+:: `názov`, `dct:title`
+: Typ
+:: Text
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+distribúcia: dct:title "Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení v CSV."@sk, "CSV representation of inspections in the area of social security."@en .
+    ```
+
+### Väzba: prístupová služba ### {#distribúcia-služba}
+
+: Popis
+:: Dátová služba sprístupňujúca distribúciu datasetu. Je definovaná ako [dcat:accessService](https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_service).
+: Vlastnosť
+:: `prístupová_služba`, `dcat:accessService`
+: Typ
+:: Entita typu [datová služba](#trieda-datová-služba).
+: Povinnosť
+:: Povinná pre dátovú službu
+: Príklad
+:: 
+    ```turtle
+distribúcia: dcat:accessService služba: .
+    ```
+
+Trieda: Dátová služba {#trieda-datová-služba}
+--------------
+
+: Popis
+:: Trieda reprezentujúca dátovú službu sprístupňujúcu dáta datasetu. Je definovaná ako [dcat:DataService](https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service).
+: Príklad
+::  
+    ```turtle
+služba: a dcat:DataService .
+    ```
+
+### Názov ### {#dátová-služba-názov}
+
+: Popis
+:: Táto Vlastnosť obsahuje názov datovej služby. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title).
+: Vlastnosť
+:: `názov`, `dct:title`
+: Typ
+:: Text
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+služba: dct:title "SPARQL endpoint Slovenskej správy sociálného zabezpečenia"@sk, "Czech Social Security Administration SPARQL endpoint"@en .
+    ```
+
+### Prístupový bod ### {#dátová-služba-prístupový-bod}
+
+: Popis
+:: Táto Vlastnosť obsahuje URL prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointURL](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_url).
+: Vlastnosť
+:: `prístupový_bod`, `dcat:endpointURL`
+: Typ
+:: Text
+: URL
+:: Povinná
+: Príklad
+:: 
+    ```turtle
+služba: dcat:endpointURL <https://data.gov.sk/sparql> .
+    ```
+
+### Kategória HVD ### {#dátová-služba-kategória-hvd}
+
+: Popis
+:: Táto vlastnosť sa používa pre klasifikáciu datasetov s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD), ktoré sú sprístupnené cez dátovú službu.
+: Vlastnosť
+:: `kategoria_hvd`, `dcatap:hvdCategory`
+: Typ
+:: IRI položiek z európskeho [číselníka kategorií HVD](https://op.europa.eu/sk/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/high-value-dataset-category).
+: Povinnosť
+:: Povinná pre dátové služby sprístupňujúce datasety typu HVD
+: Príklad
+:: 
+    ```turtle
+služba: dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> .
+    ```
+    
+### Právny predpis ### {#dátová-služba-pravny-predpis}
+
+: Popis
+:: Táto Vlastnosť určuje právny predpis, ktorý predpisuje publikáciu datasetu.
+    Je definovaný ako [dcatap:applicableLegislation](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Dataset.applicableLegislation).
+: Vlastnosť
+:: `právny_predpis`, `dcatap:applicableLegislation`
+: Typ
+:: IRI právneho predpisu.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+služba: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+    ```
+
+### Kontaktný bod - meno a email ### {#dátová-služba-kontaktný-bod}
+
+: Popis
+:: Táto Vlastnosť obsahuje kontaktné informáce, ktoré môžu byť využité pre posielanie pripomienok k dátovej službe. Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point).
+: Vlastnosť
+:: `kontaktný_bod`, `dcat:contactPoint`
+: Typ
+:: Entita podtypu `vcard:Kind` s Vlastnosťami `vcard:fn` a `vcard:hasEmail`.
+: Povinnosť
+:: Povinná pre dátové služby sprístupňujúce datasety typu HVD
+: Príklad
+:: 
+    ```turtle
+služba: dcat:contactPoint správca: .
+
+správca: a vcard:Individual ;
+         vcard:fn "Jan Novák"@sk ;
+         vcard:hasEmail <mailto:jan.novak@mindop.sk> .
+    ```
+
+### Odkaz na dokumentáciu ### {#dátová-služba-dokumentácia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na dokumentáciu dátovej služby.
+    Je definovaná ako [foaf:page](http://xmlns.com/foaf/0.1/page).
+: Vlastnosť
+:: `dokumentácia`, `foaf:page`
+: Typ
+:: URL dokumentácie dátovej služby.
+: Povinnosť
+:: Nepovinná, pre HVD datasety povinná
+: Príklad
+:: 
+    ```turtle
+služba: foaf:page <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
+    ```
+
+### Odkaz na špecifikáciu ### {#dátová-služba-špecifikácia}
+
+: Popis
+:: Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa dátová služba riadi.
+    Takou špecifikáciou je napríklad \[SPARQL](https://www.w3.org/TR/sparql11-protocol/).
+    Zoznam možných hodnôt je možné nájsť napríklad v [zozname udržiavanom Open Source Geospatial Foundation](https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv).
+    Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to).
+: Vlastnosť
+:: `špecifikácia`, `dct:conformsTo`
+: Typ
+:: URL špecifikácie.
+: URL
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+služba: dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
+    ```
+
+### Popis prístupového bodu ### {#dátová-služba-prístupový-bod-popis}
+
+: Popis
+:: Táto Vlastnosť obsahuje URL popisu prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointDescription](https://www.w3.org/TR/vocab-dcat-3/#Property:data_service_endpoint_description).
+: Vlastnosť
+:: `popis_prístupového_bodu`, `dcat:endpointDescription`
+: Typ
+:: URL
+: URL
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+služba: dcat:endpointDescription <https://data.gov.sk/sparql> .
+    ```
+
+Rozhranie DCAT-AP SPARQL Endpoint {#rozhranie-sparql-endpoint}
+================================
+Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu [[!sparql11-protocol]].
+Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried `dcat:Dataset`, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie [DCAT-AP 3.0.0](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
+Jedná se o nejjednoduchší spôsob registrácie lokálneho katalógu otvorených dát.
+
+Datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie sa jednať o [RDF prázdne uzly](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
+
+Rozhranie DCAT-AP Dokumenty {#rozhranie-dcat-ap-dokumenty}
+=========================================================
+Táto varianta rozhrania je určená pre inštitúcie, ktoré nechcú alebo nemôžu prevádzkovať pre účely harvestácie metadát o datasetoch NKOD SPARQL endpoint.
+Počíta so serializáciou metadát o datasetoch do statických súborov umiestnených na webe.
+Ako indexový súbor následne poslúži súbor obsahujúci inštanciu triedy `dcat:Catalog`, ktorá pomocou Vlastnosti `dcat:dataset` ukazuje na URL jednotlivých datasetov.
+Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane kompletný katalogizačný záznam pre dané datasety, vrátane ich distribúcií a dátových služieb.
+
+Datasety, distribúcie a dátové služby musia byť identifikované svojími IRI, nesmie sa jednať o [RDF prázdne uzly](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
+
+Súbor katalógu {#rozhranie-dcat-ap-dokumenty-katalóg}
+---------------
+Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[!json-ld11]], ktorý obsahuje inštanciu triedy `dcat:Catalog` a odkazy na jednotlivé katalogizované datasety.
+
+<div class='example'>
+<a href="príklady/katalóg.ttl">Príklad katalóu v Turtle</a>
+```turtle
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard2006: <http://www.w3.org/2006/vcard/ns#> .
+
+<https://data.gov.sk/set/lkod/mdsr/katalog> a dcat:Catalog ;
+    dct:title "Katalóg otvorených dát Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en ;
+    dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."@sk;
+    dct:description "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en ;
+    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    foaf:homepage <https://www.mindop.sk> ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail <mailto:info@mindop.sk>
+    ] ;
+    dcat:dataset  <https://data.gov.sk/set/zoznam-zástavok-2022-10> ,
+                  <https://data.gov.sk/set/líniové-vedenia-2022-10> ,
+                  <https://data.gov.sk/set/zoznam-tratí-2022> .
+```
+</div>
+
+<div class='example'>
+<a href="príklady/katalóg.jsonld">Príklad katalógu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+```json
+{
+    "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+    "iri": "https://data.gov.sk/set/lkod/mdsr/katalog",
+    "typ": "Katalóg",
+    "názov": {
+        "sk": "Katalóg otvorených dát Ministerstva dopravy",
+        "en": "Open Data Catalog of the Ministry of Transport"
+    },
+    "popis": {
+        "sk": "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy.",
+        "en": "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."
+    },
+    "kontaktný_bod": {
+        "typ": "Organizácia",
+        "meno": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy",
+          "en": "Ministry of Transport"
+        },
+        "e-mail": "mailto:info@mindop.sk"
+    },
+    "domovská_stránka": "https://www.mindop.sk",
+    "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+    "dataset": [
+         "https://data.gov.sk/set/zoznam-zástavok-2022-10",
+         "https://data.gov.sk/set/líniové-vedenia-2022-10",
+         "https://data.gov.sk/set/zoznam-tratí-2022"
+  ]
+}
+```
+</div>
+
+Súbor datasetu {#rozhranie-dcat-ap-dataset}
+------------------
+Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle [[!turtle]] či JSON-LD [[!json-ld11]] obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií.
+
+<div class='example'>
+<a href="príklady/dataset.ttl">Príklad datasetu v Turtle</a>
+```turtle
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard2006: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix filetype: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix application: <http://www.iana.org/assignments/media-types/application/> .
+@prefix freq: <http://publications.europa.eu/resource/authority/frequency/> .
+@prefix theme: <http://publications.europa.eu/resource/authority/data-theme/> .
+@prefix continent: <http://publications.europa.eu/resource/authority/continent/> .
+@prefix euroVoc: <http://eurovoc.europa.eu/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+
+<https://data.gov.sk/set/vld> a dcat:Dataset ;
+    dct:title "Cestovné poriadky"@sk, "Public transport timetables"@en;
+    dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
+    dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
+    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
+    dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
+    dct:type <https://data.gov.sk/def/dataset-type/1> ;
+    dcat:theme theme:TRAN ;
+    dct:accrualPeriodicity freq:WEEKLY_3 ;
+    dcat:keyword "autobusy"@sk, "cestovné poriadky"@sk, "verejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
+    dct:spatial <https://data.gov.sk/id/nuts1/SK0> ;
+    dct:spatial <https://sws.geonames.org/3057568> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;
+        dcat:startDate "2009-01-01"^^xsd:date ;
+        dcat:endDate "2017-12-31"^^xsd:date
+    ] ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail "mailto:info@mindop.sk"
+    ] ;
+    dcat:landingPage <https://opendata.mindop.sk/show/vld> ;
+    foaf:page <https://www.middop.sk/dokumentacia/> ;
+    dct:relation <https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7> ;
+    dct:conformsTo <https://data.gov.sk/def/ontology/transport/> ;
+    dcat:theme euroVoc:4512 ;
+    dcat:spatialResolutionInMeters 12.0 ;
+    dcat:temporalResolution "P1D"^^xsd:duration ;
+    dcat:applicableLegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
+    dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
+                      <https://data.gov.sk/set/vld/resource/sparql> .
+
+<https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
+    leg:termsOfUse [ a leg:TermsOfUse ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:authorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
+                    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
+    dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dcat:downloadURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dct:format filetype:ZIP ;
+    dct:conformsTo <https://opendata.middop.sk/schemy/json-schema.json> ;
+    dcat:mediaType application:json ;
+    dcat:compressFormat application:zip ;
+    dcat:packageFormat application:zip ;
+    dct:title "JSON distribúcia v ZIP súbore"@sk, "JSON distribution in ZIP file"@en .
+
+<https://data.gov.sk/set/vld/resource/sparql> a dcat:Distribution ;
+    leg:termsOfUse [ a leg:TermsOfUse ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
+    dcat:accessURL <https://opendata.middop.sk/sparql> ;
+    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dcat:accessService <https://data.gov.sk/id/egov/app-service/123> .
+
+<https://data.gov.sk/id/egov/app-service/123> a dcat:DataService ;
+    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dcat:endpointURL <https://opendata.middop.sk/sparql> ;
+    dcat:endpointDescription <https://opendata.middop.sk/sparql> ;
+    foaf:page <https://www.middop.sk/dokumentacia/sparql> ;
+    dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
+```
+</div>
+
+<div class='example'>
+<a href="príklady/dataset.jsonld">Príklad datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+```json
+{
+  "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+  "iri": "https://data.gov.sk/set/vld",
+  "typ": "Dataset",
+  "názov": {
+    "sk": "Cestovné poriadky",
+    "en": "Public transport timetables"
+  },
+  "popis": {
+    "sk": "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte.",
+    "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
+  },
+  "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+  "dátum_publikácie": "2024-01-01T12:00:34",
+  "dátum_modifikácie": "2024-01-01T14:23:16",
+  "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
+  "téma": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "periodicita_aktualizácie": "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3",
+  "kľúčové_slovo": {
+    "sk": [
+      "cestovné poriadky",
+      "verejná linková doprava",
+      "autobus"
+    ],
+    "en": [
+      "timetable",
+      "public transport",
+      "bus"
+    ]
+  },
+  "prvok_registra_adries": [
+    "https://data.gov.sk/id/nuts1/SK0"
+  ],
+  "geografické_územie": [
+    "https://sws.geonames.org/3057568"
+  ],
+  "časové_pokrytie": {
+    "typ": "Časový interval",
+    "začiatok": "2009-01-01",
+    "koniec": "2017-12-31"
+  },
+  "kontaktný_bod": {
+    "typ": "Organizácia",
+    "meno": {
+      "sk": "Ministerstvo dopravy, Odbor verejnej dopravy",
+      "en": "Ministry of Transport"
+    },
+    "e-mail": "mailto:info@mindop.cz"
+  },
+  "webová_stránka_datasetu": "https://opendata.mindop.sk/show/vld",
+  "súvisiaci_zdroj_datasetu": [
+    "https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"
+  ],
+  "dokumentácia": "https://www.middop.sk/",
+  "špecifikácia": [
+    "https://data.gov.sk/def/ontology/transport/"
+  ],
+  "koncept_euroVoc": [
+    "http://eurovoc.europa.eu/4512"
+  ],
+  "priestorové_rozlíšenie_v_metroch": "12.0",
+  "časové_rozlíšenie": "P1D",
+  "právny_predpis": [
+    "https://data.gov.sk/id/eli/sk/zz/2000/211/"
+  ],
+  "distribúcia": [
+    {
+      "iri": "https://data.gov.sk/set/vld/resource/csv",
+      "typ": "Distribúcia",
+      "podmienky_použitia": {
+        "typ": "Špecifikácia podmienok použitia",
+        "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "autor": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
+        },
+        "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "autor_databázy": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
+        },
+        "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+      },
+      "prístupové_url": "https://mindop.sk/pub/draha/mestske/JDF.zip",
+      "súbor_na_stiahnutie": "https://mindop.sk/pub/draha/mestske/JDF.zip",
+      "formát": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+      "typ_média": "http://www.iana.org/assignments/media-types/application/json",
+      "schéma": "https://portal.cisjr.cz/schemata/json-schema.json",
+      "typ_média_kompresie": "http://www.iana.org/assignments/media-types/application/zip",
+      "typ_média_balíčka": "http://www.iana.org/assignments/media-types/application/zip",
+      "názov": {
+        "en": "JSON distribution in ZIP file",
+        "sk": "JSON distribúcia v ZIP soubrou"
+      }
+    },
+    {
+      "iri": "https://data.gov.sk/set/vld/resource/sparql",
+      "typ": "Distribúcia",
+      "podmienky_použitia": {
+        "typ": "Špecifikácia podmienok použitia",
+        "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+      },
+      "prístupové_url": "https://opendata.mindop.sk/sparql",
+      "názov": {
+        "en": "SPARQL endpoint for timetables",
+        "sk": "SPARQL endpoint pre cestovné poriadky"
+      },
+      "prístupová_služba": {
+        "iri": "https://data.gov.sk/id/egov/app-service/123",
+        "typ": "Dátová služba",
+        "názov": {
+          "sk": "SPARQL endpoint pre cestovné poriadky",
+          "en": "SPARQL endpoint for timetables"
+        },
+        "špecifikácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ],
+        "prístupový_bod": "https://mindop.sk/sparql",
+        "popis_prístupového_bodu": "https://mindop.sk/sparql",
+        "dokumentácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ]
+      }
+    }
+  ]
+}
+```
+</div>
+
+Súbor HVD datasetu {#rozhranie-dcat-ap-dataset-hvd}
+------------------
+Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle [[!turtle]] či JSON-LD [[!json-ld11]] obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií.
+
+<div class='example'>
+<a href="príklady/dataset-hvd.ttl">Príklad HVD datasetu v Turtle</a>
+```turtle
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard2006: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix filetype: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix application: <http://www.iana.org/assignments/media-types/application/> .
+@prefix freq: <http://publications.europa.eu/resource/authority/frequency/> .
+@prefix theme: <http://publications.europa.eu/resource/authority/data-theme/> .
+@prefix continent: <http://publications.europa.eu/resource/authority/continent/> .
+@prefix euroVoc: <http://eurovoc.europa.eu/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+
+<https://data.gov.sk/set/vld> a dcat:Dataset ;
+    dct:title "Cestovné poriadky"@sk, "Public transport timetables"@en;
+    dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
+    dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
+    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
+    dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
+    dct:type <http://publications.europa.eu/resource/authority/dataset-type/HVD> ;
+    dcat:theme theme:TRAN ;
+    dct:accrualPeriodicity freq:WEEKLY_3 ;
+    dcat:keyword "autobusy"@sk, "cestovné poriadky"@sk, "verejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
+    dct:spatial <https://data.gov.sk/id/nuts1/SK0> ;
+    dct:spatial <https://sws.geonames.org/3057568> ;
+    dct:temporal [
+        a dct:PeriodOfTime ;
+        dcat:startDate "2009-01-01"^^xsd:date ;
+        dcat:endDate "2017-12-31"^^xsd:date
+    ] ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail "mailto:info@mindop.sk"
+    ] ;
+    dcat:landingPage <https://opendata.mindop.sk/show/vld> ;
+    foaf:page <https://www.middop.sk/dokumentacia/> ;
+    dct:relation <https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7> ;
+    dct:conformsTo <https://data.gov.sk/def/ontology/transport/> ;
+    dcat:theme euroVoc:4512 ;
+    dcat:spatialResolutionInMeters 12.0 ;
+    dcat:temporalResolution "P1D"^^xsd:duration ;
+    dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcatap:hvdCategory <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
+                      <https://data.gov.sk/set/vld/resource/sparql> .
+
+<https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
+    leg:termsOfUse [ a leg:TermsOfUse ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:authorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
+                    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
+    dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcat:downloadURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dct:format filetype:ZIP ;
+    dct:conformsTo <https://opendata.middop.sk/schemy/json-schema.json> ;
+    dcat:mediaType application:json ;
+    dcat:compressFormat application:zip ;
+    dcat:packageFormat application:zip ;
+    dct:title "JSON distribúcia v ZIP súbore"@sk, "JSON distribution in ZIP file"@en .
+
+<https://data.gov.sk/set/vld/resource/sparql> a dcat:Distribution ;
+    leg:termsOfUse [ a leg:TermsOfUse ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
+    dcat:accessURL <https://opendata.middop.sk/sparql> ;
+    dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dcat:accessService <https://data.gov.sk/id/egov/app-service/123> .
+
+<https://data.gov.sk/id/egov/app-service/123> a dcat:DataService ;
+    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dcat:endpointURL <https://opendata.middop.sk/sparql> ;
+    dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcatap:hvdCategory <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail "mailto:info@mindop.sk"
+    ] ;
+    dcat:endpointDescription <https://opendata.middop.sk/sparql> ;
+    foaf:page <https://www.middop.sk/dokumentacia/sparql> ;
+    dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
+```
+</div>
+
+<div class='example'>
+<a href="príklady/dataset-hvd.jsonld">Príklad HVD datasetu v JSON-LD</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+```json
+{
+  "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+  "iri": "https://data.gov.sk/set/vld",
+  "typ": "Dataset",
+  "názov": {
+    "sk": "Cestovné poriadky",
+    "en": "Public transport timetables"
+  },
+  "popis": {
+    "sk": "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte.",
+    "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
+  },
+  "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+  "dátum_publikácie": "2024-01-01T12:00:34",
+  "dátum_modifikácie": "2024-01-01T14:23:16",
+  "typ_datasetu": "http://publications.europa.eu/resource/authority/dataset-type/HVD",
+  "téma": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "periodicita_aktualizácie": "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3",
+  "kľúčové_slovo": {
+    "sk": [
+      "cestovné poriadky",
+      "verejná linková doprava",
+      "autobus"
+    ],
+    "en": [
+      "timetable",
+      "public transport",
+      "bus"
+    ]
+  },
+  "prvok_registra_adries": [
+    "https://data.gov.sk/id/nuts1/SK0"
+  ],
+  "geografické_územie": [
+    "https://sws.geonames.org/3057568"
+  ],
+  "časové_pokrytie": {
+    "typ": "Časový interval",
+    "začiatok": "2009-01-01",
+    "koniec": "2017-12-31"
+  },
+  "kontaktný_bod": {
+    "typ": "Organizácia",
+    "meno": {
+      "sk": "Ministerstvo dopravy, Odbor verejnej dopravy",
+      "en": "Ministry of Transport"
+    },
+    "e-mail": "mailto:info@mindop.cz"
+  },
+  "webová_stránka_datasetu": "https://opendata.mindop.sk/show/vld",
+  "súvisiaci_zdroj_datasetu": [
+    "https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"
+  ],
+  "dokumentácia": "https://www.middop.sk/dokumentácia/",
+  "špecifikácia": [
+    "https://data.gov.sk/def/ontology/transport/"
+  ],
+  "koncept_euroVoc": [
+    "http://eurovoc.europa.eu/4512"
+  ],
+  "priestorové_rozlíšenie_v_metroch": "12.0",
+  "časové_rozlíšenie": "P1D",
+  "právny_predpis": [
+    "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+  ],
+  "kategória_hvd": [
+    "http://data.europa.eu/bna/c_b79e35eb"
+  ],
+  "distribúcia": [
+    {
+      "iri": "https://data.gov.sk/set/vld/resource/csv",
+      "typ": "Distribúcia",
+      "podmienky_použitia": {
+        "typ": "Špecifikácia podmienok použitia",
+        "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "autor": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
+        },
+        "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "autor_databázy": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
+        },
+        "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+      },
+      "prístupové_url": "https://mindop.sk/pub/draha/mestske/JDF.zip",
+      "právny_predpis": [
+        "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+      ],
+      "súbor_na_stiahnutie": "https://mindop.sk/pub/draha/mestske/JDF.zip",
+      "formát": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+      "typ_média": "http://www.iana.org/assignments/media-types/application/json",
+      "schéma": "https://portal.cisjr.cz/schemata/json-schema.json",
+      "typ_média_kompresie": "http://www.iana.org/assignments/media-types/application/zip",
+      "typ_média_balíčka": "http://www.iana.org/assignments/media-types/application/zip",
+      "názov": {
+        "en": "JSON distribution in ZIP file",
+        "sk": "JSON distribúcia v ZIP soubrou"
+      }
+    },
+    {
+      "iri": "https://data.gov.sk/set/vld/resource/sparql",
+      "typ": "Distribúcia",
+      "podmienky_použitia": {
+        "typ": "Špecifikácia podmienok použitia",
+        "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+      },
+      "prístupové_url": "https://opendata.mindop.sk/sparql",
+      "právny_predpis": [
+        "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+      ],
+      "názov": {
+        "en": "SPARQL endpoint for timetables",
+        "sk": "SPARQL endpoint pre cestovné poriadky"
+      },
+      "prístupová_služba": {
+        "iri": "https://data.gov.sk/id/egov/app-service/123",
+        "typ": "Dátová služba",
+        "názov": {
+          "sk": "SPARQL endpoint pre cestovné poriadky",
+          "en": "SPARQL endpoint for timetables"
+        },
+        "špecifikácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ],
+        "prístupový_bod": "https://mindop.sk/sparql",
+        "právny_predpis": [
+          "http://data.europa.eu/eli/reg_impl/2023/138/oj"
+        ],
+        "kategória_hvd": [
+          "http://data.europa.eu/bna/c_b79e35eb"
+        ],
+        "kontaktný_bod": {
+          "typ": "Organizácia",
+          "meno": {
+            "sk": "Ministerstvo dopravy, Odbor verejnej dopravy",
+            "en": "Ministry of Transport"
+          },
+          "e-mail": "mailto:info@mindop.cz"
+        },
+        "popis_prístupového_bodu": "https://mindop.sk/sparql",
+        "dokumentácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ]
+      }
+    }
+  ]
+}
+```
+</div>
+
+Povinné vlastností údajov {#dcat-ap-sk-shacl}
+=============================================
+Táto časť štandardu predstavuje povinné vlastností údaj, špecifikované prostredníctvom jazyka [SHACL](https://www.w3.org/TR/shacl/).
+
+Povinné vlastnosti datasetu, ktorý nie je typu HVD {#dcat-ap-sk-shacl-non-hvd}
+---------------
+Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset, ktorý nie je typu HVD. 
+
+<div class='example'>
+<a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-shapes".ttl>Stiahnuť</a>
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+@prefix sha-dcatapsk: <https://data.gov.sk/def/shapes/dcat-ap-sk/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-dcatapsk:NKODCatalogShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Catalog ;
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0
+	sh:property sha-dcatapsk:catalog_title ;
+	sh:property sha-dcatapsk:catalog_description ;
+	sh:property sha-dcatapsk:catalog_publisher ;
+	sh:property sha-dcatapsk:catalog_dataset .
+        
+sha-dcatapsk:NKODDatasetShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Dataset ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:dataset_title ;
+	sh:property sha-dcatapsk:dataset_description ;
+	sh:property sha-dcatapsk:dataset_publisher ;        
+	sh:property sha-dcatapsk:dataset_theme ;
+	sh:property sha-dcatapsk:dataset_frequency ;
+	sh:property sha-dcatapsk:dataset_keyword ;
+	sh:property sha-dcatapsk:dataset_spatial .
+        
+sha-dcatapsk:NKODDistributionShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Distribution ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:distribution_termsOfUse ;
+	sh:property sha-dcatapsk:distribution_downloadURL ;
+	sh:property sha-dcatapsk:distribution_accessURL ;        
+	sh:property sha-dcatapsk:distribution_format ;
+	sh:property sha-dcatapsk:distribution_mediaType .
+        
+sha-dcatapsk:catalog_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:catalog_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:catalog_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+	
+sha-dcatapsk:catalog_dataset
+	a sh:PropertyShape ;
+	sh:path dcat:dataset ;
+	sh:class dcat:Dataset ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:dataset_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:dataset_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+	
+sha-dcatapsk:dataset_theme
+	a sh:PropertyShape ;
+	sh:path dcat:theme ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+	
+sha-dcatapsk:dataset_frequency
+	a sh:PropertyShape ;
+	sh:path dct:accrualPeriodicity ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_spatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+		
+sha-dcatapsk:dataset_keyword
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .	
+	
+sha-dcatapsk:distribution_termsOfUse
+	a sh:PropertyShape ;
+	sh:path leg:termsOfUse ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+
+sha-dcatapsk:distribution_downloadURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+	
+sha-dcatapsk:distribution_accessURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+
+sha-dcatapsk:distribution_format
+	a sh:PropertyShape ;
+	sh:path dct:format ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .		
+        
+sha-dcatapsk:distribution_mediaType
+	a sh:PropertyShape ;
+	sh:path dcat:mediaType ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+```
+</div>
+
+Povinné vlasnosti datasetu, ktorý je typu HVD. 
+---------------
+
+<div class='example'>
+<a href="povinné-vlastnosti/dcat-ap-sk-3.0.0-hvd-shapes.ttl">Stiahnuť</a>
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+@prefix sha-dcatapsk: <https://data.gov.sk/def/shapes/dcat-ap-sk/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-dcatapsk:NKODCatalogShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Catalog ;
+	rdfs:isDefinedBy sha-dcatapsk:3.0.0
+	sh:property sha-dcatapsk:catalog_title ;
+	sh:property sha-dcatapsk:catalog_description ;
+	sh:property sha-dcatapsk:catalog_publisher ;
+	sh:property sha-dcatapsk:catalog_contact_point ;
+	sh:property sha-dcatapsk:catalog_dataset .
+
+sha-dcatapsk:NKODHVDDatasetShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Dataset ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:dataset_type ;
+	sh:property sha-dcatapsk:dataset_title ;
+	sh:property sha-dcatapsk:dataset_description ;
+	sh:property sha-dcatapsk:dataset_publisher ;
+	sh:property sha-dcatapsk:dataset_theme ;
+	sh:property sha-dcatapsk:dataset_frequency ;
+	sh:property sha-dcatapsk:dataset_keyword ;
+	sh:property sha-dcatapsk:dataset_applicable_legislation ;
+	sh:property sha-dcatapsk:dataset_hvd_category ;
+	sh:property sha-dcatapsk:dataset_spatial .
+
+sha-dcatapsk:NKODHVDDistributionShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:Distribution ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:distribution_termsOfUse ;
+	sh:property sha-dcatapsk:distribution_downloadURL ;
+	sh:property sha-dcatapsk:distribution_accessURL ;
+	sh:property sha-dcatapsk:distribution_contact_point ;
+	sh:property sha-dcatapsk:distribution_applicable_legislation ;
+	sh:property sha-dcatapsk:distribution_format ;
+	sh:property sha-dcatapsk:distribution_mediaType .
+
+sha-dcatapsk:NKODHVDataServiceShape
+	a sh:NodeShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+	sh:targetClass dcat:DataService ;
+	rdfs:isDefinedBy sha-dcatapsk:2023b ;
+	sh:property sha-dcatapsk:service_title ;
+	sh:property sha-dcatapsk:service_endpoint_url ;
+	sh:property sha-dcatapsk:service_hvd_category ;
+ 	sh:property sha-dcatapsk:service_applicable_legislation ;
+	sh:property sha-dcatapsk:service_contact_point ;
+	sh:property sha-dcatapsk:service_documentation .
+
+sha-dcatapsk:catalog_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:catalog_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:catalog_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:catalog_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:catalog_dataset
+	a sh:PropertyShape ;
+	sh:path dcat:dataset ;
+	sh:class dcat:Dataset ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_type
+	a sh:PropertyShape ;
+	sh:path dct:type ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://publications.europa.eu/resource/authority/dataset-type/HVD> .
+
+sha-dcatapsk:dataset_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_description
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_publisher
+	a sh:PropertyShape ;
+	sh:path dct:publisher ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_theme
+	a sh:PropertyShape ;
+	sh:path dcat:theme ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_frequency
+	a sh:PropertyShape ;
+	sh:path dct:accrualPeriodicity ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_spatial
+	a sh:PropertyShape ;
+	sh:path dct:spatial ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:dataset_keyword
+	a sh:PropertyShape ;
+	sh:path dct:description ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:dataset_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:dataset_hvd_category
+	a sh:PropertyShape ;
+	sh:path dcatap:hvdCategory ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:distribution_termsOfUse
+	a sh:PropertyShape ;
+	sh:path leg:termsOfUse ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_downloadURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_accessURL
+	a sh:PropertyShape ;
+	sh:path dcat:downloadURL ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:distribution_format
+	a sh:PropertyShape ;
+	sh:path dct:format ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:distribution_mediaType
+	a sh:PropertyShape ;
+	sh:path dcat:mediaType ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_title
+	a sh:PropertyShape ;
+	sh:path dct:title ;
+	sh:languageIn("sk" "en") ;
+	sh:minCount 1 .
+
+sha-dcatapsk:endpoint_url
+	a sh:PropertyShape ;
+	sh:path dcat:service_endpointURL ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_hvd_category
+	a sh:PropertyShape ;
+	sh:path dcatap:hvdCategory ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 .
+
+sha-dcatapsk:service_applicable_legislation
+	a sh:PropertyShape ;
+	sh:path dcatap:applicableLegislation ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:hasValue <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
+
+sha-dcatapsk:service_contact_point
+	a sh:PropertyShape ;
+	sh:path dcat:contactPoint ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+sha-dcatapsk:service_documentation
+	a sh:PropertyShape ;
+	sh:path foaf:page ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+```
+</div>
+
+Rozhranie CKAN API {#rozhranie-ckan-api}
+=================
+CKAN API je rozhranie pre implementáciu dátového katalógu \[CKAN](https://ckan.org/).
+Je založené na formáte JSON [[!ECMA-404]], a obsahuje dve hlavné funkcie, `package_list` a `package_show`.
+Toto rozhranie je implemetované samotným katalógom \[CKAN](https://ckan.org/) a tiež katalógom \[DKAN](https://getdkan.org/).
+
+<div class='advisement'>
+Rozhranie CKAN API je podporované iba z dôvodu zpätnej kompatibility.
+Nebude se rozšiřovať o nové položky anie funkcionality a neumožňuje kvalitne katalogizovať datasety podľa štandardu [DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
+Rozhranie CKAN API sa prestane úplne podporovať. Pokiaľ je to možné, použite jedno z rozhraní kompatibilných s DCAT-AP.
+</div>
+
+Funkcia `package_list`  {#rozhranie-ckan-api-package-list}
+---------------------
+Táto funkcia vracia zoznam identifikátorov jednotlivých datasetov registrovaných v LKOD.
+Tieto identifikátory sa následne predávajú funkcii `package_show` v parametri `id`.
+Identifikátory môžu obsahovať písmena, čísla, pomlčky a podtržítka.
+Nesmú však obsahovať medzeru.
+
+<div class='example'>
+Pre URL `https://organizacia.sk/api/3/action/package_list`
+```json
+{
+   "success": true, 
+   "result": [
+      "zoznam-zástavky", 
+      "vld", 
+      "železnice"
+   ]
+}
+```
+</div>
+
+Funkcia `package_show`   {#rozhranie-ckan-api-package-show}
+---------------------
+Táto funkcia vracia metadátový záznam pre dataset, ktorej identifikátor je predaný v parametri `id`.
+
+<div class='example'>
+Pre URL `https://organizacia.sk/api/3/action/package_show?id=zeleznice`
+```json
+{
+    "success": true,
+    "result": {
+        "title": "Číselník ŠÚ: Druh volieb (kód 1051)",
+        "notes": "Druh volieb",
+        "license_link": "https://creativecommons.org/licenses/by/4.0/",
+        "maintainer_email": "info@statistics.sk",
+        "maintainer": "Štatistický úrad SR",
+        "tags": [{
+            "name": "VOLBY"
+        }, {
+            "name": "číselník"
+        }, {
+            "name": "SÚ"
+        }],
+        "resources": [{
+            "url": "https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0",
+            "format": "text/xml",
+            "name": "Číselník v XML"
+        }]
+    }
+}
+```
+</div>
+
+Podmnožina hodnôt pre CKAN API záznam datasetu   {#rozhranie-ckan-api-hodnoty}
+-------------------------------------------------
+V tejto sekci sú popísané položky týkajúce sa datasetu vo funkci `package_show`.
+
+### Názov datasetu ### {#ckan-api-názov}
+
+: Vlastnosť
+:: `title`
+: Typ
+:: Reťazec
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "title": "Číselník ŠÚ: Druh volieb (kód 1051)"
+        }
+    }
+    ```
+
+### Popis datasetu ### {#ckan-api-popis}
+
+: Vlastnosť
+:: `notes`
+: Typ
+:: Reťazec
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "notes": "Druh volieb"
+        }
+    }
+    ```
+
+### Odkaz na podmienky použitia  ### {#ckan-api-podmienky-pužitia}
+
+V štandarde DCAT-AP, na ktorom je Národný katalog otvorených dat založený, sú podmienky použitia Vlastnosťou distribúcie datasetu.
+V rozhraní CKAN API je to však Vlastnosťou celého datasetu.
+Podmienky použitia sa teda interpretujú ako identické pre všetky distribúce datasetu.
+Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia v súladu s právnými predpismy, viď [[#špecifikácia-podmienok-použitia]].
+
+: Vlastnosť
+:: `license_link`
+: Typ
+:: URL [[!URL]]
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "license_link": "https://creativecommons.org/licenses/by/4.0/"
+        }
+    }
+    ```
+
+### Email Kurátora dát ### {#ckan-api-e-mail}
+
+: Vlastnosť
+:: `maintainer_email`
+: Typ
+:: Reťazec
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "maintainer_email": "vdb@statistics.sk"
+        }
+    }
+    ```
+
+### Meno Kurátora dát ### {#ckan-api-kurátor}
+
+: Vlastnosť
+:: `maintainer`
+: Typ
+:: Reťazec
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "maintainer": "Štatistický úrad"
+        }
+    }
+    ```
+
+### Kľúčové slová ### {#ckan-api-kľúčová-slová}
+
+: Vlastnosť
+:: `tags`
+: Typ
+:: Pole objektov s Vlastnosťou `name`
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "tags": [{
+                "name": "VOLBY"
+            }, {
+                "name": "číselník"
+            }, {
+                "name": "ČSÚ"
+            }]
+        }
+    }
+    ```
+
+### Distribúcia datasetu ### {#ckan-api-resources}
+
+: Vlastnosť
+:: `resources`
+: Typ
+:: Pole objektov, viď [Distribúcia v CKAN API](#ckan-api-distribúcia).
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "url": "https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0",
+                "format": "text/xml",
+                "name": "Číselník v XML"
+            }]
+        }
+    }
+    ```
+
+Podmnožina hodnôt pre CKAN API distribúciu datasetu {#ckan-api-distribúcia}
+------------------------------------------------------------------------
+V tejto sekcii sú popísáné položky týkajúce sa distribúcie datasetu, tj. pole `resources` vo funkcii `package_show`.
+
+### Odkaz na stiahnutie súboru ### {#ckan-api-distribúcia-stiahnutia-súboru}
+
+: Vlastnosť
+:: `url`
+: Typ
+:: URL [[!URL]]
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "url": "https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0"
+            }]
+        }
+    }
+    ```
+
+### Media type súboru na stiahnutie ### {#ckan-api-distribúcia-media-type}
+
+: Vlastnosť
+:: `format`
+: Typ
+:: Reťazec obsahujúcí [Media type](https://www.iana.org/assignments/media-types/media-types.xhtml) podľa IANA [[!IANA-MEDIA-TYPES]].
+: Povinnosť
+:: Povinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "format": "text/xml"
+            }]
+        }
+    }
+    ```
+
+### Názov distribúcie datasetu ### {#ckan-api-distribúcia-názov}
+
+: Vlastnosť
+:: `name`
+: Typ
+:: Reťazec
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "name": "Číselník v XML"
+            }]
+        }
+    }
+    ```

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [  
+<!ENTITY legal-subject "https://data.gov.sk/id/legal-subject/" >
+<!ENTITY street "https://data.gov.sk/id/street/" >
+<!ENTITY lau2 "https://data.gov.sk/id/lau2/" >
+<!ENTITY lau1 "https://data.gov.sk/id/lau1/" >
+<!ENTITY nuts3 "https://data.gov.sk/id/nuts3/" >
+<!ENTITY uncountry "https://data.gov.sk/id/uncountry/" >
+<!ENTITY legal-form-type "https://data.gov.sk/def/legal-form-type/" >
+<!ENTITY address "https://data.gov.sk/id/physical-address/" >
+<!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
+]>
+<rdf:RDF
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:stat="https://data.gov.sk/def/ontology/statistics/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns:M27_OpD_328="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    
+    <qb:Observation rdf:about="https://opendata.mfsr.sk/set/observation/employees-jobs/00151742/2023-10-17">
+        
+        <qb:dataset rdf:resource="https://opendata.mfsr.sk/def/cube/structure/M27_OpD_328"/>
+
+        <M27_OpD_328:OrganizaciaNazov rdf:datatype="&xs;string">Ministerstvo financií SR</M27_OpD_328:OrganizaciaNazov>
+        <M27_OpD_328:Organizacia rdf:resource="&legal-subject;00151742"/>
+        <M27_OpD_328:OrganizaciaUlicaNazov rdf:datatype="&xs;string">Štefanovičova</M27_OpD_328:OrganizaciaUlicaNazov>
+        <M27_OpD_328:OrganizaciaUlica rdf:resource="&street;34533457893"/>
+        <M27_OpD_328:OrganizaciaCisloDomu rdf:datatype="&xs;string">6</M27_OpD_328:OrganizaciaCisloDomu>
+        <M27_OpD_328:OrganizaciaPSC rdf:datatype="&xs;string">81782</M27_OpD_328:OrganizaciaPSC>
+        <M27_OpD_328:OrganizaciaObec rdf:resource="&lau2;SK0101528595"/>
+        <M27_OpD_328:OrganizaciaObecNazov rdf:datatype="&xs;string">Bratislava - mestská časť Staré mesto</M27_OpD_328:OrganizaciaObecNazov>
+        <M27_OpD_328:OrganizaciaOkres rdf:resource="&lau1;SK0101"/>
+        <M27_OpD_328:OrganizaciaOkresNazov rdf:datatype="&xs;string">Bratislava I</M27_OpD_328:OrganizaciaOkresNazov>       
+        <M27_OpD_328:OrganizaciaKraj rdf:resource="&nuts3;SK010"/>
+        <M27_OpD_328:OrganizaciaKrajNazov rdf:datatype="&xs;string">Bratislavský kraj</M27_OpD_328:OrganizaciaKrajNazov>
+        <M27_OpD_328:OrganizaciaStat rdf:resource="&uncountry;SK"/>
+        <M27_OpD_328:OrganizaciaStatNazov rdf:datatype="&xs;string">Slovenská republika</M27_OpD_328:OrganizaciaStatNazov>
+        <M27_OpD_328:OrganizaciaAdresa rdf:resource="&address;348265064231035"/>
+        <M27_OpD_328:OrganizaciaPravnaFormaNazov rdf:datatype="&xs;string">Verejnoprávna inštitúcia</M27_OpD_328:OrganizaciaPravnaFormaNazov>
+        <M27_OpD_328:OrganizaciaPravnaForma rdf:resource="&legal-form-type;382"/>
+           
+        <M27_OpD_328:numberOfCreatedJobsStateService rdf:datatype="&xs;integer">500</M27_OpD_328:numberOfCreatedJobsStateService>
+        <M27_OpD_328:numberOfCreatedJobsCivilService rdf:datatype="&xs;integer">400</M27_OpD_328:numberOfCreatedJobsCivilService>
+        <M27_OpD_328:numberOfOccupiedJobsStateService rdf:datatype="&xs;integer">450</M27_OpD_328:numberOfOccupiedJobsStateService>
+        <M27_OpD_328:numberOfOccupiedJobsCivilService rdf:datatype="&xs;integer">380</M27_OpD_328:numberOfOccupiedJobsCivilService>
+        <M27_OpD_328:numberOfEmployeesStateService rdf:datatype="&xs;integer">460</M27_OpD_328:numberOfEmployeesStateService>
+        <M27_OpD_328:numberOfEmployeesCivilService rdf:datatype="&xs;integer">385</M27_OpD_328:numberOfEmployeesCivilService>
+        <M27_OpD_328:numberOfFreeJobsStateService rdf:datatype="&xs;integer">50</M27_OpD_328:numberOfFreeJobsStateService>
+        <M27_OpD_328:numberOfFreeJobsCivilService rdf:datatype="&xs;integer">50</M27_OpD_328:numberOfFreeJobsCivilService>
+        <M27_OpD_328:numberOfWorkContractorEmployees rdf:datatype="&xs;integer">100</M27_OpD_328:numberOfWorkContractorEmployees>
+        <M27_OpD_328:numberOfWorkContracts rdf:datatype="&xs;integer">110</M27_OpD_328:numberOfWorkContracts>
+        
+        <M27_OpD_328:valid rdf:datatype="&xs;integer">2023-10-17</M27_OpD_328:valid>
+
+    </qb:Observation>
+</rdf:RDF>

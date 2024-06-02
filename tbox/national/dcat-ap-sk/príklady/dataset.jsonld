@@ -1,0 +1,130 @@
+{
+  "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+  "iri": "https://data.gov.sk/set/vld",
+  "typ": "Dataset",
+  "názov": {
+    "sk": "Cestovné poriadky",
+    "en": "Public transport timetables"
+  },
+  "popis": {
+    "sk": "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte.",
+    "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
+  },
+  "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+  "dátum_publikácie": "2024-01-01T12:00:34",
+  "dátum_modifikácie": "2024-01-01T14:23:16",
+  "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
+  "téma": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  ],
+  "periodicita_aktualizácie": "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3",
+  "kľúčové_slovo": {
+    "sk": [
+      "cestovné poriadky",
+      "verejná linková doprava",
+      "autobus"
+    ],
+    "en": [
+      "timetable",
+      "public transport",
+      "bus"
+    ]
+  },
+  "prvok_registra_adries": [
+    "https://data.gov.sk/id/nuts1/SK0"
+  ],
+  "geografické_územie": [
+    "https://sws.geonames.org/3057568"
+  ],
+  "časové_pokrytie": {
+    "typ": "Časový interval",
+    "začiatok": "2009-01-01",
+    "koniec": "2017-12-31"
+  },
+  "kontaktný_bod": {
+    "typ": "Organizácia",
+    "meno": {
+      "sk": "Ministerstvo dopravy, Odbor verejnej dopravy",
+      "en": "Ministry of Transport"
+    },
+    "e-mail": "mailto:info@mindop.cz"
+  },
+  "webová_stránka_datasetu": "https://opendata.mindop.sk/show/vld",
+  "súvisiaci_zdroj_datasetu": [
+    "https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"
+  ],
+  "dokumentácia": "https://www.middop.sk/dokumentácia/",
+  "špecifikácia": [
+    "https://data.gov.sk/def/ontology/transport/"
+  ],
+  "koncept_euroVoc": [
+    "http://eurovoc.europa.eu/4512"
+  ],
+  "priestorové_rozlíšenie_v_metroch": "12.0",
+  "časové_rozlíšenie": "P1D",
+  "právny_predpis": [
+    "https://data.gov.sk/id/eli/sk/zz/2000/211/"
+  ],
+  "distribúcia": [
+    {
+      "iri": "https://data.gov.sk/set/vld/resource/csv",
+      "typ": "Distribúcia",
+      "podmienky_použitia": {
+        "typ": "Špecifikácia podmienok použitia",
+        "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "autor": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
+        },
+        "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "autor_databázy": {
+          "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
+        },
+        "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+      },
+      "prístupové_url": "https://mindop.sk/pub/draha/mestske/JDF.zip",
+      "súbor_na_stiahnutie": "https://mindop.sk/pub/draha/mestske/JDF.zip",
+      "formát": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+      "typ_média": "http://www.iana.org/assignments/media-types/application/json",
+      "schéma": "https://portal.cisjr.cz/schemata/json-schema.json",
+      "typ_média_kompresie": "http://www.iana.org/assignments/media-types/application/zip",
+      "typ_média_balíčka": "http://www.iana.org/assignments/media-types/application/zip",
+      "názov": {
+        "en": "JSON distribution in ZIP file",
+        "sk": "JSON distribúcia v ZIP soubrou"
+      }
+    },
+    {
+      "iri": "https://data.gov.sk/set/vld/resource/sparql",
+      "typ": "Distribúcia",
+      "podmienky_použitia": {
+        "typ": "Špecifikácia podmienok použitia",
+        "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+        "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+      },
+      "prístupové_url": "https://opendata.mindop.sk/sparql",
+      "názov": {
+        "en": "SPARQL endpoint for timetables",
+        "sk": "SPARQL endpoint pre cestovné poriadky"
+      },
+      "prístupová_služba": {
+        "iri": "https://data.gov.sk/id/egov/app-service/123",
+        "typ": "Dátová služba",
+        "názov": {
+          "sk": "SPARQL endpoint pre cestovné poriadky",
+          "en": "SPARQL endpoint for timetables"
+        },
+        "špecifikácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ],
+        "prístupový_bod": "https://mindop.sk/sparql",
+        "popis_prístupového_bodu": "https://mindop.sk/sparql",
+        "dokumentácia": [
+          "https://www.w3.org/TR/sparql11-protocol/"
+        ]
+      }
+    }
+  ]
+}

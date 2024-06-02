@@ -1,0 +1,218 @@
+{
+  "@context": {
+    "@language": "sk",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "location": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "leg": "https://data.gov.sk/def/ontology/legislation/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "iri": "@id",
+    "typ": "@type",
+    "Katalóg": "dcat:Catalog",
+    "poskytovateľ": {
+      "@id": "dcterms:publisher",
+      "@type": "@id"
+    },
+    "dataset": {
+      "@id": "dcat:dataset",
+      "@type": "@id"
+    },
+    "domovská_stránka": {
+      "@id": "foaf:homepage",
+      "@type": "@id"
+    },
+    "Dataset": "dcat:Dataset",
+    "názov": {
+      "@id": "dcterms:title",
+      "@container": "@language"
+    },
+    "popis": {
+      "@id": "dcterms:description",
+      "@container": "@language"
+    },
+    "dátum_publikácie": {
+      "@id": "dct:issued",
+      "@type": "xsd:dateTime"
+    },
+    "dátum_modifikácie": {
+      "@id": "dct:modified",
+      "@type": "xsd:dateTime"
+    },
+    "téma": {
+      "@id": "dcat:theme",
+      "@type": "@id"
+    },
+    "typ_datasetu": {
+      "@id": "dcterms:type",
+      "@type": "@id"
+    },
+    "periodicita_aktualizácie": {
+      "@id": "dcterms:accrualPeriodicity",
+      "@type": "@id"
+    },
+    "kľúčové_slovo": {
+      "@id": "dcat:keyword",
+      "@container": "@language"
+    },
+    "geografické_územie": {
+      "@id": "dcterms:spatial",
+      "@type": "@id"
+    },
+    "prvok_registra_adries": {
+      "@id": "dcterms:spatial",
+      "@type": "@id"
+    },
+    "právny_predpis": {
+      "@id": "dcatap:applicablelegislation",
+      "@type": "@id"
+    },
+    "kategória_hvd": {
+      "@id": "dcatap:hvdCategory",
+      "@type": "@id"
+    },
+    "časové_pokrytie": {
+      "@id": "dcterms:temporal",
+      "@type": "@id"
+    },
+    "Časový interval": "dcterms:PeriodOfTime",
+    "začiatok": {
+      "@id": "dcat:startDate",
+      "@type": "xsd:date"
+    },
+    "koniec": {
+      "@id": "dcat:endDate",
+      "@type": "xsd:date"
+    },
+    "je_súčásťou": {
+      "@id": "dcat:inSeries",
+      "@type": "@id"
+    },
+    "kontaktný_bod": {
+      "@id": "dcat:contactPoint",
+      "@type": "@id"
+    },
+     "webová_stránka_datasetu": {
+      "@id": "dcat:landingPage",
+      "@type": "@id"
+    },
+    "súvisiaci_zdroj_datasetu": {
+      "@id": "dct:relation",
+      "@type": "@id"
+    },
+    "Organizácia": "vcard:Organization",
+    "meno": {
+      "@id": "vcard:fn",
+      "@container": "@language"
+    },
+    "e-mail": {
+      "@id": "vcard:hasEmail",
+      "@type": "@id"
+    },
+    "špecifikácia": {
+      "@id": "dcterms:conformsTo",
+      "@type": "@id"
+    },
+    "koncept_euroVoc": {
+      "@id": "dcat:theme",
+      "@type": "@id"
+    },
+    "priestorové_rozlíšenie_v_metroch": {
+      "@id": "dcat:spatialResolutionInMeters",
+      "@type": "xsd:decimal"
+    },
+    "časové_rozlíšenie": {
+      "@id": "dcat:temporalResolution",
+      "@type": "xsd:duration"
+    },
+    "distribúcia": {
+      "@id": "dcat:distribution",
+      "@type": "@id"
+    },
+    "Distribúcia": "dcat:Distribution",
+    "podmienky_použitia": {
+      "@id": "leg:termsOfUse",
+      "@type": "@id"
+    },
+    "Špecifikácia podmienok použitia": "leg:authorsWorkType",
+    "autorské_dielo": {
+      "@id": "leg:authorsWorkType",
+      "@type": "@id"
+    },
+    "autor": {
+      "@id": "leg:authorName",
+      "@container": "@language"
+    },
+    "databáza_ako_autorské_dielo": {
+      "@id": "leg:originalDatabaseType",
+      "@type": "@id"
+    },
+    "autor_databázy": {
+      "@id": "leg:originalDatabaseAuthorName",
+      "@container": "@language"
+    },
+    "databáza_chránená_zvláštnými_právami": {
+      "@id": "leg:databaseProtectedBySpecialRightsType",
+      "@type": "@id"
+    },
+    "osobné_údaje": {
+      "@id": "leg:personalDataContainmentType",
+      "@type": "@id"
+    },
+    "prístupové_url": {
+      "@id": "dcat:accessURL",
+      "@type": "@id"
+    },
+    "súbor_na_stiahnutie": {
+      "@id": "dcat:downloadURL",
+      "@type": "@id"
+    },
+    "formát": {
+      "@id": "dcterms:format",
+      "@type": "@id"
+    },
+    "typ_média": {
+      "@id": "dcat:mediaType",
+      "@type": "@id"
+    },
+    "schéma": {
+      "@id": "dcterms:conformsTo",
+      "@type": "@id"
+    },
+    "typ_média_kompresie": {
+      "@id": "dcat:compressFormat",
+      "@type": "@id"
+    },
+    "typ_média_balíčka": {
+      "@id": "dcat:packageFormat",
+      "@type": "@id"
+    },
+    "prístupová_služba": {
+      "@id": "dcat:accessService",
+      "@type": "@id"
+    },
+    "Dátová služba": "dcat:DataService",
+    "prístupový_bod": {
+      "@id": "dcat:endpointURL",
+      "@type": "@id"
+    },
+    "popis_prístupového_bodu": {
+      "@id": "dcat:endpointDescription",
+      "@type": "@id"
+    },
+    "poskytuje_dataset": {
+      "@id": "dcat:servesDataset",
+      "@type": "@id"
+    }
+  }
+}
