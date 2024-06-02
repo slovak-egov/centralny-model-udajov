@@ -2,7 +2,7 @@
     xmlns="https://data.gov.sk/def/ontology/physical-person/"
     xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
     xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
-    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
     xmlns:loca="https://data.gov.sk/def/ontology/location/"
     xmlns:fin="https://data.gov.sk/def/ontology/finance/"
     xmlns:m8g="http://data.europa.eu/m8g/"

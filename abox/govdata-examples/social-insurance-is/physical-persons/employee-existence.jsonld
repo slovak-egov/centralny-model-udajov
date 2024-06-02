@@ -3,7 +3,7 @@
     "pper": "https://data.gov.sk/def/ontology/physical-person/",
     "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
-    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "egov": "https://data.gov.sk/def/ontology/egov/",
     "fin": "https://data.gov.sk/def/ontology/finance/",
     "taxonomy": "https://data.gov.sk/def/taxonomy/",
     "name-prefix": "https://data.gov.sk/def/name-prefix/",

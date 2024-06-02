@@ -4,8 +4,6 @@
     "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egovernment/",
-    "name-prefix": "https://data.gov.sk/def/name-prefix/",
-    "name-suffix": "https://data.gov.sk/def/name-prefix/",
     "nuts3": "https://data.gov.sk/id/nuts3/",
     "lau1": "https://data.gov.sk/id/lau1/",
     "lau2": "https://data.gov.sk/id/lau2/",
