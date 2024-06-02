@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-	xmlns="https://data.gov.sk/def/ontology/healthcare/2023b#"
+	xmlns="https://data.gov.sk/def/ontology/healthcare/2024-06-02#"
 	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,23 +11,24 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:hc="https://data.gov.sk/def/ontology/healthcare/">
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/2023b">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/2024-06-02">
+	<title xmlns="http://purl.org/dc/terms/" xml:lang="sk">Ontológia zdravotnej starostlivosti</title>
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
-	<owl:versionInfo>2023b</owl:versionInfo>
+	<owl:versionInfo>2024-06-02</owl:versionInfo>
 	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/DiagnosisType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/DrugType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/DiagnosisType">
@@ -42,34 +43,34 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/numberOfDrugPackages">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="sk">počet balení lieku</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/DrugConsumption">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 	<rdfs:label xml:lang="sk">spotreba lieku</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/drugType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="sk">typ lieku</rdfs:label>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/healthcare/DrugType"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/diagnosisType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="sk">typ diagnózy</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/drugIssued">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="sk">dátum vydania lieku</rdfs:label>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/numberOfDrugPackages">
@@ -90,7 +91,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/healthcare/diagnosisType"/>
 	<rdfs:label xml:lang="sk">diagnóza po prepustení</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/numberOfDaysOfHospitalization">
@@ -98,30 +99,30 @@
 	<rdfs:label xml:lang="sk">Počet dní hospitalizácie</rdfs:label>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/healthcare/Hospitalization"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/hospitalizationStartDate">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="sk">Dátum začiatku hospitalizácie</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/hospitalizationEndDate">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="sk">Dátum konca hospitalizácie</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/disabilityStartDate">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="sk">dátum začiatku evidencie zdravotného postihnutia</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/disabilityEndDate">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/disabilityStartDate">
@@ -137,28 +138,28 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 	<rdfs:label xml:lang="sk">Poskytnutie zdravotníckej pomôcky</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/MedicalDeviceType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 	<rdfs:label xml:lang="sk">Typ medicínskej pomôcky</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/medicalDeviceType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/healthcare/MedicalDeviceType"/>
 	<rdfs:label xml:lang="sk">typ zdravotnej pomôcky</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/healthcare/numberOfIssuedMedicalDevices">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="sk">počet vydaných zdravotníckych pomôcok</rdfs:label>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/healthcare/2024-06-02"/>
 </rdf:Description>
 
 </rdf:RDF>

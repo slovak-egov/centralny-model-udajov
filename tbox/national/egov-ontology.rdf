@@ -24,19 +24,14 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/2021-MM-DD.owl">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/2024-06-02">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
 	<dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
 	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
 	<dct:title xml:lang="sk">Ontológia egovernment entít</dct:title>
-	<rdfs:description xml:lang="sk">Ontológia egovernment entít definuje základné entity eGovernmentu ako Informačný systém verejne správy, 
-        
-        
-        
-        
-        , KRIS, Štúdia uskutočnisteľnosti a ostatné. Primárne slúži na popis entít v Centrálnom Metainformačnom systéme. Výnimkou sú entity spojené s elekronickými službami, ktoré sú definované prostredníctvom národného aplikačného profilu CPSV-AP-SK.</rdfs:description>
-	<owl:versionInfo>2021-MM-DD</owl:versionInfo>
+	<rdfs:description xml:lang="sk">Ontológia egovernment entít definuje základné entity eGovernmentu ako Informačný systém verejne správy, KRIS, Štúdia uskutočnisteľnosti a ostatné. Primárne slúži na popis entít v Centrálnom Metainformačnom systéme. Výnimkou sú entity spojené s elekronickými službami, ktoré sú definované prostredníctvom národného aplikačného profilu CPSV-AP-SK.</rdfs:description>
+	<owl:versionInfo>2024-06-02</owl:versionInfo>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
@@ -104,7 +99,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/PublicAdministrationSection"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Agenda"/>
 	<rdfs:description xml:lang="sk">Relácia úseku verejnej správy na agendu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">agreguje agendu</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/690"/>
 </rdf:Description>
@@ -114,7 +109,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/KRIS"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Objective"/>
 	<rdfs:description xml:lang="sk">Relácia KRIS na cieľ.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">stanovuje cieľ</rdfs:label>
 </rdf:Description>
 
@@ -123,7 +118,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
 	<rdfs:description xml:lang="sk">Relácia Egov projektu na ISVS.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">rozvíja ISVS</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/689"/>
 </rdf:Description>
@@ -133,7 +128,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/KRIS"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:description xml:lang="sk">Relácia KRIS na projekt.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">rozvíja projekt</rdfs:label>
 </rdf:Description>
 
@@ -147,7 +142,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Agenda"/>
 	<rdfs:description xml:lang="sk">Relácia na agendu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">obsluhuje agendu</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/687"/>
 </rdf:Description>
@@ -157,7 +152,7 @@
 	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na projek.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">obsluhuje projekt</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/695"/>
 </rdf:Description>
@@ -167,7 +162,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/EForm"/>
 	<rdfs:range rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
 	<rdfs:description xml:lang="sk">Relácia EFormulára na koncovú službu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">obsluhuje koncovú službu</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/688"/>
 </rdf:Description>
@@ -178,7 +173,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/OperationProgram"/>
 	<rdfs:description xml:lang="sk">Relácia EGOV projektu na operačný program.</rdfs:description>
 	<rdfs:description xml:lang="sk">Relácia operačného programu na EGOV projekt.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">financuje</rdfs:label>
 	<rdfs:label xml:lang="sk">je financované prostredníctvom</rdfs:label>
 </rdf:Description>
@@ -188,7 +183,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/EndPoint"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
 	<rdfs:description xml:lang="sk">Relácia na aplikačnú službu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">sprístupňuje aplikačnú službu</rdfs:label>
 </rdf:Description>
 
@@ -197,7 +192,7 @@
 	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
 	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na aplikačnú službu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">spravuje aplikačnú službu</rdfs:label>
 </rdf:Description>
 
@@ -206,7 +201,7 @@
 	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
 	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na ISVS.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">spravuje ISVS</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/692"/>
 </rdf:Description>
@@ -216,7 +211,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ObligatedPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
 	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na aplikačnú službu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">prevádzkuje aplikačnú službu</rdfs:label>
 </rdf:Description>
 
@@ -225,7 +220,7 @@
 	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ObligatedPerson"/>
 	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na ISVS.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">prevádzkuje ISVS</rdfs:label>
 </rdf:Description>
 
@@ -234,7 +229,7 @@
 	<rdfs:domain rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Agenda"/>
 	<rdfs:description xml:lang="sk">Relácia orgánu verejnej moci na agendu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">vykonáva agendu</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/694"/>
 </rdf:Description>
@@ -244,7 +239,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ProjectPhase"/>
 	<rdfs:description xml:lang="sk">Relácia projektu na jeho fázu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">fáza projektu</rdfs:label>
 </rdf:Description>
 
@@ -253,7 +248,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ProjectPhaseType"/>
 	<rdfs:description xml:lang="sk">Relácia projektu na jeho fázu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">fáza projektu</rdfs:label>
 </rdf:Description>
 
@@ -263,7 +258,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationServiceOperation"/>
 	<rdfs:description xml:lang="sk"></rdfs:description>
 	<rdfs:description xml:lang="sk">Relácia koncového bodu na operáciu aplikačnej služby.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">poskytuje operáciu aplikačnej služby</rdfs:label>
 </rdf:Description>
 
@@ -273,7 +268,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
 	<rdfs:description xml:lang="sk">Relácia ISVS na aplikačnú službu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">realizuje aplikačnú službu</rdfs:label>
 </rdf:Description>
 
@@ -282,7 +277,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ApplicationService"/>
 	<rdfs:range rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
 	<rdfs:description xml:lang="sk">Relácia aplikačnej služby na koncovú službu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">realizuje koncovú službu</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/686"/>
 </rdf:Description>
@@ -297,7 +292,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/ReferenceData"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/ReferenceRegister"/>
 	<rdfs:description xml:lang="sk">Relácia na referenčný register.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="de">Referenzregister</rdfs:label>
 	<rdfs:label xml:lang="en">reference register</rdfs:label>
 	<rdfs:label xml:lang="sk">referenčný register</rdfs:label>
@@ -309,7 +304,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/KRISProtocol"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/KRIS"/>
 	<rdfs:description xml:lang="sk">Relácia KRIS protokolu na jeho KRIS.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">referuje KRIS</rdfs:label>
 </rdf:Description>
 
@@ -323,7 +318,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/Project"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/FeasibilityStudy"/>
 	<rdfs:description xml:lang="sk">Relácia projektu na jeho štúdiu uskutočniteľnosti.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">vznikol zo štúdie uskutočniteľnosti</rdfs:label>
 </rdf:Description>
 
@@ -332,7 +327,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/egov/FeasibilityStudy"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/egov/Principle"/>
 	<rdfs:description xml:lang="sk">Relácia štúdie uskutočniteľnosti na princíp.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">preberá princíp</rdfs:label>
 </rdf:Description>
 
@@ -382,7 +377,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Agenda">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="de">Agenda</rdfs:label>
 	<rdfs:label xml:lang="en">Agenda</rdfs:label>
 	<rdfs:label xml:lang="sk">Agenda</rdfs:label>
@@ -393,7 +388,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ApplicationService">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="de">Anwendungsservice</rdfs:label>
 	<rdfs:label xml:lang="sk">Aplikačná služba</rdfs:label>
 	<rdfs:label xml:lang="en">Application service</rdfs:label>
@@ -405,7 +400,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ApplicationServiceOperation">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="de">Anwendung Service Betrieb</rdfs:label>
 	<rdfs:label xml:lang="en">Application service operation</rdfs:label>
 	<rdfs:label xml:lang="sk">Operácia aplikacnej služby</rdfs:label>
@@ -422,7 +417,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Evidence"/>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/id/legal-subject/ElectronicLegalDocument"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Electronic form</rdfs:label>
 	<rdfs:label xml:lang="sk">Elektronický formulár</rdfs:label>
 	<rdfs:label xml:lang="de">Elektronische Form</rdfs:label>
@@ -432,7 +427,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/EndPoint">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">End point</rdfs:label>
 	<rdfs:label xml:lang="de">Endpunkt</rdfs:label>
 	<rdfs:label xml:lang="sk">Koncový bod</rdfs:label>
@@ -443,7 +438,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/FeasibilityStudy">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Feasibility study</rdfs:label>
 	<rdfs:label xml:lang="de">Machbarkeitsstudie</rdfs:label>
 	<rdfs:label xml:lang="sk">Štúdia uskutočniteľnosti</rdfs:label>
@@ -464,7 +459,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ISVS">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="de">Informationssystem der öffentlichen Verwaltung</rdfs:label>
 	<rdfs:label xml:lang="sk">Informačný systém verejnej správy</rdfs:label>
 	<rdfs:label xml:lang="en">Public administration information system</rdfs:label>
@@ -475,7 +470,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/KRIS">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Koncepcia rozvoja informačného systému</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/kris_"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/211"/>
@@ -484,7 +479,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/KRISProtocol">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Protokol koncepcie rozvoja informačného systému</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/kris_p_"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/212"/>
@@ -492,7 +487,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Module">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Modul</rdfs:label>
 	<rdfs:label xml:lang="en">Module</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/478"/>
@@ -500,7 +495,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Objective">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Cieľ prioritnej osy</rdfs:label>
 	<rdfs:label xml:lang="en">Objective</rdfs:label>
 </rdf:Description>
@@ -509,14 +504,14 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/PublicAuthority"/>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/legal-subject/BusinessPerson"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Obligated Person</rdfs:label>
 	<rdfs:label xml:lang="sk">Povinná osoba</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/OperationProgram">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Operation program</rdfs:label>
 	<rdfs:label xml:lang="sk">Operačný program</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/prg_"/>
@@ -526,7 +521,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/PO7Objective">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/Objective"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Cieľ prioritnej osy 7</rdfs:label>
 	<rdfs:label xml:lang="en">PO7 Objective</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/p07objective_"/>
@@ -535,7 +530,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Principle">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Principle</rdfs:label>
 	<rdfs:label xml:lang="sk">Princíp</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/princip_"/>
@@ -544,7 +539,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Process">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Proces</rdfs:label>
 	<rdfs:label xml:lang="en">Process</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/proces_"/>
@@ -553,7 +548,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Project">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Project</rdfs:label>
 	<rdfs:label xml:lang="sk">Projekt</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/projekt_"/>
@@ -573,7 +568,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ProjectPhase">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Fáza projektu</rdfs:label>
 	<rdfs:label xml:lang="en">Project phase</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/fp_"/>
@@ -582,7 +577,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ProjectPhaseType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Project phase type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ fázy projektu</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/fp_"/>
@@ -601,7 +596,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/PublicAdministrationSection">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Public administration section</rdfs:label>
 	<rdfs:label xml:lang="sk">Úsek verejnej správy</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-id/egov/U"/>
@@ -631,7 +626,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ReferenceData">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Reference Data</rdfs:label>
 	<rdfs:label xml:lang="sk">Referenčné údaje</rdfs:label>
 </rdf:Description>
@@ -639,7 +634,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ReferenceRegister">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ISVS"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Reference Register</rdfs:label>
 	<rdfs:label xml:lang="sk">Referenčný register</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/478"/>
@@ -647,7 +642,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/RequiredAuthentificationLevel">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Požadovaná úroveň autentifikácie</rdfs:label>
 	<rdfs:label xml:lang="en">Required Authentification Level</rdfs:label>
 </rdf:Description>
@@ -665,14 +660,14 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ServicePhase">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="sk">Fáza služby</rdfs:label>
 	<rdfs:label xml:lang="en">Service Phase</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/ServicePhaseType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Service Phase Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ fázy služby</rdfs:label>
 </rdf:Description>
@@ -689,7 +684,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/Situation">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/egov/2024-06-02"/>
 	<rdfs:label xml:lang="en">Situation</rdfs:label>
 	<rdfs:label xml:lang="sk">Situácia</rdfs:label>
 </rdf:Description>
@@ -1035,7 +1030,7 @@
 	<dcat:accessURL rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/83"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/issuerCountry">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/issuingCountry">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="sk">krajina vydavateľa</rdfs:label>
 	<rdfs:label xml:lang="en">issuer contrry</rdfs:label>

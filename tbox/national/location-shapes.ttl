@@ -1,0 +1,388 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix sha-ra: <https://data.gov.sk/def/shapes/ra/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-ra:PhysicalAddressShape
+		a sh:NodeShape ;
+		sh:order 1 ;
+        rdfs:isDefinedBy sha-ra: ;
+        dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	    sh:targetClass loca:PhysicalAddress ;
+        sh:property sha-ra:PhysicalAddress-formattedAddress ,
+        			sha-ra:PhysicalAddress-unCountry ,
+        			sha-ra:PhysicalAddress-nuts3 ,
+        			sha-ra:PhysicalAddress-lau1 ,
+        			sha-ra:PhysicalAddress-lau2 ,
+        			sha-ra:PhysicalAddress-district ,
+        			sha-ra:PhysicalAddress-street ,
+        			sha-ra:PhysicalAddress-building ,
+					sha-ra:PhysicalAddress-orientationNumber ,
+					sha-ra:PhysicalAddress-propertyRegistrationNumber ,
+        			sha-ra:PhysicalAddress-entrance ,
+                    sha-ra:PhysicalAddress-hasGeometry ,
+                    sha-ra:PhysicalAddress-type .
+
+# formattedAddress
+
+sha-ra:PhysicalAddress-formattedAddress
+    a sh:PropertyShape ;
+	sh:path loca:formattedAddress ;
+	sh:datatype xsd:string ;
+	egov:xmlElementName "AddressLine" ;
+	sh:order 1 ;
+    rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+# unCountry
+
+sha-ra:PhysicalAddress-unCountry
+    a sh:PropertyShape ;
+	sh:path loca:unCountry ;
+	sh:class loca:UNCountry ;
+	sh:nodeKind sh:IRI ;
+	sh:order 2 ;
+    rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:UNCountryShape
+	a sh:NodeShape ;
+	sh:targetClass geo:UNCountry ;
+	sh:order 3 ;
+    rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+    dct:source <https://data.gov.sk/def/codelist/CL000086> .
+	
+# region
+
+sha-ra:PhysicalAddress-nuts3
+    a sh:PropertyShape ;
+	sh:path loca:nuts3 ;
+	sh:class loca:NUTS3 ;
+	sh:nodeKind sh:IRI ;
+	sh:order 4 ;
+    rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:NUTS3Shape
+	a sh:NodeShape ;
+	sh:targetClass loca:NUTS3 ;
+	sh:order 5 ;
+    rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+    dct:source <https://data.gov.sk/def/codelist/CL000023> .
+
+# County
+
+sha-ra:PhysicalAddress-lau1
+    a sh:PropertyShape ;
+	sh:path loca:lau1 ;
+	sh:class loca:LAU1 ;
+	sh:nodeKind sh:IRI ;
+	sh:order 6 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:LAU1Shape
+	a sh:NodeShape ;
+	sh:targetClass loca:LAU1 ;
+	dct:source <https://data.gov.sk/def/codelist/CL000024> ; 
+	sh:order 7 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# Municipality
+
+sha-ra:PhysicalAddress-lau2
+    a sh:PropertyShape ;
+	sh:path loca:lau2 ;
+	sh:class loca:LAU2 ;
+	sh:nodeKind sh:IRI ;
+	sh:order 8 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:LAU2Shape
+	a sh:NodeShape ;
+	sh:targetClass loca:LAU2 ;
+	dct:source <https://data.gov.sk/def/codelist/CL000025> ;
+	sh:order 9 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# District
+
+sha-ra:PhysicalAddress-district
+    a sh:PropertyShape ;
+	sh:path loca:district ;
+	sh:class loca:District ;
+	sh:nodeKind sh:IRI ;
+	sh:order 10 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:DistrictShape
+	a sh:NodeShape ;
+	sh:targetClass loca:District ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL010141> ; 
+    sh:property sha-ra:District-uniqueNumbering ;
+	sh:order 11 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+    
+sha-ra:District-uniqueNumbering
+    a sh:PropertyShape ;
+	sh:path loca:uniqueNumbering ;
+	sh:datatype xsd:bolean ;
+	egov:xmlElementName "UniqueNumbering" ;
+	sh:order 12 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# street	
+
+sha-ra:PhysicalAddress-street
+    a sh:PropertyShape ;
+	sh:path loca:street ;
+	sh:class loca:Street ;
+	sh:nodeKind sh:IRI ;
+	sh:property sha-ra:Street-streetName ;
+	sh:order 13 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+    
+sha-ra:Street-streetName
+    sh:path loca:streetName ;
+    sh:datatype xsd:string ;
+	egov:xmlElementName "StreetName" ;
+	sh:order 14 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# building	
+
+sha-ra:PhysicalAddress-building
+    a sh:PropertyShape ;
+	sh:path loca:building ;
+	sh:class loca:Building ;
+	sh:nodeKind sh:IRI ;
+	sh:order 15 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# orientationNumber
+
+sha-ra:PhysicalAddress-orientationNumber
+    a sh:PropertyShape ;
+	sh:path loca:orientationNumber ;
+    sh:datatype xsd:string ;
+	egov:xmlElementName "BuildingNumber" ;
+	sh:order 16 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# propertyRegistrationNumber
+
+sha-ra:PhysicalAddress-propertyRegistrationNumber
+    a sh:PropertyShape ;
+	sh:path loca:propertyRegistrationNumber ;
+	sh:datatype xsd:string ;
+	sh:order 17 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+	
+# vchod	
+	
+sha-ra:PhysicalAddress-entrance
+    a sh:PropertyShape ;
+	sh:path loca:entrance ;
+	sh:class loca:Entrance ;
+	sh:nodeKind sh:IRI ;
+	sh:order 18 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+		
+# geometry	
+
+sha-ra:PhysicalAddress-hasGeometry
+    a sh:PropertyShape ;
+    sh:path geo:hasGeometry ;
+	sh:class geo:Geometry ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:order 19 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:GeometryShape
+	a sh:NodeShape ;
+    rdfs:isDefinedBy sha-ra:2023b ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	sh:targetClass geo:Geometry ;
+    sh:property sha-ra:Geometry-asWKT ;
+	sh:order 20 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:Geometry-asWKT
+    sh:path geo:asWKT ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+	sh:order 21 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+    
+# addressType
+    
+sha-ra:PhysicalAddress-type
+    a sh:PropertyShape ;
+	sh:path loca:addressType ;
+	sh:class loca:AddressType ;
+	sh:nodeKind sh:IRI ;
+	sh:order 22 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:AddressTypeShape
+	a sh:NodeShape ;
+	sh:targetClass loca:AddressTypeShape ;	
+	dct:source <https://data.gov.sk/def/codelist/CL010139> ;
+	sh:order 23 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+# Building
+
+sha-ra:BuildingShape
+	a sh:NodeShape ;
+	sh:targetClass loca:Building ;
+	sh:order 24 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+    sh:property sha-ra:Building-hasApartment ,
+        			sha-ra:Building-buildingName ,
+        			sha-ra:Building-propertyRegistrationNumber ,
+        			sha-ra:Building-buildingPurpose ,
+        			sha-ra:Building-apartment ,
+        			sha-ra:Building-buildingPart ,
+        			sha-ra:Building-lau2 ,
+                    sha-ra:Building-type .
+
+# hasApartment
+
+sha-ra:Building-hasApartment
+    a sh:PropertyShape ;
+	sh:path loca:hasApartment ;
+	sh:datatype xsd:boolean ;
+	sh:order 25 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+# buildingName
+
+sha-ra:Building-buildingName
+    a sh:PropertyShape ;
+	sh:path loca:buildingName ;
+	sh:datatype xsd:string ;
+	sh:order 26 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+# propertyRegistrationNumber
+
+sha-ra:Building-propertyRegistrationNumber
+    a sh:PropertyShape ;
+	sh:path loca:propertyRegistrationNumber ;
+	sh:datatype xsd:string ;
+	sh:order 27 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# buildingPurpose
+	
+sha-ra:Building-buildingPurpose
+    a sh:PropertyShape ;
+	sh:path loca:buildingPurpose ;
+	sh:class loca:BuildingPurpose ;
+	sh:nodeKind sh:IRI ;
+	sh:order 28 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:buildingPurpose
+    a sh:NodeShape ;
+    egov:xmlElementName "BuildingPurpose" ;
+    sh:targetClass loca:BuildingPurpose ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+    dct:source <https://data.gov.sk/def/codelist/CL010142> ;
+	sh:order 29 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# apartment	
+	
+sha-ra:Building-apartment
+    a sh:PropertyShape ;
+	sh:path loca:apartment ;
+	sh:class loca:Apartment ;
+	sh:nodeKind sh:IRI ;
+	sh:order 30 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .		
+
+# buildingPart
+	
+sha-ra:Building-buildingPart
+    a sh:PropertyShape ;
+	sh:path loca:buildingPart ;
+	sh:class loca:BuildingPart ;
+	sh:nodeKind sh:IRI ;
+	sh:order 31 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+		
+# lau2		
+		
+sha-ra:Building-lau2
+    a sh:PropertyShape ;
+	sh:path loca:lau2 ;
+	sh:class loca:LAU2 ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:order 32 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+    
+# buildingType
+    
+sha-ra:Building-buildingType
+    a sh:PropertyShape ;
+	sh:path loca:buildingType ;
+	sh:class loca:BuldingType ;
+	sh:nodeKind sh:IRI ;
+	sh:order 33 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .	
+	
+sha-ra:BuldingTypeShape
+    a sh:NodeShape ;
+    egov:xmlElementName "BuldingType" ;
+    sh:targetClass loca:BuldingType ;
+    dct:source <https://data.gov.sk/def/codelist/CL010143> ;
+	sh:order 34 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	

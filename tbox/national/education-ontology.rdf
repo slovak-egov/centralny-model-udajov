@@ -8,8 +8,13 @@
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/education/">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/education/2024-06-02">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
+	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+	<dct:title xml:lang="sk">Ontológia vzdelávania</dct:title>
+	<rdfs:description xml:lang="sk">Ontológia vzdelávania v rozsahu RIS, a dôkazov (potvrdení) pre OOTS v oblasti školstva.</rdfs:description>
+	<owl:versionInfo>2024-06-02</owl:versionInfo>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/education/EducationInstitution">

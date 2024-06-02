@@ -1,0 +1,769 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix fin: <https://data.gov.sk/def/ontology/finance/> .
+@prefix sha-rpo: <https://data.gov.sk/def/shapes/rpo/> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sha-rpo:LegalSubjectShape
+	a sh:NodeShape ;
+	sh:order 1 ;
+	egov:xmlElementName "CorporateBody" ;
+	sh:targetClass lsub:LegalSubject ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+	sh:property sha-rpo:LegalSubjectShape-name ,
+        			sha-rpo:LegalSubjectShape-alternativeName ,
+        			sha-rpo:LegalSubjectShape-legalForm ,
+        			sha-rpo:LegalSubjectShape-legalFormType ,        			
+        			sha-rpo:LegalSubjectShape-unit ,
+        			sha-rpo:LegalSubjectShape-established ,
+        			sha-rpo:LegalSubjectShape-terminated ,
+        			sha-rpo:LegalSubjectShape-bankConnection ,
+        			sha-rpo:LegalSubjectShape-economicActivity ,
+        			sha-rpo:LegalSubjectShape-legalFact ,
+        			sha-rpo:LegalSubjectShape-equity ,        					
+        			sha-rpo:LegalSubjectShape-shares ,
+        			sha-rpo:LegalSubjectShape-deposit ,
+        			sha-rpo:LegalSubjectShape-legalStatus ,
+        			sha-rpo:LegalSubjectShape-legalStatusType ,
+        			sha-rpo:LegalSubjectShape-authorizationToExecuteNote ,
+        			sha-rpo:LegalSubjectShape-statutoryBody ,        			        			
+        			sha-rpo:LegalSubjectShape-headquarters ,
+                    sha-rpo:LegalSubjectShape-legalId .
+
+# name
+
+sha-rpo:LegalSubjectShape-name
+    a sh:PropertyShape ;
+	sh:path lsub:name ;
+	sh:datatype xsd:string ;
+	sh:order 2 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:minLenght 1 ;
+    sh:maxLenght 1023 ;	
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+# alternativeName
+
+sha-rpo:LegalSubjectShape-alternativeName
+    a sh:PropertyShape ;
+	sh:path skos:alternativeName ;
+	sh:datatype xsd:string ;
+	sh:order 3 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:minLenght 1 ;
+    sh:maxLenght 1023 .
+	
+# legalForm
+
+sha-rpo:LegalSubjectShape-legalForm
+    a sh:PropertyShape ;
+    sh:order 4 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path lsub:legalForm ;
+    sh:class lsub:LegalForm ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:LegalFormShape
+    a sh:NodeShape ;
+    sh:order 5 ;
+    sh:targetClass lsub:LegalForm ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:property sha-rpo:LegalFormShape-startDate ,
+                sha-rpo:LegalFormShape-endDate ,
+                sha-rpo:LegalFormShape-type .
+
+sha-rpo:LegalFormShape-startDate
+    a sh:PropertyShape ;
+    sh:order 6 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path schema:startDate ;
+    sh:datatype xsd:date ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+sha-rpo:LegalFormShape-endDate
+    a sh:PropertyShape ;
+    sh:order 7 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path schema:endDate ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 .
+
+sha-rpo:LegalFormShape-type
+    a sh:PropertyShape ;
+    sh:order 8 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path dct:type ;
+    sh:class lsub:LegalFormType ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .                
+                
+# legalFormType
+
+sha-rpo:LegalSubjectShape-legalFormType
+    a sh:PropertyShape ;
+    sh:order 9 ;
+    sh:path lsub:legalFormType ;
+    sh:class lsub:LegalFormType ;
+    sh:nodeKind sh:IRI ;	     
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    dct:source <https://data.gov.sk/def/codelist/CL000056> .          
+	
+# unit
+
+sha-rpo:LegalSubjectShape-unit
+    a sh:PropertyShape ;
+    sh:order 10 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path lsub:unit ;
+    sh:class lsub:Unit ;
+    sh:nodeKind sh:IRI .
+    
+sha-rpo:UnitShape
+    a sh:NodeShape ;
+    sh:order 11 ;
+    sh:targetClass lsub:Unit ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:property sha-rpo:Unit-name ,
+    			sha-rpo:Unit-type ,
+                sha-rpo:Unit-physicalAddress ,
+                sha-rpo:Unit-established ,
+                sha-rpo:Unit-terminated ,
+                sha-rpo:Unit-economicActivity ,
+                sha-rpo:Unit-stakeholder ,
+                sha-rpo:Unit-legalId .
+	
+sha-rpo:Unit-name
+    a sh:PropertyShape ;
+    sh:order 12 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path lsub:organizationUnitName ;
+    sh:datatype xsd:string .	
+	   
+sha-rpo:Unit-type
+    a sh:PropertyShape ;
+    sh:order 13 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;
+    sh:path dct:type ;
+    sh:class lsub:OrganizationUnitType ;
+    sh:nodeKind sh:IRI .
+    
+sha-rpo:Unit-organizationUnitType
+    a sh:NodeShape ;
+    sh:order 14 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ; 
+    egov:xmlElementName "EconomicActivityClassification" ;
+    sh:targetClass lsub:EconomicActivityType ;
+    dct:source <https://data.gov.sk/def/codelist/CL010110> .    
+     
+sha-rpo:Unit-physicalAddress
+    a sh:PropertyShape ;
+    sh:order 15 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ; 
+    sh:path loca:physicalAddress ;
+    sh:class loca:PhysicalAddress ;
+    sh:nodeKind sh:IRI .
+
+sha-rpo:Unit-established
+    a sh:PropertyShape ;
+    sh:order 16 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;    
+	sh:path lsub:established ;
+	sh:datatype xsd:date .
+
+sha-rpo:Unit-terminated
+    a sh:PropertyShape ;
+    sh:order 17 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;     
+	sh:path lsub:terminated ;
+	sh:datatype xsd:date .
+
+sha-rpo:Unit-economicActivity
+    a sh:PropertyShape ;
+    sh:order 18 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ; 
+    sh:path lsub:economicActivity ;
+    sh:class lsub:EconomicActivity ;
+    sh:nodeKind sh:IRI .
+    
+sha-rpo:Unit-stakeholder
+    a sh:PropertyShape ;
+    sh:order 19 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ; 
+    sh:path lsub:stakeholder ;
+    sh:class lsub:Stakeholder ;
+    sh:nodeKind sh:IRI .
+
+sha-rpo:Unit-legalId
+    a sh:PropertyShape ;
+    sh:order 20 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ; 
+	sh:path lsub:legalId ;
+	sh:nodeKind sh:IRI ;
+	sh:class lsub:LegalId .
+	
+	
+# established
+
+sha-rpo:LegalSubjectShape-established
+    a sh:PropertyShape ;
+	sh:order 21 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ; 
+	sh:path lsub:established ;
+	sh:datatype xsd:date .	
+	
+# terminated
+
+sha-rpo:LegalSubjectShape-terminated
+    a sh:PropertyShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;    
+	sh:path lsub:terminated ;
+	sh:datatype xsd:date ;
+	sh:order 22  .		
+	
+# bankConnection
+
+sha-rpo:LegalSubjectShape-bankConnection
+    a sh:PropertyShape ;
+    sh:order 23 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path fin:bankConnection ;
+    sh:class fin:BankConnection ;
+    sh:nodeKind sh:IRI .	
+	
+# economicActivity
+
+sha-rpo:LegalSubjectShape-economicActivity
+    a sh:PropertyShape ;
+    sh:order 24 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:economicActivity ;
+    sh:class lsub:EconomicActivity ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 .
+
+sha-rpo:EconomicActivityShape
+    a sh:NodeShape ;
+    sh:order 25 ;
+    sh:targetClass lsub:EconomicActivity ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:property sha-rpo:EconomicActivity-description ,
+    			sha-rpo:EconomicActivity-startDate ,
+                sha-rpo:EconomicActivity-endDate ,
+                sha-rpo:EconomicActivity-type .
+	
+sha-rpo:EconomicActivity-description
+    a sh:PropertyShape ;
+    sh:order 26 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path dct:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .	
+	
+sha-rpo:EconomicActivity-startDate
+    a sh:PropertyShape ;
+    sh:order 27 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path schema:startDate ;
+    sh:datatype xsd:date ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+sha-rpo:EconomicActivity-endDate
+    a sh:PropertyShape ;
+    sh:order 28 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path schema:endDate ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 .
+    
+sha-rpo:EconomicActivity-type
+    a sh:PropertyShape ;
+    sh:order 29 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path dct:type ;
+    sh:class lsub:EconomicActivityType ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+sha-rpo:EconomicActivityTypeShape
+    a sh:NodeShape ;
+    sh:order 30 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    egov:xmlElementName "EconomicActivityClassification" ;
+    sh:targetClass lsub:EconomicActivityType ;
+    dct:source <https://data.gov.sk/def/codelist/CL005205> .	
+	
+# legalFact
+
+sha-rpo:LegalSubjectShape-legalFact
+    a sh:PropertyShape ;
+    sh:order 31 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:legalFact ;
+    sh:class lsub:LegalFact ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:LegalFactShape
+    a sh:NodeShape ;
+    sh:order 32 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:targetClass lsub:LegalFact .	
+	
+# equity
+
+sha-rpo:LegalSubjectShape-equity
+    a sh:PropertyShape ;
+    sh:order 33 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:equity ;
+    sh:class lsub:Equity ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:EquityShape
+    a sh:NodeShape ;
+    sh:order 34 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:targetClass lsub:Equity ;	
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+    sh:property sha-rpo:Equity-equityValue ,
+    			sha-rpo:Equity-equityValueApproved ,
+                sha-rpo:Equity-equityValuePaid ,
+                sha-rpo:Equity-currency .
+	
+sha-rpo:Equity-equityValue
+    a sh:PropertyShape ;
+    sh:order 35 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:equityValue ;
+    sh:datatype xsd:decimal .	
+	
+sha-rpo:Equity-equityValueApproved
+    a sh:PropertyShape ;
+    sh:order 36 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:equityValueApproved ;
+    sh:datatype xsd:decimal .	
+
+sha-rpo:Equity-equityValuePaid
+    a sh:PropertyShape ;
+    sh:order 37 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:equityValuePaid ;
+    sh:datatype xsd:decimal .	
+	
+sha-rpo:Equity-currency
+    a sh:PropertyShape ;
+    sh:order 38 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path fin:currency ;
+	sh:class fin:Currency ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+
+# shares
+
+sha-rpo:LegalSubjectShape-shares
+    a sh:PropertyShape ;
+    sh:order 39 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:shares ;
+    sh:class lsub:Shares ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:SharesShape
+    a sh:NodeShape ;
+    sh:order 40 ;
+    sh:targetClass lsub:Shares ;	
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:property sha-rpo:Shares-shareNominalValue ,
+    			sha-rpo:Shares-sharesAmount ,
+                sha-rpo:Shares-sharesTransferabilityNote ,
+                sha-rpo:Shares-sharesState ,
+                sha-rpo:Shares-sharesType ,
+                sha-rpo:Shares-sharesForm ,
+                sha-rpo:Shares-currency .
+	
+sha-rpo:Equity-shareNominalValue
+    a sh:PropertyShape ;
+    sh:order 41 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:shareNominalValue ;
+    sh:datatype xsd:decimal .	
+	
+sha-rpo:Equity-sharesAmount
+    a sh:PropertyShape ;
+    sh:order 42 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:sharesAmount ;
+    sh:datatype xsd:decimal .	
+
+sha-rpo:Equity-sharesTransferabilityNote
+    a sh:PropertyShape ;
+    sh:order 43 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:sharesTransferabilityNote ;
+    sh:datatype xsd:string .	
+	
+sha-rpo:Equity-sharesState
+    a sh:PropertyShape ;
+    sh:order 44 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path lsub:sharesState ;
+    sh:datatype xsd:string .
+    
+sha-rpo:Equity-sharesType
+    a sh:PropertyShape ;
+    sh:order 45 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path lsub:sharesType ;
+	sh:class lsub:SharesType ;
+	sh:nodeKind sh:IRI .	    			
+	
+sha-rpo:SharesTypeShape
+    a sh:NodeShape ;
+    sh:order 46 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    egov:xmlElementName "ShareType" ;
+    sh:targetClass lsub:ShareType ;
+    dct:source <https://data.gov.sk/def/codelist/CL010111> .	
+		
+sha-rpo:Equity-sharesForm
+    a sh:PropertyShape ;
+    sh:order 47 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path lsub:sharesForm ;
+	sh:datatype xsd:string .			
+		
+sha-rpo:Equity-currency
+    a sh:PropertyShape ;
+    sh:order 48 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path fin:currency ;
+	sh:class fin:Currency ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+	
+# deposit
+
+sha-rpo:LegalSubjectShape-deposit
+    a sh:PropertyShape ;
+    sh:order 49 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:deposit ;
+    sh:class lsub:Deposit ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:DepositShape
+    a sh:NodeShape ;
+    sh:order 50 ;
+    sh:targetClass lsub:Deposit ;	
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:property sha-rpo:Deposit-depositValue ,
+    			sha-rpo:Deposit-depositDueDate ,
+    			sha-rpo:Deposit-type ,
+                sha-rpo:Deposit-currency .	
+
+sha-rpo:Deposit-depositValue
+    a sh:PropertyShape ;
+    sh:order 51 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:depositValue ;
+    sh:datatype xsd:decimal .	
+      
+sha-rpo:Deposit-depositDueDate
+    a sh:PropertyShape ;
+    sh:order 52 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:depositDueValue ;
+    sh:datatype xsd:date .	
+
+sha-rpo:Deposit-type
+    a sh:PropertyShape ;
+    sh:order 53 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path dct:type ;
+    sh:class lsub:DepositType ;
+	sh:nodeKind sh:IRI .	
+
+sha-rpo:Deposit-currency
+    a sh:PropertyShape ;
+    sh:order 54 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path fin:currency ;
+	sh:class fin:Currency ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .	
+
+# legalStatus
+
+sha-rpo:LegalSubjectShape-legalStatus
+    a sh:PropertyShape ;
+    sh:order 55 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:legalStatus ;
+    sh:class lsub:LegalStatus ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:LegalStatushape
+    a sh:NodeShape ;
+    sh:order 56 ;
+    sh:targetClass lsub:LegalStatus ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:property sha-rpo:LegalStatus-startDate ,
+                sha-rpo:LegalStatus-endDate ,
+                sha-rpo:LegalStatus-type .
+
+sha-rpo:LegalStatus-startDate
+    a sh:PropertyShape ;
+    sh:order 57 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path schema:startDate ;
+    sh:datatype xsd:date .
+
+sha-rpo:LegalStatus-endDate
+    a sh:PropertyShape ;
+    sh:order 58 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path schema:endDate ;
+    sh:datatype xsd:date .
+
+sha-rpo:LegalStatus-type
+    a sh:PropertyShape ;
+    sh:order 59 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path dct:type ;
+    sh:class lsub:LegalStatusType ;
+    sh:nodeKind sh:IRI .                
+                
+# legalFormType
+
+sha-rpo:LegalSubjectShape-legalStatusType
+    a sh:PropertyShape ;
+    sh:order 60 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:legaStatusType ;
+    sh:class lsub:LegalStatusType ;
+    sh:nodeKind sh:IRI ;	     
+    dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+    dct:source <https://data.gov.sk/def/codelist/CL010108> .
+
+# authorizationToExecuteNote
+
+sha-rpo:LegalSubjectShape-authorizationToExecuteNote
+    a sh:PropertyShape ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path lsub:authorizationToExecuteNote ;
+	sh:datatype xsd:string ;
+	sh:order 61  .		
+	
+# statutoryBody
+
+sha-rpo:LegalSubjectShape-statutoryBody
+    a sh:PropertyShape ;
+    sh:order 62 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:statutoryBody ;
+    sh:class lsub:StatutoryBody ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:StatutoryBodyShape
+    a sh:NodeShape ;
+    sh:order 63 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:targetClass lsub:StatutoryBody ;
+    sh:property sha-rpo:StatutoryBody-physicalPerson ,
+                sha-rpo:StatutoryBody-type .
+
+sha-rpo:StatutoryBody-physicalPerson
+    a sh:PropertyShape ;
+    sh:order 64 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path pper:physicalPerson ;
+    sh:class pper:PhysicalPerson ;
+    sh:nodeKind sh:IRI .                
+                
+sha-rpo:StatutoryBody-type
+    a sh:PropertyShape ;
+    sh:order 65 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path dct:type ;
+    sh:class lsub:StatutoryBodyType ;
+    sh:nodeKind sh:IRI .                
+                
+sha-rpo:StatutoryBodyTypeShape
+    a sh:NodeShape ;
+    sh:order 66 ;
+    sh:path dct:type ;
+    sh:targetClass lsub:StatutoryBodyType ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    dct:source <https://data.gov.sk/def/codelist/CL010113> .                
+                
+# deposit
+
+sha-rpo:LegalSubjectShape-deposit
+    a sh:PropertyShape ;
+    sh:order 67 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:deposit ;
+    sh:class lsub:Deposit ;
+    sh:nodeKind sh:IRI .	
+	
+sha-rpo:Deposit
+    a sh:NodeShape ;
+    sh:order 68 ;
+    sh:targetClass lsub:Deposit ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:property sha-rpo:Deposit-depositDueDate ,
+                sha-rpo:Deposit-type .
+
+sha-rpo:Deposit-depositDueDate
+    a sh:PropertyShape ;
+    sh:order 69 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path lsub:depositDueDate ;
+    sh:datatype xsd:date .
+
+sha-rpo:Deposit-type
+    a sh:PropertyShape ;
+    sh:order 70 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    sh:path dct:type ;
+    sh:class lsub:DepositType ;
+    sh:nodeKind sh:IRI .                
+                
+sha-rpo:DepositTypeShape
+    a sh:NodeShape ;
+    sh:order 71 ;
+    sh:path dct:type ;
+    sh:targetClass lsub:DepositType ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+    dct:source <https://data.gov.sk/def/codelist/CL010109> .   
+
+
+sha-rpo:LegalSubjectShape-headquarters
+        a sh:PropertyShape ;
+    sh:order 72 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path lsub:headquarters ;
+	sh:class loca:PhysicalAddress ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+	
+sha-rpo:LegalSubjectShape-legalId
+	a sh:PropertyShape ;
+    sh:order 73 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path lsub:legalId ;
+	sh:nodeKind sh:IRI ;
+	sh:class lsub:LegalId ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
+	
+sha-rpo:LegalIdShape
+	a sh:NodeShape ;
+    sh:order 74 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:targetClass lsub:LegalId ;
+	sh:property sha-rpo:LegalIdShape-notation .
+
+sha-rpo:LegalIdShape-notation
+	a sh:PropertyShape ;
+	sh:order 75 ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+	rdfs:isDefinedBy sha-rpo: ;   
+	sh:path skos:notation ;
+	sh:datatype xsd:string ;
+	sh:pattern "[0-9]{8}" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 .
