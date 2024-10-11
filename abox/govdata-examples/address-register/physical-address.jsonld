@@ -62,7 +62,7 @@
       },
       "geo:hasGeometry": {
         "@type": "sf:Point",
-        "geo:asWKT:": {
+        "geo:asWKT": {
           "@value": "POINT(17.106678 48.150914)",
           "@type": "geo:wktLiteral"
         }
@@ -75,11 +75,11 @@
           "@language": "sk"
         }
       },
-      "loca:orientationNumber:": {
+      "loca:orientationNumber": {
         "@value": "15",
         "@type": "xs:string"
       },
-      "loca:propertyRegistrationNumber:": {
+      "loca:propertyRegistrationNumber": {
         "@value": "3013",
         "@type": "xs:string"
       },
