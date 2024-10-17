@@ -21,7 +21,8 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "locn": "http://www.w3.org/ns/locn#",
-    "xs": "http://www.w3.org/2001/XMLSchema#"
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/"
   },
   "@id": "isvs:192",
   "@graph": [
