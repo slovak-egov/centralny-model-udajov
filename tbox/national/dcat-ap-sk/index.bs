@@ -315,6 +315,7 @@ dataset: dcat:theme <http://publications.europa.eu/resource/authority/data-theme
 :: Táto Vlastnosť odkazuje na frekvenciu, s ktorou je dataset aktualizovaný.
     Je definovaná ako [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency).
     Podľa DCAT-AP 3.0.0 sú hodnoty z [európského číselníka frekvencií](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+    Pokiaľ nie je periodicita akualizácie známa, uvedie sa <http://publications.europa.eu/resource/authority/frequency/UNKNOWN>. Pokiaľ je periodicita aktualizácie známa, ale je nepravidelná, uvedie sa <http://publications.europa.eu/resource/authority/frequency/IRREG>
 : Vlastnosť
 :: `periodicita_aktualizace`, `dct:accrualPeriodicity`
 : Typ
