@@ -55,6 +55,8 @@ Medzi hlavné triedy štandardu patrí Katalóg, čo je najvyššia entita zosku
 Distribúcií môže mať Dataset viacej, avšak líšiť sa môžu jedine formátom (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
 Obsahovo musia byť distribúcie totožné.
 
+Vlastnosti, ktoré umoznujú viac jazykových verzií sú povinné v slovenskom jazyku @sk. V prípade neuvedenia jazyka bude predpokladaná hodnota @sk. Hodnota pre každý jazyk môže byť uvedená maximálne jeden krát.
+
 Použité prefixy {#použité-prefixy}
 ----------------------------------
 
