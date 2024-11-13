@@ -2489,7 +2489,7 @@ Podľa DCAT-AP 3.0.0 musí byť aspoň jedna téma z <a href="https://op.europa.
      <p>Táto Vlastnosť odkazuje na frekvenciu, s ktorou je dataset aktualizovaný.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency">dct:accrualPeriodicity</a>.
 Podľa DCAT-AP 3.0.0 sú hodnoty z <a href="https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency">európského číselníka frekvencií</a>.
-Pokiaľ nie je periodicita akualizácie známa, uvedie sa <code><http://publications.europa.eu/resource/authority/frequency/UNKNOWN></code>. Pokiaľ je periodicita aktualizácie známa, ale je nepravidelná, uvedie sa <http://publications.europa.eu/resource/authority/frequency/IRREG>. </p>
+Pokiaľ nie je periodicita akualizácie známa, uvedie sa UNKNOWN. Pokiaľ je periodicita aktualizácie známa, ale je nepravidelná, uvedie sa IRREG. </p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>periodicita_aktualizace</code>, <code>dct:accrualPeriodicity</code></p>
@@ -2502,6 +2502,8 @@ Pokiaľ nie je periodicita akualizácie známa, uvedie sa <code><http://publicat
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/MONTHLY></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/UNKNOWN></c-> <c- p>.</c->
+
 </pre>
    </dl>
    <h4 class="heading settled" data-level="3.3.8" id="dataset-kľúčové-slová"><span class="secno">3.3.8. </span><span class="content">Klúčové slová</span><a class="self-link" href="#dataset-kľúčové-slová"></a></h4>
