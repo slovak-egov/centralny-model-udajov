@@ -580,7 +580,7 @@ dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/1
 ### Kategória HVD ### {#dataset-kategória-hvd}
 
 : Popis
-:: Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD).
+:: Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD). Vlastnosť sa používa iba v prípade datasetu typu HVD.
 : Vlastnosť
 :: `kategoria_hvd`, `dcatap:hvdCategory`
 : Typ
