@@ -571,10 +571,6 @@ dataset: dcat:temporalResolution "P1D"^^xsd:duration .
 : Príklad
 :: 
     ```turtle
-dataset: dcatap:applicableLegislation <https://data.gov.sk/id/eli/2023/138/oj> .
-    ```
-:: 
-    ```turtle
 dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> .
     ```
     
