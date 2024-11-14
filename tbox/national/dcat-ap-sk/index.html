@@ -3266,6 +3266,16 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
 </pre>
    </dl>
+	    <h3 class="heading settled" data-level="3.6" id="trieda-datová-séria"><span class="secno">3.6. </span><span class="content">Trieda: Dátová séria</span><a class="self-link" href="#trieda-datová-séria"></a></h3>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Dátová séria zastrešuje súvisiace datasety a série. Súvislosť môže byť časová (rozpočet po rokoch), priestorová (zoznamy ulíc v obci), či tématická (datasety z jedného systému). Dátová séria je podtriedou Datasetu, ale nemá vlastné distribúcie. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Data_Service">dcat:DataService</a>.</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>séria</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataSeries</c-> <c- p>.</c->
+</pre>
+   </dl>
    <h2 class="heading settled" data-level="4" id="rozhranie-sparql-endpoint"><span class="secno">4. </span><span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span><a class="self-link" href="#rozhranie-sparql-endpoint"></a></h2>
     Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu <a data-link-type="biblio" href="#biblio-sparql11-protocol" title="SPARQL 1.1 Protocol">[sparql11-protocol]</a>.
 Po registrácii tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried <code>dcat:Dataset</code>, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 3.0.0</a>.
