@@ -42,11 +42,11 @@
       "@container": "@language"
     },
     "dátum_publikácie": {
-      "@id": "dct:issued",
+      "@id": "dcterms:issued",
       "@type": "xsd:dateTime"
     },
     "dátum_modifikácie": {
-      "@id": "dct:modified",
+      "@id": "dcterms:modified",
       "@type": "xsd:dateTime"
     },
     "téma": {
@@ -74,7 +74,7 @@
       "@type": "@id"
     },
     "právny_predpis": {
-      "@id": "dcatap:applicablelegislation",
+      "@id": "dcatap:applicableLegislation",
       "@type": "@id"
     },
     "kategória_hvd": {
@@ -102,12 +102,12 @@
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-     "webová_stránka_datasetu": {
+    "webová_stránka_datasetu": {
       "@id": "dcat:landingPage",
       "@type": "@id"
     },
     "súvisiaci_zdroj_datasetu": {
-      "@id": "dct:relation",
+      "@id": "dcterms:relation",
       "@type": "@id"
     },
     "Organizácia": "vcard:Organization",
@@ -144,7 +144,7 @@
       "@id": "leg:termsOfUse",
       "@type": "@id"
     },
-    "Špecifikácia podmienok použitia": "leg:termsOfUse",
+    "Špecifikácia podmienok použitia": "leg:TermsOfUse",
     "autorské_dielo": {
       "@id": "leg:authorsWorkType",
       "@type": "@id"
@@ -212,6 +212,10 @@
     },
     "poskytuje_dataset": {
       "@id": "dcat:servesDataset",
+      "@type": "@id"
+    },
+    "dokumentácia": {
+      "@id": "foaf:page",
       "@type": "@id"
     }
   }
