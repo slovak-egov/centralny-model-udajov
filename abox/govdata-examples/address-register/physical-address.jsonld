@@ -6,14 +6,15 @@
     "lau1": "https://data.gov.sk/def/lau1/",
     "lau2": "https://data.gov.sk/def/lau2/",
     "district": "https://data.gov.sk/def/district/",
-    "street": "https://data.gov.sk/def/street/",
+    "street": "https://data.gov.sk/id/street/",
     "postcode": "https://data.gov.sk/def/postcode/",
     "address": "https://data.gov.sk/id/physical-address/",
     "legal-subject": "https://data.gov.sk/id/legal-subject/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
     "geo": "http://www.opengis.net/ont/geosparql#",
     "sf": "http://www.opengis.net/ont/sf#",
-    "dct": "http://purl.org/dc/terms/"
+    "dct": "http://purl.org/dc/terms/",
+    "xs": "http://www.w3.org/2001/XMLSchema#"
   },
   "@id": "isvs:192",
   "@graph": [
@@ -21,13 +22,26 @@
       "@id": "address:10539221",
       "geo:hasGeometry": {
         "@type": "sf:Point",
-        "geo:asWKT": "POINT(17.106678 48.150914)"
+        "geo:asWKT:": {
+          "@value": "POINT(17.106678 48.150914)",
+          "@type": "geo:wktLiteral"
+        }
       },
       "loca:street": {
-        "@id": "street:4576744710567"
+        "@type": "loca:Street",
+        "skos:prefLabel": {
+          "@value": "Štefánikova",
+          "@language": "sk"
+        }
       },
-      "loca:orientationNumber": "15",
-      "loca:propertyRegistrationNumber": "3013",
+      "loca:orientationNumber:": {
+        "@value": "15",
+        "@type": "xs:string"
+      },
+      "loca:propertyRegistrationNumber:": {
+        "@value": "3013",
+        "@type": "xs:string"
+      },
       "loca:postCode": {
         "@id": "postcode:82905"        
       },
@@ -47,7 +61,12 @@
         "@id": "legal-subject:00151866"
       },
       "egov:timeValidity": {
-        "dcat:startDate": "2020-11-26"
+        "@type": "dct:PeriodOfTime",
+        "dcat:startDate": 
+        {
+          "@value": "2020-11-26",
+          "@type": "xs:date"
+        }
       }
     }
   ]
