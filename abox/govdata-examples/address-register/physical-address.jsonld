@@ -34,11 +34,11 @@
           "@language": "sk"
         }
       },
-      "loca:orientationNumber:" {
+      "loca:orientationNumber": {
         "@value": "15",
         "@type": "xs:string"
       },
-      "loca:registrationNumber:" {
+      "loca:registrationNumber": {
         "@value": "3013",
         "@type": "xs:string"
       },
