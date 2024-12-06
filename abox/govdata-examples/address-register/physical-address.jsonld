@@ -20,6 +20,15 @@
   "@graph": [
     {
       "@id": "address:10539221",
+      "@type": "loca:PhysicalAddress",
+      "loca:addressIdentifier": {
+        "@value": "10539221",
+        "@type": "xs:string"
+      },
+      "loca:formattedAddress": {
+        "@value": "Štefánikova 882/15, Bratislava-Staré Mesto, 81105",
+        "@language": "sk"
+      },
       "geo:hasGeometry": {
         "@type": "sf:Point",
         "geo:asWKT:": {
@@ -38,7 +47,7 @@
         "@value": "15",
         "@type": "xs:string"
       },
-      "loca:registrationNumber": {
+      "loca:propertyRegistrationNumber": {
         "@value": "3013",
         "@type": "xs:string"
       },
