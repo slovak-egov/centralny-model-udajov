@@ -15,7 +15,8 @@
     dct:title "Cestovné poriadky"@sk, "Public transport timetables"@en;
     dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
     dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
-    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dcat:inSeries <https://data.gov.sk/set/cestovne-poriadky-seria> ;
+    dct:publisher <https://data.gov.sk/id/legal-subject/30416094> ;
     dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
     dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
     dct:type <https://data.gov.sk/def/dataset-type/1> ;
@@ -32,7 +33,7 @@
     dcat:contactPoint [
         a vcard2006:Organization ;
         vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
-        vcard2006:hasEmail "mailto:info@mindop.sk"
+        vcard2006:hasEmail <mailto:info@mindop.sk>
     ] ;
     dcat:landingPage <https://opendata.mindop.sk/show/vld> ;
     foaf:page <https://www.middop.sk/dokumentacia/> ;
@@ -41,7 +42,6 @@
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
-    dcat:applicableLegislation <https://data.gov.sk/id/eli/sk/zz/2000/211/> ;
     dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
                       <https://data.gov.sk/set/vld/resource/sparql> .
 
