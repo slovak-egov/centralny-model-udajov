@@ -13,16 +13,16 @@
 @prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
 
 <https://data.gov.sk/set/vld> a dcat:Dataset ;
-    dct:title "Cestovné poriadky"@sk, "Public transport timetables"@en;
-    dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
-    dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
-    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:title "Radarové informácie"@sk, "Radar data"@en;
+    dct:description "Obsahom datasetu sú radarové informácie z radarových staníc."@sk ;
+    dct:description "This dataset contains radar data from radar stations."@en ;
+    dct:publisher <https://data.gov.sk/id/legal-subject/30416094> ;
     dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
     dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
-    dct:type <https://data.gov.sk/def/dataset-type/1> ;
-    dcat:theme theme:TRAN ;
+    dct:type <http://publications.europa.eu/resource/authority/dataset-type/HVD> ;
+    dcat:theme theme:ENVI ;
     dct:accrualPeriodicity freq:WEEKLY_3 ;
-    dcat:keyword "autobusy"@sk, "cestovné poriadky"@sk, "verejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
+    dcat:keyword "počasie"@sk, "radar"@sk, "meteorológia"@sk, "weather"@en, "radar"@en, "meteorology"@en ;
     dct:spatial <https://data.gov.sk/id/nuts1/SK0> ;
     dct:spatial <https://sws.geonames.org/3057568> ;
     dct:temporal [
@@ -35,15 +35,15 @@
         vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
         vcard2006:hasEmail "mailto:info@mindop.sk"
     ] ;
-    dcat:landingPage <https://opendata.mindop.sk/show/vld> ;
+    dcat:landingPage <https://opendata.mindop.sk/show/radar> ;
     foaf:page <https://www.middop.sk/dokumentacia/> ;
-    dct:relation <https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7> ;
-    dct:conformsTo <https://data.gov.sk/def/ontology/transport/> ;
+    dct:relation <https://www.mindop.sk/ministerstvo-1/radar> ;
+    dct:conformsTo <https://data.gov.sk/def/ontology/radar/> ;
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
     dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
-    dcatap:hvdCategory <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> ;
     dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
                       <https://data.gov.sk/set/vld/resource/sparql> .
 
@@ -55,9 +55,9 @@
                     leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
-    dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dcat:accessURL <https://opendata.middop.sk/pub/radar.zip> ;
     dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
-    dcat:downloadURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
+    dcat:downloadURL <https://opendata.middop.sk/pub/radar.zip> ;
     dct:format filetype:ZIP ;
     dct:conformsTo <https://opendata.middop.sk/schemy/json-schema.json> ;
     dcat:mediaType application:json ;
@@ -73,14 +73,14 @@
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://opendata.middop.sk/sparql> ;
     dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
-    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dct:title "SPARQL endpoint pre radarové informácie"@sk, "SPARQL endpoint for radar data"@en ;
     dcat:accessService <https://data.gov.sk/id/egov/app-service/123> .
 
 <https://data.gov.sk/id/egov/app-service/123> a dcat:DataService ;
-    dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
+    dct:title "SPARQL endpoint pre radarové informácie"@sk, "SPARQL endpoint for radar data"@en ;
     dcat:endpointURL <https://opendata.middop.sk/sparql> ;
     dcat:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
-    dcatap:hvdCategory <http://data.europa.eu/eli/reg_impl/2023/138/oj> ;
+    dcatap:hvdCategory <http://data.europa.eu/bna/c_164e0bf5> ;
     dcat:contactPoint [
         a vcard2006:Organization ;
         vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
