@@ -75,7 +75,7 @@
         "geo:hasGeometry": {
           "@type": "sf:Point",
           "geo:asWKT": {
-            "@value": "POINT(17.106678 48.150914 132)",
+            "@value": "POINT(17.106678 48.150914)",
             "@type": "geo:wktLiteral"
           }
         }
