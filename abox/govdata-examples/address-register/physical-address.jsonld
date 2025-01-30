@@ -21,20 +21,21 @@
     {
       "@id": "address:10539221",
       "@type": "loca:PhysicalAddress",
-      "loca:addressIdentifier": {
+      "loca:identifier": {
         "@value": "10539221",
         "@type": "xs:string"
+      },         
+      "loca:nuts3": {
+        "@id": "nuts3:SK01"
       },
-      "loca:formattedAddress": {
-        "@value": "Štefánikova 882/15, Bratislava-Staré Mesto, 81105",
-        "@language": "sk"
+      "loca:lau1": {
+        "@id": "lau1:SK0101"
       },
-      "geo:hasGeometry": {
-        "@type": "sf:Point",
-        "geo:asWKT:": {
-          "@value": "POINT(17.106678 48.150914)",
-          "@type": "geo:wktLiteral"
-        }
+      "loca:lau2": {
+        "@id": "lau2:SK0101528595"
+      },
+      "loca:district": {
+        "@id": "district:2040990"
       },
       "loca:street": {
         "@type": "loca:Street",
@@ -43,28 +44,20 @@
           "@language": "sk"
         }
       },
-      "loca:orientationNumber": {
-        "@value": "15",
-        "@type": "xs:string"
+      "loca:postCode": {
+        "@id": "postcode:82905"        
       },
       "loca:propertyRegistrationNumber": {
         "@value": "3013",
         "@type": "xs:string"
       },
-      "loca:postCode": {
-        "@id": "postcode:82905"        
+      "loca:orientationNumber": {
+        "@value": "15",
+        "@type": "xs:string"
       },
-      "loca:district": {
-        "@id": "district:2040990"
-      },
-      "loca:lau2": {
-        "@id": "lau2:SK0101528595"
-      },
-      "loca:lau1": {
-        "@id": "lau1:SK0101"
-      },
-      "loca:nuts3": {
-        "@id": "nuts3:SK01"
+       "loca:formattedAddress": {
+        "@value": "Štefánikova 882/15, Bratislava-Staré Mesto, 81105",
+        "@language": "sk"
       },
       "dct:publisher": {
         "@id": "legal-subject:00151866"
@@ -75,6 +68,16 @@
         {
           "@value": "2020-11-26",
           "@type": "xs:date"
+        }
+      },
+      "loca:geoLocation": {
+        "@type": "geo:Feature",
+        "geo:hasGeometry": {
+          "@type": "sf:Point",
+          "geo:asWKT:": {
+            "@value": "POINT(17.106678 48.150914 132)",
+            "@type": "geo:wktLiteral"
+          }
         }
       }
     }
