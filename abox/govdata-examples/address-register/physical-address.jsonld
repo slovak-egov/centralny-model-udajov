@@ -74,7 +74,7 @@
         "@type": "geo:Feature",
         "geo:hasGeometry": {
           "@type": "sf:Point",
-          "geo:asWKT:": {
+          "geo:asWKT": {
             "@value": "POINT(17.106678 48.150914 132)",
             "@type": "geo:wktLiteral"
           }
