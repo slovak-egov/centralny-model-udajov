@@ -2553,15 +2553,15 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resourc
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na územný prvok v registry adries.
-Dataset môže byť popísaný viacerými územnými prvkami v registry adries.
+     <p>Táto Vlastnosť odkazuje na územný prvok v registri adries.
+Dataset môže byť popísaný viacerými územnými prvkami v registri adries.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_spatial">dct:spatial</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>prvok_registra_adries</code>, <code>dct:spatial</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položiek pre územné entity v Registry adries vo forme <a href="https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl">NUTS-SK</a> klasifikácie.</p>
+     <p>IRI položiek pre územné entity v Registri adries vo forme <a href="https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl">NUTS-SK</a> klasifikácie.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná</p>
@@ -4643,6 +4643,19 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
 </pre>
    </dl>
   </main>
+	 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Check if there's a hash in the URL
+        if (window.location.hash) {
+            // Get the element by the hash
+            var element = document.querySelector(window.location.hash);
+            if (element) {
+                // Scroll into view with smooth behavior
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
+    </script>
 <script>
 (function() {
   "use strict";
