@@ -6,7 +6,7 @@
     "egov": "https://data.gov.sk/def/ontology/egov/",
     "rfo": "https://data.minv.sk/def/ontology/rfo",
     "lau2": "https://data.gov.sk/def/lau2/",
-    "lau1": "https://data.gov.sk/idef/lau1/",
+    "lau1": "https://data.gov.sk/def/lau1/",
     "district": "https://data.gov.sk/def/district/",
     "street": "https://data.gov.sk/id/street/",
     "uncountry": "https://data.gov.sk/def/uncountry/",
@@ -15,7 +15,7 @@
     "marital-status-type": "https://data.gov.sk/def/marital-status-type/",
     "sex": "https://data.gov.sk/def/sex/",
     "existential-status-type": "https://data.gov.sk/def/existential-status-type/",
-    "person-relationship": "https://data.gov.sk/def/person-relationship-type/",
+    "person-relationship-type": "https://data.gov.sk/def/person-relationship-type/",
     "identifier-type": "https://data.gov.sk/def/identifier-type/",
     "address-type": "https://data.gov.sk/def/address-type/",
     "address": "https://data.gov.sk/id/physical-address/",
@@ -29,7 +29,8 @@
     "dct": "http://purl.org/dc/terms/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xs": "http://www.w3.org/2001/XMLSchema#"
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "dcat": "http://www.w3.org/ns/dcat#"
   },
   "@id": "isvs:191",
   "@graph": [
@@ -44,7 +45,7 @@
           "@id": "identifier-type:14"
         }
       },
-      "pper:recordId": "2100035451",
+      "pper:recordIdentifier": "2100035451",
 
       "pper:givenName": {
         "@list": [ "Rudolf", "Elvis" ]
@@ -60,10 +61,6 @@
         "pper:dateOfBirth": {
           "@value": "2000-01-01",
           "@type": "xs:date"
-        },
-        "rfo:yearOfBirth": {
-          "@value": "2000",
-          "@type": "xs:gYear"
         },
         "pper:placeOfBirth": {
           "@type": "loca:Location",
@@ -96,10 +93,6 @@
           "@value": "2088-01-01",
           "@type": "xs:date"
         },
-        "rfo:yearOfDeath": {
-          "@value": "2088",
-          "@type": "xs:gYear"
-        },
         "pper:placeOfDeath": {
           "@type": "loca:Location",
           "loca:lau2": {
@@ -111,21 +104,27 @@
         {
           "@type": "pper:NamePrefix",
           "dct:type": {
-            "@id": "name-prefix-type:01"
+            "@id": "name-prefix:01"
           },
-          "schema:validFrom": {
-            "@value": "2000-01-01",
-            "@type": "xs:date"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date" 
+            }
           }
         },
         {
           "@type": "pper:NamePrefix",
           "dct:type": {
-            "@id": "name-prefix-type:02"
+            "@id": "name-prefix:02"
           },
-          "schema:validFrom": {
-            "@value": "2000-01-01",
-            "@type": "xs:date"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date" 
+            }
           }
         }
       ],
@@ -133,11 +132,14 @@
         {
           "@type": "pper:NameSuffix",
           "dct:type": {
-            "@id": "name-suffix-type:53"
+            "@id": "name-suffix:53"
           },
-          "schema:validFrom": {
-            "@value": "2000-01-01",
-            "@type": "xs:date"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date" 
+            }
           }
         }
       ],
@@ -147,9 +149,8 @@
         "loca:physicalAddress": {
           "@id": "address:123456789",
           "@type": "loca:PhysicalAddress",
-          "loca:addressId": "123456789",
+          "loca:identifier": "123456789",
           "loca:street": {
-            "@id": "street:39122",
             "@type": "loca:Street",
             "skos:prefLabel": [
               {
@@ -179,13 +180,16 @@
             "@id": "uncountry:703"
           }
         },
-        "schema:validFrom": {
-          "@value": "2000-01-01",
-          "@type": "xs:date"
-        },
-        "schema:validUntil": {
-          "@value": "2020-01-01",
-          "@type": "xs:date"
+        "egov:timeValidity": {
+          "@type":"dct:PeriodOfTime",
+          "dcat:startDate": {
+            "@value": "2000-01-01",
+            "@type": "xs:date"
+          },
+          "dcat:endDate": {
+            "@value": "2020-01-01",
+            "@type": "xs:date"
+          }
         }
       },
       "pper:citizenship": {
@@ -201,7 +205,7 @@
         {
           "@id": "rfopersonrelationship:2100035451-2100035456",
           "@type": "pper:PersonRelationship",
-          "pper:relatedPerson": {
+          "pper:personRelationshipRange": {
             "@id": "pers:2100035456",
             "@type": "pper:PhysicalPerson",
             "pper:givenName": {
@@ -211,16 +215,19 @@
               "@list": [ "Yetiová" ]
             }
           },
-          "schema:validFrom": {
-            "@value": "2018-01-01",
-            "@type": "xs:date"
-          },
-          "schema:validUntil": {
-            "@value": "2020-01-01",
-            "@type": "xs:date"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2018-01-01",
+              "@type": "xs:date"
+            },
+            "dcat:endDate": {
+              "@value": "2020-01-01",
+              "@type": "xs:date"
+            }
           },
           "pper:relationshipType": {
-            "@id": "person-relationship:01"
+            "@id": "person-relationship-type:01"
           },
           "pper:marriageCertificate": {
             "@type": "pper:MarriageCertificate",
@@ -232,7 +239,7 @@
         {
           "@id": "rfopersonrelationship:2100035451-1100035000",
           "@type": "pper:PersonRelationship",
-          "pper:relatedPerson": {
+          "pper:personRelationshipRange": {
             "@id": "pers:1100035000",
             "@type": "pper:PhysicalPerson",
             "pper:givenName": {
@@ -242,18 +249,21 @@
               "@list": [ "Yeti" ]
             }
           },
-          "schema:validFrom": {
-            "@value": "1960-01-01",
-            "@type": "xs:date"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "1960-01-01",
+              "@type": "xs:date"
+            }
           },
           "pper:relationshipType": {
-            "@id": "person-relationship:02"
+            "@id": "person-relationship-type:02"
           }
         },
         {
           "@id": "rfopersonrelationship:2100035451-2100035000",
           "@type": "pper:PersonRelationship",
-          "pper:relatedPerson": {
+          "pper:personRelationshipRange": {
             "@id": "pers:2100035000",
             "@type": "pper:PhysicalPerson",
             "pper:givenName": {
@@ -263,12 +273,15 @@
               "@list": [ "Yeti" ]
             }
           },
-          "schema:validFrom": {
-            "@value": "2000-01-01",
-            "@type": "xs:date"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date"
+            }
           },
           "pper:relationshipType": {
-            "@id": "person-relationship:03"
+            "@id": "person-relationship-type:03"
           }
         }
       ]
