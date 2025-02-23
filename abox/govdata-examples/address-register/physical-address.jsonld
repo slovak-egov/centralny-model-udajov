@@ -39,9 +39,19 @@
       },
       "loca:street": {
         "@type": "loca:Street",
-        "skos:prefLabel": {
+        "loca:streetName": {
           "@value": "Štefánikova",
-          "@language": "sk"
+          "@type": "xs:string"
+        },
+        "loca:geoLocation": {
+          "@type": "geo:Feature",
+          "geo:hasGeometry": {
+            "@type": "sf:LineString",
+            "geo:asWKT": {
+              "@value": "LINESTRING(17.106678 48.150914, 17.108678 48.155914, 17.116678 48.160914)",
+              "@type": "geo:wktLiteral"
+            }
+          }
         }
       },
       "loca:postCode": {
