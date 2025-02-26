@@ -2126,8 +2126,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#dcat-ap-sk-shacl"><span class="secno">6</span> <span class="content">Povinné vlastností údajov</span></a>
      <ol class="toc">
-      <li><a href="#dcat-ap-sk-shacl-non-hvd"><span class="secno">6.1</span> <span class="content">Povinné vlastnosti datasetu, ktorý nie je typu HVD</span></a>
-      <li><a href="#povinn-vlasnosti-datasetu-ktor-je-typu-hvd"><span class="secno">6.2</span> <span class="content">Povinné vlasnosti datasetu, ktorý je typu HVD.</span></a>
+      <li><a href="#dcat-ap-sk-shacl-dataset"><span class="secno">6.1</span> <span class="content">Povinné vlastnosti datasetu</span></a>
      </ol>
     <li>
      <a href="#rozhranie-ckan-api"><span class="secno">7</span> <span class="content">Rozhranie CKAN API</span></a>
@@ -2192,10 +2191,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <p>2.3. Pridanie formálnych pravidiel pomocou jazyka <a href="https://www.w3.org/TR/shacl/">SHACL</a> pre validáciu správnosti metadát pre LKODy (Lokálne katalógy otvorených dát)</p>
    <ul>
     <li data-md>
-     <p><a href="index.html#dcat-ap-sk-shacl-non-hvd">Povinné vlastnosti datasetu, ktorý nie je typu HVD</a></p>
-    <li data-md>
-     <p><a href="index.html#povinn-vlasnosti-datasetu-ktor-je-typu-hvd">Povinné vlastnosti HVD datasetu</a></p>
-   </ul>
+     <p><a href="index.html#dcat-ap-sk-shacl-dataset">Povinné vlastnosti datasetu</a></p>
+    </ul>
    <h2 class="heading settled" data-level="3" id="položky-metadátového-záznamu"><span class="secno">3. </span><span class="content">Položky metadátového záznamu</span><a class="self-link" href="#položky-metadátového-záznamu"></a></h2>
    <p>V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu.
 Položky sa riadia štandardom <a href="https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300">DCAT Application Profile for data portals in Europe Version 3 (DCAT-AP 3.0.0)</a>.</p>
@@ -3941,10 +3938,10 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 </pre>
    </div>
 	  
-   <h2 class="heading settled" data-level="6" id="dcat-ap-sk-shacl"><span class="secno">6. </span><span class="content">Povinné vlastností údajov</span><a class="self-link" href="#dcat-ap-sk-shacl"></a></h2>
+   <h2 class="heading settled" data-level="6" id="dcat-ap-sk-shacl"><span class="secno">6. </span><span class="content">Povinné vlastnosti údajov</span><a class="self-link" href="#dcat-ap-sk-shacl"></a></h2>
     Táto časť štandardu predstavuje povinné vlastností údaj, špecifikované prostredníctvom jazyka <a href="https://www.w3.org/TR/shacl/">SHACL</a>. 
-   <h3 class="heading settled" data-level="6.1" id="dcat-ap-sk-shacl-non-hvd"><span class="secno">6.1. </span><span class="content">Povinné vlastnosti datasetu, ktorý nie je typu HVD</span><a class="self-link" href="#dcat-ap-sk-shacl-non-hvd"></a></h3>
-    Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset, ktorý nie je typu HVD. 
+   <h3 class="heading settled" data-level="6.1" id="dcat-ap-sk-shacl-dataset"><span class="secno">6.1. </span><span class="content">Povinné vlastnosti datasetu</span><a class="self-link" href="#dcat-ap-sk-shacl-non-hvd"></a></h3>
+    Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset (vrátane HVD datasetov). 
    <div class="example" id="example-c28a89db">
     <a class="self-link" href="#example-c28a89db"></a> <a U0002Ettl href="povinné-vlastnosti/dcat-ap-sk-3.0.0-shapes">Stiahnuť</a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>rdf:</c-> <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
