@@ -38,6 +38,7 @@
         "@id": "district:2040990"
       },
       "loca:street": {
+        "@id": "street:1"
         "@type": "loca:Street",
         "loca:streetName": {
           "@value": "Štefánikova",
