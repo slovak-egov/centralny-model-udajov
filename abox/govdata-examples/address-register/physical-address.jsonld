@@ -15,7 +15,7 @@
     "sf": "http://www.opengis.net/ont/sf#",
     "dct": "http://purl.org/dc/terms/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "xs": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@id": "isvs:192",
   "@graph": [
@@ -24,7 +24,7 @@
       "@type": "loca:PhysicalAddress",
       "loca:identifier": {
         "@value": "10539221",
-        "@type": "xs:string"
+        "@type": "xsd:string"
       },         
       "loca:nuts3": {
         "@id": "nuts3:SK01"
@@ -43,7 +43,7 @@
         "@type": "loca:Street",
         "loca:streetName": {
           "@value": "Štefánikova",
-          "@type": "xs:string"
+          "@type": "xsd:string"
         },
         "loca:geoLocation": {
           "@type": "geo:Feature",
@@ -61,11 +61,11 @@
       },
       "loca:propertyRegistrationNumber": {
         "@value": "3013",
-        "@type": "xs:string"
+        "@type": "xsd:string"
       },
       "loca:orientationNumber": {
         "@value": "15",
-        "@type": "xs:string"
+        "@type": "xsd:string"
       },
        "loca:formattedAddress": {
         "@value": "Štefánikova 882/15, Bratislava-Staré Mesto, 81105",
@@ -79,7 +79,7 @@
         "dcat:startDate": 
         {
           "@value": "2020-11-26",
-          "@type": "xs:date"
+          "@type": "xsd:date"
         }
       },
       "loca:geoLocation": {
