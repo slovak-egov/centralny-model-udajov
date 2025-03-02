@@ -21,7 +21,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/2025b">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<dct:title>Ontológia lokácie</dct:title>
-	<dct:creator rdf:resource="http://www.linkedin.com/in/emil-lazenga-6a0231176"/>
+	<dct:creator rdf:resource="http://www.linkedin.com/in/emillazenga"/>
 	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
 	<owl:versionInfo>2025a</owl:versionInfo>
 	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
