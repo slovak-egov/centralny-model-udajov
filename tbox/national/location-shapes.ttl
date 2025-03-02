@@ -529,7 +529,7 @@ sha-ra:Apartment-entrance
 	sh:class loca:Entrance ;
 	sh:nodeKind sh:IRI ;
  	rdfs:isDefinedBy sha-ra: ;
-    dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
 
 sha-ra:EntranceShape
 	a sh:NodeShape ;
