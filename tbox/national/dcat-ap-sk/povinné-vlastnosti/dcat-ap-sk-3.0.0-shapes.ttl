@@ -13,139 +13,760 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix hvd: <http://publications.europa.eu/resource/authority/dataset-type/HVD>.
+@prefix hvdleg: <http://data.europa.eu/eli/reg_impl/2023/138/oj>.
 
 sha-dcatapsk:NKODCatalogShape
-	a sh:NodeShape ;
-	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
-	sh:targetClass dcat:Catalog ;
-	rdfs:isDefinedBy sha-dcatapsk:3.0.0 ;
-	sh:property sha-dcatapsk:catalog_title ;
-	sh:property sha-dcatapsk:catalog_description ;
-	sh:property sha-dcatapsk:catalog_publisher ;
-	sh:property sha-dcatapsk:catalog_dataset .
+  a sh:NodeShape ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  sh:targetClass dcat:Catalog ;
+  rdfs:isDefinedBy sha-dcatapsk:3 ;
+  sh:property sha-dcatapsk:catalog_title ;
+  sh:property sha-dcatapsk:catalog_title_sk ;
+  sh:property sha-dcatapsk:catalog_description ;
+  sh:property sha-dcatapsk:catalog_description_sk ;
+  sh:property sha-dcatapsk:catalog_publisher ;
+  sh:property sha-dcatapsk:catalog_contact ;
+  sh:property sha-dcatapsk:catalog_dataset ;
+  sh:xone (
+    [ sh:property sha-dcatapsk:catalog_dataset_type ]
+    [ sh:property sha-dcatapsk:catalog_dataset_serie ]
+  ).
 
 sha-dcatapsk:NKODDatasetShape
-	a sh:NodeShape ;
-	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
-	sh:targetClass dcat:Dataset ;
-	rdfs:isDefinedBy sha-dcatapsk:3.0.0 ;
-	sh:property sha-dcatapsk:dataset_title ;
-	sh:property sha-dcatapsk:dataset_description ;
-	sh:property sha-dcatapsk:dataset_publisher ;
-	sh:property sha-dcatapsk:dataset_theme ;
-	sh:property sha-dcatapsk:dataset_frequency ;
-	sh:property sha-dcatapsk:dataset_keyword ;
-	sh:property sha-dcatapsk:dataset_spatial .
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:dataset_title ;
+  sh:property sha-dcatapsk:dataset_title_sk ;
+  sh:property sha-dcatapsk:dataset_description ;
+  sh:property sha-dcatapsk:dataset_description_sk ;
+  sh:property sha-dcatapsk:dataset_publisher ;        
+  sh:property sha-dcatapsk:dataset_issued ;        
+  sh:property sha-dcatapsk:dataset_modified ;        
+  sh:property sha-dcatapsk:dataset_theme ;
+  sh:property sha-dcatapsk:dataset_frequency ;
+  sh:property sha-dcatapsk:dataset_keyword ;
+  sh:property sha-dcatapsk:dataset_keyword_sk ;
+  sh:property sha-dcatapsk:dataset_type ;
+  sh:property sha-dcatapsk:dataset_spatial ;
+  sh:property sha-dcatapsk:dataset_temporal ;
+  sh:property sha-dcatapsk:dataset_contact ;
+  sh:property sha-dcatapsk:dataset_landingPage ;
+  sh:property sha-dcatapsk:dataset_documentation ;
+  sh:property sha-dcatapsk:dataset_specification ;
+  sh:property sha-dcatapsk:dataset_relation ;
+  sh:property sha-dcatapsk:dataset_spatialResolutionInMeters ;
+  sh:property sha-dcatapsk:dataset_temporalResolution ;
+  sh:property sha-dcatapsk:dataset_applicableLegislation ;
+  sh:property sha-dcatapsk:dataset_inSeries ;
+  sh:property sha-dcatapsk:dataset_distribution ;
+  sh:xone (
+    [
+      sh:property sha-dcatapsk:dataset_hvdCategory_none ;
+      sh:not [
+        sh:property sha-dcatapsk:dataset_type_hvd
+      ] ;
+      sh:not [
+        sh:property sha-dcatapsk:dataset_applicableLegislation_hvd ;
+      ]
+    ]
+    [
+      sh:property sha-dcatapsk:dataset_type_hvd ;
+      sh:property sha-dcatapsk:dataset_hvdCategory ;
+      sh:property sha-dcatapsk:dataset_applicableLegislation_hvd ;
+    ]
+  ) .
 
+sha-dcatapsk:NKODDatasetSeriesShape
+  a sh:NodeShape ;
+  sh:targetClass dcat:DatasetSeries ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:dataset_title ;
+  sh:property sha-dcatapsk:dataset_title_sk ;
+  sh:property sha-dcatapsk:dataset_description ;
+  sh:property sha-dcatapsk:dataset_description_sk ;
+  sh:property sha-dcatapsk:dataset_publisher ;        
+  sh:property sha-dcatapsk:dataset_issued ;        
+  sh:property sha-dcatapsk:dataset_modified ;        
+  sh:property sha-dcatapsk:dataset_theme ;
+  sh:property sha-dcatapsk:dataset_frequency ;
+  sh:property sha-dcatapsk:dataset_keyword ;
+  sh:property sha-dcatapsk:dataset_keyword_sk ;
+  sh:property sha-dcatapsk:dataset_type ;
+  sh:property sha-dcatapsk:dataset_spatial ;
+  sh:property sha-dcatapsk:dataset_temporal ;
+  sh:property sha-dcatapsk:dataset_contact ;
+  sh:property sha-dcatapsk:dataset_landingPage ;
+  sh:property sha-dcatapsk:dataset_documentation ;
+  sh:property sha-dcatapsk:dataset_specification ;
+  sh:property sha-dcatapsk:dataset_relation ;
+  sh:property sha-dcatapsk:dataset_spatialResolutionInMeters ;
+  sh:property sha-dcatapsk:dataset_temporalResolution ;
+  sh:property sha-dcatapsk:dataset_applicableLegislation ;
+  sh:property sha-dcatapsk:dataset_inSeries ;
+  sh:xone (
+    [
+      sh:property sha-dcatapsk:dataset_hvdCategory_none ;
+      sh:not [
+        sh:property sha-dcatapsk:dataset_type_hvd
+      ] ;
+      sh:not [
+        sh:property sha-dcatapsk:dataset_applicableLegislation_hvd ;
+      ]
+    ]
+    [
+      sh:property sha-dcatapsk:dataset_type_hvd ;
+      sh:property sha-dcatapsk:dataset_hvdCategory ;
+      sh:property sha-dcatapsk:dataset_applicableLegislation_hvd ;
+    ]
+  ) ;
+  sh:property sha-dcatapsk:dataset_distribution_series .
+        
+        
 sha-dcatapsk:NKODDistributionShape
-	a sh:NodeShape ;
-	dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
-	sh:targetClass dcat:Distribution ;
-	rdfs:isDefinedBy sha-dcatapsk:3.0.0 ;
-	sh:property sha-dcatapsk:distribution_termsOfUse ;
-	sh:property sha-dcatapsk:distribution_downloadURL ;
-	sh:property sha-dcatapsk:distribution_accessURL ;
-	sh:property sha-dcatapsk:distribution_format ;
-	sh:property sha-dcatapsk:distribution_mediaType .
+  a sh:NodeShape ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  sh:targetClass dcat:Distribution ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:distribution_termsOfUse ;
+  sh:property sha-dcatapsk:distribution_applicableLegislation ;
+  sh:property sha-dcatapsk:distribution_conformsTo ;
+  sh:property sha-dcatapsk:distribution_compressFormat ;
+  sh:property sha-dcatapsk:distribution_packageFormat ;
+  sh:property sha-dcatapsk:distribution_title ;
+  sh:xone (
+    [ 
+      sh:property sha-dcatapsk:distribution_downloadURL ;
+      sh:property sha-dcatapsk:distribution_format ;
+      sh:property sha-dcatapsk:distribution_mediaType ;
+      sh:property sha-dcatapsk:distribution_accessService_none ;   
+      sh:property sha-dcatapsk:distribution_accessURL_download ;
+    ]
+    [ 
+      sh:property sha-dcatapsk:distribution_downloadURL_none ;
+      sh:property sha-dcatapsk:distribution_format_optional ;
+      sh:property sha-dcatapsk:distribution_mediaType_optional ;
+      sh:property sha-dcatapsk:distribution_accessService ;
+      sh:property sha-dcatapsk:distribution_accessURL_service ;
+    ]
+  ) ;
+  sh:xone (
+    [
+      sh:property sha-dcatapsk:distribution_dataset_hvd ;
+      sh:property sha-dcatapsk:distribution_applicableLegislation_hvd ;
+    ]
+    [
+      sh:not [
+        sh:property sha-dcatapsk:distribution_dataset_hvd
+      ] ;
+      sh:not [
+        sh:property sha-dcatapsk:distribution_applicableLegislation_hvd ;
+      ]
+    ]
+  ) .
 
+sha-dcatapsk:NKODDataserviceShape
+  a sh:NodeShape ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  sh:targetClass dcat:DataService ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:dataService_title ;
+  sh:property sha-dcatapsk:dataService_title_sk ;
+  sh:property sha-dcatapsk:dataService_endpointURL ;
+  sh:property sha-dcatapsk:dataService_applicableLegislation ;
+  sh:property sha-dcatapsk:dataService_contact ;
+  sh:property sha-dcatapsk:dataService_documentation ;
+  sh:property sha-dcatapsk:dataService_conformsTo ;
+  sh:property sha-dcatapsk:dataService_endpointDescription ;
+  sh:xone (
+    [
+      sh:property sha-dcatapsk:dataService_dataset_hvd ;
+      sh:property sha-dcatapsk:dataService_applicableLegislation_hvd ;
+      sh:property sha-dcatapsk:dataset_hvdCategory ;
+    ]
+    [
+      sh:not [
+        sh:property sha-dcatapsk:dataService_dataset_hvd
+      ] ;
+      sh:not [
+        sh:property sha-dcatapsk:dataService_applicableLegislation_hvd ;
+      ] ;
+      sh:property sha-dcatapsk:dataService_hvdCategory_none ;
+    ]
+  ) .
+
+sha-dcatapsk:NKODTermsOfUseShape
+  a sh:NodeShape ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  sh:targetClass leg:TermsOfUse ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:termsOfUse_authorsWorkType ;
+  sh:property sha-dcatapsk:termsOfUse_originalDatabaseType ;
+  sh:property sha-dcatapsk:termsOfUse_databaseProtectedBySpecialRightsType ;
+  sh:property sha-dcatapsk:termsOfUse_personalDataContainmentType ;
+  sh:property sha-dcatapsk:termsOfUse_authorName ;
+  sh:property sha-dcatapsk:termsOfUse_originalDatabaseAuthorName .
+
+sha-dcatapsk:NKODContactShape
+  a sh:NodeShape ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  sh:targetClass ( vcard:Individual vcard:Organization ) ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:contact_fn ;
+  sh:property sha-dcatapsk:contact_fn_sk ;
+  sh:property sha-dcatapsk:contact_hasEmail .
+
+sha-dcatapsk:NKODPeriodOfTimeShape
+  a sh:NodeShape ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/9184> ;
+  sh:targetClass dct:PeriodOfTime ;
+  rdfs:isDefinedBy sha-dcatapsk:2023b ;
+  sh:property sha-dcatapsk:period_startDate ;
+  sh:property sha-dcatapsk:period_endDate .
+        
 sha-dcatapsk:catalog_title
-	a sh:PropertyShape ;
-	sh:path dct:title ;
-	sh:languageIn("sk" "en") ;
-	sh:minCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:datatype rdf:langString ; 
+  sh:uniqueLang true .
 
+sha-dcatapsk:catalog_title_sk
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
+	
 sha-dcatapsk:catalog_description
-	a sh:PropertyShape ;
-	sh:path dct:description ;
-	sh:languageIn("sk" "en") ;
-	sh:minCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:datatype rdf:langString ; 
+  sh:uniqueLang true .
 
+sha-dcatapsk:catalog_description_sk
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
+	
 sha-dcatapsk:catalog_publisher
-	a sh:PropertyShape ;
-	sh:path dct:publisher ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:publisher ;
+  sh:nodeKind sh:IRI ;
+  sh:pattern "^https://data.gov.sk/id/legal-subject/" ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:catalog_contact
+  a sh:PropertyShape ;
+  sh:path dcat:contactPoint ;
+  sh:or (
+    [ sh:class vcard:Individual ]
+    [ sh:class vcard:Organization ]
+  ) ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
 
 sha-dcatapsk:catalog_dataset
-	a sh:PropertyShape ;
-	sh:path dcat:dataset ;
-	sh:class dcat:Dataset ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 1 .
+  a sh:PropertyShape ;
+  sh:path dcat:dataset ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 1 .
+	
+sha-dcatapsk:catalog_dataset_type
+  a sh:PropertyShape ;
+  sh:path dcat:dataset ;
+  sh:class dcat:Dataset ;
+  sh:nodeKind sh:IRI .
+
+sha-dcatapsk:catalog_dataset_serie
+  a sh:PropertyShape ;
+  sh:path dcat:dataset ;
+  sh:class dcat:DatasetSerie ;
+  sh:nodeKind sh:IRI .
 
 sha-dcatapsk:dataset_title
-	a sh:PropertyShape ;
-	sh:path dct:title ;
-	sh:languageIn("sk" "en") ;
-	sh:minCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:datatype rdf:langString ; 
+  sh:uniqueLang true .
+
+sha-dcatapsk:dataset_title_sk
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
 
 sha-dcatapsk:dataset_description
-	a sh:PropertyShape ;
-	sh:path dct:description ;
-	sh:languageIn("sk" "en") ;
-	sh:minCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:datatype rdf:langString ; 
+  sh:uniqueLang true .
 
+sha-dcatapsk:dataset_description_sk
+  a sh:PropertyShape ;
+  sh:path dct:description ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
+	
 sha-dcatapsk:dataset_publisher
-	a sh:PropertyShape ;
-	sh:path dct:publisher ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:publisher ;
+  sh:nodeKind sh:IRI ;
+  sh:pattern "^https://data.gov.sk/id/legal-subject/" ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
 
+sha-dcatapsk:dataset_issued
+  a sh:PropertyShape ;
+  sh:path dct:issued ;
+  sh:datatype xsd:dateTime ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:dataset_modified
+  a sh:PropertyShape ;
+  sh:path dct:modified ;
+  sh:datatype xsd:dateTime ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+	
 sha-dcatapsk:dataset_theme
-	a sh:PropertyShape ;
-	sh:path dcat:theme ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 1 .
-
+  a sh:PropertyShape ;
+  sh:path dcat:theme ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 .
+	
 sha-dcatapsk:dataset_frequency
-	a sh:PropertyShape ;
-	sh:path dct:accrualPeriodicity ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:accrualPeriodicity ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
 
 sha-dcatapsk:dataset_spatial
-	a sh:PropertyShape ;
-	sh:path dct:spatial ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path dct:spatial ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 .
 
+sha-dcatapsk:dataset_type
+  a sh:PropertyShape ;
+  sh:path dct:type ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .  
+
+sha-dcatapsk:dataset_type_hvd
+  a sh:PropertyShape ;
+  sh:path dct:type ;
+  sh:minCount 1 ;
+  sh:hasValue hvd: .
+		
 sha-dcatapsk:dataset_keyword
-	a sh:PropertyShape ;
-	sh:path dct:description ;
-	sh:languageIn("sk" "en") ;
-	sh:minCount 1 .
+  a sh:PropertyShape ;
+  sh:path dcat:keyword ;
+  sh:datatype rdf:langString .
 
+sha-dcatapsk:dataset_keyword_sk
+  a sh:PropertyShape ;
+  sh:path dcat:keyword ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
+
+sha-dcatapsk:dataset_temporal
+  a sh:PropertyShape ;
+  sh:path dct:temporal ;
+  sh:class dct:PeriodOfTime ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:dataset_contact
+  a sh:PropertyShape ;
+  sh:path dcat:contactPoint ;
+  sh:or (
+    [ sh:class vcard:Individual ]
+    [ sh:class vcard:Organization ]
+  ) ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:dataset_landingPage
+  a sh:PropertyShape ;
+  sh:path dcat:landingPage ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataset_documentation
+  a sh:PropertyShape ;
+  sh:path foaf:page ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataset_specification
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataset_relation
+  a sh:PropertyShape ;
+  sh:path dct:relation ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataset_spatialResolutionInMeters
+  a sh:PropertyShape ;
+  sh:path dcat:spatialResolutionInMeters ;
+  sh:datatype xsd:decimal ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:dataset_temporalResolution
+  a sh:PropertyShape ;
+  sh:path dcat:temporalResolution ;
+  sh:datatype xsd:duration ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:dataset_hvdCategory
+  a sh:PropertyShape ;
+  sh:path dcatap:hvdCategory ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 .
+
+sha-dcatapsk:dataset_hvdCategory_none
+  a sh:PropertyShape ;
+  sh:path dcatap:hvdCategory ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 0 .
+
+sha-dcatapsk:dataset_applicableLegislation
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataset_applicableLegislation_hvd
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:hasValue hvdleg: .
+
+sha-dcatapsk:dataset_inSeries
+  a sh:PropertyShape ;
+  sh:path dcat:inSeries ;
+  sh:nodeKind sh:IRI ;
+  sh:class dcat:DatasetSeries ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataset_distribution
+  a sh:PropertyShape ;
+  sh:path dcat:distribution ;
+  sh:nodeKind sh:IRI ;
+  sh:class dcat:Distribution ;
+  sh:minCount 1 .
+
+sha-dcatapsk:dataset_distribution_series
+  a sh:PropertyShape ;
+  sh:path dcat:distribution ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 0 .
+	
 sha-dcatapsk:distribution_termsOfUse
-	a sh:PropertyShape ;
-	sh:path leg:termsOfUse ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path leg:termsOfUse ;
+  sh:class leg:TermsOfUse ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .  
 
 sha-dcatapsk:distribution_downloadURL
-	a sh:PropertyShape ;
-	sh:path dcat:downloadURL ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path dcat:downloadURL ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;  
+  sh:maxCount 1 .
 
-sha-dcatapsk:distribution_accessURL
-	a sh:PropertyShape ;
-	sh:path dcat:downloadURL ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+sha-dcatapsk:distribution_downloadURL_none
+  a sh:PropertyShape ;
+  sh:path dcat:downloadURL ;
+  sh:maxCount 0 .
+	
+sha-dcatapsk:distribution_accessURL_download
+  a sh:PropertyShape ;
+  sh:path dcat:accessURL ;
+  sh:equals dcat:downloadURL .
+
+sha-dcatapsk:distribution_accessURL_service
+  a sh:PropertyShape ;
+  sh:path (dcat:accessService dcat:endpointURL) ;
+  sh:equals dcat:accessURL ;
+  sh:minCount 1 .  
 
 sha-dcatapsk:distribution_format
-	a sh:PropertyShape ;
-	sh:path dct:format ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
-
+  a sh:PropertyShape ;
+  sh:path dct:format ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .    
+        
 sha-dcatapsk:distribution_mediaType
-	a sh:PropertyShape ;
-	sh:path dcat:mediaType ;
-	sh:minCount 1 ;
-	sh:maxCount 1 .
+  a sh:PropertyShape ;
+  sh:path dcat:mediaType ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:distribution_format_optional
+  a sh:PropertyShape ;
+  sh:path dct:format ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .    
+        
+sha-dcatapsk:distribution_mediaType_optional
+  a sh:PropertyShape ;
+  sh:path dcat:mediaType ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:distribution_applicableLegislation
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:distribution_conformsTo
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:distribution_compressFormat
+  a sh:PropertyShape ;
+  sh:path dcat:compressFormat ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:distribution_packageFormat
+  a sh:PropertyShape ;
+  sh:path dcat:packageFormat ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:distribution_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:datatype rdf:langString ; 
+  sh:minCount 0 ;
+  sh:uniqueLang true .
+
+sha-dcatapsk:distribution_accessService
+  a sh:PropertyShape ;
+  sh:path dcat:accessService ;
+  sh:nodeKind sh:IRI ;
+  sh:class dcat:DataService ;
+  sh:minCount 1 .
+
+sha-dcatapsk:distribution_accessService_none
+  a sh:PropertyShape ;
+  sh:path dcat:accessService ;
+  sh:nodeKind sh:IRI ;
+  sh:class dcat:DataService ;
+  sh:maxCount 0 .
+
+sha-dcatapsk:distribution_dataset_hvd
+  a sh:PropertyShape ;
+  sh:path (
+    [ sh:inversePath dcat:distribution ] 
+    dct:type 
+  ) ;
+  sh:minCount 1 ;
+  sh:hasValue hvd: .
+
+sha-dcatapsk:distribution_applicableLegislation_hvd
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:minCount 1 ;
+  sh:hasValue hvdleg: .
+
+sha-dcatapsk:termsOfUse_authorsWorkType
+  a sh:PropertyShape ;
+  sh:path leg:authorsWorkType ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:termsOfUse_originalDatabaseType
+  a sh:PropertyShape ;
+  sh:path leg:originalDatabaseType ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:termsOfUse_databaseProtectedBySpecialRightsType 
+  a sh:PropertyShape ;
+  sh:path leg:databaseProtectedBySpecialRightsType ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:termsOfUse_personalDataContainmentType
+  a sh:PropertyShape ;
+  sh:path leg:personalDataContainmentType ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:termsOfUse_authorName
+  a sh:PropertyShape ;
+  sh:path leg:authorName ;
+  sh:datatype rdf:langString ; 
+  sh:minCount 0 ;
+  sh:uniqueLang true .
+
+sha-dcatapsk:termsOfUse_originalDatabaseAuthorName
+  a sh:PropertyShape ;
+  sh:path leg:originalDatabaseAuthorName ;
+  sh:datatype rdf:langString ; 
+  sh:minCount 0 ;
+  sh:uniqueLang true .
+
+sha-dcatapsk:dataService_title
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:datatype rdf:langString ; 
+  sh:uniqueLang true .
+
+sha-dcatapsk:dataService_title_sk
+  a sh:PropertyShape ;
+  sh:path dct:title ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
+
+sha-dcatapsk:dataService_endpointURL
+  a sh:PropertyShape ;
+  sh:path dcat:endpointURL ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 .
+
+sha-dcatapsk:dataService_applicableLegislation
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataService_contact
+  a sh:PropertyShape ;
+  sh:path dcat:contactPoint ;
+  sh:or (
+    [ sh:class vcard:Individual ]
+    [ sh:class vcard:Organization ]
+  ) ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:dataService_documentation
+  a sh:PropertyShape ;
+  sh:path foaf:page ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataService_conformsTo
+  a sh:PropertyShape ;
+  sh:path dct:conformsTo ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataService_endpointDescription
+  a sh:PropertyShape ;
+  sh:path dcat:endpointDescription ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 0 .
+
+sha-dcatapsk:dataService_dataset_hvd
+  a sh:PropertyShape ;
+  sh:path (
+    [ sh:inversePath dcat:accessService ] 
+    [ sh:inversePath dcat:distribution ] 
+    dct:type 
+  ) ;
+  sh:minCount 1 ;
+  sh:hasValue hvd: .
+
+sha-dcatapsk:dataService_applicableLegislation_hvd
+  a sh:PropertyShape ;
+  sh:path dcatap:applicableLegislation ;
+  sh:minCount 1 ;
+  sh:hasValue hvdleg: .
+
+sha-dcatapsk:dataService_hvdCategory
+  a sh:PropertyShape ;
+  sh:path dcatap:hvdCategory ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1 .
+
+sha-dcatapsk:dataService_hvdCategory_none
+  a sh:PropertyShape ;
+  sh:path dcatap:hvdCategory ;
+  sh:nodeKind sh:IRI ;
+  sh:maxCount 0 .
+
+sha-dcatapsk:contact_fn
+  a sh:PropertyShape ;
+  sh:path vcard:fn ;
+  sh:datatype rdf:langString ; 
+  sh:uniqueLang true .
+
+sha-dcatapsk:contact_fn_sk
+  a sh:PropertyShape ;
+  sh:path vcard:fn ;
+  sh:qualifiedMinCount 1;
+  sh:qualifiedValueShape [
+    sh:datatype rdf:langString ;
+    sh:languageIn ( "sk" ) ;
+  ] .
+
+sha-dcatapsk:contact_hasEmail
+  a sh:PropertyShape ;
+  sh:path vcard:hasEmail ;
+  sh:nodeKind sh:IRI ;
+  sh:minCount 1.
+
+sha-dcatapsk:period_startDate
+  a sh:PropertyShape ;
+  sh:path dcat:startDate ;
+  sh:datatype xsd:date ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+
+sha-dcatapsk:period_endDate
+  a sh:PropertyShape ;
+  sh:path dcat:startDate ;
+  sh:datatype xsd:date ;
+  sh:minCount 0 ;
+  sh:maxCount 1 .
