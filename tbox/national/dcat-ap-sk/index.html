@@ -3960,148 +3960,759 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 <c- k>@prefix</c-> <c- nn>sh:</c-> <c- g>&lt;http://www.w3.org/ns/shacl#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
 
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODCatalogShape</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
-  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>;</c->
-  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>3.0.0</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c-> <c- p>.</c->
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODCatalogShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- nn>dcat</c-><c- p>:</c->Catalog <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->3 <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_title_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_description_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_publi<c- nn>sh</c->er <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_contact <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_dataset <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->xone <c- p>(</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_dataset_type <c- p>]</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_dataset_serie <c- p>]</c->
+  <c- p>)</c-><c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODDatasetShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- nn>dcat</c-><c- p>:</c->Dataset <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_title_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_description_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_publi<c- nn>sh</c->er <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_issued <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_modified <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_theme <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_frequency <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_keyword <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_keyword_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_spatial <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_temporal <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_contact <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_landingPage <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_documentation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_specification <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_relation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_spatialResolutionInMeters <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_temporalResolution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_inSeries <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_distribution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->xone <c- p>(</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory_none <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type_hvd
+      <c- p>]</c-> <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation_hvd <c- p>;</c->
+      <c- p>]</c->
+    <c- p>]</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type_hvd <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation_hvd <c- p>;</c->
+    <c- p>]</c->
+  <c- p>)</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODDatasetSeriesShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- nn>dcat</c-><c- p>:</c->DatasetSeries <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_title_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_description_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_publi<c- nn>sh</c->er <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_issued <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_modified <c- p>;</c->        
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_theme <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_frequency <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_keyword <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_keyword_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_spatial <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_temporal <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_contact <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_landingPage <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_documentation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_specification <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_relation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_spatialResolutionInMeters <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_temporalResolution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_inSeries <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->xone <c- p>(</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory_none <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type_hvd
+      <c- p>]</c-> <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation_hvd <c- p>;</c->
+      <c- p>]</c->
+    <c- p>]</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type_hvd <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation_hvd <c- p>;</c->
+    <c- p>]</c->
+  <c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_distribution_series <c- p>.</c->
         
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODDatasetShape</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
-  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
-  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_title</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_description</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_publisher</c-> <c- p>;</c->        
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_theme</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_frequency</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_keyword</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_spatial</c-> <c- p>.</c->
         
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>NKODDistributionShape</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c->
-  <c- nn>dct</c-><c- p>:</c-><c- f>subject</c-> <c- g>&lt;https://data.gov.sk/id/egov/isvs/9184></c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
-  <c- nn>rdfs</c-><c- p>:</c-><c- f>isDefinedBy</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>2023b</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c-> <c- p>;</c->        
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c-> <c- p>.</c->
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODDistributionShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- nn>dcat</c-><c- p>:</c->Distribution <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_termsOfUse <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_conformsTo <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_compressFormat <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_packageFormat <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->xone <c- p>(</c->
+    <c- p>[</c-> 
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_downloadURL <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_format <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_mediaType <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessService_none <c- p>;</c->   
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessURL_download <c- p>;</c->
+    <c- p>]</c->
+    <c- p>[</c-> 
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_downloadURL_none <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_format_optional <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_mediaType_optional <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessService <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessURL_service <c- p>;</c->
+    <c- p>]</c->
+  <c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->xone <c- p>(</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_dataset_hvd <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_applicableLegislation_hvd <c- p>;</c->
+    <c- p>]</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_dataset_hvd
+      <c- p>]</c-> <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_applicableLegislation_hvd <c- p>;</c->
+      <c- p>]</c->
+    <c- p>]</c->
+  <c- p>)</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODDataserviceShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- nn>dcat</c-><c- p>:</c->DataService <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_title_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_endpointURL <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_contact <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_documentation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_conformsTo <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_endpointDescription <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->xone <c- p>(</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_dataset_hvd <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_applicableLegislation_hvd <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory <c- p>;</c->
+    <c- p>]</c->
+    <c- p>[</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_dataset_hvd
+      <c- p>]</c-> <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->not <c- p>[</c->
+        <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_applicableLegislation_hvd <c- p>;</c->
+      <c- p>]</c-> <c- p>;</c->
+      <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_hvdCategory_none <c- p>;</c->
+    <c- p>]</c->
+  <c- p>)</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODTermsOfUseShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass leg<c- p>:</c->TermsOfUse <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_authorsWorkType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_originalDatabaseType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_databaseProtectedBySpecialRightsType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_personalDataContainmentType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_authorName <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_originalDatabaseAuthorName <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODContactShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- p>(</c-> <c- nn>vcard</c-><c- p>:</c->Individual <c- nn>vcard</c-><c- p>:</c->Organization <c- p>)</c-> <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->contact_fn <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->contact_fn_sk <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->contact_hasEmail <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->NKODPeriodOfTimeShape
+  a <c- nn>sh</c-><c- p>:</c->NodeShape <c- p>;</c->
+  <c- nn>dct</c-><c- p>:</c->subject <https://data.gov.sk/id/egov/isvs/9<c- mi>1</c->84> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->targetClass <c- nn>dct</c-><c- p>:</c->PeriodOfTime <c- p>;</c->
+  <c- nn>rdf</c->s<c- p>:</c->isDefinedBy <c- nn>sha-dcatapsk</c-><c- p>:</c->2<c- mi>0</c->23b <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->period_startDate <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->property <c- nn>sha-dcatapsk</c-><c- p>:</c->period_endDate <c- p>.</c->
         
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_title</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_description</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_publisher</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>catalog_dataset</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>class</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
-
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_title</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_description</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_publisher</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_theme</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_frequency</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
-
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_spatial</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
-		
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>dataset_keyword</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>languageIn</c-><c- p>(</c-><c- s>"sk"</c-> <c- s>"en"</c-><c- p>)</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->  
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_termsOfUse</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
-
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_downloadURL</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
-	
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_accessURL</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
-
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_format</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->    
-        
-<c- nn>sha-dcatapsk</c-><c- p>:</c-><c- f>distribution_mediaType</c->
-  <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
-
-<c- nn><c- nn>sh</c->a-<c- nn>dcat</c->apsk</c-><c- p>:</c-><c- f>period_endDate<c- f>
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_title
   a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>startDate</c-> <c- p>;</c->
-  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>xsd</c-><c- p>:</c->date <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_title_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_description
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_description_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_publi<c- nn>sh</c->er
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->publi<c- nn>sh</c->er <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->pattern "^https://data.gov.sk/id/legal-subject/" <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_contact
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->contactPoint <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->or <c- p>(</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->class <c- nn>vcard</c-><c- p>:</c->Individual <c- p>]</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->class <c- nn>vcard</c-><c- p>:</c->Organization <c- p>]</c->
+  <c- p>)</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
   <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
 
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_dataset
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->dataset <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_dataset_type
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->dataset <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dcat</c-><c- p>:</c->Dataset <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->catalog_dataset_serie
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->dataset <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dcat</c-><c- p>:</c->DatasetSerie <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_title
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_title_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_description
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_description_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->description <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_publi<c- nn>sh</c->er
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->publi<c- nn>sh</c->er <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->pattern "^https://data.gov.sk/id/legal-subject/" <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_issued
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->issued <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> xsd<c- p>:</c->dateTime <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_modified
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->modified <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> xsd<c- p>:</c->dateTime <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_theme
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->theme <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_frequency
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->accrualPeriodicity <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_spatial
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->spatial <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->type <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->  
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_type_hvd
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->type <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->hasValue hvd<c- p>:</c-> <c- p>.</c->
+		
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_keyword
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->keyword <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_keyword_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->keyword <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_temporal
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->temporal <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dct</c-><c- p>:</c->PeriodOfTime <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_contact
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->contactPoint <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->or <c- p>(</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->class <c- nn>vcard</c-><c- p>:</c->Individual <c- p>]</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->class <c- nn>vcard</c-><c- p>:</c->Organization <c- p>]</c->
+  <c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_landingPage
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->landingPage <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_documentation
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> foaf<c- p>:</c->page <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_specification
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->conformsTo <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_relation
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->relation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_spatialResolutionInMeters
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->spatialResolutionInMeters <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> xsd<c- p>:</c->decimal <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_temporalResolution
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->temporalResolution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> xsd<c- p>:</c->duration <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->hvdCategory <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_hvdCategory_none
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->hvdCategory <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_applicableLegislation_hvd
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->hasValue hvdleg<c- p>:</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_inSeries
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->inSeries <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dcat</c-><c- p>:</c->DatasetSeries <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_distribution
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->distribution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dcat</c-><c- p>:</c->Distribution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataset_distribution_series
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->distribution <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>0</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_termsOfUse
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->termsOfUse <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class leg<c- p>:</c->TermsOfUse <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->  
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_downloadURL
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->downloadURL <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->  
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_downloadURL_none
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->downloadURL <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>0</c-> <c- p>.</c->
+	
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessURL_download
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->accessURL <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->equals <c- nn>dcat</c-><c- p>:</c->downloadURL <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessURL_service
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- p>(</c-><c- nn>dcat</c-><c- p>:</c->accessService <c- nn>dcat</c-><c- p>:</c->endpointURL<c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->equals <c- nn>dcat</c-><c- p>:</c->accessURL <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->  
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_format
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->format <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->    
+        
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_mediaType
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->mediaType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_format_optional
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->format <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->    
+        
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_mediaType_optional
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->mediaType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_applicableLegislation
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_conformsTo
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->conformsTo <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_compressFormat
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->compressFormat <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_packageFormat
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->packageFormat <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_title
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessService
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->accessService <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dcat</c-><c- p>:</c->DataService <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_accessService_none
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->accessService <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->class <c- nn>dcat</c-><c- p>:</c->DataService <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_dataset_hvd
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- p>(</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->inversePath <c- nn>dcat</c-><c- p>:</c->distribution <c- p>]</c-> 
+    <c- nn>dct</c-><c- p>:</c->type 
+  <c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->hasValue hvd<c- p>:</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->distribution_applicableLegislation_hvd
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->hasValue hvdleg<c- p>:</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_authorsWorkType
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->authorsWorkType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_originalDatabaseType
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->originalDatabaseType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_databaseProtectedBySpecialRightsType 
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->databaseProtectedBySpecialRightsType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_personalDataContainmentType
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->personalDataContainmentType <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_authorName
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->authorName <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->termsOfUse_originalDatabaseAuthorName
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> leg<c- p>:</c->originalDatabaseAuthorName <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_title
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_title_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->title <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_endpointURL
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->endpointURL <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_applicableLegislation
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_contact
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->contactPoint <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->or <c- p>(</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->class <c- nn>vcard</c-><c- p>:</c->Individual <c- p>]</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->class <c- nn>vcard</c-><c- p>:</c->Organization <c- p>]</c->
+  <c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_documentation
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> foaf<c- p>:</c->page <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_conformsTo
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c->conformsTo <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_endpointDescription
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->endpointDescription <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_dataset_hvd
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- p>(</c->
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->inversePath <c- nn>dcat</c-><c- p>:</c->accessService <c- p>]</c-> 
+    <c- p>[</c-> <c- nn>sh</c-><c- p>:</c->inversePath <c- nn>dcat</c-><c- p>:</c->distribution <c- p>]</c-> 
+    <c- nn>dct</c-><c- p>:</c->type 
+  <c- p>)</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->hasValue hvd<c- p>:</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_applicableLegislation_hvd
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->applicableLegislation <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c->hasValue hvdleg<c- p>:</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_hvdCategory
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->hvdCategory <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->dataService_hvdCategory_none
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c->ap<c- p>:</c->hvdCategory <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>0</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->contact_fn
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>vcard</c-><c- p>:</c->fn <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-> 
+  <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- mi>true</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->contact_fn_sk
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>vcard</c-><c- p>:</c->fn <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedMinCount</c-> <c- mi>1</c-><c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>qualifiedValueShape</c-> <c- p>[</c->
+    <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c->
+    <c- nn>sh</c-><c- p>:</c->languageIn <c- p>(</c-> "sk" <c- p>)</c-> <c- p>;</c->
+  <c- p>]</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->contact_hasEmail
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>vcard</c-><c- p>:</c->hasEmail <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>nodeKind</c-> <c- nn>sh</c-><c- p>:</c-><c- f>IRI</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-><c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->period_startDate
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->startDate <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> xsd<c- p>:</c->date <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+
+<c- nn>sha-dcatapsk</c-><c- p>:</c->period_endDate
+  a <c- nn>sh</c-><c- p>:</c-><c- f>PropertyShape</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dcat</c-><c- p>:</c->startDate <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> xsd<c- p>:</c->date <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>0</c-> <c- p>;</c->
+  <c- nn>sh</c-><c- p>:</c-><c- f>maxCount</c-> <c- mi>1</c-> <c- p>.</c->
+	
 </pre>
    </div>
    
