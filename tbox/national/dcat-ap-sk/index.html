@@ -3941,7 +3941,11 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
    <h2 class="heading settled" data-level="6" id="dcat-ap-sk-shacl"><span class="secno">6. </span><span class="content">Povinné vlastnosti údajov</span><a class="self-link" href="#dcat-ap-sk-shacl"></a></h2>
     Táto časť štandardu predstavuje povinné vlastností údaj, špecifikované prostredníctvom jazyka <a href="https://www.w3.org/TR/shacl/">SHACL</a>. 
    <h3 class="heading settled" data-level="6.1" id="dcat-ap-sk-shacl-dataset"><span class="secno">6.1. </span><span class="content">Povinné vlastnosti datasetu</span><a class="self-link" href="#dcat-ap-sk-shacl-non-hvd"></a></h3>
-    Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset (vrátane HVD datasetov). 
+    Nasledovný súbor obsahuje definíciu povinných vlastností pre dataset (vrátane HVD datasetov). Ak chcete označit neHVD datasety ako chybu, k definícii pridajte: 
+	  <code>
+sha-dcatapsk:NKODDatasetShape sh:property sha-dcatapsk:dataset_type_hvd .
+sha-dcatapsk:NKODDatasetSeriesShape sh:property sha-dcatapsk:dataset_type_hvd .
+	  </code>
    <div class="example" id="example-c28a89db">
     <a class="self-link" href="#example-c28a89db"></a> <a U0002Ettl href="povinné-vlastnosti/dcat-ap-sk-3.0.0-shapes.ttl">Stiahnuť</a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>rdf:</c-> <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c->
