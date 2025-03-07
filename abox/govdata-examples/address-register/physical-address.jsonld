@@ -2,6 +2,7 @@
   "@context": {
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egov/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
     "nuts3": "https://data.gov.sk/def/nuts3/",
     "lau1": "https://data.gov.sk/def/lau1/",
     "lau2": "https://data.gov.sk/def/lau2/",
@@ -25,7 +26,10 @@
       "loca:identifier": {
         "@value": "10539221",
         "@type": "xsd:string"
-      },         
+      },      
+      "loca:unCountry": {
+        "@id": "uncountry:SK"
+      },
       "loca:nuts3": {
         "@id": "nuts3:SK01"
       },
@@ -39,7 +43,7 @@
         "@id": "district:2040990"
       },
       "loca:street": {
-        "@id": "street:4576744710567"
+        "@id": "street:4576744710567",
         "@type": "loca:Street",
         "loca:streetName": {
           "@value": "Štefánikova",
