@@ -432,7 +432,7 @@ sha-ra:BuildingPart-building
 
 sha-ra:BuildingShape
 	a sh:NodeShape ;
-	sh:targetClass loca:Building 
+	sh:targetClass loca:Building ;
 	sh:property sha-ra:Building-buildingName ,
         	sha-ra:Building-hasApartment ,
         	sha-ra:Building-buildingType ,
@@ -505,7 +505,7 @@ sha-ra:BuildingPurposeShape
 	a sh:NodeShape ;	
 	sh:targetClass loca:BuildingPurpose ;
 	sh:property sha-ra:ThingWithValidity-timeValidity ;
-	rdfs:isDefinedBy sha-ra: 
+	rdfs:isDefinedBy sha-ra: ;
 	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
 	dct:source <https://data.gov.sk/def/codelist/CL010142> .
 
