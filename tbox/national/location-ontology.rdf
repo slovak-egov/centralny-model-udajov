@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-	xmlns="https://data.gov.sk/def/ontology/location/2025b#"
+	xmlns="https://data.gov.sk/def/ontology/location/2025a#"
 	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
-	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:adms="http://www.w3.org/ns/adms#"
-	xmlns:dcat="http://www.w3.org/ns/dcat#"
-	xmlns:egov="https://data.gov.sk/def/ontology/egov/"
-	xmlns:geo="http://www.opengis.net/ont/geosparql#"
 	xmlns:loca="https://data.gov.sk/def/ontology/location/"
-	xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+	xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:adms="http://www.w3.org/ns/adms#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:geo="http://www.opengis.net/ont/geosparql#"
 	xmlns:sf="http://www.opengis.net/ont/sf#"
-	xmlns:kdp="https://data.gov.sk/def/ontology/kdp/">
+	xmlns:pper="https://data.gov.sk/def/ontology/physical-person/">
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/2025b">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/2025a">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<dct:title>Ontológia lokácie</dct:title>
 	<dct:creator rdf:resource="http://www.linkedin.com/in/emillazenga"/>
@@ -28,183 +27,151 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/addressType">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/building">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingType">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPurpose">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/unCountry">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/nuts3">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/lau1">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/lau2">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/district">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postAddress">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postRecipient">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBox">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postCode">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/street">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/hasApartment">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPart">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/formattedAddress">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Location">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Apartment">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/UNCountry">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/NUTS3">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/LAU1">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/LAU2">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/District">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Street">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PhysicalAddress">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Building">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/AddressType">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/BuildingType">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/BuildingPurpose">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBoxNumber">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Entrance">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostOfficeBox">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostCode">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/identifier">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithSpatial">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/apartmentNumber">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/apartment">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/entrance">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostRecipient">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/addressType">
@@ -217,8 +184,8 @@
 	<rdfs:description xml:lang="sk">Relácia adresy na jej typ definovaný hodnotami číselníka CL010139 Druh adresy.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.1"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/addressType">
@@ -249,8 +216,8 @@
 	<rdfs:description xml:lang="sk">Relácia na budovu.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<skos:example xml:lang="sk">Hypermarket Fresco, Apollo Business Center 4, Prezidentský palác</skos:example>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithCapability"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/building">
@@ -284,11 +251,11 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
-	<skos:example xml:lang="sk">Blok D, dielňa, 4. poschodie vpravo, byt</skos:example>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingType">
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.3"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.1"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/412">
@@ -317,7 +284,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
-	<skos:note xml:lang="sk">Používa sa najmä pre uvedenie čísla bytu, ak je časťou budovy práve byt. Je vhodné, že sa osobitné označenie neuvádza zároveň v obsahu prvku Časť budovy a v tomto atribúte, ale je možné aj také použitie.</skos:note>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.10"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPurpose">
@@ -348,7 +315,13 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/UNCountry"/>
 	<rdfs:description xml:lang="sk">Relácia na krajinu OSN definovanú hodnotami číselníka CL000086 Krajina OSN.</rdfs:description>
-	<skos:note xml:lang="sk">Pri použití znakového kódu sa odporúča používať dvojznakovú podobu.</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/nuts3">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/unCountry">
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.2"/>
 </rdf:Description>
 
@@ -384,8 +357,8 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/NUTS3"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<rdfs:description xml:lang="sk">Obsahuje názov budovy, ak má budova osobitný názov.</rdfs:description>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postRecipient">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/nuts3">
@@ -417,7 +390,13 @@
 	<skos:altLabel xml:lang="sk">okres</skos:altLabel>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/LAU1"/>
-	<skos:note xml:lang="sk">V Slovenskej republike sa takéto členenie nezvykne pri zasielaní poštou používať.</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/building">
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/BuildingPart"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/lau1">
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.4"/>
 	<rdfs:description xml:lang="sk">Relácia na okres definovaný hodnotami číselníka CL000024 Lokálna štatistická územná jednotka 1 – okres.</rdfs:description>
 </rdf:Description>
@@ -448,8 +427,8 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/LAU2"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
-	<skos:note xml:lang="sk">Môže reprezentovať Adresný bod (D.1.3.12) alebo Geografickú os ulice (D.1.3.15.1).</skos:note>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/street">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/lau2">
@@ -482,8 +461,8 @@
 	<rdfs:description xml:lang="sk">Relácia na časť obce definovanú hodnotami číselníka CL010141 Časť obce.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<kdp:xmlElementName>BuildingName</kdp:xmlElementName>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/district">
@@ -515,8 +494,8 @@
 	<rdfs:description xml:lang="sk">Relácia na fyzickú adresu v Registri adries.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
-	<skos:note xml:lang="sk">Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Orientačné číslo môže byť určené len budovám s už určeným súpisným číslom v obciach, ktoré majú zavedený uličný systém.</skos:note>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBoxNumber">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
@@ -549,8 +528,8 @@
 	<rdfs:description xml:lang="sk">Relácia na poštovú adresu v Registry adries.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
-	<rdfs:description xml:lang="sk">Obsahuje orientačné číslo vchodu domu.</rdfs:description>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBox">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postAddress">
@@ -579,14 +558,8 @@
 	<rdfs:label xml:lang="en">post recipient</rdfs:label>
 	<rdfs:label xml:lang="sk">príjemca pošty</rdfs:label>
 	<rdfs:label xml:lang="de">Mail-Empfänger</rdfs:label>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBoxNumber">
-	<skos:note xml:lang="sk">Vždy sa uvádza aj text: P.O.BOX</skos:note>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postRecipient">
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.3"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/672"/>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.13.3"/>
 	<rdfs:description xml:lang="sk">Relácia na príjemcu pošty. Príjemcom môže byť aj fyzická osoba, aj právny subjekt.</rdfs:description>
 </rdf:Description>
 
@@ -607,8 +580,8 @@
 	<rdfs:label xml:lang="de">p.o.box</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postCode">
-	<skos:note xml:lang="sk">Reťazec sa vždy uvádza spolu, čo znamená, že sa neoddeľuje medzerou. Zahraničné poštové smerovacie čísla majú často krát nečíselný charakter.</skos:note>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postAddress">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBox">
@@ -639,13 +612,7 @@
 	<skos:altLabel xml:lang="sk">PSČ</skos:altLabel>
 	<rdfs:label xml:lang="de">postleitzahl</rdfs:label>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PostCode"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postCode">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.1"/>
 	<rdfs:description xml:lang="sk">Relácia na PSČ.</rdfs:description>
 </rdf:Description>
@@ -673,8 +640,8 @@
 	<rdfs:label xml:lang="de">Straße</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
-	<skos:note xml:lang="sk">Súpisné číslo má určené každá budova, orientačné číslo môže byť určené len budovám s už určeným súpisným číslom v obciach, ktoré majú zavedený uličný systém. Adresa vzniká určením súpisného čísla a zaniká jeho zrušením. Orientačné číslo a súpisné číslo nie sú totožné údaje, budova môže mať obe naraz.</skos:note>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/403">
@@ -690,8 +657,11 @@
 	<rdfs:label xml:lang="sk">má byt</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/Building"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-	<skos:note xml:lang="sk">Aj budova, ktorá je prioritne nebytová, môže obsahovať byty, napríklad škola s bytom pre školníka.</skos:note>
-	<rdfs:description xml:lang="sk">Popisuje, či sa v budove nachádzajú byty.</rdfs:description>
+	<rdfs:description xml:lang="sk">Popisuje, či sa v budove nachádzajú byty. Príklad: Aj budova, ktorá je prioritne nebytová, môže obsahovať byty, napríklad škola s bytom pre školníka.</rdfs:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
+	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/410">
@@ -714,11 +684,11 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-	<skos:example xml:lang="sk">10, 23A</skos:example>
+	<rdfs:description xml:lang="sk">Obsahuje názov budovy alebo číslo domu.Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Príklady použitia: 10, 23A, 18/III.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/nuts3">
-	<skos:note xml:lang="sk">V Slovenskej republike sa používa pre uvedenie samosprávneho kraja. Vo všeobecnosti môže byť použitý viackrát, v takom prípade je poradie použitia určujúce. Vojenské adresy sa používajú viackrát hierarchicky od najvyššieho po najnižší región – 1. región = armádny / letecký / námorný poštový úrad, 2. región (dvojznakové označenie časti sveta ako AE = Európa, AA = Južná Amerika a Severná Amerika súčasne a podobne). V slovenskom prostredí sa úroveň priestorovej klasifikácie NUTS 2 nepoužíva, tento prvok je teda ekvivalentom pre úroveň NUTS 3.</skos:note>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
@@ -759,12 +729,12 @@
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.10"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<skos:example xml:lang="en">Pentagon</skos:example>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPart">
-	<rdfs:description xml:lang="sk">Relácia na časť budovy. Tento prvok je určený na bližšie určenie miesta v rámci budovy, ak je to potrebné.</rdfs:description>
+	<rdfs:description xml:lang="sk">Tento prvok je určený na bližšie určenie miesta v rámci budovy, ak je to potrebné. Príklady: Blok D, dielňa, 4. poschodie vpravo, byt.</rdfs:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/670">
@@ -791,7 +761,13 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:description xml:lang="sk">Informácia, ktorá obsahuje neštruktúrovanú adresu spojujúcu viaceré alebo bližšie nerozlíšené údaje (katastrálne územie, názov hospodárskej usadlosti a podobne). </rdfs:description>
-	<skos:note xml:lang="sk">Takáto forma adresy nedokáže byť jednoducho parsovaná. Pri dekompozícii na jednotlivé podradené prvky Fyzickej adresy sa tento dátový prvok spravidla nepoužíva. Z príslušných základných číselníkov, podľa ktorých sa vypĺňajú jednotlivé podradené prvky Fyzickej adresy obsahuje len textovú informáciu a nie kódové označenie a podobne. Prvok sa používa najmä na potreby jednoduchej tlače.</skos:note>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/formattedAddress">
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.1"/>
 </rdf:Description>
 
@@ -818,8 +794,8 @@
 	<rdfs:label xml:lang="de">Registernummer </rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
-	<rdfs:description xml:lang="sk">Geografická poloha určená súradnicami.</rdfs:description>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Entrance">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
@@ -827,8 +803,8 @@
 	<rdfs:description xml:lang="sk">Obsahuje súpisné číslo budovy.</rdfs:description>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBoxNumber">
-	<rdfs:description xml:lang="sk">Obsahuje číslo p.o.box-u.</rdfs:description>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
@@ -1124,7 +1100,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBoxNumber">
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-	<skos:example xml:lang="sk">P.O.BOX 32, P.O.BOX 311</skos:example>
+	<rdfs:description xml:lang="sk">Obsahuje číslo p.o.box-u. Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Príklady použitia: 10, 5a.</rdfs:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/671">
@@ -1136,6 +1112,13 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Entrance">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/identifier">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Entrance">
 	<rdfs:label xml:lang="en">Entrance</rdfs:label>
 	<rdfs:label xml:lang="sk">Vchod</rdfs:label>
 	<rdfs:label xml:lang="de">Eingang</rdfs:label>
@@ -1189,6 +1172,7 @@
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithSpatial">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="sk">Schopnosť priestorovej lokalizácie</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 	<rdfs:label xml:lang="en">Spatial Localization Capability</rdfs:label>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithCapability"/>
 </rdf:Description>
@@ -1197,16 +1181,16 @@
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithSpatial"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
-	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/street">
+	<rdfs:description xml:lang="sk">Relácia na ulicu.</rdfs:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/streetName">
-	<skos:example xml:lang="sk">Lachova, Námestie P. O. Hviezdoslava, Nad humnom</skos:example>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/BuildingPart">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
@@ -1215,29 +1199,32 @@
 	<rdfs:label xml:lang="en">geographic location</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label xml:lang="de">Name des Gebäudes</rdfs:label>
-	<rdfs:label xml:lang="en">building Name</rdfs:label>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Entrance">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostRecipient">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<rdfs:label xml:lang="sk">názov budovy</rdfs:label>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Apartment">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
-	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Building">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostRecipient">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
+	<rdfs:label xml:lang="en">Post Recipient</rdfs:label>
+	<rdfs:label xml:lang="sk">Príjemca pošty</rdfs:label>
+	<rdfs:label xml:lang="de">Mail-Empfänger</rdfs:label>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
+	<rdfs:description xml:lang="sk">Geografická poloha určená súradnicami. Môže reprezentovať Adresný bod alebo Geografickú os ulice.</rdfs:description>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/district">
@@ -1272,8 +1259,11 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Apartment">
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/street">
-	<rdfs:description xml:lang="sk">Relácia na ulicu.</rdfs:description>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/Street"/>
 </rdf:Description>
 
@@ -1295,6 +1285,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/apartmentNumber">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 	<rdfs:label xml:lang="sk">číslo bytu</rdfs:label>
 	<rdfs:label xml:lang="en">apartment number</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
@@ -1304,6 +1295,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/apartment">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 	<rdfs:label xml:lang="sk">byt</rdfs:label>
 	<rdfs:label xml:lang="en">apartment</rdfs:label>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/Apartment"/>
@@ -1313,6 +1305,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/entrance">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 	<rdfs:label xml:lang="sk">vchod</rdfs:label>
 	<rdfs:label xml:lang="en">entrance</rdfs:label>
 	<rdfs:label xml:lang="de">Eingang</rdfs:label>
@@ -1330,7 +1323,18 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
 	<rdfs:label xml:lang="sk">názov časti budovy</rdfs:label>
-	<rdfs:description xml:lang="sk">Obsahuje osobitné označenie príslušnej časti budovy.</rdfs:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostRecipient">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress">
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
+	<rdfs:description xml:lang="sk">Tento prvok je určený pre názov časti budov. Príklady: Blok D, dielňa, 4. poschodie vpravo, byt 1.</rdfs:description>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </rdf:Description>
 
@@ -1344,7 +1348,7 @@
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/BuildingPart">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
 	<rdfs:label xml:lang="en">Building Part</rdfs:label>
 	<rdfs:label xml:lang="sk">Časť budovy</rdfs:label>
 </rdf:Description>
@@ -1411,204 +1415,8 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/nuts3">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postAddress">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postCode">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBox">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBoxNumber">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postRecipient">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/street">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/building">
-	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/BuildingPart"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingName">
-	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/Building"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithCapability"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
-	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Apartment">
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/BuildingPart"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Building">
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/BuildingPart">
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/Entrance">
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/BuildingPart"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/PostRecipient">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
-	<rdfs:label xml:lang="en">Post Recipient</rdfs:label>
-	<rdfs:label xml:lang="sk">Príjemca pošty</rdfs:label>
-	<rdfs:label xml:lang="de">Mail-Empfänger</rdfs:label>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/floorNumber">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-	<rdfs:label xml:lang="sk">číslo podlažia</rdfs:label>
-	<rdfs:label xml:lang="en">floor number</rdfs:label>
-	<rdfs:label xml:lang="de">Stockwerknummer</rdfs:label>
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-	<rdfs:description xml:lang="sk">Obsahuje informáciu o umiestnení časti budovy na príslušnom podlaží budovy. Podlažie sa označuje od prvého nadzemného podlažia (prízemia) číselným radom od čísla 1 a od prvého podzemného podlažia s číselným radom od čísla -1. Číslo 0 sa nepoužíva.</rdfs:description>
-	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/addressType">
-	<kdp:xmlElementName>AddressType</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/building">
-	<kdp:xmlElementName>Building</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPart">
-	<kdp:xmlElementName>BuildingUnit</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPartName">
-	<kdp:xmlElementName>UnitNumber</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingPurpose">
-	<kdp:xmlElementName>BuildingPurpose</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/buildingType">
-	<kdp:xmlElementName>BuildingTypeCode</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/district">
-	<kdp:xmlElementName>District</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/orientationNumber">
-	<kdp:xmlElementName>BuildingNumber</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/formattedAddress">
-	<kdp:xmlElementName>AddressLine</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/hasApartment">
-	<kdp:xmlElementName>ContainsFlats</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/lau1">
-	<kdp:xmlElementName>County</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/lau2">
-	<kdp:xmlElementName>Municipality</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/nuts3">
-	<kdp:xmlElementName>Region</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/physicalAddress">
-	<kdp:xmlElementName>PhysicalAddress</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postAddress">
-	<kdp:xmlElementName>DeliveryAddress</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postCode">
-	<kdp:xmlElementName>PostalCode</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postOfficeBox">
-	<kdp:xmlElementName>PostOfficeBox</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/postRecipient">
-	<kdp:xmlElementName>Recipient</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/propertyRegistrationNumber">
-	<kdp:xmlElementName>PropertyRegistrationNumber</kdp:xmlElementName>
-</rdf:Description>
-
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/unCountry">
-	<kdp:xmlElementName>Country</kdp:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/streetName">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-	<rdfs:label xml:lang="sk">názov ulice</rdfs:label>
-	<rdfs:label xml:lang="de">Straßenname</rdfs:label>
-	<rdfs:label xml:lang="en">street Name</rdfs:label>
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-	<skos:note xml:lang="sk">Údaje sa zadávajú z dôvodu porovnateľnosti v neskrátenej podobe. Mnohé ulice sú v zahraničí označované číselne – toto sa nepovažuje za číselný údaj za ulicou tak ako sa udáva v Slovenskej republike. Tento prvok nie je zložený dátový prvok pre základný číselník.</skos:note>
-	<kdp:xmlElementName>StreetName</kdp:xmlElementName>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/location/2025b"/>
-	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/Street"/>
-	<skos:example xml:lang="en">5223 W High Road</skos:example>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp-id/D.1.3.7"/>
-	<rdfs:description xml:lang="sk">Obsahuje názov ulice. Ak obec nemá názov ulice, udáva sa tu názov obce. Ak má obec definovaný vlastný register, zoznam alebo základný číselník ulíc, vypĺňa sa v súlade s ním, ak nemá, štruktúra zápisu ulice sa nepredpisuje. Ak obec nemá ulice, nevypĺňa sa.</rdfs:description>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/geoLocation">
-	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
 </rdf:Description>
 
 </rdf:RDF>
