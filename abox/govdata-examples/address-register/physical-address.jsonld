@@ -87,6 +87,99 @@
         }
       },
       "loca:geoLocation": {
+        "@type": "geo:Feature",{
+  "@context": {
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egov/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "nuts3": "https://data.gov.sk/def/nuts3/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "district": "https://data.gov.sk/def/district/",
+    "street": "https://data.gov.sk/id/street/",
+    "postcode": "https://data.gov.sk/def/postcode/",
+    "address": "https://data.gov.sk/id/physical-address/",
+    "legal-subject": "https://data.gov.sk/id/legal-subject/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "dct": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@id": "isvs:192",
+  "@graph": [
+    {
+      "@id": "address:10539221",
+      "@type": "loca:PhysicalAddress",
+      "loca:identifier": {
+        "@value": "10539221"
+      },      
+      "loca:unCountry": {
+        "@id": "uncountry:SK"
+      },
+      "loca:nuts3": {
+        "@id": "nuts3:SK01"
+      },
+      "loca:lau1": {
+        "@id": "lau1:SK0101"
+      },
+      "loca:lau2": {
+        "@id": "lau2:SK0101528595"
+      },
+      "loca:district": {
+        "@id": "district:2040990"
+      },
+      "loca:street": {        
+        "@id": "street:4576744710567",
+        "@type": "loca:Street",
+        "loca:streetName": {
+          "@value": "Štefánikova",
+          "@type": "xsd:string"
+        },
+        "loca:geoLocation": {
+          "@type": "geo:Feature",
+          "geo:hasGeometry": {
+            "@type": "sf:LineString",
+            "geo:asWKT": {
+              "@value": "LINESTRING(17.106678 48.150914, 17.108678 48.155914, 17.116678 48.160914)",
+              "@type": "geo:wktLiteral"
+            }
+          }
+        }
+      },
+      "loca:addressType": {
+        "@id": "addressType:100001"        
+      },
+      "loca:postCode": {
+        "@id": "postcode:82905"        
+      },
+      "loca:propertyRegistrationNumber": {
+        "@value": "3013",
+        "@type": "xsd:string"
+      },
+      "loca:orientationNumber": {
+        "@value": "15",
+        "@type": "xsd:string"
+      },
+       "loca:formattedAddress": {
+        "@value": "Štefánikova 882/15, Bratislava-Staré Mesto, 81105",
+        "@type": "xsd:string"
+      },
+      "dct:publisher": {
+        "@id": "legal-subject:00151866"
+      },
+      "egov:timeValidity": {
+        "@type": "dct:PeriodOfTime",
+        "dcat:startDate": 
+        {
+          "@value": "2020-11-26",
+          "@type": "xsd:date"
+        }
+      },
+      "loca:geoLocation": {
         "@type": "geo:Feature",
         "geo:hasGeometry": {
           "@type": "sf:Point",
