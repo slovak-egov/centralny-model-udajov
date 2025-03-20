@@ -1,0 +1,666 @@
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix : <https://data.gov.sk/def/ontology/location/2025a#> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+
+loca:2025a a owl:Ontology;
+  dct:title "Ontológia lokácie";
+  dct:creator <http://www.linkedin.com/in/emillazenga>;
+  dct:contributor <http://www.linkedin.com/in/mareksurek>;
+  owl:versionInfo "2025a";
+  dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
+
+loca:addressType a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "typ adresy"@sk, "address type"@en, "Adresstyp"@de;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range loca:AddressType;
+  rdfs:description "Relácia adresy na jej typ definovaný hodnotami číselníka CL010139 Druh adresy."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.17> .
+
+loca:building a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "budova"@sk, "building"@en, "Gebäude"@de;
+  rdfs:range loca:Building;
+  rdfs:description "Relácia na budovu."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.16>;
+  rdfs:domain loca:BuildingPart .
+
+loca:buildingType a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "typ budovy"@sk, "building type"@en, "Gebäudetyp"@de;
+  rdfs:domain loca:Building;
+  rdfs:range loca:BuildingType;
+  rdfs:description "Relácia budovy na jej typ definovaný hodnotami číselníka CL010143 Kód druhu stavby."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.1> .
+
+loca:buildingPurpose a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "účel budovy"@sk, "building purpose"@en;
+  rdfs:domain loca:Building;
+  rdfs:range loca:BuildingPurpose;
+  rdfs:description "Relácia budovy na jej účel definovaný hodnotami číselníka CL010142 Účel budovy."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.2> .
+
+loca:unCountry a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "krajina OSN"@sk, "UN country"@en, "UN-Land"@de;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range loca:UNCountry;
+  rdfs:description "Relácia na krajinu OSN definovanú hodnotami číselníka CL000086 Krajina OSN."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.2> .
+
+loca:nuts3 a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "regional statistical local unit 3>"@en, "regionálna štatistická územná jednotka 3"@sk,
+    "regionale statistische Gebietseinheit 3"@de;
+  skos:altLabel "kraj"@sk;
+  rdfs:range loca:NUTS3;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.3>;
+  rdfs:description "Relácia na kraj definovaný hodnotami číselníka CL000023 Regionálna štatistická územná jednotka - kraj."@sk;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:lau1 a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "lokálna štatistická územná jednotka 1"@sk, "local statistical territorial unit 1"@en,
+    "lokale statistische Gebietseinheit 1"@de;
+  skos:altLabel "okres"@sk;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range loca:LAU1;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.4>;
+  rdfs:description "Relácia na okres definovaný hodnotami číselníka CL000024 Lokálna štatistická územná jednotka 1 – okres."@sk .
+
+loca:lau2 a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "lokálna štatistická územná jednotka 2"@sk, "local statistical territorial unit 2"@en,
+    "lokale statistische Gebietseinheit 2"@de;
+  skos:altLabel "obec"@sk;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range loca:LAU2;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.5>;
+  rdfs:description "Relácia na obec definovanú hodnotami číselníka CL000025 Lokálna štatistická územná jednotka 2 – obec."@sk .
+
+loca:district a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "district"@en, "časť obce"@sk, "Teil der Gemeinde"@de;
+  rdfs:range loca:District;
+  rdfs:description "Relácia na časť obce definovanú hodnotami číselníka CL010141 Časť obce."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.6>;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:physicalAddress a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:domain loca:ThingWithPhysicalAddress;
+  rdfs:label "physical address"@en, "fyzická adresa"@sk, "physikalische Adresse"@de;
+  rdfs:range loca:PhysicalAddress;
+  rdfs:description "Relácia na fyzickú adresu v Registri adries."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3> .
+
+loca:postAddress a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subPropertyOf loca:physicalAddress;
+  rdfs:label "delivery address"@en, "poštová adresa"@sk, "Lieferadresse"@de;
+  skos:altLabel "doručovacia adresa"@sk;
+  rdfs:description "Relácia na poštovú adresu v Registry adries."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14>;
+  rdfs:range loca:PhysicalAddress .
+
+loca:postRecipient a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:range loca:PostRecipient;
+  rdfs:label "post recipient"@en, "príjemca pošty"@sk, "Mail-Empfänger"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/672>, <https://data.gov.sk/id/identifier/kdp-id/D.1.3.13.3>;
+  rdfs:description "Relácia na príjemcu pošty. Príjemcom môže byť aj fyzická osoba, aj právny subjekt."@sk .
+
+loca:postOfficeBox a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:range loca:PostOfficeBox;
+  rdfs:label "p.o.box"@en, "p.o.box"@sk, "p.o.box"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.2>;
+  rdfs:description "Relácia na POBOX."@sk .
+
+loca:postCode a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "postal code"@en, "poštové smerovacie číslo"@sk, "postleitzahl"@de;
+  skos:altLabel "PSČ"@sk;
+  rdfs:range loca:PostCode;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.1>;
+  rdfs:description "Relácia na PSČ."@sk;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:street a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "street"@en, "ulica"@sk, "Straße"@de;
+  rdfs:description "Relácia na ulicu."@sk;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range loca:Street .
+
+loca:hasApartment a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "has apartment"@en, "má byt"@sk;
+  rdfs:domain loca:Building;
+  rdfs:range xsd:boolean;
+  rdfs:description "Popisuje, či sa v budove nachádzajú byty. Príklad: Aj budova, ktorá je prioritne nebytová, môže obsahovať byty, napríklad škola s bytom pre školníka."@sk .
+
+loca:orientationNumber a rdf:Property, owl:DatatypeProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "orientačné číslo"@sk, "orientation number"@en, "Orientierungsnummer"@de;
+  rdfs:range xsd:string;
+  rdfs:description "Obsahuje názov budovy alebo číslo domu.Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Príklady použitia: 10, 23A, 18/III."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.8>;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:buildingPart a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "časť budovy"@sk, "building part"@en;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.10>;
+  rdfs:description "Tento prvok je určený na bližšie určenie miesta v rámci budovy, ak je to potrebné. Príklady: Blok D, dielňa, 4. poschodie vpravo, byt."@sk;
+  rdfs:range loca:BuildingPart .
+
+loca:formattedAddress a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "formatted address"@en, "formátovaná adresa"@sk, "formatiert Adresse"@de;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range xsd:string;
+  rdfs:description "Informácia, ktorá obsahuje neštruktúrovanú adresu spojujúcu viaceré alebo bližšie nerozlíšené údaje (katastrálne územie, názov hospodárskej usadlosti a podobne). "@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.1> .
+
+loca:propertyRegistrationNumber a rdf:Property, owl:DatatypeProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "súpisné číslo"@sk, "property identifier number"@en, "Registernummer "@de;
+  rdfs:range xsd:string;
+  rdfs:description "Obsahuje súpisné číslo budovy."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.9>;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:Location a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Location"@en, "Lokácia"@sk, "Location"@de;
+  rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithSpatial .
+
+loca:Apartment a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Apartment"@en, "Byt"@sk, "Wohnung"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/718>;
+  rdfs:subClassOf loca:ThingWithPhysicalAddress, egov:ThingWithValidity .
+
+loca:UNCountry a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "UN Country"@en, "Krajina OSN"@sk, "UN-Land"@de;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/394>;
+  dct:source <https://data.gov.sk/def/codelist/CL000086> .
+
+loca:NUTS3 a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Regional statistical local unit 3"@en, "Regionálna štatistická územná jednotka 3"@sk,
+    "Regionale statistische Gebietseinheit 3"@de;
+  skos:altLabel "Kraj"@sk;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/registration/metais-standard/709>;
+  dct:source <https://data.gov.sk/def/codelist/CL000023> .
+
+loca:LAU1 a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Lokálna štatistická územná jednotka 1"@sk, "Local statistical territorial unit 1"@en,
+    "Lokale statistische Gebietseinheit 1"@de;
+  skos:altLabel "Okres"@sk;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/registration/metais-standard/710>;
+  dct:source <https://data.gov.sk/def/codelist/CL000024> .
+
+loca:LAU2 a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Lokálna štatistická územná jednotka 2"@sk, "Local statistical territorial unit 2"@en,
+    "Lokale statistische Gebietseinheit 2"@de;
+  skos:altLabel "Obec"@sk;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/registration/metais-standard/711>;
+  dct:source <https://data.gov.sk/def/codelist/CL000025> .
+
+loca:District a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "District"@en, "Časť obce"@sk, "Teil der Gemeinde"@de;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/402>;
+  dct:source <https://data.gov.sk/def/codelist/CL010141> .
+
+loca:Street a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Street"@en, "Ulica"@sk, "Straße"@de;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/405> .
+
+loca:PhysicalAddress a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "Physical Address"@en, "Fyzická adresa"@sk, "physikalische Adresse"@de;
+  rdfs:subClassOf loca:Location;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/717> .
+
+loca:Building a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
+  rdfs:label "Building"@en, "Budova"@sk, "Gebäude"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/669> .
+
+loca:AddressType a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Address Type"@en, "Typ adresy"@sk, "Adresstyp"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/713>;
+  dct:source <https://data.gov.sk/def/codelist/CL010139> .
+
+loca:BuildingType a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Building Type"@en, "Typ budovy"@sk, "Gebäudetyp"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/413>;
+  dct:source <https://data.gov.sk/def/codelist/CL010143> .
+
+loca:BuildingPurpose a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Building Purpose"@en, "Účel budovy"@sk, "Gebäude Zweck"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/667>;
+  dct:source <https://data.gov.sk/def/codelist/CL010142> .
+
+loca:postOfficeBoxNumber a rdf:Property, owl:DatatypeProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "p.o.box number"@en, "číslo p.o.box-u"@sk, "p.o.box nummer"@de;
+  rdfs:range xsd:string;
+  rdfs:description "Obsahuje číslo p.o.box-u. Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Príklady použitia: 10, 5a."@sk;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:Entrance a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
+  rdfs:label "Entrance"@en, "Vchod"@sk, "Eingang"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/409> .
+
+loca:PostOfficeBox a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
+  rdfs:label "Post Office Box"@en, "Poštový priečinok"@sk, "Post Office Box"@de;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/674> .
+
+loca:PostCode a owl:Class;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Postal Code"@en, "Poštové smerovacie číslo"@sk, "Postleitzahl"@de;
+  skos:altLabel "PSČ"@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/676> .
+
+<https://data.gov.sk/id/identifier/metais-standard/712> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/712>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.17> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.17";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+loca:ThingWithPhysicalAddress a owl:Class;
+  rdfs:subClassOf egov:ThingWithCapability;
+  rdfs:label "Physical Addressing Capability"@en, "Schopnosť fyzickej adresácie"@sk;
+  rdfs:isDefinedBy loca:2025a .
+
+<https://data.gov.sk/id/identifier/metais-standard/668> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/668>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.16> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.16";
+  skos:altSymbol "Building";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+loca:buildingPartName a rdf:Property, owl:DatatypeProperty;
+  rdfs:isDefinedBy loca:2025a;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.10>;
+  rdfs:label "building part name"@en, "názov časti budovy"@sk;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:description "Tento prvok je určený pre názov časti budov. Príklady: Blok D, dielňa, 4. poschodie vpravo, byt 1."@sk;
+  rdfs:range xsd:string .
+
+<https://data.gov.sk/id/identifier/metais-standard/412> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/412>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.16.1";
+  skos:altSymbol "BuildingTypeCode";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/666> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/666>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.16.2";
+  skos:altSymbol "BuildingPurpose";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/393> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/393>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.2";
+  skos:altSymbol "Country";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/706> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/706>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.3";
+  skos:altSymbol "Region";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/707> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/707>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.4> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.4";
+  skos:altSymbol "County";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/708> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/708>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.5> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.5";
+  skos:altSymbol "Municipality";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/401> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/401>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.6> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.6";
+  skos:altSymbol "District";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/716> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/716>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3";
+  skos:altSymbol "PhysicalAddress";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/678> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/678>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.14> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.14";
+  skos:altSymbol "DeliveryAddress";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.13.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.13.3";
+  skos:altSymbol "Recipient";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/673> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/673>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.14.2";
+  skos:altSymbol "PostOfficeBox";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/675> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/675>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.14.1";
+  skos:altSymbol "PostalCode";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/403> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/403>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+loca:geoLocation a owl:ObjectProperty, rdf:Property;
+  rdfs:range geo:Feature;
+  rdfs:domain loca:ThingWithSpatial;
+  rdfs:label "geografická poloha"@sk, "geographic location"@en;
+  rdfs:description "Geografická poloha určená súradnicami. Môže reprezentovať Adresný bod alebo Geografickú os ulice."@sk .
+
+<https://data.gov.sk/id/identifier/metais-standard/410> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/410>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/408> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/408>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.8> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.8";
+  skos:altSymbol "BuildingNumber";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+loca:BuildingPart a owl:Class;
+  rdfs:label "Teil des Gebäudes"@de, "Building Part"@en, "Časť budovy"@sk;
+  rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
+  adms:identifier <https://data.gov.sk/id/identifier/metais-standard/671>;
+  rdfs:isDefinedBy loca:2025a .
+
+<https://data.gov.sk/id/identifier/metais-standard/670> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/670>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.10> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.10";
+  skos:altSymbol "BuildingUnit";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/406> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/406>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.1";
+  skos:altSymbol "AddressLine";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/407> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/407>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.3.9> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.3.9";
+  skos:altSymbol "PropertyRegistrationNumber";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+<https://data.gov.sk/id/identifier/metais-standard/718> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/718>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/676> a adms:Identifier;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard>;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/676> .
+
+<https://data.gov.sk/id/identifier/metais-standard/394> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/394>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/registration/metais-standard/709> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/709>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/registration/metais-standard/710> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/710>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/registration/metais-standard/711> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/711>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/402> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/402>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/405> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/405>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/717> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/717>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/669> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/669>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/713> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/713>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/413> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/413>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/667> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/667>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+loca:identifier a owl:DatatypeProperty, rdf:Property;
+  rdfs:range owl:Literal;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:description "Medzisystémový identifikátor fyzickej adresy."@sk;
+  rdfs:subPropertyOf dct:identifier;
+  rdfs:label "identifier"@en, "identifikátor"@sk;
+  rdfs:domain loca:PhysicalAddress .
+
+<https://data.gov.sk/id/identifier/metais-standard/671> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/671>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/409> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/409>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/674> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dcat:accessURL <https://metais.vicepremier.gov.sk/standardization/draftdetail/674>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+loca:ThingWithSpatial a owl:Class;
+  rdfs:label "Schopnosť priestorovej lokalizácie"@sk, "Spatial Localization Capability"@en;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:subClassOf egov:ThingWithCapability .
+
+loca:PostRecipient a owl:Class;
+  rdfs:subClassOf loca:ThingWithPhysicalAddress, egov:ThingWithValidity;
+  rdfs:label "Post Recipient"@en, "Príjemca pošty"@sk, "Mail-Empfänger"@de;
+  rdfs:isDefinedBy loca:2025a .
+
+loca:apartmentNumber a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "číslo bytu"@sk, "apartment number"@en, "Wohnungsnummer"@de;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range xsd:string;
+  rdfs:description "Obsahuje číslo bytu. Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Príklady použitia: 10, 5a."@sk .
+
+loca:apartment a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "byt"@sk, "apartment"@en, "Wohnung"@de;
+  rdfs:range loca:Apartment;
+  rdfs:description "Relácia na byt."@sk .
+
+loca:entrance a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "vchod"@sk, "entrance"@en, "Eingang"@de;
+  rdfs:range loca:Entrance;
+  rdfs:description "Relácia na vchod."@sk;
+  rdfs:domain loca:Apartment .
