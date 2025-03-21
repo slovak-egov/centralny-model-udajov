@@ -35,6 +35,7 @@ pper:physicalPerson a owl:ObjectProperty;
     "naturlig person"@no, "pessoa singular"@pt, "физическо лице"@bl, "fysisk person"@dn;
   rdfs:description "Relácia na fyzickú osobu v Registry osôb."@sk;
   rdfs:range pper:PhysicalPerson;
+  kdp:xmlElementName "PhysicalPerson";
   rdfs:isDefinedBy pper:2024 .
 
 pper:identifier a owl:DatatypeProperty;
@@ -58,6 +59,7 @@ pper:birth a owl:ObjectProperty;
   rdfs:label "birth"@en, "narodenie"@sk, "Geburt"@de;
   rdfs:range pper:Birth;
   rdfs:domain pper:PhysicalPerson;
+  kdp:xmlElementName "Birth";
   rdfs:description "Relácia osoby na jej narodenie."@sk;
   rdfs:isDefinedBy pper:2024 .
 
@@ -701,7 +703,6 @@ pper:yearAndMonthOfDeath a owl:DatatypeProperty;
 
 pper:PhysicalPerson a owl:Class;
   rdfs:label "Physical Person"@en, "Fyzická osoba"@sk, "natürliche Person"@de;
-  kdp:xmlElementName "PhysicalPerson";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1>;
   rdfs:isDefinedBy pper:2024 .
 
@@ -779,7 +780,6 @@ pper:Sex a owl:Class;
 
 pper:Birth a owl:Class;
   rdfs:label "Birth"@en, "Narodenie"@sk, "Geburt"@de;
-  kdp:xmlElementName "Birth";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.5>;
   rdfs:isDefinedBy pper:2024 .
 

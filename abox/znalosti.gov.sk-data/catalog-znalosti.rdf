@@ -33,7 +33,7 @@
     <dct:issued rdf:datatype="&xsd;dateTime">2023-DD-MMT00:00:00Z</dct:issued>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/> 
 
-    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/physical-person/2023b"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/location/2023b"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/education/2023b"/>
@@ -101,15 +101,15 @@
     <dct:title xml:lang="sk">Ontológia fyzickej osoby</dct:title>
     <dct:title xml:lang="en">Physical Person Ontology</dct:title>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
-    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/physical-person/2023b"/> 
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024"/> 
   </dcat:Dataset>
   
-  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person/2023b">
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person/2024">
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
     <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
-    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dcat:version rdf:datatype="&xsd;string">2024</dcat:version>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
-    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/physical-person/2023b.owl"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024.owl"/>
   </dcat:Dataset>
         
         
@@ -140,15 +140,15 @@
     <dct:title xml:lang="sk">Ontológia lokácie</dct:title>
     <dct:title xml:lang="en">Location Ontology</dct:title>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
-    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/location/2023b"/> 
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/> 
   </dcat:Dataset>
   
-  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/location/2023b">
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/location/2025a">
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
-    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dcat:version rdf:datatype="&xsd;string">2025a</dcat:version>
     <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
-    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/location/2023b.owl"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/location/2025a.owl"/>
   </dcat:Dataset>
 
   <!-- Ontológia vzdelávania -->
@@ -793,13 +793,13 @@
 
  <!-- SHAPES-RFO -->
 
- <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/rfo/2023b">
+ <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/rfo/2024">
     <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DOMAIN_MODEL"/>
-    <dct:title xml:lang="sk">Povinné vlastnosti údajov RFO</dct:title>
-    <dct:title xml:lang="en">Mandatory Data Shapes of RFO</dct:title>
+    <dct:title xml:lang="sk">Vlastnosti údajov RFO</dct:title>
+    <dct:title xml:lang="en">Data Shapes of RFO</dct:title>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/191"/>
-    <dcat:version rdf:datatype="&xsd;string">2023b</dcat:version>
+    <dcat:version rdf:datatype="&xsd;string">2024</dcat:version>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
     <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/rfo/2023b.ttl"/>
     <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
