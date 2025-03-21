@@ -1,105 +1,545 @@
-{
-  "@context": {
-    "loca": "https://data.gov.sk/def/ontology/location/",
-    "egov": "https://data.gov.sk/def/ontology/egov/",
-    "uncountry": "https://data.gov.sk/def/uncountry/",
-    "nuts3": "https://data.gov.sk/def/nuts3/",
-    "lau1": "https://data.gov.sk/def/lau1/",
-    "lau2": "https://data.gov.sk/def/lau2/",
-    "district": "https://data.gov.sk/def/district/",
-    "street": "https://data.gov.sk/id/street/",
-    "postcode": "https://data.gov.sk/def/postcode/",
-    "address": "https://data.gov.sk/id/physical-address/",
-    "legal-subject": "https://data.gov.sk/id/legal-subject/",
-    "isvs": "https://data.gov.sk/id/egov/isvs/",
-    "geo": "http://www.opengis.net/ont/geosparql#",
-    "sf": "http://www.opengis.net/ont/sf#",
-    "dct": "http://purl.org/dc/terms/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-  },
-  "@id": "isvs:192",
-  "@graph": [
-    {
-      "@id": "address:10539221",
-      "@type": "loca:PhysicalAddress",
-      "loca:identifier": {
-        "@value": "10539221"
-      },      
-      "loca:unCountry": {
-        "@id": "uncountry:SK"
-      },
-      "loca:nuts3": {
-        "@id": "nuts3:SK01"
-      },
-      "loca:lau1": {
-        "@id": "lau1:SK0101"
-      },
-      "loca:lau2": {
-        "@id": "lau2:SK0101528595"
-      },
-      "loca:district": {
-        "@id": "district:2040990"
-      },
-      "loca:street": {        
-        "@id": "street:4576744710567",
-        "@type": "loca:Street",
-        "loca:streetName": {
-          "@value": "Štefánikova",
-          "@type": "xsd:string"
-        },
-        "loca:geoLocation": {
-          "@type": "geo:Feature",
-          "geo:hasGeometry": {
-            "@type": "sf:LineString",
-            "geo:asWKT": {
-              "@value": "LINESTRING(17.106678 48.150914, 17.108678 48.155914, 17.116678 48.160914)",
-              "@type": "geo:wktLiteral"
-            }
-          }
-        }
-      },
-      "loca:addressType": {
-        "@id": "addressType:100001"        
-      },
-      "loca:postCode": {
-        "@id": "postcode:82905"        
-      },
-      "loca:propertyRegistrationNumber": {
-        "@value": "3013",
-        "@type": "xsd:string"
-      },
-      "loca:orientationNumber": {
-        "@value": "15",
-        "@type": "xsd:string"
-      },
-       "loca:formattedAddress": {
-        "@value": "Štefánikova 882/15, Bratislava-Staré Mesto, 81105",
-        "@type": "xsd:string"
-      },
-      "dct:publisher": {
-        "@id": "legal-subject:00151866"
-      },
-      "egov:timeValidity": {
-        "@type": "dct:PeriodOfTime",
-        "dcat:startDate": 
-        {
-          "@value": "2020-11-26",
-          "@type": "xsd:date"
-        }
-      },
-      "loca:geoLocation": {
-        "@type": "geo:Feature",
-        "geo:hasGeometry": {
-          "@type": "sf:Point",
-          "geo:asWKT": {
-            "@value": "POINT(17.106678 48.150914)",
-            "@type": "geo:wktLiteral"
-          }
-        }
-      }
-    }
-  ]
-}
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix sha-ra: <https://data.gov.sk/def/shapes/ra/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
+
+# physicalAddress
+
+sha-ra:ThingWithPhysicalAddress-physicalAddress
+	a sh:PropertyShape ;
+	sh:path loca:physicalAddress ;
+	sh:class loca:PhysicalAddress ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "PhysicalAddress" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:PhysicalAddressShape
+	a sh:NodeShape ;
+  rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	sh:targetClass loca:PhysicalAddress ;
+  sh:property sha-ra:PhysicalAddress-identifier , 
+  	sha-ra:PhysicalAddress-formattedAddress ,
+    sha-ra:PhysicalAddress-unCountry ,
+    sha-ra:PhysicalAddress-nuts3 ,
+    sha-ra:PhysicalAddress-lau1 ,
+    sha-ra:PhysicalAddress-lau2 ,
+    sha-ra:PhysicalAddress-district ,
+    sha-ra:PhysicalAddress-street ,
+  	sha-ra:PhysicalAddress-addressType ,
+    sha-ra:PhysicalAddress-postCode ,
+  	sha-ra:PhysicalAddress-orientationNumber ,
+  	sha-ra:PhysicalAddress-propertyRegistrationNumber ,
+    sha-ra:PhysicalAddress-postOfficeBoxNumber ,
+  	sha-ra:PhysicalAddress-buildingPartName ,
+  	sha-ra:PhysicalAddress-apartmentNumber ,
+  	sha-ra:ThingWithSpatial-geoLocation,
+  	sha-ra:ThingWithValidity-timeValidity .
+
+# identifier
+
+sha-ra:PhysicalAddress-identifier
+	a sh:PropertyShape ;
+	sh:path loca:identifier ;
+	sh:datatype owl:Literal ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# formattedAddress
+
+sha-ra:PhysicalAddress-formattedAddress
+	a sh:PropertyShape ;
+	sh:path loca:formattedAddress ;
+	sh:datatype xsd:string ;
+	sh:maxLength 2047 ;
+	kdp:xmlElementName "AddressLine" ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+# unCountry
+
+sha-ra:PhysicalAddress-unCountry
+	a sh:PropertyShape ;
+	sh:path loca:unCountry ;
+	sh:class loca:UNCountry ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "Country" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:UNCountryShape
+	a sh:NodeShape ;
+	sh:targetClass loca:UNCountry ;
+	sh:property sha-ra:ThingWithSpatial-geoLocation, 
+		sha-ra:ThingWithValidity-timeValidity ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL000086> .
+	
+# nuts3
+
+sha-ra:PhysicalAddress-nuts3
+	a sh:PropertyShape ;
+	sh:path loca:nuts3 ;
+	sh:class loca:NUTS3 ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "Region" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:NUTS3Shape
+	a sh:NodeShape ;
+	sh:targetClass loca:NUTS3 ;
+	sh:property sha-ra:ThingWithSpatial-geoLocation, 
+		sha-ra:ThingWithValidity-timeValidity ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL000023> .
+
+# lau1
+
+sha-ra:PhysicalAddress-lau1
+	a sh:PropertyShape ;
+	sh:path loca:lau1 ;
+	sh:class loca:LAU1 ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "County" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:LAU1Shape
+	a sh:NodeShape ;
+	sh:targetClass loca:LAU1 ;	
+	sh:property sha-ra:ThingWithSpatial-geoLocation, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL000024> .
+
+# lau2
+
+sha-ra:PhysicalAddress-lau2
+	a sh:PropertyShape ;
+	sh:path loca:lau2 ;
+	sh:class loca:LAU2 ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "Municipality" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:LAU2Shape
+	a sh:NodeShape ;
+	sh:targetClass loca:LAU2 ;	
+	sh:property sha-ra:ThingWithSpatial-geoLocation, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL000025> .
+
+# district
+
+sha-ra:PhysicalAddress-district
+	a sh:PropertyShape ;
+	sh:path loca:district ;
+	sh:class loca:District ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "District" ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:DistrictShape
+	a sh:NodeShape ;
+	sh:targetClass loca:District ;	
+	sh:property sha-ra:ThingWithSpatial-geoLocation, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL010141> .
+    
+# street	
+
+sha-ra:PhysicalAddress-street
+	a sh:PropertyShape ;
+	sh:path loca:street ;
+	sh:class loca:Street ;
+	sh:nodeKind sh:IRI ;	
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:StreetShape
+	a sh:NodeShape ;
+	sh:targetClass loca:Street ;	
+	sh:property sha-ra:Street-streetName ,
+		sha-ra:ThingWithSpatial-geoLocation, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+    
+sha-ra:Street-streetName
+    	sh:path loca:streetName ;
+    	sh:datatype xsd:string ;
+	sh:maxLength 100 ;
+	kdp:xmlElementName "StreetName" ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# addressType
+    
+sha-ra:PhysicalAddress-addressType
+	a sh:PropertyShape ;
+	sh:path loca:addressType ;
+	sh:class loca:AddressType ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "AddressType" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:AddressTypeShape
+	a sh:NodeShape ;
+	sh:targetClass loca:AddressType ;
+	sh:property sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL010139> .
+
+# postCode
+
+sha-ra:PhysicalAddress-postCode
+	a sh:PropertyShape ;
+	sh:path loca:postCode ;
+	sh:class loca:PostCode ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "PostalCode" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:PostCodeShape
+	a sh:NodeShape ;
+	sh:targetClass loca:PostCode ;	
+	sh:property sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+    
+# orientationNumber
+
+sha-ra:PhysicalAddress-orientationNumber
+	a sh:PropertyShape ;
+	sh:path loca:orientationNumber ;
+	sh:datatype xsd:string ;
+	sh:maxLength 20 ;
+	kdp:xmlElementName "BuildingNumber" ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# propertyRegistrationNumber
+
+sha-ra:PhysicalAddress-propertyRegistrationNumber
+	a sh:PropertyShape ;
+	sh:path loca:propertyRegistrationNumber ;
+	sh:datatype xsd:string ;
+	sh:maxLength 10 ;
+	kdp:xmlElementName "PropertyRegistrationNumber" ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# postOfficeBoxNumber
+
+sha-ra:PhysicalAddress-postOfficeBoxNumber
+	a sh:PropertyShape ;
+	sh:path loca:postOfficeBoxNumber ;
+	sh:datatype xsd:string ;
+	sh:maxLength 50 ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# buildingPartName
+
+sha-ra:PhysicalAddress-buildingPartName
+	a sh:PropertyShape ;
+	sh:path loca:buildingPartName ;
+	sh:datatype xsd:string ;
+	sh:maxLength 10 ;
+	kdp:xmlElementName "UnitNumber" ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# apartmentNumber
+
+sha-ra:PhysicalAddress-apartmentNumber
+	a sh:PropertyShape ;
+	sh:path loca:apartmentNumber ;
+	sh:datatype xsd:string ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+		
+# geoLocation	
+
+sha-ra:ThingWithSpatial-geoLocation
+	a sh:PropertyShape ;
+	sh:path loca:geoLocation ;
+	sh:class geo:Feature ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:FeatureShape
+	a sh:NodeShape ;
+	sh:targetClass geo:Feature ;
+  sh:property sha-ra:Feature-hasGeometry ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:Feature-hasGeometry
+  a sh:PropertyShape ;
+  sh:path geo:hasGeometry ;
+	sh:class geo:Geometry ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:GeometryShape
+	a sh:NodeShape ;
+	sh:targetClass geo:Geometry ;
+  sh:property sha-ra:Geometry-asWKT ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:Geometry-asWKT
+	sh:path geo:asWKT ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# timeValidity
+
+sha-ra:ThingWithValidity-timeValidity
+	a sh:PropertyShape ;
+	sh:path egov:timeValidity ;
+	sh:class dct:PeriodOfTime ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:PeriodOfTimeShape
+	a sh:NodeShape ;
+	sh:targetClass dct:PeriodOfTime ;
+  sh:property sha-ra:PeriodOfTime-startDate,
+		sha-ra:PeriodOfTime-endDate;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:PeriodOfTime-startDate
+	sh:path dcat:startDate ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:PeriodOfTime-endDate
+	sh:path dcat:endDate ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+    	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# BuildingPart
+
+sha-ra:BuildingPartShape
+	a sh:NodeShape ;
+	sh:targetClass loca:BuildingPart ;
+	sh:property sha-ra:BuildingPart-building ,
+		sha-ra:ThingWithPhysicalAddress-physicalAddress, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# building	
+
+sha-ra:BuildingPart-building
+    	a sh:PropertyShape ;
+	sh:path loca:building ;
+	sh:class loca:Building ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "Building" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:BuildingShape
+	a sh:NodeShape ;
+	sh:targetClass loca:Building ;
+	sh:property sha-ra:Building-buildingName ,
+    sha-ra:Building-hasApartment ,
+    sha-ra:Building-buildingType ,
+    sha-ra:Building-buildingPurpose,
+		sha-ra:ThingWithPhysicalAddress-physicalAddress, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+# buildingName
+
+sha-ra:Building-buildingName
+    	a sh:PropertyShape ;
+	sh:path loca:buildingName ;
+	sh:datatype xsd:string ;
+	sh:maxLength 255 ;
+	kdp:xmlElementName "BuildingName" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# hasApartment
+
+sha-ra:Building-hasApartment
+	a sh:PropertyShape ;
+	sh:path loca:hasApartment ;
+	sh:datatype xsd:boolean ;
+	kdp:xmlElementName "ContainsFlats" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# buildingType
+    
+sha-ra:Building-buildingType
+	a sh:PropertyShape ;
+	sh:path loca:buildingType ;
+	sh:class loca:BuldingType ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "BuildingTypeCode" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .	
+	
+sha-ra:BuldingTypeShape
+  a sh:NodeShape ;
+  sh:targetClass loca:BuldingType ;
+	sh:property sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL010143> .
+
+# buildingPurpose
+	
+sha-ra:Building-buildingPurpose
+  a sh:PropertyShape ;
+	sh:path loca:buildingPurpose ;
+	sh:class loca:BuildingPurpose ;
+	sh:nodeKind sh:IRI ;
+	kdp:xmlElementName "BuildingPurpose" ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+	
+sha-ra:BuildingPurposeShape
+	a sh:NodeShape ;	
+	sh:targetClass loca:BuildingPurpose ;
+	sh:property sha-ra:ThingWithValidity-timeValidity ;
+	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> ;
+	dct:source <https://data.gov.sk/def/codelist/CL010142> .
+
+# Apartment
+
+sha-ra:ApartmentShape
+	a sh:NodeShape ;
+	sh:targetClass loca:Apartment ;
+	sh:property sha-ra:Apartment-entrance,
+		sha-ra:BuildingPart-building ,
+		sha-ra:ThingWithPhysicalAddress-physicalAddress, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+# entrance	
+	
+sha-ra:Apartment-entrance
+  a sh:PropertyShape ;
+	sh:path loca:entrance ;
+	sh:class loca:Entrance ;
+	sh:nodeKind sh:IRI ;
+ 	rdfs:isDefinedBy sha-ra: ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
+
+sha-ra:EntranceShape
+	a sh:NodeShape ;
+	sh:targetClass loca:Entrance ;
+	sh:property sha-ra:BuildingPart-building ,
+		sha-ra:ThingWithPhysicalAddress-physicalAddress, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .	
+
+# PostOfficeBox
+
+sha-ra:PostOfficeBoxShape
+	a sh:NodeShape ;
+	sh:targetClass loca:PostOfficeBox ;
+	sh:property sha-ra:ThingWithPhysicalAddress-physicalAddress, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .	
+
+# PostRecipient
+
+sha-ra:PostRecipientShape
+	a sh:NodeShape ;
+	sh:targetClass loca:PostRecipient ;
+	sh:property sha-ra:ThingWithPhysicalAddress-physicalAddress, 
+		sha-ra:ThingWithValidity-timeValidity ;
+ 	rdfs:isDefinedBy sha-ra: ;
+  dct:subject <https://data.gov.sk/id/egov/isvs/192> .
