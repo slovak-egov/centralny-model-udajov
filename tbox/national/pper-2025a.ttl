@@ -15,17 +15,17 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-pper:2024 a owl:Ontology, dcat:Dataset;
+pper:2025a a owl:Ontology, dcat:Dataset;
   dct:title "Ontológia fyzickej osoby"@sk;
   dct:title "Physical Person Ontology"@en;
   dct:type <http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>;
   prov:wasDerivedFrom <https://data.gov.sk/id/egov/isvs/11325>;
-  dcat:distribution pper:2024.owl;
+  dcat:distribution pper:2025a.owl;
   dct:creator <http://www.linkedin.com/in/miroslavliska>;
   dct:contributor <http://www.linkedin.com/in/mareksurek>;
-  owl:versionInfo "2024";
-  dcat:version "2024";
+  owl:versionInfo "2025";
+  dcat:version "2025";
   dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
 
 pper:physicalPerson a owl:ObjectProperty;
@@ -36,14 +36,14 @@ pper:physicalPerson a owl:ObjectProperty;
   rdfs:description "Relácia na fyzickú osobu v Registry osôb."@sk;
   rdfs:range pper:PhysicalPerson;
   kdp:xmlElementName "PhysicalPerson";
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:identifier a owl:DatatypeProperty;
   rdfs:subPropertyOf dct:identifier;
   rdfs:label "identifier"@en, "identifikátor"@sk;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Medzisystémový identifikátor fyzickej osoby. Nahrádza doteraz používaný identifikátor fyzickej osoby (IFO) pre medzisystémovú identifikáciu."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:recordIdentifier a owl:DatatypeProperty;
   rdfs:subPropertyOf dct:identifier;
@@ -53,7 +53,7 @@ pper:recordIdentifier a owl:DatatypeProperty;
   skos:altLabel "Počítačové číslo osoby"@sk;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Identifikátor fyzickej osoby (ďalej len „IFO“) označovaný aj ako „PČO“ (počítačové číslo osoby)."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:birth a owl:ObjectProperty;
   rdfs:label "birth"@en, "narodenie"@sk, "Geburt"@de;
@@ -61,7 +61,7 @@ pper:birth a owl:ObjectProperty;
   rdfs:domain pper:PhysicalPerson;
   kdp:xmlElementName "Birth";
   rdfs:description "Relácia osoby na jej narodenie."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.5> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -77,7 +77,7 @@ pper:citizenship a owl:ObjectProperty;
   kdp:xmlElementName "Citizenship";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.7>;
   rdfs:description "Relácia osoby na jej štátnu príslušnosť definovanú hodnotami číselníka CL000086 Krajina OSN."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.7> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -93,7 +93,7 @@ pper:nationality a owl:ObjectProperty;
   rdfs:description "Relácia osoby na jej národnosť definovanú hodnotami číselníka CL010131 Národnosť."@sk;
   kdp:xmlElementName "Nationality";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.12>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.12> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -109,7 +109,7 @@ pper:confessionType a owl:ObjectProperty;
   rdfs:description "Relácia osoby na jej nábožentvo."@sk;
   kdp:xmlElementName "Confession";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.8>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.8> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -125,7 +125,7 @@ pper:civilDisability a owl:ObjectProperty;
   kdp:xmlElementName "CivilDisability";
   rdfs:description "Relácia osoby na jej obmedzenie spôsobilosti na právne úkony."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.13>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.13> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -142,7 +142,7 @@ pper:civilDisabilityType a owl:ObjectProperty;
   rdfs:description "Relácia osoby na obmedzenie spôsobilosti na právne úkony definovaného hodnotami číselníka CL010136 Obmedzenie spôsobilosti na právne úkony."@sk;
   kdp:xmlElementName "TypeOfCivilDisability";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.13.1>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.13.1> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -156,7 +156,7 @@ pper:occupationType a owl:ObjectProperty;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:OccupationType;
   rdfs:description "Relácia osoby na jej typ povolania definovaného hodnotami číselníka CL010134 Regulované povolania."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:relative a owl:ObjectProperty;
   rdfs:label "relative"@en, "príbuzný"@sk, "verbunden"@de;
@@ -165,7 +165,7 @@ pper:relative a owl:ObjectProperty;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej príbuznú osobu."@sk;
   kdp:xmlElementName "Relative";
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:spouse a owl:ObjectProperty;
   rdfs:subPropertyOf pper:relative;
@@ -175,7 +175,7 @@ pper:spouse a owl:ObjectProperty;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia osoby jej na manžela."@sk;
   kdp:xmlElementName "Spouse";
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:father a owl:ObjectProperty;
   rdfs:subPropertyOf pper:relative;
@@ -184,7 +184,7 @@ pper:father a owl:ObjectProperty;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej otca."@sk;
   kdp:xmlElementName "Father";
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:mother a owl:ObjectProperty;
   rdfs:subPropertyOf pper:relative;
@@ -193,7 +193,7 @@ pper:mother a owl:ObjectProperty;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej matku."@sk;
   kdp:xmlElementName "Mother";
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:child a owl:ObjectProperty;
   rdfs:subPropertyOf pper:relative;
@@ -201,7 +201,7 @@ pper:child a owl:ObjectProperty;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej dieťa."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:death a owl:ObjectProperty;
   rdfs:label "death"@en, "úmrtie"@sk, "Tod"@de;
@@ -210,7 +210,7 @@ pper:death a owl:ObjectProperty;
   rdfs:description "Relácia osoby na jej úmrtie."@sk;
   kdp:xmlElementName "Death";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.6> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -224,7 +224,7 @@ pper:maritalStatus a owl:ObjectProperty;
   rdfs:range pper:MaritalStatus;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej rodinný stav."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:maritalStatusType a owl:ObjectProperty;
   rdfs:label "marital status type"@en, "typ rodinného stav"@sk, "Familienstand"@de;
@@ -233,7 +233,7 @@ pper:maritalStatusType a owl:ObjectProperty;
   rdfs:description "Relácia rodinného stavu osoby na jeho typ definovaný hodnotami číselníka CL004002 Rodinný stav."@sk;
   kdp:xmlElementName "MaritalStatus";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.3>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.3> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -248,7 +248,7 @@ pper:existentialStatus a owl:ObjectProperty;
   rdfs:range pper:ExistentialStatus;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej existenčný stav."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:existentialStatusType a owl:ObjectProperty;
   rdfs:label "existential status type"@en, "stav fyzickej osoby"@sk;
@@ -258,7 +258,7 @@ pper:existentialStatusType a owl:ObjectProperty;
   rdfs:description "Relácia existenčného stavu osoby na jeho typ definovaný hodnotami číselníka CL004003 Existenčný stav."@sk;
   kdp:xmlElementName "ExistentialStatus";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.5>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.6.5> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -274,7 +274,7 @@ pper:nameAffix a owl:ObjectProperty;
   rdfs:description "Relácia osoby jej titul."@sk;
   kdp:xmlElementName "NameAffix";
   adms:identifier <https://data.gov.sk/id/identifier/D.1.1.1.8>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/D.1.1.1.8> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -289,7 +289,7 @@ pper:namePrefix a owl:ObjectProperty;
   rdfs:range pper:NamePrefix;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej titul pred menom definovaný hodnotami číselníka CL000062 Titul pred menom."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:nameSuffix a owl:ObjectProperty;
   rdfs:subPropertyOf pper:nameAffix;
@@ -297,7 +297,7 @@ pper:nameSuffix a owl:ObjectProperty;
   rdfs:range pper:NameSuffix;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Relácia osoby na jej titul za menom definovaný hodnotami číselníka CL000063 Titul za menom."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:placeOfBirth a owl:ObjectProperty;
   rdfs:label "place of birth"@en, "miesto narodenia"@sk;
@@ -306,7 +306,7 @@ pper:placeOfBirth a owl:ObjectProperty;
   rdfs:description "Relácia osoby na lokáciu jej narodenia."@sk;
   kdp:xmlElementName "PlaceOfBirth";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.5.2>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.5.2> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -322,7 +322,7 @@ pper:placeOfDeath a owl:ObjectProperty;
   rdfs:description "Relácia osoby na lokáciu jej úmrtia fyzickej osoby."@sk;
   kdp:xmlElementName "PlaceOfDeath";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.2>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.6.2> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -336,7 +336,7 @@ pper:residence a owl:ObjectProperty;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:Residence;
   rdfs:description "Relácia osoby na jej pobyt."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:permanentResidence a owl:ObjectProperty;
   rdfs:subPropertyOf pper:residence;
@@ -344,7 +344,7 @@ pper:permanentResidence a owl:ObjectProperty;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:PermanentResidence;
   rdfs:description "Relácia osoby na jej trvalý pobyt."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:temporaryResidence a owl:ObjectProperty;
   rdfs:subPropertyOf pper:residence;
@@ -352,7 +352,7 @@ pper:temporaryResidence a owl:ObjectProperty;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:TemporaryResidence;
   rdfs:description "Relácia osoby na jej prechodný pobyt."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:bannedResidence a owl:ObjectProperty;
   rdfs:subPropertyOf pper:residence;
@@ -360,34 +360,34 @@ pper:bannedResidence a owl:ObjectProperty;
   rdfs:domain pper:ResidenceBan;
   rdfs:range pper:Residence;
   rdfs:description "Relácia osoby na obmedzenie jej pobytu."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:personRelationshipDomain a owl:ObjectProperty;
   rdfs:label "related person (domain)"@en, "príbuzná osoba (zdroj)"@sk;
   rdfs:domain pper:PersonRelationship;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia typ príbuznosti s prvou osobou vzťahu."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:personRelationshipRange a owl:ObjectProperty;
   rdfs:label "related person (range)"@en, "príbuzná osoba (cieľ)"@sk;
   rdfs:domain pper:PersonRelationship;
   rdfs:range pper:PhysicalPerson;
   rdfs:description "Relácia typ príbuznosti s druhou osobou vzťahu."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:birthNumber a owl:ObjectProperty;
   rdfs:label "birth number"@en, "rodné číslo"@sk;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:BirthNumber;
   rdfs:description "Relácia narodenia na súvisiace rodné číslo."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:birthNumberCode a owl:DatatypeProperty;
   rdfs:label "birth number code"@en, "kód rodného čísla"@sk;
   rdfs:domain pper:BirthNumber;
   rdfs:description "Kód / číselný identifikátor rodného čísla."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:sex a owl:ObjectProperty;
   rdfs:subPropertyOf dct:type;
@@ -397,7 +397,7 @@ pper:sex a owl:ObjectProperty;
   kdp:xmlElementName "Sex";
   rdfs:description "Relácia osoby na typ jej pohlavia definovaný hodnotami číselníka CL003003 Pohlavie."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.4>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.4> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -413,7 +413,7 @@ pper:occupationBan a owl:ObjectProperty;
   kdp:xmlElementName "OccupationBan";
   rdfs:description "Relácia osoby na jej zákaz povolania, ktoré nemôže vykonávať."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.15>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.15> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -429,7 +429,7 @@ pper:residenceBan a owl:ObjectProperty;
   rdfs:description "Relácia osoby jej na zákaz pobytu."@sk;
   kdp:xmlElementName "ResidenceBan";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.14>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.14> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -444,7 +444,7 @@ pper:name a owl:DatatypeProperty;
   rdfs:range xsd:string;
   rdfs:description "Zložený dátový prvok pre rôzne súčasti mena fyzickej osoby."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/50349287>;
@@ -461,7 +461,7 @@ pper:alternativeName a owl:DatatypeProperty;
   rdfs:description "Popisuje iné meno ako to, ktoré fyzická osoba používa ako svoje súčasné oficiálne meno alebo priezvisko."@sk;
   kdp:xmlElementName "AlternativeName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.2>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.2> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -477,7 +477,7 @@ pper:dateOfBirth a owl:DatatypeProperty;
   rdfs:description "Dátum narodenia fyzickej osoby."@sk;
   kdp:xmlElementName "DateOfBirth";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.5.1>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.5.1> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -493,7 +493,7 @@ pper:dateOfDeath a owl:DatatypeProperty;
   rdfs:description "Dátum úmrtia fyzickej osoby."@sk;
   kdp:xmlElementName "DateOfDeath";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.1>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.6.1> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -510,7 +510,7 @@ pper:familyName a owl:DatatypeProperty;
   rdfs:description "Obsahuje priezvisko osoby."@sk;
   kdp:xmlElementName "FamilyName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.6>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.6> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -527,7 +527,7 @@ pper:formattedName a owl:DatatypeProperty;
   kdp:xmlElementName "FormattedName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.1>;
   rdfs:description "Formátované meno vrátane predpony a prípony."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.1> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -544,7 +544,7 @@ pper:givenFamilyName a owl:DatatypeProperty;
   rdfs:description "Obsahuje rodné priezvisko osoby."@sk;
   kdp:xmlElementName "GivenFamilyName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.7>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.7> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -561,7 +561,7 @@ pper:givenName a owl:DatatypeProperty;
   rdfs:description "Obsahuje rodné meno, ktorým je nededená časť mena fyzickej osoby. Známe aj ako prvé meno fyzickej osoby alebo v užšom význame krstné meno fyzickej osoby."@sk;
   kdp:xmlElementName "GivenName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.3>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.3> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -578,7 +578,7 @@ pper:legalName a owl:DatatypeProperty;
   kdp:xmlElementName "LegalName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.2>;
   rdfs:description "Používa sa na právne účely v niektorých štátoch."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.2> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -595,7 +595,7 @@ pper:otherName a owl:DatatypeProperty;
   kdp:xmlElementName "OtherName";
   rdfs:description "Obsahuje stredné meno fyzickej osoby alebo iniciály. Pozn: Originálne použitie najmä v Spojených štátoch amerických.]"@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.5>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.5> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -612,7 +612,7 @@ pper:prefferedGivenName a owl:DatatypeProperty;
   rdfs:description "Meno, ktoré fyzická osoba uprednostňuje pri svojom oslovení v prípade viacerých rodných mien. Pozn: V Slovenskej republike nie je zvykom mať viac rodných mien, ale v zahraničí, najmä v španielsky hovoriacich krajinách je to úplne bežné.]"@sk;
   kdp:xmlElementName "PrefferedGivenName";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.1.4>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.1.4> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -628,7 +628,7 @@ pper:occupationName a owl:DatatypeProperty;
   rdfs:description "Názov povolania, ktoré osoba vykonáva."@sk;
   kdp:xmlElementName "Occupation";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.9>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.9> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -644,7 +644,7 @@ pper:yearOfBirth a owl:DatatypeProperty;
   rdfs:description "Obsahuje rok narodenia fyzickej osoby."@sk;
   kdp:xmlElementName "YearOfBirth";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.5.3>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.5.3> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -660,7 +660,7 @@ pper:yearOfDeath a owl:DatatypeProperty;
   rdfs:description "Obsahuje rok úmrtia fyzickej osoby."@sk;
   kdp:xmlElementName "YearOfDeath";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.3>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.6.3> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -676,7 +676,7 @@ pper:yearAndMonthOfBirth a owl:DatatypeProperty;
   rdfs:description "Obsahuje mesiac a rok narodenia fyzickej osoby."@sk;
   kdp:xmlElementName "YearAndMonthOfBirth";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.5.4>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.5.4> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -692,7 +692,7 @@ pper:yearAndMonthOfDeath a owl:DatatypeProperty;
   rdfs:description "Obsahuje mesiac úmrtia fyzickej osoby."@sk;
   kdp:xmlElementName "YearAndMonthOfDeath";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.4>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.6.4> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -704,7 +704,7 @@ pper:yearAndMonthOfDeath a owl:DatatypeProperty;
 pper:PhysicalPerson a owl:Class;
   rdfs:label "Physical Person"@en, "Fyzická osoba"@sk, "natürliche Person"@de;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -716,107 +716,107 @@ pper:PhysicalPerson a owl:Class;
 pper:SlovakCitizen a owl:Class;
   rdfs:subClassOf pper:PhysicalPerson;
   rdfs:label "Slovak Citizen"@en, "Občan na území Slovenskej republiky"@sk, "Slowakischer Staatsbürger"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:SlovakResident a owl:Class;
   rdfs:subClassOf pper:SlovakCitizen;
   rdfs:label "Slovak Resident"@en, "Občan s trvalým pobytom na území Slovenskej republiky"@sk,
     "Slowakischer Staatsbürger mit ständigem Wohnsitz"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:SlovakNonResident a owl:Class;
   rdfs:subClassOf pper:SlovakCitizen;
   rdfs:label "Slovak Non Resident"@en, "Občan bez trvalého pobytu na území Slovenskej republiky"@sk,
     "Slowakischer Staatsbürger ohne ständigen Wohnsitz"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:Foreigner a owl:Class;
   rdfs:subClassOf pper:PhysicalPerson;
   rdfs:label "Foreigner"@en, "Cudzinec"@sk, "Ausländer"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:ForeignerResident a owl:Class;
   rdfs:subClassOf pper:Foreigner;
   rdfs:label "Foreigner Resident in Slovakia"@en, "Cudzinec s pobytom v Slovenskej republike"@sk,
     "Ausländische Staatsbürger mit Wohnsitz in der Slowakei"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:ForeignerGrantedAsylum a owl:Class;
   rdfs:subClassOf pper:Foreigner;
   rdfs:label "Foreigner Granted Asylum"@en, "Cudzinec s udeleným azylom v Slovenskej republike"@sk,
     "Ausländer, denen Asyl gewährt in der Slowakei"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:NameAffix a owl:Class;
   rdfs:label "Title"@en, "Titul"@sk, "Titel"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:NamePrefix a owl:Class;
   rdfs:subClassOf pper:NameAffix;
   rdfs:label "Name Prefix"@en, "Titul pred menom"@sk, "Titel vor dem Namen"@de;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL000062> .
 
 pper:NameSuffix a owl:Class;
   rdfs:subClassOf pper:NameAffix;
   rdfs:label "Name Suffix"@en, "Titul za menom"@sk, "Grad hinter Name"@de;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL000063> .
 
 pper:MaritalStatus a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:label "Marital status"@en, "Rodinný stav"@sk, "Familienstand"@de;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:MaritalStatusType a owl:Class;
   rdfs:label "Marital status type"@en, "Typ rodinného stavu"@sk;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL004002> .
 
 pper:Sex a owl:Class;
   rdfs:label "Sex"@en, "Pohlavie"@sk, "Sex"@de;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL003003> .
 
 pper:Birth a owl:Class;
   rdfs:label "Birth"@en, "Narodenie"@sk, "Geburt"@de;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.5>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:Death a owl:Class;
   rdfs:label "Death"@en, "Úmrtie"@sk, "Tod"@de;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:ExistentialStatus a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:label "Existential Status"@en, "Stav fyzickej osoby"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:ExistentialStatusType a owl:Class;
   rdfs:label "Existential Status Type"@en, "Typ stavu fyzickej osoby"@sk;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL004003> .
 
 pper:ConfessionType a owl:Class;
   rdfs:label "Confession"@en, "Náboženstvo"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:OccupationBan a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:label "Occupation Ban"@en, "Zákaz vykonávania povolania"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:OccupationType a owl:Class;
   rdfs:label "Occupation Type"@en, "Typ povolania"@sk;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL010134> .
 
 pper:personRelationship a owl:ObjectProperty;
   rdfs:label "príbuzenský vzťah"@sk, "person relationship"@en;
   kdp:xmlElementName "RelatedPerson";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.10>;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.10> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/50349287>;
@@ -829,72 +829,72 @@ pper:PersonRelationship a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:label "Person Relationship"@en, "Príbuzenstvo"@sk;
   rdfs:description "Dátový prvok pre popis stupňa príbuznosti a príslušnej fyzickej osoby."@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:PersonRelationshipType a owl:Class;
   rdfs:label "Person Relationship type"@en, "Typ Príbuzenstva"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:personRelationshipType a owl:ObjectProperty;
   rdfs:label "typ príbuzenstva"@sk, "person relationship type"@en;
   rdfs:description "Relácia medzi príbuzenstvom a typom príbuzenského vzťahu definovaného hodnotami číselníka CL004004 Príbuzenský stav.";
   rdfs:domain pper:PersonRelationship;
   rdfs:range pper:PersonRelationshipType;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:Nationality a owl:Class;
   rdfs:label "Nationality"@en, "Národnosť"@sk;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL010131> .
 
 pper:BirthNumber a owl:Class;
   rdfs:subClassOf adms:Identifier;
   rdfs:label "Birth Number"@en, "Rodné číslo"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:ResidenceBan a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:label "Residence Ban"@en, "Zákaz pobytu"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:CivilDisability a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:label "Civil Disability"@en, "Obmedzenie právnej spôsobilosti"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:CivilDisabilityType a owl:Class;
   rdfs:label "Civil Disability Type"@en, "Typ obmedzenia právnej spôsobilosti"@sk;
-  rdfs:isDefinedBy pper:2024;
+  rdfs:isDefinedBy pper:2025a;
   dct:source <https://data.gov.sk/def/codelist/CL010136> .
 
 pper:Residence a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
   rdfs:label "Residence"@en, "Pobyt"@sk;
   skos:altLabel "Bydlisko"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:PermanentResidence a owl:Class;
   rdfs:subClassOf pper:Residence;
   rdfs:label "Permanent Residence"@en, "Trvalý pobyt"@sk;
   skos:altLabel "Trvalé bydlisko"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:TemporaryResidence a owl:Class;
   rdfs:subClassOf pper:Residence;
   rdfs:label "Temporary Residence"@en, "Prechodný pobyt"@sk;
   skos:altLabel "Prechodné bydlisko"@sk;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:idDocument a owl:ObjectProperty;
   rdfs:label "doklad totožnosti osoby"@sk, "personal identification document"@en;
   rdfs:description "Relácia osoby na jej doklad totožnosti."@sk;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:IdentificationDocument;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:IdentificationDocument a owl:Class;
   rdfs:label "Identifikačný doklad osoby"@sk, "Identification Document"@en;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:travelDocument a owl:ObjectProperty;
   rdfs:label "cestovný doklad"@sk, "travel document"@en;
@@ -902,19 +902,19 @@ pper:travelDocument a owl:ObjectProperty;
   rdfs:subPropertyOf pper:idDocument;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:TravelDocument;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:TravelDocument a owl:Class;
   rdfs:label "Cestovný doklad"@sk, "Travel document"@em;
   rdfs:subClassOf pper:IdentificationDocument;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:travelDocumentCode a owl:DatatypeProperty;
   rdfs:label "číslo a druh cestovného dokladu"@sk, "travel document code"@en;
   rdfs:description "Kód / identifikátor cestovného dokladu."@sk;
   rdfs:domain pper:TravelDocument;
   rdfs:range xsd:string;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:idCard a owl:ObjectProperty;
   rdfs:label "občiansky preukaz"@sk, "personal identification card"@en;
@@ -922,16 +922,16 @@ pper:idCard a owl:ObjectProperty;
   rdfs:subPropertyOf pper:idDocument;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:IDCard;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:IDCard a owl:Class;
   rdfs:label "Občiansky preukaz"@sk, "Personal identification card"@en;
   rdfs:subClassOf pper:IdentificationDocument;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
 
 pper:idCardCode a owl:DatatypeProperty;
   rdfs:label "číslo občianskeho preukazu"@sk, "personal identification card code"@en;
   rdfs:description "Kód / identifikátor občianskeho preukazu."@sk;
   rdfs:domain pper:IDCard;
   rdfs:range xsd:string;
-  rdfs:isDefinedBy pper:2024 .
+  rdfs:isDefinedBy pper:2025a .
