@@ -1,93 +1,57 @@
 {
   "@context": {
-    "pper": "https://data.gov.sk/def/ontology/physical-person/",
-    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egov/",
-    "nuts3": "https://data.gov.sk/id/nuts3/",
-    "lau1": "https://data.gov.sk/id/lau1/",
-    "lau2": "https://data.gov.sk/id/lau2/",
-    "street": "https://data.gov.sk/id/street/",
     "uncountry": "https://data.gov.sk/def/uncountry/",
-    "address-type": "https://data.gov.sk/def/address-type/",
+    "nuts3": "https://data.gov.sk/def/nuts3/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "district": "https://data.gov.sk/def/district/",
+    "street": "https://data.gov.sk/id/street/",
+    "postcode": "https://data.gov.sk/def/postcode/",
     "address": "https://data.gov.sk/id/physical-address/",
     "legal-subject": "https://data.gov.sk/id/legal-subject/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
-    "codelist": "https://data.gov.sk/set/codelist/",
     "geo": "http://www.opengis.net/ont/geosparql#",
     "sf": "http://www.opengis.net/ont/sf#",
-    "adms": "http://www.w3.org/ns/adms#",
     "dct": "http://purl.org/dc/terms/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "locn": "http://www.w3.org/ns/locn#",
-    "xs": "http://www.w3.org/2001/XMLSchema#"
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   },
   "@id": "isvs:192",
   "@graph": [
     {
       "@id": "street:3034050",
       "@type": "loca:Street",
-      "adms:identifier": {
-        "@type": "adms:Identifier",
-        "skos:notation": {
-          "@value": "3034050",
-          "@type": "xs:string"
-        },
-        "dct:type": {
-          "@id": "identifiertype:_105",
-          "@type": "egov:IdentifierType",
-          "skos:prefLabel": {
-            "@language": "sk",
-            "@value": "Identifikátor adresy"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL004001"
-          }
-        },
-        "egov:issuingCountry": {
-          "@id": "uncountry:703",
-          "skos:prefLabel": {
-            "@value": "Slovenská republika",
-            "@language": "sk"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL000086"
-          }
-        }
-      },
-      "skos:prefLabel": {
+      "loca:streetName": {
         "@value": "Štefánikova",
-        "@language": "sk"
+         "@type": "xsd:string"
       },
-      "geo:hasGeometry": {
-        "@type": "sf:Point",
-        "geo:asWKT:": {
-          "@value": "MULTIPOLYGON (((149.06016 -35.23610, 149.060620 -35.236043, ... , 149.06016 -35.23610)))",
-          "@type": "geo:wktLiteral"
+      "loca:geoLocation": {
+        "@type": "geo:Feature",
+        "geo:hasGeometry": {
+          "@type": "sf:LineString",
+          "geo:asWKT": {
+            "@value": "LINESTRING(17.106678 48.150914, 17.108678 48.155914, 17.116678 48.160914)",
+            "@type": "geo:wktLiteral"
+          }
         }
       },
-      "loca:lau2": {
-        "@id": "lau2:SK0101528595",
-        "@type": "loca:LAU2",
-        "skos:prefLabel": {
-          "@value": "Bratislava mestká časť - Staré mesto",
-          "@language": "sk"
-        },
-          "skos:inScheme": {
-            "@id": "codelist:CL000024"
-          }
+      "skos:broader": {
+        "@id": "lau2:SK0101528595"
       },
       "dct:publisher": {
-        "@id": "legal-subject:00151866",
-        "@type": "lsub:LegalSubject",
-        "skos:prefLabel": {
-          "@value": "Ministerstvo vnútra Slovenskej republiky",
-          "@language": "sk"
-        }
+        "@id": "legal-subject:00151866"
       },
-      "schema:validFrom": {
-        "@value": "2020-11-26"
+      "egov:timeValidity": {
+        "@type": "dct:PeriodOfTime",
+        "dcat:startDate": 
+        {
+          "@value": "2020-11-26",
+          "@type": "xsd:date"
+        }
       }
     }
   ]
