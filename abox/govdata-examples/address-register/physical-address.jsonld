@@ -9,6 +9,7 @@
     "district": "https://data.gov.sk/def/district/",
     "street": "https://data.gov.sk/id/street/",
     "postcode": "https://data.gov.sk/def/postcode/",
+    "address-type": "https://data.gov.sk/def/address-type/",
     "address": "https://data.gov.sk/id/physical-address/",
     "legal-subject": "https://data.gov.sk/id/legal-subject/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
@@ -29,10 +30,10 @@
         "@value": "10539221"
       },      
       "loca:unCountry": {
-        "@id": "uncountry:SK"
+        "@id": "uncountry:703"
       },
       "loca:nuts3": {
-        "@id": "nuts3:SK01"
+        "@id": "nuts3:SK010"
       },
       "loca:lau1": {
         "@id": "lau1:SK0101"
@@ -41,10 +42,10 @@
         "@id": "lau2:SK0101528595"
       },
       "loca:district": {
-        "@id": "district:2040990"
+        "@id": "district:412703"
       },
       "loca:street": {        
-        "@id": "street:4576744710567",
+        "@id": "street:3034050",
         "@type": "loca:Street",
         "loca:streetName": {
           "@value": "Štefánikova",
