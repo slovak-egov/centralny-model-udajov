@@ -63,7 +63,7 @@
           "@type": "xs:date"
         },
         "pper:placeOfBirth": {
-          "@type": "loca:Location",
+          "@type": "loca:PhysicalAddress",
           "loca:lau2": {
             "@id": "lau2:SK0101528595"
           },

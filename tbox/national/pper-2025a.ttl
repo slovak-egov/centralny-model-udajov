@@ -15,18 +15,11 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-pper:2025a a owl:Ontology, dcat:Dataset;
-  dct:title "Ontológia fyzickej osoby"@sk;
-  dct:title "Physical Person Ontology"@en;
-  dct:type <http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY>;
-  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>;
-  prov:wasDerivedFrom <https://data.gov.sk/id/egov/isvs/11325>;
-  dcat:distribution pper:2025a.owl;
+pper:2025a a owl:Ontology;
+  dct:title "Ontológia fyzickej osoby";
   dct:creator <http://www.linkedin.com/in/miroslavliska>;
   dct:contributor <http://www.linkedin.com/in/mareksurek>;
-  owl:versionInfo "2025";
-  dcat:version "2025";
-  dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
+  owl:versionInfo "2025a".
 
 pper:physicalPerson a owl:ObjectProperty;
   rdfs:label "natürliche Person"@de, "physical person"@en, "fyzická osoba"@sk, "fyzická osoba"@cz,
@@ -301,7 +294,7 @@ pper:nameSuffix a owl:ObjectProperty;
 
 pper:placeOfBirth a owl:ObjectProperty;
   rdfs:label "place of birth"@en, "miesto narodenia"@sk;
-  rdfs:range <https://data.gov.sk/def/ontology/location/Location>;
+  rdfs:range <https://data.gov.sk/def/ontology/location/PhysicalAddress>;
   rdfs:domain pper:Birth;
   rdfs:description "Relácia osoby na lokáciu jej narodenia."@sk;
   kdp:xmlElementName "PlaceOfBirth";
@@ -318,7 +311,7 @@ pper:placeOfBirth a owl:ObjectProperty;
 pper:placeOfDeath a owl:ObjectProperty;
   rdfs:label "place of death"@en, "miesto úmrtia"@sk;
   rdfs:domain pper:Death;
-  rdfs:range <https://data.gov.sk/def/ontology/location/Location>;
+  rdfs:range <https://data.gov.sk/def/ontology/location/PhysicalAddress>;
   rdfs:description "Relácia osoby na lokáciu jej úmrtia fyzickej osoby."@sk;
   kdp:xmlElementName "PlaceOfDeath";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.2>;
