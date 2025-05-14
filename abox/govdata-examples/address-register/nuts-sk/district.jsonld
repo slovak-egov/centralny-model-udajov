@@ -1,27 +1,24 @@
 {
   "@context": {
-    "pper": "https://data.gov.sk/def/ontology/physical-person/",
-    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egov/",
-    "nuts3": "https://data.gov.sk/id/nuts3/",
-    "lau1": "https://data.gov.sk/id/lau1/",
-    "lau2": "https://data.gov.sk/id/lau2/",
-    "street": "https://data.gov.sk/id/street/",
     "uncountry": "https://data.gov.sk/def/uncountry/",
-    "address-type": "https://data.gov.sk/def/address-type/",
+    "nuts3": "https://data.gov.sk/def/nuts3/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "district": "https://data.gov.sk/def/district/",
+    "street": "https://data.gov.sk/id/street/",
+    "postcode": "https://data.gov.sk/def/postcode/",
     "address": "https://data.gov.sk/id/physical-address/",
     "legal-subject": "https://data.gov.sk/id/legal-subject/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
-    "codelist": "https://data.gov.sk/set/codelist/",
     "geo": "http://www.opengis.net/ont/geosparql#",
     "sf": "http://www.opengis.net/ont/sf#",
-    "adms": "http://www.w3.org/ns/adms#",
     "dct": "http://purl.org/dc/terms/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "locn": "http://www.w3.org/ns/locn#",
-    "xs": "http://www.w3.org/2001/XMLSchema#"
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   },
   "@id": "isvs:192",
   "@graph": [
@@ -32,55 +29,19 @@
         "@value": "Trnávka",
         "@language": "sk"
       },
-      "adms:identifier": {
-        "@type": "adms:Identifier",
-        "skos:notation": {
-          "@value": "412703",
-          "@type": "xs:string"
-        },
-        "dct:type": {
-          "@id": "identifiertype:district",
-          "@type": "egov:IdentifierType",
-          "skos:prefLabel": {
-            "@language": "sk",
-            "@value": "identifikátor časti obce"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL010141"
-          }
-        },
-        "skos:broader": {
-          "@id": "lau2:SK0229506010",
-          "@type": "loca:LAU2",
-          "skos:prefLabel": {
-            "@value": "Horná Súča",
-            "@language": "sk"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL000025"
-          }
-        },
-        "egov:issuingCountry": {
-          "@id": "uncountry:703",
-          "skos:prefLabel": {
-            "@value": "Slovenská republika",
-            "@language": "sk"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL000086"
-          }
-        }
+      "skos:broader": {
+        "@id": "lau2:SK0101528595"
       },
       "dct:publisher": {
-        "@id": "legal-subject:00151866",
-        "@type": "lsub:LegalSubject",
-        "skos:prefLabel": {
-          "@value": "Ministerstvo vnútra Slovenskej republiky",
-          "@language": "sk"
-        }
+        "@id": "legal-subject:00151866"
       },
-      "schema:validFrom": {
-        "@value": "2020-11-26"
+      "egov:timeValidity": {
+        "@type": "dct:PeriodOfTime",
+        "dcat:startDate": 
+        {
+          "@value": "2020-11-26",
+          "@type": "xsd:date"
+        }
       }
     }
   ]
