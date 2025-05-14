@@ -1,0 +1,385 @@
+@prefix : <https://data.gov.sk/def/ontology/egov/2025a#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dsig: <http://www.w3.org/2000/09/xmldsig#> .
+@prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+egov:2025a a owl:Ontology;
+  dct:contributor <http://www.linkedin.com/in/mareksurek>, <http://www.linkedin.com/in/miroslavliska>;
+  dct:creator <http://www.linkedin.com/in/emillazenga>;
+  dct:title "Ontológia egovernment entít";
+  rdfs:description "Ontológia egovernment entít definuje základné entity eGovernmentu ako Informačný systém verejne správy, KRIS, Štúdia uskutočnisteľnosti a ostatné. Primárne slúži na popis entít v Centrálnom Metainformačnom systéme. Výnimkou sú entity spojené s elekronickými službami, ktoré sú definované prostredníctvom národného aplikačného profilu CPSV-AP-SK."@sk;
+  owl:versionInfo "2025a" .
+
+egov:Proceedings a owl:Class;
+  rdfs:label "Electronic government proceedings"@en, "Elektronické úradné konanie"@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:description "Jeho súčasťou je množina Elektronických podaní, Elektronických úradných dokumentov a množina dotknutých fyzických a právnickch osob, tj. účastníkov konania."@sk .
+
+egov:agregatesAgenda a owl:ObjectProperty;
+  rdfs:domain egov:PublicAdministrationSection;
+  rdfs:range egov:Agenda;
+  rdfs:description "Relácia úseku verejnej správy na agendu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "agreguje agendu"@sk .
+
+egov:determinesObjective a owl:ObjectProperty;
+  rdfs:domain egov:KRIS;
+  rdfs:range egov:Objective;
+  rdfs:description "Relácia KRIS na cieľ."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "stanovuje cieľ"@sk .
+
+egov:developsISVS a owl:ObjectProperty;
+  rdfs:domain egov:Project;
+  rdfs:range egov:ISVS;
+  rdfs:description "Relácia Egov projektu na ISVS."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "rozvíja ISVS"@sk .
+
+egov:developsProject a owl:ObjectProperty;
+  rdfs:domain egov:KRIS;
+  rdfs:range egov:Project;
+  rdfs:description "Relácia KRIS na projekt."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "rozvíja projekt"@sk .
+
+egov:funds a owl:ObjectProperty;
+  owl:inverseOf egov:isFundedBy;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:handlesAgenda a owl:ObjectProperty;
+  rdfs:domain egov:ApplicationService;
+  rdfs:range egov:Agenda;
+  rdfs:description "Relácia na agendu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "obsluhuje agendu"@sk .
+
+egov:handlesProject a owl:ObjectProperty;
+  rdfs:range egov:Project;
+  rdfs:description "Relácia orgánu verejnej moci na projek."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "obsluhuje projekt"@sk .
+
+egov:handlesPublicService a owl:ObjectProperty;
+  rdfs:domain egov:EForm;
+  rdfs:description "Relácia EFormulára na koncovú službu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "obsluhuje koncovú službu"@sk .
+
+egov:isFundedBy a owl:ObjectProperty;
+  rdfs:domain egov:Project;
+  rdfs:range egov:OperationProgram;
+  rdfs:description "Relácia EGOV projektu na operačný program."@sk, "Relácia operačného programu na EGOV projekt."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "financuje"@sk, "je financované prostredníctvom"@sk .
+
+egov:makesApplicationServiceAvaliable a owl:ObjectProperty;
+  rdfs:domain egov:EndPoint;
+  rdfs:range egov:ApplicationService;
+  rdfs:description "Relácia na aplikačnú službu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "sprístupňuje aplikačnú službu"@sk .
+
+egov:managesApplicationService a owl:ObjectProperty;
+  rdfs:range egov:ApplicationService;
+  rdfs:description "Relácia orgánu verejnej moci na aplikačnú službu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "spravuje aplikačnú službu"@sk .
+
+egov:managesISVS a owl:ObjectProperty;
+  rdfs:range egov:ISVS;
+  rdfs:description "Relácia orgánu verejnej moci na ISVS."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "spravuje ISVS"@sk .
+
+egov:operatesApplicationService a owl:ObjectProperty;
+  rdfs:domain egov:ObligatedPerson;
+  rdfs:range egov:ApplicationService;
+  rdfs:description "Relácia orgánu verejnej moci na aplikačnú službu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "prevádzkuje aplikačnú službu"@sk .
+
+egov:operatesISVS a owl:ObjectProperty;
+  rdfs:domain egov:ObligatedPerson;
+  rdfs:description "Relácia orgánu verejnej moci na ISVS."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "prevádzkuje ISVS"@sk .
+
+egov:performsAgenda a owl:ObjectProperty;
+  rdfs:range egov:Agenda;
+  rdfs:description "Relácia orgánu verejnej moci na agendu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "vykonáva agendu"@sk .
+
+egov:projectPhase a owl:ObjectProperty;
+  rdfs:domain egov:Project;
+  rdfs:range egov:ProjectPhase;
+  rdfs:description "Relácia projektu na jeho fázu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "fáza projektu"@sk .
+
+egov:projectPhaseType a owl:ObjectProperty;
+  rdfs:domain egov:Project;
+  rdfs:range egov:ProjectPhaseType;
+  rdfs:description "Relácia projektu na jeho fázu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "fáza projektu"@sk .
+
+egov:providesApplicationServiceOperation a owl:ObjectProperty;
+  rdfs:domain egov:EndPoint;
+  rdfs:range egov:ApplicationServiceOperation;
+  rdfs:description "Relácia koncového bodu na operáciu aplikačnej služby."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "poskytuje operáciu aplikačnej služby"@sk .
+
+egov:timeValidity a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:description "Časová platnosť alebo časové obmedzenie. Definuje sa začiatkom a koncom časového intervalu."@sk;
+  rdfs:range dct:PeriodOfTime;
+  rdfs:domain egov:ThingWithValidity;
+  rdfs:label "časová platnosť"@sk, "time validity"@en .
+
+egov:realizesApplicationService a owl:ObjectProperty;
+  rdfs:domain egov:ISVS, egov:Project;
+  rdfs:range egov:ApplicationService;
+  rdfs:description "Relácia ISVS na aplikačnú službu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "realizuje aplikačnú službu"@sk .
+
+egov:realizesPublicService a owl:ObjectProperty;
+  rdfs:domain egov:ApplicationService;
+  rdfs:description "Relácia aplikačnej služby na koncovú službu."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "realizuje koncovú službu"@sk .
+
+egov:ServicePhase a owl:Class;
+  rdfs:subClassOf dct:PeriodOfTime, _:genid-1b905997b3eb4fa98de3d878c8ce5d67-78470FA8AE7946335E72C8B51412BBF7;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Fáza služby"@sk, "Service Phase"@en .
+
+egov:receiver a owl:ObjectProperty;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:referenceRegister a owl:ObjectProperty;
+  rdfs:domain egov:ReferenceData;
+  rdfs:range egov:ReferenceRegister;
+  rdfs:description "Relácia na referenčný register."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Referenzregister"@de, "reference register"@en, "referenčný register"@sk .
+
+egov:refersToKRIS a owl:ObjectProperty;
+  rdfs:domain egov:KRISProtocol;
+  rdfs:range egov:KRIS;
+  rdfs:description "Relácia KRIS protokolu na jeho KRIS."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "referuje KRIS"@sk .
+
+egov:sender a owl:ObjectProperty;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:steamsFromFS a owl:ObjectProperty;
+  rdfs:domain egov:Project;
+  rdfs:range egov:FeasibilityStudy;
+  rdfs:description "Relácia projektu na jeho štúdiu uskutočniteľnosti."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "vznikol zo štúdie uskutočniteľnosti"@sk .
+
+egov:takesOverPrinciple a owl:ObjectProperty;
+  rdfs:domain egov:FeasibilityStudy;
+  rdfs:range egov:Principle;
+  rdfs:description "Relácia štúdie uskutočniteľnosti na princíp."@sk;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "preberá princíp"@sk .
+
+egov:issuingCountry a owl:ObjectProperty;
+  rdfs:label "issuer contrry"@en, "krajina vydavateľa"@sk, "Land des Herausgebers"@de;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:ProjectPhase a owl:Class;
+  rdfs:subClassOf dct:PeriodOfTime, _:genid-1b905997b3eb4fa98de3d878c8ce5d67-C6D355DB4501F4CC7EC60EB23011E1AC;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Fáza projektu"@sk, "Project phase"@en .
+
+rdf:Statement a owl:Class .
+
+egov:Agenda a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Agenda"@de, "Agenda"@en, "Agenda"@sk .
+
+egov:ApplicationService a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Anwendungsservice"@de, "Aplikačná služba"@sk, "Application service"@en;
+  <http://www.w3.org/2004/02/skos/core#altLabel> "is service"@en, "is služba"@sk;
+  rdfs:subClassOf adms:Asset .
+
+egov:ApplicationServiceOperation a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Anwendung Service Betrieb"@de, "Application service operation"@en, "Operácia aplikacnej služby"@sk .
+
+egov:EAdjugement a owl:Class;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:EForm a owl:Class;
+  rdfs:subClassOf cv:Evidence;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Electronic form"@en, "Elektronický formulár"@sk, "Elektronische Form"@de .
+
+egov:EndPoint a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "End point"@en, "Endpunkt"@de, "Koncový bod"@sk .
+
+egov:FeasibilityStudy a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Feasibility study"@en, "Machbarkeitsstudie"@de, "Štúdia uskutočniteľnosti"@sk;
+  rdfs:subClassOf adms:Asset .
+
+egov:ISVS a owl:Class;
+  rdfs:subClassOf _:genid-1b905997b3eb4fa98de3d878c8ce5d67-8885C8C3CADCF0148A5F351BE700FEA4,
+    adms:Asset;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Informationssystem der öffentlichen Verwaltung"@de, "Informačný systém verejnej správy"@sk,
+    "Public administration information system"@en .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-8885C8C3CADCF0148A5F351BE700FEA4 a owl:Restriction;
+  owl:allValuesFrom egov:Module .
+
+egov:KRIS a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Koncepcia rozvoja informačného systému"@sk;
+  rdfs:subClassOf adms:Asset .
+
+egov:KRISProtocol a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Protokol koncepcie rozvoja informačného systému"@sk;
+  rdfs:subClassOf adms:Asset .
+
+egov:Module a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Modul"@sk, "Module"@en .
+
+egov:Objective a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Cieľ prioritnej osy"@sk, "Objective"@en .
+
+egov:ObligatedPerson a owl:Class;
+  rdfs:subClassOf cv:PublicAuthority, lsub:BusinessPerson;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Obligated Person"@en, "Povinná osoba"@sk .
+
+egov:SourceRegister a owl:Class;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:OperationProgram a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Operation program"@en, "Operačný program"@sk .
+
+egov:PO7Objective a owl:Class;
+  rdfs:subClassOf egov:Objective;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Cieľ prioritnej osy 7"@sk, "PO7 Objective"@en .
+
+egov:Principle a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Principle"@en, "Princíp"@sk .
+
+egov:Process a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Proces"@sk, "Process"@en .
+
+egov:Project a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Project"@en, "Projekt"@sk .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-C6D355DB4501F4CC7EC60EB23011E1AC a owl:Restriction;
+  owl:onProperty dct:type;
+  owl:allValuesFrom egov:ProjectPhaseType .
+
+egov:ProjectPhaseType a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Project phase type"@en, "Typ fázy projektu"@sk .
+
+egov:PublicAdministrationSection a owl:Class;
+  rdfs:subClassOf _:genid-1b905997b3eb4fa98de3d878c8ce5d67-FD07D45A376D1DA75A8D1DD5B88245B2;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Public administration section"@en, "Úsek verejnej správy"@sk .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-FD07D45A376D1DA75A8D1DD5B88245B2 a owl:Restriction .
+
+egov:ReferenceData a owl:Class;
+  rdfs:subClassOf rdf:Statement, _:genid-1b905997b3eb4fa98de3d878c8ce5d67-F4C06FB1462C4DC9FC8711FBB41DF26B,
+    _:genid-1b905997b3eb4fa98de3d878c8ce5d67-9B9EC3BC293BE8C271FB713885A8962E;
+  rdfs:isDefinedBy egov:2024-06-02;
+  rdfs:label "Reference Data"@en, "Referenčné údaje"@sk .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-F4C06FB1462C4DC9FC8711FBB41DF26B a owl:Restriction;
+  owl:allValuesFrom egov:SourceRegister .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-9B9EC3BC293BE8C271FB713885A8962E a owl:Restriction;
+  owl:onProperty egov:referenceRegister;
+  owl:allValuesFrom egov:ReferenceRegister .
+
+egov:ReferenceRegister a owl:Class;
+  rdfs:subClassOf egov:ISVS;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Reference Register"@en, "Referenčný register"@sk .
+
+egov:RequiredAuthentificationLevel a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Požadovaná úroveň autentifikácie"@sk, "Required Authentification Level"@en .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-78470FA8AE7946335E72C8B51412BBF7 a owl:Restriction;
+  owl:onProperty dct:type .
+
+egov:ServicePhaseType a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Service Phase Type"@en, "Typ fázy služby"@sk .
+
+egov:Situation a owl:Class;
+  rdfs:subClassOf _:genid-1b905997b3eb4fa98de3d878c8ce5d67-B9B9217108CAD2389C547565856403E1;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Situation"@en, "Situácia"@sk .
+
+_:genid-1b905997b3eb4fa98de3d878c8ce5d67-B9B9217108CAD2389C547565856403E1 a owl:Restriction;
+  owl:onProperty dct:type .
+
+egov:ThingWithCapability a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Schopnosť"@sk, "Capability"@en;
+  rdfs:description "Trieda pre všeobecný prvok, ktorý má nejakú schopnosť. Definuje sa vo všeobecnej EGOV ontológii, lebo sa predpokladá, že sa bude používať ako “super” trieda, konkrétne triedy budú od nej dediť."@sk .
+
+egov:ThingWithValidity a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:subClassOf egov:ThingWithCapability;
+  rdfs:label "Schopnosť validácie"@sk, "Validation Capability"@en;
+  rdfs:description "Trieda pre všeobecný prvok, ktorý má nejakú platnosť (napr. časovú platnosť alebo časové obmedzenie), definujeme ju ako podtriedu triedy ThingWithCapability. Tiež predpokladáme, že z nej budú dediť konkrétnejšie triedy v špecifických ontológiách."@sk .
+
+egov:EGovDocument a owl:Class;
+  rdfs:subClassOf egov:EForm;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Elektronický úradný dokument"@sk, "Electronic government document"@en .
+
+egov:ElectronicSubmission a owl:Class;
+  rdfs:label "Electronic submission"@en, "Elektronické podanie"@sk;
+  rdfs:subClassOf egov:EForm;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:EFormType a owl:Class;
+  rdfs:label "Typ elektronického formulára"@sk, "Electronic form type"@en;
+  rdfs:isDefinedBy egov:2025a .
+
+egov:ProceedingsType a owl:Class;
+  rdfs:isDefinedBy egov:2025a;
+  rdfs:label "Typ elektronického úradného konania"@sk, "Electronic government proceedings type"@en .

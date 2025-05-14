@@ -18,9 +18,16 @@
 loca:2025a a owl:Ontology;
   dct:title "Ontológia lokácie";
   dct:creator <http://www.linkedin.com/in/emillazenga>;
-  dct:contributor <http://www.linkedin.com/in/mareksurek>;
-  owl:versionInfo "2025a";
-  dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
+  dct:contributor <http://www.linkedin.com/in/mareksurek>, <http://www.linkedin.com/in/miroslavliska>;
+  owl:versionInfo "2025a" .
+
+loca:unCountry a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy loca:2025a;
+  rdfs:label "krajina OSN"@sk, "UN country"@en, "UN-Land"@de;
+  rdfs:domain loca:PhysicalAddress;
+  rdfs:range loca:UNCountry;
+  rdfs:description "Relácia na krajinu OSN definovanú hodnotami číselníka CL000086 Krajina OSN."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.2> .
 
 loca:addressType a owl:ObjectProperty, rdf:Property;
   rdfs:isDefinedBy loca:2025a;
@@ -53,14 +60,6 @@ loca:buildingPurpose a owl:ObjectProperty, rdf:Property;
   rdfs:range loca:BuildingPurpose;
   rdfs:description "Relácia budovy na jej účel definovaný hodnotami číselníka CL010142 Účel budovy."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.16.2> .
-
-loca:unCountry a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025a;
-  rdfs:label "krajina OSN"@sk, "UN country"@en, "UN-Land"@de;
-  rdfs:domain loca:PhysicalAddress;
-  rdfs:range loca:UNCountry;
-  rdfs:description "Relácia na krajinu OSN definovanú hodnotami číselníka CL000086 Krajina OSN."@sk;
-  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.2> .
 
 loca:nuts3 a rdf:Property, owl:ObjectProperty;
   rdfs:isDefinedBy loca:2025a;

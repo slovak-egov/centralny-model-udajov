@@ -4,7 +4,7 @@
     "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egov/",
-    "rfo": "https://data.minv.sk/def/ontology/rfo",
+    "rfo": "https://data.minv.sk/def/ontology/rfo/",
     "lau2": "https://data.gov.sk/def/lau2/",
     "lau1": "https://data.gov.sk/def/lau1/",
     "district": "https://data.gov.sk/def/district/",

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF 
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:reg="https://data.minv.sk/def/ontology/registry/"
     xmlns:rfo="https://data.minv.sk/def/ontology/rfo/"
-    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/" 
-    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/" 
-    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/" 
-    xmlns:loca="https://data.gov.sk/def/ontology/location/" 
-    xmlns:dct="http://purl.org/dc/terms/" 
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
-    xmlns:cccev="http://data.europa.eu/m8g/" 
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:cccev="http://data.europa.eu/m8g/"
     xmlns:xs="http://www.w3.org/2001/XMLSchema#">
 
     <cccev:Evidence>
@@ -35,7 +34,7 @@
         <dct:spatial>
             <loca:PhysicalAddress>
                 <loca:lau2>
-                    <loca:LAU2 rdf:about="https://data.gov.sk/id/lau2/SK0235504025">
+                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
                         <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
                         <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
                     </loca:LAU2>
@@ -50,7 +49,7 @@
                 <pper:givenName>Severín</pper:givenName>
                 <!-- priezvisko -->
                 <pper:familyName>Novák</pper:familyName>
-                
+
                 <pper:birth>
                     <pper:Birth>
                         <!-- deň, mesiac a rok narodenia -->
@@ -61,13 +60,13 @@
                         <pper:placeOfBirth>
                             <loca:PhysicalAddress>
                                 <loca:lau2>
-                                    <loca:LAU2 rdf:about="https://data.gov.sk/id/lau2/SK0235504025">
+                                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
                                         <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
                                         <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
                                     </loca:LAU2>
                                 </loca:lau2>
                                 <loca:lau1>
-                                    <loca:LAU1 rdf:about="https://data.gov.sk/id/lau1/SK0235">
+                                    <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
                                         <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
                                         <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
                                     </loca:LAU1>
@@ -76,14 +75,14 @@
                         </pper:placeOfBirth>
                     </pper:Birth>
                 </pper:birth>
-                
+
                 <!-- rodné číslo -->
                 <pper:birthNumber>
                     <pper:BirthNumber>
                         <pper:birthNumberCode>730704/6912</pper:birthNumberCode>
                     </pper:BirthNumber>
                 </pper:birthNumber>
-                
+
                 <!-- pohlavie -->
                 <pper:sex>
                     <pper:Sex rdf:about="https://data.gov.sk/def/sex/1">
@@ -111,7 +110,7 @@
                                 </dct:type>
                             </pper:NamePrefix>
                         </pper:namePrefix>
-                        
+
                         <pper:birth>
                             <pper:Birth>
                                 <!-- rodné priezvisko -->
@@ -122,13 +121,13 @@
                                 <pper:placeOfBirth>
                                     <loca:PhysicalAddress>
                                         <loca:lau2>
-                                            <loca:LAU2 rdf:about="https://data.gov.sk/id/lau2/SK0235504025">
+                                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
                                                 <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
                                                 <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
                                             </loca:LAU2>
                                         </loca:lau2>
                                         <loca:lau1>
-                                            <loca:LAU1 rdf:about="https://data.gov.sk/id/lau1/SK0235">
+                                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
                                                 <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
                                                 <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
                                             </loca:LAU1>
@@ -143,7 +142,7 @@
                                 </pper:placeOfBirth>
                             </pper:Birth>
                         </pper:birth>
-                        
+
                         <!-- rodné číslo -->
                         <pper:birthNumber>
                             <pper:BirthNumber>
@@ -179,7 +178,7 @@
                                 </dct:type>
                             </pper:NameSuffix>
                         </pper:nameSuffix>
-                        
+
                         <pper:birth>
                             <pper:Birth>
                                 <!-- rodné priezvisko -->
@@ -190,13 +189,13 @@
                                 <pper:placeOfBirth>
                                     <loca:PhysicalAddress>
                                         <loca:lau2>
-                                            <loca:LAU2 rdf:about="https://data.gov.sk/id/lau2/SK0235504025">
+                                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
                                                 <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
                                                 <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
                                             </loca:LAU2>
                                         </loca:lau2>
                                         <loca:lau1>
-                                            <loca:LAU1 rdf:about="https://data.gov.sk/id/lau1/SK0235">
+                                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
                                                 <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
                                                 <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
                                             </loca:LAU1>
@@ -211,7 +210,7 @@
                                 </pper:placeOfBirth>
                             </pper:Birth>
                         </pper:birth>
-                        
+
                         <!-- rodné číslo -->
                         <pper:birthNumber>
                             <pper:BirthNumber>

@@ -38,7 +38,7 @@
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/education/2023b"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/healthcare/2023b"/>
-    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/egov/2025a"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/finance/2021-MM-DD"/>
     
     <dcat:dataset rdf:resource="https://data.gov.sk/set/international-organizations/2021-MM-DD"/>
@@ -106,7 +106,6 @@
   
   <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person/2025a">
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
-    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
     <dcat:version rdf:datatype="&xsd;string">2025a</dcat:version>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
     <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a.owl"/>
@@ -151,7 +150,6 @@
   <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/location/2025a">
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
     <dcat:version rdf:datatype="&xsd;string">2025a</dcat:version>
-    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
     <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/location/2025a.owl"/>
     <!-- toto zabezpeci zobrazenie v zalozke "Ontologie" -->
@@ -227,12 +225,15 @@
     <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD"/> 
   </dcat:Dataset>
   
-  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/egov/2021-MM-DD">
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/egov/2025a">
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
-    <dcat:version rdf:datatype="&xsd;string">2021-MM-DD</dcat:version>
-    <dct:creator rdf:resource="https://data.gov.sk/id/officer/miroslav.liska@mirri.gov.sk"/>
+    <dcat:version rdf:datatype="&xsd;string">2025a</dcat:version>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
-    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/egov/2021-MM-DD.owl"/>   
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/egov/2025a.owl"/>
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dct:title xml:lang="sk">Ontológia egov entít</dct:title>
+    <dct:title xml:lang="en">EGOV Elements Ontology</dct:title>
   </dcat:Dataset>
     
 

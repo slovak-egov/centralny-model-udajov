@@ -1,8 +1,10 @@
-@prefix : <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix : <https://data.gov.sk/def/ontology/physical-person/2025a#> .
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
@@ -10,16 +12,14 @@
 @prefix egov: <https://data.gov.sk/def/ontology/egov/> .
 @prefix loca: <https://data.gov.sk/def/ontology/location/> .
 @prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 pper:2025a a owl:Ontology;
   dct:title "Ontológia fyzickej osoby";
-  dct:creator <http://www.linkedin.com/in/miroslavliska>;
-  dct:contributor <http://www.linkedin.com/in/mareksurek>;
-  owl:versionInfo "2025a".
+  dct:creator <http://www.linkedin.com/in/bleki>;
+  dct:contributor <http://www.linkedin.com/in/mareksurek>, <http://www.linkedin.com/in/miroslavliska>;
+  owl:versionInfo "2025a" .
 
 pper:physicalPerson a owl:ObjectProperty;
   rdfs:label "natürliche Person"@de, "physical person"@en, "fyzická osoba"@sk, "fyzická osoba"@cz,
@@ -41,9 +41,7 @@ pper:identifier a owl:DatatypeProperty;
 pper:recordIdentifier a owl:DatatypeProperty;
   rdfs:subPropertyOf dct:identifier;
   rdfs:label "IFO";
-  skos:altLabel "Identifikátor fyzickej osoby"@sk;
-  skos:altLabel "PČO";
-  skos:altLabel "Počítačové číslo osoby"@sk;
+  skos:altLabel "Identifikátor fyzickej osoby"@sk, "PČO", "Počítačové číslo osoby"@sk;
   rdfs:domain pper:PhysicalPerson;
   rdfs:description "Identifikátor fyzickej osoby (ďalej len „IFO“) označovaný aj ako „PČO“ (počítačové číslo osoby)."@sk;
   rdfs:isDefinedBy pper:2025a .
@@ -66,7 +64,7 @@ pper:birth a owl:ObjectProperty;
 pper:citizenship a owl:ObjectProperty;
   rdfs:label "citizenship"@en, "štátna príslušnosť"@sk, "Staatsangehörigkeit"@de;
   rdfs:domain pper:PhysicalPerson;
-  rdfs:range <https://data.gov.sk/def/ontology/location/Country>;
+  rdfs:range loca:Country;
   kdp:xmlElementName "Citizenship";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.7>;
   rdfs:description "Relácia osoby na jej štátnu príslušnosť definovanú hodnotami číselníka CL000086 Krajina OSN."@sk;
@@ -294,7 +292,7 @@ pper:nameSuffix a owl:ObjectProperty;
 
 pper:placeOfBirth a owl:ObjectProperty;
   rdfs:label "place of birth"@en, "miesto narodenia"@sk;
-  rdfs:range <https://data.gov.sk/def/ontology/location/PhysicalAddress>;
+  rdfs:range loca:PhysicalAddress;
   rdfs:domain pper:Birth;
   rdfs:description "Relácia osoby na lokáciu jej narodenia."@sk;
   kdp:xmlElementName "PlaceOfBirth";
@@ -311,7 +309,7 @@ pper:placeOfBirth a owl:ObjectProperty;
 pper:placeOfDeath a owl:ObjectProperty;
   rdfs:label "place of death"@en, "miesto úmrtia"@sk;
   rdfs:domain pper:Death;
-  rdfs:range <https://data.gov.sk/def/ontology/location/PhysicalAddress>;
+  rdfs:range loca:PhysicalAddress;
   rdfs:description "Relácia osoby na lokáciu jej úmrtia fyzickej osoby."@sk;
   kdp:xmlElementName "PlaceOfDeath";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.6.2>;

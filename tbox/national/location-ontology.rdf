@@ -23,7 +23,10 @@
 	<dct:creator rdf:resource="http://www.linkedin.com/in/emillazenga"/>
 	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
 	<owl:versionInfo>2025a</owl:versionInfo>
-	<dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/unCountry">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/addressType">
@@ -1415,8 +1418,8 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/unCountry">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/location/2025a">
+	<dct:contributor rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
 </rdf:Description>
 
 </rdf:RDF>
