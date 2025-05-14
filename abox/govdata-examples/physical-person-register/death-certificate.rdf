@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="https://data.minv.sk/def/ontology/registry/"
+    xmlns:rfo="https://data.minv.sk/def/ontology/rfo/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:cccev="http://data.europa.eu/m8g/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+
+    <cccev:Evidence>
+        <dct:type>
+            <cccev:EvidenceType rdf:about="https://data.gov.sk/def/evidence-type/16">
+                <skos:prefLabel xml:lang="sk">Úmrtný list</skos:prefLabel>
+            </cccev:EvidenceType>
+        </dct:type>
+
+        <!-- Číslo -->
+        <dct:identifier>419/2001</dct:identifier>
+
+        <!-- V knihe úmrtí matričného úradu -->
+        <dct:publisher>
+            <lsub:LegalSubject rdf:about="https://data.minv.sk/registry-office/2038">
+                <skos:prefLabel xml:lang="sk">Mesto Šaľa</skos:prefLabel>
+            </lsub:LegalSubject>
+        </dct:publisher>
+
+        <!-- V (datum) -->
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-09</dct:issued>
+        <!-- V (obec) -->
+        <dct:spatial>
+            <loca:PhysicalAddress>
+                <loca:lau2>
+                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                    </loca:LAU2>
+                </loca:lau2>
+            </loca:PhysicalAddress>
+        </dct:spatial>
+
+        <!-- osoba na UL -->
+        <dct:subject>
+            <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Severín</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Novák</pper:familyName>
+
+                <pper:death>
+                    <pper:Death>
+                        <!-- deň, mesiac a rok úmrtia -->
+                        <pper:dateOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfDeath>
+                        <!-- dátum úmrtia slovom -->
+                        <rfo:dateOfDeathText>Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfDeathText>
+                        <!-- miesto úmrtia -->
+                        <pper:placeOfDeath>
+                            <loca:PhysicalAddress>
+                                <loca:lau2>
+                                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                                    </loca:LAU2>
+                                </loca:lau2>
+                                <loca:lau1>
+                                    <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                                        <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                                    </loca:LAU1>
+                                </loca:lau1>
+                            </loca:PhysicalAddress>
+                        </pper:placeOfDeath>
+                    </pper:Death>
+                </pper:death>
+
+                <pper:birth>
+                    <pper:Birth>
+                        <!-- rodné priezvisko -->
+                        <pper:givenFamilyName>Horváth</pper:givenFamilyName>
+                        <!-- deň, mesiac a rok narodenia -->
+                        <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1955-04-04</pper:dateOfBirth>
+                        <!-- miesto narodenia -->
+                        <pper:placeOfBirth>
+                            <loca:PhysicalAddress>
+                                <loca:lau2>
+                                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                                    </loca:LAU2>
+                                </loca:lau2>
+                                <loca:lau1>
+                                    <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                                        <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                                    </loca:LAU1>
+                                </loca:lau1>
+                                <loca:unCountry>
+                                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
+                                    </loca:UNCountry>
+                                </loca:unCountry>
+                            </loca:PhysicalAddress>
+                        </pper:placeOfBirth>
+                    </pper:Birth>
+                </pper:birth>
+
+                <!-- rodné číslo -->
+                <pper:birthNumber>
+                    <pper:BirthNumber>
+                        <pper:birthNumberCode>730704/6912</pper:birthNumberCode>
+                    </pper:BirthNumber>
+                </pper:birthNumber>
+
+                <!-- pohlavie -->
+                <pper:sex>
+                    <pper:Sex rdf:about="https://data.gov.sk/def/sex/1">
+                        <skos:prefLabel xml:lang="sk">muž</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">férfi</skos:prefLabel>
+                    </pper:Sex>
+                </pper:sex>
+
+                <!-- trvalý pobyt -->
+                <pper:permanentResidence>
+                    <pper:PermanentResidence>
+                        <loca:physicalAddress>
+                            <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/{id-adresy}">
+                                <!-- URI adresy a ID adresy su nice-to-have -->
+                                <loca:identifier>{id-adresy}</loca:identifier>
+                                <loca:street>
+                                    <loca:Street>
+                                        <!-- v prípade viacjazyčných názvov sa použijú lang atribúty ako v iných prefLabel -->
+                                        <skos:prefLabel>Štefánikova</skos:prefLabel>
+                                    </loca:Street>
+                                </loca:street>
+                                <loca:orientationNumber>16</loca:orientationNumber>
+                                <loca:propertyRegistrationNumber>4475</loca:propertyRegistrationNumber>
+                                <loca:district>
+                                    <loca:District rdf:about="https://data.gov.sk/def/district//401468">
+                                        <skos:prefLabel>Borský Peter</skos:prefLabel>
+                                    </loca:District>
+                                </loca:district>
+                                <loca:lau2>
+                                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0101528595">
+                                        <skos:prefLabel>Bratislava - mestská časť Staré Mesto</skos:prefLabel>
+                                    </loca:LAU2>
+                                </loca:lau2>
+                                <loca:lau1>
+                                    <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0101">
+                                        <skos:prefLabel>Okres Bratislava I</skos:prefLabel>
+                                    </loca:LAU1>
+                                </loca:lau1>
+                                <loca:unCountry>
+                                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                        <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
+                                    </loca:UNCountry>
+                                </loca:unCountry>
+                            </loca:PhysicalAddress>
+                        </loca:physicalAddress>
+                        <!-- pokiaľ by sme potrebovali uvádzať aj platnosť od, prip. do.. -->
+                        <egov:timeValidity>
+                            <dct:PeriodOfTime>
+                                <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-01-01</dcat:startDate>
+                                <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-01</dcat:endDate>
+                            </dct:PeriodOfTime>
+                        </egov:timeValidity>
+                    </pper:PermanentResidence>
+                </pper:permanentResidence>
+
+                <!-- trvalý pobyt mimo uzemia SR, neštrukturovana adresa -->
+                <pper:permanentResidence>
+                    <pper:PermanentResidence>
+                        <loca:physicalAddress>
+                            <loca:PhysicalAddress>
+                                <loca:formattedAddress>Győr, Győri Nemzeti Színház, Czuczor Gergely u. 7</loca:formattedAddress>
+                                <loca:unCountry>
+                                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/348">
+                                        <skos:prefLabel xml:lang="sk">Maďarsko</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Magyarország</skos:prefLabel>
+                                    </loca:UNCountry>
+                                </loca:unCountry>
+                            </loca:PhysicalAddress>
+                        </loca:physicalAddress>
+                        <!-- pokiaľ by sme potrebovali uvádzať aj platnosť od, prip. do.. -->
+                        <egov:timeValidity>
+                            <dct:PeriodOfTime>
+                                <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-01-01</dcat:startDate>
+                                <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-01</dcat:endDate>
+                            </dct:PeriodOfTime>
+                        </egov:timeValidity>
+                    </pper:PermanentResidence>
+                </pper:permanentResidence>
+
+            </pper:PhysicalPerson>
+        </dct:subject>
+
+        <!-- Poznámky -->
+        <skos:note>Voľnotextové poznámky, môže sa vyskytovať násobne..</skos:note>
+
+        <!-- registratúra -->
+        <reg:registryEntry>
+            <reg:RegistryEntry>
+                <!-- meno a priezvisko matrikára -->
+                <dct:creator>
+                    <pper:PhysicalPerson>
+                        <!-- meno -->
+                        <pper:givenName>Anna</pper:givenName>
+                        <!-- priezvisko -->
+                        <pper:familyName>Skúšobná</pper:familyName>
+                        <!-- prípadne ak nie je rozdelené, môže sa použiť formattedName -->
+                        <pper:formattedName>Anna Skúšobná</pper:formattedName>
+                    </pper:PhysicalPerson>
+                </dct:creator>
+
+                <!-- zväzok -->
+                <reg:bundleNumber>46</reg:bundleNumber>
+                <!-- ročník -->
+                <reg:bundleYear>1973</reg:bundleYear>
+                <!-- strana -->
+                <reg:pageNumber>12</reg:pageNumber>
+                <!-- poradové číslo -->
+                <reg:sequenceNumber>200</reg:sequenceNumber>
+            </reg:RegistryEntry>
+        </reg:registryEntry>
+
+    </cccev:Evidence>
+
+</rdf:RDF>

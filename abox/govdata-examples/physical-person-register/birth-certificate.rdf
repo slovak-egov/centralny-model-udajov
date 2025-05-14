@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:reg="https://data.minv.sk/def/ontology/registry/"
+    xmlns:rfo="https://data.minv.sk/def/ontology/rfo/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:cccev="http://data.europa.eu/m8g/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+
+    <cccev:Evidence>
+        <dct:type>
+            <cccev:EvidenceType rdf:about="https://data.gov.sk/def/evidence-type/14">
+                <skos:prefLabel xml:lang="sk">Rodný list</skos:prefLabel>
+            </cccev:EvidenceType>
+        </dct:type>
+
+        <!-- Číslo -->
+        <dct:identifier>419/2001</dct:identifier>
+
+        <!-- V knihe narodení matričného úradu -->
+        <dct:publisher>
+            <lsub:LegalSubject rdf:about="https://data.minv.sk/registry-office/2038">
+                <skos:prefLabel xml:lang="sk">Mesto Šaľa</skos:prefLabel>
+            </lsub:LegalSubject>
+        </dct:publisher>
+
+        <!-- V (datum) -->
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-09</dct:issued>
+        <!-- V (obec) -->
+        <dct:spatial>
+            <loca:PhysicalAddress>
+                <loca:lau2>
+                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                    </loca:LAU2>
+                </loca:lau2>
+            </loca:PhysicalAddress>
+        </dct:spatial>
+
+        <!-- osoba na RL -->
+        <dct:subject>
+            <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Severín</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Novák</pper:familyName>
+
+                <pper:birth>
+                    <pper:Birth>
+                        <!-- deň, mesiac a rok narodenia -->
+                        <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfBirth>
+                        <!-- dátum narodenia slovom -->
+                        <rfo:dateOfBirthText>Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfBirthText>
+                        <!-- miesto narodenia -->
+                        <pper:placeOfBirth>
+                            <loca:PhysicalAddress>
+                                <loca:lau2>
+                                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                                    </loca:LAU2>
+                                </loca:lau2>
+                                <loca:lau1>
+                                    <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                                        <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                                    </loca:LAU1>
+                                </loca:lau1>
+                            </loca:PhysicalAddress>
+                        </pper:placeOfBirth>
+                    </pper:Birth>
+                </pper:birth>
+
+                <!-- rodné číslo -->
+                <pper:birthNumber>
+                    <pper:BirthNumber>
+                        <pper:birthNumberCode>730704/6912</pper:birthNumberCode>
+                    </pper:BirthNumber>
+                </pper:birthNumber>
+
+                <!-- pohlavie -->
+                <pper:sex>
+                    <pper:Sex rdf:about="https://data.gov.sk/def/sex/1">
+                        <skos:prefLabel xml:lang="sk">muž</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">férfi</skos:prefLabel>
+                    </pper:Sex>
+                </pper:sex>
+
+                <!-- otec -->
+                <pper:father>
+                    <pper:PhysicalPerson>
+                        <!-- meno -->
+                        <pper:givenName>Michal</pper:givenName>
+                        <!-- priezvisko -->
+                        <pper:familyName>Novák</pper:familyName>
+
+                        <!-- titul pred menom -->
+                        <pper:namePrefix>
+                            <pper:NamePrefix>
+                                <dct:type>
+                                    <pper:NamePrefixType rdf:about="https://data.gov.sk/def/name-prefix/01">
+                                        <skos:prefLabel xml:lang="sk">Ing.</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">Eng.</skos:prefLabel>
+                                    </pper:NamePrefixType>
+                                </dct:type>
+                            </pper:NamePrefix>
+                        </pper:namePrefix>
+
+                        <pper:birth>
+                            <pper:Birth>
+                                <!-- rodné priezvisko -->
+                                <pper:givenFamilyName>Hendrík</pper:givenFamilyName>
+                                <!-- deň, mesiac a rok narodenia -->
+                                <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1953-07-04</pper:dateOfBirth>
+                                <!-- miesto narodenia -->
+                                <pper:placeOfBirth>
+                                    <loca:PhysicalAddress>
+                                        <loca:lau2>
+                                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                                                <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                                                <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                                            </loca:LAU2>
+                                        </loca:lau2>
+                                        <loca:lau1>
+                                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                                                <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                                                <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                                            </loca:LAU1>
+                                        </loca:lau1>
+                                        <loca:unCountry>
+                                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                                <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
+                                            </loca:UNCountry>
+                                        </loca:unCountry>
+                                    </loca:PhysicalAddress>
+                                </pper:placeOfBirth>
+                            </pper:Birth>
+                        </pper:birth>
+
+                        <!-- rodné číslo -->
+                        <pper:birthNumber>
+                            <pper:BirthNumber>
+                                <pper:birthNumberCode>530704/6912</pper:birthNumberCode>
+                            </pper:BirthNumber>
+                        </pper:birthNumber>
+
+                        <!-- štátne občianstvo -->
+                        <pper:citizenship>
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
+                            </loca:UNCountry>
+                        </pper:citizenship>
+                    </pper:PhysicalPerson>
+                </pper:father>
+
+                <!-- matka -->
+                <pper:mother>
+                    <pper:PhysicalPerson>
+                        <!-- meno -->
+                        <pper:givenName>Jana</pper:givenName>
+                        <!-- priezvisko -->
+                        <pper:familyName>Nováková</pper:familyName>
+                        <!-- titul za menom -->
+                        <pper:nameSuffix>
+                            <pper:NameSuffix>
+                                <dct:type>
+                                    <pper:NameSuffixType rdf:about="https://data.gov.sk/def/name-suffix/53">
+                                        <skos:prefLabel xml:lang="sk">PhD.</skos:prefLabel>
+                                        <skos:prefLabel xml:lang="hu">PhD.</skos:prefLabel>
+                                    </pper:NameSuffixType>
+                                </dct:type>
+                            </pper:NameSuffix>
+                        </pper:nameSuffix>
+
+                        <pper:birth>
+                            <pper:Birth>
+                                <!-- rodné priezvisko -->
+                                <pper:givenFamilyName>Horváthová</pper:givenFamilyName>
+                                <!-- deň, mesiac a rok narodenia -->
+                                <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1955-04-04</pper:dateOfBirth>
+                                <!-- miesto narodenia -->
+                                <pper:placeOfBirth>
+                                    <loca:PhysicalAddress>
+                                        <loca:lau2>
+                                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                                                <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                                                <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                                            </loca:LAU2>
+                                        </loca:lau2>
+                                        <loca:lau1>
+                                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                                                <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                                                <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                                            </loca:LAU1>
+                                        </loca:lau1>
+                                        <loca:unCountry>
+                                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                                <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
+                                            </loca:UNCountry>
+                                        </loca:unCountry>
+                                    </loca:PhysicalAddress>
+                                </pper:placeOfBirth>
+                            </pper:Birth>
+                        </pper:birth>
+
+                        <!-- rodné číslo -->
+                        <pper:birthNumber>
+                            <pper:BirthNumber>
+                                <pper:birthNumberCode>550404/6912</pper:birthNumberCode>
+                            </pper:BirthNumber>
+                        </pper:birthNumber>
+
+                        <!-- štátne občianstvo -->
+                        <pper:citizenship>
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
+                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
+                            </loca:UNCountry>
+                        </pper:citizenship>
+                    </pper:PhysicalPerson>
+                </pper:mother>
+
+            </pper:PhysicalPerson>
+        </dct:subject>
+
+        <!-- Poznámky -->
+        <skos:note>Voľnotextové poznámky, môže sa vyskytovať násobne..</skos:note>
+
+        <!-- registratúra -->
+        <reg:registryEntry>
+            <reg:RegistryEntry>
+                <!-- meno a priezvisko matrikára -->
+                <dct:creator>
+                    <pper:PhysicalPerson>
+                        <!-- meno -->
+                        <pper:givenName>Anna</pper:givenName>
+                        <!-- priezvisko -->
+                        <pper:familyName>Skúšobná</pper:familyName>
+                        <!-- prípadne ak nie je rozdelené, môže sa použiť formattedName -->
+                        <pper:formattedName>Anna Skúšobná</pper:formattedName>
+                    </pper:PhysicalPerson>
+                </dct:creator>
+
+                <!-- zväzok -->
+                <reg:bundleNumber>46</reg:bundleNumber>
+                <!-- ročník -->
+                <reg:bundleYear>1973</reg:bundleYear>
+                <!-- strana -->
+                <reg:pageNumber>12</reg:pageNumber>
+                <!-- poradové číslo -->
+                <reg:sequenceNumber>200</reg:sequenceNumber>
+            </reg:RegistryEntry>
+        </reg:registryEntry>
+
+    </cccev:Evidence>
+
+</rdf:RDF>

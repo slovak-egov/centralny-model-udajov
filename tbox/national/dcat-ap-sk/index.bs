@@ -55,6 +55,8 @@ Medzi hlavné triedy štandardu patrí Katalóg, čo je najvyššia entita zosku
 Distribúcií môže mať Dataset viacej, avšak líšiť sa môžu jedine formátom (napr. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
 Obsahovo musia byť distribúcie totožné.
 
+Vlastnosti, ktoré umoznujú viac jazykových verzií sú povinné v slovenskom jazyku @sk. V prípade neuvedenia jazyka bude predpokladaná hodnota @sk. Hodnota pre každý jazyk môže byť uvedená maximálne jeden krát.
+
 Použité prefixy {#použité-prefixy}
 ----------------------------------
 
@@ -313,6 +315,7 @@ dataset: dcat:theme <http://publications.europa.eu/resource/authority/data-theme
 :: Táto Vlastnosť odkazuje na frekvenciu, s ktorou je dataset aktualizovaný.
     Je definovaná ako [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_frequency).
     Podľa DCAT-AP 3.0.0 sú hodnoty z [európského číselníka frekvencií](https://op.europa.eu/sk/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+    Pokiaľ nie je periodicita akualizácie známa, uvedie sa <http://publications.europa.eu/resource/authority/frequency/UNKNOWN>. Pokiaľ je periodicita aktualizácie známa, ale je nepravidelná, uvedie sa <http://publications.europa.eu/resource/authority/frequency/IRREG>
 : Vlastnosť
 :: `periodicita_aktualizace`, `dct:accrualPeriodicity`
 : Typ
@@ -577,7 +580,7 @@ dataset: dcatap:applicableLegislation <http://data.europa.eu/eli/reg_impl/2023/1
 ### Kategória HVD ### {#dataset-kategória-hvd}
 
 : Popis
-:: Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD).
+:: Táto vlastnosť sa používa pre klasifikáciu kategórie datasetu s vysokou socio-ekonomickou hodnotou (high-value dataset - HVD). Vlastnosť sa používa iba v prípade datasetu typu HVD.
 : Vlastnosť
 :: `kategoria_hvd`, `dcatap:hvdCategory`
 : Typ

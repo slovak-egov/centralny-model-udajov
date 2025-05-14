@@ -4,254 +4,278 @@
     "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egov/",
-    "lau2": "https://data.gov.sk/id/lau2/",
-    "lau1": "https://data.gov.sk/id/lau1/",
-    "taxonomy": "https://data.gov.sk/def/taxonomy/",
+    "reg": "https://data.minv.sk/def/ontology/registry/",
+    "rfo": "https://data.minv.sk/def/ontology/rfo/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "district": "https://data.gov.sk/def/district/",
     "sex": "https://data.gov.sk/def/sex/",
-    "edu": "https://data.gov.sk/def/ontology/education/",
     "name-prefix": "https://data.gov.sk/def/name-prefix/",
     "name-suffix": "https://data.gov.sk/def/name-suffix/",
     "uncountry": "https://data.gov.sk/def/uncountry/",
-    "identifiertype": "https://data.gov.sk/def/identifier-type/",
     "evidence-type": "https://data.gov.sk/def/evidence-type/",
+    "physical-address": "https://data.gov.sk/id/physical-address/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
-    "codelist": "https://data.gov.sk/set/codelist/",
-    "legal-subject": "https://data.gov.sk/id/legal-subject/",
     "cccev": "http://data.europa.eu/m8g/",
     "adms": "http://www.w3.org/ns/adms#",
     "dct": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "xs": "http://www.w3.org/2001/XMLSchema#",
-    "pco-person": "https://data.gov.sk/id/pco-physical-person/"
-   },
+    "xs": "http://www.w3.org/2001/XMLSchema#"
+  },
   "@id": "isvs:191",
   "@graph": [
     {
       "@type": "cccev:Evidence",
       "dct:type": {
-        "@id": "evidence-type:TODO",
-        "@type": "egov:EvidenceType",
-        "skos:prefLabel": [
-          {
-            "@language": "sk",
-            "@value": "Úmrtný list"
-          },
-          {
-            "@language": "en",
-            "@value": "Death certificate"
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "taxonomy:evidence-type"
+        "@id": "evidence-type:16",
+        "@type": "cccev:EvidenceType",
+        "skos:prefLabel":{
+          "@language": "sk",
+          "@value": "Úmrtný list"
         }
       },
       "dct:publisher": {
-        "@id": "legal-subject:00681156",
+        "@id": "https://data.minv.sk/registry-office/2038",
         "@type": "lsub:LegalSubject",
-        "skos:prefLabel": [
-          {
-            "@value": "Miestny úrad Petržalka",
-            "@language": "sk"
-          },
-          {
-            "@value": "Petržalka local office",
-            "@language": "en"
-          }
-        ]
+        "skos:prefLabel": {
+          "@value": "Mesto Šaľa",
+          "@language": "sk"
+        }
+      },
+      "dct:issued": {
+        "@value": "1973-07-09",
+        "@type": "xs:date"
+      },
+      "dct:spatial": {
+        "@type": "loca:PhysicalAddress",
+        "loca:lau2": {
+          "@type": "loca:LAU2",
+          "@id": "lau2:SK0235504025"
+        }
       },
       "dct:subject": {
-        "@id": "pco-person:11118058059658",
         "@type": "pper:PhysicalPerson",
         "pper:givenName": {
-          "@value": "Eliška",
+          "@value": "Severín",
           "@type": "xs:string"
         },
         "pper:familyName": {
-          "@value": "Nôžková",
+          "@value": "Novák",
           "@type": "xs:string"
         },
-        "pper:givenFamilyName": {
-          "@type": "xs:string",
-          "@value": "Nôžková"
+        "pper:death": {
+          "@type": "pper:Death",
+          "pper:dateOfDeath": {
+            "@value": "1973-07-04",
+            "@type": "xs:date"
+          },
+          "rfo:dateOfDeathText": {
+            "@value": "Štvrtého júla tisícdeväťstosedemdesiattri",
+            "@type": "xs:string"
+          },
+          "pper:placeOfDeath": {
+            "@type": "pper:PhysicalAddress",
+            "loca:lau2": {
+              "@id": "lau2:SK0235504025",
+              "@type": "loca:LAU2",
+              "skos:prefLabel": [
+                {
+                  "@language": "hu",
+                  "@value": "Vágsellye"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Šaľa"
+                }
+              ]
+            },
+            "loca:lau1": {
+              "@id": "lau1:SK0235",
+              "@type": "loca:LAU1",
+              "skos:prefLabel": [
+                {
+                  "@language": "hu",
+                  "@value": "Vágsellyei járás"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "okres Šaľa"
+                }
+              ]
+            }
+          }
         },
-        "pper:dateOfBirth": {
-          "@value": "1950-08-05",
-          "@type": "xs:date"
-        },
-        "pper:yearOfBirth": {
-          "@value": "1950",
-          "@type": "xs:gYear"
+        "pper:birth": {
+          "@type": "pper:Birth",
+          "pper:givenFamilyName": {
+            "@type": "xs:string",
+            "@value": "Horváth"
+          },
+          "pper:dateOfBirth": {
+            "@value": "1955-04-04",
+            "@type": "xs:date"
+          },
+          "pper:placeOfBirth": {
+            "@type": "loca:PhysicalAddress",
+            "loca:lau2": {
+              "@id": "lau2:SK0235504025",
+              "@type": "loca:LAU2",
+              "skos:prefLabel": [
+                {
+                  "@language": "hu",
+                  "@value": "Vágsellye"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Šaľa"
+                }
+              ]
+            },
+            "loca:lau1": {
+              "@id": "lau1:SK0235",
+              "@type": "loca:LAU1",
+              "skos:prefLabel": [
+                {
+                  "@language": "hu",
+                  "@value": "Vágsellyei járás"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "okres Šaľa"
+                }
+              ]
+            },
+            "loca:unCountry": {
+              "@id": "uncountry:703",
+              "@type": "loca:UNCountry",
+              "skos:prefLabel": [
+                {
+                  "@language": "hu",
+                  "@value": "Szlovák Köztársaság"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Slovenská republika"
+                }
+              ]
+            }
+          }
         },
         "pper:birthNumber": {
           "@type": "pper:BirthNumber",
-          "skos:notation": {
-            "@value": "7307046912",
+          "pper:birthNumberCode": {
+            "@value": "730704/6912",
             "@type": "xs:string"
-          },
-          "dct:type": {
-            "@id": "identifiertype:9",
-            "@type": "egov:IdentifierType",
-            "skos:prefLabel": {
-              "@language": "sk",
-              "@value": "Rodné číslo"
-            },
-            "skos:inScheme": {
-              "@id": "codelist:CL004001"
-            }
-          },
-          "egov:issuingCountry": {
-            "@id": "uncountry:703",
-            "@type": "loca:UNCountry",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Slovak Republic"
-              },
-              {
-                "@language": "sk",
-                "@value": "Slovenská republika"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000086"
-            }
-          }
-        },
-        "pper:dateOfDeath": {
-          "@value": "2021-11-10",
-          "@type": "xs:date"
-        },
-        "pper:yearOfDeath": {
-          "@value": "2021",
-          "@type": "xs:gYear"
-        },
-        "pper:placeOfBirth": {
-          "@type": "loca:PhysicalAddress",
-          "loca:lau2": {
-            "@id": "lau2:SK0317509868",
-            "@type": "loca:LAU2",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Námestovo"
-              },
-              {
-                "@language": "sk",
-                "@value": "Námestovo"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000025"
-            }
-          },
-          "loca:lau1": {
-            "@id": "lau1:SK0317",
-            "@type": "loca:LAU1",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Námestovo"
-              },
-              {
-                "@language": "sk",
-                "@value": "Okres Námestovo"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000024"
-            }
-          },
-          "loca:unCountry": {
-            "@id": "uncountry:703",
-            "@type": "loca:UNCountry",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Slovak Republic"
-              },
-              {
-                "@language": "sk",
-                "@value": "Slovenská republika"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000086"
-            }
-          }
-        },
-        "pper:placeOfDeath": {
-          "@type": "loca:PhysicalAddress",
-          "loca:lau2": {
-            "@id": "lau2:SK031B517402",
-            "@type": "loca:LAU2",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Žilina"
-              },
-              {
-                "@language": "sk",
-                "@value": "Žilina"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000025"
-            }
-          },
-          "loca:lau1": {
-            "@id": "lau1:SK031B",
-            "@type": "loca:LAU1",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Žilina"
-              },
-              {
-                "@language": "sk",
-                "@value": "Okres Žilina"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000024"
-            }
-          },
-          "loca:unCountry": {
-            "@id": "uncountry:703",
-            "@type": "loca:UNCountry",
-            "skos:prefLabel": [
-              {
-                "@language": "en",
-                "@value": "Slovak Republic"
-              },
-              {
-                "@language": "sk",
-                "@value": "Slovenská republika"
-              }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000086"
-            }
           }
         },
         "pper:sex": {
-          "@id": "sex:2",
+          "@id": "sex:1",
           "@type": "pper:Sex",
           "skos:prefLabel": [
             {
-              "@language": "en",
-              "@value": "female"
+              "@language": "hu",
+              "@value": "férfi"
             },
             {
               "@language": "sk",
-              "@value": "žena"
+              "@value": "muž"
             }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL003003"
+          ]
+        },
+        "pper:permanentResidence": {
+          "@type": "pper:PermanentResidence",
+          "loca:physicalAddress": {
+            "@type": "loca:PhysicalAddress",
+            "@id": "physical-address:{id-adresy}",
+            "loca:identifier": {
+              "@value": "{id-adresy}",
+              "@type": "xs:string"
+            },
+            "loca:street": {
+              "@type": "loca:Street",
+              "skos:prefLabel": {
+                "@value": "Štefánikova",
+                "@type": "xs:string"
+              }
+            },
+            "loca:orientationNumber": "16",
+            "loca:propertyRegistrationNumber": "4475",
+            "loca:district": {
+              "@type": "loca:District",
+              "@id": "district:401468",
+              "skos:prefLabel": {
+                "@value": "Borský Peter",
+                "@type": "xs:string"
+              }
+            },
+            "loca:lau2": {
+              "@type": "loca:LAU2",
+              "@id": "lau2:SK0101528595",
+              "skos:prefLabel": {
+                "@value": "Bratislava - mestská časť Staré Mesto",
+                "@type": "xs:string"
+              }
+            },
+            "loca:lau1": {
+              "@type": "loca:LAU1",
+              "@id": "lau1:SK0101",
+              "skos:prefLabel": {
+                "@value": "Okres Bratislava I",
+                "@type": "xs:string"
+              }
+            },
+            "loca:unCountry": {
+              "@id": "uncountry:703",
+              "@type": "loca:UNCountry",
+              "skos:prefLabel": [
+                {
+                  "@language": "hu",
+                  "@value": "Szlovák Köztársaság"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Slovenská republika"
+                }
+              ]
+            }
+          },
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date"
+            },
+            "dcat:endDate": {
+              "@value": "2020-01-01",
+              "@type": "xs:date"
+            }
           }
         }
+      },
+      "skos:note": "Voľnotextové poznámky, môže sa vyskytovať násobne..",
+      "reg:registryEntry": {
+        "@type": "reg:RegistryEntry",
+        "dct:creator": {
+          "@type": "pper:PhysicalPerson",
+          "pper:givenName": {
+            "@value": "Anna",
+            "@type": "xs:string"
+          },
+          "pper:familyName": {
+            "@value": "Skúšobná",
+            "@type": "xs:string"
+          },
+          "pper:formattedName": {
+            "@value": "Anna Skúšobná",
+            "@type": "xs:string"
+          }
+        },
+        "reg:bundleNumber": "46",
+        "reg:bundleYear": "1973",
+        "reg:pageNumber": "12",
+        "reg:sequenceNumber": "200"
       }
     }
   ]

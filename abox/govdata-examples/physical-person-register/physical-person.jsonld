@@ -4,629 +4,287 @@
     "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
     "loca": "https://data.gov.sk/def/ontology/location/",
     "egov": "https://data.gov.sk/def/ontology/egov/",
-    "lau2": "https://data.gov.sk/id/lau2/",
-    "lau1": "https://data.gov.sk/id/lau1/",
-    "uncoutry": "https://data.gov.sk/def/uncoutry/",
+    "rfo": "https://data.minv.sk/def/ontology/rfo/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "district": "https://data.gov.sk/def/district/",
+    "street": "https://data.gov.sk/id/street/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
     "name-prefix": "https://data.gov.sk/def/name-prefix/",
     "name-suffix": "https://data.gov.sk/def/name-suffix/",
-    "marital-status": "https://data.gov.sk/def/marital-status/",
+    "marital-status-type": "https://data.gov.sk/def/marital-status-type/",
     "sex": "https://data.gov.sk/def/sex/",
-    "existential-status": "https://data.gov.sk/def/existential-status/",
+    "existential-status-type": "https://data.gov.sk/def/existential-status-type/",
     "person-relationship-type": "https://data.gov.sk/def/person-relationship-type/",
-    "person": "http://www.w3.org/ns/person#",
+    "identifier-type": "https://data.gov.sk/def/identifier-type/",
     "address-type": "https://data.gov.sk/def/address-type/",
     "address": "https://data.gov.sk/id/physical-address/",
-    "street": "https://data.gov.sk/id/street/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
     "pers": "https://data.gov.sk/id/pco-physical-person/",
     "codelist": "https://data.gov.sk/set/codelist/",
-    "rfo": "https://rfo.gov.sk/def/ontology/rfo/",
-    "rfocodelist": "https://rfo.gov.sk/set/codelist/",
-    "rfocolor": "https://rfo.gov.sk/set/rfocolor/",
-    "rfopersontype": "https://rfo.gov.sk/def/person-type/",
-    "rfopersondataset": "https://rfo.gov.sk/set/rfopersondataset/",
-    "rfopersonrelationship": "https://rfo.gov.sk/id/rfopersonrelationship/",
+    "rfo-person-type": "https://rfo.minv.sk/def/person-type/",
+    "rfopersonrelationship": "https://rfo.minv.sk/id/rfopersonrelationship/",
     "schema": "http://schema.org/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
     "adms": "http://www.w3.org/ns/adms#",
     "dct": "http://purl.org/dc/terms/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xs": "http://www.w3.org/2001/XMLSchema#"
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "dcat": "http://www.w3.org/ns/dcat#"
   },
   "@id": "isvs:191",
   "@graph": [
     {
       "@id": "pers:2100035451",
-      "@type": "pper:PhysicalPerson",
+      "@type": "pper:SlovakCitizen",
+      
       "adms:identifier": {
         "@type": "adms:Identifier",
-        "skos:notation": {
-          "@value": "2100035451",
-          "@type": "xs:string"
-        },
+        "skos:notation": "2100035451",
         "dct:type": {
-          "@id": "identifiertype:14",
-          "@type": "egov:IdentifierType",
-          "skos:prefLabel": {
-            "@language": "sk",
-            "@value": "Identifikátor záznamu o osobe"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL004001"
-          }
+          "@id": "identifier-type:14"
         }
       },
-      "foaf:givenName": {
-        "@list": [
-          {
-            "@type": "xs:string",
-            "@value": "Rudolf"
-          },
-          {
-            "@type": "xs:string",
-            "@value": "Elvis"
-          }
-        ]
+      "pper:recordIdentifier": "2100035451",
+
+      "pper:givenName": {
+        "@list": [ "Rudolf", "Elvis" ]
       },
-      "foaf:familyName": {
-        "@value": "Yeti",
-        "@type": "xs:string"
+      "pper:familyName": {
+        "@list": [ "Yeti" ]
       },
-      "person:birthName": {
-        "@value": "Yeti",
-        "@type": "xs:string"
-      },
-      "person:birthDate": {
-        "@value": "2000-01-01",
-        "@type": "xs:date"
-      },
-      "pper:yearOfBirth": {
-        "@value": "2000",
-        "@type": "xs:gYear"
-      },
-      "pper:birthNumberCode": {
-        "@value": "000101/0000",
-        "@type": "xs:string"
-      },
-      "dct:type": {
-        "@id": "rfopersontype:01",
-        "skos:prefLabel": {
-          "@language": "sk",
-          "@value": "Občan SR s trvalým pobytom"
+      "pper:birth": {
+        "@type": "pper:Birth",
+        "pper:givenFamilyName": {
+          "@list": [ "Yeti" ]
         },
-        "skos:inScheme": {
-          "@id": "rfocodelist:01"
+        "pper:dateOfBirth": {
+          "@value": "2000-01-01",
+          "@type": "xs:date"
+        },
+        "pper:placeOfBirth": {
+          "@type": "loca:PhysicalAddress",
+          "loca:lau2": {
+            "@id": "lau2:SK0101528595"
+          },
+          "loca:lau1": {
+            "@id": "lau1:SK0101"
+          },
+          "loca:unCountry": {
+            "@id": "uncountry:703"
+          }
         }
       },
+      "pper:birthNumber": {
+        "@type": "pper:BirthNumber",
+        "pper:birthNumberCode": "000101/0000"
+      },
+      
       "pper:hasCivilDisability": {
         "@value": "false",
         "@type": "xs:boolean"
       },
-      "person:placeOfBirth": {
-        "@type": "loca:Location",
-        "loca:lau2": {
-          "@id": "lau2:SK0101528595",
-          "@type": "loca:LAU2",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "Bratislava - The Old Town"
-            },
-            {
-              "@language": "sk",
-              "@value": "Bratislava - mestská časť Staré Mesto"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000025",
-            "dct:title": [
-              {
-                "@language": "en",
-                "@value": "Bratislava - The Old Town"
-              },
-              {
-                "@language": "sk",
-                "@value": "Bratislava - mestská časť Staré Mesto"
-              }
-            ]
-          }
+      "pper:death": {
+        "@type": "pper:Death",
+        "pper:existentialStatusType": {
+          "@id": "existential-status-type:1"
         },
-        "loca:lau1": {
-          "@id": "lau1:SK0101",
-          "@type": "loca:LAU1",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "County Bratislava I"
-            },
-            {
-              "@language": "sk",
-              "@value": "District Bratislava I"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000024"
-          }
+        "pper:dateOfDeath": {
+          "@value": "2088-01-01",
+          "@type": "xs:date"
         },
-        "loca:unCountry": {
-          "@id": "uncountry:703",
-          "@type": "loca:UNCountry",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "Slovak Republic"
-            },
-            {
-              "@language": "sk",
-              "@value": "Slovenská republika"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000086"
+        "pper:placeOfDeath": {
+          "@type": "loca:Location",
+          "loca:lau2": {
+            "@id": "lau2:SK0101528595"
           }
-        }
-      },
-      "person:deathDate": {
-        "@value": "2088-01-01",
-        "@type": "xs:date"
-      },
-      "pper:yearOfDeath": {
-        "@value": "2088",
-        "@type": "xs:gYear"
-      },
-      "person:placeOfDeath": {
-        "@id": "lau2:SK0101528595",
-        "skos:prefLabel": [
-          {
-            "@language": "en",
-            "@value": "Bratislava - The Old Town"
-          },
-          {
-            "@language": "sk",
-            "@value": "Bratislava - mestská časť Staré Mesto"
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "codelist:CL000025"
         }
       },
       "pper:namePrefix": [
         {
-          "@id": "name-prefix:01",
           "@type": "pper:NamePrefix",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "MSc."
-            },
-            {
-              "@language": "sk",
-              "@value": "Ing."
+          "dct:type": {
+            "@id": "name-prefix:01"
+          },
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date" 
             }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000062"
           }
         },
         {
-          "@id": "name-prefix:02",
           "@type": "pper:NamePrefix",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "MSc. Architect"
-            },
-            {
-              "@language": "sk",
-              "@value": "Ing. arch."
+          "dct:type": {
+            "@id": "name-prefix:02"
+          },
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date" 
             }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000062"
           }
         }
       ],
-      "pper:nameSuffix": {
-        "@id": "name-suffix:53",
-        "@type": "pper:NameSufix",
-        "skos:prefLabel": [
-          {
-            "@language": "en",
-            "@value": "PhD."
+      "pper:nameSuffix": [
+        {
+          "@type": "pper:NameSuffix",
+          "dct:type": {
+            "@id": "name-suffix:53"
           },
-          {
-            "@language": "sk",
-            "@value": "PhD."
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "codelist:CL000063"
-        }
-      },
-      "person:residency": {
-        "@id": "address:123456789",
-        "@type": "loca:PhysicalAddress",
-        "locn:addressId": {
-          "@value": "123456789",
-          "@type": "xs:string"
-        },
-        "schema:validFrom": {
-          "@value": "2000-01-01",
-          "@type": "xs:date"
-        },
-        "schema:validUntil": {
-          "@value": "2020-01-01",
-          "@type": "xs:date"
-        },
-        "dct:type": {
-          "@id": "address-type:100001",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "Permanent address"
-            },
-            {
-              "@language": "sk",
-              "@value": "Trvalý pobyt"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date" 
             }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL010139"
-          }
-        },
-        "loca:street": {
-          "@id": "street:111111111",
-          "@type": "loca:Street",
-          "skos:prefLabel": [
-            {
-              "@language": "sk",
-              "@value": "Štefánikova"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:uliceSR"
-          }
-        },
-        "loca:orientationNumber": {
-          "@value": "16",
-          "@type": "xs:string"
-        },
-        "loca:propertyRegistrationNumber": {
-          "@value": "3202",
-          "@type": "xs:string"
-        },
-        "loca:district": {
-          "@id": "district:401468",
-          "@type": "loca:District",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "Bratislava - Ostredky"
-            },
-            {
-              "@language": "sk",
-              "@value": "Bratislava - Ostredky"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL010141"
-          }
-        },
-        "loca:lau2": {
-          "@id": "lau2:SK0101528595",
-          "@type": "loca:LAU2",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "Bratislava - The Old Town"
-            },
-            {
-              "@language": "sk",
-              "@value": "Bratislava - mestská časť Staré Mesto"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000025"
-          }
-        },
-        "loca:lau1": {
-          "@id": "lau1:SK0101",
-          "@type": "loca:LAU1",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "County Bratislava I"
-            },
-            {
-              "@language": "sk",
-              "@value": "District Bratislava I"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000024"
-          }
-        },
-        "loca:unCountry": {
-          "@id": "uncountry:703",
-          "@type": "loca:UNCountry",
-          "skos:prefLabel": [
-            {
-              "@language": "en",
-              "@value": "Slovak Republic"
-            },
-            {
-              "@language": "sk",
-              "@value": "Slovenská republika"
-            }
-          ],
-          "skos:inScheme": {
-            "@id": "codelist:CL000086"
           }
         }
-      },
-      "person:citizenship": {
-        "@id": "uncountry:703",
-        "skos:prefLabel": {
-          "@value": "Slovenská republika",
-          "@language": "sk"
-        },
-        "skos:inScheme": {
-          "@id": "codelist:CL000086"
-        }
-      },
-      "pper:sex": {
-        "@id": "sex:1",
-        "@type": "pper:Sex",
-        "skos:prefLabel": [
-          {
-            "@language": "en",
-            "@value": "male"
-          },
-          {
-            "@language": "sk",
-            "@value": "muž"
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "codelist:CL003003"
-        }
-      },
-      "pper:maritalStatusType": {
-        "@id": "marital-status:02",
-        "@type": "pper:MaritalStatusType",
-        "skos:prefLabel": [
-          {
-            "@language": "en",
-            "@value": "single"
-          },
-          {
-            "@language": "sk",
-            "@value": "slobodný, slobodná"
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "codelist:CL004002"
-        }
-      },
-      "pper:existentialStatus": {
-        "@id": "existential-status:1",
-        "@type": "pper:ExistentialStatusType",
-        "skos:prefLabel": [
-          {
-            "@language": "en",
-            "@value": "alive"
-          },
-          {
-            "@language": "sk",
-            "@value": "živý"
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "codelist:CL004003"
-        }
-      },
-      "rfo:hairColor": {
-        "@id": "rfocolor:1",
-        "@type": "rfo:HairColor",
-        "skos:prefLabel": [
-          {
-            "@language": "en",
-            "@value": "brown"
-          },
-          {
-            "@language": "sk",
-            "@value": "hnedá"
-          }
-        ],
-        "skos:inScheme": {
-          "@id": "rfocodelist:cl0002"
-        }
-      },
-      "pper:personRelationship": {
-        "@id": "rfopersonrelationship:2100035451-2100035456",
-        "@type": "pper:PersonRelationship",
-        "pper:relatedPerson": {
-          "@id": "rfoperson:2100035456",
-          "@type": "pper:PhysicalPerson",
-          "foaf:givenName": {
-            "@list": [
-              {
-                "@type": "xs:string",
-                "@value": "Mária"
-              },
-              {
-                "@type": "xs:string",
-                "@value": "Antoinetta"
-              }
-            ]
-          },
-          "foaf:familyName": {
-            "@value": "Yetiová",
-            "@type": "xs:string"
-          }
-        },
-        "schema:validFrom": {
-          "@value": "2018-01-01",
-          "@type": "xs:date"
-        },
-        "schema:validUntil": {
-          "@value": "2020-01-01",
-          "@type": "xs:date"
-        },
-        "dct:type": {
-          "@id": "person-relationship-type:01",
-          "skos:prefLabel": {
-            "@language": "sk",
-            "@value": "manžel, manželka"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL004004"
-          }
-        },
-        "pper:marriageCertificate": {
-          "@type": "pper:MarriageCertificate",
-          "loca:issuedAt": {
-            "@id": "lau2:SK0101528595",
-            "@type": "loca:LAU2",
+      ],
+      "pper:permanentResidence": {
+        "@type": "pper:PermanentResidence",
+        
+        "loca:physicalAddress": {
+          "@id": "address:123456789",
+          "@type": "loca:PhysicalAddress",
+          "loca:identifier": "123456789",
+          "loca:street": {
+            "@type": "loca:Street",
             "skos:prefLabel": [
               {
-                "@language": "en",
-                "@value": "Bratislava - The Old Town"
-              },
-              {
                 "@language": "sk",
-                "@value": "Bratislava - mestská časť Staré Mesto"
+                "@value": "Štefánikova"
               }
-            ],
-            "skos:inScheme": {
-              "@id": "codelist:CL000025"
+            ]
+          },
+          "loca:orientationNumber": {
+            "@value": "16",
+            "@type": "xs:string"
+          },
+          "loca:propertyRegistrationNumber": {
+            "@value": "4475",
+            "@type": "xs:string"
+          },
+          "loca:district": {
+            "@id": "district:401468"
+          },
+          "loca:lau2": {
+            "@id": "lau2:SK0101528595"
+          },
+          "loca:lau1": {
+            "@id": "lau1:SK0101"
+          },
+          "loca:unCountry": {
+            "@id": "uncountry:703"
+          }
+        },
+        "egov:timeValidity": {
+          "@type":"dct:PeriodOfTime",
+          "dcat:startDate": {
+            "@value": "2000-01-01",
+            "@type": "xs:date"
+          },
+          "dcat:endDate": {
+            "@value": "2020-01-01",
+            "@type": "xs:date"
+          }
+        }
+      },
+      "pper:citizenship": {
+        "@id": "uncountry:703"
+      },
+      "pper:sex": {
+        "@id": "sex:1"
+      },
+      "pper:maritalStatusType": {
+        "@id": "marital-status-type:02"
+      },
+      "pper:personRelationship": [
+        {
+          "@id": "rfopersonrelationship:2100035451-2100035456",
+          "@type": "pper:PersonRelationship",
+          "pper:personRelationshipRange": {
+            "@id": "pers:2100035456",
+            "@type": "pper:PhysicalPerson",
+            "pper:givenName": {
+              "@list": [ "Mária", "Antoinetta" ]
+            },
+            "pper:familyName": {
+              "@list": [ "Yetiová" ]
+            }
+          },
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2018-01-01",
+              "@type": "xs:date"
+            },
+            "dcat:endDate": {
+              "@value": "2020-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "pper:relationshipType": {
+            "@id": "person-relationship-type:01"
+          },
+          "pper:marriageCertificate": {
+            "@type": "pper:MarriageCertificate",
+            "loca:issuedAt": {
+              "@id": "lau2:SK0101528595"
             }
           }
-        }
-      },
-        "pper:personRelationship": {
-        "@id": "rfopersonrelationship:2100035451-1100035000",
-        "@type": "pper:PersonRelationship",
-        "pper:relatedPerson": {
-          "@id": "rfoperson:1100035000",
-          "@type": "pper:PhysicalPerson",
-          "foaf:givenName": {
-            "@list": [
-              {
-                "@type": "xs:string",
-                "@value": "Dušan"
-              }
-            ]
+        },
+        {
+          "@id": "rfopersonrelationship:2100035451-1100035000",
+          "@type": "pper:PersonRelationship",
+          "pper:personRelationshipRange": {
+            "@id": "pers:1100035000",
+            "@type": "pper:PhysicalPerson",
+            "pper:givenName": {
+              "@list": [ "Dušan" ]
+            },
+            "pper:familyName": {
+              "@list": [ "Yeti" ]
+            }
           },
-          "foaf:familyName": {
-            "@value": "Yeti",
-            "@type": "xs:string"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "1960-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "pper:relationshipType": {
+            "@id": "person-relationship-type:02"
           }
         },
-        "schema:validFrom": {
-          "@value": "1960-01-01",
-          "@type": "xs:date"
-        },
-        "dct:type": {
-          "@id": "person-relationship-type:02",
-          "skos:prefLabel": {
-            "@language": "sk",
-            "@value": "otec, matka"
+        {
+          "@id": "rfopersonrelationship:2100035451-2100035000",
+          "@type": "pper:PersonRelationship",
+          "pper:personRelationshipRange": {
+            "@id": "pers:2100035000",
+            "@type": "pper:PhysicalPerson",
+            "pper:givenName": {
+              "@list": [ "Ján" ]
+            },
+            "pper:familyName": {
+              "@list": [ "Yeti" ]
+            }
           },
-          "skos:inScheme": {
-            "@id": "codelist:CL004004"
+          "egov:timeValidity": {
+            "@type": "dct:PeriodOfTime",
+            "dcat:startDate": {
+              "@value": "2000-01-01",
+              "@type": "xs:date"
+            }
+          },
+          "pper:relationshipType": {
+            "@id": "person-relationship-type:03"
           }
         }
-      },
-       "pper:personRelationship": {
-        "@id": "rfopersonrelationship:2100035451-2100035000",
-        "@type": "pper:PersonRelationship",
-        "pper:relatedPerson": {
-          "@id": "rfoperson:2100035000",
-          "@type": "pper:PhysicalPerson",
-          "foaf:givenName": {
-            "@list": [
-              {
-                "@type": "xs:string",
-                "@value": "Ján"
-              }
-            ]
-          },
-          "foaf:familyName": {
-            "@value": "Yeti",
-            "@type": "xs:string"
-          }
-        },
-        "schema:validFrom": {
-          "@value": "2000-01-01",
-          "@type": "xs:date"
-        },
-        "dct:type": {
-          "@id": "person-relationship-type:03",
-          "skos:prefLabel": {
-            "@language": "sk",
-            "@value": "syn, dcéra"
-          },
-          "skos:inScheme": {
-            "@id": "codelist:CL004004"
-          }
-        }
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "rfopersondataset:2022-04-13-rpo-person.rdf"
-      }
-    },
-    {
-      "@id": "pper:PhysicalPerson",
-      "@type": "owl:Class",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Physical Person"
-        },
-        {
-          "@language": "sk",
-          "@value": "Fyzická osoba"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "pper:"
-      }
-    },
-    {
-      "@id": "pper:sex",
-      "@type": "owl:ObjectProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "sex"
-        },
-        {
-          "@language": "sk",
-          "@value": "pohlavie"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "pper:"
-      }
-    },
-    {
-      "@id": "foaf:familyName",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "family name"
-        },
-        {
-          "@language": "sk",
-          "@value": "priezvisko"
-        }
-      ],
-      "rdfs:isDefinedBy": {
-        "@id": "foaf:"
-      }
+      ]
     }
   ]
 }

@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-	xmlns="https://data.gov.sk/def/ontology/physical-person/2024-06-02#"
+	xmlns="https://data.gov.sk/def/ontology/physical-person/2025a#"
 	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
 	xmlns:adms="http://www.w3.org/ns/adms#"
-	xmlns:egov="https://data.gov.sk/def/ontology/egov/">
+	xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+	xmlns:loca="https://data.gov.sk/def/ontology/location/"
+	xmlns:kdp="https://data.gov.sk/def/ontology/kdp/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:prov="http://www.w3.org/ns/prov#">
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/2024-06-02">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/2025a">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-	<title xmlns="http://purl.org/dc/terms/">Ontológia fyzickej osoby</title>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
-	<contributor xmlns="http://purl.org/dc/terms/" rdf:resource="http://www.linkedin.com/in/mareksurek"/>
-	<owl:versionInfo>2024-06-02</owl:versionInfo>
-	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+	<dct:title>Ontológia fyzickej osoby</dct:title>
+	<dct:creator rdf:resource="http://www.linkedin.com/in/bleki"/>
+	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
+	<dct:contributor rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
+	<owl:versionInfo>2025a</owl:versionInfo>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/physicalPerson">
@@ -40,15 +46,30 @@
 	<rdfs:label xml:lang="dn">fysisk person</rdfs:label>
 	<rdfs:description xml:lang="sk">Relácia na fyzickú osobu v Registry osôb.</rdfs:description>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/537"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<kdp:xmlElementName>PhysicalPerson</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/537">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/537"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/identifier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+	<rdfs:label xml:lang="en">identifier</rdfs:label>
+	<rdfs:label xml:lang="sk">identifikátor</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:description xml:lang="sk">Medzisystémový identifikátor fyzickej osoby. Nahrádza doteraz používaný identifikátor fyzickej osoby (IFO) pre medzisystémovú identifikáciu.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/recordIdentifier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+	<rdfs:label>IFO</rdfs:label>
+	<skos:altLabel xml:lang="sk">Identifikátor fyzickej osoby</skos:altLabel>
+	<skos:altLabel>PČO</skos:altLabel>
+	<skos:altLabel xml:lang="sk">Počítačové číslo osoby</skos:altLabel>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:description xml:lang="sk">Identifikátor fyzickej osoby (ďalej len „IFO“) označovaný aj ako „PČO“ (počítačové číslo osoby).</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/birth">
@@ -58,25 +79,18 @@
 	<rdfs:label xml:lang="de">Geburt</rdfs:label>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Birth"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<kdp:xmlElementName>Birth</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej narodenie.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/276"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/276">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/276"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.5</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Birth</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.5</skos:notation>
+	<skos:altSymbol>Birth</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/citizenship">
@@ -86,26 +100,19 @@
 	<rdfs:label xml:lang="de">Staatsangehörigkeit</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/Country"/>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/283"/>
-	<rdfs:description xml:lang="sk">Relácia osoby na jej štátnu príslušnosť definovanú hodnotami číselníka CL000086 Krajina OSN.</rdfs:description>
+	<kdp:xmlElementName>Citizenship</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.7"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/283">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/283"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:description xml:lang="sk">Relácia osoby na jej štátnu príslušnosť definovanú hodnotami číselníka CL000086 Krajina OSN.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.7">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.7</notation>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<skos:notation>D.1.1.7</skos:notation>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Citizenship</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:altSymbol>Citizenship</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/nationality">
@@ -116,25 +123,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Nationality"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej národnosť definovanú hodnotami číselníka CL010131 Národnosť.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/300"/>
+	<kdp:xmlElementName>Nationality</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.12"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/300">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/300"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.12">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.12</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Nationality</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.12</skos:notation>
+	<skos:altSymbol>Nationality</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/confessionType">
@@ -145,25 +145,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ConfessionType"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej nábožentvo.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/284"/>
+	<kdp:xmlElementName>Confession</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.8"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/284">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/284"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.8">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.8</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Confession</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.8</skos:notation>
+	<skos:altSymbol>Confession</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/civilDisability">
@@ -173,26 +166,19 @@
 	<rdfs:label xml:lang="de">Beschränkung der Rechtsfähigkeit</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/CivilDisability"/>
+	<kdp:xmlElementName>CivilDisability</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej obmedzenie spôsobilosti na právne úkony.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/306"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.13"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/306">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/306"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.13">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.13</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">CivilDisability</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.13</skos:notation>
+	<skos:altSymbol>CivilDisability</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/civilDisabilityType">
@@ -203,25 +189,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/CivilDisability"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/CivilDisabilityType"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na obmedzenie spôsobilosti na právne úkony definovaného hodnotami číselníka CL010136 Obmedzenie spôsobilosti na právne úkony.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/302"/>
+	<kdp:xmlElementName>TypeOfCivilDisability</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.13.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/302">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/302"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.13.1">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.13.1</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">TypeOfCivilDisability</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.13.1</skos:notation>
+	<skos:altSymbol>TypeOfCivilDisability</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/occupationType">
@@ -232,116 +211,72 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/OccupationType"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej typ povolania definovaného hodnotami číselníka CL010134 Regulované povolania.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/286"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/286">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/286"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/relative">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="en">relative</rdfs:label>
 	<rdfs:label xml:lang="sk">príbuzný</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">rodina</altLabel>
 	<rdfs:label xml:lang="de">verbunden</rdfs:label>
+	<skos:altLabel xml:lang="sk">rodina</skos:altLabel>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej príbuznú osobu.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/441"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/441">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/441"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<kdp:xmlElementName>Relative</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/spouse">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
 	<rdfs:label xml:lang="en">spouse</rdfs:label>
 	<rdfs:label xml:lang="sk">manžel</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">manželka</altLabel>
 	<rdfs:label xml:lang="de">Ehepartner</rdfs:label>
+	<skos:altLabel xml:lang="sk">manželka</skos:altLabel>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby jej na manžela.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/420"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/420">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/420"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<kdp:xmlElementName>Spouse</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/father">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
 	<rdfs:label xml:lang="en">father</rdfs:label>
 	<rdfs:label xml:lang="sk">otec</rdfs:label>
 	<rdfs:label xml:lang="de">Vater</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej otca.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/422"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/422">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/422"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<kdp:xmlElementName>Father</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/mother">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
 	<rdfs:label xml:lang="en">mother</rdfs:label>
 	<rdfs:label xml:lang="sk">matka</rdfs:label>
 	<rdfs:label xml:lang="de">Mutter</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej matku.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/421"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/421">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/421"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<kdp:xmlElementName>Mother</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/child">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/relative"/>
 	<rdfs:label xml:lang="en">child</rdfs:label>
 	<rdfs:label xml:lang="sk">dieťa</rdfs:label>
 	<rdfs:label xml:lang="de">Kind</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej dieťa.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/423"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/423">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/423"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/death">
@@ -352,24 +287,18 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Death"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej úmrtie.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/290"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/290">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/290"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<kdp:xmlElementName>Death</kdp:xmlElementName>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.6</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Death</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.6</skos:notation>
+	<skos:altSymbol>Death</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/maritalStatus">
@@ -380,15 +309,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/MaritalStatus"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej rodinný stav.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/268"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/268">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/268"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/maritalStatusType">
@@ -396,60 +317,54 @@
 	<rdfs:label xml:lang="en">marital status type</rdfs:label>
 	<rdfs:label xml:lang="sk">typ rodinného stav</rdfs:label>
 	<rdfs:label xml:lang="de">Familienstand</rdfs:label>
-	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/MaritalStatus"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/MaritalStatusType"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia rodinného stavu osoby na jeho typ definovaný hodnotami číselníka CL004002 Rodinný stav.</rdfs:description>
+	<kdp:xmlElementName>MaritalStatus</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.3">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.3</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">MaritalStatus</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.3</skos:notation>
+	<skos:altSymbol>MaritalStatus</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/existentialStatus">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="en">existential status</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">existenčný stav</altLabel>
 	<rdfs:label xml:lang="sk">stav fyzickej osoby</rdfs:label>
-	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ExistentialStatusType"/>
+	<skos:altLabel xml:lang="sk">existenčný stav</skos:altLabel>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ExistentialStatus"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej existenčný stav.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/281"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/281">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/281"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/existentialStatusType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="en">existential status type</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">typ existenčného stavu</altLabel>
 	<rdfs:label xml:lang="sk">stav fyzickej osoby</rdfs:label>
+	<skos:altLabel xml:lang="sk">typ existenčného stavu</skos:altLabel>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ExistentialStatusType"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia existenčného stavu osoby na jeho typ definovaný hodnotami číselníka CL004003 Existenčný stav.</rdfs:description>
+	<kdp:xmlElementName>ExistentialStatus</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.5"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.5">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.6.5</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">ExistentialStatus</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.6.5</skos:notation>
+	<skos:altSymbol>ExistentialStatus</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/nameAffix">
@@ -459,89 +374,61 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/NameAffix"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby jej titul.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/264"/>
+	<kdp:xmlElementName>NameAffix</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/D.1.1.1.8"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/264">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/264"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/D.1.1.1.8">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.8</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">NameAffix</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.8</skos:notation>
+	<skos:altSymbol>NameAffix</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/namePrefix">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/nameAffix"/>
 	<rdfs:label xml:lang="en">name prefix</rdfs:label>
 	<rdfs:label xml:lang="sk">titul pred menom</rdfs:label>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/NamePrefix"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej titul pred menom definovaný hodnotami číselníka CL000062 Titul pred menom.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/259"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/259">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/259"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/nameSuffix">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/nameAffix"/>
 	<rdfs:label xml:lang="en">name suffix</rdfs:label>
 	<rdfs:label xml:lang="sk">titul za menom</rdfs:label>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/NameSuffix"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej titul za menom definovaný hodnotami číselníka CL000063 Titul za menom.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/260"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/260">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/260"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/placeOfBirth">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:label xml:lang="en">place of birth</rdfs:label>
 	<rdfs:label xml:lang="sk">miesto narodenia</rdfs:label>
-	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/Location"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Birth"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na lokáciu jej narodenia.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/273"/>
+	<kdp:xmlElementName>PlaceOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/273">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/273"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.2">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.5.2</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">PlaceOfBirth</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.5.2</skos:notation>
+	<skos:altSymbol>PlaceOfBirth</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/placeOfDeath">
@@ -549,27 +436,20 @@
 	<rdfs:label xml:lang="en">place of death</rdfs:label>
 	<rdfs:label xml:lang="sk">miesto úmrtia</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Death"/>
-	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/Location"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na lokáciu jej úmrtia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/278"/>
+	<kdp:xmlElementName>PlaceOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/278">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/278"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.2">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.6.2</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">PlaceOfDeath</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.6.2</skos:notation>
+	<skos:altSymbol>PlaceOfDeath</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/residence">
@@ -579,15 +459,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej pobyt.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/439"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/439">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/439"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/permanentResidence">
@@ -598,15 +470,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PermanentResidence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej trvalý pobyt.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/430"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/430">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/430"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/temporaryResidence">
@@ -617,15 +481,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/TemporaryResidence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej prechodný pobyt.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/431"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/431">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/431"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/bannedResidence">
@@ -636,26 +492,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/ResidenceBan"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na obmedzenie jej pobytu.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/440"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/440">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/440"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/residenceAddress">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/residence"/>
-	<rdfs:label xml:lang="en">residence address</rdfs:label>
-	<rdfs:label xml:lang="sk">adresa pobytu</rdfs:label>
-	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
-	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
-	<rdfs:description xml:lang="sk">Priama relácia osoby na fyzickú adresu</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationshipDomain">
@@ -665,15 +502,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia typ príbuznosti s prvou osobou vzťahu.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/297"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/297">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/297"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationshipRange">
@@ -683,15 +512,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia typ príbuznosti s druhou osobou vzťahu.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/298"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/298">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/298"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/birthNumber">
@@ -701,15 +522,16 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/BirthNumber"/>
 	<rdfs:description xml:lang="sk">Relácia narodenia na súvisiace rodné číslo.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/428"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/428">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/428"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/birthNumberCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">birth number code</rdfs:label>
+	<rdfs:label xml:lang="sk">kód rodného čísla</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/BirthNumber"/>
+	<rdfs:description xml:lang="sk">Kód / číselný identifikátor rodného čísla.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/sex">
@@ -719,26 +541,19 @@
 	<rdfs:label xml:lang="sk">pohlavie</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Sex"/>
+	<kdp:xmlElementName>Sex</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na typ jej pohlavia definovaný hodnotami číselníka CL003003 Pohlavie.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/270"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/270">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/270"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.4">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.4</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Sex</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.4</skos:notation>
+	<skos:altSymbol>Sex</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/occupationBan">
@@ -747,26 +562,19 @@
 	<rdfs:label xml:lang="sk">zákaz vykonávania povolania</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/OccupationBan"/>
+	<kdp:xmlElementName>OccupationBan</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej zákaz povolania, ktoré nemôže vykonávať.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/314"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.15"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/314">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/314"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.15">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.15</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">OccupationBan</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.15</skos:notation>
+	<skos:altSymbol>OccupationBan</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/residenceBan">
@@ -776,25 +584,38 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ResidenceBan"/>
 	<rdfs:description xml:lang="sk">Relácia osoby jej na zákaz pobytu.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/312"/>
+	<kdp:xmlElementName>ResidenceBan</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.14"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/312">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/312"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.14">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.14</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">ResidenceBan</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.14</skos:notation>
+	<skos:altSymbol>ResidenceBan</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">name</rdfs:label>
+	<rdfs:label xml:lang="sk">meno osoby</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:description xml:lang="sk">Zložený dátový prvok pre rôzne súčasti mena fyzickej osoby.</rdfs:description>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1">
+	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.1</skos:notation>
+	<skos:altSymbol>PersonName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/alternativeName">
@@ -805,25 +626,18 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
 	<rdfs:description xml:lang="sk">Popisuje iné meno ako to, ktoré fyzická osoba používa ako svoje súčasné oficiálne meno alebo priezvisko.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/267"/>
+	<kdp:xmlElementName>AlternativeName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/267">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/267"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.2">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.2</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">AlternativeName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.2</skos:notation>
+	<skos:altSymbol>AlternativeName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/dateOfBirth">
@@ -833,25 +647,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Birth"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 	<rdfs:description xml:lang="sk">Dátum narodenia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/272"/>
+	<kdp:xmlElementName>DateOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/272">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/272"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.1">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.5.1</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">DateOfBirth</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.5.1</skos:notation>
+	<skos:altSymbol>DateOfBirth</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/dateOfDeath">
@@ -861,25 +668,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Death"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 	<rdfs:description xml:lang="sk">Dátum úmrtia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/277"/>
+	<kdp:xmlElementName>DateOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/277">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/277"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.1">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.6.1</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">DateOfDeath</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.6.1</skos:notation>
+	<skos:altSymbol>DateOfDeath</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/familyName">
@@ -891,25 +691,18 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
 	<rdfs:description xml:lang="sk">Obsahuje priezvisko osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/255"/>
+	<kdp:xmlElementName>FamilyName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.6"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/255">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/255"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.6">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.6</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">FamilyName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.6</skos:notation>
+	<skos:altSymbol>FamilyName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/formattedName">
@@ -919,26 +712,19 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/249"/>
-	<rdfs:description xml:lang="sk">Formátované meno vrátane predpony a prípony.</rdfs:description>
+	<kdp:xmlElementName>FormattedName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/249">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/249"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:description xml:lang="sk">Formátované meno vrátane predpony a prípony.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.1">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.1</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">FormattedName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.1</skos:notation>
+	<skos:altSymbol>FormattedName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/givenFamilyName">
@@ -950,25 +736,18 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/familyName"/>
 	<rdfs:description xml:lang="sk">Obsahuje rodné priezvisko osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/701"/>
+	<kdp:xmlElementName>GivenFamilyName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.7"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/701">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://data.gov/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/701"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.7">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.7</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">GivenFamilyName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.7</skos:notation>
+	<skos:altSymbol>GivenFamilyName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/givenName">
@@ -979,25 +758,18 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
 	<rdfs:description xml:lang="sk">Obsahuje rodné meno, ktorým je nededená časť mena fyzickej osoby. Známe aj ako prvé meno fyzickej osoby alebo v užšom význame krstné meno fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/252"/>
+	<kdp:xmlElementName>GivenName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/252">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/252"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.3">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.3</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">GivenName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.3</skos:notation>
+	<skos:altSymbol>GivenName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/legalName">
@@ -1007,26 +779,19 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/251"/>
-	<rdfs:description xml:lang="sk">Používa sa na právne účely v niektorých štátoch.</rdfs:description>
+	<kdp:xmlElementName>LegalName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/251">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/251"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:description xml:lang="sk">Používa sa na právne účely v niektorých štátoch.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.2">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.2</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">LegalName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.2</skos:notation>
+	<skos:altSymbol>LegalName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/otherName">
@@ -1036,26 +801,19 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
+	<kdp:xmlElementName>OtherName</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Obsahuje stredné meno fyzickej osoby alebo iniciály. Pozn: Originálne použitie najmä v Spojených štátoch amerických.]</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/254"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.5"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/254">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/254"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.5">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.5</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">OtherName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.5</skos:notation>
+	<skos:altSymbol>OtherName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/prefferedGivenName">
@@ -1066,25 +824,18 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/name"/>
 	<rdfs:description xml:lang="sk">Meno, ktoré fyzická osoba uprednostňuje pri svojom oslovení v prípade viacerých rodných mien. Pozn: V Slovenskej republike nie je zvykom mať viac rodných mien, ale v zahraničí, najmä v španielsky hovoriacich krajinách je to úplne bežné.]</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/253"/>
+	<kdp:xmlElementName>PrefferedGivenName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/253">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/253"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.4">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.1.4</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">PrefferedGivenName</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.1.4</skos:notation>
+	<skos:altSymbol>PrefferedGivenName</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/occupationName">
@@ -1094,25 +845,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:description xml:lang="sk">Názov povolania, ktoré osoba vykonáva.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/288"/>
+	<kdp:xmlElementName>Occupation</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.9"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/288">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/288"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.9">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.9</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">Occupation</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.9</skos:notation>
+	<skos:altSymbol>Occupation</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/yearOfBirth">
@@ -1122,25 +866,18 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Birth"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
 	<rdfs:description xml:lang="sk">Obsahuje rok narodenia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/274"/>
+	<kdp:xmlElementName>YearOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/274">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/274"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.3">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.5.3</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">YearOfBirth</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.5.3</skos:notation>
+	<skos:altSymbol>YearOfBirth</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/yearOfDeath">
@@ -1150,81 +887,60 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Death"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
 	<rdfs:description xml:lang="sk">Obsahuje rok úmrtia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/279"/>
+	<kdp:xmlElementName>YearOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/279">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/279"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.3">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.6.3</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">YearOfDeath</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.6.3</skos:notation>
+	<skos:altSymbol>YearOfDeath</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/yearMonthOfBirth">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/yearAndMonthOfBirth">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="en">year and month of birth</rdfs:label>
 	<rdfs:label xml:lang="sk">rok a mesiac narodenia</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Birth"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
 	<rdfs:description xml:lang="sk">Obsahuje mesiac a rok narodenia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/275"/>
+	<kdp:xmlElementName>YearAndMonthOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/275">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/275"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.4">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.5.4</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">YearAndMonthOfBirth</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.5.4</skos:notation>
+	<skos:altSymbol>YearAndMonthOfBirth</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/yearMonthOfDeath">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/yearAndMonthOfDeath">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
 	<rdfs:label xml:lang="en">year and month of death</rdfs:label>
 	<rdfs:label xml:lang="sk">rok a mesiac úmrtia</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Death"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
 	<rdfs:description xml:lang="sk">Obsahuje mesiac úmrtia fyzickej osoby.</rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/280"/>
+	<kdp:xmlElementName>YearAndMonthOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/280">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/280"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.4">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1.6.4</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">YearAndMonthOfDeath</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1.6.4</skos:notation>
+	<skos:altSymbol>YearAndMonthOfDeath</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson">
@@ -1232,32 +948,17 @@
 	<rdfs:label xml:lang="en">Physical Person</rdfs:label>
 	<rdfs:label xml:lang="sk">Fyzická osoba</rdfs:label>
 	<rdfs:label xml:lang="de">natürliche Person</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/538"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/433">
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson">
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/538">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/538"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
 	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
-	<notation xmlns="http://www.w3.org/2004/02/skos/core#">D.1.1</notation>
-	<altSymbol xmlns="http://www.w3.org/2004/02/skos/core#">PhysicalPerson</altSymbol>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
+	<skos:notation>D.1.1</skos:notation>
+	<skos:altSymbol>PhysicalPerson</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/SlovakCitizen">
@@ -1266,15 +967,7 @@
 	<rdfs:label xml:lang="en">Slovak Citizen</rdfs:label>
 	<rdfs:label xml:lang="sk">Občan na území Slovenskej republiky</rdfs:label>
 	<rdfs:label xml:lang="de">Slowakischer Staatsbürger</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/539"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/539">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/539"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/SlovakResident">
@@ -1283,15 +976,7 @@
 	<rdfs:label xml:lang="en">Slovak Resident</rdfs:label>
 	<rdfs:label xml:lang="sk">Občan s trvalým pobytom na území Slovenskej republiky</rdfs:label>
 	<rdfs:label xml:lang="de">Slowakischer Staatsbürger mit ständigem Wohnsitz</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/540"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/540">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/540"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/SlovakNonResident">
@@ -1300,15 +985,7 @@
 	<rdfs:label xml:lang="en">Slovak Non Resident</rdfs:label>
 	<rdfs:label xml:lang="sk">Občan bez trvalého pobytu na území Slovenskej republiky</rdfs:label>
 	<rdfs:label xml:lang="de">Slowakischer Staatsbürger ohne ständigen Wohnsitz</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/541"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/541">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/541"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Foreigner">
@@ -1317,15 +994,7 @@
 	<rdfs:label xml:lang="en">Foreigner</rdfs:label>
 	<rdfs:label xml:lang="sk">Cudzinec</rdfs:label>
 	<rdfs:label xml:lang="de">Ausländer</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/542"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/542">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/542"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ForeignerResident">
@@ -1334,15 +1003,7 @@
 	<rdfs:label xml:lang="en">Foreigner Resident in Slovakia</rdfs:label>
 	<rdfs:label xml:lang="sk">Cudzinec s pobytom v Slovenskej republike</rdfs:label>
 	<rdfs:label xml:lang="de">Ausländische Staatsbürger mit Wohnsitz in der Slowakei</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/543"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/543">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/543"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ForeignerGrantedAsylum">
@@ -1351,15 +1012,7 @@
 	<rdfs:label xml:lang="en">Foreigner Granted Asylum</rdfs:label>
 	<rdfs:label xml:lang="sk">Cudzinec s udeleným azylom v Slovenskej republike</rdfs:label>
 	<rdfs:label xml:lang="de">Ausländer, denen Asyl gewährt in der Slowakei</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/544"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/544">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/544"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/NameAffix">
@@ -1367,74 +1020,44 @@
 	<rdfs:label xml:lang="en">Title</rdfs:label>
 	<rdfs:label xml:lang="sk">Titul</rdfs:label>
 	<rdfs:label xml:lang="de">Titel</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/265"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/265">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/265"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/NamePrefix">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/NameAffix"/>
 	<rdfs:label xml:lang="en">Name Prefix</rdfs:label>
 	<rdfs:label xml:lang="sk">Titul pred menom</rdfs:label>
 	<rdfs:label xml:lang="de">Titel vor dem Namen</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/261"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL000062"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/261">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/261"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL000062"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/NameSuffix">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/NameAffix"/>
 	<rdfs:label xml:lang="en">Name Suffix</rdfs:label>
 	<rdfs:label xml:lang="sk">Titul za menom</rdfs:label>
 	<rdfs:label xml:lang="de">Grad hinter Name</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/262"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL000063"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/262">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/262"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL000063"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/MaritalStatus">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Marital status</rdfs:label>
 	<rdfs:label xml:lang="sk">Rodinný stav</rdfs:label>
 	<rdfs:label xml:lang="de">Familienstand</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/269"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/269">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/269"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/MaritalStatusType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Marital status type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ rodinného stavu</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL004002"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL004002"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Sex">
@@ -1442,16 +1065,8 @@
 	<rdfs:label xml:lang="en">Sex</rdfs:label>
 	<rdfs:label xml:lang="sk">Pohlavie</rdfs:label>
 	<rdfs:label xml:lang="de">Sex</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/271"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL003003"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/271">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/271"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL003003"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Birth">
@@ -1459,153 +1074,108 @@
 	<rdfs:label xml:lang="en">Birth</rdfs:label>
 	<rdfs:label xml:lang="sk">Narodenie</rdfs:label>
 	<rdfs:label xml:lang="de">Geburt</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/292"/>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/292">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/292"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Death">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Death</rdfs:label>
 	<rdfs:label xml:lang="sk">Úmrtie</rdfs:label>
-	<rdfs:label xml:lang="sk">Tod</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/291"/>
+	<rdfs:label xml:lang="de">Tod</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/291">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/291"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ExistentialStatus">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Existential Status</rdfs:label>
 	<rdfs:label xml:lang="sk">Stav fyzickej osoby</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/282"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/282">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/282"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ExistentialStatusType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Existential Status Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ stavu fyzickej osoby</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL004003"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL004003"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ConfessionType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Confession</rdfs:label>
 	<rdfs:label xml:lang="sk">Náboženstvo</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/285"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/285">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/285"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/OccupationBan">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Occupation Ban</rdfs:label>
 	<rdfs:label xml:lang="sk">Zákaz vykonávania povolania</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/315"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/315">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/315"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/OccupationType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Occupation Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ povolania</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/289"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010134"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL010134"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/289">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationship">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">príbuzenský vzťah</rdfs:label>
+	<rdfs:label xml:lang="en">person relationship</rdfs:label>
+	<kdp:xmlElementName>RelatedPerson</kdp:xmlElementName>
+	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.10"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.10">
 	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/289"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<dct:creator rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
+	<adms:status rdf:resource="http://purl.org/adms/status/Deprecated"/>
+	<skos:notation>D.1.1.10</skos:notation>
+	<skos:altSymbol>RelatedPerson</skos:altSymbol>
+	<dct:type rdf:resource="https://data.gov.sk/def/identifier-type/kdp-code"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PersonRelationship">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Person Relationship</rdfs:label>
 	<rdfs:label xml:lang="sk">Príbuzenstvo</rdfs:label>
-	<rdfs:description xml:lang="sk">Dátový prvok pre popis stupňa príbuznosti a príslušnej fyzickej osoby.
-        </rdfs:description>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/299"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/299">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/299"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:description xml:lang="sk">Dátový prvok pre popis stupňa príbuznosti a príslušnej fyzickej osoby.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PersonRelationshipType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Person Relationship type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ Príbuzenstva</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/296"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/296">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/296"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationshipType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">typ príbuzenstva</rdfs:label>
+	<rdfs:label xml:lang="en">person relationship type</rdfs:label>
+	<rdfs:description>Relácia medzi príbuzenstvom a typom príbuzenského vzťahu definovaného hodnotami číselníka CL004004 Príbuzenský stav.</rdfs:description>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationshipType"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Nationality">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Nationality</rdfs:label>
 	<rdfs:label xml:lang="sk">Národnosť</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/301"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010131"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/301">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/301"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL010131"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/BirthNumber">
@@ -1613,138 +1183,134 @@
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
 	<rdfs:label xml:lang="en">Birth Number</rdfs:label>
 	<rdfs:label xml:lang="sk">Rodné číslo</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/429"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/429">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/429"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ResidenceBan">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Residence Ban</rdfs:label>
 	<rdfs:label xml:lang="sk">Zákaz pobytu</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/313"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/313">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/313"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/CivilDisability">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Civil Disability</rdfs:label>
 	<rdfs:label xml:lang="sk">Obmedzenie právnej spôsobilosti</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/307"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/307">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/307"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/CivilDisabilityType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Civil Disability Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ obmedzenia právnej spôsobilosti</rdfs:label>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/303"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-	<source xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/codelist/CL010136"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/303">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/303"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL010136"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Residence">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/ThingWithPhysicalAddress"/>
 	<rdfs:label xml:lang="en">Residence</rdfs:label>
 	<rdfs:label xml:lang="sk">Pobyt</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Bydlisko</altLabel>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/438"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/438">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/438"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<skos:altLabel xml:lang="sk">Bydlisko</skos:altLabel>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PermanentResidence">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/Residence"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
 	<rdfs:label xml:lang="en">Permanent Residence</rdfs:label>
 	<rdfs:label xml:lang="sk">Trvalý pobyt</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Trvalé bydlisko</altLabel>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/432"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/432">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/432"/>
-	<type xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/def/identifier-type/metais-standard"/>
+	<skos:altLabel xml:lang="sk">Trvalé bydlisko</skos:altLabel>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/TemporaryResidence">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/location/Residence"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
 	<rdfs:label xml:lang="en">Temporary Residence</rdfs:label>
 	<rdfs:label xml:lang="sk">Prechodný pobyt</rdfs:label>
-	<altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="sk">Prechodné bydlisko</altLabel>
-	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/metais-standard/433"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2024-06-02"/>
+	<skos:altLabel xml:lang="sk">Prechodné bydlisko</skos:altLabel>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/id/identifier/metais-standard/433">
-	<rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-	<creator xmlns="http://purl.org/dc/terms/" rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
-	<accessURL xmlns="http://www.w3.org/ns/dcat#" rdf:resource="https://metais.vicepremier.gov.sk/standardization/draftdetail/433"/>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/idDocument">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">doklad totožnosti osoby</rdfs:label>
+	<rdfs:label xml:lang="en">personal identification document</rdfs:label>
+	<rdfs:description xml:lang="sk">Relácia osoby na jej doklad totožnosti.</rdfs:description>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://www.w3.org/ns/adms#Identifier">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:label xml:lang="sk">Identifikačný doklad osoby</rdfs:label>
+	<rdfs:label xml:lang="en">Identification Document</rdfs:label>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/egov/xmlElementName">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/travelDocument">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">cestovný doklad</rdfs:label>
+	<rdfs:label xml:lang="en">travel document</rdfs:label>
+	<rdfs:description xml:lang="sk">Relácia osoby na jej cestovný doklad.</rdfs:description>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/idDocument"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/TravelDocument"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/TravelDocument">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Cestovný doklad</rdfs:label>
+	<rdfs:label xml:lang="em">Travel document</rdfs:label>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/travelDocumentCode">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">číslo a druh cestovného dokladu</rdfs:label>
+	<rdfs:label xml:lang="en">travel document code</rdfs:label>
+	<rdfs:description xml:lang="sk">Kód / identifikátor cestovného dokladu.</rdfs:description>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/TravelDocument"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/relative">
-	<egov:xmlElementName>Relative</egov:xmlElementName>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/idCard">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="sk">občiansky preukaz</rdfs:label>
+	<rdfs:label xml:lang="en">personal identification card</rdfs:label>
+	<rdfs:description xml:lang="sk">Relácia osoby na jej občiansky preukaz.</rdfs:description>
+	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/idDocument"/>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/IDCard"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/spouse">
-	<egov:xmlElementName>Spouse</egov:xmlElementName>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/IDCard">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="sk">Občiansky preukaz</rdfs:label>
+	<rdfs:label xml:lang="en">Personal identification card</rdfs:label>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/father">
-	<egov:xmlElementName>Father</egov:xmlElementName>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/mother">
-	<egov:xmlElementName>Mother</egov:xmlElementName>
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/idCardCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="sk">číslo občianskeho preukazu</rdfs:label>
+	<rdfs:label xml:lang="en">personal identification card code</rdfs:label>
+	<rdfs:description xml:lang="sk">Kód / identifikátor občianskeho preukazu.</rdfs:description>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/IDCard"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
 </rdf:Description>
 
 </rdf:RDF>

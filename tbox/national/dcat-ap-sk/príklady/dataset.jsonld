@@ -1,5 +1,5 @@
 {
-  "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+  "@context": "https://data.slovensko.sk/dcat3.jsonld",
   "iri": "https://data.gov.sk/set/vld",
   "typ": "Dataset",
   "názov": {
@@ -10,7 +10,8 @@
     "sk": "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte.",
     "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
   },
-  "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+  "poskytovateľ": "https://data.gov.sk/id/legal-subject/30416094",
+  "je_súčasťou": "https://data.gov.sk/set/cestovne-poriadky-seria",	
   "dátum_publikácie": "2024-01-01T12:00:34",
   "dátum_modifikácie": "2024-01-01T14:23:16",
   "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
@@ -53,7 +54,7 @@
   "súvisiaci_zdroj_datasetu": [
     "https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"
   ],
-  "dokumentácia": "https://www.middop.sk/dokumentácia/",
+  "dokumentácia": "https://www.middop.sk/",
   "špecifikácia": [
     "https://data.gov.sk/def/ontology/transport/"
   ],
@@ -62,9 +63,6 @@
   ],
   "priestorové_rozlíšenie_v_metroch": "12.0",
   "časové_rozlíšenie": "P1D",
-  "právny_predpis": [
-    "https://data.gov.sk/id/eli/sk/zz/2000/211/"
-  ],
   "distribúcia": [
     {
       "iri": "https://data.gov.sk/set/vld/resource/csv",

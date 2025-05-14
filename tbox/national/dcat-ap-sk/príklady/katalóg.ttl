@@ -7,7 +7,7 @@
     dct:title "Katalóg otvorených dát Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en ;
     dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."@sk;
     dct:description "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en ;
-    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:publisher <https://data.gov.sk/id/legal-subject/30416094> ;
     foaf:homepage <https://www.mindop.sk> ;
     dcat:contactPoint [
         a vcard2006:Organization ;

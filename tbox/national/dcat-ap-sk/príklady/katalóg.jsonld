@@ -1,5 +1,5 @@
 {
-    "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+    "@context": "https://data.slovensko.sk/dcat3.jsonld",
     "iri": "https://data.gov.sk/set/lkod/mdsr/katalog",
     "typ": "Katalóg",
     "názov": {
@@ -19,7 +19,7 @@
         "e-mail": "mailto:info@mindop.sk"
     },
     "domovská_stránka": "https://www.mindop.sk",
-    "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+    "poskytovateľ": "https://data.gov.sk/id/legal-subject/30416094",
     "dataset": [
          "https://data.gov.sk/set/zoznam-zástavok-2022-10",
          "https://data.gov.sk/set/líniové-vedenia-2022-10",
