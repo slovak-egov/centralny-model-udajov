@@ -74,7 +74,7 @@
           },
           "rfo:dateOfBirthText": {
             "@value": "Štvrtého júla tisícdeväťstosedemdesiattri",
-            "@type": "xs:string"
+            "@language": "sk"
           },
           "pper:placeOfBirth": {
             "@type": "loca:PhysicalAddress",

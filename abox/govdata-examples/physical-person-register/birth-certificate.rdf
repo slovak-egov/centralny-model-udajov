@@ -4,7 +4,7 @@
     xmlns:rfo="https://data.minv.sk/def/ontology/rfo/"
     xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
     xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
-    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
     xmlns:loca="https://data.gov.sk/def/ontology/location/"
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -55,7 +55,7 @@
                         <!-- deň, mesiac a rok narodenia -->
                         <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfBirth>
                         <!-- dátum narodenia slovom -->
-                        <rfo:dateOfBirthText>Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfBirthText>
+                        <rfo:dateOfBirthText xml:lang="sk">Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfBirthText>
                         <!-- miesto narodenia -->
                         <pper:placeOfBirth>
                             <loca:PhysicalAddress>
@@ -94,8 +94,9 @@
                 <!-- otec -->
                 <pper:father>
                     <pper:PhysicalPerson>
-                        <!-- meno -->
-                        <pper:givenName>Michal</pper:givenName>
+                        <!-- viacero mien, kde poradie je dôležité, modelujeme cez rdf:List -->
+                        <pper:givenName rdf:nodeID="namelist-1" />
+                            
                         <!-- priezvisko -->
                         <pper:familyName>Novák</pper:familyName>
 
@@ -157,6 +158,9 @@
                                 <skos:prefLabel xml:lang="hu">Szlovák Köztársaság</skos:prefLabel>
                             </loca:UNCountry>
                         </pper:citizenship>
+
+                        <!-- pre prípady kedy nevieme dátum narodenia ale poznámke vek -->
+                        <rfo:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</rfo:age>
                     </pper:PhysicalPerson>
                 </pper:father>
 
@@ -246,6 +250,9 @@
                         <pper:familyName>Skúšobná</pper:familyName>
                         <!-- prípadne ak nie je rozdelené, môže sa použiť formattedName -->
                         <pper:formattedName>Anna Skúšobná</pper:formattedName>
+
+                        <!-- funkcia pracovníka -->
+                        <reg:role>vedúci oddelenia registratúry</reg:role>
                     </pper:PhysicalPerson>
                 </dct:creator>
 
@@ -261,5 +268,14 @@
         </reg:registryEntry>
 
     </cccev:Evidence>
+
+    <rdf:Description rdf:nodeID="namelist-1">
+        <rdf:first>Michal</rdf:first>
+        <rdf:rest rdf:nodeID="namelist-2" />
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="namelist-2">
+        <rdf:first>Matúš</rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+    </rdf:Description>
 
 </rdf:RDF>

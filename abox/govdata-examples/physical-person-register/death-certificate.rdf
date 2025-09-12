@@ -4,7 +4,7 @@
     xmlns:rfo="https://data.minv.sk/def/ontology/rfo/"
     xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
     xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
-    xmlns:egov="https://data.gov.sk/def/ontology/egovernment/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
     xmlns:loca="https://data.gov.sk/def/ontology/location/"
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:dcat="http://www.w3.org/ns/dcat#"
@@ -56,7 +56,7 @@
                         <!-- deň, mesiac a rok úmrtia -->
                         <pper:dateOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfDeath>
                         <!-- dátum úmrtia slovom -->
-                        <rfo:dateOfDeathText>Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfDeathText>
+                        <rfo:dateOfDeathText xml:lang="sk">Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfDeathText>
                         <!-- miesto úmrtia -->
                         <pper:placeOfDeath>
                             <loca:PhysicalAddress>

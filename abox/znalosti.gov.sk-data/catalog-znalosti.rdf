@@ -33,7 +33,7 @@
     <dct:issued rdf:datatype="&xsd;dateTime">2025-DD-MMT00:00:00Z</dct:issued>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/> 
 
-    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/legal-subject/2023b"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/location/2025a"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/education/2023b"/>
@@ -101,14 +101,14 @@
     <dct:title xml:lang="sk">Ontológia fyzickej osoby</dct:title>
     <dct:title xml:lang="en">Physical Person Ontology</dct:title>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
-    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/> 
+    <dcat:hasCurrentVersion rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/> 
   </dcat:Dataset>
   
-  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person/2025a">
+  <dcat:Dataset rdf:about="https://data.gov.sk/def/ontology/physical-person/2025b">
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/11325"/>
-    <dcat:version rdf:datatype="&xsd;string">2025a</dcat:version>
+    <dcat:version rdf:datatype="&xsd;string">2025b</dcat:version>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
-    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a.owl"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b.owl"/>
     <!-- toto zabezpeci zobrazenie v zalozke "Ontologie" -->
     <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
