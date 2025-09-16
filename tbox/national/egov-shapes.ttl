@@ -1,0 +1,46 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix sha-egov: <https://data.gov.sk/def/shapes/egov/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
+
+# timeValidity
+
+sha-egov:ThingWithValidity-timeValidity
+	a sh:PropertyShape ;
+	sh:path egov:timeValidity ;
+	sh:class dct:PeriodOfTime ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-egov:2025b ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+sha-egov:PeriodOfTimeShape
+	a sh:NodeShape ;
+	sh:targetClass dct:PeriodOfTime ;
+    sh:property sha-egov:PeriodOfTime-startDate,
+	sha-egov:PeriodOfTime-endDate;
+ 	rdfs:isDefinedBy sha-egov:2025b ;
+	dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+sha-egov:PeriodOfTime-startDate
+	sh:path dcat:startDate ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-egov:2025b ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+sha-egov:PeriodOfTime-endDate
+	sh:path dcat:endDate ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-egov:2025b ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
