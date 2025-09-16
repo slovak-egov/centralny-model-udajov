@@ -1,0 +1,1276 @@
+@prefix : <https://data.gov.sk/def/ontology/legal-subject/2025b#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix loca: <https://data.gov.sk/def/ontology/location/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+
+lsub:2025b a owl:Ontology;
+  dct:title "Ontológia právneho subjektu";
+  dct:creator <http://www.linkedin.com/in/emillazenga>;
+  dct:contributor <http://www.linkedin.com/in/miroslavliska>, <http://www.linkedin.com/in/mareksurek>;
+  owl:versionInfo "2025b";
+  dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
+
+lsub:legalSubject a owl:ObjectProperty;
+  rdfs:label "právny subjekt"@sk, "legal subject"@en, "Rechtsanwalt"@de;
+  skos:altLabel "právny subjekt v RPO"@sk;
+  rdfs:range lsub:LegalSubject;
+  rdfs:description "Relácia na právny subjekt v RPO."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:Shares a owl:Class;
+  rdfs:label "Aktien"@de, "Shares"@en, "Akcie"@sk;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:subClassOf egov:ThingWithValidity .
+
+<https://data.gov.sk/id/identifier/metais-standard/630> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/630>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2";
+  skos:altSymbol "CorporateBody";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:economicActivity a owl:ObjectProperty;
+  rdfs:label "Wirtschaftstätigkeit"@de, "economic activity"@en, "ekonomická činnosť"@sk;
+  skos:altLabel "predmet činnosti"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:EconomicActivity;
+  rdfs:description "Relácia právneho subjektu na ekonomickú činnosť."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.7>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/611> a adms:Identifier;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/611>;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/587> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/587>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.7> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.7";
+  skos:altSymbol "Activities";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:primaryEconomicActivity a owl:ObjectProperty;
+  rdfs:label "primary economic activity"@en, "hlavná ekonomická činnosť"@sk;
+  rdfs:subPropertyOf lsub:economicActivity;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:ShareType a owl:Class;
+  dct:source <https://data.gov.sk/def/codelist/CL010111>;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:label "Share Type"@en, "Typ akcie"@sk, "Aktien Typ"@de .
+
+<https://data.gov.sk/id/identifier/metais-standard/589> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/589>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:economicActivityType a owl:ObjectProperty;
+  rdfs:label "economic activity classification"@en, "klasifikácia ekonomickej činnosti"@sk,
+    "Klassifikation der Wirtschaftszweige"@de;
+  rdfs:domain lsub:EconomicActivity;
+  rdfs:range lsub:EconomicActivityType;
+  rdfs:description "Relácia ekonomickej činnosti na jej typ definovaný hodnotami číselníka CL005205 Ekonomická činnosť."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/585> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/585>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.7.2";
+  skos:altSymbol "EconomicActivityClassification";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:primaryEconomicActivityType a owl:ObjectProperty;
+  rdfs:label "primary economic activity type"@en, "typ hlavnej ekonomickej činnosti"@sk;
+  rdfs:subPropertyOf lsub:economicActivityType;
+  rdfs:range lsub:EconomicActivityType;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:source <https://data.gov.sk/def/codelist/CL005205> .
+
+lsub:activitySubjective a owl:ObjectProperty;
+  rdfs:label "activity subjective"@en, "predmet činnosti (voľný popis)"@sk;
+  rdfs:range lsub:ActivitySubjective;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/609> a adms:Identifier .
+
+<https://data.gov.sk/id/identifier/metais-standard/647> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/647>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:headquarters a owl:ObjectProperty;
+  rdfs:subPropertyOf loca:physicalAddress;
+  rdfs:label "headquarters"@en, "adresa sídla"@sk, "Hauptsitz"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range loca:PhysicalAddress;
+  rdfs:description "Relácia právneho subjektu na jej sídlo v Registri adries."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/613> a adms:Identifier;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/613>;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742> .
+
+<https://data.gov.sk/id/identifier/metais-standard/644> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/644>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:businessAddress a owl:ObjectProperty;
+  rdfs:subPropertyOf loca:physicalAddress;
+  rdfs:label "business address"@en, "adresa miesta podnikania"@sk, "Geschäftsadresse"@de;
+  skos:altLabel "adresa výkonu činnosti"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range loca:PhysicalAddress;
+  rdfs:description "Relácia právneho subjektu na jej adresu miesta podnikania v Registri adries."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:ShareState a owl:Class;
+  rdfs:label "Aktie Zustand"@de, "Stav akcie"@sk, "Share state"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/645> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/645>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:establishmentAddress a owl:ObjectProperty;
+  rdfs:subPropertyOf loca:physicalAddress;
+  rdfs:label "establishment address"@en, "adresa prevádzky"@sk, "Niederlassungsadresse"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range loca:PhysicalAddress;
+  rdfs:description "Relácia právneho subjektu na jej adresu prevádzky v Registri adries."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/646> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/646>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:sizeByEmployees a owl:ObjectProperty;
+  rdfs:label "veľkosť organizácie podľa počtu zamestnancov"@sk, "organization size by number of employees"@en;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:SizeByEmployees;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:typeByEmployees a owl:ObjectProperty;
+  rdfs:label "kategória organizácie podľa počtu zamestnancov"@sk, "organization type by number of employees"@en;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:TypeByEmployees;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/619> a adms:Identifier;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/619>;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/648> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/648>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:legalForm a owl:ObjectProperty;
+  rdfs:label "legal form"@en, "právna forma"@sk, "Rechtsform"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:LegalForm;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:description "Relácia právneho subjektu na jeho právnu formu definovanú hodnotami číselníka CL000056 Právna forma organizácie."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/575> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/575>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:legalFormType a owl:ObjectProperty;
+  rdfs:label "legal form type"@en, "typ právnej formy"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:LegalFormType;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:description "Relácia právneho subjektu na jeho právnu formu definovanú hodnotami číselníka CL000056 Právna forma organizácie."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.3>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.3";
+  skos:altSymbol "LegalForm";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:legalStatus a owl:ObjectProperty;
+  rdfs:label "legal status"@en, "právny stav"@sk, "Rechtsstellung"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:LegalStatus;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:description "Relácia právneho subjektu na jeho právny stav definovaný hodnotami číselníka CL010108 Právny stav organizácie."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/621> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/621>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:legalStatusType a owl:ObjectProperty;
+  rdfs:label "legal status type"@en, "typ právneho stavu"@sk, "Rechtsstellung"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:LegalStatusType;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:description "Relácia právneho subjektu na jeho právny stav definovaný hodnotami číselníka CL010108 Právny stav organizácie."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.13>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/607> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.13> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.13";
+  skos:altSymbol "PrefferedGivenName";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:unit a owl:ObjectProperty;
+  rdfs:label "organization unit"@en, "organizačná jednotka"@sk, "Organisationseinheit"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:Unit;
+  rdfs:description "Relácia právneho subjektu na jej organizačnú jednotku."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.4>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/580> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/580>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.4> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.4";
+  skos:altSymbol "OrganizationUnitType";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:unitType a owl:ObjectProperty;
+  rdfs:subPropertyOf dct:type;
+  rdfs:label "organization unit type"@en, "typ organizačnej jednotky"@sk, "Organisationseinheitstyp"@de;
+  rdfs:domain lsub:Unit;
+  rdfs:range lsub:UnitType;
+  rdfs:description "Relácia organizačnej jednotky na jej typ definovaný hodnotami číselníka CL010110 Typ organizačnej jednotky."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:Deposit rdfs:isDefinedBy lsub:2025b;
+  rdfs:label "Anzahlung"@de .
+
+<https://data.gov.sk/id/identifier/metais-standard/578> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/578>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.4.2";
+  skos:altSymbol "OrganizationUnitType";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:legalFact a owl:ObjectProperty;
+  rdfs:label "legal fact"@en, "právna skutočnosť"@sk, "Rechtliche Tatsache"@de;
+  skos:altLabel "iná právna skutočnosť"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:LegalFact;
+  rdfs:description "Uvádza sa doplňujúca informácia v súvislosti s právnymi činnosťami týkajúcimi sa danej právnickej osoby.Napr. obsahuje informáciu v rozsahu právneho titulu zápisu, zmeny a výmazu zapísaných údajov a údajov o právnom nástupcovi právnickej osoby. Informácie týkajúce sa konkurzu, vyrovnania, likvidácie a nútenej správy sa tu nepoužívajú."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.8>;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:institutionalSubsectorType a owl:ObjectProperty;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:label "institutional subsector type"@en, "štatistický kód inštitucionálneho subsektora"@sk;
+  rdfs:range lsub:InstitutionalSubsectorType .
+
+<https://data.gov.sk/id/identifier/metais-standard/590> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/590>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.8> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.8";
+  skos:altSymbol "OtherLegalFacts";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:ownership a owl:ObjectProperty;
+  rdfs:label "vlastníctvo"@sk, "ownership"@en;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:Ownership;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:ownershipType a owl:ObjectProperty;
+  rdfs:label "typ vlastníctva"@sk, "ownership type"@en, "Eigentumstyp"@de;
+  rdfs:range lsub:OwnershipType;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:domain lsub:LegalSubject .
+
+<https://data.gov.sk/id/identifier/metais-standard/649> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/649>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:stakeholder a owl:ObjectProperty;
+  rdfs:label "zainteresovaná osoba"@sk, "stakeholder"@en, "Interessengruppen"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:Stakeholder;
+  rdfs:description "Relácia právneho subjektu na zainteresovanú osobu vo vzťahu k právnickej osobe."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.10>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/655> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/655> .
+
+<https://data.gov.sk/id/identifier/metais-standard/599> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/599>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.10> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.10";
+  skos:altSymbol "Stakeholder";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:stakeholderType a owl:ObjectProperty;
+  rdfs:label "typ zainteresovanej osoby"@sk, "stakeholder type"@en, "art von stakeholder"@de;
+  rdfs:domain lsub:Stakeholder;
+  rdfs:range lsub:StakeholderType;
+  rdfs:description "Relácia zainteresovanej osoby na jej typ definovaný hodnotami číselníka CL010109 Typ zainteresovanej osoby."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.10.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:DepositType a owl:Class;
+  rdfs:label "Art Kaution"@de, "Typ vkladu"@sk, "Deposit type"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/597> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/597>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.10.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.10.1";
+  skos:altSymbol "StakeholderType";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:statutoryBody a owl:ObjectProperty;
+  rdfs:label "štatutárny orgán"@sk, "statutory body"@en, "statutarorgan"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:StatutoryBody;
+  rdfs:description "Relácia právneho subjektu na jej štatutárny orgán."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.15>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/626> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/626>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.15> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.15";
+  skos:altSymbol "StatutoryBody";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:statutoryBodyType a owl:ObjectProperty;
+  rdfs:label "typ štatutárneho orgánu"@sk, "statutory body type"@en;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:StatutoryBodyType;
+  rdfs:description "Relácia štatutárneho orgánu na jeho typ definovaný hodnotami číselníka CL010113 Typ štatutárneho orgánu."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.15.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/623> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/623>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.15.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.15.1";
+  skos:altSymbol "StatutoryBodyType";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:legalID a owl:ObjectProperty;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:label "identifikačné číslo právneho subjektu"@sk, "legal number identifier"@en,
+    "Rechtliche Kennung"@de;
+  skos:altLabel "IČO"@sk, "identifikačné číslo organizácie"@sk, "IPO"@sk, "obchodné identifikačné číslo právnickej osoby"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:LegalID;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/651> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/651>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:taxID a owl:ObjectProperty;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:label "daňové identifikačné číslo"@sk, "tax identifier"@en;
+  skos:altLabel "DIČ"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:TaxID;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/652> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/652>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:vatID a owl:ObjectProperty;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:label "identifikačné číslo pre daň z pridanej hodnoty"@sk, "value added tax identification number"@en;
+  skos:altLabel "IČ DPH"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:VatID;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/653> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/653>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:equity a owl:ObjectProperty;
+  rdfs:label "equity"@en, "základné imanie"@sk, "kapital"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:Equity;
+  rdfs:description "Relácia právneho subjektu na jeho základné imanie."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.9>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/595> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/595>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.9> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.9";
+  skos:altSymbol "Equity";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:deposit a owl:ObjectProperty;
+  rdfs:label "deposit"@en, "vklad"@sk, "anzahlung"@de;
+  rdfs:range lsub:Deposit;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:description "Relácia právneho subjektu na jeho vklad."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.12>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/618> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/618>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.12> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.12";
+  skos:altSymbol "Deposits";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:depositType a owl:ObjectProperty;
+  rdfs:label "deposit type"@en, "typ vkladu"@sk;
+  rdfs:range lsub:Deposit;
+  rdfs:domain lsub:DepositType;
+  rdfs:description "Relácia vkladu na jej typ."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/616> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/616>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.12.1";
+  skos:altSymbol "DepositType";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:shareType a owl:ObjectProperty;
+  rdfs:label "share type"@en, "typ akcie"@sk, "aktien Typ"@de;
+  rdfs:range lsub:ShareType;
+  rdfs:domain lsub:Shares;
+  rdfs:subPropertyOf adms:Identifier;
+  rdfs:description "Relácia akcie na jej typ definovaný hodnotami číselníka CL010111 Druh akcie."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/610> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/610>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11.1";
+  skos:altSymbol "ShareType";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:shareState a owl:ObjectProperty;
+  rdfs:label "share state"@en, "stav akcie"@sk, "aktie zustand"@de;
+  rdfs:range lsub:ShareState;
+  rdfs:domain lsub:Shares;
+  rdfs:description "Relácia akcie na jej stav."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/617> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/617> .
+
+<https://data.gov.sk/id/identifier/metais-standard/608> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/608>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11.2";
+  skos:altSymbol "ShareState";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:shareForm a owl:ObjectProperty;
+  rdfs:label "share form"@en, "forma akcie"@sk, "aktienform"@de;
+  rdfs:range lsub:ShareForm;
+  rdfs:domain lsub:Shares;
+  rdfs:description "Relácia akcie na jej formu."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.3>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/606> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/606>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11.3";
+  skos:altSymbol "ShareForm";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:shares a owl:ObjectProperty;
+  rdfs:label "shares"@en, "akcie"@sk, "aktien"@de;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:Shares;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11>;
+  rdfs:description "Relácia právneho subjektu na jej akcie."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/612> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/612>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11";
+  skos:altSymbol "Shares";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:institutionalSubsector a owl:ObjectProperty;
+  rdfs:label "institutional subsector type"@en, "inštitucionálny subsektor"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:InstitutionalSubsector;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/654> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/654>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:authorizationToExecuteNote a owl:DatatypeProperty;
+  rdfs:label "authorization to execute"@en, "oprávnenie konať"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range xsd:string;
+  rdfs:description "Uvádza sa kto je oprávnený konať v mene právnickej osoby a akým spôsobom. Príklad: Písomnosti zakladajúce práva a povinnosti spoločnosti podpisuje konateľ samostatne a to tak, že k písanému alebo vytlačenému obchodnému menu spoločnosti pripojí svoj vlastnoručný podpis."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.14>;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:ShareForm rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/620> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/620>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.14> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.14";
+  skos:altSymbol "AuthorizationToExecute";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:alternativeName a owl:DatatypeProperty;
+  rdfs:label "legal subject alternative name"@en, "alternatívne meno právneho subjektu"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range xsd:string;
+  rdfs:description "Môže obsahovať alternatívy k plným názvom, akými sú napríklad zaužívané synonymá, skratky a podobne."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/574> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/574>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.2";
+  skos:altSymbol "PrefferedGivenName";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:name a owl:DatatypeProperty;
+  rdfs:label "legal subject full name"@en, "názov právneho subjektu"@sk;
+  skos:altLabel "plné meno právnickej osoby"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range xsd:string;
+  rdfs:description "Uvádza sa plný názov právnickej osoby. Obsahuje celý názov v jednom reťazci, so všetkými časťami v správnom poradí, čo znamená na správnom mieste. Oddelenie častí sa uvádza pomocou prázdneho znaku. Uvádza sa vrátane typových označení organizácie ako a.s. a podobne."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/573> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/573>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.1";
+  skos:altSymbol "LegalSubjectFullName";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:unitName a owl:DatatypeProperty;
+  rdfs:label "organization unit name"@en, "názov organizačnej jednotky"@sk;
+  rdfs:domain lsub:Unit;
+  rdfs:range xsd:string;
+  rdfs:description "Označenie pre nižší útvar danej organizácie v prípade jej členenia, ktorý nie je samostatnou právnickou osobou. "@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/577> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/577>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.4.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.4.1";
+  skos:altSymbol "OrganizationUnitName";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:established a owl:DatatypeProperty;
+  rdfs:subPropertyOf <http://schema.org/startDate>;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.5>;
+  rdfs:label "established"@en, "vznik"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range xsd:dateTime;
+  rdfs:description "Uvádza sa dátum zriadenia právnickej osoby."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/582> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/582>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.5> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.5";
+  skos:altSymbol "Establishment";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:terminated a owl:DatatypeProperty;
+  rdfs:subPropertyOf <http://schema.org/endDate>;
+  rdfs:label "terminated"@en, "zánik"@sk;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:range xsd:dateTime;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.6>;
+  rdfs:description "Uvádza sa dátum zániku alebo ukončenia činnosti právnickej osoby."@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/583> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/583>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.6> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.6";
+  skos:altSymbol "Termination";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:economicActivityDescription a owl:DatatypeProperty;
+  rdfs:label "economic activity description"@en, "popis ekonomickej činnosti"@sk, "Beschreibung der wirtschaftlichen Tätigkeit"@de;
+  rdfs:domain lsub:EconomicActivity;
+  rdfs:range xsd:string;
+  rdfs:description "Obsahuje vecný popis predmetu činnosti právnickej osoby."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.1>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/584> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/584>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.7.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.7.1";
+  skos:altSymbol "EconomicActivityDescription";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:equityValue a owl:DatatypeProperty;
+  rdfs:label "equity value"@en, "výška základného imania"@sk;
+  rdfs:domain lsub:Equity;
+  rdfs:range xsd:long;
+  rdfs:description "Obsahuje výšku základného imania právnickej osoby."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/594> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/594>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.9.2";
+  skos:altSymbol "EquityValue";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:equityValuePaid a owl:DatatypeProperty;
+  rdfs:label "equity value paid"@en, "výška splateného základného imania"@sk;
+  rdfs:domain lsub:Equity;
+  rdfs:range xsd:long;
+  rdfs:description "Obsahuje výšku splateného základného imania právnickej osoby."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.3>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/593> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/593>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.9.3";
+  skos:altSymbol "EquityValuePaid";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:equityValueApproved a owl:DatatypeProperty;
+  rdfs:label "equity value approved"@en, "schválená výška základného imania"@sk;
+  rdfs:domain lsub:Equity;
+  rdfs:range xsd:long;
+  rdfs:description "Obsahuje výšku schváleného základného imania právnickej osoby."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.4>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/592> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/592>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.4> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.9.4";
+  skos:altSymbol "EquityValueApproved";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:depositValue a owl:DatatypeProperty;
+  rdfs:label "deposit value"@en, "výška vkladu"@sk;
+  rdfs:domain lsub:Deposit;
+  rdfs:range xsd:long;
+  rdfs:description "Obsahuje údaje o výške vkladu."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/615> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/615>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.12.2";
+  skos:altSymbol "DepositValue";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:depositDueDate a owl:DatatypeProperty;
+  rdfs:label "deposit due date"@en, "dátum splatnosti vkladu"@sk;
+  rdfs:domain lsub:Deposit;
+  rdfs:range xsd:dateTime;
+  rdfs:description "Uvádza sa dátum splatnosti vkladu."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.3>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/614> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/614>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.12.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.12.3";
+  skos:altSymbol "DepositDueDate";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:shareNominalValue a owl:DatatypeProperty;
+  rdfs:label "share nominal value"@en, "menovitá hodnota akcie"@sk;
+  rdfs:domain lsub:Shares;
+  rdfs:range xsd:long;
+  rdfs:description "Uvádza sa menovitá hodnota akcie."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.4>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/603> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/603>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.4> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11.4";
+  skos:altSymbol "ShareNominalValue";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:sharesAmount a owl:DatatypeProperty;
+  rdfs:label "shares amount"@en, "množstvo akcií"@sk;
+  rdfs:domain lsub:Shares;
+  rdfs:range xsd:long;
+  rdfs:description "Uvádza sa množstvo akcií."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.5>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/605> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/605>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.5> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11.5";
+  skos:altSymbol "SharesAmount";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:sharesTransferabilityNote a owl:DatatypeProperty;
+  rdfs:label "shares transferability"@en, "prevoditeľnosť akcií"@sk;
+  rdfs:domain lsub:Shares;
+  rdfs:range xsd:string;
+  rdfs:description "Uvádza sa popis obmedzenia prevoditeľnosti akcií."@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.6>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/604> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/604>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.11.6> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.11.6";
+  skos:altSymbol "SharesTransferability";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+lsub:EconomicActivity a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Economic activity"@en, "Ekonomická činnosť"@sk, "Wirtschaftstätigkeit"@de;
+  skos:altLabel "Predmet činnosti"@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/588> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/588>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:EconomicActivityType a owl:Class;
+  rdfs:label "Klasifikácia ekonomickej činnosti"@sk, "Economic activity classification"@en;
+  dct:source <https://data.gov.sk/def/codelist/CL005205> .
+
+lsub:InstitutionalSubsectorType a owl:Class;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:label "Štatistický kód inštitucionálneho subsektora"@sk, "Institutional Subsector Type"@en .
+
+<https://data.gov.sk/id/identifier/metais-standard/586> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/586>;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:LegalSubject a owl:Class;
+  rdfs:label "Právny subjekt"@sk, "Legal Subject"@en, "Rechtsanwalt"@de;
+  skos:altLabel "Právnicka osoba"@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2>;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:InstitutionalSubsector a owl:Class;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/631> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/631>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:BusinessPerson a owl:Class;
+  rdfs:subClassOf lsub:LegalSubject;
+  rdfs:label "Podnikateľ"@sk, "Business Person"@en, "Geschäftsperson"@de;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/632> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/632>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:CorporateBody a owl:Class;
+  rdfs:subClassOf lsub:BusinessPerson;
+  rdfs:label "Korporácia"@sk, "Corporate Body"@en, "Korporation"@de;
+  skos:altLabel "Organizácia"@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/633>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/633> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/633>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:DomesticCorporateBody a owl:Class;
+  rdfs:subClassOf lsub:CorporateBody;
+  rdfs:label "Tuzemská korporácia"@sk, "Domestic Corporate Body"@en;
+  skos:altLabel "Tuzemská organizácia"@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/634>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/634> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/634>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:ForeignCorporateBody a owl:Class;
+  rdfs:subClassOf lsub:CorporateBody;
+  rdfs:label "Zahraničná korporácia"@sk, "Foreign Corporate Body"@en;
+  skos:altLabel "Zahraničná organizácia"@sk, "Podnik zahraničnej osoby"@sk, "Organizačná zložka podniku zahraničnej osoby"@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/635>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/635> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/635>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:SelfEmployedPerson a owl:Class;
+  rdfs:subClassOf pper:PhysicalPerson, lsub:BusinessPerson;
+  rdfs:label "Fyzická osoba - podnikateľ"@sk, "Self Employed Person"@en;
+  skos:altLabel "Živnostník"@sk;
+  adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/636>;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/636> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/636>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:ID a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Identifikátor právneho subjektu"@sk, "Legal Subject Identifier"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/637> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/637>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:LegalID a owl:Class;
+  rdfs:subClassOf lsub:ID;
+  rdfs:label "Identifikačné číslo právneho subjektu"@sk, "Legal Number Identifier"@en;
+  skos:altLabel "IČO"@sk, "IPO"@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/638> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/638>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:TaxID a owl:Class;
+  rdfs:subClassOf lsub:ID;
+  rdfs:label "Daňové identifikačné číslo"@sk, "Tax Identifier"@en;
+  skos:altLabel "DIČ"@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/639> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/639>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:VatID a owl:Class;
+  rdfs:subClassOf lsub:ID;
+  rdfs:label "Identifikačné číslo pre daň z pridanej hodnoty"@sk, "Value Added Tax Identification Number"@en;
+  skos:altLabel "IČ DPH"@sk, "VAT ID"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/640> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/640>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:ActivitySubjective a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Predmet činnosti (voľný popis)"@sk, "Activity Subjective"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/655> dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/metais-standard/641> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/641>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:SizeByEmployees a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Veľkosť právneho subjektu podľa počtu zamestancov"@sk, "Legal subject size by number of employees"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:TypeByEmployees a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Kategória právneho subjektu podľa počtu zamestnancov"@sk, "Legal subject type by number of employees"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/609> dct:type <https://data.gov.sk/def/identifier-type/metais-standard>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/609>;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742> .
+
+<https://data.gov.sk/id/identifier/metais-standard/642> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/642>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:Unit a owl:Class;
+  rdfs:label "Organization unit"@en, "Organizačná jednotka"@sk;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/581> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/581>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:UnitType a owl:Class;
+  rdfs:label "Organization Unit Type"@en, "Typ organizačnej jednotky"@sk;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:source <https://data.gov.sk/def/codelist/CL010110> .
+
+<https://data.gov.sk/id/identifier/metais-standard/579> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/579>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:LegalForm a owl:Class;
+  rdfs:label "Legal Form"@en, "Právna forma"@sk, "Rechtsstatus"@de;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:InstitutionalSubsector rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Institutional Subsector"@en, "Inštitucionálny subsektor"@sk .
+
+<https://data.gov.sk/id/identifier/metais-standard/576> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/576>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:LegalFormType a owl:Class;
+  rdfs:label "Legal Form Type"@en, "Typ právnej formy"@sk;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:source <https://data.gov.sk/def/codelist/CL000056> .
+
+lsub:LegalStatus a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Legal Status"@en, "Právny stav"@sk, "Den rechtlichen Status"@de;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:EconomicActivityType rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/622> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/622>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:LegalStatusType a owl:Class;
+  rdfs:label "Legal Status Type"@en, "Typ právneho stavu"@sk;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:source <https://data.gov.sk/def/codelist/CL010108> .
+
+lsub:LegalFact a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Legal fact"@en, "Právna skutočnosť"@sk;
+  skos:altLabel "Iná právna skutočnosť"@sk;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/591> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/591>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:Ownership a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Vlastníctvo"@sk, "Ownership"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:OwnershipType a owl:Class;
+  rdfs:label "Typ vlastníctva"@sk, "Ownership Type"@en;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/607> <http://www.w3.org/ns/dcat#accessURL>
+    <https://metais.vicepremier.gov.sk/standardization/draftdetail/607> .
+
+<https://data.gov.sk/id/identifier/metais-standard/643> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/643>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:Stakeholder a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Zainteresovaná osoba"@sk, "Stakeholder"@sk, "Interessengruppen"@de;
+  rdfs:isDefinedBy lsub:2025b .
+
+lsub:ShareForm a owl:Class;
+  rdfs:label "Aktienform"@de, "Forma akcie"@sk, "Share form"@en .
+
+<https://data.gov.sk/id/identifier/metais-standard/600> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/600>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:StakeholderType a owl:Class;
+  rdfs:label "Typ zainteresovanej osoby"@sk, "Stakeholder type"@en, "Art von Stakeholder"@de;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:source <https://data.gov.sk/def/codelist/CL010109> .
+
+<https://data.gov.sk/id/identifier/metais-standard/598> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/598>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:StatutoryBody a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Štatutárny orgán"@sk, "Statutory body"@en, "Statutarorgan"@de;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/627> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/627>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:StatutoryBodyType a owl:Class;
+  rdfs:label "Typ štatutárneho orgánu"@sk, "Statutory Body Type"@en;
+  rdfs:isDefinedBy lsub:2025b;
+  dct:source <https://data.gov.sk/def/codelist/CL010113> .
+
+<https://data.gov.sk/id/identifier/metais-standard/624> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/624>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:Equity a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Equity"@en, "Základné imanie"@sk, "Kapital"@de;
+  rdfs:isDefinedBy lsub:2025b .
+
+<https://data.gov.sk/id/identifier/metais-standard/596> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/596>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+lsub:Deposit a owl:Class;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:label "Deposit"@en, "Vklad"@sk .
+
+lsub:primaryEconomicActivity rdfs:domain lsub:LegalSubject;
+  rdfs:range lsub:EconomicActivity .
+
+lsub:primaryEconomicActivityType rdfs:domain lsub:EconomicActivity .
+
+lsub:institutionalSubsectorType rdfs:domain lsub:LegalSubject .
+
+lsub:legalIDCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:description "Obsahuje identifikačné číslo organizácie (IČO)."@sk;
+  rdfs:label "legal identifier code"@en, "hodnota identifikačného čísla"@sk;
+  rdfs:range xsd:string .
+
+lsub:taxIDCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:description "Obsahuje daňové identifikačné číslo organizácie (DIČ)."@sk;
+  rdfs:label "tax identifier code"@en, "hodnota daňového identifikačného čísla"@sk;
+  rdfs:range xsd:string .
+
+lsub:vatIDCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy lsub:2025b;
+  rdfs:domain lsub:LegalSubject;
+  rdfs:description "Obsahuje identifikačné číslo pre daň z pridanej hodnoty (IČ DPH)."@sk;
+  rdfs:label "VAT identifier code"@en, "hodnota identifikačného čísla pre daň z pridanej hodnoty"@sk;
+  rdfs:range xsd:string .
