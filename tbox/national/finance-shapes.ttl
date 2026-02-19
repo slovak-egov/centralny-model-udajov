@@ -1,25 +1,101 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
 @prefix loca: <https://data.gov.sk/def/ontology/location/> .
 @prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
 @prefix egov: <https://data.gov.sk/def/ontology/egov/> .
 @prefix fin: <https://data.gov.sk/def/ontology/finance/> .
+@prefix sha-egov: <https://data.gov.sk/def/shapes/egov/> .
+@prefix sha-rpo: <https://data.gov.sk/def/shapes/rpo/> .
 @prefix sha-fin: <https://data.gov.sk/def/shapes/finance/> .
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
+
+# BankConnection
+
+sha-fin:BankConnectionShape
+	a sh:NodeShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+	sh:targetClass fin:BankConnection ;
+    sh:property sha-fin:BankConnection-accountHolder ,
+
+sha-fin:BankConnection-accountHolder
+  a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:accountHolder ;
+    sh:class fin:AccountHolder ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .    
+
+# DomesticBankConnection
+
+sha-fin:DomesticBankConnectionShape
+	a sh:NodeShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+	sh:targetClass fin:DomesticBankConnection ;
+    sh:property sha-fin:DomesticBankConnection-domesticBankCode ,
+        		sha-fin:DomesticBankConnection-dbanCode ,
+        		sha-fin:DomesticBankConnection-dbanPrefix ,
+                sha-fin:DomesticBankConnection-formattedDBAN ,
+                sha-fin:BankConnection-accountHolder .
+
+# domesticBankCode
+
+sha-fin:DomesticBankConnection-domesticBankCode
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:domesticBankCode ;
+    sh:class fin:DomesticBankConnection ;
+    sh:nodeKind sh:IRI .    
+
+# dbanCode
+
+sha-fin:DomesticBankConnection-dbanCode
+    a sh:PropertyShape ;
+	sh:path fin:dbanCode ;
+	sh:datatype xsd:string ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:minLenght 10 ;
+    sh:maxLenght 10 ;	
+	sh:minCount 1 ;
+	sh:maxCount 1 .     
+
+# dbanPrefix
+
+sha-fin:DomesticBankConnection-dbanPrefix
+    a sh:PropertyShape ;
+	sh:path fin:dbanPrefix ;
+	sh:datatype xsd:string ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:minLenght 6 ;
+    sh:maxLenght 6 ;	
+	sh:minCount 1 ;
+	sh:maxCount 1 .     
+
+# formattedDBAN
+
+sha-fin:DomesticBankConnection-formattedDBAN
+    a sh:PropertyShape ;
+	sh:path fin:formattedDBAN ;
+	sh:datatype xsd:string ;
+	rdfs:isDefinedBy sha-fin:2025c .                 
+
+# InternationalBankConnection
 
 sha-fin:InternationalBankConnectionShape
 	a sh:NodeShape ;
-	sh:order 1 ;
-	rdfs:isDefinedBy sha-fin: ;
-	sh:targetClass lsub:LegalSubject ;
-        sh:property sha-fin:InternationalBankConnection-ibanCode ,
-        			sha-fin:InternationalBankConnection-currency ,
-        			sha-fin:InternationalBankConnection-bic .
+	rdfs:isDefinedBy sha-fin:2025c ;
+	sh:targetClass fin:InternationalBankConnection ;
+    sh:property sha-fin:InternationalBankConnection-ibanCode ,
+        		sha-fin:InternationalBankConnection-currency ,
+        		sha-fin:InternationalBankConnection-bic ,
+                sha-fin:BankConnection-accountHolder .
 
 # ibanCode
 
@@ -27,8 +103,7 @@ sha-fin:InternationalBankConnection-ibanCode
     a sh:PropertyShape ;
 	sh:path fin:ibanCode ;
 	sh:datatype xsd:string ;
-	sh:order 2 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:minLenght 34 ;
     sh:maxLenght 34 ;	
 	sh:minCount 1 ;
@@ -36,10 +111,9 @@ sha-fin:InternationalBankConnection-ibanCode
 
 # currency
 
-sha-fin:InternationalBankConnection-ibanCode
+sha-fin:InternationalBankConnection-currency
     a sh:PropertyShape ;
-	sh:order 3 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:currency ;
     sh:class fin:Currency ;
     sh:nodeKind sh:IRI .	
@@ -48,8 +122,7 @@ sha-fin:InternationalBankConnection-ibanCode
 
 sha-fin:InternationalBankConnection-bic
   a sh:PropertyShape ;
-	sh:order 4 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:bic ;
     sh:class fin:BIC ;
     sh:nodeKind sh:IRI ;
@@ -58,8 +131,7 @@ sha-fin:InternationalBankConnection-bic
 	
 sha-fin:BICShape
 	a sh:NodeShape ;
-	sh:order 5 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:targetClass fin:BIC ;
     sh:property sha-fin:BIC-bankBranchCode ,
                 sha-fin:BIC-bankCode ,
@@ -69,36 +141,192 @@ sha-fin:BICShape
                 
 sha-fin:BIC-bankBranchCode
     a sh:PropertyShape ;
-	sh:order 6 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:bankBranchCode ;
     sh:datatype xsd:string .
 
 sha-fin:BIC-bankCode
     a sh:PropertyShape ;
-	sh:order 7 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:bankCode ;
     sh:datatype xsd:string .
 
 sha-fin:BIC-bankCountryCode
     a sh:PropertyShape ;
- 	sh:order 8 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:bankCountryCode ;
     sh:datatype xsd:string .
 
 sha-fin:BIC-bankHeadquartersCode
     a sh:PropertyShape ;
-	sh:order 9 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:bankHeadquartersCode ;
     sh:datatype xsd:string .
     
 sha-fin:BIC-bankIdentifierCode
     a sh:PropertyShape ;
-	sh:order 10 ;
-	rdfs:isDefinedBy sha-fin: ;
+	rdfs:isDefinedBy sha-fin:2025c ;
     sh:path fin:bankIdentifierCode ;
     sh:datatype xsd:string .
     
+# BussinessRelationship
+
+sha-fin:BussinessRelationshipShape
+	a sh:NodeShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+	sh:targetClass fin:BussinessRelationship ;
+    sh:property sha-fin:BussinessRelationship-orderer ,
+        		sha-fin:BussinessRelationship-supplier ,
+        		sha-fin:BussinessRelationship-contracts,
+                sha-fin:BussinessRelationship-orders,
+                sha-fin:BussinessRelationship-invoices .
+
+# orderer
+
+sha-fin:BussinessRelationship-orderer
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:orderer ;
+    sh:class lsub:LegalSubject ;
+    sh:nodeKind sh:IRI ;	
+    sh:minCount 1 ;
+	sh:maxCount 1 .
+
+# supplier
+
+sha-fin:BussinessRelationship-supplier
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:supplier ;
+    sh:class lsub:LegalSubject ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+	sh:maxCount 1 .
+
+# contracts
+
+sha-fin:BussinessRelationship-contracts
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:contracts ;
+    sh:class egov:DocumentCollection ;
+    sh:minCount 1 .    
+
+# orders
+
+sha-fin:BussinessRelationship-orders
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:orders ;
+    sh:class egov:DocumentCollection ;
+    sh:minCount 1 .       
+
+# invoices
+
+sha-fin:BussinessRelationship-invoices
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:invoices ;
+    sh:class egov:DocumentCollection ;
+    sh:minCount 1 .      
+
+# AccountingRange
+
+sha-fin:AccountingRangeShape
+    a sh:NodeShape ;
+    sh:targetClass fin:AccountingRange ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/420> ;
+    dct:source <https://data.gov.sk/def/codelist/CL005003> ;
+    rdfs:isDefinedBy sha-fin:2025c .    
+
+# Price
+
+sha-fin:PriceShape
+	a sh:NodeShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:targetClass fin:Price ;
+    sh:property sha-fin:Price-accounted ,
+                sha-fin:Price-payed ,
+                sha-fin:Price-value ,
+                sha-fin:Price-valueWithVAT ,
+                sha-fin:Price-isValueWithVAT .
+                
+sha-fin:Price-accounted
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:accounted ;
+    sh:datatype xsd:date .    
+
+sha-fin:Price-payed
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:payed ;
+    sh:datatype xsd:date . 
+
+sha-fin:Price-value
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:value ;
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 . 
+
+sha-fin:Price-valueWithVAT
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:valueWithVAT ;
+    sh:datatype xsd:decimal . 
+
+sha-fin:Price-isValueWithVAT
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:isValueWithVAT ;
+    sh:datatype xsd:boolean .                 
+
+# FundingRequest
+
+sha-fin:FundingRequestShape
+	a sh:NodeShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:targetClass fin:FundingRequest ;
+    sh:property sha-fin:FundingRequest-approvedFundingAmount ,
+                sha-fin:FundingRequest-co-financingAmount ,
+                sha-fin:FundingRequest-fundingApprovalDate ,
+                sha-fin:FundingRequest-fundingProjectStartDate ,
+                sha-fin:FundingRequest-projectCode ,
+                sha-fin:FundingRequest-wasApproved .
+                
+sha-fin:FundingRequest-approvedFundingAmount
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:approvedFundingAmount ;
+    sh:datatype xsd:decimal .    
+
+sha-fin:FundingRequest-co-financingAmount
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:co-financingAmount ;
+    sh:datatype xsd:decimal .  
+
+sha-fin:FundingRequest-fundingApprovalDate
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:fundingApprovalDate ;
+    sh:datatype xsd:date .  
+
+sha-fin:FundingRequest-fundingProjectStartDate
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:fundingProjectStartDate ;
+    sh:datatype xsd:date .  
+
+sha-fin:FundingRequest-projectCode
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:projectCode ;
+    sh:datatype xsd:string .  
+
+sha-fin:FundingRequest-wasApproved
+    a sh:PropertyShape ;
+	rdfs:isDefinedBy sha-fin:2025c ;
+    sh:path fin:wasApproved ;
+    sh:datatype xsd:boolean .                      

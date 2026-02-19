@@ -1,0 +1,670 @@
+@prefix : <https://data.gov.sk/def/ontology/finance/2025c#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix fin: <https://data.gov.sk/def/ontology/finance/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix lsub: <https://data.gov.sk/def/ontology/legal-subject/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+fin:2025c a owl:Ontology;
+  dct:title "Ontológia finančných entít";
+  dct:creator <http://www.linkedin.com/in/emillazenga>;
+  dct:contributor <http://www.linkedin.com/in/miroslavliska>, <http://www.linkedin.com/in/mareksurek>;
+  owl:versionInfo "2025c";
+  dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
+
+fin:Invoice a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Faktúra"@sk, "Invoice"@en .
+
+fin:invoices a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:range egov:DocumentCollection;
+  rdfs:label "invoices"@en, "faktúry"@sk .
+
+fin:Order a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Objednávka"@sk, "Order"@en .
+
+fin:Contract a owl:Class;
+  rdfs:label "Zmluva"@sk, "Contract"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:Price a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:subClassOf egov:Amount;
+  rdfs:label "Cena"@sk, "Price"@en .
+
+fin:accounted a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "dátum zaúčtovania"@sk, "posting date"@en;
+  rdfs:domain fin:Price;
+  rdfs:range xsd:date .
+
+fin:currency a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "mena"@sk, "currency"@en, "Währung"@de;
+  rdfs:range fin:Currency;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.1>;
+  rdfs:description "Relácia na použitú menu definovanú hodnotami číselníka CL010138 Jednotka meny."@sk .
+
+fin:receivedPayment a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "prijatá finančná dávka"@sk, "received payment"@en .
+
+fin:contracts a rdf:Property, owl:ObjectProperty;
+  rdfs:label "zmluvy"@sk, "contracts"@en;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:range egov:DocumentCollection .
+
+fin:delivered a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "dátum doručenia"@sk, "date of receipt"@en .
+
+fin:invoice a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:range fin:Invoice;
+  rdfs:label "faktúra"@sk, "invoice"@en .
+
+fin:isAdvanceInvoice a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "zálohová faktúra"@sk, "advance invoice"@en;
+  rdfs:domain fin:Invoice;
+  rdfs:range xsd:boolean .
+
+fin:isCanceled a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "zrušené"@sk, "canceled"@en;
+  rdfs:range xsd:boolean .
+
+fin:order a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "objednávka"@sk, "order"@en;
+  rdfs:range fin:Order .
+
+fin:orderer a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "objednávateľ"@sk, "orderer"@en .
+
+fin:payed a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:domain fin:Price;
+  rdfs:range xsd:date;
+  rdfs:label "dátum úhrady"@sk, "payment date"@en .
+
+fin:price a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "cena"@sk, "price"@en;
+  rdfs:range fin:Price .
+
+fin:recordCreated a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "dátum vytvorenia dokladu"@sk, "record creation date"@en;
+  rdfs:range xsd:date .
+
+fin:supplier a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "dodávateľ"@sk, "supplier"@en .
+
+fin:valueWithVAT a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "cena s dph"@sk, "price including VAT"@en;
+  rdfs:domain fin:Price;
+  rdfs:range xsd:decimal .
+
+fin:FundingScheme a owl:Class;
+  rdfs:label "Schéma financovania"@sk, "Funding scheme"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:CallForFunding a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Call for funding"@en, "Výzva na financovanie"@sk .
+
+fin:isValueWithVAT a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "financial value with VAT"@en, "finančná hodnota s DPH"@sk;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:range xsd:boolean;
+  rdfs:domain fin:Price .
+
+fin:fundingScheme a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:domain fin:CallForFunding;
+  rdfs:range fin:FundingScheme;
+  rdfs:label "schéma financovania"@sk, "funding scheme"@en .
+
+fin:allocation a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "alokovaná suma"@sk, "allocated amount"@en;
+  rdfs:range xsd:decimal .
+
+fin:maximalFunding a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:domain fin:CallForFunding;
+  rdfs:range xsd:decimal;
+  rdfs:label "maximálna výška dotácie"@sk, "maximum funding amount"@en .
+
+fin:minimalFunding a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "minimálna výška dotácie"@sk, "minimum funding amount"@en;
+  rdfs:domain fin:CallForFunding;
+  rdfs:range xsd:decimal .
+
+fin:fundingSourceType a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "typ zdrojového financovania"@sk, "funding source type"@en;
+  rdfs:domain fin:FundingScheme;
+  rdfs:range fin:FundingSourceType .
+
+fin:FundingSourceType a owl:Class;
+  rdfs:subClassOf skos:Concept;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Typ zdroja financovania"@sk, "Funding source type"@en .
+
+fin:legalFormRestriction a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "kód vyžadovanej právnej formy žiadateľa"@sk, "required applicant legal form code"@en .
+
+fin:fundingRequestor a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "žiadateľ dotácií"@sk, "funding requestor"@en .
+
+fin:FundingRequest a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Žiadosť o financovanie"@sk, "Funding request"@en .
+
+fin:FundingRequestor a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Žiadateľ o financovanie"@sk, "Funding requestor"@en .
+
+fin:approvedFundingAmount a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "výška schválenej sumy"@sk, "approved funding amount"@en;
+  rdfs:domain fin:FundingRequest;
+  rdfs:range xsd:decimal .
+
+fin:co-financingAmount a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "výška spolufinancovania"@sk, "co-financing amount"@en;
+  rdfs:domain fin:FundingRequest;
+  rdfs:range xsd:decimal .
+
+fin:fundingProjectStartDate a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "dátum začiatku realizácie projektu"@sk, "funded project start date"@en;
+  rdfs:domain fin:FundingRequest;
+  rdfs:range xsd:date .
+
+fin:projectCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "kód projektu schválenej žiadosti"@sk, "approved project code"@en;
+  rdfs:domain fin:FundingRequest;
+  rdfs:range xsd:string .
+
+fin:fundingApprovalDate a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "dátum schvaľovania žiadosti"@sk, "funding application approval date"@en;
+  rdfs:domain fin:FundingRequest;
+  rdfs:range xsd:date .
+
+fin:wasApproved a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "stav vyhodnotenia žiadosti"@sk, "was approved"@en;
+  rdfs:domain fin:FundingRequest;
+  rdfs:range xsd:boolean .
+
+fin:FundedProject a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Financovaný projekt"@sk, "Funded project"@en .
+
+fin:fundedProject a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "financovaný projekt"@sk, "funded project"@en;
+  rdfs:range fin:FundedProject .
+
+fin:accountHolder a owl:ObjectProperty, rdf:Property;
+  rdfs:label "account holder"@en, "vlastník bankového účtu"@sk, "Kontoinhaber"@de;
+  rdfs:description "Relácia bankového účtu na jeho vlastníka."@sk;
+  rdfs:domain fin:BankConnection;
+  rdfs:range fin:AccountHolder;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.1>;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/330> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/330>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  skos:notation "D.1.1.11.1";
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:altSymbol "AccountHolder";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:bankConnection a owl:ObjectProperty, rdf:Property;
+  rdfs:label "bank connection"@en, "bankové spojenie"@sk;
+  owl:inverseOf fin:accountHolder;
+  rdfs:description "Relácia vlastníka bankového účtu na jeho účeť."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11>;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:bankBranchCode a rdf:Property, owl:DatatypeProperty;
+  rdfs:label "bank branch code"@en, "kód pobočky banky"@sk;
+  rdfs:domain fin:BIC;
+  rdfs:range xsd:string;
+  rdfs:description "Relácia medzinárodného identifikátora banky na kód jej pobočky."@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/332> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/332>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11";
+  skos:altSymbol "BankConnection";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:iban a owl:ObjectProperty, rdf:Property;
+  rdfs:label "international bank account connection"@en, "medzinárodné bankové spojenie"@sk;
+  rdfs:subPropertyOf fin:bankConnection;
+  rdfs:range fin:InternationalBankConnection;
+  rdfs:description "Zložený dátový prvok pre údaje o bankovom spojení medzinárodnej banky."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4>;
+  rdfs:isDefinedBy fin:2025c;
+  skos:note "Na účely tohto materiálu sa za medzinárodné bankové spojenie považuje číslo účtu a kód banky."@sk .
+
+fin:proportionOfFlatRateCosts a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:domain fin:InsuranceCosts;
+  rdfs:range xsd:decimal;
+  rdfs:label "podiel paušálnych nákladov"@sk, "proportion Of flat rate costs"@en .
+
+fin:bank a rdf:Property, owl:ObjectProperty;
+  rdfs:label "bank"@en, "banka"@sk, "Bank"@de;
+  rdfs:range fin:Bank;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/325> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/327>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.4";
+  skos:altSymbol "InternationalBankConnection";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:dban a owl:ObjectProperty, rdf:Property;
+  rdfs:label "domestic bank connection"@en, "tuzemské bankové spojenie"@sk;
+  rdfs:subPropertyOf fin:bankConnection;
+  rdfs:range fin:DomesticBankConnection;
+  skos:note "Na účely tohto materiálu sa za tuzemské bankové spojenie považuje úplné číslo účtu a kód banky."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3>;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:description "Zložený dátový prvok pre údaje o bankovom spojení tuzemskej banky."@sk .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.3";
+  skos:altSymbol "DomesticBankConnection";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:bic a owl:ObjectProperty, rdf:Property;
+  rdfs:label "Bank Identifier Code"@en, "Medzinárodný kód banky"@sk;
+  skos:altLabel "SWIFT"@sk;
+  rdfs:domain fin:InternationalBankConnection;
+  rdfs:range fin:BIC;
+  rdfs:description "Relácia medzinárodného bankového spojenia na medzinárodný kód banky."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.2>;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.4.2";
+  skos:altSymbol "BIC";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:domesticBankCode a owl:ObjectProperty, rdf:Property;
+  rdfs:label "domestic bank code"@en, "tuzemský kód banky"@sk;
+  rdfs:domain fin:DomesticBankConnection;
+  rdfs:range fin:DomesticBankCode;
+  rdfs:description "Relácia tuzemského bankového spojenia na tuzemský kód banky."@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/504> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/504>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.2.9.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.2.9.1";
+  skos:altSymbol "Currency";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:bankName a rdf:Property, owl:DatatypeProperty;
+  rdfs:domain fin:BankCode;
+  rdfs:label "bank name"@en, "názov banky"@sk;
+  skos:note "[Formát reprezentácie: Textový reťazec.]"@sk, "[Povinne spracovateľná veľkosť dátového poľa: Najmenej 1023 znakov.]"@sk,
+    "[Hodnoty: Pre tuzemské banky sa vypĺňa v súlade s aktuálnym Prevodníkom identifikačných kódov pre tuzemský platobný styk, ktorý zverejňuje Národná banka Slovenska, stĺpec Názov.]"@sk,
+    "[Pravidlá použitia: Obsahuje celé meno v jednom reťazci, so všetkými časťami v správnom poradí, čo znamená na správnom mieste.]"@sk;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy fin:2025c;
+  skos:example "Prvá vymyslená banka, a.s."@sk;
+  rdfs:description "Obsahuje celé meno banky."@sk .
+
+fin:bankCode a owl:ObjectProperty, rdf:Property;
+  rdfs:label "bank code"@en, "kód banky"@sk;
+  rdfs:range fin:BankCode;
+  rdfs:description "Relácia medzinárodného identifikátora banky na jej kód."@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/321> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/321>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+fin:bankCountryCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "bank country code"@en, "kód krajiny banky"@sk;
+  rdfs:domain fin:BIC;
+  rdfs:range xsd:string;
+  rdfs:description "Relácia medzinárodného identifikátora banky na kód jej krajiny."@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:bankHeadquartersCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "bank headquarters code"@en, "kód sídla banky"@sk;
+  rdfs:domain fin:BIC;
+  rdfs:range xsd:string;
+  rdfs:description "Relácia medzinárodného identifikátora banky na kód jej sídla."@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:ibanCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "IBAN code"@en, "kód IBAN"@sk;
+  rdfs:domain fin:InternationalBankConnection;
+  rdfs:range xsd:string;
+  rdfs:description "Medzinárodné číslo účtu."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.1>;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.4.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.4.1";
+  skos:altSymbol "IBAN";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:dbanCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "domestic bank account number"@en, "tuzemské číslo účtu"@sk;
+  rdfs:domain fin:DomesticBankConnection;
+  rdfs:range xsd:string;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.3>;
+  rdfs:isDefinedBy fin:2025c;
+  skos:note "[Hodnoty: Hodnoty nie sú predpísané, závisia od hodnôt, ktoré prideľuje konkrétna banka.]"@sk,
+    "[Formát reprezentácie: Číslo účtu sa uvádza ako číslo v súlade s opatrením Národnej banky Slovenskej republiky č. 8/2009, ktorým sa ustanovuje štruktúra bankového spojenia na účely tuzemských prevodov, štruktúra medzinárodného bankového čísla účtu na účely cezhraničných prevodov a podrobnosti o vydávaní prevodníka identifikačných kódov.]"@sk;
+  skos:example "0123456789"@sk;
+  rdfs:description "Samotné číslo účtu, pridelené osobe."@sk .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.3> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.3.3";
+  skos:altSymbol "AccountNumber";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:dbanPrefix a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "domestic bank account number prefix"@en, "predčíslie tuzemského účtu"@sk;
+  rdfs:domain fin:DomesticBankConnection;
+  rdfs:range xsd:string;
+  rdfs:description "Uvádza sa číslo pred samotným číslom účtu."@sk;
+  adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.2>;
+  rdfs:isDefinedBy fin:2025c;
+  skos:note "[Formát reprezentácie: Predčíslie účtu sa uvádza ako číslo v súlade s opatrením Národnej banky Slovenskej republiky č.8/2009, ktorým sa ustanovuje štruktúra bankového spojenia na účely tuzemských prevodov, štruktúra medzinárodného bankového čísla účtu na účely cezhraničných prevodov a podrobnosti o vydávaní prevodníka identifikačných kódov.]"@sk,
+    "[Hodnoty: Nemá predpísaný obsah. Uvádza sa, iba ak existuje, nakoľko jeho existencia nie je povinná.]"@sk;
+  skos:example "123456"@sk .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.2> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.3.2";
+  skos:altSymbol "AccountNumberPrefix";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:formattedDBAN a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "formatted domestic bank account number"@en, "formátované číslo účtu tuzemského bankového spojenia"@sk;
+  skos:note "[Povinne spracovateľná veľkosť dátového poľa: Najmenej 50 znakov.]"@sk,
+    "[Pravidlá použitia: V prípade dekompozície na Predčíslie účtu, Číslo účtu a Kód banky sa nepoužíva.]"@sk,
+    "[Formát reprezentácie: Textový reťazec. Predčíslie sa oddeľuje pomlčkou. Kód banky sa oddeľuje lomítkom. Uvádza sa v súlade s opatrením Národnej banky Slovenskej republiky č. 8/2009, ktorým sa ustanovuje štruktúra bankového spojenia na účely tuzemských prevodov, štruktúra medzinárodného bankového čísla účtu na účely cezhraničných prevodov a podrobnosti o vydávaní prevodníka identifikačných kódov.]"@sk;
+  rdfs:range xsd:string;
+  rdfs:description "Spojené celé tuzemské číslo účtu (vrátane predčíslia) a kód banky."@sk;
+  rdfs:isDefinedBy fin:2025c;
+  skos:example "123456-0123456789/1111"@sk;
+  rdfs:domain fin:DomesticBankConnection .
+
+<https://data.gov.sk/id/identifier/kdp-id/D.1.1.11.3.1> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+  skos:notation "D.1.1.11.3.1";
+  skos:altSymbol "FormattedDomesticBankConnection";
+  dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
+
+fin:bankNumericCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "numeric bank code"@en, "číselný kód banky"@sk;
+  rdfs:domain fin:BankCode;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:bankStringCode a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "string bank code"@en, "textový kód banky"@sk;
+  rdfs:domain fin:BankCode;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:Bank a owl:Class;
+  rdfs:label "Bank"@en, "Banka"@sk;
+  rdfs:subClassOf lsub:BusinessSubject;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:BankConnection a owl:Class;
+  rdfs:label "Bank connection"@en, "Bankové spojenie"@sk;
+  rdfs:subClassOf egov:ThingWithValidity;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:value a owl:DatatypeProperty, rdf:Property;
+  rdfs:range xsd:decimal;
+  rdfs:domain fin:Price;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "finančná hodnota"@sk, "financial value"@en .
+
+<https://data.gov.sk/id/identifier/metais-standard/333> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/333>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+fin:DomesticBankCode a owl:Class;
+  rdfs:subClassOf fin:BankCode;
+  rdfs:label "Domestic bank code"@en, "Tuzemský kód banky"@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:BankCode a owl:Class;
+  rdfs:label "Bank code"@en, "Kód banky"@sk;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:subClassOf egov:ThingWithValidity, adms:Identifier .
+
+fin:BIC a owl:Class;
+  rdfs:subClassOf fin:BankCode;
+  rdfs:label "Bank Identifier Code"@en, "Medzinárodný kód banky"@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:DomesticBankConnection a owl:Class;
+  rdfs:subClassOf fin:BankConnection;
+  rdfs:label "Domestic bank connection"@en, "Tuzemské bankové spojenie"@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/324> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/324>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+fin:InternationalBankConnection a owl:Class;
+  rdfs:subClassOf fin:BankConnection;
+  rdfs:label "International bank connection"@en, "Medzinárodné bankové spojenie"@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/328> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/328>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+fin:AccountHolder a owl:Class;
+  rdfs:label "Account holder"@en, "Vlastník účtu"@sk;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/331> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/331>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+fin:Currency a owl:Class;
+  rdfs:label "Currency"@en, "Mena"@sk, "Währung"@de;
+  rdfs:isDefinedBy fin:2025c .
+
+<https://data.gov.sk/id/identifier/metais-standard/359> a adms:Identifier;
+  dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
+  <http://www.w3.org/ns/dcat#accessURL> <https://metais.vicepremier.gov.sk/standardization/draftdetail/359>;
+  dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
+
+fin:benefitReceivingPeriod a owl:ObjectProperty, rdf:Property;
+  rdfs:label "obdobie poberania finančnej dávky"@sk, "benefit receiving period"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:Benefit a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Finančná dávka"@sk, "Benefit"@en .
+
+fin:BenefitType a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Typ finančnej dávky"@sk, "Benefit type"@en .
+
+fin:overpayment a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "hodnota preplatku"@sk, "overpayment amount"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:hasArrears a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "má nedoplatky"@sk, "has arrears"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:arrearsType a owl:ObjectProperty, rdf:Property;
+  rdfs:label "typ nedoplatku"@sk, "arrears type"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:ArrearsType a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Typ nedoplatku"@sk, "Arrears type"@en .
+
+fin:Insurance a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Poistenie"@sk, "Insurance"@en .
+
+fin:insured a owl:ObjectProperty, rdf:Property;
+  rdfs:label "predmet poistenia"@sk, "insured"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:Insured a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Predmet poistenia"@sk, "Insured"@en .
+
+fin:InsurancePolicyHolder a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Uzatvárateľ poistenia"@sk, "Insurance policy holder"@en .
+
+fin:InsuranceCompany a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Poisťovňa"@sk, "Insurance company"@en .
+
+fin:InsuranceType a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Typ poistenia"@sk, "Insurance type"@en .
+
+fin:insuranceStartDate a owl:DatatypeProperty, rdf:Property;
+  rdfs:domain fin:Insurance;
+  rdfs:range xsd:date;
+  rdfs:label "dátum začiatku poistenia"@sk, "insurance start date"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:insuranceEndDate a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "dátum ukončenia poistenia"@sk, "insurance end date"@en;
+  rdfs:domain fin:Insurance;
+  rdfs:range xsd:date;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:InsuranceCosts a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Náklady na poistenie"@sk, "Insurance costs"@en .
+
+fin:InsurancePolicyHolderType a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Typ platiteľa poistného"@sk, "Insurance policy holder type"@en .
+
+fin:insurancePolicyHolderType a owl:ObjectProperty, rdf:Property;
+  rdfs:label "typ platiteľa poistného"@sk, "insurance policy holder type"@en;
+  rdfs:domain fin:Insurance;
+  rdfs:range fin:InsurancePolicyHolderType;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:insurancePaymentObligationStartDate a owl:DatatypeProperty, rdf:Property;
+  rdfs:range xsd:date;
+  rdfs:label "dátum začiatku povinnosti platiť poistné"@sk, "insurance payment obligation start date"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:insurancePaymentObligationEndDate a owl:DatatypeProperty, rdf:Property;
+  rdfs:range xsd:date;
+  rdfs:label "dátum konca povinnosti platiť poistné"@sk, "insurance payment obligation end date"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:BussinessRelationship a owl:Class;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "Bussiness relationship"@en, "Obchodný vzťah"@sk .
+
+fin:bussinessRelationship a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "bussiness relationship"@en, "obchodný vzťah"@sk;
+  rdfs:range fin:BussinessRelationship .
+
+fin:AccountingRange a owl:Class;
+  rdfs:label "Účtovný okruh"@sk, "Accounting range"@en;
+  rdfs:isDefinedBy fin:2025c .
+
+fin:accountingRange a owl:ObjectProperty, rdf:Property;
+  rdfs:label "účtovný okruh"@sk, "accounting range"@en;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:range fin:AccountingRange .
+
+fin:contract a owl:ObjectProperty, rdf:Property;
+  rdfs:label "zmluva"@sk, "contract"@en;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:range fin:Contract .
+
+fin:orders a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "objednávky"@sk, "orders"@en;
+  rdfs:range egov:DocumentCollection .
+
+fin:vatValue a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy fin:2025c;
+  rdfs:label "výška DPH"@sk, "value of VAT"@en;
+  rdfs:domain fin:Price;
+  rdfs:range xsd:decimal .

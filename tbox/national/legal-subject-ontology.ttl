@@ -78,7 +78,7 @@ lsub:primaryEconomicActivity a owl:ObjectProperty;
 lsub:ShareType a owl:Class;
   dct:source <https://data.gov.sk/def/codelist/CL010111>;
   rdfs:isDefinedBy lsub:2025b;
-  rdfs:label "Share Type"@en, "Typ akcie"@sk, "Aktien Typ"@de .
+  rdfs:label "Share type"@en, "Typ akcie"@sk, "Aktien Typ"@de .
 
 <https://data.gov.sk/id/identifier/metais-standard/589> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -621,7 +621,7 @@ lsub:shares a owl:ObjectProperty;
   dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
 
 lsub:institutionalSubsector a owl:ObjectProperty;
-  rdfs:label "institutional subsector type"@en, "inštitucionálny subsektor"@sk;
+  rdfs:label "institutional subsector"@en, "inštitucionálny subsektor"@sk;
   rdfs:domain lsub:LegalSubject;
   rdfs:range lsub:InstitutionalSubsector;
   rdfs:isDefinedBy lsub:2025b .
@@ -953,7 +953,7 @@ lsub:EconomicActivityType a owl:Class;
 
 lsub:InstitutionalSubsectorType a owl:Class;
   rdfs:isDefinedBy lsub:2025b;
-  rdfs:label "Štatistický kód inštitucionálneho subsektora"@sk, "Institutional Subsector Type"@en .
+  rdfs:label "Štatistický kód inštitucionálneho subsektora"@sk, "Institutional subsector type"@en .
 
 <https://data.gov.sk/id/identifier/metais-standard/586> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -962,7 +962,7 @@ lsub:InstitutionalSubsectorType a owl:Class;
   dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
 
 lsub:LegalSubject a owl:Class;
-  rdfs:label "Právny subjekt"@sk, "Legal Subject"@en, "Rechtsanwalt"@de;
+  rdfs:label "Právny subjekt"@sk, "Legal subject"@en, "Rechtsanwalt"@de;
   skos:altLabel "Právnicka osoba"@sk;
   adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2>;
   rdfs:isDefinedBy lsub:2025b .
@@ -987,7 +987,7 @@ lsub:BusinessPerson a owl:Class;
 
 lsub:CorporateBody a owl:Class;
   rdfs:subClassOf lsub:BusinessPerson;
-  rdfs:label "Korporácia"@sk, "Corporate Body"@en, "Korporation"@de;
+  rdfs:label "Korporácia"@sk, "Corporate body"@en, "Korporation"@de;
   skos:altLabel "Organizácia"@sk;
   adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/633>;
   rdfs:isDefinedBy lsub:2025b .
@@ -999,7 +999,7 @@ lsub:CorporateBody a owl:Class;
 
 lsub:DomesticCorporateBody a owl:Class;
   rdfs:subClassOf lsub:CorporateBody;
-  rdfs:label "Tuzemská korporácia"@sk, "Domestic Corporate Body"@en;
+  rdfs:label "Tuzemská korporácia"@sk, "Domestic corporate body"@en;
   skos:altLabel "Tuzemská organizácia"@sk;
   adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/634>;
   rdfs:isDefinedBy lsub:2025b .
@@ -1011,7 +1011,7 @@ lsub:DomesticCorporateBody a owl:Class;
 
 lsub:ForeignCorporateBody a owl:Class;
   rdfs:subClassOf lsub:CorporateBody;
-  rdfs:label "Zahraničná korporácia"@sk, "Foreign Corporate Body"@en;
+  rdfs:label "Zahraničná korporácia"@sk, "Foreign corporate body"@en;
   skos:altLabel "Zahraničná organizácia"@sk, "Podnik zahraničnej osoby"@sk, "Organizačná zložka podniku zahraničnej osoby"@sk;
   adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/635>;
   rdfs:isDefinedBy lsub:2025b .
@@ -1023,7 +1023,7 @@ lsub:ForeignCorporateBody a owl:Class;
 
 lsub:SelfEmployedPerson a owl:Class;
   rdfs:subClassOf pper:PhysicalPerson, lsub:BusinessPerson;
-  rdfs:label "Fyzická osoba - podnikateľ"@sk, "Self Employed Person"@en;
+  rdfs:label "Fyzická osoba - podnikateľ"@sk, "Self employed person"@en;
   skos:altLabel "Živnostník"@sk;
   adms:Identifier <https://data.gov.sk/id/identifier/metais-standard/636>;
   rdfs:isDefinedBy lsub:2025b .
@@ -1035,7 +1035,7 @@ lsub:SelfEmployedPerson a owl:Class;
 
 lsub:ID a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Identifikátor právneho subjektu"@sk, "Legal Subject Identifier"@en;
+  rdfs:label "Identifikátor právneho subjektu"@sk, "Legal subject identifier"@en;
   rdfs:isDefinedBy lsub:2025b .
 
 <https://data.gov.sk/id/identifier/metais-standard/637> a adms:Identifier;
@@ -1045,7 +1045,7 @@ lsub:ID a owl:Class;
 
 lsub:LegalID a owl:Class;
   rdfs:subClassOf lsub:ID;
-  rdfs:label "Identifikačné číslo právneho subjektu"@sk, "Legal Number Identifier"@en;
+  rdfs:label "Identifikačné číslo právneho subjektu"@sk, "Legal number identifier"@en;
   skos:altLabel "IČO"@sk, "IPO"@sk;
   rdfs:isDefinedBy lsub:2025b .
 
@@ -1056,7 +1056,7 @@ lsub:LegalID a owl:Class;
 
 lsub:TaxID a owl:Class;
   rdfs:subClassOf lsub:ID;
-  rdfs:label "Daňové identifikačné číslo"@sk, "Tax Identifier"@en;
+  rdfs:label "Daňové identifikačné číslo"@sk, "Tax identifier"@en;
   skos:altLabel "DIČ"@sk;
   rdfs:isDefinedBy lsub:2025b .
 
@@ -1078,7 +1078,7 @@ lsub:VatID a owl:Class;
 
 lsub:ActivitySubjective a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Predmet činnosti (voľný popis)"@sk, "Activity Subjective"@en;
+  rdfs:label "Predmet činnosti (voľný popis)"@sk, "Activity subjective"@en;
   rdfs:isDefinedBy lsub:2025b .
 
 <https://data.gov.sk/id/identifier/metais-standard/655> dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
@@ -1118,7 +1118,7 @@ lsub:Unit a owl:Class;
   dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
 
 lsub:UnitType a owl:Class;
-  rdfs:label "Organization Unit Type"@en, "Typ organizačnej jednotky"@sk;
+  rdfs:label "Organization unit type"@en, "Typ organizačnej jednotky"@sk;
   rdfs:isDefinedBy lsub:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL010110> .
 
@@ -1128,12 +1128,12 @@ lsub:UnitType a owl:Class;
   dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
 
 lsub:LegalForm a owl:Class;
-  rdfs:label "Legal Form"@en, "Právna forma"@sk, "Rechtsstatus"@de;
+  rdfs:label "Legal form"@en, "Právna forma"@sk, "Rechtsstatus"@de;
   rdfs:subClassOf egov:ThingWithValidity;
   rdfs:isDefinedBy lsub:2025b .
 
 lsub:InstitutionalSubsector rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Institutional Subsector"@en, "Inštitucionálny subsektor"@sk .
+  rdfs:label "Institutional subsector"@en, "Inštitucionálny subsektor"@sk .
 
 <https://data.gov.sk/id/identifier/metais-standard/576> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -1141,13 +1141,13 @@ lsub:InstitutionalSubsector rdfs:subClassOf egov:ThingWithValidity;
   dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
 
 lsub:LegalFormType a owl:Class;
-  rdfs:label "Legal Form Type"@en, "Typ právnej formy"@sk;
+  rdfs:label "Legal form type"@en, "Typ právnej formy"@sk;
   rdfs:isDefinedBy lsub:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL000056> .
 
 lsub:LegalStatus a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Legal Status"@en, "Právny stav"@sk, "Den rechtlichen Status"@de;
+  rdfs:label "Legal status"@en, "Právny stav"@sk, "Den rechtlichen Status"@de;
   rdfs:isDefinedBy lsub:2025b .
 
 lsub:EconomicActivityType rdfs:isDefinedBy lsub:2025b .
@@ -1158,7 +1158,7 @@ lsub:EconomicActivityType rdfs:isDefinedBy lsub:2025b .
   dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
 
 lsub:LegalStatusType a owl:Class;
-  rdfs:label "Legal Status Type"@en, "Typ právneho stavu"@sk;
+  rdfs:label "Legal status type"@en, "Typ právneho stavu"@sk;
   rdfs:isDefinedBy lsub:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL010108> .
 
@@ -1179,7 +1179,7 @@ lsub:Ownership a owl:Class;
   rdfs:isDefinedBy lsub:2025b .
 
 lsub:OwnershipType a owl:Class;
-  rdfs:label "Typ vlastníctva"@sk, "Ownership Type"@en;
+  rdfs:label "Typ vlastníctva"@sk, "Ownership type"@en;
   rdfs:isDefinedBy lsub:2025b .
 
 <https://data.gov.sk/id/identifier/metais-standard/607> <http://www.w3.org/ns/dcat#accessURL>
@@ -1224,7 +1224,7 @@ lsub:StatutoryBody a owl:Class;
   dct:type <https://data.gov.sk/def/identifier-type/metais-standard> .
 
 lsub:StatutoryBodyType a owl:Class;
-  rdfs:label "Typ štatutárneho orgánu"@sk, "Statutory Body Type"@en;
+  rdfs:label "Typ štatutárneho orgánu"@sk, "Statutory body type"@en;
   rdfs:isDefinedBy lsub:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL010113> .
 
@@ -1274,3 +1274,13 @@ lsub:vatIDCode a owl:DatatypeProperty, rdf:Property;
   rdfs:description "Obsahuje identifikačné číslo pre daň z pridanej hodnoty (IČ DPH)."@sk;
   rdfs:label "VAT identifier code"@en, "hodnota identifikačného čísla pre daň z pridanej hodnoty"@sk;
   rdfs:range xsd:string .
+
+lsub:activitySubjective adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2.7> .
+
+lsub:legalSubject adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.2> .
+
+lsub:headquarters adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3> .
+
+lsub:establishmentAddress adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3> .
+
+lsub:businessAddress adms:Identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3> .

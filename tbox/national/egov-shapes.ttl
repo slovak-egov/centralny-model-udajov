@@ -20,7 +20,7 @@ sha-egov:ThingWithValidity-timeValidity
 	sh:nodeKind sh:IRI ;
 	sh:minCount 0 ;
 	sh:maxCount 1 ;
- 	rdfs:isDefinedBy sha-egov:2025b ;
+ 	rdfs:isDefinedBy sha-egov:2025c ;
     dct:subject <https://data.gov.sk/id/egov/isvs/63> .
 
 sha-egov:PeriodOfTimeShape
@@ -28,19 +28,19 @@ sha-egov:PeriodOfTimeShape
 	sh:targetClass dct:PeriodOfTime ;
     sh:property sha-egov:PeriodOfTime-startDate,
 	sha-egov:PeriodOfTime-endDate;
- 	rdfs:isDefinedBy sha-egov:2025b ;
+ 	rdfs:isDefinedBy sha-egov:2025c ;
 	dct:subject <https://data.gov.sk/id/egov/isvs/63> .
 
 sha-egov:PeriodOfTime-startDate
 	sh:path dcat:startDate ;
 	sh:minCount 1 ;
 	sh:maxCount 1 ;
- 	rdfs:isDefinedBy sha-egov:2025b ;
+ 	rdfs:isDefinedBy sha-egov:2025c ;
     dct:subject <https://data.gov.sk/id/egov/isvs/63> .
 
 sha-egov:PeriodOfTime-endDate
 	sh:path dcat:endDate ;
 	sh:minCount 0 ;
 	sh:maxCount 1 ;
- 	rdfs:isDefinedBy sha-egov:2025b ;
+ 	rdfs:isDefinedBy sha-egov:2025c ;
     dct:subject <https://data.gov.sk/id/egov/isvs/63> .

@@ -143,7 +143,7 @@ pper:civilDisabilityType a owl:ObjectProperty;
   dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
 
 pper:occupationType a owl:ObjectProperty;
-  rdfs:label "occupationType"@en, "typ povolania"@sk, "Beruf"@de;
+  rdfs:label "occupation type"@en, "typ povolania"@sk, "Beruf"@de;
   rdfs:domain pper:PhysicalPerson;
   rdfs:range pper:OccupationType;
   rdfs:description "Relácia osoby na jej typ povolania definovaného hodnotami číselníka CL010134 Regulované povolania."@sk;
@@ -735,7 +735,7 @@ pper:yearAndMonthOfDeath a owl:DatatypeProperty;
   dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
 
 pper:PhysicalPerson a owl:Class;
-  rdfs:label "Physical Person"@en, "Fyzická osoba"@sk, "natürliche Person"@de;
+  rdfs:label "Physical person"@en, "Fyzická osoba"@sk, "natürliche Person"@de;
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1>;
   rdfs:isDefinedBy pper:2025b .
 
@@ -748,7 +748,7 @@ pper:PhysicalPerson a owl:Class;
 
 pper:SlovakCitizen a owl:Class;
   rdfs:subClassOf pper:PhysicalPerson;
-  rdfs:label "Slovak Citizen"@en, "Občan na území Slovenskej republiky"@sk, "Slowakischer Staatsbürger"@de;
+  rdfs:label "Slovak citizen"@en, "Občan na území Slovenskej republiky"@sk, "Slowakischer Staatsbürger"@de;
   rdfs:isDefinedBy pper:2025b .
 
 pper:SlovakResident a owl:Class;
@@ -770,13 +770,13 @@ pper:Foreigner a owl:Class;
 
 pper:ForeignerResident a owl:Class;
   rdfs:subClassOf pper:Foreigner;
-  rdfs:label "Foreigner Resident in Slovakia"@en, "Cudzinec s pobytom v Slovenskej republike"@sk,
+  rdfs:label "Foreigner resident in Slovakia"@en, "Cudzinec s pobytom v Slovenskej republike"@sk,
     "Ausländische Staatsbürger mit Wohnsitz in der Slowakei"@de;
   rdfs:isDefinedBy pper:2025b .
 
 pper:ForeignerGrantedAsylum a owl:Class;
   rdfs:subClassOf pper:Foreigner;
-  rdfs:label "Foreigner Granted Asylum"@en, "Cudzinec s udeleným azylom v Slovenskej republike"@sk,
+  rdfs:label "Foreigner granted asylum"@en, "Cudzinec s udeleným azylom v Slovenskej republike"@sk,
     "Ausländer, denen Asyl gewährt in der Slowakei"@de;
   rdfs:isDefinedBy pper:2025b .
 
@@ -786,14 +786,14 @@ pper:NameAffix a owl:Class;
 
 pper:NamePrefix a owl:Class;
   rdfs:subClassOf pper:NameAffix;
-  rdfs:label "Name Prefix"@en, "Titul pred menom"@sk, "Titel vor dem Namen"@de;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:label "Name prefix"@en, "Titul pred menom"@sk, "Titel vor dem Namen"@de;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL000062> .
 
 pper:NameSuffix a owl:Class;
   rdfs:subClassOf pper:NameAffix;
-  rdfs:label "Name Suffix"@en, "Titul za menom"@sk, "Grad hinter Name"@de;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:label "Name suffix"@en, "Titul za menom"@sk, "Grad hinter Name"@de;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL000063> .
 
 pper:MaritalStatus a owl:Class;
@@ -803,12 +803,12 @@ pper:MaritalStatus a owl:Class;
 
 pper:MaritalStatusType a owl:Class;
   rdfs:label "Marital status type"@en, "Typ rodinného stavu"@sk;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL004002> .
 
 pper:Sex a owl:Class;
   rdfs:label "Sex"@en, "Pohlavie"@sk, "Sex"@de;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL003003> .
 
 pper:Birth a owl:Class;
@@ -829,12 +829,12 @@ pper:Marriage a owl:Class;
 
 pper:ExistentialStatus a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Existential Status"@en, "Stav fyzickej osoby"@sk;
+  rdfs:label "Existential status"@en, "Stav fyzickej osoby"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:ExistentialStatusType a owl:Class;
-  rdfs:label "Existential Status Type"@en, "Typ stavu fyzickej osoby"@sk;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:label "Existential status type"@en, "Typ stavu fyzickej osoby"@sk;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL004003> .
 
 pper:ConfessionType a owl:Class;
@@ -843,19 +843,20 @@ pper:ConfessionType a owl:Class;
 
 pper:OccupationBan a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Occupation Ban"@en, "Zákaz vykonávania povolania"@sk;
+  rdfs:label "Occupation ban"@en, "Zákaz vykonávania povolania"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:OccupationType a owl:Class;
-  rdfs:label "Occupation Type"@en, "Typ povolania"@sk;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:label "Occupation type"@en, "Typ povolania"@sk;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL010134> .
 
 pper:personRelationship a owl:ObjectProperty;
   rdfs:label "príbuzenský vzťah"@sk, "person relationship"@en;
   kdp:xmlElementName "RelatedPerson";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.10>;
-  rdfs:isDefinedBy pper:2025b .
+  rdfs:isDefinedBy pper:2025b;
+  rdfs:range pper:PersonRelationship .
 
 <https://data.gov.sk/id/identifier/kdp/D.1.1.10> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/50349287>;
@@ -866,12 +867,12 @@ pper:personRelationship a owl:ObjectProperty;
 
 pper:PersonRelationship a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Person Relationship"@en, "Príbuzenstvo"@sk;
+  rdfs:label "Person relationship"@en, "Príbuzenstvo"@sk;
   rdfs:description "Dátový prvok pre popis stupňa príbuznosti a príslušnej fyzickej osoby."@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:PersonRelationshipType a owl:Class;
-  rdfs:label "Person Relationship type"@en, "Typ Príbuzenstva"@sk;
+  rdfs:label "Person relationship type"@en, "Typ príbuzenstva"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:personRelationshipType a owl:ObjectProperty;
@@ -883,27 +884,27 @@ pper:personRelationshipType a owl:ObjectProperty;
 
 pper:Nationality a owl:Class;
   rdfs:label "Nationality"@en, "Národnosť"@sk;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL010131> .
 
 pper:BirthNumber a owl:Class;
   rdfs:subClassOf adms:Identifier;
-  rdfs:label "Birth Number"@en, "Rodné číslo"@sk;
+  rdfs:label "Birth number"@en, "Rodné číslo"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:ResidenceBan a owl:Class;
   rdfs:subClassOf pper:Residence;
-  rdfs:label "Residence Ban"@en, "Zákaz pobytu"@sk;
+  rdfs:label "Residence ban"@en, "Zákaz pobytu"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:CivilDisability a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Civil Disability"@en, "Obmedzenie právnej spôsobilosti"@sk;
+  rdfs:label "Civil disability"@en, "Obmedzenie právnej spôsobilosti"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:CivilDisabilityType a owl:Class;
-  rdfs:label "Civil Disability Type"@en, "Typ obmedzenia právnej spôsobilosti"@sk;
-  rdfs:isDefinedBy pper:2025a;
+  rdfs:label "Civil disability type"@en, "Typ obmedzenia právnej spôsobilosti"@sk;
+  rdfs:isDefinedBy pper:2025b;
   dct:source <https://data.gov.sk/def/codelist/CL010136> .
 
 pper:Residence a owl:Class;
@@ -914,13 +915,13 @@ pper:Residence a owl:Class;
 
 pper:PermanentResidence a owl:Class;
   rdfs:subClassOf pper:Residence;
-  rdfs:label "Permanent Residence"@en, "Trvalý pobyt"@sk;
+  rdfs:label "Permanent residence"@en, "Trvalý pobyt"@sk;
   skos:altLabel "Trvalé bydlisko"@sk;
   rdfs:isDefinedBy pper:2025b .
 
 pper:TemporaryResidence a owl:Class;
   rdfs:subClassOf pper:Residence;
-  rdfs:label "Temporary Residence"@en, "Prechodný pobyt"@sk;
+  rdfs:label "Temporary residence"@en, "Prechodný pobyt"@sk;
   skos:altLabel "Prechodné bydlisko"@sk;
   rdfs:isDefinedBy pper:2025b .
 
@@ -932,7 +933,7 @@ pper:idDocument a owl:ObjectProperty;
   rdfs:isDefinedBy pper:2025b .
 
 pper:IdentificationDocument a owl:Class;
-  rdfs:label "Identifikačný doklad osoby"@sk, "Identification Document"@en;
+  rdfs:label "Identifikačný doklad osoby"@sk, "Identification document"@en;
   rdfs:isDefinedBy pper:2025b .
 
 pper:travelDocument a owl:ObjectProperty;

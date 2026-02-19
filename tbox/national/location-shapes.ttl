@@ -223,7 +223,6 @@ sha-ra:PhysicalAddress-addressType
 	sh:class loca:AddressType ;
 	sh:nodeKind sh:IRI ;
 	kdp:xmlElementName "AddressType" ;
-	sh:minCount 1 ;
 	sh:maxCount 1 ;
  	rdfs:isDefinedBy sha-ra:2025b ;
 	dct:subject <https://data.gov.sk/id/egov/isvs/192> .
