@@ -1,40 +1,4 @@
 <?xml version="1.0"?>
-<!DOCTYPE rdf:RDF [  
-<!ENTITY pper  "https://data.gov.sk/def/ontology/physical-person/" >
-<!ENTITY lsub  "https://data.gov.sk/def/ontology/legal-subject/" >
-<!ENTITY loca  "https://data.gov.sk/def/ontology/location/" >
-<!ENTITY egov  "https://data.gov.sk/def/ontology/egov/" >
-<!ENTITY fin   "https://data.gov.sk/def/ontology/finance/" >
-<!ENTITY order "https://data.gov.sk/id/order/" >
-<!ENTITY contract "https://data.gov.sk/id/contract/" >
-<!ENTITY currency "http://publications.europa.eu/resource/authority/currency/" >
-<!ENTITY postcode "https://data.gov.sk/def/postcode/" >
-<!ENTITY uncountry "https://data.gov.sk/def/uncountry/" >
-<!ENTITY identifier-type "https://data.gov.sk/def/identifier-type/" >
-<!ENTITY legal-form-type "https://data.gov.sk/def/legal-form-type/" >
-<!ENTITY contract-type "https://data.gov.sk/def/contract-type/" >
-<!ENTITY contract-determination-type "https://data.gov.sk/def/contract-determination-type/" >
-<!ENTITY fchapter "https://data.gov.sk/def/financial-chapter/" >
-<!ENTITY faccounting-range "https://data.gov.sk/def/financial-accounting-range/" >
-<!ENTITY signatory "https://mfsr.sk/id/ces-contract-signatory/" >
-<!ENTITY address "https://data.gov.sk/id/physical-address/" >
-<!ENTITY legal-subject "https://data.gov.sk/def/legal-subject/" >
-<!ENTITY isvs "https://data.gov.sk/id/isvs/" >
-<!ENTITY codelist "https://data.gov.sk/set/codelist/" >
-<!ENTITY nuts3 "https://data.gov.sk/id/nuts3/" >
-<!ENTITY lau2 "https://data.gov.sk/id/lau2/" >
-<!ENTITY lau1 "https://data.gov.sk/id/lau1/" >
-<!ENTITY person "https://www.w3.org/ns/person#" >
-<!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
-<!ENTITY adms "http://www.w3.org/ns/adms#" >
-<!ENTITY dct "http://purl.org/dc/terms/" >
-<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-<!ENTITY locn "http://www.w3.org/ns/locn#" >
-<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-<!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
-<!ENTITY schema "https://schema.org/" >
-]>
 <rdf:RDF
     xmlns="https://data.gov.sk/def/ontology/physical-person/"
     xml:base="https://data.gov.sk/def/ontology/physical-person/"
@@ -71,109 +35,109 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:xs="http://www.w3.org/2001/XMLSchema#"
     xmlns:schema="https://schema.org/">
-    
-    <fin:Contract rdf:about="&contract;1510000031">
+
+    <fin:Contract rdf:about="https://data.gov.sk/id/contract/1510000031">
         <adms:identifier>
             <adms:Identifier>
-                <skos:notation rdf:datatype="&xs;string">1510000031</skos:notation>
+                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1510000031</skos:notation>
                 <dct:type>
-                    <egov:IdentifierType rdf:about="&identifier-type;CONTRACT-RECORD-ID">
+                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/CONTRACT-RECORD-ID">
                         <skos:prefLabel xml:lang="sk">Evidenčné číslo zmluvy</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL004001"/>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
                     </egov:IdentifierType>
                 </dct:type>
                 <egov:issuingCountry>
-                    <loca:UNCountry rdf:about="&uncountry;703">
+                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
                         <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL000086"/>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
                     </loca:UNCountry>
                 </egov:issuingCountry>
             </adms:Identifier>
         </adms:identifier>
-    
+
         <adms:identifier>
             <adms:Identifier>
-                <skos:notation rdf:datatype="&xs;string">2021/205</skos:notation>
+                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021/205</skos:notation>
                 <dct:type>
-                    <egov:IdentifierType rdf:about="&identifier-type;CONTRACT-ID">
+                    <egov:IdentifierType rdf:about="https://data.gov.sk/def/identifier-type/CONTRACT-ID">
                         <skos:prefLabel xml:lang="sk">Číslo zmluvy</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL004001"/>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL004001"/>
                     </egov:IdentifierType>
                 </dct:type>
                 <egov:issuingCountry>
-                    <loca:UNCountry rdf:about="&uncountry;703">
+                    <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
                         <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL000086"/>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
                     </loca:UNCountry>
                 </egov:issuingCountry>
             </adms:Identifier>
          </adms:identifier>
 
-       <fin:numberOfContractAddendums rdf:datatype="&xs;integer">1</fin:numberOfContractAddendums>
+       <fin:numberOfContractAddendums rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</fin:numberOfContractAddendums>
 
         <dct:type>
-            <egov:IdentifierType rdf:about="&contract-type;1">
+            <egov:IdentifierType rdf:about="https://data.gov.sk/def/contract-type/1">
                  <skos:prefLabel xml:lang="sk">Zmluva o dodaní tovarov a služieb</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;CL005001"/>
+                 <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL005001"/>
             </egov:IdentifierType>
         </dct:type>
 
         <fin:contractDeterminationType>
-            <fin:ContractDeterminationType rdf:about="&contract-determination-type;1">
+            <fin:ContractDeterminationType rdf:about="https://data.gov.sk/def/contract-determination-type/1">
                  <skos:prefLabel xml:lang="sk">Dodávateľská zmluva - organizácia nakupuje tovary / služby / investície</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;CL005002"/>
+                 <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL005002"/>
             </fin:ContractDeterminationType>
         </fin:contractDeterminationType>
 
         <fin:chapter>
-            <fin:Chapter rdf:about="&fchapter;1500">
+            <fin:Chapter rdf:about="https://data.gov.sk/def/financial-chapter/1500">
                  <skos:prefLabel xml:lang="sk">MF SR</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;CL005004"/>
+                 <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL005004"/>
             </fin:Chapter>
         </fin:chapter>
-                
+
         <fin:accountingRange>
-            <fin:AccountingRange rdf:about="&faccounting-range;1510">
+            <fin:AccountingRange rdf:about="https://data.gov.sk/def/financial-accounting-range/1510">
                  <skos:prefLabel xml:lang="sk">Ministerstvo financií SR</skos:prefLabel>
-                 <skos:inScheme rdf:resource="&codelist;CL005003"/>
+                 <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL005003"/>
             </fin:AccountingRange>
-        </fin:accountingRange>        
-        
+        </fin:accountingRange>
+
         <fin:contractor>
-            <fin:Contractor rdf:about="&legal-subject;00151742">        
+            <fin:Contractor rdf:about="https://data.gov.sk/id/legal-subject/00151742">
                 <skos:prefLabel xml:lang="sk">Ministerstvo financií Slovenskej republiky</skos:prefLabel>
                 <lsub:headquarters>
-                    <loca:PhysicalAddress  rdf:about="&address;4328827">
+                    <loca:PhysicalAddress  rdf:about="https://data.gov.sk/id/physical-address/4328827">
                         <loca:street>
                             <loca:Street>
                                 <skos:prefLabel xml:lang="sk">Štefanovičova</skos:prefLabel>
                             </loca:Street>
                         </loca:street>
-                        <loca:orientationNumber rdf:datatype="&xs;string">5</loca:orientationNumber>
+                        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</loca:orientationNumber>
                         <loca:postCode>
-                            <loca:PostCode rdf:about="&postcode;81782">
+                            <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/81782">
                                 <skos:notation xml:lang="sk">81782</skos:notation>
                             </loca:PostCode>
                         </loca:postCode>
                         <loca:lau2>
-                            <loca:LAU2 rdf:about="&lau2;SK0101528595">
+                            <loca:LAU2 rdf:about="https://data.gov.sk/id/lau2/SK0101528595">
                                 <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Staré Mesto</skos:prefLabel>
                             </loca:LAU2>
                         </loca:lau2>
                         <loca:lau1>
-                            <loca:LAU1 rdf:about="&lau1;SK0101">
+                            <loca:LAU1 rdf:about="https://data.gov.sk/id/lau1/SK0101">
                                 <skos:prefLabel xml:lang="sk">Bratislava I</skos:prefLabel>
                             </loca:LAU1>
                         </loca:lau1>
                         <loca:nuts3>
-                            <loca:NUTS3 rdf:about="&nuts3;SK010">
+                            <loca:NUTS3 rdf:about="https://data.gov.sk/id/nuts3/SK010">
                                 <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
                             </loca:NUTS3>
                         </loca:nuts3>
                         <loca:unCountry>
-                            <loca:UNCountry rdf:about="&uncountry;703">
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
                                 <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
-                                <skos:inScheme rdf:resource="&codelist;CL000086"/>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
                             </loca:UNCountry>
                         </loca:unCountry>
                     </loca:PhysicalAddress>
@@ -181,101 +145,101 @@
 
                 <lsub:guarantee>
 	                <lsub:Department>
-                		<skos:prefLabel xml:lang="sk">Odbor hospodárskej správy</skos:prefLabel>                		
+                		<skos:prefLabel xml:lang="sk">Odbor hospodárskej správy</skos:prefLabel>
             		</lsub:Department>
 	            </lsub:guarantee>
-	    
+
 	            <pper:signatoryPerson>
-	                <pper:PhysicalPerson rdf:about="signatory;29">
-                		<skos:prefLabel rdf:datatype="&xs;string">Ján Slovák</skos:prefLabel>                		
+	                <pper:PhysicalPerson rdf:about="https://mfsr.sk/id/ces-contract-signatory/29">
+                		<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ján Slovák</skos:prefLabel>
                 		<rdfs:description xml:lang="sk">Generálny tajomník služobného úradu</rdfs:description>
             		</pper:PhysicalPerson>
 	            </pper:signatoryPerson>
-	           
+
 	            <lsub:legalFormType>
-                    <lsub:LegalFormType rdf:about="&legal-form-type;382">
+                    <lsub:LegalFormType rdf:about="https://data.gov.sk/def/legal-form-type/382">
                         <skos:prefLabel xml:lang="sk">Verejnoprávna inštitúcia</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL000056"/>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000056"/>
                     </lsub:LegalFormType>
                 </lsub:legalFormType>
-                
+
             </fin:Contractor>
         </fin:contractor>
 
         <fin:contractor>
-        
-            <fin:Contractor rdf:about="&legal-subject;35823542">
-	            <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#bolean">false</pper:isPhysicalPerson>
+
+            <fin:Contractor rdf:about="https://data.gov.sk/id/legal-subject/35823542">
+	            <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</pper:isPhysicalPerson>
                 <skos:prefLabel xml:lang="sk">Bratislavská teplárenská, a.s.</skos:prefLabel>
                 <lsub:headquarters>
-                    <loca:PhysicalAddress rdf:about="&address;6158845">
+                    <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/6158845">
                         <loca:street>
                             <loca:Street>
                                 <skos:prefLabel xml:lang="sk">Turbínová</skos:prefLabel>
                             </loca:Street>
                         </loca:street>
-                        <loca:orientationNumber rdf:datatype="&xs;string">3</loca:orientationNumber>
+                        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
                         <loca:postCode>
-                            <loca:PostCode rdf:about="&postcode;82905">
+                            <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
                                 <skos:notation xml:lang="sk">82905</skos:notation>
                             </loca:PostCode>
                         </loca:postCode>
                         <loca:lau2>
-                            <loca:LAU2 rdf:about="&lau2;SK0103529346">
+                            <loca:LAU2 rdf:about="https://data.gov.sk/id/lau2/SK0103529346">
                                 <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Nové Mesto</skos:prefLabel>
                             </loca:LAU2>
                         </loca:lau2>
                         <loca:lau1>
-                            <loca:LAU1 rdf:about="&lau1;SK0103">
+                            <loca:LAU1 rdf:about="https://data.gov.sk/id/lau1/SK0103">
                                 <skos:prefLabel xml:lang="sk">Bratislava III</skos:prefLabel>
                             </loca:LAU1>
                         </loca:lau1>
                         <loca:nuts3>
-                            <loca:NUTS3 rdf:about="&nuts3;SK010">
+                            <loca:NUTS3 rdf:about="https://data.gov.sk/id/nuts3/SK010">
                                 <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
                             </loca:NUTS3>
                         </loca:nuts3>
                         <egov:unCountry>
-                            <loca:UNCountry rdf:about="&uncountry;703">
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
                                 <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
-                                <skos:inScheme rdf:resource="&codelist;CL000086"/>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
                             </loca:UNCountry>
                         </egov:unCountry>
                     </loca:PhysicalAddress>
                 </lsub:headquarters>
                 <lsub:legalFormType>
-                    <lsub:LegalFormType rdf:about="&legal-form-type;121">
+                    <lsub:LegalFormType rdf:about="https://data.gov.sk/def/legal-form-type/121">
                         <skos:prefLabel xml:lang="sk">Akciová spoločnosť</skos:prefLabel>
-                        <skos:inScheme rdf:resource="&codelist;CL000056"/>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000056"/>
                     </lsub:LegalFormType>
                 </lsub:legalFormType>
             </fin:Contractor>
         </fin:contractor>
 
        <dct:title xml:lang="sk">Zmluva o poskytovaní tepla</dct:title>
-       <fin:signatureDate rdf:datatype="&xs;date">2021-05-05</fin:signatureDate>
+       <fin:signatureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-05</fin:signatureDate>
 
 
        <fin:validityPeriod>
             <dct:PeriodOfTime>
-                <schema:startDate rdf:datatype="&xs;date">2021-05-05</schema:startDate>
-                <schema:endDate rdf:datatype="&xs;date">2021-05-07</schema:endDate>
+                <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-05</schema:startDate>
+                <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-07</schema:endDate>
             </dct:PeriodOfTime>
         </fin:validityPeriod>
 
-        <fin:totalValidityDate rdf:datatype="&xs;date">2021-05-05</fin:totalValidityDate>
+        <fin:totalValidityDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-05</fin:totalValidityDate>
 
        <fin:effectivePeriod>
             <dct:PeriodOfTime>
-                <schema:startDate rdf:datatype="&xs;date">2021-05-05</schema:startDate>
+                <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-05</schema:startDate>
             </dct:PeriodOfTime>
         </fin:effectivePeriod>
 
         <fin:price>
             <fin:Price>
-                <fin:valueWithVAT rdf:datatype="&xs;decimal">4500</fin:valueWithVAT>
+                <fin:valueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500</fin:valueWithVAT>
                 <fin:currency>
-                    <fin:Currency rdf:about="&currency;EUR">
+                    <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
                         <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
                     </fin:Currency>
                 </fin:currency>
@@ -284,9 +248,9 @@
 
         <fin:totalPrice>
             <fin:Price>
-                <fin:valueWithVAT rdf:datatype="&xs;decimal">4500</fin:valueWithVAT>
+                <fin:valueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500</fin:valueWithVAT>
                 <fin:currency>
-                    <fin:Currency rdf:about="&currency;EUR">
+                    <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
                         <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
                     </fin:Currency>
                 </fin:currency>

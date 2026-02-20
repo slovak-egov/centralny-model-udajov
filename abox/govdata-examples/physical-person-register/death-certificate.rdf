@@ -128,9 +128,9 @@
                 <pper:permanentResidence>
                     <pper:PermanentResidence>
                         <loca:physicalAddress>
-                            <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/{id-adresy}">
+                            <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/example-1">
                                 <!-- URI adresy a ID adresy su nice-to-have -->
-                                <loca:identifier>{id-adresy}</loca:identifier>
+                                <loca:identifier>example-1</loca:identifier>
                                 <loca:street>
                                     <loca:Street>
                                         <!-- v prípade viacjazyčných názvov sa použijú lang atribúty ako v iných prefLabel -->

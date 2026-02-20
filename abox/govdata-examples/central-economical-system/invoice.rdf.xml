@@ -86,7 +86,7 @@
         <fin:supplier>
            <fin:Supplier rdf:about="https://data.gov.sk/def/legal-subject/35823542">
                 <skos:prefLabel xml:lang="sk">Bratislavská teplárenská, a.s.</skos:prefLabel>
-                <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#bolean">true</pper:isPhysicalPerson>
+                <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pper:isPhysicalPerson>
                 <lsub:headquarters>
                     <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/6158845">
                         <loca:street>
@@ -163,7 +163,7 @@
              <fin:Price>
                 <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19870.3</fin:value>
                 <fin:currency>
-                    <fin:Currency rdf:about="currency;EUR">
+                    <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
                         <skos:prefLabel xml:lang="sk">EURO</skos:prefLabel>
                     </fin:Currency>
                 </fin:currency>
