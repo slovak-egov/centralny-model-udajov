@@ -22,7 +22,7 @@ sha-fin:BankConnectionShape
 	a sh:NodeShape ;
 	rdfs:isDefinedBy sha-fin:2025c ;
 	sh:targetClass fin:BankConnection ;
-    sh:property sha-fin:BankConnection-accountHolder ,
+    sh:property sha-fin:BankConnection-accountHolder .
 
 sha-fin:BankConnection-accountHolder
   a sh:PropertyShape ;
