@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:fin="https://data.gov.sk/def/ontology/finance/" 
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/"
+    xmlns:loca="https://data.gov.sk/def/ontology/location/"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    >
+    <fin:BussinessRelationship rdf:about="https://data.gov.sk/id/bussiness-relationship/0015174235840005">
+        
+        <fin:orderer>
+            <lsub:LegalSubject rdf:about="https://data.gov.sk/id/legal-subject/00151742">
+                <!-- OrganizaciaNazov -->
+                <lsub:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ministerstvo financií SR</lsub:name>
+                <!-- OrganizaciaUctovnyOkruh -->
+                <fin:accountingRange>
+                    <fin:AccountingRange rdf:about="https://data.gov.sk/def/financial-accounting-range/1510">
+                        <skos:prefLabel xml:lang="sk">MF SR</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL005003"></skos:inScheme>
+                    </fin:AccountingRange>
+                </fin:accountingRange>
+                <!-- OrganizaciaICO -->
+                <lsub:legalIDCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00151742</lsub:legalIDCode>                
+                <lsub:legalFormType>
+                    <!-- OrganizaciaPravnaFormaKod -->
+                    <lsub:LegalFormType rdf:about="https://data.gov.sk/def/legal-form-type/382">
+                        <!-- OrganizaciaPravnaFormaNazov -->
+                        <skos:prefLabel xml:lang="sk">Verejnoprávna inštitúcia</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL000056"></skos:inScheme>
+                    </lsub:LegalFormType>
+                </lsub:legalFormType>
+                <lsub:headquarters>
+                    <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/5999554">
+                        <!-- OrganizaciaIDAdresy -->    
+                        <loca:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5999554</loca:identifier>
+                        <!-- OrganizaciaUlica -->
+                        <loca:street>
+                            <loca:Street rdf:about="https://data.gov.sk/id/street/3034052">
+                                <skos:prefLabel xml:lang="sk">Štefanovičova</skos:prefLabel>
+                            </loca:Street>
+                        </loca:street>
+                        <!-- OrganizaciaCisloDomu -->
+                        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</loca:orientationNumber>
+                        <!-- OrganizaciaPSC -->
+                        <loca:postCode>
+                            <loca:PostCode rdf:about="https://data.gov.sk/id/post-code/81782">
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81782</skos:notation>
+                            </loca:PostCode>
+                        </loca:postCode>
+                        <!-- OrganizaciaObec -->
+                        <loca:lau2>
+                            <!-- OrganizaciaObecKod -->
+                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0101528595">
+                                <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Staré mesto</skos:prefLabel>
+                            </loca:LAU2>
+                        </loca:lau2>
+                        <!-- OrganizaciaOkres -->
+                        <loca:lau1>
+                            <!-- OrganizaciaOkresKod -->
+                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0101">
+                                <skos:prefLabel xml:lang="sk">Bratislava I</skos:prefLabel>
+                            </loca:LAU1>
+                        </loca:lau1>
+                        <!-- OrganizaciaKraj -->
+                        <loca:nuts3>
+                            <!-- OrganizaciaKrajKod -->
+                            <loca:NUTS3 rdf:about="https://data.gov.sk/def/nuts3/SK010">
+                                <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
+                            </loca:NUTS3>
+                        </loca:nuts3>                        
+                        <loca:unCountry>
+                            <!-- OrganizaciaStatKod -->
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/SK">
+                                <!-- OrganizaciaStatNazov -->
+                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL000086"></skos:inScheme>
+                            </loca:UNCountry>
+                        </loca:unCountry>
+                    </loca:PhysicalAddress>
+                </lsub:headquarters>
+            </lsub:LegalSubject>                
+        </fin:orderer>
+        
+        <fin:supplier>
+            <lsub:LegalSubject rdf:about="https://data.gov.sk/id/legal-subject/35840005">
+                <!-- ObchodnyPartnerNazov -->
+                <lsub:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Trust Certifikačná Autorita, a.s.</lsub:name>
+                <!-- ObchodnyPartnerICO -->
+                <lsub:legalIDCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35840005</lsub:legalIDCode>
+                <lsub:legalFormType>
+                    <!-- ObchodnyPartnerPravnaFormaKod -->
+                    <lsub:LegalFormType rdf:about="https://data.gov.sk/def/legal-form-type/121">
+                        <!-- ObchodnyPartnerPravnaFormaNazov -->
+                        <skos:prefLabel xml:lang="sk">Akciová spoločnosť</skos:prefLabel>
+                        <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL000056"></skos:inScheme>
+                    </lsub:LegalFormType>
+                </lsub:legalFormType>
+                <!-- ObchodnyPartnerPriznakFO -->
+                <pper:isPhysicalPerson rdf:datatype="http://www.w3.org/2001/XMLSchema#bolean">false</pper:isPhysicalPerson>
+                <lsub:headquarters>
+                    <loca:PhysicalAddress rdf:about="https://data.gov.sk/id/physical-address/7101098477">
+                    <!-- ObchodnyPartnerIDAdresy -->    
+                    <loca:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7101098477</loca:identifier>
+                        <!-- ObchodnyPartnerUlica -->
+                        <loca:street>
+                            <loca:Street rdf:about="https://data.gov.sk/id/street/3037086">                                
+                                <loca:streetName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plynárenská</loca:streetName>                                
+                            </loca:Street>
+                        </loca:street>
+                        <!-- ObchodnyPartnerUlicaCislo -->
+                        <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7/C</loca:orientationNumber>
+                        <!-- ObchodnyPartnerPSC -->
+                        <loca:postCode>
+                            <loca:PostCode rdf:about="https://data.gov.sk/id/post-code/82109">                                
+                                <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82109</skos:notation>
+                            </loca:PostCode>
+                        </loca:postCode>
+                        <!-- ObchodnyPartnerObec -->
+                        <loca:lau2>
+                            <!-- ObchodnyPartnerObecKod -->
+                            <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0102529320">
+                                <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Ružinov</skos:prefLabel>
+                            </loca:LAU2>
+                        </loca:lau2>
+                        <!-- ObchodnyPartnerOkres -->
+                        <loca:lau1>
+                            <!-- ObchodnyPartnerOkresKod -->
+                            <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0102">
+                                <skos:prefLabel xml:lang="sk">Bratislava II</skos:prefLabel>
+                            </loca:LAU1>
+                        </loca:lau1>
+                        <!-- ObchodnyPartnerKraj -->
+                        <loca:nuts3>
+                            <!-- ObchodnyPartnerKrajKod -->
+                            <loca:NUTS3 rdf:about="https://data.gov.sk/def/nuts3/SK010">
+                                <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
+                            </loca:NUTS3>
+                        </loca:nuts3>                        
+                        <loca:unCountry>
+                            <!-- ObchodnyPartnerStat -->
+                            <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/SK">
+                                <!-- ObchodnyPartnerStatNazov -->
+                                <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
+                                <skos:inScheme rdf:resource="https://data.gov.sk/def/codelist/CL000086"></skos:inScheme>
+                            </loca:UNCountry>
+                        </loca:unCountry>
+                    </loca:PhysicalAddress>
+                </lsub:headquarters>
+            </lsub:LegalSubject>                
+        </fin:supplier>
+        
+        <fin:contracts>          
+            <egov:DocumentCollection>
+                <skos:prefLabel xml:lang="sk">Zmluvy bez DPH v EUR</skos:prefLabel>
+                <!-- ZmluvyPocet -->
+                <egov:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</egov:count>
+                <!-- ZmluvyPrvaUzavreta -->
+                <egov:dateOfFirst rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-03-11</egov:dateOfFirst>
+                <!-- ZmluvyPoslednaUzavreta -->
+                <egov:dateOfLast rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-12</egov:dateOfLast>
+                <fin:price>
+                    <fin:Price>
+                        <!-- HodnotaZmlCelkovaCiastkaSDod -->
+                        <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25000000</fin:value>
+                        <!-- Mena -->
+                        <fin:currency>
+                            <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
+                                <skos:prefLabel xml:lang="sk">Euro</skos:prefLabel>
+                            </fin:Currency>
+                        </fin:currency>
+                        <!-- PriznakSDph -->
+                        <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</fin:isValueWithVAT>
+                    </fin:Price>
+                </fin:price>
+            </egov:DocumentCollection>
+        </fin:contracts>
+
+        <fin:contracts>
+            <egov:DocumentCollection>
+                <skos:prefLabel xml:lang="sk">Zmluvy s DPH v EUR</skos:prefLabel>
+                <egov:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</egov:count>
+                <egov:dateOfFirst rdf:datatype="http://www.w3.org/2001/XMLSchema#date"></egov:dateOfFirst>
+                <egov:dateOfLast rdf:datatype="http://www.w3.org/2001/XMLSchema#date"></egov:dateOfLast>
+                <fin:price>
+                    <fin:Price>
+                        <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                        <fin:currency>
+                            <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
+                                <skos:prefLabel xml:lang="sk">Euro</skos:prefLabel>
+                            </fin:Currency>
+                        </fin:currency>
+                        <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                    </fin:Price>
+                </fin:price>                    
+            </egov:DocumentCollection>
+        </fin:contracts>
+
+        <fin:orders>
+            <egov:DocumentCollection>
+                <skos:prefLabel xml:lang="sk">Objednávky bez DPH v EUR</skos:prefLabel>
+                <!-- ObjednavkyPocet -->
+                <egov:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</egov:count>
+                <!-- ObjednavkyPrvyDatumDokladu -->
+                <egov:dateOfFirst rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-05</egov:dateOfFirst>
+                <!-- ObjednavkyPoslednyDatumDokladu -->
+                <egov:dateOfLast rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-29</egov:dateOfLast>
+                <fin:price>
+                    <fin:Price>
+                        <!-- PlnenieHodnota -->
+                        <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25000000</fin:value>
+                        <!-- Mena -->
+                         <fin:currency>
+                            <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
+                                <skos:prefLabel xml:lang="sk">Euro</skos:prefLabel>
+                            </fin:Currency>
+                        </fin:currency>
+                        <!-- PriznakSDph -->
+                         <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</fin:isValueWithVAT>
+                    </fin:Price>
+                </fin:price>                   
+            </egov:DocumentCollection>
+        </fin:orders>
+
+        <fin:orders>
+            <egov:DocumentCollection>
+                <skos:prefLabel xml:lang="sk">Objednávky s DPH v EUR</skos:prefLabel>
+                <egov:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</egov:count>
+                <egov:dateOfFirst rdf:datatype="http://www.w3.org/2001/XMLSchema#date"></egov:dateOfFirst>
+                <egov:dateOfLast rdf:datatype="http://www.w3.org/2001/XMLSchema#date"></egov:dateOfLast>
+                <fin:price>
+                    <fin:Price>
+                        <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                        <fin:currency>
+                            <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
+                                <skos:prefLabel xml:lang="sk">Euro</skos:prefLabel>
+                            </fin:Currency>
+                        </fin:currency>
+                        <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                    </fin:Price>
+                </fin:price>                    
+            </egov:DocumentCollection>
+        </fin:orders>
+
+        <fin:invoices>            
+            <egov:DocumentCollection>
+                <skos:prefLabel xml:lang="sk">Faktúry bez DPH v EUR</skos:prefLabel>
+                <!-- FakturyPocet -->
+                <egov:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</egov:count>
+                <!-- FakturaPrvyDatum -->
+                <egov:dateOfFirst rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-04</egov:dateOfFirst>
+                <!-- FakturaPoslednyDatum -->
+                <egov:dateOfLast rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-19</egov:dateOfLast>
+                <fin:price>
+                    <fin:Price>
+                        <!-- FakturaPlnenieHodnotaEur -->
+                        <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25000000</fin:value>
+                        <!-- Mena -->
+                        <fin:currency>
+                            <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
+                                <skos:prefLabel xml:lang="sk">Euro</skos:prefLabel>
+                            </fin:Currency>
+                        </fin:currency>
+                        <!-- PriznakSDph -->
+                         <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</fin:isValueWithVAT>
+                    </fin:Price>
+                </fin:price>                    
+            </egov:DocumentCollection>
+        </fin:invoices>
+
+        <fin:invoices>
+            <egov:DocumentCollection>
+                <skos:prefLabel xml:lang="sk">Faktúry s DPH v EUR</skos:prefLabel>
+                <egov:count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</egov:count>
+                <egov:dateOfFirst rdf:datatype="http://www.w3.org/2001/XMLSchema#date"></egov:dateOfFirst>
+                <egov:dateOfLast rdf:datatype="http://www.w3.org/2001/XMLSchema#date"></egov:dateOfLast>
+                <fin:price>
+                    <fin:Price>
+                        <fin:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</fin:value>
+                        <fin:currency>
+                            <fin:Currency rdf:about="http://publications.europa.eu/resource/authority/currency/EUR">
+                                <skos:prefLabel xml:lang="sk">Euro</skos:prefLabel>
+                            </fin:Currency>
+                        </fin:currency>
+                        <fin:isValueWithVAT rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</fin:isValueWithVAT>
+                    </fin:Price>
+                </fin:price>                    
+            </egov:DocumentCollection>
+        </fin:invoices>
+
+    </fin:BussinessRelationship>
+</rdf:RDF>
