@@ -188,9 +188,9 @@
           "@type": "pper:PermanentResidence",
           "loca:physicalAddress": {
             "@type": "loca:PhysicalAddress",
-            "@id": "physical-address:{id-adresy}",
+            "@id": "physical-address:example-1",
             "loca:identifier": {
-              "@value": "{id-adresy}",
+              "@value": "example-1",
               "@type": "xs:string"
             },
             "loca:street": {

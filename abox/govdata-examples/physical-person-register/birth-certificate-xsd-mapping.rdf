@@ -54,6 +54,11 @@
                 </dct:subject>
                 <dct:source>
                     <egov:EndPoint>
+                        <!-- V prípade použitia mapovania endpointov cez reverzné proxy (definované v súbore ops-properties.xml)
+                            sa namiesto reálnych domén tu uvádzajú aliasy, 
+                            aby bola zabezpečená kompatibilita a prenositeľnosť cez prostredia - viď príklad nižšie pre druhý endpoint "endpoint1"
+                            Na tomto mieste nechávame všeobecný príklad bez použitia dodatočných reverzných proxy...
+                        -->
                         <dcat:endpointURL>https://cpdi.gov.sk/rfo/GetPersonById</dcat:endpointURL>
                         <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rfo.wsdl"/>
                         <dct:format>application/soap+xml</dct:format>
@@ -72,7 +77,12 @@
                 
                 <dct:source>
                     <egov:EndPoint>
-                        <dcat:endpointURL>https://cpdi.gov.sk/rpo/EntityById</dcat:endpointURL>
+                         <!-- v prípade použitia mapovania endpointov cez reverzné proxy (definované v súbore ops-properties.xml)
+                            sa namiesto reálnych domén uvádzajú v dokumentačnom súbore aliasy, 
+                            aby bola zabezpečená kompatibilita a prenositeľnosť cez prostredia.
+                            "endpoint1" sa podľa definície v ops-properties.xml premapuje na reálny endpoint napr. "cpdi.gov.sk"
+                        -->
+                        <dcat:endpointURL>https://endpoint1/rpo/EntityById</dcat:endpointURL>
                         <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rpo.swagger"/>
                         <dct:format>application/json</dct:format>
                         <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
@@ -86,7 +96,7 @@
                                     <http:RequestHeader>
                                         <http:fieldName>Host</http:fieldName>
                                         <http:hdrName rdf:resource="http://www.w3.org/2011/http-headers#host"/>
-                                        <http:fieldValue>www.example.org</http:fieldValue>
+                                        <http:fieldValue>endpoint1</http:fieldValue>
                                     </http:RequestHeader>
                                 </http:headers>
                                 <egov:parameters rdf:parseType="Collection">
