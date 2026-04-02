@@ -73,7 +73,7 @@
           },
           "rfo:dateOfDeathText": {
             "@value": "Štvrtého júla tisícdeväťstosedemdesiattri",
-            "@type": "xs:string"
+            "@language": "sk"
           },
           "pper:placeOfDeath": {
             "@type": "pper:PhysicalAddress",

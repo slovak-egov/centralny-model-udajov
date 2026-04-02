@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-	xmlns="https://data.gov.sk/def/ontology/physical-person/2025a#"
+	xmlns="https://data.gov.sk/def/ontology/physical-person/2025b#"
 	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,13 +17,13 @@
 	xmlns:dcat="http://www.w3.org/ns/dcat#"
 	xmlns:prov="http://www.w3.org/ns/prov#">
 
-<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/2025a">
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/2025b">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<dct:title>Ontológia fyzickej osoby</dct:title>
 	<dct:creator rdf:resource="http://www.linkedin.com/in/bleki"/>
 	<dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek"/>
 	<dct:contributor rdf:resource="http://www.linkedin.com/in/miroslavliska"/>
-	<owl:versionInfo>2025a</owl:versionInfo>
+	<owl:versionInfo>2025b</owl:versionInfo>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/physicalPerson">
@@ -47,7 +47,7 @@
 	<rdfs:description xml:lang="sk">Relácia na fyzickú osobu v Registry osôb.</rdfs:description>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<kdp:xmlElementName>PhysicalPerson</kdp:xmlElementName>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/identifier">
@@ -57,7 +57,7 @@
 	<rdfs:label xml:lang="sk">identifikátor</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Medzisystémový identifikátor fyzickej osoby. Nahrádza doteraz používaný identifikátor fyzickej osoby (IFO) pre medzisystémovú identifikáciu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/recordIdentifier">
@@ -69,7 +69,7 @@
 	<skos:altLabel xml:lang="sk">Počítačové číslo osoby</skos:altLabel>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Identifikátor fyzickej osoby (ďalej len „IFO“) označovaný aj ako „PČO“ (počítačové číslo osoby).</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/birth">
@@ -81,7 +81,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<kdp:xmlElementName>Birth</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej narodenie.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5">
@@ -103,7 +103,7 @@
 	<kdp:xmlElementName>Citizenship</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.7"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej štátnu príslušnosť definovanú hodnotami číselníka CL000086 Krajina OSN.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.7">
@@ -125,7 +125,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na jej národnosť definovanú hodnotami číselníka CL010131 Národnosť.</rdfs:description>
 	<kdp:xmlElementName>Nationality</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.12"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.12">
@@ -147,7 +147,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na jej nábožentvo.</rdfs:description>
 	<kdp:xmlElementName>Confession</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.8"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.8">
@@ -169,7 +169,7 @@
 	<kdp:xmlElementName>CivilDisability</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej obmedzenie spôsobilosti na právne úkony.</rdfs:description>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.13"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.13">
@@ -191,7 +191,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na obmedzenie spôsobilosti na právne úkony definovaného hodnotami číselníka CL010136 Obmedzenie spôsobilosti na právne úkony.</rdfs:description>
 	<kdp:xmlElementName>TypeOfCivilDisability</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.13.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.13.1">
@@ -211,7 +211,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/OccupationType"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej typ povolania definovaného hodnotami číselníka CL010134 Regulované povolania.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/relative">
@@ -224,7 +224,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej príbuznú osobu.</rdfs:description>
 	<kdp:xmlElementName>Relative</kdp:xmlElementName>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/spouse">
@@ -236,9 +236,9 @@
 	<skos:altLabel xml:lang="sk">manželka</skos:altLabel>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
-	<rdfs:description xml:lang="sk">Relácia osoby jej na manžela.</rdfs:description>
+	<rdfs:description xml:lang="sk">Relácia osoby na jej manžela.</rdfs:description>
 	<kdp:xmlElementName>Spouse</kdp:xmlElementName>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/father">
@@ -251,7 +251,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej otca.</rdfs:description>
 	<kdp:xmlElementName>Father</kdp:xmlElementName>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/mother">
@@ -264,7 +264,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej matku.</rdfs:description>
 	<kdp:xmlElementName>Mother</kdp:xmlElementName>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/child">
@@ -276,7 +276,68 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej dieťa.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/groom">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+	<rdfs:label xml:lang="en">groom</rdfs:label>
+	<rdfs:label xml:lang="sk">ženích</rdfs:label>
+	<rdfs:label xml:lang="de">Bräutigam</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:description xml:lang="sk">Vyjadruje reláciu na fyzickú osobu - muža, ktorý sa žení alebo sa práve oženil v svadobnom obrade.</rdfs:description>
+	<kdp:xmlElementName>Groom</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/bride">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+	<rdfs:label xml:lang="en">bride</rdfs:label>
+	<rdfs:label xml:lang="sk">nevesta</rdfs:label>
+	<rdfs:label xml:lang="de">Braut</rdfs:label>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+	<rdfs:description xml:lang="sk">Vyjadruje reláciu na fyzickú osobu - ženu, ktorá sa vydáva alebo sa práve vydala v svadobnom obrade.</rdfs:description>
+	<kdp:xmlElementName>Bride</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/marriage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">marriage</rdfs:label>
+	<rdfs:label xml:lang="sk">manželstvo</rdfs:label>
+	<rdfs:label xml:lang="de">Heirat</rdfs:label>
+	<rdfs:altLabel xml:lang="sk">svadba</rdfs:altLabel>
+	<rdfs:altLabel xml:lang="de">Hochzeit</rdfs:altLabel>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Marriage"/>
+	<rdfs:description xml:lang="sk">Vyjadruje reláciu na právne spojenie dvoch osôb ustanovené formálnym obradom alebo právnym procesom.</rdfs:description>
+	<kdp:xmlElementName>Marriage</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/dateOfMarriage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label xml:lang="en">date of marriage</rdfs:label>
+	<rdfs:label xml:lang="sk">dátum svadby</rdfs:label>
+	<rdfs:label xml:lang="de">Datum der Heirat</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Marriage"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<rdfs:description xml:lang="sk">Konkrétny dátum, kedy bol vykonaný svadobný obrad alebo bolo oficiálne ustanovené právne spojenie.</rdfs:description>
+	<kdp:xmlElementName>DateOfMarriage</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/placeOfMarriage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">place of marriage</rdfs:label>
+	<rdfs:label xml:lang="sk">miesto svadby</rdfs:label>
+	<rdfs:label xml:lang="de">Ort der Heirat</rdfs:label>
+	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/Marriage"/>
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/location/PhysicalAddress"/>
+	<rdfs:description xml:lang="sk">Relácia na miesto alebo jurisdikcia, kde bol vykonaný svadobný obrad alebo bolo oficiálne zaregistrované právne spojenie.</rdfs:description>
+	<kdp:xmlElementName>PlaceOfMarriage</kdp:xmlElementName>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/death">
@@ -289,7 +350,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na jej úmrtie.</rdfs:description>
 	<kdp:xmlElementName>Death</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6">
@@ -309,7 +370,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/MaritalStatus"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej rodinný stav.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/maritalStatusType">
@@ -322,7 +383,7 @@
 	<rdfs:description xml:lang="sk">Relácia rodinného stavu osoby na jeho typ definovaný hodnotami číselníka CL004002 Rodinný stav.</rdfs:description>
 	<kdp:xmlElementName>MaritalStatus</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.3">
@@ -342,7 +403,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ExistentialStatus"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej existenčný stav.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/existentialStatusType">
@@ -355,7 +416,7 @@
 	<rdfs:description xml:lang="sk">Relácia existenčného stavu osoby na jeho typ definovaný hodnotami číselníka CL004003 Existenčný stav.</rdfs:description>
 	<kdp:xmlElementName>ExistentialStatus</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.5"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.5">
@@ -376,7 +437,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby jej titul.</rdfs:description>
 	<kdp:xmlElementName>NameAffix</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/D.1.1.1.8"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/D.1.1.1.8">
@@ -396,7 +457,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/NamePrefix"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej titul pred menom definovaný hodnotami číselníka CL000062 Titul pred menom.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/nameSuffix">
@@ -407,7 +468,7 @@
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/NameSuffix"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej titul za menom definovaný hodnotami číselníka CL000063 Titul za menom.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/placeOfBirth">
@@ -419,7 +480,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na lokáciu jej narodenia.</rdfs:description>
 	<kdp:xmlElementName>PlaceOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.2">
@@ -440,7 +501,7 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na lokáciu jej úmrtia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>PlaceOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.2">
@@ -459,7 +520,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej pobyt.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/permanentResidence">
@@ -470,7 +531,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PermanentResidence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej trvalý pobyt.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/temporaryResidence">
@@ -481,18 +542,20 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/TemporaryResidence"/>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej prechodný pobyt.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/bannedResidence">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<owl:deprecated>true</owl:deprecated>
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/residence"/>
 	<rdfs:label xml:lang="en">banned residence</rdfs:label>
 	<rdfs:label xml:lang="sk">obmedzený pobyt</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/ResidenceBan"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
-	<rdfs:description xml:lang="sk">Relácia osoby na obmedzenie jej pobytu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:description xml:lang="sk">ZASTARANÉ: Relácia obmezenia pobytu na pobyt.</rdfs:description>
+	<rdfs:comment xml:lang="sk">Po úpravách pre časové platnosti a relácie na fyzické adresy predstavuje zbytočnú reláciu, ktorá zvyšuje komplexitu. Odporúča sa použiť priamo vlastnosť residenceBan a triedu ResidenceBan, ktorej sa priradí časová platnosť aj fyzická adresa.</rdfs:comment>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationshipDomain">
@@ -502,7 +565,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia typ príbuznosti s prvou osobou vzťahu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationshipRange">
@@ -512,7 +575,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:description xml:lang="sk">Relácia typ príbuznosti s druhou osobou vzťahu.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/birthNumber">
@@ -522,7 +585,7 @@
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/BirthNumber"/>
 	<rdfs:description xml:lang="sk">Relácia narodenia na súvisiace rodné číslo.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/birthNumberCode">
@@ -531,7 +594,7 @@
 	<rdfs:label xml:lang="sk">kód rodného čísla</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/BirthNumber"/>
 	<rdfs:description xml:lang="sk">Kód / číselný identifikátor rodného čísla.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/sex">
@@ -544,7 +607,7 @@
 	<kdp:xmlElementName>Sex</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na typ jej pohlavia definovaný hodnotami číselníka CL003003 Pohlavie.</rdfs:description>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.4">
@@ -565,7 +628,7 @@
 	<kdp:xmlElementName>OccupationBan</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Relácia osoby na jej zákaz povolania, ktoré nemôže vykonávať.</rdfs:description>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.15"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.15">
@@ -583,10 +646,10 @@
 	<rdfs:label xml:lang="sk">zákaz pobytu</rdfs:label>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/ResidenceBan"/>
-	<rdfs:description xml:lang="sk">Relácia osoby jej na zákaz pobytu.</rdfs:description>
+	<rdfs:description xml:lang="sk">Relácia osoby na jej zákaz pobytu.</rdfs:description>
 	<kdp:xmlElementName>ResidenceBan</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.14"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.14">
@@ -606,7 +669,7 @@
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 	<rdfs:description xml:lang="sk">Zložený dátový prvok pre rôzne súčasti mena fyzickej osoby.</rdfs:description>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1">
@@ -628,7 +691,7 @@
 	<rdfs:description xml:lang="sk">Popisuje iné meno ako to, ktoré fyzická osoba používa ako svoje súčasné oficiálne meno alebo priezvisko.</rdfs:description>
 	<kdp:xmlElementName>AlternativeName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.2"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.2">
@@ -649,7 +712,7 @@
 	<rdfs:description xml:lang="sk">Dátum narodenia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>DateOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.1">
@@ -670,7 +733,7 @@
 	<rdfs:description xml:lang="sk">Dátum úmrtia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>DateOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.1">
@@ -693,7 +756,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje priezvisko osoby.</rdfs:description>
 	<kdp:xmlElementName>FamilyName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.6"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.6">
@@ -715,7 +778,7 @@
 	<kdp:xmlElementName>FormattedName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.1"/>
 	<rdfs:description xml:lang="sk">Formátované meno vrátane predpony a prípony.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.1">
@@ -738,7 +801,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje rodné priezvisko osoby.</rdfs:description>
 	<kdp:xmlElementName>GivenFamilyName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.7"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.7">
@@ -760,7 +823,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje rodné meno, ktorým je nededená časť mena fyzickej osoby. Známe aj ako prvé meno fyzickej osoby alebo v užšom význame krstné meno fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>GivenName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.3">
@@ -782,7 +845,7 @@
 	<kdp:xmlElementName>LegalName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.2"/>
 	<rdfs:description xml:lang="sk">Používa sa na právne účely v niektorých štátoch.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.2">
@@ -804,7 +867,7 @@
 	<kdp:xmlElementName>OtherName</kdp:xmlElementName>
 	<rdfs:description xml:lang="sk">Obsahuje stredné meno fyzickej osoby alebo iniciály. Pozn: Originálne použitie najmä v Spojených štátoch amerických.]</rdfs:description>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.5"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.5">
@@ -826,7 +889,7 @@
 	<rdfs:description xml:lang="sk">Meno, ktoré fyzická osoba uprednostňuje pri svojom oslovení v prípade viacerých rodných mien. Pozn: V Slovenskej republike nie je zvykom mať viac rodných mien, ale v zahraničí, najmä v španielsky hovoriacich krajinách je to úplne bežné.]</rdfs:description>
 	<kdp:xmlElementName>PrefferedGivenName</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.1.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.1.4">
@@ -847,7 +910,7 @@
 	<rdfs:description xml:lang="sk">Názov povolania, ktoré osoba vykonáva.</rdfs:description>
 	<kdp:xmlElementName>Occupation</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.9"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.9">
@@ -868,7 +931,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje rok narodenia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>YearOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.3">
@@ -889,7 +952,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje rok úmrtia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>YearOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.3"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.3">
@@ -910,7 +973,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje mesiac a rok narodenia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>YearAndMonthOfBirth</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.5.4">
@@ -931,7 +994,7 @@
 	<rdfs:description xml:lang="sk">Obsahuje mesiac úmrtia fyzickej osoby.</rdfs:description>
 	<kdp:xmlElementName>YearAndMonthOfDeath</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6.4"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.6.4">
@@ -949,7 +1012,7 @@
 	<rdfs:label xml:lang="sk">Fyzická osoba</rdfs:label>
 	<rdfs:label xml:lang="de">natürliche Person</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1">
@@ -967,7 +1030,7 @@
 	<rdfs:label xml:lang="en">Slovak Citizen</rdfs:label>
 	<rdfs:label xml:lang="sk">Občan na území Slovenskej republiky</rdfs:label>
 	<rdfs:label xml:lang="de">Slowakischer Staatsbürger</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/SlovakResident">
@@ -976,7 +1039,7 @@
 	<rdfs:label xml:lang="en">Slovak Resident</rdfs:label>
 	<rdfs:label xml:lang="sk">Občan s trvalým pobytom na území Slovenskej republiky</rdfs:label>
 	<rdfs:label xml:lang="de">Slowakischer Staatsbürger mit ständigem Wohnsitz</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/SlovakNonResident">
@@ -985,7 +1048,7 @@
 	<rdfs:label xml:lang="en">Slovak Non Resident</rdfs:label>
 	<rdfs:label xml:lang="sk">Občan bez trvalého pobytu na území Slovenskej republiky</rdfs:label>
 	<rdfs:label xml:lang="de">Slowakischer Staatsbürger ohne ständigen Wohnsitz</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Foreigner">
@@ -994,7 +1057,7 @@
 	<rdfs:label xml:lang="en">Foreigner</rdfs:label>
 	<rdfs:label xml:lang="sk">Cudzinec</rdfs:label>
 	<rdfs:label xml:lang="de">Ausländer</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ForeignerResident">
@@ -1003,7 +1066,7 @@
 	<rdfs:label xml:lang="en">Foreigner Resident in Slovakia</rdfs:label>
 	<rdfs:label xml:lang="sk">Cudzinec s pobytom v Slovenskej republike</rdfs:label>
 	<rdfs:label xml:lang="de">Ausländische Staatsbürger mit Wohnsitz in der Slowakei</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ForeignerGrantedAsylum">
@@ -1012,7 +1075,7 @@
 	<rdfs:label xml:lang="en">Foreigner Granted Asylum</rdfs:label>
 	<rdfs:label xml:lang="sk">Cudzinec s udeleným azylom v Slovenskej republike</rdfs:label>
 	<rdfs:label xml:lang="de">Ausländer, denen Asyl gewährt in der Slowakei</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/NameAffix">
@@ -1020,7 +1083,7 @@
 	<rdfs:label xml:lang="en">Title</rdfs:label>
 	<rdfs:label xml:lang="sk">Titul</rdfs:label>
 	<rdfs:label xml:lang="de">Titel</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/NamePrefix">
@@ -1029,7 +1092,7 @@
 	<rdfs:label xml:lang="en">Name Prefix</rdfs:label>
 	<rdfs:label xml:lang="sk">Titul pred menom</rdfs:label>
 	<rdfs:label xml:lang="de">Titel vor dem Namen</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL000062"/>
 </rdf:Description>
 
@@ -1039,7 +1102,7 @@
 	<rdfs:label xml:lang="en">Name Suffix</rdfs:label>
 	<rdfs:label xml:lang="sk">Titul za menom</rdfs:label>
 	<rdfs:label xml:lang="de">Grad hinter Name</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL000063"/>
 </rdf:Description>
 
@@ -1049,14 +1112,14 @@
 	<rdfs:label xml:lang="en">Marital status</rdfs:label>
 	<rdfs:label xml:lang="sk">Rodinný stav</rdfs:label>
 	<rdfs:label xml:lang="de">Familienstand</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/MaritalStatusType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Marital status type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ rodinného stavu</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL004002"/>
 </rdf:Description>
 
@@ -1065,7 +1128,7 @@
 	<rdfs:label xml:lang="en">Sex</rdfs:label>
 	<rdfs:label xml:lang="sk">Pohlavie</rdfs:label>
 	<rdfs:label xml:lang="de">Sex</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL003003"/>
 </rdf:Description>
 
@@ -1075,7 +1138,7 @@
 	<rdfs:label xml:lang="sk">Narodenie</rdfs:label>
 	<rdfs:label xml:lang="de">Geburt</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.5"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Death">
@@ -1084,7 +1147,18 @@
 	<rdfs:label xml:lang="sk">Úmrtie</rdfs:label>
 	<rdfs:label xml:lang="de">Tod</rdfs:label>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.6"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Marriage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">marriage</rdfs:label>
+	<rdfs:label xml:lang="sk">manželstvo</rdfs:label>
+	<rdfs:label xml:lang="de">Heirat</rdfs:label>
+	<rdfs:altLabel xml:lang="sk">svadba</rdfs:altLabel>
+	<rdfs:altLabel xml:lang="de">Hochzeit</rdfs:altLabel>
+	<rdfs:description xml:lang="sk">Právne spojenie dvoch osôb ustanovené formálnym obradom alebo právnym procesom.</rdfs:description>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ExistentialStatus">
@@ -1092,14 +1166,14 @@
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Existential Status</rdfs:label>
 	<rdfs:label xml:lang="sk">Stav fyzickej osoby</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ExistentialStatusType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Existential Status Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ stavu fyzickej osoby</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL004003"/>
 </rdf:Description>
 
@@ -1107,7 +1181,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Confession</rdfs:label>
 	<rdfs:label xml:lang="sk">Náboženstvo</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/OccupationBan">
@@ -1115,14 +1189,14 @@
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Occupation Ban</rdfs:label>
 	<rdfs:label xml:lang="sk">Zákaz vykonávania povolania</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/OccupationType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Occupation Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ povolania</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL010134"/>
 </rdf:Description>
 
@@ -1132,7 +1206,7 @@
 	<rdfs:label xml:lang="en">person relationship</rdfs:label>
 	<kdp:xmlElementName>RelatedPerson</kdp:xmlElementName>
 	<adms:identifier rdf:resource="https://data.gov.sk/id/identifier/kdp/D.1.1.10"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/id/identifier/kdp/D.1.1.10">
@@ -1150,14 +1224,14 @@
 	<rdfs:label xml:lang="en">Person Relationship</rdfs:label>
 	<rdfs:label xml:lang="sk">Príbuzenstvo</rdfs:label>
 	<rdfs:description xml:lang="sk">Dátový prvok pre popis stupňa príbuznosti a príslušnej fyzickej osoby.</rdfs:description>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PersonRelationshipType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Person Relationship type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ Príbuzenstva</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationshipType">
@@ -1167,14 +1241,14 @@
 	<rdfs:description>Relácia medzi príbuzenstvom a typom príbuzenského vzťahu definovaného hodnotami číselníka CL004004 Príbuzenský stav.</rdfs:description>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationshipType"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/Nationality">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Nationality</rdfs:label>
 	<rdfs:label xml:lang="sk">Národnosť</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL010131"/>
 </rdf:Description>
 
@@ -1183,15 +1257,15 @@
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
 	<rdfs:label xml:lang="en">Birth Number</rdfs:label>
 	<rdfs:label xml:lang="sk">Rodné číslo</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/ResidenceBan">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
+	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/Residence"/>
 	<rdfs:label xml:lang="en">Residence Ban</rdfs:label>
 	<rdfs:label xml:lang="sk">Zákaz pobytu</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/CivilDisability">
@@ -1199,14 +1273,14 @@
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/egov/ThingWithValidity"/>
 	<rdfs:label xml:lang="en">Civil Disability</rdfs:label>
 	<rdfs:label xml:lang="sk">Obmedzenie právnej spôsobilosti</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/CivilDisabilityType">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="en">Civil Disability Type</rdfs:label>
 	<rdfs:label xml:lang="sk">Typ obmedzenia právnej spôsobilosti</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 	<dct:source rdf:resource="https://data.gov.sk/def/codelist/CL010136"/>
 </rdf:Description>
 
@@ -1217,7 +1291,7 @@
 	<rdfs:label xml:lang="en">Residence</rdfs:label>
 	<rdfs:label xml:lang="sk">Pobyt</rdfs:label>
 	<skos:altLabel xml:lang="sk">Bydlisko</skos:altLabel>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/PermanentResidence">
@@ -1226,7 +1300,7 @@
 	<rdfs:label xml:lang="en">Permanent Residence</rdfs:label>
 	<rdfs:label xml:lang="sk">Trvalý pobyt</rdfs:label>
 	<skos:altLabel xml:lang="sk">Trvalé bydlisko</skos:altLabel>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/TemporaryResidence">
@@ -1235,7 +1309,7 @@
 	<rdfs:label xml:lang="en">Temporary Residence</rdfs:label>
 	<rdfs:label xml:lang="sk">Prechodný pobyt</rdfs:label>
 	<skos:altLabel xml:lang="sk">Prechodné bydlisko</skos:altLabel>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/idDocument">
@@ -1245,14 +1319,14 @@
 	<rdfs:description xml:lang="sk">Relácia osoby na jej doklad totožnosti.</rdfs:description>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label xml:lang="sk">Identifikačný doklad osoby</rdfs:label>
 	<rdfs:label xml:lang="en">Identification Document</rdfs:label>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/travelDocument">
@@ -1263,7 +1337,7 @@
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/idDocument"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/TravelDocument"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/TravelDocument">
@@ -1271,7 +1345,7 @@
 	<rdfs:label xml:lang="sk">Cestovný doklad</rdfs:label>
 	<rdfs:label xml:lang="em">Travel document</rdfs:label>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/travelDocumentCode">
@@ -1281,7 +1355,7 @@
 	<rdfs:description xml:lang="sk">Kód / identifikátor cestovného dokladu.</rdfs:description>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/TravelDocument"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/idCard">
@@ -1292,7 +1366,7 @@
 	<rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/idDocument"/>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
 	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/IDCard"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/IDCard">
@@ -1300,7 +1374,7 @@
 	<rdfs:label xml:lang="sk">Občiansky preukaz</rdfs:label>
 	<rdfs:label xml:lang="en">Personal identification card</rdfs:label>
 	<rdfs:subClassOf rdf:resource="https://data.gov.sk/def/ontology/physical-person/IdentificationDocument"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/idCardCode">
@@ -1310,7 +1384,11 @@
 	<rdfs:description xml:lang="sk">Kód / identifikátor občianskeho preukazu.</rdfs:description>
 	<rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/physical-person/IDCard"/>
 	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025a"/>
+	<rdfs:isDefinedBy rdf:resource="https://data.gov.sk/def/ontology/physical-person/2025b"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.gov.sk/def/ontology/physical-person/personRelationship">
+	<rdfs:range rdf:resource="https://data.gov.sk/def/ontology/physical-person/PersonRelationship"/>
 </rdf:Description>
 
 </rdf:RDF>

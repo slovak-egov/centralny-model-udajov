@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/"
+    xmlns:http="http://www.w3.org/2011/http#">
+
+    <!-- Základné metadáta mapovacieho datasetu -->
+    <dcat:Dataset rdf:about="http://csru.gov.sk/birth_certificate/v1.0">
+        <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/MAPPING"/>
+        <dct:title xml:lang="sk">Rodný list na CPDI</dct:title>
+        <dct:title xml:lang="en">Birth certificate on CPDI</dct:title>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+        <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/00151866"/>
+        <dct:source>
+            <rdf:Description rdf:about="./birth-certificate.xsd">
+                <dct:format>application/xml-dtd</dct:format>
+            </rdf:Description>
+        </dct:source>
+
+    </dcat:Dataset>
+
+    <!-- Spôsoby mapovania:
+
+    Elements → RDF vlastnosti (napr., PhysicalPerson → pper:physicalPerson)
+    Complex Types → RDF triedy (napr., PhysicalPersonType → pper:PhysicalPerson)
+    
+    -->
+
+    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/prop/PersonDataType/PhysicalPerson">
+        <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/physicalPerson"/>
+        <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/def/PhysicalPersonType">
+        <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
+        <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/prop/PersonNameCType/GivenName">
+        <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/givenName"/>
+        <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
+
+        <dct:provenance>
+            <dct:ProvenanceStatement>
+                <dct:subject>
+                    <prov:Entity>
+                        <dct:references>/xpath/to/other/elements/element[1]/firstName</dct:references>
+                        <dct:format>text/xml</dct:format>
+                    </prov:Entity>
+                </dct:subject>
+                <dct:source>
+                    <egov:EndPoint>
+                        <dcat:endpointURL>https://cpdi.gov.sk/rfo/GetPersonById</dcat:endpointURL>
+                        <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rfo.wsdl"/>
+                        <dct:format>application/soap+xml</dct:format>
+                        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/RESTRICTED"/>
+                    </egov:EndPoint>
+                </dct:source>
+                <dct:description>Voľnotextový popis, spresnenie, dokumentácia...</dct:description>
+            </dct:ProvenanceStatement>
+            <dct:ProvenanceStatement>
+                <dct:subject>
+                    <prov:Entity>
+                        <dct:references>/xpath/to/other/elements/element[2]/firstName</dct:references>
+                        <dct:format>text/xml</dct:format>
+                    </prov:Entity>
+                </dct:subject>
+                
+                <dct:source>
+                    <egov:EndPoint>
+                        <dcat:endpointURL>https://cpdi.gov.sk/rpo/EntityById</dcat:endpointURL>
+                        <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rpo.swagger"/>
+                        <dct:format>application/json</dct:format>
+                        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+                        
+                        <http:requests rdf:parseType="Collection">
+                            <http:Request>
+                                <http:httpVersion>1.1</http:httpVersion>
+                                <http:methodName>GET</http:methodName>
+                                <http:mthd rdf:resource="http://www.w3.org/2011/http-methods#GET"/>
+                                <http:headers rdf:parseType="Collection">
+                                    <http:RequestHeader>
+                                        <http:fieldName>Host</http:fieldName>
+                                        <http:hdrName rdf:resource="http://www.w3.org/2011/http-headers#host"/>
+                                        <http:fieldValue>www.example.org</http:fieldValue>
+                                    </http:RequestHeader>
+                                </http:headers>
+                                <egov:parameters rdf:parseType="Collection">
+                                    <egov:RequestParameter>
+                                        <http:fieldName>personId</http:fieldName>
+                                        <dct:source>form/input/person-id</dct:source>
+                                        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                                        <egov:isRequired>true</egov:isRequired>
+                                    </egov:RequestParameter>
+                                    <egov:RequestParameter>
+                                        <http:fieldName>includeAddress</http:fieldName>
+                                        <dct:source>form/checkbox/include-address</dct:source>
+                                        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                                        <egov:isRequired>false</egov:isRequired>
+                                    </egov:RequestParameter>
+                                </egov:parameters>
+                                <http:resp>
+                                    <http:Response>
+                                        <!-- pripadne metadata o response code, version, response headers... -->
+                                        <egov:mapping>
+                                            <egov:Mapping>
+                                                <dct:source>$.response.person.personalData.firstName</dct:source>
+                                                <egov:transformation>trim</egov:transformation>
+                                            </egov:Mapping>
+                                        </egov:mapping>
+                                    </http:Response>
+                                </http:resp>
+                            </http:Request>
+                        </http:requests>
+                        
+                    </egov:EndPoint>
+                </dct:source>
+                <dct:description>Voľnotextový popis, spresnenie, dokumentácia...</dct:description>
+            </dct:ProvenanceStatement>
+        <dct:provenance>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/prop/SexCType/Sex">
+        <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/sex"/>
+        <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
+
+        <dct:provenance>
+            <dct:ProvenanceStatement>
+                <dct:subject>
+                    <prov:Entity>
+                        <dct:references>/xpath/to/other/elements/element[1]/sex</dct:references>
+                        <dct:format>text/xml</dct:format>
+                        <egov:usesScheme>
+                            <skos:ConceptScheme rdf:about="https://data.gov.sk/set/codelist/CL003003">
+	                            <skos:prefLabel xml:lang="sk">Pohlavie</skos:prefLabel>
+                                <egov:uriPattern rdf:datatype="xsd:string">https://data.gov.sk/def/sex/*</egov:uriPattern>
+                            </skos:ConceptScheme>
+                        </egov:usesScheme>
+                    </prov:Entity>
+                </dct:subject>
+                <dct:source>
+                    <egov:EndPoint>
+                        <dcat:endpointURL>https://cpdi.gov.sk/rfo/GetPersonById</dcat:endpointURL>
+                        <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rfo.wsdl"/>
+                        <dct:format>application/soap+xml</dct:format>
+                        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/RESTRICTED"/>
+                    </egov:EndPoint>
+                </dct:source>
+                <dct:description>Voľnotextový popis, spresnenie, dokumentácia...</dct:description>
+            </dct:ProvenanceStatement>
+        </provenance>
+    </rdf:Description>
+
+    <!-- SPARQL všetky mapovania tohoto XSD:
+        SELECT ?subject ?predicate ?object
+        FROM <http://csru.gov.sk/birth_certificate/v1.0>
+        WHERE {
+            ?subject ?predicate ?object .
+        }
+    -->
+
+    <!-- SPARQL všetky mapovania na triedu pper:PhysicalPerson
+        PREFIX pper: <https://data.gov.sk/def/ontology/physical-person/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT ?subject
+        WHERE {
+            ?subject skos:closeMatch pper:PhysicalPerson
+        }
+
+        prípadne aj closeMatch aj exactMatch
+        PREFIX pper: <https://data.gov.sk/def/ontology/physical-person/>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT DISTINCT ?subject
+        WHERE {
+            ?subject ?matchProperty pper:PhysicalPerson .
+            
+            VALUES ?matchProperty { 
+                skos:closeMatch 
+                skos:exactMatch 
+            }
+        }
+
+    -->
+
+
+</rdf:RDF>

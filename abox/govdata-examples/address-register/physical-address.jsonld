@@ -9,7 +9,6 @@
     "district": "https://data.gov.sk/def/district/",
     "street": "https://data.gov.sk/id/street/",
     "postcode": "https://data.gov.sk/def/postcode/",
-    "address-type": "https://data.gov.sk/def/address-type/",
     "address": "https://data.gov.sk/id/physical-address/",
     "legal-subject": "https://data.gov.sk/id/legal-subject/",
     "isvs": "https://data.gov.sk/id/egov/isvs/",
@@ -27,25 +26,31 @@
       "@id": "address:10539221",
       "@type": "loca:PhysicalAddress",
       "loca:identifier": {
-        "@value": "10539221"
+        "@value": "10539221",
+        "@type": "xsd:string"
       },      
       "loca:unCountry": {
-        "@id": "uncountry:703"
+        "@id": "uncountry:SK",
+        "@type": "loca:UNCountry"
       },
       "loca:nuts3": {
-        "@id": "nuts3:SK010"
+        "@id": "nuts3:SK01",
+        "@type": "loca:NUTS3"
       },
       "loca:lau1": {
-        "@id": "lau1:SK0101"
+        "@id": "lau1:SK0101",
+        "@type": "loca:LAU1"
       },
       "loca:lau2": {
-        "@id": "lau2:SK0101528595"
+        "@id": "lau2:SK0101528595",
+        "@type": "loca:LAU2"
       },
       "loca:district": {
-        "@id": "district:412703"
+        "@id": "district:2040990",
+        "@type": "loca:District"
       },
       "loca:street": {        
-        "@id": "street:3034050",
+        "@id": "street:4576744710567",
         "@type": "loca:Street",
         "loca:streetName": {
           "@value": "Štefánikova",
@@ -54,7 +59,7 @@
         "loca:geoLocation": {
           "@type": "geo:Feature",
           "geo:hasGeometry": {
-            "@type": "sf:LineString",
+            "@type": "geo:Geometry",
             "geo:asWKT": {
               "@value": "LINESTRING(17.106678 48.150914, 17.108678 48.155914, 17.116678 48.160914)",
               "@type": "geo:wktLiteral"
@@ -63,10 +68,12 @@
         }
       },
       "loca:addressType": {
-        "@id": "addressType:100001"        
+        "@id": "addressType:100001",
+        "@type": "loca:AddressType"        
       },
       "loca:postCode": {
-        "@id": "postcode:82905"        
+        "@id": "postcode:82905",
+        "@type": "loca:PostCode"        
       },
       "loca:propertyRegistrationNumber": {
         "@value": "3013",
@@ -94,7 +101,7 @@
       "loca:geoLocation": {
         "@type": "geo:Feature",
         "geo:hasGeometry": {
-          "@type": "sf:Point",
+          "@type": "geo:Geometry",
           "geo:asWKT": {
             "@value": "POINT(17.106678 48.150914)",
             "@type": "geo:wktLiteral"

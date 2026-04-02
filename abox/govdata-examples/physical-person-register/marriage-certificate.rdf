@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:reg="https://data.minv.sk/def/ontology/registry/"
+    xmlns:rfo="https://data.minv.sk/def/ontology/rfo/"
+    xmlns:pper="https://data.gov.sk/def/ontology/physical-person/" 
+    xmlns:lsub="https://data.gov.sk/def/ontology/legal-subject/" 
+    xmlns:egov="https://data.gov.sk/def/ontology/egov/" 
+    xmlns:loca="https://data.gov.sk/def/ontology/location/" 
+    xmlns:dct="http://purl.org/dc/terms/" 
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+    xmlns:cccev="http://data.europa.eu/m8g/" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+
+    <cccev:Evidence>
+        <dct:type>
+            <cccev:EvidenceType rdf:about="https://data.gov.sk/def/evidence-type/15">
+                <skos:prefLabel xml:lang="sk">Sobášny list</skos:prefLabel>
+            </cccev:EvidenceType>
+        </dct:type>
+
+        <!-- Číslo -->
+        <dct:identifier>419/2001</dct:identifier>
+
+        <!-- V knihe manželstiev matričného úradu -->
+        <dct:publisher>
+            <lsub:LegalSubject rdf:about="https://data.minv.sk/registry-office/2038">
+                <skos:prefLabel xml:lang="sk">Mesto Šaľa</skos:prefLabel>
+            </lsub:LegalSubject>
+        </dct:publisher>
+
+        <!-- V (datum) -->
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-09</dct:issued>
+        <!-- V (obec) -->
+        <dct:spatial>
+            <loca:PhysicalAddress>
+                <loca:lau2>
+                    <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                    </loca:LAU2>
+                </loca:lau2>
+            </loca:PhysicalAddress>
+        </dct:spatial>
+
+        <pper:marriage>
+          <pper:Marriage>
+            <!-- deň, mesiac, rok sobáša -->
+            <pper:dateOfMarriage rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfMarriage>
+            <!-- dátum sobáša slovom -->
+            <rfo:dateOfMarriageText xml:lang="sk">Štvrtého júla tisícdeväťstosedemdesiattri</rfo:dateOfMarriageText>
+            <!-- miesto sobáša -->
+            <pper:placeOfMarriage>
+              <loca:PhysicalAddress>
+                <loca:lau2>
+                  <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                    <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                    <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                  </loca:LAU2>
+                </loca:lau2>
+                <loca:lau1>
+                  <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                    <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                    <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                  </loca:LAU1>
+                </loca:lau1>
+              </loca:PhysicalAddress>
+            </pper:placeOfMarriage>
+          </pper:Marriage>
+        </pper:marriage>
+
+        <!-- osoby na SL -->
+        <!-- ženích -->
+        <pper:groom>
+          <pper:PhysicalPerson>
+            <!-- meno -->
+            <pper:givenName>Severín</pper:givenName>
+            <!-- priezvisko -->
+            <pper:familyName>Novák</pper:familyName>
+            <!-- titul pred menom -->
+            <pper:namePrefix>
+              <pper:NamePrefix>
+                <dct:type>
+                  <pper:NamePrefixType rdf:about="https://data.gov.sk/def/name-prefix/01">
+                    <skos:prefLabel xml:lang="sk">Ing.</skos:prefLabel>
+                    <skos:prefLabel xml:lang="hu">Eng.</skos:prefLabel>
+                  </pper:NamePrefixType>
+                </dct:type>
+              </pper:NamePrefix>
+            </pper:namePrefix>
+            
+            <pper:birth>
+              <pper:Birth>
+                <!-- rodné priezvisko -->
+                <pper:givenFamilyName>Hendrík</pper:givenFamilyName>
+                <!-- deň, mesiac a rok narodenia -->
+                <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfBirth>
+                <!-- miesto narodenia -->
+                <pper:placeOfBirth>
+                  <loca:PhysicalAddress>
+                    <loca:lau2>
+                      <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                      </loca:LAU2>
+                    </loca:lau2>
+                    <loca:lau1>
+                      <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                        <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                      </loca:LAU1>
+                    </loca:lau1>
+                  </loca:PhysicalAddress>
+                </pper:placeOfBirth>
+              </pper:Birth>
+            </pper:birth>
+              
+            <!-- rodné číslo -->
+            <pper:birthNumber>
+              <pper:BirthNumber>
+                <pper:birthNumberCode>730704/6912</pper:birthNumberCode>
+              </pper:BirthNumber>
+            </pper:birthNumber>
+              
+            <!-- rodinný stav -->
+            <pper:maritalStatusType>
+              <pper:MaritalStatusType rdf:about="https://data.gov.sk/def/marital-status-type/1">
+                <skos:prefLabel xml:lang="sk">slobodný, slobodná</skos:prefLabel>
+                <skos:prefLabel xml:lang="hu">szingli</skos:prefLabel>
+              </pper:MaritalStatusType>
+            </pper:maritalStatusType>
+
+            <!-- otec -->
+            <pper:father>
+              <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Michal</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Novák</pper:familyName>
+
+                <!-- titul pred menom -->
+                <pper:namePrefix>
+                  <pper:NamePrefix>
+                    <dct:type>
+                      <pper:NamePrefixType rdf:about="https://data.gov.sk/def/name-prefix/01">
+                        <skos:prefLabel xml:lang="sk">Ing.</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Eng.</skos:prefLabel>
+                      </pper:NamePrefixType>
+                    </dct:type>
+                  </pper:NamePrefix>
+                </pper:namePrefix>
+
+                <pper:birth>
+                  <pper:Birth>
+                    <!-- rodné priezvisko -->
+                    <pper:givenFamilyName>Hendrík</pper:givenFamilyName>
+                    </pper:Birth>
+                </pper:birth>
+                    
+              </pper:PhysicalPerson>
+            </pper:father>
+
+            <!-- matka -->
+            <pper:mother>
+              <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Jana</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Nováková</pper:familyName>
+                <!-- titul za menom -->
+                <pper:nameSuffix>
+                  <pper:NameSuffix>
+                    <dct:type>
+                      <pper:NameSuffixType rdf:about="https://data.gov.sk/def/name-suffix/53">
+                        <skos:prefLabel xml:lang="sk">PhD.</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">PhD.</skos:prefLabel>
+                      </pper:NameSuffixType>
+                    </dct:type>
+                  </pper:NameSuffix>
+                </pper:nameSuffix>
+
+                <pper:birth>
+                  <pper:Birth>
+                    <!-- rodné priezvisko -->
+                    <pper:givenFamilyName>Horváthová</pper:givenFamilyName>
+                  </pper:Birth>
+                </pper:birth>
+                
+              </pper:PhysicalPerson>
+            </pper:mother>
+              
+          </pper:PhysicalPerson>
+        </pper:groom>
+
+        <!-- nevesta -->
+        <pper:bride>
+          <pper:PhysicalPerson>
+            <!-- meno -->
+            <pper:givenName>Severín</pper:givenName>
+            <!-- priezvisko -->
+            <pper:familyName>Novák</pper:familyName>
+            <!-- titul pred menom -->
+            <pper:namePrefix>
+              <pper:NamePrefix>
+                <dct:type>
+                  <pper:NamePrefixType rdf:about="https://data.gov.sk/def/name-prefix/01">
+                    <skos:prefLabel xml:lang="sk">Ing.</skos:prefLabel>
+                    <skos:prefLabel xml:lang="hu">Eng.</skos:prefLabel>
+                  </pper:NamePrefixType>
+                </dct:type>
+              </pper:NamePrefix>
+            </pper:namePrefix>
+
+            <pper:birth>
+              <pper:Birth>
+                <!-- rodné priezvisko -->
+                <pper:givenFamilyName>Hendrík</pper:givenFamilyName>
+                <!-- deň, mesiac a rok narodenia -->
+                <pper:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-07-04</pper:dateOfBirth>
+                <!-- miesto narodenia -->
+                <pper:placeOfBirth>
+                  <loca:PhysicalAddress>
+                    <loca:lau2>
+                      <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0235504025">
+                        <skos:prefLabel xml:lang="sk">Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellye</skos:prefLabel>
+                      </loca:LAU2>
+                    </loca:lau2>
+                    <loca:lau1>
+                      <loca:LAU1 rdf:about="https://data.gov.sk/def/lau1/SK0235">
+                        <skos:prefLabel xml:lang="sk">okres Šaľa</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Vágsellyei járás</skos:prefLabel>
+                      </loca:LAU1>
+                    </loca:lau1>
+                  </loca:PhysicalAddress>
+                </pper:placeOfBirth>
+              </pper:Birth>
+            </pper:birth>
+
+            <!-- rodné číslo -->
+            <pper:birthNumber>
+              <pper:BirthNumber>
+                <pper:birthNumberCode>730704/6912</pper:birthNumberCode>
+              </pper:BirthNumber>
+            </pper:birthNumber>
+
+            <!-- rodinný stav -->
+            <pper:maritalStatusType>
+              <pper:MaritalStatusType rdf:about="https://data.gov.sk/def/marital-status-type/1">
+                <skos:prefLabel xml:lang="sk">slobodný, slobodná</skos:prefLabel>
+                <skos:prefLabel xml:lang="hu">szingli</skos:prefLabel>
+              </pper:MaritalStatusType>
+            </pper:maritalStatusType>
+
+            <!-- otec -->
+            <pper:father>
+              <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Michal</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Novák</pper:familyName>
+
+                <!-- titul pred menom -->
+                <pper:namePrefix>
+                  <pper:NamePrefix>
+                    <dct:type>
+                      <pper:NamePrefixType rdf:about="https://data.gov.sk/def/name-prefix/01">
+                        <skos:prefLabel xml:lang="sk">Ing.</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">Eng.</skos:prefLabel>
+                      </pper:NamePrefixType>
+                    </dct:type>
+                  </pper:NamePrefix>
+                </pper:namePrefix>
+
+                <pper:birth>
+                  <pper:Birth>
+                    <!-- rodné priezvisko -->
+                    <pper:givenFamilyName>Hendrík</pper:givenFamilyName>
+                  </pper:Birth>
+                </pper:birth>
+
+              </pper:PhysicalPerson>
+            </pper:father>
+
+            <!-- matka -->
+            <pper:mother>
+              <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Jana</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Nováková</pper:familyName>
+                <!-- titul za menom -->
+                <pper:nameSuffix>
+                  <pper:NameSuffix>
+                    <dct:type>
+                      <pper:NameSuffixType rdf:about="https://data.gov.sk/def/name-suffix/53">
+                        <skos:prefLabel xml:lang="sk">PhD.</skos:prefLabel>
+                        <skos:prefLabel xml:lang="hu">PhD.</skos:prefLabel>
+                      </pper:NameSuffixType>
+                    </dct:type>
+                  </pper:NameSuffix>
+                </pper:nameSuffix>
+
+                <pper:birth>
+                  <pper:Birth>
+                    <!-- rodné priezvisko -->
+                    <pper:givenFamilyName>Horváthová</pper:givenFamilyName>
+                  </pper:Birth>
+                </pper:birth>
+
+              </pper:PhysicalPerson>
+            </pper:mother>
+
+          </pper:PhysicalPerson>
+        </pper:bride>
+          
+        <!-- Poznámky -->
+        <skos:note>Voľnotextové poznámky, môže sa vyskytovať násobne..</skos:note>
+
+        <!-- registratúra -->
+        <reg:registryEntry>
+          <reg:RegistryEntry>
+            <!-- meno a priezvisko matrikára -->
+            <dct:creator>
+              <pper:PhysicalPerson>
+                <!-- meno -->
+                <pper:givenName>Anna</pper:givenName>
+                <!-- priezvisko -->
+                <pper:familyName>Skúšobná</pper:familyName>
+                <!-- prípadne ak nie je rozdelené, môže sa použiť formattedName -->
+                <pper:formattedName>Anna Skúšobná</pper:formattedName>
+              </pper:PhysicalPerson>
+            </dct:creator>
+
+            <!-- zväzok -->
+            <reg:bundleNumber>46</reg:bundleNumber>
+            <!-- ročník -->
+            <reg:bundleYear>1973</reg:bundleYear>
+            <!-- strana -->
+            <reg:pageNumber>12</reg:pageNumber>
+            <!-- poradové číslo -->
+            <reg:sequenceNumber>200</reg:sequenceNumber>
+          </reg:RegistryEntry>
+        </reg:registryEntry>
+
+    </cccev:Evidence>
+
+</rdf:RDF>
