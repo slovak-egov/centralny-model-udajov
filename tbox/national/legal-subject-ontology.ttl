@@ -1192,7 +1192,7 @@ lsub:OwnershipType a owl:Class;
 
 lsub:Stakeholder a owl:Class;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Zainteresovaná osoba"@sk, "Stakeholder"@sk, "Interessengruppen"@de;
+  rdfs:label "Zainteresovaná osoba"@sk, "Stakeholder"@en, "Interessengruppen"@de;
   rdfs:isDefinedBy lsub:2025b .
 
 lsub:ShareForm a owl:Class;
