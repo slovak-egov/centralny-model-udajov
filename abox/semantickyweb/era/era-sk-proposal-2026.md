@@ -16,7 +16,7 @@ Návrh datasetov vychádza zo sémantického modelu ERA:
 
 ---
 
-## 1. `sections_of_line.csv`
+## 1. `rinf_sections_of_line.csv`
 **Popis:** Úseky trate medzi prevádzkovými bodmi.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -61,7 +61,7 @@ Príklad RDF:
 
 ---
 
-## 2. `operational_points.csv`
+## 2. `rinf_operational_points.csv`
 **Popis:** Stanice, zastávky, výhybne a iné prevádzkové body.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -102,7 +102,7 @@ Príklad RDF:
 
 ---
 
-## 3. `operational_point_net_references.csv`
+## 3. `rinf_operational_point_net_references.csv`
 **Popis:** Umiestnenie prevádzkového bodu v sieti.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -141,7 +141,7 @@ Príklad RDF:
 
 ---
 
-## 4. `running_tracks.csv`
+## 4. `rinf_running_tracks.csv`
 **Popis:** Jednotlivé bežné koľaje.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -182,7 +182,7 @@ Príklad RDF:
 
 ---
 
-## 5. `platform_edges.csv`
+## 5. `rinf_platform_edges.csv`
 **Popis:** Nástupištné hrany v prevádzkových bodoch.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -220,7 +220,7 @@ Príklad RDF:
 
 ---
 
-## 6. `tunnels.csv`
+## 6. `rinf_tunnels.csv`
 **Popis:** Tunely ako samostatné železničné infraštruktúrne objekty.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -252,7 +252,7 @@ Príklad RDF:
 
 ---
 
-## 7. `etcs_track_deployments_operational.csv`
+## 7. `rinf_etcs_track_deployments_operational.csv`
 **Popis:** ETCS zariadenia v prevádzke na tratiach alebo koľajach.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -289,7 +289,7 @@ Príklad RDF:
 
 ---
 
-## 8. `etcs_track_deployments_under_construction.csv`
+## 8. `rinf_etcs_track_deployments_under_construction.csv`
 **Popis:** ETCS vo výstavbe.
 
 | Stĺpec | Typ | Povinný | Popis |
@@ -315,7 +315,7 @@ ETCS-CONSTR-001,RT-120-001-1,L2,Baseline 3,2027-03-01
 
 ---
 
-## 9. `etcs_track_deployments_planned.csv`
+## 9. `rinf_etcs_track_deployments_planned.csv`
 **Popis:** ETCS plánované.
 
 | Stĺpec | Typ | Povinný | Popis |
