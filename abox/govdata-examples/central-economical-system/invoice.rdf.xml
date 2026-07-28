@@ -95,11 +95,11 @@
                             </loca:Street>
                         </loca:street>
                         <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
-                        <loca:postCode>
-                            <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
+                        <loca:postcode>
+                            <loca:Postcode rdf:about="https://data.gov.sk/def/postcode/82905">
                                 <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82905</skos:notation>
-                            </loca:PostCode>
-                        </loca:postCode>
+                            </loca:Postcode>
+                        </loca:postcode>
                         <loca:lau2>
                             <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0103529346">
                                 <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Nové Mesto</skos:prefLabel>
@@ -115,12 +115,12 @@
                                 <skos:prefLabel xml:lang="sk">Bratislavský kraj</skos:prefLabel>
                             </loca:NUTS3>
                         </loca:nuts3>
-                        <egov:unCountry>
+                        <loca:unCountry>
                             <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
                                 <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
                                 <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
                             </loca:UNCountry>
-                        </egov:unCountry>
+                        </loca:unCountry>
                     </loca:PhysicalAddress>
                 </lsub:headquarters>
                 <lsub:legalFormType>
@@ -140,17 +140,17 @@
                         </loca:Street>
                     </loca:street>
                     <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
-                    <loca:postCode>
-                        <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
+                    <loca:postcode>
+                        <loca:Postcode rdf:about="https://data.gov.sk/def/postcode/82905">
                             <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82905</skos:notation>
-                        </loca:PostCode>
-                    </loca:postCode>
-                    <egov:unCountry>
+                        </loca:Postcode>
+                    </loca:postcode>
+                    <loca:unCountry>
                         <loca:UNCountry rdf:about="https://data.gov.sk/def/uncountry/703">
                             <skos:prefLabel xml:lang="sk">Slovenská republika</skos:prefLabel>
                             <skos:inScheme rdf:resource="https://data.gov.sk/set/codelist/CL000086"/>
                         </loca:UNCountry>
-                    </egov:unCountry>
+                    </loca:unCountry>
                         </loca:PhysicalAddress>
                          </locn:location>
                     </lsub:Branch>

@@ -64,7 +64,7 @@ pper:birth a owl:ObjectProperty;
 pper:citizenship a owl:ObjectProperty;
   rdfs:label "citizenship"@en, "štátna príslušnosť"@sk, "Staatsangehörigkeit"@de;
   rdfs:domain pper:PhysicalPerson;
-  rdfs:range loca:Country;
+  rdfs:range loca:UNCountry;
   kdp:xmlElementName "Citizenship";
   adms:identifier <https://data.gov.sk/id/identifier/kdp/D.1.1.7>;
   rdfs:description "Relácia osoby na jej štátnu príslušnosť definovanú hodnotami číselníka CL000086 Krajina OSN."@sk;

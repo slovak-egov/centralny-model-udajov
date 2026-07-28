@@ -94,11 +94,11 @@
                             </loca:Street>
                         </loca:street>
                         <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
-                        <loca:postCode>
-                            <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
+                        <loca:postcode>
+                            <loca:Postcode rdf:about="https://data.gov.sk/def/postcode/82905">
                                 <skos:notation xml:lang="sk">82905</skos:notation>
-                            </loca:PostCode>
-                        </loca:postCode>
+                            </loca:Postcode>
+                        </loca:postcode>
                         <loca:lau2>
                             <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0103529346">
                                 <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Nové Mesto</skos:prefLabel>
@@ -139,11 +139,11 @@
                         </loca:Street>
                     </loca:street>
                     <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loca:orientationNumber>
-                    <loca:postCode>
-                        <loca:PostCode rdf:about="https://data.gov.sk/def/postcode/82905">
+                    <loca:postcode>
+                        <loca:Postcode rdf:about="https://data.gov.sk/def/postcode/82905">
                             <skos:notation xml:lang="sk">82905</skos:notation>
-                        </loca:PostCode>
-                    </loca:postCode>
+                        </loca:Postcode>
+                    </loca:postcode>
                     <loca:lau2>
                         <loca:LAU2 rdf:about="https://data.gov.sk/def/lau2/SK0103529346">
                             <skos:prefLabel xml:lang="sk">Bratislava - mestská časť Nové Mesto</skos:prefLabel>

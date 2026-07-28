@@ -45,11 +45,11 @@
                         <!-- OrganizaciaCisloDomu -->
                         <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</loca:orientationNumber>
                         <!-- OrganizaciaPSC -->
-                        <loca:postCode>
-                            <loca:PostCode rdf:about="https://data.gov.sk/id/post-code/81782">
+                        <loca:postcode>
+                            <loca:Postcode rdf:about="https://data.gov.sk/id/post-code/81782">
                                 <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81782</skos:notation>
-                            </loca:PostCode>
-                        </loca:postCode>
+                            </loca:Postcode>
+                        </loca:postcode>
                         <!-- OrganizaciaObec -->
                         <loca:lau2>
                             <!-- OrganizaciaObecKod -->
@@ -113,11 +113,11 @@
                         <!-- ObchodnyPartnerUlicaCislo -->
                         <loca:orientationNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7/C</loca:orientationNumber>
                         <!-- ObchodnyPartnerPSC -->
-                        <loca:postCode>
-                            <loca:PostCode rdf:about="https://data.gov.sk/id/post-code/82109">                                
+                        <loca:postcode>
+                            <loca:Postcode rdf:about="https://data.gov.sk/id/post-code/82109">                                
                                 <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82109</skos:notation>
-                            </loca:PostCode>
-                        </loca:postCode>
+                            </loca:Postcode>
+                        </loca:postcode>
                         <!-- ObchodnyPartnerObec -->
                         <loca:lau2>
                             <!-- ObchodnyPartnerObecKod -->

@@ -339,10 +339,10 @@
             }
           }
         },
-        "loca:postAddress": {
-          "loca:postCode":{
+        "loca:postalAddress": {
+          "loca:postcode":{
             "@id":"post-code:2020259802",
-            "@type":"loca:PostCode"
+            "@type":"loca:Postcode"
           },
           "lsub:postOfficeBox":{
             "@id":"po-box:10",

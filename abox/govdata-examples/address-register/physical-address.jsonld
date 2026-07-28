@@ -71,9 +71,9 @@
         "@id": "addressType:100001",
         "@type": "loca:AddressType"        
       },
-      "loca:postCode": {
+      "loca:postcode": {
         "@id": "postcode:82905",
-        "@type": "loca:PostCode"        
+        "@type": "loca:Postcode"        
       },
       "loca:propertyRegistrationNumber": {
         "@value": "3013",

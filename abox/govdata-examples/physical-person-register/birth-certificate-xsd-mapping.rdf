@@ -30,17 +30,17 @@
     
     -->
 
-    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/prop/PersonDataType/PhysicalPerson">
+    <rdf:Description rdf:about="http://csru.gov.sk/birth_certificate/v1.0/prop/PersonDataType/PhysicalPerson">
         <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/physicalPerson"/>
         <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
     </rdf:Description>
 
-    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/def/PhysicalPersonType">
+    <rdf:Description rdf:about="http://csru.gov.sk/birth_certificate/v1.0/def/PhysicalPersonType">
         <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/PhysicalPerson"/>
         <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
     </rdf:Description>
 
-    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/prop/PersonNameCType/GivenName">
+    <rdf:Description rdf:about="http://csru.gov.sk/birth_certificate/v1.0/prop/PersonNameCType/GivenName">
         <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/givenName"/>
         <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
 
@@ -53,7 +53,7 @@
                     </prov:Entity>
                 </dct:subject>
                 <dct:source>
-                    <egov:EndPoint>
+                    <egov:Endpoint>
                         <!-- V prípade použitia mapovania endpointov cez reverzné proxy (definované v súbore ops-properties.xml)
                             sa namiesto reálnych domén tu uvádzajú aliasy, 
                             aby bola zabezpečená kompatibilita a prenositeľnosť cez prostredia - viď príklad nižšie pre druhý endpoint "endpoint1"
@@ -63,10 +63,13 @@
                         <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rfo.wsdl"/>
                         <dct:format>application/soap+xml</dct:format>
                         <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/RESTRICTED"/>
-                    </egov:EndPoint>
+                    </egov:Endpoint>
                 </dct:source>
                 <dct:description>Voľnotextový popis, spresnenie, dokumentácia...</dct:description>
             </dct:ProvenanceStatement>
+        </dct:provenance>
+
+        <dct:provenance>
             <dct:ProvenanceStatement>
                 <dct:subject>
                     <prov:Entity>
@@ -76,7 +79,7 @@
                 </dct:subject>
                 
                 <dct:source>
-                    <egov:EndPoint>
+                    <egov:Endpoint>
                          <!-- v prípade použitia mapovania endpointov cez reverzné proxy (definované v súbore ops-properties.xml)
                             sa namiesto reálnych domén uvádzajú v dokumentačnom súbore aliasy, 
                             aby bola zabezpečená kompatibilita a prenositeľnosť cez prostredia.
@@ -127,15 +130,15 @@
                             </http:Request>
                         </http:requests>
                         
-                    </egov:EndPoint>
+                    </egov:Endpoint>
                 </dct:source>
                 <dct:description>Voľnotextový popis, spresnenie, dokumentácia...</dct:description>
             </dct:ProvenanceStatement>
-        <dct:provenance>
+        </dct:provenance>
     </rdf:Description>
 
 
-    <rdf:Description rdf:about=" http://csru.gov.sk/birth_certificate/v1.0/prop/SexCType/Sex">
+    <rdf:Description rdf:about="http://csru.gov.sk/birth_certificate/v1.0/prop/SexCType/Sex">
         <skos:closeMatch rdf:resource="https://data.gov.sk/def/ontology/physical-person/sex"/>
         <rdfs:isDefinedBy rdf:resource="http://csru.gov.sk/birth_certificate/v1.0" />
 
@@ -148,22 +151,22 @@
                         <egov:usesScheme>
                             <skos:ConceptScheme rdf:about="https://data.gov.sk/set/codelist/CL003003">
 	                            <skos:prefLabel xml:lang="sk">Pohlavie</skos:prefLabel>
-                                <egov:uriPattern rdf:datatype="xsd:string">https://data.gov.sk/def/sex/*</egov:uriPattern>
+                                <egov:uriPattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://data.gov.sk/def/sex/*</egov:uriPattern>
                             </skos:ConceptScheme>
                         </egov:usesScheme>
                     </prov:Entity>
                 </dct:subject>
                 <dct:source>
-                    <egov:EndPoint>
+                    <egov:Endpoint>
                         <dcat:endpointURL>https://cpdi.gov.sk/rfo/GetPersonById</dcat:endpointURL>
                         <dcat:endpointDescription rdf:resource="https://doc.gov.sk/cpdi/rfo.wsdl"/>
                         <dct:format>application/soap+xml</dct:format>
                         <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/RESTRICTED"/>
-                    </egov:EndPoint>
+                    </egov:Endpoint>
                 </dct:source>
                 <dct:description>Voľnotextový popis, spresnenie, dokumentácia...</dct:description>
             </dct:ProvenanceStatement>
-        </provenance>
+        </dct:provenance>
     </rdf:Description>
 
     <!-- SPARQL všetky mapovania tohoto XSD:

@@ -60,7 +60,7 @@
                         <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</qb:order>
                         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
                         <rdfs:label xml:lang="sk">PSČ ORGANIZÁCIE</rdfs:label>
-                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/PostCode"/>
+                        <rdfs:domain rdf:resource="https://data.gov.sk/def/ontology/location/Postcode"/>
                         <rdfs:range rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
                     </qb:DimensionProperty>
                 </qb:dimension>
