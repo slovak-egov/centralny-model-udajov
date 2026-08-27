@@ -56,17 +56,17 @@
 # Je to zjednodušený ilustračný príklad pre úsek Žilina ↔ Vrútky.
 #################################################################
 
-<https://data.gov.sk/id/railway/section-of-line/180>
+<https://slovpedia.eu/id/era/section-of-line/180>
     a era:SectionOfLine ;
     rdfs:label "SoL (príklad) – trať 180, Žilina ↔ Vrútky"@sk ;
     rdfs:label "Section of line example – line 180, Žilina ↔ Vrútky"@en ;
-    era:canonicalURI <https://data.gov.sk/id/railway/section-of-line/180> ;
-    era:opStart <https://data.gov.sk/id/railway/operational-point/zilina> ;
-    era:opEnd <https://data.gov.sk/id/railway/operational-point/vrutky> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/section-of-line/180> ;
+    era:opStart <https://slovpedia.eu/id/era/operational-point/zilina> ;
+    era:opEnd <https://slovpedia.eu/id/era/operational-point/vrutky> ;
     era:length "22.5"^^xsd:double ;
     era:solNature era-sn:10 ;
     era:inCountry eu-country:SVK ;
-    era:hasPart <https://data.gov.sk/id/railway/running-track/26341910092> .
+    era:hasPart <https://slovpedia.eu/id/era/running-track/26341910092> .
 
 #################################################################
 # 2. Running track
@@ -74,15 +74,15 @@
 # RunningTrack je konkrétna jazdná koľaj, na ktorú sa viaže trackside ETCS.
 #################################################################
 
-<https://data.gov.sk/id/railway/running-track/26341910092>
+<https://slovpedia.eu/id/era/running-track/26341910092>
     a era:RunningTrack ;
     rdfs:label "Jazdná koľaj 26341910092 na trati 180 Žilina ↔ Vrútky"@sk ;
     rdfs:label "Running track 26341910092 on line 180 Žilina ↔ Vrútky"@en ;
-    era:canonicalURI <https://data.gov.sk/id/railway/running-track/26341910092> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/running-track/26341910092> ;
     era:trackId "26341910092" ;
-    era:isPartOf <https://data.gov.sk/id/railway/section-of-line/180> ;
+    era:isPartOf <https://slovpedia.eu/id/era/section-of-line/180> ;
     era:inCountry eu-country:SVK ;
-    era:etcs <https://data.gov.sk/id/railway/etcs/trackside/26341910092> .
+    era:etcs <https://slovpedia.eu/id/era/etcs/trackside/26341910092> .
 
 #################################################################
 # 3. Trackside ETCS
@@ -92,7 +92,7 @@
 # hodnoty z concept scheme, aby bol príklad čo najnázornejší.
 #################################################################
 
-<https://data.gov.sk/id/railway/etcs/trackside/26341910092>
+<https://slovpedia.eu/id/era/etcs/trackside/26341910092>
     a era:ETCS ;
     rdfs:label "Traťové ETCS pre jazdnú koľaj 26341910092 na trati 180"@sk ;
     rdfs:label "Trackside ETCS for running track 26341910092 on line 180"@en ;
@@ -119,19 +119,19 @@
 # OP sú použité ako začiatok a koniec SectionOfLine.
 #################################################################
 
-<https://data.gov.sk/id/railway/operational-point/zilina>
+<https://slovpedia.eu/id/era/operational-point/zilina>
     a era:OperationalPoint ;
     rdfs:label "Žilina"@sk ;
     rdfs:label "Žilina"@en ;
-    era:canonicalURI <https://data.gov.sk/id/railway/operational-point/zilina> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/operational-point/zilina> ;
     era:uopid "SKZILINA01" ;
     era:inCountry eu-country:SVK .
 
-<https://data.gov.sk/id/railway/operational-point/vrutky>
+<https://slovpedia.eu/id/era/operational-point/vrutky>
     a era:OperationalPoint ;
     rdfs:label "Vrútky"@sk ;
     rdfs:label "Vrútky"@en ;
-    era:canonicalURI <https://data.gov.sk/id/railway/operational-point/vrutky> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/operational-point/vrutky> ;
     era:uopid "SKVRUTKY01" ;
     era:inCountry eu-country:SVK .
 
@@ -143,13 +143,13 @@
 # - konkrétny typ vozidla môže podporovať iba niektoré z nich
 #################################################################
 
-<https://data.gov.sk/def/railway/vehicle-type/A-BC-123>
+<https://slovpedia.eu/def/era/vehicle-type/A-BC-123>
     a era:VehicleType ;
     rdfs:label "Typ vozidla ZSSK A-BC-123"@sk ;
     rdfs:label "ZSSK locomotive type A-BC-123"@en ;
-    era:onboardEtcs <https://data.gov.sk/id/railway/etcs/onboard/vehicle-type/A-BC-123> .
+    era:onboardEtcs <https://slovpedia.eu/id/era/etcs/onboard/vehicle-type/A-BC-123> .
 
-<https://data.gov.sk/id/railway/etcs/onboard/vehicle-type/A-BC-123>
+<https://slovpedia.eu/id/era/etcs/onboard/vehicle-type/A-BC-123>
     a era:ETCS ;
     rdfs:label "Palubné ETCS pre typ vozidla ZSSK A-BC-123"@sk ;
     rdfs:label "Onboard ETCS for ZSSK vehicle type A-BC-123"@en ;
@@ -164,13 +164,13 @@
 # 6. Onboard ETCS - typ vozidla, ktorý tieto conditions nepodporuje
 #################################################################
 
-<https://data.gov.sk/def/railway/vehicle-type/A-BC-240>
+<https://slovpedia.eu/def/era/vehicle-type/A-BC-240>
     a era:VehicleType ;
     rdfs:label "Typ vozidla ZSSK A-BC-240"@sk ;
     rdfs:label "ZSSK locomotive type A-BC-240"@en ;
-    era:onboardEtcs <https://data.gov.sk/id/railway/etcs/onboard/vehicle-type/A-BC-240> .
+    era:onboardEtcs <https://slovpedia.eu/id/era/etcs/onboard/vehicle-type/A-BC-240> .
 
-<https://data.gov.sk/id/railway/etcs/onboard/vehicle-type/A-BC-240>
+<https://slovpedia.eu/id/era/etcs/onboard/vehicle-type/A-BC-240>
     a era:ETCS ;
     rdfs:label "Palubné ETCS pre typ vozidla ZSSK A-BC-240"@sk ;
     rdfs:label "Onboard ETCS for ZSSK vehicle type A-BC-240"@en ;

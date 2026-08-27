@@ -53,9 +53,9 @@ SOL-101A-001,101 A,OP-CIERNA,OP-KOSICE,98.730,conventional,operational
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/section-of-line/SOL-101A-001> a era:SectionOfLine ;
-    era:opStart <https://data.gov.sk/id/operational-point/OP-CIERNA> ;
-    era:opEnd <https://data.gov.sk/id/operational-point/OP-KOSICE> ;
+<https://slovpedia.eu/id/era/section-of-line/SOL-101A-001> a era:SectionOfLine ;
+    era:opStart <https://slovpedia.eu/id/era/operational-point/OP-CIERNA> ;
+    era:opEnd <https://slovpedia.eu/id/era/operational-point/OP-KOSICE> ;
     era:lengthOfSectionOfLine "98.730"^^xsd:decimal .
 ```
 
@@ -94,7 +94,7 @@ OP-KOSICE,SK000123,Košice,station,true,active
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/operational-point/OP-KOSICE> a era:OperationalPoint ;
+<https://slovpedia.eu/id/era/operational-point/OP-KOSICE> a era:OperationalPoint ;
     era:uopid "SK000123" ;
     era:opName "Košice"@sk ;
     era:opType <http://data.europa.eu/949/concepts/op-types/10> .
@@ -133,10 +133,10 @@ OPNR-KOSICE-1,OP-KOSICE,97.450,48.7164,21.2611
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/operational-point/OP-KOSICE> era:netReference
-    <https://data.gov.sk/id/net-point-reference/OPNR-KOSICE-1> .
+<https://slovpedia.eu/id/era/operational-point/OP-KOSICE> era:netReference
+    <https://slovpedia.eu/id/era/net-point-reference/OPNR-KOSICE-1> .
 
-<https://data.gov.sk/id/net-point-reference/OPNR-KOSICE-1> a era:NetPointReference .
+<https://slovpedia.eu/id/era/net-point-reference/OPNR-KOSICE-1> a era:NetPointReference .
 ```
 
 ---
@@ -172,12 +172,12 @@ RT-101A-001-1,SOL-101A-001,1,120,ETCS-001
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/running-track/RT-101A-001-1> a era:RunningTrack ;
+<https://slovpedia.eu/id/era/running-track/RT-101A-001-1> a era:RunningTrack ;
     era:trackId "1" .
 
-<https://data.gov.sk/id/running-track/RT-101A-001-1>
-    <https://data.gov.sk/def/railways/inSectionOfLine>
-    <https://data.gov.sk/id/section-of-line/SOL-101A-001> .
+<https://slovpedia.eu/id/era/running-track/RT-101A-001-1>
+    <https://slovpedia.eu/def/era/inSectionOfLine>
+    <https://slovpedia.eu/id/era/section-of-line/SOL-101A-001> .
 ```
 
 ---
@@ -211,11 +211,11 @@ PE-KOSICE-1,OP-KOSICE,250,550
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/platform-edge/PE-KOSICE-1> a era:PlatformEdge .
+<https://slovpedia.eu/id/era/platform-edge/PE-KOSICE-1> a era:PlatformEdge .
 
-<https://data.gov.sk/id/platform-edge/PE-KOSICE-1>
-    <https://data.gov.sk/def/railways/inOperationalPoint>
-    <https://data.gov.sk/id/operational-point/OP-KOSICE> .
+<https://slovpedia.eu/id/era/platform-edge/PE-KOSICE-1>
+    <https://slovpedia.eu/def/era/inOperationalPoint>
+    <https://slovpedia.eu/id/era/operational-point/OP-KOSICE> .
 ```
 
 ---
@@ -247,7 +247,7 @@ TUN-001,SOL-173-004,1180
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/tunnel/TUN-001> a era:Tunnel .
+<https://slovpedia.eu/id/era/tunnel/TUN-001> a era:Tunnel .
 ```
 
 ---
@@ -281,10 +281,10 @@ ETCS-001,RT-125A-001-1,L1,Baseline 2,SRS 2.2.2,2006-07-01
 
 Príklad RDF:
 ```turtle
-<https://data.gov.sk/id/running-track/RT-125A-001-1>
-    <https://data.gov.sk/def/railways/etcsLevel> "L1" ;
-    <https://data.gov.sk/def/railways/etcsBaseline> "Baseline 2" ;
-    <https://data.gov.sk/def/railways/etcsSrs> "SRS 2.2.2" .
+<https://slovpedia.eu/id/era/running-track/RT-125A-001-1>
+    <https://slovpedia.eu/def/era/etcsLevel> "L1" ;
+    <https://slovpedia.eu/def/era/etcsBaseline> "Baseline 2" ;
+    <https://slovpedia.eu/def/era/etcsSrs> "SRS 2.2.2" .
 ```
 
 ---

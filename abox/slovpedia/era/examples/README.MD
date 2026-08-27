@@ -1,10 +1,10 @@
-# Rozšírenie Centrálneho modelu údajov o ERA (železnice)
+# Slovpedia – ilustračné dáta podľa modelu ERA (železnice)
 
 ---
 
 ## 1. Prehľad URI entít
 
-Táto kapitola dokumentuje URI entity použité v TTL súboroch rozšírenia Centrálneho modelu údajov o ontológiu ERA.  
+Táto kapitola dokumentuje URI entít použité v ilustračných TTL súboroch Slovpedie podľa ontológie ERA.  
 Zameriava sa na explicitné zdokumentovanie použitých ontológií (TBOX) a konvencie tvorby URI pre konkrétne objekty železničnej infraštruktúry (ABOX).
 
 ---
@@ -39,30 +39,30 @@ Zoznam slúži ako referencia pre tvorbu URI a demonštruje používanú URI kon
 1.3.1 Prehľad URI objektov
 Národná trať
 ```
-https://data.gov.sk/id/railway/national-line/180
+https://slovpedia.eu/id/era/national-line/180
 ```
 
 Úsek trate
 ```
-https://data.gov.sk/id/railway/section-of-line/180-zilina-vrutky
+https://slovpedia.eu/id/era/section-of-line/180-zilina-vrutky
 ```
 
 Operačný bod
 ```
-https://data.gov.sk/id/railway/operational-point/zilina-01
+https://slovpedia.eu/id/era/operational-point/zilina-01
 ```
 
 Nástupište
 ```
-https://data.gov.sk/id/railway/platform/zilina-1
+https://slovpedia.eu/id/era/platform/zilina-1
 ```
 
 Odstavná koľaj
 ```
-https://data.gov.sk/id/railway/siding/zilina-01
+https://slovpedia.eu/id/era/siding/zilina-01
 ```
 
 Tunel
 ```
-https://data.gov.sk/id/railway/tunnel/strecno-I
+https://slovpedia.eu/id/era/tunnel/strecno-I
 ```

@@ -21,7 +21,7 @@
 # https://github.com/Interoperable-data/ERA_vocabulary/blob/main/era-shacl/RINF-tunnels-sparql.ttl
 ###############################################################################
 
-<https://data.gov.sk/id/railway/tunnel/strecno-i>
+<https://slovpedia.eu/id/era/tunnel/strecno-i>
     a era:Tunnel ;
     rdfs:label "Tunel Strečno I"@sk ;
     rdfs:label "Strečno I tunnel"@en ;
@@ -33,8 +33,8 @@
     era:tunnelIdentification "SK-180-STRECNO-I" ;
 
     # SHACL: začiatok/koniec tunela cez LineReference (kilometer + era:lineNationalId)
-    era:lineReferenceTunnelStart <https://data.gov.sk/id/railway/lineReference/strecno-i/start> ;
-    era:lineReferenceTunnelEnd   <https://data.gov.sk/id/railway/lineReference/strecno-i/end> ;
+    era:lineReferenceTunnelStart <https://slovpedia.eu/id/era/lineReference/strecno-i/start> ;
+    era:lineReferenceTunnelEnd   <https://slovpedia.eu/id/era/lineReference/strecno-i/end> ;
 
     # SHACL: dĺžka tunela ako xsd:double (v metroch)
     era:length 318.0 ;
@@ -45,16 +45,16 @@
     era:inCountry country:SVK ;
     dct:identifier "180/09" ;
     dct:source <https://www.rail.sk/skhist/tunely/180/09.htm> ;
-    dct:relation <https://data.gov.sk/id/railway/nationalLine/180> ;
+    dct:relation <https://slovpedia.eu/id/era/nationalLine/180> .
 
 # --- LineReference na začiatku tunela
-<https://data.gov.sk/id/railway/lineReference/strecno-i/start>
+<https://slovpedia.eu/id/era/lineReference/strecno-i/start>
     a era:LineReference ;
     era:kilometer 322.796 ;
-    era:lineNationalId <https://data.gov.sk/id/railway/nationalLine/180> .
+    era:lineNationalId <https://slovpedia.eu/id/era/nationalLine/180> .
 
 # --- LineReference na konci tunela
-<https://data.gov.sk/id/railway/lineReference/strecno-i/end>
+<https://slovpedia.eu/id/era/lineReference/strecno-i/end>
     a era:LineReference ;
     era:kilometer 323.118 ;
-    era:lineNationalId <https://data.gov.sk/id/railway/nationalLine/180> .
+    era:lineNationalId <https://slovpedia.eu/id/era/nationalLine/180> .

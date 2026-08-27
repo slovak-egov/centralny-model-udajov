@@ -11,35 +11,35 @@
 # Príklad: Section of Line (SoL) podľa ERA ontológie
 ###############################################################################
 
-<https://data.gov.sk/id/railway/section-of-line/180>
+<https://slovpedia.eu/id/era/section-of-line/180>
     a era:SectionOfLine ;
     rdfs:label "Trať 180, Žilina ↔ Vrútky"@sk ;
-    era:canonicalURI <https://data.gov.sk/id/railway/section-of-line/180> ;
-    era:opStart <https://data.gov.sk/id/railway/operational-point/zilina-01> ;
-    era:opEnd <https://data.gov.sk/id/railway/operational-point/vrutky-01> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/section-of-line/180> ;
+    era:opStart <https://slovpedia.eu/id/era/operational-point/zilina-01> ;
+    era:opEnd <https://slovpedia.eu/id/era/operational-point/vrutky-01> ;
     era:length "22.5"^^xsd:double ;
     era:solNature era-sn:SoLNATURE_EXAMPLE_STANDARD ;
     era:inCountry eu-country:SVK ;
-    era:hasPart <https://data.gov.sk/id/railway/running-track/26341910092> .
+    era:hasPart <https://slovpedia.eu/id/era/running-track/26341910092> .
 
 ###############################################################################
 # Running track patriaci do SoL
 ###############################################################################
 
-<https://data.gov.sk/id/railway/running-track/26341910092>
+<https://slovpedia.eu/id/era/running-track/26341910092>
     a era:RunningTrack ;
     rdfs:label "Jazdná koľaj 26341910092"@sk ;
-    era:canonicalURI <https://data.gov.sk/id/railway/running-track/26341910092> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/running-track/26341910092> ;
     era:trackId "26341910092" ;
-    era:isPartOf <https://data.gov.sk/id/railway/section-of-line/180> ;
+    era:isPartOf <https://slovpedia.eu/id/era/section-of-line/180> ;
     era:inCountry eu-country:SVK ;
-    era:etcs <https://data.gov.sk/id/railway/etcs/trackside/26341910092> .
+    era:etcs <https://slovpedia.eu/id/era/etcs/trackside/26341910092> .
 
 ###############################################################################
 # Trackside ETCS na jazdnej koľaji
 ###############################################################################
 
-<https://data.gov.sk/id/railway/etcs/trackside/26341910092>
+<https://slovpedia.eu/id/era/etcs/trackside/26341910092>
     a era:ETCS ;
     rdfs:label "Traťové ETCS pre jazdnú koľaj 26341910092"@sk ;
     era:etcsTransmitsTrackConditions true .
@@ -48,17 +48,17 @@
 # OP zdroje pre opStart/opEnd
 ###############################################################################
 
-<https://data.gov.sk/id/railway/operational-point/zilina-01>
+<https://slovpedia.eu/id/era/operational-point/zilina-01>
     a era:OperationalPoint ;
     rdfs:label "Žilina (príklad OP)"@sk ;
-    era:canonicalURI <https://data.gov.sk/id/railway/operational-point/zilina-01> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/operational-point/zilina-01> ;
     era:uopid "SKZILINA01" ;
     era:inCountry eu-country:SVK .
 
-<https://data.gov.sk/id/railway/operational-point/vrutky-01>
+<https://slovpedia.eu/id/era/operational-point/vrutky-01>
     a era:OperationalPoint ;
     rdfs:label "Vrútky (príklad OP)"@sk ;
-    era:canonicalURI <https://data.gov.sk/id/railway/operational-point/vrutky-01> ;
+    era:canonicalURI <https://slovpedia.eu/id/era/operational-point/vrutky-01> ;
     era:uopid "SKVRUTKY01" ;
     era:inCountry eu-country:SVK .
 

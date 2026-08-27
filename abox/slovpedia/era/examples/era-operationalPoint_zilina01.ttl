@@ -48,7 +48,7 @@
 # + Doplnok: era:siding -> prepojenie na Siding (kvôli tvojmu prípadu)
 ###############################################################################
 
-<https://data.gov.sk/id/railway/operational-point/zilina>
+<https://slovpedia.eu/id/era/operational-point/zilina>
     a era:OperationalPoint ;
 
     # rdfs:label je “užívateľský” popis; SHACL ho tu nevyžaduje, ale je užitočný
@@ -61,16 +61,16 @@
     era:opType era-optype:OPTYPE_EXAMPLE ;
 
     # SHACL (1.2.0.0.0.5): hasGeometry max 1×, objekt IRI typu geosparql:Geometry
-    geosparql:hasGeometry <https://data.gov.sk/id/railway/geometry/op-zilina> ;
+    geosparql:hasGeometry <https://slovpedia.eu/id/era/geometry/op-zilina> ;
 
     # SHACL (inCountry): presne 1×, objekt IRI + musí byť v country scheme
     era:inCountry country:SVK ;
 
     # SHACL (1.2.0.0.0.6): aspoň jeden lineReference s kilometrom a linkou
-    era:lineReference <https://data.gov.sk/id/railway/lineReference/op-zilina/line180> ;
+    era:lineReference <https://slovpedia.eu/id/era/lineReference/op-zilina/line180> ;
 
     # Väzba na siding (toto je to, čo si chcel mať v príklade pre sidings)
-    era:siding <https://data.gov.sk/id/railway/siding/example-op-zilina/S1> .
+    era:siding <https://slovpedia.eu/id/era/siding/example-op-zilina/S1> .
 
 ###############################################################################
 # LineReference pre OP (kvôli property path constraintom)
@@ -78,10 +78,10 @@
 # - musí obsahovať lineNationalId (IRI)
 ###############################################################################
 
-<https://data.gov.sk/id/railway/lineReference/op-zilina/line180>
+<https://slovpedia.eu/id/era/lineReference/op-zilina/line180>
     a era:LineReference ;
     era:kilometer 0.000 ;
-    era:lineNationalId <https://data.gov.sk/id/railway/nationalLine/180> .
+    era:lineNationalId <https://slovpedia.eu/id/era/nationalLine/180> .
 
 ###############################################################################
 # Geometria OP (kvôli geosparql:hasGeometry + locationShape)
@@ -89,7 +89,7 @@
 # - WKT bod s wktLiteral
 ###############################################################################
 
-<https://data.gov.sk/id/railway/geometry/op-zilina>
+<https://slovpedia.eu/id/era/geometry/op-zilina>
     a geosparql:Geometry ;
     wgs:lat 49.2230 ;
     wgs:long 18.7395 ;

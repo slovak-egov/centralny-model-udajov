@@ -18,7 +18,7 @@
 ###############################################################################
 
 # --- Siding (koľaj na odstavenie/manipuláciu) v rámci OP
-<https://data.gov.sk/id/railway/siding/example-op-zilina/S1>
+<https://slovpedia.eu/id/era/siding/example-op-zilina/S1>
     a era:Siding ;
     rdfs:label "Manipulačná koľaj S1 – príklad"@sk ;
 

@@ -22,7 +22,7 @@
 #  - era:areaBoardingAid          xsd:integer v rozsahu [0,10000)
 ###############################################################################
 
-<https://data.gov.sk/id/railway/platform/zilina-1>
+<https://slovpedia.eu/id/era/platform/zilina-1>
     a era:Platform ;
     rdfs:label "Nástupište 1 – Žilina (príklad)"@sk ;
     rdfs:label "Platform 1 – Žilina (example)"@en ;
