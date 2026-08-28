@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Execute generated ERA CONSTRUCT queries and store deterministic snapshots."""
+"""Execute generated ERA CONSTRUCT queries and store Turtle snapshots."""
 
 from __future__ import annotations
 
@@ -37,7 +37,7 @@ def materialize(config_path: Path, source_path: Path, output_dir: Path) -> None:
         with tempfile.NamedTemporaryFile(
             prefix=f"{dataset_id}-", suffix=".nt", dir=data_dir, delete=False
         ) as temporary:
-            temporary_path = Path(temporary.name)
+            ntriples_path = Path(temporary.name)
             subprocess.run(
                 [
                     "arq",
@@ -51,11 +51,11 @@ def materialize(config_path: Path, source_path: Path, output_dir: Path) -> None:
 
         try:
             # SPARQL does not define graph serialization order. Sorting complete
-            # N-Triples lines makes the published artifact byte-reproducible.
-            statements = temporary_path.read_bytes().splitlines(keepends=True)
+            # N-Triples lines gives the Turtle formatter a stable input graph.
+            statements = ntriples_path.read_bytes().splitlines(keepends=True)
             statements.sort()
-            temporary_path.write_bytes(b"".join(statements))
-            subprocess.run(["riot", "--validate", str(temporary_path)], check=True)
+            ntriples_path.write_bytes(b"".join(statements))
+            subprocess.run(["riot", "--validate", str(ntriples_path)], check=True)
             statement_count = sum(1 for line in statements if line.strip())
             type_suffix = (
                 " <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> "
@@ -67,8 +67,18 @@ def materialize(config_path: Path, source_path: Path, output_dir: Path) -> None:
                     f"{dataset_id}: query returned {entity_count} entities, "
                     f'configuration expects {dataset["count"]}'
                 )
-            target_path = data_dir / f"{dataset_id}.nt.gz"
-            with temporary_path.open("rb") as source, target_path.open("wb") as raw_target:
+
+            turtle_path = ntriples_path.with_suffix(".ttl")
+            with turtle_path.open("wb") as turtle:
+                subprocess.run(
+                    ["riot", "--formatted=TURTLE", str(ntriples_path)],
+                    stdout=turtle,
+                    check=True,
+                )
+            subprocess.run(["riot", "--validate", str(turtle_path)], check=True)
+
+            target_path = data_dir / f"{dataset_id}.ttl.gz"
+            with turtle_path.open("rb") as source, target_path.open("wb") as raw_target:
                 with gzip.GzipFile(fileobj=raw_target, mode="wb", filename="", mtime=0) as target:
                     shutil.copyfileobj(source, target)
 
@@ -77,18 +87,19 @@ def materialize(config_path: Path, source_path: Path, output_dir: Path) -> None:
                     "datasetId": dataset_id,
                     "classIri": dataset["classIri"],
                     "path": f"data/{target_path.name}",
-                    "mediaType": "application/n-triples",
+                    "mediaType": "text/turtle",
                     "compression": "gzip",
                     "entities": entity_count,
                     "statements": statement_count,
-                    "uncompressedBytes": temporary_path.stat().st_size,
+                    "uncompressedBytes": turtle_path.stat().st_size,
                     "compressedBytes": target_path.stat().st_size,
-                    "uncompressedSha256": sha256(temporary_path),
+                    "uncompressedSha256": sha256(turtle_path),
                     "sha256": sha256(target_path),
                 }
             )
         finally:
-            temporary_path.unlink(missing_ok=True)
+            ntriples_path.unlink(missing_ok=True)
+            ntriples_path.with_suffix(".ttl").unlink(missing_ok=True)
 
     manifest = {
         "schemaVersion": 1,

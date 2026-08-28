@@ -88,11 +88,12 @@
     {
       "id": "etcs",
       "classIri": "http://data.europa.eu/949/ETCS",
+      "incomingPropertyIri": "http://data.europa.eu/949/etcs",
       "count": 1333,
       "titleSk": "Systémy ETCS podľa ERA",
       "titleEn": "ETCS systems according to ERA",
-      "descriptionSk": "Priamy RDF opis 1 333 systémových záznamov typu era:ETCS v slovenskom grafe ERA 0056.",
-      "descriptionEn": "Direct RDF descriptions of 1,333 system records of type era:ETCS in Slovak ERA graph 0056."
+      "descriptionSk": "RDF opis 1 333 záznamov parametra typu era:ETCS v slovenskom grafe ERA 0056 vrátane väzieb z príslušných traťových koľají. Nejde o evidenciu životného cyklu projektov nasadenia.",
+      "descriptionEn": "RDF descriptions of 1,333 parameter records of type era:ETCS in Slovak ERA graph 0056, including links from the corresponding running tracks. This is not a deployment-project lifecycle register."
     },
     {
       "id": "kilometric-posts",

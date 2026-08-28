@@ -26,15 +26,26 @@ def literal(value: str, language: str) -> str:
     return f"{json.dumps(value, ensure_ascii=False)}@{language}"
 
 
-def construct_query(graph_iri: str, class_iri: str) -> str:
+def construct_query(
+    graph_iri: str, class_iri: str, incoming_property_iri: str | None = None
+) -> str:
+    incoming_construct = ""
+    incoming_where = ""
+    if incoming_property_iri:
+        incoming_construct = (
+            f"  ?referringEntity <{incoming_property_iri}> ?entity .\n"
+        )
+        incoming_where = (
+            f"    OPTIONAL {{ ?referringEntity <{incoming_property_iri}> ?entity . }}\n"
+        )
     return f"""CONSTRUCT {{
   ?entity ?predicate ?object .
-}}
+{incoming_construct}}}
 WHERE {{
   GRAPH <{graph_iri}> {{
     ?entity a <{class_iri}> ;
             ?predicate ?object .
-  }}
+{incoming_where}  }}
 }}
 """
 
@@ -85,18 +96,22 @@ def generate(config_path: Path, output_dir: Path) -> None:
     )
 
     for item, dataset_iri in zip(datasets, dataset_iris):
-        query = construct_query(config["sourceGraphIri"], item["classIri"])
+        query = construct_query(
+            config["sourceGraphIri"],
+            item["classIri"],
+            item.get("incomingPropertyIri"),
+        )
         query_path = query_dir / f'{item["id"]}.rq'
         query_path.write_text(query, encoding="utf-8")
 
         query_url = config["sparqlEndpoint"] + "?" + urlencode({"query": query})
         query_doc_url = f'{config["queryDocumentBaseUrl"]}/{item["id"]}.rq'
-        snapshot_distribution = f"{dataset_iri}/distribution/snapshot-nt-gzip"
+        snapshot_distribution = f"{dataset_iri}/distribution/snapshot-turtle-gzip"
         live_distribution = f"{dataset_iri}/distribution/sparql-construct-live"
         service_distribution = f"{dataset_iri}/distribution/sparql-service"
         service_iri = f'{config["serviceBaseIri"]}/{item["id"]}'
         dataset_page = f'{config["datasetBaseIri"]}/{item["id"]}'
-        snapshot_url = f'{config["dataDownloadBaseUrl"]}/{item["id"]}.nt.gz'
+        snapshot_url = f'{config["dataDownloadBaseUrl"]}/{item["id"]}.ttl.gz'
 
         lines.extend(
             [
@@ -131,8 +146,8 @@ def generate(config_path: Path, output_dir: Path) -> None:
             [
                 f"    dcat:accessURL <{snapshot_url}> ;",
                 f"    dcat:downloadURL <{snapshot_url}> ;",
-                "    dct:format filetype:RDF_N_TRIPLES ;",
-                "    dcat:mediaType <http://www.iana.org/assignments/media-types/application/n-triples> ;",
+                "    dct:format filetype:RDF_TURTLE ;",
+                "    dcat:mediaType <http://www.iana.org/assignments/media-types/text/turtle> ;",
                 "    dcat:compressFormat <http://www.iana.org/assignments/media-types/application/gzip> ;",
             ]
         )

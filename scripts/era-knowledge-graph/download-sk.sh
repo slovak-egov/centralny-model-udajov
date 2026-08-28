@@ -11,7 +11,7 @@ statements_url="${repository_url}/statements"
 graph_iri="http://data.europa.eu/949/graph/0056"
 zenodo_latest_url="https://zenodo.org/api/records/14605743/versions/latest"
 
-for command_name in curl gzip jq riot sha256sum; do
+for command_name in arq curl gzip jq riot sha256sum; do
   if ! command -v "${command_name}" >/dev/null 2>&1; then
     echo "Missing required command: ${command_name}" >&2
     exit 1
@@ -32,6 +32,25 @@ curl --fail --silent --show-error --get \
   "${statements_url}"
 
 riot --validate --syntax=NQUADS "${raw_file}" >/dev/null
+
+arq \
+  --data="${raw_file}" \
+  --query="${script_dir}/sparql/sk-country-values.rq" \
+  --results=CSV > "${output_dir}/sk-country-values.csv"
+
+svk_country_iri="http://publications.europa.eu/resource/authority/country/SVK"
+non_svk_countries="$(awk -F, -v svk="${svk_country_iri}" 'NR > 1 && $1 != svk { print $1 }' "${output_dir}/sk-country-values.csv")"
+if [[ -n "${non_svk_countries}" ]]; then
+  echo "Graph ${graph_iri} contains entities assigned to a country other than SVK:" >&2
+  echo "${non_svk_countries}" >&2
+  exit 1
+fi
+
+svk_entities="$(awk -F, -v svk="${svk_country_iri}" 'NR > 1 && $1 == svk { print $2 }' "${output_dir}/sk-country-values.csv")"
+if [[ -z "${svk_entities}" || "${svk_entities}" == "0" ]]; then
+  echo "Graph ${graph_iri} contains no entities explicitly assigned to SVK." >&2
+  exit 1
+fi
 
 statistics_query='SELECT (COUNT(*) AS ?triples) (COUNT(DISTINCT ?s) AS ?subjects) (COUNT(DISTINCT ?p) AS ?predicates) WHERE { GRAPH <http://data.europa.eu/949/graph/0056> { ?s ?p ?o } }'
 curl --fail --silent --show-error --get \
@@ -76,11 +95,13 @@ jq -n \
   --arg graph "${graph_iri}" \
   --arg statements "${statements_url}" \
   --arg mediaType "application/n-quads" \
+  --arg country "${svk_country_iri}" \
   --arg sha256 "${raw_sha256}" \
   --arg compressedSha256 "${compressed_sha256}" \
   --argjson triples "${downloaded_triples}" \
   --argjson bytes "${raw_bytes}" \
   --argjson compressedBytes "${compressed_bytes}" \
+  --argjson entitiesWithCountry "${svk_entities}" \
   --slurpfile zenodo "${output_dir}/zenodo-latest.json" \
   '{
     schemaVersion: 1,
@@ -104,6 +125,12 @@ jq -n \
       uncompressedSha256: $sha256,
       sha256: $compressedSha256
     },
+    countryValidation: {
+      property: "http://data.europa.eu/949/inCountry",
+      expectedCountry: $country,
+      entitiesWithExpectedCountry: $entitiesWithCountry,
+      otherCountriesFound: 0
+    },
     latestFullDumpAtRetrieval: {
       record: $zenodo[0].links.self_html,
       doi: $zenodo[0].doi,
@@ -123,6 +150,7 @@ jq -n \
   sha256sum \
     era-rinf-sk-graph-0056.nq.gz \
     graph-statistics.csv \
+    sk-country-values.csv \
     sk-class-counts.csv \
     sk-identity-coverage.csv \
     dcat-inventory.csv \

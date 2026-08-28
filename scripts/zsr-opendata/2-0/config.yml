@@ -4,9 +4,9 @@ paths:
 
   raw_root: "../../../raw"
 
-  csv_root: "../../../abox/slovpedia/era/zsr-opendata/2-0/csv"
+  csv_root: "../../../abox/slovpedia/era-sk/zsr-opendata/2-0/csv"
 
-  rdf_root: "../../../abox/slovpedia/era/zsr-opendata/2-0/rdf"
+  rdf_root: "../../../abox/slovpedia/era-sk/zsr-opendata/2-0/rdf"
 
 
 publisher:

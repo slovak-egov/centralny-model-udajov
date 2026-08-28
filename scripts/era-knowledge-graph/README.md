@@ -28,9 +28,10 @@ Downloader:
 1. stiahne graf `http://data.europa.eu/949/graph/0056` cez RDF4J Statements
    endpoint ako N-Quads;
 2. overí RDF syntax cez `riot`;
-3. porovná počet stiahnutých riadkov s počtom trojíc v SPARQL endpoint-e;
-4. vytvorí deterministicky komprimovaný `.nq.gz` súbor;
-5. uloží inventár tried, pokrytie canonical URI, DCAT inventár, externé
+3. overí, že všetky entity s explicitným `era:inCountry` patria do `SVK`;
+4. porovná počet stiahnutých riadkov s počtom trojíc v SPARQL endpoint-e;
+5. vytvorí deterministicky komprimovaný `.nq.gz` súbor;
+6. uloží inventár tried, pokrytie canonical URI, DCAT inventár, externé
    závislosti, metadata najnovšieho plného Zenodo dumpu, provenance manifest
    a SHA-256 checksumy.
 
@@ -47,7 +48,7 @@ obnovia príkazom:
 
 ```bash
 scripts/era-knowledge-graph/generate-dcat.py \
-  --output abox/slovpedia/era/knowledge-graph/2026-08-27
+  --output abox/slovpedia/era-sk/era-sk-knowledge-graph/2026-08-27
 ```
 
 Výsledky dotazov sa fyzicky uložia takto:
@@ -55,10 +56,11 @@ Výsledky dotazov sa fyzicky uložia takto:
 ```bash
 scripts/era-knowledge-graph/materialize-datasets.py \
   --source raw/era-knowledge-graph/2026-08-27/era-rinf-sk-graph-0056.nq.gz \
-  --output abox/slovpedia/era/knowledge-graph/2026-08-27
+  --output abox/slovpedia/era-sk/era-sk-knowledge-graph/2026-08-27
 ```
 
 Potom treba generátor spustiť ešte raz, aby do DCAT doplnil veľkosti súborov.
-Každý dataset dostane uloženú `.nt.gz` distribúciu, priamu živú SPARQL
-distribúciu aj distribúciu cez `dcat:DataService`. Lokálne metadátové URI sú
+Každý dataset dostane uloženú `.ttl.gz` distribúciu (Turtle komprimovaný
+pomocou gzip), priamu živú SPARQL distribúciu aj distribúciu cez
+`dcat:DataService`. Lokálne metadátové URI sú
 pod `https://slovpedia.eu/`; obsahové ERA URI sa nemenia.

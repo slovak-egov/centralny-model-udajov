@@ -1,5 +1,10 @@
 # ERA interoperabilita a nové otvorené dáta železníc SR
 
+> **Archívny návrh.** Dokument obsahuje CSV schémy a ilustračné riadky zo
+> staršej fázy návrhu. Nie je zdrojom publikovateľných údajov. Aktuálne
+> rozdelenie ERA snapshotu a viaczdrojového ETCS datasetu je opísané
+> v `README.md`.
+
 ## Prehľad
 Tento dokument definuje návrh na spresnenie a doplnenie datasetov železničnej infraštruktúry SR.
 Návrh sa zameriava na CSV a RDF distribúciu. 

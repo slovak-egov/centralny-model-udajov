@@ -12,8 +12,8 @@ European Union Agency for Railways.
 
 - `catalog.ttl` – DCAT katalóg 11 tematických datasetov;
 - `queries/*.rq` – presný `CONSTRUCT` dotaz definujúci každý dataset;
-- `data/*.nt.gz` – uložený výsledok príslušného dotazu v komprimovanom
-  N-Triples;
+- `data/*.ttl.gz` – uložený výsledok príslušného dotazu v komprimovanom
+  Turtle;
 - `data/manifest.json` – počty entít a statementov, veľkosti a SHA-256;
 - `validation-report.ttl` – výsledok lokálnej DCAT-AP-SK SHACL validácie.
 
@@ -25,7 +25,7 @@ Uložené súbory umožňujú dataset použiť aj bez opakovaného dotazovania E
 
 Lokálne URI katalógu, datasetov, distribúcií a služieb používajú doménu
 `https://slovpedia.eu/`. Obsahové identifikátory entít sa neprepisujú:
-v `.nt.gz` zostávajú pôvodné URI ERA pod `http://data.europa.eu/949/`.
+v `.ttl.gz` zostávajú pôvodné URI ERA pod `http://data.europa.eu/949/`.
 
 URI `data.gov.sk` sa používajú iba ako odkazy na externé oficiálne slovenské
 slovníky DCAT-AP-SK a na registrovaný právny subjekt vydavateľa, nie ako
@@ -37,15 +37,15 @@ Z koreňa repozitára:
 
 ```bash
 scripts/era-knowledge-graph/generate-dcat.py \
-  --output abox/slovpedia/era/knowledge-graph/2026-08-27
+  --output abox/slovpedia/era-sk/era-sk-knowledge-graph/2026-08-27
 
 scripts/era-knowledge-graph/materialize-datasets.py \
   --source raw/era-knowledge-graph/2026-08-27/era-rinf-sk-graph-0056.nq.gz \
-  --output abox/slovpedia/era/knowledge-graph/2026-08-27
+  --output abox/slovpedia/era-sk/era-sk-knowledge-graph/2026-08-27
 
 # Druhé generovanie doplní do DCAT metadata veľkosti hotových súborov.
 scripts/era-knowledge-graph/generate-dcat.py \
-  --output abox/slovpedia/era/knowledge-graph/2026-08-27
+  --output abox/slovpedia/era-sk/era-sk-knowledge-graph/2026-08-27
 ```
 
 Materializácia vykoná každý uložený query nad nemenným lokálnym N-Quads
@@ -56,7 +56,7 @@ snapshotom, výsledok syntakticky overí a vytvorí deterministický gzip.
 Slovpedia môže zverejniť `catalog.ttl` na stabilnej HTTPS adrese a registrovať
 ho ako lokálny katalóg typu DCAT-AP dokument. Portál potom prevezme metadata
 11 datasetov; fyzické `downloadURL` musia smerovať na verejne dostupné
-`.nt.gz` súbory pod `slovpedia.eu`.
+`.ttl.gz` súbory pod `slovpedia.eu`.
 
 Samotný ERA endpoint nie je lokálnym katalógom, pretože neobsahuje tento
 Slovpedia `dcat:Catalog`. Je však správne ponechaný ako dátová služba a zdroj
