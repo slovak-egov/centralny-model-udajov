@@ -84,9 +84,9 @@ egov:handlesPublicService a owl:ObjectProperty, rdf:Property;
 egov:isFundedBy a owl:ObjectProperty, rdf:Property;
   rdfs:domain egov:Project;
   rdfs:range egov:OperationalProgram;
-  rdfs:description "Relácia EGOV projektu na operačný program."@sk, "Relácia operačného programu na EGOV projekt."@sk;
+  rdfs:description "Relácia EGOV projektu na operačný program."@sk;
   rdfs:isDefinedBy egov:2026a;
-  rdfs:label "financuje"@sk, "je financované prostredníctvom"@sk, "Is funded by"@en .
+  rdfs:label "je financované prostredníctvom"@sk, "Is funded by"@en .
 
 egov:makesApplicationServiceAvaliable a owl:ObjectProperty, rdf:Property;
   rdfs:domain egov:Endpoint;
