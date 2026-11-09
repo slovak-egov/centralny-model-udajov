@@ -776,60 +776,6 @@ sha-rfo:PhysicalPersonShape-recordIdentifier
     sh:datatype xsd:string ;
     sh:maxCount 1 .
 
-
-# ThingWithValidity from eGov
-
-sha-egov:ThingWithValidityShape
-    a sh:NodeShape ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:targetClass egov:ThingWithValidity ;
-    sh:property sha-egov:ThingWithValidity-timeValidity .
-
-sha-egov:ThingWithValidity-timeValidity
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:path egov:timeValidity ;
-    sh:class dct:PeriodOfTime ;
-    sh:node sha-egov:TimeValidityShape ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 .
-
-sha-egov:TimeValidityShape
-    a sh:NodeShape ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:property sha-egov:TimeValidity-startDate ,
-                sha-egov:TimeValidity-endDate .
-
-sha-egov:TimeValidity-startDate
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:path dcat:startDate ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 .
-
-sha-egov:TimeValidity-endDate
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:path dcat:endDate ;
-    sh:datatype xsd:date ;
-    sh:maxCount 1 .
-
-sha-loca:ThingWithPhysicalAddressShape
-    a sh:NodeShape ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:targetClass loca:ThingWithPhysicalAddress ;
-    sh:property sha-loca:ThingWithPhysicalAddress-physicalAddress .
-
-sha-loca:ThingWithPhysicalAddress-physicalAddress
-    a sh:PropertyShape ;
-    dct:subject <https://data.gov.sk/id/egov/isvs/191> ;
-    rdfs:isDefinedBy sha-egov: ;
-    sh:path loca:physicalAddress ;
-    sh:class loca:PhysicalAddress ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:maxCount 1 .
-
 sha-generic:RdfListOfStrigsShape
     a sh:NodeShape ;
     sh:order 1;

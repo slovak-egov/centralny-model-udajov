@@ -10,6 +10,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 # timeValidity
 
@@ -42,6 +43,60 @@ sha-egov:PeriodOfTime-startDate
 sha-egov:PeriodOfTime-endDate
 	a sh:PropertyShape ;
 	sh:path dcat:endDate ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-egov:2026a ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+# proceedings
+
+sha-egov:ProceedingsPropertyShape
+	a sh:PropertyShape ;
+	sh:targetSubjectsOf egov:proceedings ;
+	sh:path egov:proceedings ;
+	sh:class egov:Proceedings ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-egov:2026a ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+# usesScheme
+
+sha-egov:UsesSchemePropertyShape
+	a sh:PropertyShape ;
+	sh:targetSubjectsOf egov:usesScheme ;
+	sh:path egov:usesScheme ;
+	sh:class skos:ConceptScheme ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 0 ;
+	sh:maxCount 1 ;
+ 	rdfs:isDefinedBy sha-egov:2026a ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+# IdentifierType
+
+sha-egov:IdentifierTypeShape
+	a sh:NodeShape ;
+	sh:targetClass egov:IdentifierType ;
+	sh:property sha-egov:IdentifierType-prefLabel,
+		sha-egov:IdentifierType-inScheme ;
+ 	rdfs:isDefinedBy sha-egov:2026a ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+sha-egov:IdentifierType-prefLabel
+	a sh:PropertyShape ;
+	sh:path skos:prefLabel ;
+	sh:datatype rdf:langString ;
+	sh:minCount 0 ;
+ 	rdfs:isDefinedBy sha-egov:2026a ;
+    dct:subject <https://data.gov.sk/id/egov/isvs/63> .
+
+sha-egov:IdentifierType-inScheme
+	a sh:PropertyShape ;
+	sh:path skos:inScheme ;
+	sh:class skos:ConceptScheme ;
+	sh:nodeKind sh:IRI ;
 	sh:minCount 0 ;
 	sh:maxCount 1 ;
  	rdfs:isDefinedBy sha-egov:2026a ;

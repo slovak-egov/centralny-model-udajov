@@ -29,6 +29,12 @@ egov:Proceedings a owl:Class;
   rdfs:isDefinedBy egov:2026a;
   rdfs:description "Jeho súčasťou je množina Elektronických podaní, Elektronických úradných dokumentov a množina dotknutých fyzických a právnickch osob, tj. účastníkov konania."@sk .
 
+egov:proceedings a owl:ObjectProperty, rdf:Property;
+  rdfs:range egov:Proceedings;
+  rdfs:description "Relácia na Elektronické úradné konanie."@sk;
+  rdfs:label "elektronické úradné konanie"@sk, "electronic government proceedings"@en;
+  rdfs:isDefinedBy egov:2026a .
+
 egov:agregatesAgenda a owl:ObjectProperty, rdf:Property;
   rdfs:domain egov:PublicAdministrationSection;
   rdfs:range egov:Agenda;
@@ -668,8 +674,8 @@ egov:sourceRegister a owl:ObjectProperty, rdf:Property;
   rdfs:isDefinedBy egov:2026a;
   rdfs:range egov:SourceRegister .
 
-egov:manageISVS a owl:ObjectProperty, rdf:Property;
-  rdfs:label "spravuje ISVS"@sk, "manage ISVS"@en;
+egov:managesISVS a owl:ObjectProperty, rdf:Property;
+  rdfs:label "spravuje ISVS"@sk, "manages ISVS"@en;
   rdfs:isDefinedBy egov:2026a;
   rdfs:range egov:ISVS .
 
@@ -690,3 +696,14 @@ egov:handlesLifeSituation a owl:ObjectProperty, rdf:Property;
   rdfs:isDefinedBy egov:2026a;
   rdfs:label "rieši životnú situáciu"@sk, "handles life situation"@en;
   rdfs:range egov:LifeSituation .
+
+egov:IdentifierType a owl:Class;
+  rdfs:label "Typ identifikátora"@sk, "Identifier type"@en;
+  rdfs:description "Používa sa pre inštancie číselníkových hodnôt základného číselníka typov identifikátorov CL004001."@sk;
+  dct:source <https://data.gov.sk/set/codelist/CL004001>;
+  rdfs:isDefinedBy egov:2026a .
+
+egov:usesScheme a owl:ObjectProperty, rdf:Property;
+  rdfs:label "používa schému"@sk, "uses scheme"@en;
+  rdfs:description "Relácia na vyjadrenie vzťahu 'používa číselník'."@sk;
+  rdfs:isDefinedBy egov:2026a .

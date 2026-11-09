@@ -822,15 +822,15 @@
 
    <!-- SHAPES-RPO -->
 
- <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/rpo/2025c">
+ <dcat:Dataset rdf:about="https://data.gov.sk/def/shapes/rpo/2025b">
     <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/DOMAIN_MODEL"/>
     <dct:title xml:lang="sk">Povinné vlastnosti údajov RPO</dct:title>
     <dct:title xml:lang="en">Mandatory Data Shapes of RPO</dct:title>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
     <prov:wasDerivedFrom rdf:resource="https://data.gov.sk/id/egov/isvs/191"/>
-    <dcat:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025c</dcat:version>
+    <dcat:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025b</dcat:version>
     <dct:publisher rdf:resource="https://data.gov.sk/id/legal-subject/50349287"/>
-    <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/rpo/2025c.ttl"/>
+    <dcat:distribution rdf:resource="https://data.gov.sk/def/shapes/rpo/2025b.ttl"/>
   </dcat:Dataset>
 
    <!-- SHAPES-RA -->
