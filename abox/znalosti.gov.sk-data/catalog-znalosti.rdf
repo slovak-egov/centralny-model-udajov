@@ -82,7 +82,7 @@
     <dcat:dataset rdf:resource="https://data.gov.sk/set/data/usorg-images/2021-MM-DD"/>
 
     <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/rfo/2025b"/>
-    <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/rpo/2025c"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/rpo/2025b"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/ra/2026a"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/finance/2025c"/>
     <dcat:dataset rdf:resource="https://data.gov.sk/def/shapes/egov/2026a"/>
