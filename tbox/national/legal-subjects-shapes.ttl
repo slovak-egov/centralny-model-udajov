@@ -195,8 +195,7 @@ sha-rpo:LegalSubjectShape-economicActivity
 	rdfs:isDefinedBy sha-rpo:2025b ;   
     sh:path lsub:economicActivity ;
     sh:class lsub:EconomicActivity ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 .
+    sh:nodeKind sh:IRI .
 
 sha-rpo:EconomicActivityShape
     a sh:NodeShape ;
@@ -512,7 +511,7 @@ sha-rpo:LegalSubjectShape-businessAddress
 	sh:path lsub:businessAddress ;
 	sh:class loca:PhysicalAddress ;
 	sh:nodeKind sh:IRI ;
-	sh:minCount 1 ;
+	sh:minCount 0 ;
 	sh:maxCount 1 .
 
 # establishmentAddress
@@ -523,9 +522,7 @@ sha-rpo:LegalSubjectShape-establishmentAddress
 	rdfs:isDefinedBy sha-rpo:2025b ;   
 	sh:path lsub:establishmentAddress ;
 	sh:class loca:PhysicalAddress ;
-	sh:nodeKind sh:IRI ;
-	sh:minCount 0 ;
-	sh:maxCount 1 .
+	sh:nodeKind sh:IRI .
 
 # legalID
 

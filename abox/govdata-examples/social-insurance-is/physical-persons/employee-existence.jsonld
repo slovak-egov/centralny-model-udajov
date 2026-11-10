@@ -118,7 +118,7 @@
           },
           "loca:postcode": {
             "@id": "postcode:04001",
-            "@type": "loca:PostCode",
+            "@type": "loca:Postcode",
             "adms:identifier": {
               "@type": "adms:Identifier",
               "skos:notation": {
@@ -247,7 +247,7 @@
               },
               "loca:postcode": {
                 "@id": "postcode:82101",
-                "@type": "loca:PostCode",
+                "@type": "loca:Postcode",
                 "adms:identifier": {
                   "@type": "adms:Identifier",
                   "skos:notation": {

@@ -77,7 +77,7 @@
               "@id": "codelist:CL004001"
             }
           },
-          "egov:issuerCountry": {
+          "egov:issuingCountry": {
             "@id": "uncountry:703",
             "@type": "loca:UNCountry",
             "skos:prefLabel": [

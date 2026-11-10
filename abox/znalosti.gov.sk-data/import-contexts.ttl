@@ -1,0 +1,147 @@
+# import-contexts.ttl
+#
+# Tento súbor je DCAT katalóg typu DIRECTORY, ktorý mapuje zdrojové RDF súbory
+# repozitára CMÚ na ich cieľové pomenované grafy (named graph context) v RDF4J.
+#
+# POZOR: Tento súbor je importným skriptom zámerene PRESKOČENÝ — jeho obsah sa
+# nenačíta ako trojice do triple store. Slúži výhradne ako konfigurácia importu.
+# (Viď RepositoryPool.java – konštanta CONTEXT_CONFIG_FILE)
+#
+# Každý dcat:Dataset URI = cieľový named graf.
+# dcat:downloadURL = cesta súboru relatívna voči koreňu repozitára.
+# Súbory, ktoré tu NIE SÚ uvedené, sa preskočia (WARN do logu).
+#
+# Preferencia formátu pre duplikáty: .ttl > .rdf/.rdf.xml > .jsonld
+
+@base <https://data.gov.sk/cmu/> .
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<https://data.gov.sk/set/catalog/cmu-import-contexts>
+    a dcat:Catalog ;
+    dct:title "CMÚ – kontexty importu"@sk , "CMÚ – import contexts"@en ;
+    dct:type <http://publications.europa.eu/resource/authority/dataset-type/DIRECTORY> .
+
+# =============================================================================
+# https://data.gov.sk/set/catalog/nkod
+# =============================================================================
+<https://data.gov.sk/set/catalog/nkod>
+    a dcat:Dataset ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/catalog-nkod.rdf> ] .
+
+# =============================================================================
+# https://data.gov.sk/set/catalog/knowledgegraph
+# Zdieľaný znalostný graf: ontológie, shapes, číselníky, katalóg, labely
+# =============================================================================
+<https://data.gov.sk/set/catalog/knowledgegraph>
+    a dcat:Dataset ;
+    dcat:distribution
+        # --- abox/znalosti.gov.sk-data ---
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/catalog-znalosti.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/entities-labels-sk.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/international-organizations.ttl> ] ,
+
+        
+
+        # --- tbox/national: shapes ---
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/egov-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/evidence-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/finance-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/legal-subjects-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/location-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/physical-person-shapes.ttl> ] ,
+
+        # --- tbox/national/dcat-ap-sk: len shapes (nie príklady/kontexty) ---
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/dcat-ap-sk/povinné-vlastnosti/dcat-ap-sk-2.0.1-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/dcat-ap-sk/povinné-vlastnosti/dcat-ap-sk-3.0.0-shapes.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/dcat-ap-sk/povinné-vlastnosti/dcat-ap-sk-3.0.0-hvd-shapes.ttl> ] ,
+
+        # --- tbox/international: štandardné slovníky ---
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/22-rdf-syntax-ns.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/adms.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/cccev.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/dcat.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/dublin_core_terms.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/owl.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/prov-o.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/shacl.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/international/skos.rdf> ] ,
+
+        # --- cbox/international: medzinárodné číselníky ---
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/continents-skos.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/countries-skos.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/data-theme-skos.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/dataset-types-skos.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/filetypes-skos.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/frequencies-skos.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/international/licences-skos.rdf> ] ,
+
+        # --- cbox/national: národné číselníky ---
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/nuts2004.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/taxonomia-dokazov.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/taxonomia-financnych-davok.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/taxonomia-typy-zdrojov-financovania.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/tezaurus-it-zakonov.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL000062.jsonld> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL000063.jsonld> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL003003.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL004001.jsonld> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL004002.jsonld> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL004003.jsonld> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <cbox/national/CL004004.jsonld> ] .
+
+# =============================================================================
+# https://data.gov.sk/id/egov/isvs/192  —  Register adries (fyzické adresy USORG)
+# =============================================================================
+<https://data.gov.sk/id/egov/isvs/192>
+    a dcat:Dataset ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/addresses-uoss-2021-MM-DD.ttl> ] .
+
+# =============================================================================
+# https://data.gov.sk/id/egov/isvs/221  —  Obrázky (vlajky/erby LAU2 + logá USORG)
+# =============================================================================
+<https://data.gov.sk/id/egov/isvs/221>
+    a dcat:Dataset ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/nuts2004-images.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/USORG2021-images.rdf> ] .
+
+# =============================================================================
+# https://data.gov.sk/id/egov/isvs/420  —  RPO: centrálne orgány verejnej moci
+# =============================================================================
+<https://data.gov.sk/id/egov/isvs/420>
+    a dcat:Dataset ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/rpo-uoss.rdf> ] .
+
+# =============================================================================
+# https://data.gov.sk/id/egov/isvs/441  —  USORG: orgány štátnej správy
+# =============================================================================
+<https://data.gov.sk/id/egov/isvs/441>
+    a dcat:Dataset ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/USORG2021.rdf> ] .
+
+# =============================================================================
+# https://data.gov.sk/id/egov/isvs/63  —  METAIS: metainformačný systém VS
+# =============================================================================
+<https://data.gov.sk/id/egov/isvs/63>
+    a dcat:Dataset ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/metais-isvs-2021-MM-DD.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/metais-agenda-2021-MM-DD.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/metais-publicservice-2021-MM-DD.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <abox/znalosti.gov.sk-data/metais-reference-data-rpo-2021-MM-DD.rdf> ] ,
+
+        # --- tbox/national: ontológie (prefer .ttl > .rdf pre duplikáty) ---
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/education-ontology.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/egov-ontology.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/finance-ontology.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/healthcare-ontology.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/legal-subject-ontology.ttl> ] ,
+        # [ a dcat:Distribution ; dcat:downloadURL <tbox/national/legislation-ontology.rdf> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/location-ontology.ttl> ] ,
+        [ a dcat:Distribution ; dcat:downloadURL <tbox/national/physical-person-ontology.ttl> ] ,

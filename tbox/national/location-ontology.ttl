@@ -1,30 +1,30 @@
-@prefix : <https://data.gov.sk/def/ontology/location/2025b#> .
+@prefix : <https://data.gov.sk/def/ontology/location/2026a#> .
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix loca: <https://data.gov.sk/def/ontology/location/> .
-@prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
-@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
-@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix egov: <https://data.gov.sk/def/ontology/egov/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix kdp: <https://data.gov.sk/def/ontology/kdp/> .
+@prefix pper: <https://data.gov.sk/def/ontology/physical-person/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-loca:2025b a owl:Ontology;
+loca:2026a a owl:Ontology;
   dct:title "Ontológia lokácie";
   dct:creator <http://www.linkedin.com/in/emillazenga>;
   dct:contributor <http://www.linkedin.com/in/miroslavliska>, <http://www.linkedin.com/in/mareksurek>;
-  owl:versionInfo "2025b";
+  owl:versionInfo "2026a";
   dct:publisher <https://data.gov.sk/id/legal-subject/50349287> .
 
 loca:addressType a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "typ adresy"@sk, "address type"@en, "Adresstyp"@de;
   rdfs:domain loca:PhysicalAddress;
   rdfs:range loca:AddressType;
@@ -33,7 +33,7 @@ loca:addressType a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "AddressType" .
 
 loca:building a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "budova"@sk, "building"@en, "Gebäude"@de;
   rdfs:range loca:Building;
   rdfs:description "Relácia na budovu."@sk;
@@ -42,7 +42,7 @@ loca:building a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "Building" .
 
 loca:buildingType a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "typ budovy"@sk, "building type"@en, "Gebäudetyp"@de;
   rdfs:domain loca:Building;
   rdfs:range loca:BuildingType;
@@ -51,7 +51,7 @@ loca:buildingType a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "BuildingTypeCode" .
 
 loca:buildingPurpose a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "účel budovy"@sk, "building purpose"@en;
   rdfs:domain loca:Building;
   rdfs:range loca:BuildingPurpose;
@@ -60,7 +60,7 @@ loca:buildingPurpose a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "BuildingPurpose" .
 
 loca:unCountry a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "krajina OSN"@sk, "UN country"@en, "UN-Land"@de;
   rdfs:domain loca:PhysicalAddress;
   rdfs:range loca:UNCountry;
@@ -70,8 +70,8 @@ loca:unCountry a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "Country" .
 
 loca:nuts3 a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:label "regional statistical local unit 3>"@en, "regionálna štatistická územná jednotka 3"@sk,
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "regional statistical local unit 3"@en, "regionálna štatistická územná jednotka 3"@sk,
     "regionale statistische Gebietseinheit 3"@de;
   skos:altLabel "kraj"@sk;
   rdfs:range loca:NUTS3;
@@ -82,7 +82,7 @@ loca:nuts3 a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "Region" .
 
 loca:lau1 a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "lokálna štatistická územná jednotka 1"@sk, "local statistical territorial unit 1"@en,
     "lokale statistische Gebietseinheit 1"@de;
   skos:altLabel "okres"@sk;
@@ -94,7 +94,7 @@ loca:lau1 a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "County" .
 
 loca:lau2 a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "lokálna štatistická územná jednotka 2"@sk, "local statistical territorial unit 2"@en,
     "lokale statistische Gebietseinheit 2"@de;
   skos:altLabel "obec"@sk;
@@ -105,7 +105,7 @@ loca:lau2 a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "Municipality" .
 
 loca:district a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "district"@en, "časť obce"@sk, "Teil der Gemeinde"@de;
   rdfs:range loca:District;
   rdfs:description "Relácia na časť obce definovanú hodnotami číselníka CL010141 Časť obce."@sk;
@@ -114,7 +114,7 @@ loca:district a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "District" .
 
 loca:physicalAddress a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "physical address"@en, "fyzická adresa"@sk, "physikalische Adresse"@de;
   rdfs:range loca:PhysicalAddress;
   rdfs:description "Relácia na fyzickú adresu v Registri adries."@sk;
@@ -122,10 +122,10 @@ loca:physicalAddress a owl:ObjectProperty, rdf:Property;
   rdfs:domain loca:ThingWithPhysicalAddress;
   kdp:xmlElementName "PhysicalAddress" .
 
-loca:postAddress a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+loca:postalAddress a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subPropertyOf loca:physicalAddress;
-  rdfs:label "delivery address"@en, "poštová adresa"@sk, "Lieferadresse"@de;
+  rdfs:label "postal address"@en, "poštová adresa"@sk, "Lieferadresse"@de;
   skos:altLabel "doručovacia adresa"@sk;
   rdfs:description "Relácia na poštovú adresu v Registry adries."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14>;
@@ -133,7 +133,7 @@ loca:postAddress a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "DeliveryAddress" .
 
 loca:postRecipient a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:range loca:PostRecipient;
   rdfs:label "post recipient"@en, "príjemca pošty"@sk, "Mail-Empfänger"@de;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.3>;
@@ -141,33 +141,33 @@ loca:postRecipient a owl:ObjectProperty, rdf:Property;
   kdp:xmlElementName "Recipient" .
 
 loca:postOfficeBox a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:range loca:PostOfficeBox;
   rdfs:label "p.o.box"@en, "p.o.box"@sk, "p.o.box"@de;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.2>;
   rdfs:description "Relácia na POBOX."@sk;
   kdp:xmlElementName "PostOfficeBox" .
 
-loca:postCode a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+loca:postcode a owl:ObjectProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2026a;
   skos:note "Reťazec sa vždy uvádza spolu, čo znamená, že sa neoddeľuje medzerou. Zahraničné poštové smerovacie čísla majú často krát nečíselný charakter."@sk;
-  rdfs:label "postal code"@en, "poštové smerovacie číslo"@sk, "postleitzahl"@de;
+  rdfs:label "postcode"@en, "poštové smerovacie číslo"@sk, "Postleitzahl"@de;
   skos:altLabel "PSČ"@sk;
-  rdfs:range loca:PostCode;
+  rdfs:range loca:Postcode;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.14.1>;
   rdfs:description "Relácia na PSČ."@sk;
   rdfs:domain loca:PhysicalAddress;
   kdp:xmlElementName "PostalCode" .
 
 loca:street a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "street"@en, "ulica"@sk, "Straße"@de;
   rdfs:domain loca:PhysicalAddress;
   rdfs:description "Relácia na ulicu."@sk;
   rdfs:range loca:Street .
 
 loca:hasApartment a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "has apartment"@en, "má byt"@sk;
   rdfs:domain loca:Building;
   rdfs:range xsd:boolean;
@@ -176,7 +176,7 @@ loca:hasApartment a owl:DatatypeProperty, rdf:Property;
   kdp:xmlElementName "ContainsFlats" .
 
 loca:orientationNumber a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   skos:note "Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Orientačné číslo môže byť určené len budovám s už určeným súpisným číslom v obciach, ktoré majú zavedený uličný systém."@sk;
   rdfs:description "Obsahuje orientačné číslo vchodu domu."@sk;
   rdfs:label "orientačné číslo"@sk, "orientation number"@en, "Orientierungsnummer"@de;
@@ -187,7 +187,7 @@ loca:orientationNumber a owl:DatatypeProperty, rdf:Property;
   kdp:xmlElementName "BuildingNumber" .
 
 loca:buildingPart a rdf:Property, owl:ObjectProperty;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "časť budovy"@sk, "building part"@en;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.10>;
   rdfs:description "Relácia na časť budovy. Tento prvok je určený na bližšie určenie miesta v rámci budovy, ak je to potrebné."@sk;
@@ -195,7 +195,7 @@ loca:buildingPart a rdf:Property, owl:ObjectProperty;
   kdp:xmlElementName "BuildingUnit" .
 
 loca:formattedAddress a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "formatted address"@en, "formátovaná adresa"@sk, "formatiert Adresse"@de;
   rdfs:domain loca:PhysicalAddress;
   rdfs:range xsd:string;
@@ -205,9 +205,9 @@ loca:formattedAddress a owl:DatatypeProperty, rdf:Property;
   kdp:xmlElementName "AddressLine" .
 
 loca:propertyRegistrationNumber a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   skos:note "Súpisné číslo má určené každá budova, orientačné číslo môže byť určené len budovám s už určeným súpisným číslom v obciach, ktoré majú zavedený uličný systém. Adresa vzniká určením súpisného čísla a zaniká jeho zrušením. Orientačné číslo a súpisné číslo nie sú totožné údaje, budova môže mať obe naraz."@sk;
-  rdfs:label "súpisné číslo"@sk, "property identifier number"@en, "Registernummer "@de;
+  rdfs:label "súpisné číslo"@sk, "property registration number"@en, "Registernummer "@de;
   rdfs:range xsd:string;
   rdfs:description "Obsahuje súpisné číslo budovy."@sk;
   adms:identifier <https://data.gov.sk/id/identifier/kdp-id/D.1.3.9>;
@@ -215,23 +215,23 @@ loca:propertyRegistrationNumber a owl:DatatypeProperty, rdf:Property;
   kdp:xmlElementName "PropertyRegistrationNumber" .
 
 loca:Location a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Location"@en, "Lokácia"@sk, "Location"@de;
   rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithSpatial .
 
 loca:Apartment a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Apartment"@en, "Byt"@sk, "Wohnung"@de;
   rdfs:subClassOf loca:BuildingPart .
 
 loca:UNCountry a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:label "UN Country"@en, "Krajina OSN"@sk, "UN-Land"@de;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "UN country"@en, "Krajina OSN"@sk, "UN-Land"@de;
   rdfs:subClassOf loca:Location;
   dct:source <https://data.gov.sk/def/codelist/CL000086> .
 
 loca:NUTS3 a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Regional statistical local unit 3"@en, "Regionálna štatistická územná jednotka 3"@sk,
     "Regionale statistische Gebietseinheit 3"@de;
   skos:altLabel "Kraj"@sk;
@@ -239,7 +239,7 @@ loca:NUTS3 a owl:Class;
   dct:source <https://data.gov.sk/def/codelist/CL000023> .
 
 loca:LAU1 a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Lokálna štatistická územná jednotka 1"@sk, "Local statistical territorial unit 1"@en,
     "Lokale statistische Gebietseinheit 1"@de;
   skos:altLabel "Okres"@sk;
@@ -247,7 +247,7 @@ loca:LAU1 a owl:Class;
   dct:source <https://data.gov.sk/def/codelist/CL000024> .
 
 loca:LAU2 a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Lokálna štatistická územná jednotka 2"@sk, "Local statistical territorial unit 2"@en,
     "Lokale statistische Gebietseinheit 2"@de;
   skos:altLabel "Obec"@sk;
@@ -255,46 +255,46 @@ loca:LAU2 a owl:Class;
   dct:source <https://data.gov.sk/def/codelist/CL000025> .
 
 loca:District a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "District"@en, "Časť obce"@sk, "Teil der Gemeinde"@de;
   rdfs:subClassOf loca:Location;
   dct:source <https://data.gov.sk/def/codelist/CL010141> .
 
 loca:Street a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Street"@en, "Ulica"@sk, "Straße"@de;
   rdfs:subClassOf loca:Location .
 
 loca:PhysicalAddress a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:label "Physical Address"@en, "Fyzická adresa"@sk, "physikalische Adresse"@de;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "Physical address"@en, "Fyzická adresa"@sk, "physikalische Adresse"@de;
   rdfs:subClassOf loca:Location .
 
 loca:Building a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
   rdfs:label "Building"@en, "Budova"@sk, "Gebäude"@de .
 
 loca:AddressType a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Address Type"@en, "Typ adresy"@sk, "Adresstyp"@de;
+  rdfs:label "Address type"@en, "Typ adresy"@sk, "Adresstyp"@de;
   dct:source <https://data.gov.sk/def/codelist/CL010139> .
 
 loca:BuildingType a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Building Type"@en, "Typ budovy"@sk, "Gebäudetyp"@de;
+  rdfs:label "Building type"@en, "Typ budovy"@sk, "Gebäudetyp"@de;
   dct:source <https://data.gov.sk/def/codelist/CL010143> .
 
 loca:BuildingPurpose a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Building Purpose"@en, "Účel budovy"@sk, "Gebäude Zweck"@de;
+  rdfs:label "Building purpose"@en, "Účel budovy"@sk, "Gebäude Zweck"@de;
   dct:source <https://data.gov.sk/def/codelist/CL010142> .
 
 loca:postOfficeBoxNumber a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   skos:note "Vždy sa uvádza aj text: P.O.BOX"@sk;
   rdfs:description "Obsahuje číslo p.o.box-u."@sk;
   rdfs:label "p.o.box number"@en, "číslo p.o.box-u"@sk, "p.o.box nummer"@de;
@@ -303,66 +303,66 @@ loca:postOfficeBoxNumber a owl:DatatypeProperty, rdf:Property;
   rdfs:domain loca:PhysicalAddress .
 
 loca:Entrance a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "Entrance"@en, "Vchod"@sk, "Eingang"@de;
   rdfs:subClassOf loca:BuildingPart .
 
 loca:PostOfficeBox a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
-  rdfs:label "Post Office Box"@en, "Poštový priečinok"@sk, "Post Office Box"@de .
+  rdfs:label "Post office box"@en, "Poštový priečinok"@sk, "Post Office Box"@de .
 
-loca:PostCode a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+loca:Postcode a owl:Class;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf egov:ThingWithValidity;
-  rdfs:label "Postal Code"@en, "Poštové smerovacie číslo"@sk, "Postleitzahl"@de;
+  rdfs:label "Postcode"@en, "Poštové smerovacie číslo"@sk, "Postleitzahl"@de;
   skos:altLabel "PSČ"@sk .
 
 loca:identifier a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:range owl:Literal;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:range xsd:string;
   rdfs:description "Medzisystémový identifikátor fyzickej adresy."@sk;
   rdfs:subPropertyOf dct:identifier;
   rdfs:label "identifier"@en, "identifikátor"@sk;
   rdfs:domain loca:PhysicalAddress .
 
 loca:ThingWithSpatial a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:label "Schopnosť priestorovej lokalizácie"@sk, "Spatial Localization Capability"@en;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "Schopnosť priestorovej lokalizácie"@sk, "Spatial localization capability"@en;
   rdfs:subClassOf egov:ThingWithCapability .
 
 loca:apartmentNumber a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "číslo bytu"@sk, "apartment number"@en, "Wohnungsnummer"@de;
   rdfs:domain loca:PhysicalAddress;
   rdfs:range xsd:string;
   rdfs:description "Obsahuje číslo bytu. Môže obsahovať aj nečíselné znaky, preto je definovaný ako reťazec. Príklady použitia: 10, 5a."@sk .
 
 loca:apartment a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "byt"@sk, "apartment"@en, "Wohnung"@de;
   rdfs:range loca:Apartment;
   rdfs:description "Relácia na byt."@sk .
 
 loca:entrance a owl:ObjectProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "vchod"@sk, "entrance"@en, "Eingang"@de;
   rdfs:range loca:Entrance;
   rdfs:description "Relácia na vchod."@sk;
   rdfs:domain loca:Apartment .
 
 loca:PostRecipient a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:subClassOf loca:ThingWithPhysicalAddress, egov:ThingWithValidity;
-  rdfs:label "Post Recipient"@en, "Príjemca pošty"@sk, "Mail-Empfänger"@de .
+  rdfs:label "Post recipient"@en, "Príjemca pošty"@sk, "Mail-Empfänger"@de .
 
 loca:ThingWithPhysicalAddress a owl:Class;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:label "Physical Addressing Capability"@en, "Schopnosť fyzickej adresácie"@sk;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "Physical addressing capability"@en, "Schopnosť fyzickej adresácie"@sk;
   rdfs:subClassOf egov:ThingWithCapability .
 
 loca:buildingPartName a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   skos:example "Blok D, dielňa, 4. poschodie vpravo, byt"@sk;
   skos:note "Používa sa najmä pre uvedenie čísla bytu, ak je časťou budovy práve byt. Je vhodné, že sa osobitné označenie neuvádza zároveň v obsahu prvku Časť budovy a v tomto atribúte, ale je možné aj také použitie."@sk;
   rdfs:label "building part name"@en, "názov časti budovy"@sk;
@@ -378,9 +378,9 @@ loca:buildingName a owl:DatatypeProperty, rdf:Property;
   rdfs:description "Obsahuje názov budovy, ak má budova osobitný názov."@sk;
   kdp:xmlElementName "BuildingName";
   rdfs:range xsd:string;
-  rdfs:label "Name des Gebäudes"@de, "building Name"@en, "názov budovy"@sk;
+  rdfs:label "Name des Gebäudes"@de, "building name"@en, "názov budovy"@sk;
   rdfs:domain loca:Building;
-  rdfs:isDefinedBy loca:2025b .
+  rdfs:isDefinedBy loca:2026a .
 
 <https://data.gov.sk/id/identifier/metais-standard/712> a adms:Identifier;
   dct:creator <https://data.gov.sk/id/legal-subject/00151742>;
@@ -574,14 +574,14 @@ loca:geoLocation a owl:ObjectProperty, rdf:Property;
   dct:type <https://data.gov.sk/def/identifier-type/kdp-code> .
 
 loca:BuildingPart a owl:Class;
-  rdfs:label "Teil des Gebäudes"@de, "Building Part"@en, "Časť budovy"@sk;
+  rdfs:label "Teil des Gebäudes"@de, "Building part"@en, "Časť budovy"@sk;
   rdfs:subClassOf egov:ThingWithValidity, loca:ThingWithPhysicalAddress;
-  rdfs:isDefinedBy loca:2025b .
+  rdfs:isDefinedBy loca:2026a .
 
 loca:streetName a owl:DatatypeProperty, rdf:Property;
   rdfs:domain loca:Street;
-  rdfs:isDefinedBy loca:2025b;
-  rdfs:label "názov ulice"@sk, "street Name"@en, "Straßenname"@de;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "názov ulice"@sk, "street name"@en, "Straßenname"@de;
   rdfs:range xsd:string;
   skos:example "5223 W High Road"@en, "Lachova, Námestie P. O. Hviezdoslava, Nad humnom"@sk;
   rdfs:description "Obsahuje názov ulice. Ak obec nemá názov ulice, udáva sa tu názov obce. Ak má obec definovaný vlastný register, zoznam alebo základný číselník ulíc, vypĺňa sa v súlade s ním, ak nemá, štruktúra zápisu ulice sa nepredpisuje. Ak obec nemá ulice, nevypĺňa sa."@sk;
@@ -715,8 +715,15 @@ geo:asWKT a owl:DatatypeProperty;
   rdfs:range geo:wktLiteral .
 
 loca:floorNumber a owl:DatatypeProperty, rdf:Property;
-  rdfs:isDefinedBy loca:2025b;
+  rdfs:isDefinedBy loca:2026a;
   rdfs:label "číslo podlažia"@sk, "floor number"@en, "Stockwerknummer"@de;
   rdfs:range xsd:int;
   rdfs:description "Obsahuje informáciu o umiestnení časti budovy na príslušnom podlaží budovy. Podlažie sa označuje od prvého nadzemného podlažia (prízemia) číselným radom od čísla 1 a od prvého podzemného podlažia s číselným radom od čísla -1. Číslo 0 sa nepoužíva."@sk;
+  rdfs:domain loca:PhysicalAddress .
+
+loca:postcodeNumber a owl:DatatypeProperty, rdf:Property;
+  rdfs:isDefinedBy loca:2026a;
+  rdfs:label "postcode number"@en, "psč kód"@sk, "Postleitzahl"@de;
+  rdfs:range xsd:string;
+  skos:example "85102"@sk;
   rdfs:domain loca:PhysicalAddress .

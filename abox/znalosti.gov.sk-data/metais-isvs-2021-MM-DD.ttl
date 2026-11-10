@@ -20,7 +20,7 @@
 
 <https://data.gov.sk/id/egov/isvs/220> a egov:ISVS ;
                     dct:title "Register občianskych združení"@sk ;
-                    foaf:homepage "https://ives.minv.sk/rmno/" .                    
+                    foaf:homepage "https://ives.minv.sk/rmno/" ;
                     rdfs:isDefinedBy <https://data.gov.sk/set/data/isvs/2021-MM-DD> .
                     
 <https://data.gov.sk/id/egov/isvs/217> a egov:ISVS ;
@@ -54,7 +54,7 @@
                     
 <https://data.gov.sk/id/egov/isvs/226> a egov:ISVS ;
                     dct:title "Register združení obcí"@sk ;
-                    foaf:homepage "https://ives.minv.sk/rez/registre/pages/start.aspx?type=ob" .
+                    foaf:homepage "https://ives.minv.sk/rez/registre/pages/start.aspx?type=ob" ;
                     rdfs:isDefinedBy <https://data.gov.sk/set/data/isvs/2021-MM-DD> .
 
 <https://data.gov.sk/id/egov/isvs/420> a egov:ISVS ;

@@ -1,7 +1,4 @@
 <?xml version="1.0"?>
-<!DOCTYPE rdf:RDF [  
-<!ENTITY sp0207ts "https://opendata.mfsr.sk/def/cube/structure/sp0207ts/" >
-]>
 <rdf:RDF
     xmlns="https://data.gov.sk/def/ontology/physical-person/"
     xmlns:qb="http://purl.org/linked-data/cube#"
@@ -15,7 +12,7 @@
         <qb:component>
              <qb:Component>
                   <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;week">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/week">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">týždeň</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#week"/>
@@ -23,7 +20,7 @@
                       </qb:DimensionProperty>
                   </qb:dimension>
                    <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;year">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/year">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rok</rdfs:label>                      
                           <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#year"/>
@@ -31,55 +28,55 @@
                       </qb:DimensionProperty>
                   </qb:dimension>
                   <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;temporalName">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/temporalName">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">časové pokrytie názov</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                          <rdfs:range rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                       </qb:DimensionProperty>
                   </qb:dimension>
                   <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;temporal">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/temporal">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">časové pokrytie</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
-                          <rdfs:range rdf:about="http://purl.org/dc/terms/PeriodOfTime"/>
+                          <rdfs:range rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
                       </qb:DimensionProperty>
                   </qb:dimension>
                   <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;indicatorName">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/indicatorName">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">názov indikátora</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                          <rdfs:range rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                       </qb:DimensionProperty>
                   </qb:dimension>
                   <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;indicatorType">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/indicatorType">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">typ indikátora</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="https://statistics.sk/def/ontology/statistics/indicatorType"/>
-                          <rdfs:range rdf:about="https://statistics.sk/def/ontology/statistics/IndicatorType"/>
+                          <rdfs:range rdf:resource="https://statistics.sk/def/ontology/statistics/IndicatorType"/>
                       </qb:DimensionProperty>
                   </qb:dimension>
                    <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;fuelName">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/fuelName">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">názov pohonnej látky</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-                          <rdfs:range rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                          <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                       </qb:DimensionProperty>
                   </qb:dimension>
                    <qb:dimension>
-                      <qb:DimensionProperty rdf:about="&sp0207ts;fuelType">
+                      <qb:DimensionProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/fuelType">
                           <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</qb:order>
                           <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">typ pohonnej látky</rdfs:label>
                           <rdfs:subPropertyOf rdf:resource="https://statistics.sk/def/ontology/statistics/fuelType"/>
-                          <rdfs:range rdf:about="https://statistics.sk/def/ontology/statistics/COICOP"/>
+                          <rdfs:range rdf:resource="https://statistics.sk/def/ontology/statistics/COICOP"/>
                       </qb:DimensionProperty>
                   </qb:dimension>
                   <qb:measure>
-                      <qb:MeasureProperty rdf:about="&sp0207ts;statistics/indicatorValue">
+                      <qb:MeasureProperty rdf:about="https://opendata.mfsr.sk/def/cube/structure/sp0207ts/statistics/indicatorValue">
                       <qb:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</qb:order>
                       <rdfs:label xml:lang="sk">hodnota indikátora</rdfs:label>
                       <rdfs:subPropertyOf rdf:resource="https://data.gov.sk/def/ontology/statistics/indicatorValue"/>
